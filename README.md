@@ -1,2 +1,2 @@
 # shiren
-Disassembly of Fushigi no Dungeon 2 Fuurai no Shiren
+Disassembly of Fushigi no Dungeon 2: Fuurai no Shiren
