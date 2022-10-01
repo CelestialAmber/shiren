@@ -6850,10 +6850,12 @@ DATA8_FDD5D5:
 	db $08,$08,$08,$08,$08,$08,$08,$08   ;FDD5DD|        |      ;  
 	db $08,$08,$08,$08                   ;FDD5E5|        |      ;  
 
-DATA8_FDD5E9:
+
+;dungeon object sprites (16x16)
+DungeonObjectSprites1:
+;herb
 	db $0E,$0E,$15,$11,$08,$08,$39,$38   ;FDD5E9|        |      ;  
 	db $54,$4C,$2A,$22,$73,$73,$A9,$89   ;FDD5F1|        |      ;  
-
 DATA8_FDD5F9:
 	db $0E,$00,$1B,$0E,$0F,$07,$3E,$07   ;FDD5F9|        |      ;  
 	db $67,$3B,$35,$1F,$7C,$0F,$D7,$7E   ;FDD601|        |      ;  
@@ -6868,7 +6870,9 @@ DATA8_FDD5F9:
 	db $1F,$1F,$9C,$8C,$C4,$CC,$E4,$E4   ;FDD649|        |      ;  
 	db $54,$D4,$48,$48,$80,$80,$00,$00   ;FDD651|        |      ;  
 	db $EF,$F0,$64,$F8,$F4,$38,$7C,$98   ;FDD659|        |      ;  
-	db $5C,$88,$C8,$80,$80,$00,$00,$00   ;FDD661|        |      ;  
+	db $5C,$88,$C8,$80,$80,$00,$00,$00   ;FDD661|        |      ;
+
+;scroll
 	db $4E,$7E,$F9,$BF,$9B,$E3,$70,$69   ;FDD669|        |      ;  
 	db $40,$66,$54,$73,$32,$38,$EA,$FC   ;FDD671|        |      ;  
 	db $7E,$30,$AF,$7E,$E4,$7F,$62,$3F   ;FDD679|        |      ;  
@@ -6884,7 +6888,9 @@ DATA8_FDD5F9:
 	db $BA,$5E,$57,$27,$6C,$41,$91,$C3   ;FDD6C9|        |      ;  
 	db $B3,$E7,$CD,$EF,$E7,$FF,$FC,$FC   ;FDD6D1|        |      ;  
 	db $1E,$FC,$87,$F8,$C1,$FF,$43,$FE   ;FDD6D9|        |      ;  
-	db $E3,$5E,$EF,$36,$FF,$18,$FC,$00   ;FDD6E1|        |      ;  
+	db $E3,$5E,$EF,$36,$FF,$18,$FC,$00   ;FDD6E1|        |      ;
+
+;rice
 	db $00,$00,$07,$07,$0B,$08,$18,$17   ;FDD6E9|        |      ;  
 	db $20,$2F,$30,$2F,$40,$50,$67,$57   ;FDD6F1|        |      ;  
 	db $00,$00,$07,$00,$08,$07,$10,$0F   ;FDD6F9|        |      ;  
@@ -6900,8 +6906,10 @@ DATA8_FDD5F9:
 	db $03,$63,$93,$E3,$93,$E3,$97,$E7   ;FDD749|        |      ;  
 	db $7F,$1F,$FE,$FE,$FC,$FC,$F0,$F0   ;FDD751|        |      ;  
 	db $02,$FD,$82,$7D,$83,$7C,$85,$7A   ;FDD759|        |      ;  
-	db $1B,$E4,$EE,$10,$1C,$E0,$F0,$00   ;FDD761|        |      ;  
-	db $F0,$F0,$A8,$C8,$84,$B4,$86,$9A   ;FDD769|        |      ;  
+	db $1B,$E4,$EE,$10,$1C,$E0,$F0,$00   ;FDD761|        |      ; 
+
+;sword
+	db $F0,$F0,$A8,$C8,$84,$B4,$86,$9A   ;FDD769|        |      ;
 	db $43,$4D,$21,$26,$10,$13,$0C,$09   ;FDD771|        |      ;  
 	db $F0,$00,$88,$70,$84,$78,$82,$7C   ;FDD779|        |      ;  
 	db $41,$3E,$20,$1F,$10,$0F,$08,$07   ;FDD781|        |      ;  
@@ -6917,6 +6925,8 @@ DATA8_FDD5F9:
 	db $A6,$FE,$B1,$FF,$CB,$CF,$06,$06   ;FDD7D1|        |      ;  
 	db $1E,$E4,$36,$CC,$5C,$B8,$FC,$38   ;FDD7D9|        |      ;  
 	db $B6,$7C,$FB,$CE,$CF,$06,$06,$00   ;FDD7E1|        |      ;  
+
+;arrow
 	db $00,$00,$00,$00,$00,$00,$00,$00   ;FDD7E9|        |      ;  
 	db $00,$00,$00,$00,$01,$01,$02,$02   ;FDD7F1|        |      ;  
 	db $00,$00,$00,$00,$00,$00,$00,$00   ;FDD7F9|        |      ;  
@@ -6932,7 +6942,10 @@ DATA8_FDD5F9:
 	db $40,$40,$80,$80,$00,$00,$00,$00   ;FDD849|        |      ;  
 	db $00,$00,$00,$00,$00,$00,$00,$00   ;FDD851|        |      ;  
 	db $40,$80,$80,$00,$00,$00,$00,$00   ;FDD859|        |      ;  
-	db $00,$00,$00,$00,$00,$00,$00,$00   ;FDD861|        |      ;  
+	db $00,$00,$00,$00,$00,$00,$00,$00   ;FDD861|        |      ; 
+
+
+ ;shield
 	db $07,$07,$1A,$19,$20,$2C,$45,$52   ;FDD869|        |      ;  
 	db $78,$47,$40,$6F,$40,$6F,$40,$6F   ;FDD871|        |      ;  
 	db $07,$00,$1C,$07,$33,$1F,$68,$3F   ;FDD879|        |      ;  
@@ -6948,7 +6961,9 @@ DATA8_FDD5F9:
 	db $BA,$3A,$7A,$7A,$74,$74,$6C,$6C   ;FDD8C9|        |      ;  
 	db $48,$48,$90,$90,$60,$60,$C0,$C0   ;FDD8D1|        |      ;  
 	db $1A,$E4,$32,$CC,$34,$C8,$24,$D8   ;FDD8D9|        |      ;  
-	db $48,$B0,$90,$60,$20,$C0,$C0,$00   ;FDD8E1|        |      ;  
+	db $48,$B0,$90,$60,$20,$C0,$C0,$00   ;FDD8E1|        |      ; 
+
+;ring
 	db $00,$00,$00,$00,$0F,$0F,$30,$3F   ;FDD8E9|        |      ;  
 	db $43,$50,$53,$70,$A3,$E0,$A7,$E7   ;FDD8F1|        |      ;  
 	db $00,$00,$00,$00,$0F,$00,$30,$0F   ;FDD8F9|        |      ;  
@@ -6964,7 +6979,9 @@ DATA8_FDD5F9:
 	db $1F,$1B,$7F,$77,$9F,$EF,$F7,$B7   ;FDD949|        |      ;  
 	db $45,$05,$4E,$0A,$E4,$84,$F8,$F8   ;FDD951|        |      ;  
 	db $19,$06,$71,$0E,$81,$7E,$89,$7E   ;FDD959|        |      ;  
-	db $39,$7E,$32,$7C,$84,$78,$F8,$00   ;FDD961|        |      ;  
+	db $39,$7E,$32,$7C,$84,$78,$F8,$00   ;FDD961|        |      ; 
+
+;staff
 	db $00,$00,$01,$01,$02,$03,$03,$03   ;FDD969|        |      ;  
 	db $02,$03,$02,$03,$03,$03,$05,$07   ;FDD971|        |      ;  
 	db $00,$00,$01,$00,$03,$01,$03,$01   ;FDD979|        |      ;  
@@ -6980,7 +6997,9 @@ DATA8_FDD5F9:
 	db $56,$FE,$B8,$B8,$80,$80,$00,$00   ;FDD9C9|        |      ;  
 	db $00,$00,$00,$00,$00,$00,$00,$00   ;FDD9D1|        |      ;  
 	db $FE,$B8,$B8,$00,$80,$00,$00,$00   ;FDD9D9|        |      ;  
-	db $00,$00,$00,$00,$00,$00,$00,$00   ;FDD9E1|        |      ;  
+	db $00,$00,$00,$00,$00,$00,$00,$00   ;FDD9E1|        |      ; 
+
+;gitan
 	db $03,$03,$05,$06,$1E,$1D,$0E,$0E   ;FDD9E9|        |      ;  
 	db $1F,$1B,$0F,$0F,$1B,$10,$24,$3B   ;FDD9F1|        |      ;  
 	db $03,$00,$04,$03,$1C,$0B,$0E,$05   ;FDD9F9|        |      ;  
@@ -6997,6 +7016,8 @@ DATA8_FDD5F9:
 	db $9A,$42,$C4,$04,$18,$18,$E0,$E0   ;FDDA51|        |      ;  
 	db $E2,$FC,$02,$FC,$E2,$FC,$62,$FC   ;FDDA59|        |      ;  
 	db $C2,$FC,$04,$F8,$18,$E0,$E0,$00   ;FDDA61|        |      ;  
+
+;meat
 	db $00,$00,$00,$00,$01,$01,$02,$03   ;FDDA69|        |      ;  
 	db $0D,$0F,$33,$3F,$49,$7F,$9D,$E3   ;FDDA71|        |      ;  
 	db $00,$00,$00,$00,$01,$00,$03,$01   ;FDDA79|        |      ;  
@@ -7013,6 +7034,8 @@ DATA8_FDD5F9:
 	db $3C,$FC,$30,$F0,$60,$E0,$80,$80   ;FDDAD1|        |      ;  
 	db $FE,$FC,$FE,$FC,$FE,$F8,$FC,$E0   ;FDDAD9|        |      ;  
 	db $FC,$C0,$F0,$C0,$E0,$80,$80,$00   ;FDDAE1|        |      ;  
+
+;feather
 	db $78,$78,$8C,$FC,$BA,$FE,$B7,$DF   ;FDDAE9|        |      ;  
 	db $C6,$FB,$CE,$FB,$A9,$D7,$71,$6E   ;FDDAF1|        |      ;  
 	db $78,$00,$BC,$70,$BE,$74,$9F,$7C   ;FDDAF9|        |      ;  
@@ -7028,7 +7051,9 @@ DATA8_FDD5F9:
 	db $70,$F0,$78,$B8,$D8,$B8,$B8,$68   ;FDDB49|        |      ;  
 	db $24,$DC,$4E,$F6,$D1,$FF,$3F,$3F   ;FDDB51|        |      ;  
 	db $F0,$C0,$B8,$D0,$B8,$F0,$28,$F0   ;FDDB59|        |      ;  
-	db $0C,$F8,$C6,$F8,$F1,$3E,$3F,$00   ;FDDB61|        |      ;  
+	db $0C,$F8,$C6,$F8,$F1,$3E,$3F,$00   ;FDDB61|        |      ;
+
+;pot 
 	db $07,$07,$0C,$0B,$1D,$11,$13,$1B   ;FDDB69|        |      ;  
 	db $1D,$11,$26,$21,$3B,$20,$54,$48   ;FDDB71|        |      ;  
 	db $07,$00,$08,$07,$11,$0E,$13,$0C   ;FDDB79|        |      ;  
@@ -7044,7 +7069,9 @@ DATA8_FDD5F9:
 	db $EA,$02,$A2,$06,$02,$16,$04,$DC   ;FDDBC9|        |      ;  
 	db $04,$FC,$08,$F8,$30,$F0,$C0,$C0   ;FDDBD1|        |      ;  
 	db $02,$FC,$06,$FC,$16,$FC,$DC,$F8   ;FDDBD9|        |      ;  
-	db $FC,$F8,$F8,$F0,$F0,$C0,$C0,$00   ;FDDBE1|        |      ;  
+	db $FC,$F8,$F8,$F0,$F0,$C0,$C0,$00   ;FDDBE1|        |      ;
+
+;scroll (alternate?)
 	db $70,$70,$50,$50,$DF,$DF,$84,$80   ;FDDBE9|        |      ;  
 	db $D2,$D0,$84,$80,$D2,$D0,$84,$80   ;FDDBF1|        |      ;  
 	db $70,$00,$50,$00,$DF,$20,$A0,$2D   ;FDDBF9|        |      ;  
@@ -7060,7 +7087,9 @@ DATA8_FDD5F9:
 	db $22,$02,$52,$02,$22,$02,$52,$02   ;FDDC49|        |      ;  
 	db $24,$04,$78,$38,$C0,$C0,$00,$00   ;FDDC51|        |      ;  
 	db $02,$A8,$02,$54,$02,$A8,$02,$54   ;FDDC59|        |      ;  
-	db $04,$A8,$38,$40,$C0,$00,$00,$00   ;FDDC61|        |      ;  
+	db $04,$A8,$38,$40,$C0,$00,$00,$00   ;FDDC61|        |      ;
+
+#flower
 	db $0E,$0E,$3B,$35,$4A,$64,$44,$71   ;FDDC69|        |      ;  
 	db $8A,$D5,$CE,$A4,$44,$51,$40,$75   ;FDDC71|        |      ;  
 	db $0E,$00,$31,$0E,$40,$3F,$40,$3F   ;FDDC79|        |      ;  
@@ -7076,7 +7105,9 @@ DATA8_FDD5F9:
 	db $B4,$B4,$E8,$D8,$98,$A8,$B8,$B8   ;FDDCC9|        |      ;  
 	db $7C,$7C,$62,$62,$5C,$5C,$F0,$F0   ;FDDCD1|        |      ;  
 	db $F4,$40,$C8,$30,$48,$F0,$58,$E0   ;FDDCD9|        |      ;  
-	db $A4,$D8,$DE,$BC,$AC,$F0,$F0,$00   ;FDDCE1|        |      ;  
+	db $A4,$D8,$DE,$BC,$AC,$F0,$F0,$00   ;FDDCE1|        |      ;
+
+;unknown (3 squares in reverse l shape)  
 	db $00,$00,$00,$00,$00,$00,$00,$00   ;FDDCE9|        |      ;  
 	db $00,$00,$00,$00,$00,$00,$00,$00   ;FDDCF1|        |      ;  
 	db $00,$00,$00,$00,$00,$00,$00,$00   ;FDDCF9|        |      ;  
@@ -7092,7 +7123,9 @@ DATA8_FDD5F9:
 	db $00,$00,$7E,$00,$42,$00,$42,$00   ;FDDD49|        |      ;  
 	db $42,$00,$42,$00,$7E,$00,$00,$00   ;FDDD51|        |      ;  
 	db $00,$00,$00,$7E,$00,$42,$00,$42   ;FDDD59|        |      ;  
-	db $00,$42,$00,$42,$00,$7E,$00,$00   ;FDDD61|        |      ;  
+	db $00,$42,$00,$42,$00,$7E,$00,$00   ;FDDD61|        |      ;
+
+;arrow trap 
 	db $0F,$0F,$00,$00,$20,$00,$00,$20   ;FDDD69|        |      ;  
 	db $20,$00,$00,$20,$00,$23,$02,$25   ;FDDD71|        |      ;  
 	db $0F,$00,$1F,$1F,$1F,$3F,$1F,$3F   ;FDDD79|        |      ;  
@@ -7108,7 +7141,9 @@ DATA8_FDD5F9:
 	db $06,$06,$06,$06,$06,$06,$EE,$0E   ;FDDDC9|        |      ;  
 	db $FE,$FE,$1C,$1C,$00,$00,$00,$00   ;FDDDD1|        |      ;  
 	db $FE,$F9,$FE,$F9,$FE,$F8,$16,$F8   ;FDDDD9|        |      ;  
-	db $06,$F8,$04,$1A,$00,$B3,$00,$88   ;FDDDE1|        |      ;  
+	db $06,$F8,$04,$1A,$00,$B3,$00,$88   ;FDDDE1|        |      ;
+
+;rust trap 
 	db $01,$01,$12,$12,$07,$06,$2B,$2A   ;FDDDE9|        |      ;  
 	db $08,$09,$1E,$1D,$2E,$2D,$48,$4B   ;FDDDF1|        |      ;  
 	db $00,$01,$00,$13,$00,$07,$00,$2B   ;FDDDF9|        |      ;  
@@ -7124,7 +7159,9 @@ DATA8_FDD5F9:
 	db $70,$B0,$18,$D8,$1C,$DC,$58,$98   ;FDDE49|        |      ;  
 	db $BC,$3C,$70,$70,$E0,$E0,$10,$10   ;FDDE51|        |      ;  
 	db $30,$C0,$10,$E8,$10,$EC,$10,$E8   ;FDDE59|        |      ;  
-	db $30,$CC,$60,$90,$80,$60,$00,$10   ;FDDE61|        |      ;  
+	db $30,$CC,$60,$90,$80,$60,$00,$10   ;FDDE61|        |      ;
+
+;sleeping gas trap 
 	db $00,$00,$00,$00,$07,$07,$12,$10   ;FDDE69|        |      ;  
 	db $2F,$23,$7B,$27,$78,$27,$7B,$24   ;FDDE71|        |      ;  
 	db $00,$00,$00,$37,$07,$00,$10,$2F   ;FDDE79|        |      ;  
@@ -7140,7 +7177,9 @@ DATA8_FDD5F9:
 	db $F4,$04,$E8,$08,$F8,$F0,$B0,$00   ;FDDEC9|        |      ;  
 	db $00,$00,$00,$00,$00,$00,$00,$00   ;FDDED1|        |      ;  
 	db $04,$FB,$08,$F7,$F0,$0E,$00,$F8   ;FDDED9|        |      ;  
-	db $00,$BA,$00,$EC,$00,$E0,$00,$80   ;FDDEE1|        |      ;  
+	db $00,$BA,$00,$EC,$00,$E0,$00,$80   ;FDDEE1|        |      ;
+
+;trip rock trap 
 	db $00,$00,$00,$00,$03,$00,$08,$07   ;FDDEE9|        |      ;  
 	db $21,$1E,$4B,$34,$17,$60,$B3,$40   ;FDDEF1|        |      ;  
 	db $00,$00,$00,$00,$00,$03,$00,$0F   ;FDDEF9|        |      ;  
@@ -7156,7 +7195,9 @@ DATA8_FDD5F9:
 	db $27,$07,$0F,$1F,$2E,$2E,$7E,$7E   ;FDDF49|        |      ;  
 	db $F8,$F8,$C0,$C0,$00,$00,$00,$00   ;FDDF51|        |      ;  
 	db $03,$FC,$9B,$F4,$26,$D8,$6E,$90   ;FDDF59|        |      ;  
-	db $78,$80,$C0,$00,$00,$00,$00,$00   ;FDDF61|        |      ;  
+	db $78,$80,$C0,$00,$00,$00,$00,$00   ;FDDF61|        |      ;
+
+ ;alarm trap
 	db $00,$00,$00,$00,$01,$01,$07,$00   ;FDDF69|        |      ;  
 	db $0F,$03,$1F,$07,$3F,$04,$37,$2C   ;FDDF71|        |      ;  
 	db $00,$02,$00,$00,$01,$12,$00,$0F   ;FDDF79|        |      ;  
@@ -7172,7 +7213,9 @@ DATA8_FDD5F9:
 	db $F6,$E6,$E2,$C2,$02,$C2,$E6,$06   ;FDDFC9|        |      ;  
 	db $FC,$8C,$F0,$90,$00,$00,$00,$00   ;FDDFD1|        |      ;  
 	db $E6,$18,$C2,$3D,$02,$FD,$06,$F8   ;FDDFD9|        |      ;  
-	db $8C,$70,$90,$65,$00,$18,$00,$C0   ;FDDFE1|        |      ;  
+	db $8C,$70,$90,$65,$00,$18,$00,$C0   ;FDDFE1|        |      ;
+
+;summon trap 
 	db $00,$00,$01,$01,$00,$03,$02,$03   ;FDDFE9|        |      ;  
 	db $02,$03,$06,$05,$05,$0A,$0B,$0C   ;FDDFF1|        |      ;  
 	db $00,$0A,$01,$45,$02,$1B,$02,$1B   ;FDDFF9|        |      ;  
@@ -7188,7 +7231,9 @@ DATA8_FDD5F9:
 	db $CC,$FC,$CC,$FC,$CE,$FE,$FB,$FF   ;FDE049|        |      ;  
 	db $2E,$DE,$F8,$F8,$60,$E0,$C0,$C0   ;FDE051|        |      ;  
 	db $FC,$F0,$FC,$F0,$FE,$F8,$FF,$FC   ;FDE059|        |      ;  
-	db $1E,$F0,$F8,$06,$E0,$98,$C0,$04   ;FDE061|        |      ;  
+	db $1E,$F0,$F8,$06,$E0,$98,$C0,$04   ;FDE061|        |      ;
+
+;spinning trap
 	db $00,$00,$03,$00,$0F,$00,$1E,$00   ;FDE069|        |      ;  
 	db $3F,$10,$3F,$18,$7F,$1C,$3F,$50   ;FDE071|        |      ;  
 	db $00,$09,$00,$27,$00,$5F,$01,$3F   ;FDE079|        |      ;  
@@ -7204,7 +7249,9 @@ DATA8_FDD5F9:
 	db $FF,$33,$FB,$13,$FA,$02,$F6,$06   ;FDE0C9|        |      ;  
 	db $C4,$04,$08,$08,$20,$20,$00,$00   ;FDE0D1|        |      ;  
 	db $03,$FC,$03,$FC,$02,$FC,$06,$F9   ;FDE0D9|        |      ;  
-	db $04,$F9,$08,$F2,$20,$C8,$00,$40   ;FDE0E1|        |      ;  
+	db $04,$F9,$08,$F2,$20,$C8,$00,$40   ;FDE0E1|        |      ;
+
+ ;hunger trap
 	db $00,$00,$00,$00,$00,$03,$00,$07   ;FDE0E9|        |      ;  
 	db $00,$0F,$00,$1F,$20,$10,$40,$30   ;FDE0F1|        |      ;  
 	db $00,$00,$00,$00,$00,$03,$00,$27   ;FDE0F9|        |      ;  
@@ -7220,7 +7267,9 @@ DATA8_FDD5F9:
 	db $06,$3E,$06,$3A,$FF,$C3,$C2,$C2   ;FDE149|        |      ;  
 	db $40,$40,$00,$00,$00,$00,$00,$00   ;FDE151|        |      ;  
 	db $C6,$F9,$C2,$FD,$03,$FC,$02,$FC   ;FDE159|        |      ;  
-	db $00,$68,$00,$D1,$00,$80,$00,$00   ;FDE161|        |      ;  
+	db $00,$68,$00,$D1,$00,$80,$00,$00   ;FDE161|        |      ;
+
+;dream gas trap 
 	db $00,$00,$00,$00,$07,$07,$3D,$3D   ;FDE169|        |      ;  
 	db $77,$73,$23,$27,$20,$27,$28,$24   ;FDE171|        |      ;  
 	db $00,$00,$00,$37,$07,$00,$12,$2F   ;FDE179|        |      ;  
@@ -7236,7 +7285,9 @@ DATA8_FDD5F9:
 	db $0E,$0E,$1E,$1E,$F4,$F4,$48,$48   ;FDE1C9|        |      ;  
 	db $A0,$A0,$00,$00,$00,$00,$00,$00   ;FDE1D1|        |      ;  
 	db $F4,$FB,$E8,$F7,$F8,$0E,$B0,$F8   ;FDE1D9|        |      ;  
-	db $00,$BA,$00,$EC,$00,$C0,$00,$80   ;FDE1E1|        |      ;  
+	db $00,$BA,$00,$EC,$00,$C0,$00,$80   ;FDE1E1|        |      ;
+
+;rotten trap 
 	db $00,$00,$00,$00,$00,$00,$00,$00   ;FDE1E9|        |      ;  
 	db $00,$00,$00,$00,$20,$20,$40,$40   ;FDE1F1|        |      ;  
 	db $00,$00,$00,$00,$03,$03,$07,$27   ;FDE1F9|        |      ;  
@@ -7252,7 +7303,9 @@ DATA8_FDD5F9:
 	db $06,$06,$06,$06,$1B,$03,$FE,$FE   ;FDE249|        |      ;  
 	db $68,$68,$00,$00,$00,$00,$00,$00   ;FDE251|        |      ;  
 	db $3E,$F9,$3A,$FD,$27,$FC,$C2,$3C   ;FDE259|        |      ;  
-	db $40,$28,$00,$D1,$00,$80,$00,$00   ;FDE261|        |      ;  
+	db $40,$28,$00,$D1,$00,$80,$00,$00   ;FDE261|        |      ;
+
+;slowness trap
 	db $00,$00,$00,$01,$01,$03,$03,$06   ;FDE269|        |      ;  
 	db $00,$03,$04,$03,$00,$07,$00,$07   ;FDE271|        |      ;  
 	db $00,$07,$00,$17,$01,$0E,$02,$2D   ;FDE279|        |      ;  
@@ -7268,7 +7321,9 @@ DATA8_FDD5F9:
 	db $B0,$30,$30,$B0,$70,$B0,$30,$F0   ;FDE2C9|        |      ;  
 	db $70,$B0,$A0,$20,$C0,$C0,$00,$00   ;FDE2D1|        |      ;  
 	db $30,$CC,$30,$CA,$30,$CE,$30,$CA   ;FDE2D9|        |      ;  
-	db $30,$C8,$20,$D0,$C0,$28,$00,$80   ;FDE2E1|        |      ;  
+	db $30,$C8,$20,$D0,$C0,$28,$00,$80   ;FDE2E1|        |      ;
+
+;unequip trap
 	db $00,$00,$02,$02,$01,$03,$15,$1D   ;FDE2E9|        |      ;  
 	db $3E,$3B,$6B,$7A,$BD,$B7,$19,$29   ;FDE2F1|        |      ;  
 	db $00,$00,$02,$08,$01,$62,$00,$1F   ;FDE2F9|        |      ;  
@@ -7284,7 +7339,9 @@ DATA8_FDD5F9:
 	db $FF,$DF,$FF,$BF,$5F,$7F,$7E,$FE   ;FDE349|        |      ;  
 	db $FC,$FC,$10,$10,$40,$40,$00,$00   ;FDE351|        |      ;  
 	db $D9,$26,$B1,$4E,$53,$AC,$62,$9D   ;FDE359|        |      ;  
-	db $04,$F9,$E0,$F2,$80,$CD,$00,$E0   ;FDE361|        |      ;  
+	db $04,$F9,$E0,$F2,$80,$CD,$00,$E0   ;FDE361|        |      ;
+
+;log trap
 	db $01,$01,$03,$03,$0C,$0F,$1B,$0F   ;FDE369|        |      ;  
 	db $16,$1F,$2D,$1F,$2A,$1F,$2A,$1F   ;FDE371|        |      ;  
 	db $01,$04,$03,$33,$0F,$4F,$0F,$1F   ;FDE379|        |      ;  
@@ -7300,7 +7357,9 @@ DATA8_FDD5F9:
 	db $B7,$FF,$6B,$FF,$D3,$F7,$26,$EE   ;FDE3C9|        |      ;  
 	db $C4,$3C,$08,$F8,$20,$60,$00,$00   ;FDE3D1|        |      ;  
 	db $FF,$FC,$FF,$FC,$F7,$FC,$EE,$F8   ;FDE3D9|        |      ;  
-	db $3C,$F9,$F8,$F0,$60,$4C,$00,$90   ;FDE3E1|        |      ;  
+	db $3C,$F9,$F8,$F0,$60,$4C,$00,$90   ;FDE3E1|        |      ;
+
+;unknown (four squares)
 	db $00,$00,$7E,$00,$42,$00,$42,$00   ;FDE3E9|        |      ;  
 	db $42,$00,$42,$00,$7E,$00,$00,$00   ;FDE3F1|        |      ;  
 	db $00,$00,$00,$7E,$00,$42,$00,$42   ;FDE3F9|        |      ;  
@@ -7318,10 +7377,13 @@ DATA8_FDD5F9:
 	db $00,$00,$00,$7E,$00,$42,$00,$42   ;FDE459|        |      ;  
 	db $00,$42,$00,$42,$00,$7E,$00,$00   ;FDE461|        |      ;  
 
-DATA8_FDE469:
+
+
+;dungeon object sprites (32x32)
+DungeonObjectSprites2:
+;stairs (up)
 	db $00,$00,$00,$00,$00,$00,$00,$00   ;FDE469|        |      ;  
 	db $00,$00,$00,$00,$00,$00,$00,$00   ;FDE471|        |      ;  
-
 DATA8_FDE479:
 	db $00,$00,$00,$00,$00,$00,$00,$00   ;FDE479|        |      ;  
 	db $00,$00,$00,$00,$00,$00,$00,$00   ;FDE481|        |      ;  
@@ -7374,7 +7436,7 @@ DATA8_FDE479:
 	db $81,$7E,$83,$7E,$81,$7E,$80,$7F   ;FDE5F9|        |      ;  
 	db $80,$7F,$A0,$7F,$80,$7F,$7F,$00   ;FDE601|        |      ;  
 	db $81,$6F,$7E,$80,$7E,$00,$97,$80   ;FDE609|        |      ;  
-	db $EF,$20,$28,$30,$71,$71,$FF,$FF   ;FDE611|        |      ;  
+	db $EF,$20,$28,$30,$71,$71,$FF,$FF   ;FDE611|        |      ;
 	db $11,$FE,$00,$FF,$00,$FF,$80,$7F   ;FDE619|        |      ;  
 	db $20,$DF,$34,$DF,$71,$8E,$FF,$00   ;FDE621|        |      ;  
 	db $42,$11,$80,$98,$7F,$01,$F5,$01   ;FDE629|        |      ;  
@@ -7384,7 +7446,9 @@ DATA8_FDE479:
 	db $01,$01,$01,$13,$F7,$01,$FD,$01   ;FDE649|        |      ;  
 	db $69,$93,$01,$23,$83,$97,$FF,$FF   ;FDE651|        |      ;  
 	db $41,$FE,$13,$FE,$01,$FE,$01,$FE   ;FDE659|        |      ;  
-	db $93,$FE,$63,$FE,$97,$7C,$FF,$00   ;FDE661|        |      ;  
+	db $93,$FE,$63,$FE,$97,$7C,$FF,$00   ;FDE661|        |      ;
+
+;stairs (down)
 	db $00,$00,$00,$00,$00,$00,$00,$00   ;FDE669|        |      ;  
 	db $01,$01,$07,$07,$0C,$32,$0C,$03   ;FDE671|        |      ;  
 	db $00,$00,$00,$00,$00,$00,$00,$00   ;FDE679|        |      ;  
@@ -7448,7 +7512,9 @@ DATA8_FDE479:
 	db $19,$1F,$19,$B9,$19,$1B,$19,$39   ;FDE849|        |      ;  
 	db $1A,$1A,$16,$96,$38,$B8,$C0,$C0   ;FDE851|        |      ;  
 	db $1F,$E6,$B9,$E6,$1B,$E6,$39,$E6   ;FDE859|        |      ;  
-	db $1A,$E4,$96,$E0,$B8,$C0,$C0,$00   ;FDE861|        |      ;  
+	db $1A,$E4,$96,$E0,$B8,$C0,$C0,$00   ;FDE861|        |      ;
+
+;warp tile 
 	db $00,$00,$00,$00,$00,$00,$00,$00   ;FDE869|        |      ;  
 	db $00,$00,$00,$00,$00,$00,$00,$00   ;FDE871|        |      ;  
 	db $00,$00,$00,$00,$00,$00,$00,$00   ;FDE879|        |      ;  
@@ -7512,7 +7578,9 @@ DATA8_FDE479:
 	db $C8,$00,$00,$80,$A0,$40,$E0,$10   ;FDEA49|        |      ;  
 	db $48,$00,$10,$00,$00,$00,$00,$00   ;FDEA51|        |      ;  
 	db $00,$E8,$00,$80,$00,$E0,$00,$F0   ;FDEA59|        |      ;  
-	db $00,$7C,$00,$18,$00,$00,$00,$00   ;FDEA61|        |      ;  
+	db $00,$7C,$00,$18,$00,$00,$00,$00   ;FDEA61|        |      ;
+
+;unknown
 	db $00,$00,$00,$00,$00,$00,$10,$10   ;FDEA69|        |      ;  
 	db $11,$11,$0A,$0A,$06,$06,$34,$34   ;FDEA71|        |      ;  
 	db $00,$00,$00,$00,$00,$00,$10,$00   ;FDEA79|        |      ;  
@@ -7576,7 +7644,11 @@ DATA8_FDE479:
 	db $80,$80,$40,$40,$20,$20,$20,$20   ;FDEC49|        |      ;  
 	db $20,$20,$40,$40,$00,$00,$00,$00   ;FDEC51|        |      ;  
 	db $80,$00,$40,$00,$20,$00,$20,$00   ;FDEC59|        |      ;  
-	db $20,$00,$40,$00,$00,$00,$00,$00   ;FDEC61|        |      ;  
+	db $20,$00,$40,$00,$00,$00,$00,$00   ;FDEC61|        |      ;
+
+;32x24 sprites
+
+;pitfall trap
 	db $00,$00,$12,$00,$01,$00,$00,$00   ;FDEC69|        |      ;  
 	db $06,$00,$0B,$00,$03,$00,$11,$00   ;FDEC71|        |      ;  
 	db $00,$00,$00,$32,$00,$23,$00,$21   ;FDEC79|        |      ;  
@@ -7624,7 +7696,9 @@ DATA8_FDE479:
 	db $C0,$00,$E4,$00,$AC,$00,$38,$00   ;FDEDC9|        |      ;  
 	db $20,$00,$40,$00,$E4,$00,$00,$00   ;FDEDD1|        |      ;  
 	db $00,$F8,$00,$FC,$00,$FE,$00,$F8   ;FDEDD9|        |      ;  
-	db $00,$F8,$00,$C0,$00,$E4,$00,$B6   ;FDEDE1|        |      ;  
+	db $00,$F8,$00,$C0,$00,$E4,$00,$B6   ;FDEDE1|        |      ;
+
+;tiger trap 
 	db $00,$00,$00,$00,$00,$00,$00,$00   ;FDEDE9|        |      ;  
 	db $05,$01,$07,$03,$09,$01,$28,$00   ;FDEDF1|        |      ;  
 	db $00,$00,$00,$00,$00,$00,$00,$00   ;FDEDF9|        |      ;  
@@ -7672,7 +7746,9 @@ DATA8_FDE479:
 	db $3E,$56,$16,$76,$1C,$4C,$C8,$08   ;FDEF49|        |      ;  
 	db $90,$10,$20,$20,$80,$80,$00,$00   ;FDEF51|        |      ;  
 	db $16,$68,$16,$E8,$0C,$F0,$08,$F0   ;FDEF59|        |      ;  
-	db $10,$E0,$20,$C0,$80,$00,$00,$00   ;FDEF61|        |      ;  
+	db $10,$E0,$20,$C0,$80,$00,$00,$00   ;FDEF61|        |      ;
+
+;warp tile (32x24)
 	db $00,$00,$00,$00,$00,$00,$1C,$00   ;FDEF69|        |      ;  
 	db $06,$00,$03,$00,$02,$01,$04,$00   ;FDEF71|        |      ;  
 	db $00,$00,$00,$00,$00,$18,$00,$3C   ;FDEF79|        |      ;  
@@ -7698,7 +7774,7 @@ DATA8_FDE479:
 	db $01,$FF,$02,$FF,$43,$BF,$C1,$3F   ;FDF019|        |      ;  
 	db $80,$7F,$00,$FF,$00,$FF,$00,$FF   ;FDF021|        |      ;  
 	db $B8,$80,$BF,$E0,$64,$E0,$5D,$D9   ;FDF029|        |      ;  
-	db $3C,$20,$7F,$C0,$7C,$00,$F1,$00   ;FDF031|        |      ;  
+	db $3C,$20,$7F,$C0,$7C,$00,$F1,$00   ;FDF031|        |      ;
 	db $80,$FF,$E0,$DF,$E1,$9F,$D8,$A7   ;FDF039|        |      ;  
 	db $20,$DF,$40,$BF,$00,$FF,$00,$FF   ;FDF041|        |      ;  
 	db $E0,$00,$10,$00,$34,$B0,$74,$70   ;FDF049|        |      ;  
@@ -7720,7 +7796,9 @@ DATA8_FDE479:
 	db $C8,$00,$00,$80,$A0,$40,$E0,$10   ;FDF0C9|        |      ;  
 	db $48,$00,$10,$00,$00,$00,$00,$00   ;FDF0D1|        |      ;  
 	db $00,$E8,$00,$80,$00,$E0,$00,$F0   ;FDF0D9|        |      ;  
-	db $00,$7C,$00,$18,$00,$00,$00,$00   ;FDF0E1|        |      ;  
+	db $00,$7C,$00,$18,$00,$00,$00,$00   ;FDF0E1|        |      ;
+
+;landmine trap
 	db $00,$00,$00,$00,$00,$00,$00,$00   ;FDF0E9|        |      ;  
 	db $00,$00,$00,$00,$00,$00,$00,$00   ;FDF0F1|        |      ;  
 	db $00,$00,$00,$00,$00,$00,$00,$00   ;FDF0F9|        |      ;  
@@ -7768,7 +7846,9 @@ DATA8_FDE479:
 	db $00,$00,$00,$00,$00,$00,$00,$00   ;FDF249|        |      ;  
 	db $00,$00,$00,$00,$00,$00,$00,$00   ;FDF251|        |      ;  
 	db $00,$40,$00,$00,$00,$00,$00,$00   ;FDF259|        |      ;  
-	db $00,$20,$00,$00,$00,$00,$00,$00   ;FDF261|        |      ;  
+	db $00,$20,$00,$00,$00,$00,$00,$00   ;FDF261|        |      ;
+
+;unknown (gray square tile with red on it)
 	db $01,$01,$03,$03,$00,$04,$01,$06   ;FDF269|        |      ;  
 	db $01,$06,$01,$06,$01,$06,$01,$06   ;FDF271|        |      ;  
 	db $01,$04,$03,$00,$00,$1F,$00,$17   ;FDF279|        |      ;  
@@ -7816,7 +7896,9 @@ DATA8_FDE479:
 	db $30,$30,$30,$30,$30,$30,$30,$30   ;FDF3C9|        |      ;  
 	db $20,$20,$00,$80,$00,$00,$00,$00   ;FDF3D1|        |      ;  
 	db $30,$C0,$30,$C0,$30,$C0,$30,$C0   ;FDF3D9|        |      ;  
-	db $20,$C0,$00,$D0,$00,$00,$00,$C0   ;FDF3E1|        |      ;  
+	db $20,$C0,$00,$D0,$00,$00,$00,$C0   ;FDF3E1|        |      ;
+
+;unknown (looks like a triforce with a green circle at the center)
 	db $00,$00,$00,$00,$00,$00,$00,$00   ;FDF3E9|        |      ;  
 	db $00,$00,$00,$00,$00,$00,$00,$00   ;FDF3F1|        |      ;  
 	db $00,$00,$00,$00,$00,$00,$00,$00   ;FDF3F9|        |      ;  
@@ -7864,7 +7946,9 @@ DATA8_FDE479:
 	db $EC,$FC,$F6,$7E,$3B,$CF,$01,$FF   ;FDF549|        |      ;  
 	db $00,$00,$00,$00,$00,$00,$00,$00   ;FDF551|        |      ;  
 	db $FC,$F0,$7E,$F9,$0F,$FC,$FF,$FE   ;FDF559|        |      ;  
-	db $00,$00,$00,$00,$00,$14,$00,$00   ;FDF561|        |      ;  
+	db $00,$00,$00,$00,$00,$14,$00,$00   ;FDF561|        |      ;
+
+;trap spawner
 	db $00,$00,$00,$00,$03,$00,$06,$00   ;FDF569|        |      ;  
 	db $09,$05,$0E,$02,$02,$0B,$02,$0B   ;FDF571|        |      ;  
 	db $00,$02,$00,$08,$00,$13,$00,$07   ;FDF579|        |      ;  
@@ -7912,7 +7996,9 @@ DATA8_FDE479:
 	db $80,$80,$80,$80,$00,$00,$00,$00   ;FDF6C9|        |      ;  
 	db $00,$00,$00,$00,$00,$00,$00,$00   ;FDF6D1|        |      ;  
 	db $80,$40,$80,$50,$00,$00,$00,$C0   ;FDF6D9|        |      ;  
-	db $00,$00,$00,$20,$00,$00,$00,$00   ;FDF6E1|        |      ;  
+	db $00,$00,$00,$20,$00,$00,$00,$00   ;FDF6E1|        |      ;
+
+
 	db $00,$00,$00,$00,$00,$00,$00,$00   ;FDF6E9|        |      ;  
 	db $00,$00,$00,$00,$00,$00,$00,$00   ;FDF6F1|        |      ;  
 	db $00,$00,$00,$00,$00,$00,$00,$00   ;FDF6F9|        |      ;  
@@ -7960,7 +8046,9 @@ DATA8_FDE479:
 	db $00,$00,$00,$00,$00,$00,$00,$00   ;FDF849|        |      ;  
 	db $00,$00,$00,$00,$00,$00,$00,$00   ;FDF851|        |      ;  
 	db $00,$40,$00,$00,$00,$00,$00,$00   ;FDF859|        |      ;  
-	db $00,$20,$00,$00,$00,$00,$00,$00   ;FDF861|        |      ;  
+	db $00,$20,$00,$00,$00,$00,$00,$00   ;FDF861|        |      ;
+
+
 	db $0B,$03,$06,$00,$03,$00,$01,$00   ;FDF869|        |      ;  
 	db $03,$00,$03,$00,$07,$00,$07,$01   ;FDF871|        |      ;  
 	db $03,$0C,$00,$4F,$00,$07,$00,$13   ;FDF879|        |      ;  
@@ -8008,7 +8096,9 @@ DATA8_FDE479:
 	db $D8,$18,$90,$10,$20,$20,$E0,$20   ;FDF9C9|        |      ;  
 	db $90,$50,$70,$10,$28,$08,$10,$00   ;FDF9D1|        |      ;  
 	db $18,$E0,$10,$E0,$20,$D2,$20,$C0   ;FDF9D9|        |      ;  
-	db $10,$E4,$10,$E2,$08,$F0,$00,$30   ;FDF9E1|        |      ;  
+	db $10,$E4,$10,$E2,$08,$F0,$00,$30   ;FDF9E1|        |      ;
+
+
 	db $00,$00,$00,$00,$00,$00,$00,$00   ;FDF9E9|        |      ;  
 	db $00,$00,$00,$00,$00,$00,$00,$00   ;FDF9F1|        |      ;  
 	db $00,$00,$00,$00,$00,$00,$00,$00   ;FDF9F9|        |      ;  
@@ -8056,151 +8146,4 @@ DATA8_FDE479:
 	db $00,$00,$00,$00,$00,$00,$00,$00   ;FDFB49|        |      ;  
 	db $00,$00,$00,$00,$00,$00,$00,$00   ;FDFB51|        |      ;  
 	db $00,$40,$00,$00,$00,$00,$00,$00   ;FDFB59|        |      ;  
-	db $00,$20,$00,$00,$00,$00,$00,$00   ;FDFB61|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFB69|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFB71|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFB79|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFB81|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFB89|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFB91|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFB99|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFBA1|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFBA9|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFBB1|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFBB9|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFBC1|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFBC9|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFBD1|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFBD9|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFBE1|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFBE9|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFBF1|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFBF9|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFC01|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFC09|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFC11|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFC19|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFC21|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFC29|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFC31|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFC39|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFC41|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFC49|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFC51|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFC59|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFC61|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFC69|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFC71|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFC79|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFC81|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFC89|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFC91|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFC99|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFCA1|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFCA9|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFCB1|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFCB9|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFCC1|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFCC9|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFCD1|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFCD9|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFCE1|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFCE9|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFCF1|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFCF9|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFD01|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFD09|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFD11|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFD19|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFD21|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFD29|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFD31|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFD39|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFD41|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFD49|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFD51|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFD59|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFD61|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFD69|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFD71|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFD79|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFD81|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFD89|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFD91|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFD99|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFDA1|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFDA9|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFDB1|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFDB9|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFDC1|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFDC9|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFDD1|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFDD9|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFDE1|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFDE9|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFDF1|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFDF9|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFE01|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFE09|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFE11|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFE19|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFE21|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFE29|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFE31|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFE39|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFE41|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFE49|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFE51|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFE59|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFE61|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFE69|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFE71|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFE79|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFE81|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFE89|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFE91|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFE99|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFEA1|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFEA9|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFEB1|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFEB9|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFEC1|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFEC9|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFED1|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFED9|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFEE1|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFEE9|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFEF1|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFEF9|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFF01|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFF09|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFF11|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFF19|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFF21|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFF29|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFF31|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFF39|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFF41|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFF49|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFF51|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFF59|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFF61|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFF69|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFF71|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFF79|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFF81|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFF89|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFF91|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFF99|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFFA1|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFFA9|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFFB1|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFFB9|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFFC1|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFFC9|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFFD1|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFFD9|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFFE1|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFFE9|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;FDFFF1|        |      ;  
-	db $FF,$FF,$FF,$FF,$FF,$FF,$FF       ;FDFFF9|        |      ;  
+	db $00,$20,$00,$00,$00,$00,$00,$00   ;FDFB61|        |      ;

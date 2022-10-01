@@ -1,7 +1,9 @@
 hirom
                     
 incsrc "asm/bank_C0.asm"
+incsrc "asm/bank_80.asm"
 incsrc "asm/bank_C1.asm"
+incsrc "asm/bank_81.asm"
 incsrc "asm/bank_C2.asm"
 incsrc "asm/bank_C3.asm"
 incsrc "asm/bank_C4.asm"
