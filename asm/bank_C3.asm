@@ -15997,7 +15997,6 @@ CODE_C3E331:
 	beq CODE_C3E349                      ;C3E343|F004    |C3E349;  
 	lda.b #$00                           ;C3E345|A900    |      ;  
 	sta.b [$04],y                        ;C3E347|9704    |000004;  
-
 CODE_C3E349:
 	plp                                  ;C3E349|28      |      ;  
 	rtl                                  ;C3E34A|6B      |      ;  
@@ -17772,7 +17771,6 @@ CODE_C3F3B6:
 	jsl.l CODE_C62B42                    ;C3F3BF|22422BC6|C62B42;  
 	lda.b $00                            ;C3F3C3|A500    |000000;  
 	beq CODE_C3F3E5                      ;C3F3C5|F01E    |C3F3E5;  
-
 CODE_C3F3C7:
 	rep #$30                             ;C3F3C7|C230    |      ;  
 	jsl.l func_80E506                    ;C3F3C9|2206E580|80E506;  
@@ -17800,7 +17798,6 @@ CODE_C3F3E7:
 	db $80,$A5,$00,$F0,$0F,$89,$10,$00   ;C3F3F8|        |C3F39F;  
 	db $D0,$5A,$89,$00,$80,$D0,$0A,$89   ;C3F400|        |C3F45C;  
 	db $00,$40,$D0,$02                   ;C3F408|        |      ;  
-
 CODE_C3F40C:
 	plp                                  ;C3F40C|28      |      ;  
 	rtl                                  ;C3F40D|6B      |      ;  

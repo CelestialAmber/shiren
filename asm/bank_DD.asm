@@ -296,7 +296,7 @@ SPCStart:
 	bcs SPCStart 	
 	mov a,$91 	
 	beq SPC_05d2	
-	mov x,#$07	
+	mov x,#$07
 SPC_05c0:  
 	mov a,$45+x	
 	beq SPCStart	

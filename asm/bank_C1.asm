@@ -5046,7 +5046,6 @@ CODE_C15A64:
 	lda.l debugMode                   ;C15A6A|AF008080|808000;  
 	bne CODE_C15A73                      ;C15A6E|D003    |C15A73;  
 	db $28,$38,$60                       ;C15A70|        |      ;  
-
 CODE_C15A73:
 	plp                                  ;C15A73|28      |      ;  
 	clc                                  ;C15A74|18      |      ;  

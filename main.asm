@@ -64,6 +64,5 @@ incsrc "asm/bank_FA.asm"
 incsrc "asm/bank_FB.asm"
 incsrc "asm/bank_FC.asm"
 incsrc "asm/bank_FD.asm"
-incsrc "asm/bank_FE.asm"
-incsrc "asm/bank_FF.asm"
+incsrc "data/text.asm" ;banks fe and ff
 incsrc "regs.asm"

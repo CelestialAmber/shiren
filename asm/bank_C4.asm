@@ -179,7 +179,6 @@ CODE_C4014D:
 	db $A9,$00,$00,$85,$00,$22,$0C,$DC   ;C40156|        |      ;  
 	db $80,$A5,$00,$89,$20,$00,$F0,$04   ;C4015E|        |C40105;  
 	db $22,$34,$02,$C4                   ;C40166|        |C40234;  
-
 CODE_C4016A:
 	sep #$20                             ;C4016A|E220    |      ;  
 	rep #$10                             ;C4016C|C210    |      ;  
@@ -17731,7 +17730,7 @@ CODE_C4B999:
 	lda.b $00                            ;C4B99B|A500    |000000;  
 	asl a                                ;C4B99D|0A      |      ;  
 	tax                                  ;C4B99E|AA      |      ;  
-	lda.l DATA8_FE0000,x                 ;C4B99F|BF0000FE|FE0000;  
+	lda.l TextPointerTable,x                 ;C4B99F|BF0000FE|FE0000;  
 	sta.b $D6                            ;C4B9A3|85D6    |0000D6;  
 	lda.b $00                            ;C4B9A5|A500    |000000;  
 	ldx.w #$0000                         ;C4B9A7|A20000  |      ;  
@@ -18712,7 +18711,7 @@ CODE_C4C0E0:
 	lda.b $00                            ;C4C0E9|A500    |000000;  
 	asl a                                ;C4C0EB|0A      |      ;  
 	tax                                  ;C4C0EC|AA      |      ;  
-	lda.l DATA8_FE0000,x                 ;C4C0ED|BF0000FE|FE0000;  
+	lda.l TextPointerTable,x                 ;C4C0ED|BF0000FE|FE0000;  
 	sta.b $D6                            ;C4C0F1|85D6    |0000D6;  
 	lda.b $00                            ;C4C0F3|A500    |000000;  
 	ldx.w #$0000                         ;C4C0F5|A20000  |      ;  
@@ -18778,7 +18777,7 @@ CODE_C4C157:
 	lda.b $00                            ;C4C15A|A500    |000000;  
 	asl a                                ;C4C15C|0A      |      ;  
 	tax                                  ;C4C15D|AA      |      ;  
-	lda.l DATA8_FE0000,x                 ;C4C15E|BF0000FE|FE0000;  
+	lda.l TextPointerTable,x                 ;C4C15E|BF0000FE|FE0000;  
 	sta.b $D6                            ;C4C162|85D6    |0000D6;  
 	lda.b $00                            ;C4C164|A500    |000000;  
 	ldx.w #$0000                         ;C4C166|A20000  |      ;  
