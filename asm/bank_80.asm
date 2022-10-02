@@ -1,9 +1,8 @@
 org $808000
 
-DATA8_808000:
-db $FF
-DATA8_808001:
-db $FF
+;0xFFFF: off, 0x0000: on
+debugMode:
+	dw $FFFF
 
 Start:
 	clc                                  ;808002|18      |      ;
@@ -546,7 +545,7 @@ func_80854D:
 	lda.b $0B,s                          ;808552|A30B    |00000B;  
 	inc a                                ;808554|1A      |      ;  
 	sta.b $0B,s                          ;808555|830B    |00000B;  
-	lda.l DATA8_808000                   ;808557|AF008080|808000;  
+	lda.l debugMode                   ;808557|AF008080|808000;  
 	bne func_80856E                      ;80855B|D011    |C0856E;  
 	db $AF,$00,$01,$00,$29,$00,$20,$F0   ;80855D|        |000100;  
 	db $08,$E2,$20,$8F,$00,$21,$00,$C2   ;808565|        |      ;  
@@ -3314,7 +3313,7 @@ func_809AB1:
 	jsl.l func_809B5B                    ;809AB1|225B9B80|809B5B;  
 	phk                                  ;809AB5|4B      |      ;  
 	plb                                  ;809AB6|AB      |      ;  
-	lda.l DATA8_808000                   ;809AB7|AF008080|808000;  
+	lda.l debugMode                   ;809AB7|AF008080|808000;  
 	bne func_809AE9                      ;809ABB|D02C    |C09AE9;  
 	db $80,$06,$AD,$12,$42,$4A,$90,$FA   ;809ABD|        |C09AC5;  
 	db $AD,$12,$42,$4A,$B0,$FA,$AE,$1A   ;809AC5|        |004212;  
@@ -14765,7 +14764,7 @@ UNREACH_80FC8F:
 
 
 warnpc $80FFB0
-org #80FFB0
+org $80FFB0
 
 ;header data
 ;80ffb0
@@ -14788,25 +14787,25 @@ dw $E5CA ;checksum
 jml.l func_809738
 
 Native_COP:
-	dw DATA8_808001                    ;80FFE4|        |008081;  
+	dw $8001                    ;80FFE4|        |008081;  
 
 Native_BRK:
- 	dw DATA8_808001                    ;80FFE6|        |008081;  
-	dw DATA8_808001                    ;80FFE8|        |008081;  
+ 	dw $8001                    ;80FFE6|        |008081;  
+	dw $8001                    ;80FFE8|        |008081;  
 
 Native_NMI:
-	dw DATA8_808001                    ;80FFEA|        |008081;  
-	dw DATA8_808001                    ;80FFEC|        |008081;  
+	dw $8001                    ;80FFEA|        |008081;  
+	dw $8001                    ;80FFEC|        |008081;  
 	db $E0,$FF                           ;80FFEE|        |      ;  
 	dw Start                             ;80FFF0|        |008002;  
 	dw Start                             ;80FFF2|        |008002;  
 
 Native_IRQ:
-	dw DATA8_808001                    ;80FFF4|        |008081;  
-	dw DATA8_808001                    ;80FFF6|        |008081;  
-	dw DATA8_808001                    ;80FFF8|        |008081;  
-	dw DATA8_808001                    ;80FFFA|        |008081;  
+	dw $8001                    ;80FFF4|        |008081;  
+	dw $8001                    ;80FFF6|        |008081;  
+	dw $8001                    ;80FFF8|        |008081;  
+	dw $8001                    ;80FFFA|        |008081;  
 	dw Start                             ;80FFFC|        |008002;  
 
 Emulation_RESET:
-	dw DATA8_808001                    ;80FFFE|        |008081;  
+	dw $8001                    ;80FFFE|        |008081;  

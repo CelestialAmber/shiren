@@ -1803,7 +1803,7 @@ CODE_C073D1:
 	jsl.l func_80F375                    ;C073D3|2275F380|80F375;  
 	jsl.l CODE_C072EF                    ;C073D7|22EF72C0|C072EF;  
 	jsl.l func_80B5D6                    ;C073DB|22D6B580|80B5D6;  
-	lda.l DATA8_808000                   ;C073DF|AF008080|808000;  
+	lda.l debugMode                   ;C073DF|AF008080|808000;  
 	bne CODE_C073F5                      ;C073E3|D010    |C073F5;  
 	db $A9,$02,$00,$85,$00,$22,$0C,$DC   ;C073E5|        |      ;  
 	db $80,$A5,$00,$89,$10,$00,$D0,$28   ;C073ED|        |C07394;  
@@ -2113,7 +2113,7 @@ CODE_C076CE:
 CODE_C076E9:
 	php                                  ;C076E9|08      |      ;  
 	sep #$30                             ;C076EA|E230    |      ;  
-	lda.l DATA8_808000                   ;C076EC|AF008080|808000;  
+	lda.l debugMode                   ;C076EC|AF008080|808000;  
 	bne CODE_C07712                      ;C076F0|D020    |C07712;  
 	db $A9,$02,$85,$00,$22,$0C,$DC,$80   ;C076F2|        |      ;  
 	db $A5,$00,$89,$10,$F0,$12,$22,$DF   ;C076FA|        |000000;  

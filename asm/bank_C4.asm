@@ -174,7 +174,7 @@ CODE_C40145:
 CODE_C4014D:
 	php                                  ;C4014D|08      |      ;  
 	rep #$20                             ;C4014E|C220    |      ;  
-	lda.l DATA8_808000                   ;C40150|AF008080|808000;  
+	lda.l debugMode                   ;C40150|AF008080|808000;  
 	bne CODE_C4016A                      ;C40154|D014    |C4016A;  
 	db $A9,$00,$00,$85,$00,$22,$0C,$DC   ;C40156|        |      ;  
 	db $80,$A5,$00,$89,$20,$00,$F0,$04   ;C4015E|        |C40105;  
@@ -17639,33 +17639,33 @@ CODE_C4B89F:
 	rts                                  ;C4B8A7|60      |      ;  
 	db $BF,$F6,$79,$DC,$99,$1E,$00,$BF   ;C4B8A8|        |DC79F6;  
 	db $F4,$79,$DC,$99,$1C,$00           ;C4B8B0|        |00DC79;  
-	lda.l DATA8_DC79F2,x                 ;C4B8B6|BFF279DC|DC79F2;  
+	lda.l $DC79F2,x                 ;C4B8B6|BFF279DC|DC79F2;  
 	sta.w $001A,y                        ;C4B8BA|991A00  |7F001A;  
-	lda.l DATA8_DC79F0,x                 ;C4B8BD|BFF079DC|DC79F0;  
+	lda.l $DC79F0,x                 ;C4B8BD|BFF079DC|DC79F0;  
 	sta.w $0018,y                        ;C4B8C1|991800  |7F0018;  
-	lda.l DATA8_DC79EE,x                 ;C4B8C4|BFEE79DC|DC79EE;  
+	lda.l $DC79EE,x                 ;C4B8C4|BFEE79DC|DC79EE;  
 	sta.w $0016,y                        ;C4B8C8|991600  |7F0016;  
-	lda.l DATA8_DC79EC,x                 ;C4B8CB|BFEC79DC|DC79EC;  
+	lda.l $DC79EC,x                 ;C4B8CB|BFEC79DC|DC79EC;  
 	sta.w $0014,y                        ;C4B8CF|991400  |7F0014;  
-	lda.l DATA8_DC79EA,x                 ;C4B8D2|BFEA79DC|DC79EA;  
+	lda.l $DC79EA,x                 ;C4B8D2|BFEA79DC|DC79EA;  
 	sta.w $0012,y                        ;C4B8D6|991200  |7F0012;  
-	lda.l DATA8_DC79E8,x                 ;C4B8D9|BFE879DC|DC79E8;  
+	lda.l $DC79E8,x                 ;C4B8D9|BFE879DC|DC79E8;  
 	sta.w $0010,y                        ;C4B8DD|991000  |7F0010;  
-	lda.l DATA8_DC79E6,x                 ;C4B8E0|BFE679DC|DC79E6;  
+	lda.l $DC79E6,x                 ;C4B8E0|BFE679DC|DC79E6;  
 	sta.w $000E,y                        ;C4B8E4|990E00  |7F000E;  
-	lda.l DATA8_DC79E4,x                 ;C4B8E7|BFE479DC|DC79E4;  
+	lda.l $DC79E4,x                 ;C4B8E7|BFE479DC|DC79E4;  
 	sta.w $000C,y                        ;C4B8EB|990C00  |7F000C;  
-	lda.l DATA8_DC79E2,x                 ;C4B8EE|BFE279DC|DC79E2;  
+	lda.l $DC79E2,x                 ;C4B8EE|BFE279DC|DC79E2;  
 	sta.w $000A,y                        ;C4B8F2|990A00  |7F000A;  
-	lda.l DATA8_DC79E0,x                 ;C4B8F5|BFE079DC|DC79E0;  
+	lda.l $DC79E0,x                 ;C4B8F5|BFE079DC|DC79E0;  
 	sta.w $0008,y                        ;C4B8F9|990800  |7F0008;  
-	lda.l DATA8_DC79DE,x                 ;C4B8FC|BFDE79DC|DC79DE;  
+	lda.l $DC79DE,x                 ;C4B8FC|BFDE79DC|DC79DE;  
 	sta.w $0006,y                        ;C4B900|990600  |7F0006;  
-	lda.l DATA8_DC79DC,x                 ;C4B903|BFDC79DC|DC79DC;  
+	lda.l $DC79DC,x                 ;C4B903|BFDC79DC|DC79DC;  
 	sta.w $0004,y                        ;C4B907|990400  |7F0004;  
-	lda.l DATA8_DC79DA,x                 ;C4B90A|BFDA79DC|DC79DA;  
+	lda.l $DC79DA,x                 ;C4B90A|BFDA79DC|DC79DA;  
 	sta.w $0002,y                        ;C4B90E|990200  |7F0002;  
-	lda.l DATA8_DC79D8,x                 ;C4B911|BFD879DC|DC79D8;  
+	lda.l MainFontGraphicsData,x                 ;C4B911|BFD879DC|DC79D8;  
 	sta.w $0000,y                        ;C4B915|990000  |7F0000;  
 
 CODE_C4B918:

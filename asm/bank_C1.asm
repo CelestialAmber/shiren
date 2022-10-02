@@ -5043,7 +5043,7 @@ CODE_C15A64:
 	rts                                  ;C15A66|60      |      ;  
 	php                                  ;C15A67|08      |      ;  
 	sep #$20                             ;C15A68|E220    |      ;  
-	lda.l DATA8_808000                   ;C15A6A|AF008080|808000;  
+	lda.l debugMode                   ;C15A6A|AF008080|808000;  
 	bne CODE_C15A73                      ;C15A6E|D003    |C15A73;  
 	db $28,$38,$60                       ;C15A70|        |      ;  
 

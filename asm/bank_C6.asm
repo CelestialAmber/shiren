@@ -2746,6 +2746,8 @@ CODE_C624D9:
 	db $92,$8A,$C2,$20,$D7,$09,$20,$B1   ;C62515|        |00008A;  
 	db $0A,$22,$89,$0E,$C2,$4C,$DC,$05   ;C6251D|        |      ;  
 
+;debug message printing function?
+;$00-01 = message id
 CODE_C62525:
 	php                                  ;C62525|08      |      ;  
 	sep #$20                             ;C62526|E220    |      ;  
@@ -2754,7 +2756,6 @@ CODE_C62525:
 	lda.l $7ED601                        ;C6252E|AF01D67E|7ED601;  
 	beq CODE_C62538                      ;C62532|F004    |C62538;  
 	jsl.l CODE_C06DFE                    ;C62534|22FE6DC0|C06DFE;  
-
 CODE_C62538:
 	plp                                  ;C62538|28      |      ;  
 	rtl                                  ;C62539|6B      |      ;  

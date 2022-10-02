@@ -15993,7 +15993,7 @@ CODE_C3E331:
 	ldy.w #$0001                         ;C3E338|A00100  |      ;  
 	lda.b [$00],y                        ;C3E33B|B700    |000000;  
 	bmi CODE_C3E349                      ;C3E33D|300A    |C3E349;  
-	lda.l DATA8_808000                   ;C3E33F|AF008080|808000;  
+	lda.l debugMode                   ;C3E33F|AF008080|808000;  
 	beq CODE_C3E349                      ;C3E343|F004    |C3E349;  
 	lda.b #$00                           ;C3E345|A900    |      ;  
 	sta.b [$04],y                        ;C3E347|9704    |000004;  
@@ -16931,7 +16931,7 @@ CODE_C3EA19:
 	lda.w #$0000                         ;C3EA1F|A90000  |      ;  
 	sta.b $00                            ;C3EA22|8500    |000000;  
 	jsl.l func_80DC0C                    ;C3EA24|220CDC80|80DC0C;  
-	lda.l DATA8_808000                   ;C3EA28|AF008080|808000;  
+	lda.l debugMode                   ;C3EA28|AF008080|808000;  
 	and.w #$0010                         ;C3EA2C|291000  |      ;  
 	eor.w #$FFFF                         ;C3EA2F|49FFFF  |      ;  
 	and.b $00                            ;C3EA32|2500    |000000;  
@@ -17767,7 +17767,7 @@ CODE_C3F3AE:
 CODE_C3F3B6:
 	php                                  ;C3F3B6|08      |      ;  
 	sep #$30                             ;C3F3B7|E230    |      ;  
-	lda.l DATA8_808000                   ;C3F3B9|AF008080|808000;  
+	lda.l debugMode                   ;C3F3B9|AF008080|808000;  
 	beq CODE_C3F3C7                      ;C3F3BD|F008    |C3F3C7;  
 	jsl.l CODE_C62B42                    ;C3F3BF|22422BC6|C62B42;  
 	lda.b $00                            ;C3F3C3|A500    |000000;  
@@ -17794,7 +17794,7 @@ CODE_C3F3E5:
 CODE_C3F3E7:
 	php                                  ;C3F3E7|08      |      ;  
 	rep #$30                             ;C3F3E8|C230    |      ;  
-	lda.l DATA8_808000                   ;C3F3EA|AF008080|808000;  
+	lda.l debugMode                   ;C3F3EA|AF008080|808000;  
 	bne CODE_C3F40C                      ;C3F3EE|D01C    |C3F40C;  
 	db $A9,$02,$00,$85,$00,$22,$69,$DC   ;C3F3F0|        |      ;  
 	db $80,$A5,$00,$F0,$0F,$89,$10,$00   ;C3F3F8|        |C3F39F;  

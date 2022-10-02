@@ -8676,7 +8676,7 @@ func_81CD8E:
 	jsr.w func_81CEEF                    ;81CD90|20EFCE  |C1CEEF;  
 	jsr.w func_81CF49                    ;81CD93|2049CF  |C1CF49;  
 	rep #$20                             ;81CD96|C220    |      ;  
-	lda.l DATA8_808000                   ;81CD98|AF008080|808000;  
+	lda.l debugMode                   ;81CD98|AF008080|808000;  
 	bne func_81CDDD                      ;81CD9C|D03F    |C1CDDD;  
 	db $A9,$00,$00,$85,$00,$22,$0C,$DC   ;81CD9E|        |      ;  
 	db $80,$A5,$00,$29,$30,$00,$C9,$30   ;81CDA6|        |C1CD4D;  
@@ -10600,7 +10600,7 @@ func_81DBCA:
 	pla                                  ;81DBD3|68      |      ;  
 	rts                                  ;81DBD4|60      |      ;
 
-
+;chunsoft logo animation graphics?
 	db $FF,$00,$02,$12,$18,$19,$82,$12   ;81DBD5|        |120200;  
 	db $01,$18,$19,$85,$12,$01,$18,$19   ;81DBDD|        |000018;  
 	db $8F,$12,$01,$17,$20,$83,$17,$00   ;81DBE5|        |170112;  
