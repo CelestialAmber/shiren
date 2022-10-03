@@ -61,7 +61,7 @@ CODE_C6005E:
 	adc.w #$0000                         ;C60076|690000  |      ;  
 	ora.w #$4000                         ;C60079|090040  |      ;  
 	sta.l $B36004                        ;C6007C|8F0460B3|B36004;  
-	sta.b rUnkPtrLo_02                   ;C60080|8502    |000002;  
+	sta.b $02                   ;C60080|8502    |000002;  
 	jsl.l CODE_C3F64E                    ;C60082|224EF6C3|C3F64E;  
 	jsl.l CODE_C3F683                    ;C60086|2283F6C3|C3F683;  
 	plp                                  ;C6008A|28      |      ;  
@@ -87,7 +87,7 @@ CODE_C6009D:
 	lda.w #$0000                         ;C600AA|A90000  |      ;  
 	sta.b $00                            ;C600AD|8500    |000000;  
 	lda.w #$800F                         ;C600AF|A90F80  |      ;  
-	sta.b rUnkPtrLo_02                   ;C600B2|8502    |000002;  
+	sta.b $02                   ;C600B2|8502    |000002;  
 	jsl.l func_80DD6E                    ;C600B4|226EDD80|80DD6E;  
 	plp                                  ;C600B8|28      |      ;  
 	rtl                                  ;C600B9|6B      |      ;  
@@ -154,7 +154,7 @@ CODE_C60119:
 	lda.b #$FF                           ;C60121|A9FF    |      ;  
 	sta.l $7ED60A                        ;C60123|8F0AD67E|7ED60A;  
 	jsl.l CODE_C3E913                    ;C60127|2213E9C3|C3E913;  
-	lda.b rUnkPtrLo_02                   ;C6012B|A502    |000002;  
+	lda.b $02                   ;C6012B|A502    |000002;  
 	sta.l $7ED60B                        ;C6012D|8F0BD67E|7ED60B;  
 	lda.b #$FF                           ;C60131|A9FF    |      ;  
 	sta.l $7ED604                        ;C60133|8F04D67E|7ED604;  
@@ -169,13 +169,13 @@ CODE_C60119:
 	pla                                  ;C6014A|68      |      ;  
 	sta.b $00                            ;C6014B|8500    |000000;  
 	sep #$20                             ;C6014D|E220    |      ;  
-	stz.b rUnkPtrLo_02                   ;C6014F|6402    |000002;  
+	stz.b $02                   ;C6014F|6402    |000002;  
 	cmp.b #$10                           ;C60151|C910    |      ;  
 	bcs CODE_C6015D                      ;C60153|B008    |C6015D;  
 	bit.b #$08                           ;C60155|8908    |      ;  
 	beq CODE_C6015D                      ;C60157|F004    |C6015D;  
 	lda.b #$01                           ;C60159|A901    |      ;  
-	sta.b rUnkPtrLo_02                   ;C6015B|8502    |000002;  
+	sta.b $02                   ;C6015B|8502    |000002;  
 
 CODE_C6015D:
 	plp                                  ;C6015D|28      |      ;  
@@ -188,7 +188,7 @@ UNREACH_C6015F:
 CODE_C6016E:
 	rep #$20                             ;C6016E|C220    |      ;  
 	stz.b $00                            ;C60170|6400    |000000;  
-	stz.b rUnkPtrLo_02                   ;C60172|6402    |000002;  
+	stz.b $02                   ;C60172|6402    |000002;  
 	plp                                  ;C60174|28      |      ;  
 	rtl                                  ;C60175|6B      |      ;  
 
@@ -249,7 +249,7 @@ CODE_C601E3:
 CODE_C601F2:
 	rep #$20                             ;C601F2|C220    |      ;  
 	stz.b $00                            ;C601F4|6400    |000000;  
-	stz.b rUnkPtrLo_02                   ;C601F6|6402    |000002;  
+	stz.b $02                   ;C601F6|6402    |000002;  
 	plp                                  ;C601F8|28      |      ;  
 	rtl                                  ;C601F9|6B      |      ;  
 
@@ -270,14 +270,14 @@ CODE_C60212:
 	ldy.b $00                            ;C60216|A400    |000000;  
 	bne CODE_C601E3                      ;C60218|D0C9    |C601E3;  
 	jsl.l CODE_C3E26C                    ;C6021A|226CE2C3|C3E26C;  
-	lda.b rUnkPtrLo_02                   ;C6021E|A502    |000002;  
+	lda.b $02                   ;C6021E|A502    |000002;  
 	sta.l $7ED60B                        ;C60220|8F0BD67E|7ED60B;  
 	ldx.b $00                            ;C60224|A600    |000000;  
 	cpx.b #$FF                           ;C60226|E0FF    |      ;  
 	beq CODE_C60232                      ;C60228|F008    |C60232;  
 	cpx.b #$E0                           ;C6022A|E0E0    |      ;  
 	beq UNREACH_C60255                   ;C6022C|F027    |C60255;  
-	stz.b rUnkPtrLo_02                   ;C6022E|6402    |000002;  
+	stz.b $02                   ;C6022E|6402    |000002;  
 	plp                                  ;C60230|28      |      ;  
 	rtl                                  ;C60231|6B      |      ;  
 
@@ -336,7 +336,7 @@ CODE_C6028B:
 	lda.w #$0000                         ;C60296|A90000  |      ;  
 	sta.b $00                            ;C60299|8500    |000000;  
 	lda.w #$000F                         ;C6029B|A90F00  |      ;  
-	sta.b rUnkPtrLo_02                   ;C6029E|8502    |000002;  
+	sta.b $02                   ;C6029E|8502    |000002;  
 	jsl.l func_80DD6E                    ;C602A0|226EDD80|80DD6E;  
 
 CODE_C602A4:
@@ -352,7 +352,7 @@ CODE_C602A6:
 	lda.w #$0000                         ;C602B1|A90000  |      ;  
 	sta.b $00                            ;C602B4|8500    |000000;  
 	lda.w #$0080                         ;C602B6|A98000  |      ;  
-	sta.b rUnkPtrLo_02                   ;C602B9|8502    |000002;  
+	sta.b $02                   ;C602B9|8502    |000002;  
 	jsl.l func_80DD6E                    ;C602BB|226EDD80|80DD6E;  
 
 CODE_C602BF:
@@ -407,11 +407,11 @@ CODE_C6030D:
 	lda.b #$03                           ;C60330|A903    |      ;  
 	sta.b $01                            ;C60332|8501    |000001;  
 	lda.b #$94                           ;C60334|A994    |      ;  
-	sta.b rUnkPtrLo_02                   ;C60336|8502    |000002;  
+	sta.b $02                   ;C60336|8502    |000002;  
 	lda.b #$D2                           ;C60338|A9D2    |      ;  
 	sta.b $03                            ;C6033A|8503    |000003;  
 	lda.b #$7E                           ;C6033C|A97E    |      ;  
-	sta.b rUnkPtrHi_02                   ;C6033E|8504    |000004;  
+	sta.b $04                   ;C6033E|8504    |000004;  
 	jsl.l CODE_C3E2AB                    ;C60340|22ABE2C3|C3E2AB;  
 	lda.b #$01                           ;C60344|A901    |      ;  
 	sta.b $00                            ;C60346|8500    |000000;  
@@ -431,11 +431,11 @@ CODE_C6034E:
 	lda.b #$03                           ;C60365|A903    |      ;  
 	sta.b $01                            ;C60367|8501    |000001;  
 	lda.b #$94                           ;C60369|A994    |      ;  
-	sta.b rUnkPtrLo_02                   ;C6036B|8502    |000002;  
+	sta.b $02                   ;C6036B|8502    |000002;  
 	lda.b #$D2                           ;C6036D|A9D2    |      ;  
 	sta.b $03                            ;C6036F|8503    |000003;  
 	lda.b #$7E                           ;C60371|A97E    |      ;  
-	sta.b rUnkPtrHi_02                   ;C60373|8504    |000004;  
+	sta.b $04                   ;C60373|8504    |000004;  
 	jsl.l CODE_C3E2DB                    ;C60375|22DBE2C3|C3E2DB;  
 	plp                                  ;C60379|28      |      ;  
 	rtl                                  ;C6037A|6B      |      ;  
@@ -466,13 +466,13 @@ CODE_C603A2:
 	jsl.l CODE_C3E7DA                    ;C603A2|22DAE7C3|C3E7DA;  
 	ldy.b $01                            ;C603A6|A401    |000001;  
 	lda.b $00                            ;C603A8|A500    |000000;  
-	sta.b rUnkPtrLo_02                   ;C603AA|8502    |000002;  
+	sta.b $02                   ;C603AA|8502    |000002;  
 	lda.b #$0D                           ;C603AC|A90D    |      ;  
 	sta.b $00                            ;C603AE|8500    |000000;  
 	phy                                  ;C603B0|5A      |      ;  
 	jsl.l CODE_C60479                    ;C603B1|227904C6|C60479;  
 	ply                                  ;C603B5|7A      |      ;  
-	sty.b rUnkPtrLo_02                   ;C603B6|8402    |000002;  
+	sty.b $02                   ;C603B6|8402    |000002;  
 	lda.b #$0E                           ;C603B8|A90E    |      ;  
 	sta.b $00                            ;C603BA|8500    |000000;  
 	jsl.l CODE_C60479                    ;C603BC|227904C6|C60479;  
@@ -483,7 +483,7 @@ CODE_C603A2:
 	sta.b $00                            ;C603CC|8500    |000000;  
 	sta.b $01                            ;C603CE|8501    |000001;  
 	lda.b #$06                           ;C603D0|A906    |      ;  
-	sta.b rUnkPtrLo_02                   ;C603D2|8502    |000002;  
+	sta.b $02                   ;C603D2|8502    |000002;  
 	lda.b #$00                           ;C603D4|A900    |      ;  
 	sta.b $03                            ;C603D6|8503    |000003;  
 	jsl.l CODE_C2007D                    ;C603D8|227D00C2|C2007D;  
@@ -537,7 +537,7 @@ CODE_C60479:
 	php                                  ;C60479|08      |      ;  
 	sep #$30                             ;C6047A|E230    |      ;  
 	ldx.b $00                            ;C6047C|A600    |000000;  
-	lda.b rUnkPtrLo_02                   ;C6047E|A502    |000002;  
+	lda.b $02                   ;C6047E|A502    |000002;  
 	sta.l $7ED294,x                      ;C60480|9F94D27E|7ED294;  
 	lda.l $7ED600                        ;C60484|AF00D67E|7ED600;  
 	beq CODE_C60492                      ;C60488|F008    |C60492;  
@@ -576,11 +576,11 @@ CODE_C604B2:
 	sta.l $7ED394,x                      ;C604BA|9F94D37E|7ED394;  
 	lda.b $01                            ;C604BE|A501    |000001;  
 	sta.l $7ED3F8,x                      ;C604C0|9FF8D37E|7ED3F8;  
-	lda.b rUnkPtrLo_02                   ;C604C4|A502    |000002;  
+	lda.b $02                   ;C604C4|A502    |000002;  
 	sta.l $7ED45C,x                      ;C604C6|9F5CD47E|7ED45C;  
 	lda.b $03                            ;C604CA|A503    |000003;  
 	sta.l $7ED4C0,x                      ;C604CC|9FC0D47E|7ED4C0;  
-	lda.b rUnkPtrHi_02                   ;C604D0|A504    |000004;  
+	lda.b $04                   ;C604D0|A504    |000004;  
 	sta.l $7ED524,x                      ;C604D2|9F24D57E|7ED524;  
 	lda.b $05                            ;C604D6|A505    |000005;  
 	sta.l $7ED588,x                      ;C604D8|9F88D57E|7ED588;  
@@ -596,7 +596,7 @@ CODE_C604E1:
 
 CODE_C604E6:
 	stx.b $00                            ;C604E6|8600    |000000;  
-	stz.b rUnkPtrLo_02                   ;C604E8|6402    |000002;  
+	stz.b $02                   ;C604E8|6402    |000002;  
 	phx                                  ;C604EA|DA      |      ;  
 	jsl.l CODE_C60479                    ;C604EB|227904C6|C60479;  
 	plx                                  ;C604EF|FA      |      ;  
@@ -609,9 +609,9 @@ CODE_C604F7:
 	lda.b #$FF                           ;C604F7|A9FF    |      ;  
 	sta.b $00                            ;C604F9|8500    |000000;  
 	sta.b $01                            ;C604FB|8501    |000001;  
-	sta.b rUnkPtrLo_02                   ;C604FD|8502    |000002;  
+	sta.b $02                   ;C604FD|8502    |000002;  
 	sta.b $03                            ;C604FF|8503    |000003;  
-	sta.b rUnkPtrHi_02                   ;C60501|8504    |000004;  
+	sta.b $04                   ;C60501|8504    |000004;  
 	sta.b $05                            ;C60503|8505    |000005;  
 	stx.b $06                            ;C60505|8606    |000006;  
 	phx                                  ;C60507|DA      |      ;  
@@ -640,11 +640,11 @@ CODE_C6051F:
 	lda.l $7ED3F8,x                      ;C6052A|BFF8D37E|7ED3F8;  
 	sta.b $01                            ;C6052E|8501    |000001;  
 	lda.l $7ED45C,x                      ;C60530|BF5CD47E|7ED45C;  
-	sta.b rUnkPtrLo_02                   ;C60534|8502    |000002;  
+	sta.b $02                   ;C60534|8502    |000002;  
 	lda.l $7ED4C0,x                      ;C60536|BFC0D47E|7ED4C0;  
 	sta.b $03                            ;C6053A|8503    |000003;  
 	lda.l $7ED524,x                      ;C6053C|BF24D57E|7ED524;  
-	sta.b rUnkPtrHi_02                   ;C60540|8504    |000004;  
+	sta.b $04                   ;C60540|8504    |000004;  
 	lda.l $7ED588,x                      ;C60542|BF88D57E|7ED588;  
 	sta.b $05                            ;C60546|8505    |000005;  
 	plp                                  ;C60548|28      |      ;  
@@ -658,11 +658,11 @@ CODE_C6054A:
 	sta.l $7ED394,x                      ;C60551|9F94D37E|7ED394;  
 	lda.b $01                            ;C60555|A501    |000001;  
 	sta.l $7ED3F8,x                      ;C60557|9FF8D37E|7ED3F8;  
-	lda.b rUnkPtrLo_02                   ;C6055B|A502    |000002;  
+	lda.b $02                   ;C6055B|A502    |000002;  
 	sta.l $7ED45C,x                      ;C6055D|9F5CD47E|7ED45C;  
 	lda.b $03                            ;C60561|A503    |000003;  
 	sta.l $7ED4C0,x                      ;C60563|9FC0D47E|7ED4C0;  
-	lda.b rUnkPtrHi_02                   ;C60567|A504    |000004;  
+	lda.b $04                   ;C60567|A504    |000004;  
 	sta.l $7ED524,x                      ;C60569|9F24D57E|7ED524;  
 	lda.b $05                            ;C6056D|A505    |000005;  
 	sta.l $7ED588,x                      ;C6056F|9F88D57E|7ED588;  
@@ -680,7 +680,7 @@ CODE_C6057F:
 	lda.w #$0078                         ;C60582|A97800  |      ;  
 	sta.b $00                            ;C60585|8500    |000000;  
 	lda.w #$0002                         ;C60587|A90200  |      ;  
-	sta.b rUnkPtrLo_02                   ;C6058A|8502    |000002;  
+	sta.b $02                   ;C6058A|8502    |000002;  
 	jsl.l func_80F335                    ;C6058C|2235F380|80F335;  
 	plp                                  ;C60590|28      |      ;  
 	rtl                                  ;C60591|6B      |      ;  
@@ -759,7 +759,7 @@ CODE_C60630:
 	lda.b #$00                           ;C60650|A900    |      ;  
 	sta.b $00                            ;C60652|8500    |000000;  
 	lda.l $7ED5F2                        ;C60654|AFF2D57E|7ED5F2;  
-	sta.b rUnkPtrLo_02                   ;C60658|8502    |000002;  
+	sta.b $02                   ;C60658|8502    |000002;  
 	jsl.l CODE_C60479                    ;C6065A|227904C6|C60479;  
 
 CODE_C6065E:
@@ -814,13 +814,13 @@ CODE_C606CD:
 	db $22,$65,$29,$C6,$80,$F0           ;C606D7|        |C62965;  
 
 CODE_C606DD:
-	ldy.b rUnkPtrLo_02                   ;C606DD|A402    |000002;  
+	ldy.b $02                   ;C606DD|A402    |000002;  
 	beq CODE_C606E4                      ;C606DF|F003    |C606E4;  
 	jmp.w CODE_C60788                    ;C606E1|4C8807  |C60788;  
 
 CODE_C606E4:
 	lda.l $7ED60B                        ;C606E4|AF0BD67E|7ED60B;  
-	sta.b rUnkPtrLo_02                   ;C606E8|8502    |000002;  
+	sta.b $02                   ;C606E8|8502    |000002;  
 	jsl.l CODE_C24965                    ;C606EA|226549C2|C24965;  
 	lda.b $00                            ;C606EE|A500    |000000;  
 	cmp.b #$02                           ;C606F0|C902    |      ;  
@@ -981,7 +981,7 @@ CODE_C6080E:
 	lda.b #$13                           ;C6082E|A913    |      ;  
 	sta.b $00                            ;C60830|8500    |000000;  
 	lda.l $7ED5F0                        ;C60832|AFF0D57E|7ED5F0;  
-	sta.b rUnkPtrLo_02                   ;C60836|8502    |000002;  
+	sta.b $02                   ;C60836|8502    |000002;  
 	lda.l $7ED5F1                        ;C60838|AFF1D57E|7ED5F1;  
 	sta.b $03                            ;C6083C|8503    |000003;  
 	jsl.l CODE_C27951                    ;C6083E|225179C2|C27951;  
@@ -997,7 +997,7 @@ CODE_C6080E:
 	sta.b $00                            ;C60860|8500    |000000;  
 	jsl.l CODE_C210AC                    ;C60862|22AC10C2|C210AC;  
 	jsl.l CODE_C359AF                    ;C60866|22AF59C3|C359AF;  
-	lda.b rUnkPtrLo_02                   ;C6086A|A502    |000002;  
+	lda.b $02                   ;C6086A|A502    |000002;  
 	bne CODE_C60878                      ;C6086C|D00A    |C60878;  
 	lda.b #$02                           ;C6086E|A902    |      ;  
 	sta.b $01                            ;C60870|8501    |000001;  
@@ -1047,13 +1047,13 @@ CODE_C608B6:
 	lda.b #$13                           ;C608D1|A913    |      ;  
 	sta.b $00                            ;C608D3|8500    |000000;  
 	ldy.w #$1119                         ;C608D5|A01911  |      ;  
-	sty.b rUnkPtrLo_02                   ;C608D8|8402    |000002;  
+	sty.b $02                   ;C608D8|8402    |000002;  
 	jsl.l CODE_C27951                    ;C608DA|225179C2|C27951;  
 	jsl.l CODE_C6080E                    ;C608DE|220E08C6|C6080E;  
 	lda.b #$13                           ;C608E2|A913    |      ;  
 	sta.b $00                            ;C608E4|8500    |000000;  
 	ldy.w #$083A                         ;C608E6|A03A08  |      ;  
-	sty.b rUnkPtrLo_02                   ;C608E9|8402    |000002;  
+	sty.b $02                   ;C608E9|8402    |000002;  
 	jsl.l CODE_C27951                    ;C608EB|225179C2|C27951;  
 	lda.b #$13                           ;C608EF|A913    |      ;  
 	sta.b $00                            ;C608F1|8500    |000000;  
@@ -1082,13 +1082,13 @@ CODE_C60907:
 	lda.b #$13                           ;C60922|A913    |      ;  
 	sta.b $00                            ;C60924|8500    |000000;  
 	ldy.w #$0F1D                         ;C60926|A01D0F  |      ;  
-	sty.b rUnkPtrLo_02                   ;C60929|8402    |000002;  
+	sty.b $02                   ;C60929|8402    |000002;  
 	jsl.l CODE_C27951                    ;C6092B|225179C2|C27951;  
 	jsl.l CODE_C6080E                    ;C6092F|220E08C6|C6080E;  
 	lda.b #$13                           ;C60933|A913    |      ;  
 	sta.b $00                            ;C60935|8500    |000000;  
 	ldy.w #$2206                         ;C60937|A00622  |      ;  
-	sty.b rUnkPtrLo_02                   ;C6093A|8402    |000002;  
+	sty.b $02                   ;C6093A|8402    |000002;  
 	jsl.l CODE_C27951                    ;C6093C|225179C2|C27951;  
 	lda.b #$13                           ;C60940|A913    |      ;  
 	sta.b $00                            ;C60942|8500    |000000;  
@@ -2560,7 +2560,7 @@ CODE_C622A5:
 	lda.l UNREACH_C62309,x               ;C622C0|BF0923C6|C62309;  
 	sta.b $01                            ;C622C4|8501    |000001;  
 	lda.b #$C6                           ;C622C6|A9C6    |      ;  
-	sta.b rUnkPtrLo_02                   ;C622C8|8502    |000002;  
+	sta.b $02                   ;C622C8|8502    |000002;  
 	lda.l $7ED5FE                        ;C622CA|AFFED57E|7ED5FE;  
 	cmp.b [$00]                          ;C622CE|C700    |000000;  
 	bcc CODE_C622D4                      ;C622D0|9002    |C622D4;  
@@ -2668,7 +2668,7 @@ CODE_C62437:
 	jsl.l CODE_C07339                    ;C62440|223973C0|C07339;  
 	jsl.l CODE_C6008C                    ;C62444|228C00C6|C6008C;  
 	lda.b #$02                           ;C62448|A902    |      ;  
-	sta.b rUnkPtrLo_02                   ;C6244A|8502    |000002;  
+	sta.b $02                   ;C6244A|8502    |000002;  
 	jsl.l func_80F326                    ;C6244C|2226F380|80F326;  
 	jsl.l func_80854A                    ;C62450|224A8580|80854A;  
 
@@ -2712,7 +2712,7 @@ CODE_C624A2:
 	lda.w #$0039                         ;C624AD|A93900  |      ;  
 	sta.b $00                            ;C624B0|8500    |000000;  
 	ldx.b #$13                           ;C624B2|A213    |      ;  
-	stx.b rUnkPtrLo_02                   ;C624B4|8602    |000002;  
+	stx.b $02                   ;C624B4|8602    |000002;  
 	jsl.l CODE_C62525                    ;C624B6|222525C6|C62525;  
 	jsl.l CODE_C07339                    ;C624BA|223973C0|C07339;  
 	rep #$30                             ;C624BE|C230    |      ;  
@@ -3158,7 +3158,7 @@ CODE_C629EC:
 	rep #$10                             ;C629EE|C210    |      ;  
 	ldy.b $00                            ;C629F0|A400    |000000;  
 	phy                                  ;C629F2|5A      |      ;  
-	ldy.b rUnkPtrLo_02                   ;C629F3|A402    |000002;  
+	ldy.b $02                   ;C629F3|A402    |000002;  
 	phy                                  ;C629F5|5A      |      ;  
 	jsl.l CODE_C16C7D                    ;C629F6|227D6CC1|C16C7D;  
 	pla                                  ;C629FA|68      |      ;  
@@ -3192,7 +3192,7 @@ CODE_C62A2D:
 	cmp.b $01                            ;C62A39|C501    |000001;  
 	bne CODE_C62A4B                      ;C62A3B|D00E    |C62A4B;  
 	lda.l DATA8_C3A929,x                 ;C62A3D|BF29A9C3|C3A929;  
-	sta.b rUnkPtrLo_02                   ;C62A41|8502    |000002;  
+	sta.b $02                   ;C62A41|8502    |000002;  
 	lda.l DATA8_C3A92A,x                 ;C62A43|BF2AA9C3|C3A92A;  
 	sta.b $03                            ;C62A47|8503    |000003;  
 	bra CODE_C62A5F                      ;C62A49|8014    |C62A5F;  
@@ -3364,9 +3364,9 @@ UNREACH_C62BBD:
 CODE_C62bcc:
 	ldx.b $00                            ;C62bcc|A600    |000000;  
 	phx                                  ;C62BCE|DA      |      ;  
-	ldx.b rUnkPtrLo_02                   ;C62BCF|A602    |000002;  
+	ldx.b $02                   ;C62BCF|A602    |000002;  
 	phx                                  ;C62BD1|DA      |      ;  
-	ldx.b rUnkPtrHi_02                   ;C62BD2|A604    |000004;  
+	ldx.b $04                   ;C62BD2|A604    |000004;  
 	phx                                  ;C62BD4|DA      |      ;  
 	jsl.l CODE_C3E3A8                    ;C62BD5|22A8E3C3|C3E3A8;  
 	lda.b $00                            ;C62BD9|A500    |000000;  
@@ -3473,18 +3473,18 @@ CODE_C62D61:
 	lda.b $00                            ;C62D71|A500    |000000;  
 	sta.l $7ED623                        ;C62D73|8F23D67E|7ED623;  
 	jsl.l CODE_C21167                    ;C62D77|226711C2|C21167;  
-	lda.b rUnkPtrLo_02                   ;C62D7B|A502    |000002;  
+	lda.b $02                   ;C62D7B|A502    |000002;  
 	pha                                  ;C62D7D|48      |      ;  
 	lda.b $03                            ;C62D7E|A503    |000003;  
 	pha                                  ;C62D80|48      |      ;  
-	lda.b rUnkPtrHi_02                   ;C62D81|A504    |000004;  
+	lda.b $04                   ;C62D81|A504    |000004;  
 	pha                                  ;C62D83|48      |      ;  
 	jsl.l CODE_C3E7DA                    ;C62D84|22DAE7C3|C3E7DA;  
 	ldy.b $00                            ;C62D88|A400    |000000;  
-	sty.b rUnkPtrHi_02                   ;C62D8A|8404    |000004;  
+	sty.b $04                   ;C62D8A|8404    |000004;  
 	stz.b $03                            ;C62D8C|6403    |000003;  
 	pla                                  ;C62D8E|68      |      ;  
-	sta.b rUnkPtrLo_02                   ;C62D8F|8502    |000002;  
+	sta.b $02                   ;C62D8F|8502    |000002;  
 	pla                                  ;C62D91|68      |      ;  
 	sta.b $01                            ;C62D92|8501    |000001;  
 	pla                                  ;C62D94|68      |      ;  
@@ -3495,14 +3495,14 @@ CODE_C62D61:
 	pha                                  ;C62D9C|48      |      ;  
 	plb                                  ;C62D9D|AB      |      ;  
 	rep #$20                             ;C62D9E|C220    |      ;  
-	lda.b rUnkPtrHi_02                   ;C62DA0|A504    |000004;  
+	lda.b $04                   ;C62DA0|A504    |000004;  
 	pha                                  ;C62DA2|48      |      ;  
 	lda.b $06                            ;C62DA3|A506    |000006;  
 	pha                                  ;C62DA5|48      |      ;  
 	lda.b $00                            ;C62DA6|A500    |000000;  
 	sta.l $7ED618                        ;C62DA8|8F18D67E|7ED618;  
 	sta.l $7ED61C                        ;C62DAC|8F1CD67E|7ED61C;  
-	lda.b rUnkPtrLo_02                   ;C62DB0|A502    |000002;  
+	lda.b $02                   ;C62DB0|A502    |000002;  
 	sta.l $7ED61A                        ;C62DB2|8F1AD67E|7ED61A;  
 	sta.l $7ED61E                        ;C62DB6|8F1ED67E|7ED61E;  
 	sep #$30                             ;C62DBA|E230    |      ;  
@@ -3571,7 +3571,7 @@ CODE_C62E2A:
 	pla                                  ;C62E2C|68      |      ;  
 	sta.b $06                            ;C62E2D|8506    |000006;  
 	pla                                  ;C62E2F|68      |      ;  
-	sta.b rUnkPtrHi_02                   ;C62E30|8504    |000004;  
+	sta.b $04                   ;C62E30|8504    |000004;  
 	sep #$20                             ;C62E32|E220    |      ;  
 	lda.b $07                            ;C62E34|A507    |000007;  
 	sta.l $7ED625                        ;C62E36|8F25D67E|7ED625;  
@@ -3584,20 +3584,20 @@ CODE_C62E2A:
 
 CODE_C62E57:
 	rep #$20                             ;C62E57|C220    |      ;  
-	lda.b rUnkPtrHi_02                   ;C62E59|A504    |000004;  
+	lda.b $04                   ;C62E59|A504    |000004;  
 	sta.l $7ED620                        ;C62E5B|8F20D67E|7ED620;  
 	rep #$20                             ;C62E5F|C220    |      ;  
 	jsl.l CODE_C3E768                    ;C62E61|2268E7C3|C3E768;  
 	lda.b $00                            ;C62E65|A500    |000000;  
 	sta.l $7ED614                        ;C62E67|8F14D67E|7ED614;  
-	lda.b rUnkPtrLo_02                   ;C62E6B|A502    |000002;  
+	lda.b $02                   ;C62E6B|A502    |000002;  
 	sta.l $7ED616                        ;C62E6D|8F16D67E|7ED616;  
 	rep #$20                             ;C62E71|C220    |      ;  
 	jsl.l CODE_C23BB7                    ;C62E73|22B73BC2|C23BB7;  
 	lda.b $00                            ;C62E77|A500    |000000;  
 	sta.l $7ED626                        ;C62E79|8F26D67E|7ED626;  
 	sep #$20                             ;C62E7D|E220    |      ;  
-	lda.b rUnkPtrLo_02                   ;C62E7F|A502    |000002;  
+	lda.b $02                   ;C62E7F|A502    |000002;  
 	sta.l $7ED628                        ;C62E81|8F28D67E|7ED628;  
 	sep #$20                             ;C62E85|E220    |      ;  
 	lda.l $7ED626                        ;C62E87|AF26D67E|7ED626;  
@@ -3620,7 +3620,7 @@ CODE_C62EAE:
 	phb                                  ;C62EB4|8B      |      ;  
 	jsl.l CODE_C210AC                    ;C62EB5|22AC10C2|C210AC;  
 	plb                                  ;C62EB9|AB      |      ;  
-	lda.b rUnkPtrHi_02                   ;C62EBA|A504    |000004;  
+	lda.b $04                   ;C62EBA|A504    |000004;  
 	sta.l $7ED629                        ;C62EBC|8F29D67E|7ED629;  
 	lda.l $7ED623                        ;C62EC0|AF23D67E|7ED623;  
 	dec a                                ;C62EC4|3A      |      ;  
@@ -3684,10 +3684,10 @@ CODE_C62F28:
 	sta.l $7ED62E                        ;C62F52|8F2ED67E|7ED62E;  
 	lda.b $05                            ;C62F56|A505    |000005;  
 	sta.l $7ED631                        ;C62F58|8F31D67E|7ED631;  
-	lda.b rUnkPtrHi_02                   ;C62F5C|A504    |000004;  
+	lda.b $04                   ;C62F5C|A504    |000004;  
 	sta.l $7ED634                        ;C62F5E|8F34D67E|7ED634;  
 	rep #$20                             ;C62F62|C220    |      ;  
-	lda.b rUnkPtrLo_02                   ;C62F64|A502    |000002;  
+	lda.b $02                   ;C62F64|A502    |000002;  
 	sta.l $7ED632                        ;C62F66|8F32D67E|7ED632;  
 	rep #$20                             ;C62F6A|C220    |      ;  
 	jsl.l CODE_C2338A                    ;C62F6C|228A33C2|C2338A;  
@@ -3709,7 +3709,7 @@ CODE_C62F28:
 	jsl.l CODE_C32CCB                    ;C62F9B|22CB2CC3|C32CCB;  
 	rep #$20                             ;C62F9F|C220    |      ;  
 	lda.b $00                            ;C62FA1|A500    |000000;  
-	eor.b rUnkPtrLo_02                   ;C62FA3|4502    |000002;  
+	eor.b $02                   ;C62FA3|4502    |000002;  
 	and.w #$FDFF                         ;C62FA5|29FFFD  |      ;  
 	sta.l $7ED63A                        ;C62FA8|8F3AD67E|7ED63A;  
 	sep #$20                             ;C62FAC|E220    |      ;  
@@ -3720,7 +3720,7 @@ CODE_C62F28:
 	plb                                  ;C62FB9|AB      |      ;  
 	lda.b $01                            ;C62FBA|A501    |000001;  
 	sta.l $7ED637                        ;C62FBC|8F37D67E|7ED637;  
-	lda.b rUnkPtrLo_02                   ;C62FC0|A502    |000002;  
+	lda.b $02                   ;C62FC0|A502    |000002;  
 	sta.l $7ED638                        ;C62FC2|8F38D67E|7ED638;  
 	lda.b $07                            ;C62FC6|A507    |000007;  
 	sta.l $7ED639                        ;C62FC8|8F39D67E|7ED639;  
@@ -3736,7 +3736,7 @@ CODE_C62FCC:
 	jsl.l CODE_C32CCB                    ;C62FDF|22CB2CC3|C32CCB;  
 	rep #$20                             ;C62FE3|C220    |      ;  
 	lda.b $00                            ;C62FE5|A500    |000000;  
-	eor.b rUnkPtrLo_02                   ;C62FE7|4502    |000002;  
+	eor.b $02                   ;C62FE7|4502    |000002;  
 	and.w #$FEFD                         ;C62FE9|29FDFE  |      ;  
 	sta.l $7ED63F                        ;C62FEC|8F3FD67E|7ED63F;  
 	sep #$20                             ;C62FF0|E220    |      ;  
@@ -3747,7 +3747,7 @@ CODE_C62FCC:
 	plb                                  ;C62FFD|AB      |      ;  
 	lda.b $01                            ;C62FFE|A501    |000001;  
 	sta.l $7ED63C                        ;C63000|8F3CD67E|7ED63C;  
-	lda.b rUnkPtrLo_02                   ;C63004|A502    |000002;  
+	lda.b $02                   ;C63004|A502    |000002;  
 	sta.l $7ED63D                        ;C63006|8F3DD67E|7ED63D;  
 	lda.b $07                            ;C6300A|A507    |000007;  
 	sta.l $7ED63E                        ;C6300C|8F3ED67E|7ED63E;  
@@ -3936,12 +3936,12 @@ CODE_C630D6:
 	lda.w #$6006                         ;C631FB|A90660  |      ;  
 	sta.b $00                            ;C631FE|8500    |000000;  
 	lda.w #$1F44                         ;C63200|A9441F  |      ;  
-	sta.b rUnkPtrLo_02                   ;C63203|8502    |000002;  
+	sta.b $02                   ;C63203|8502    |000002;  
 	phy                                  ;C63205|5A      |      ;  
 	jsl.l CODE_C67F02                    ;C63206|22027FC6|C67F02;  
 	ply                                  ;C6320A|7A      |      ;  
 	sep #$20                             ;C6320B|E220    |      ;  
-	lda.b rUnkPtrHi_02                   ;C6320D|A504    |000004;  
+	lda.b $04                   ;C6320D|A504    |000004;  
 	sta.l $B37F4A                        ;C6320F|8F4A7FB3|B37F4A;  
 	sep #$20                             ;C63213|E220    |      ;  
 	lda.l $7ED625                        ;C63215|AF25D67E|7ED625;  
@@ -3950,7 +3950,7 @@ CODE_C630D6:
 	lda.b #$01                           ;C6321D|A901    |      ;  
 	sta.b $01                            ;C6321F|8501    |000001;  
 	lda.b #$02                           ;C63221|A902    |      ;  
-	sta.b rUnkPtrLo_02                   ;C63223|8502    |000002;  
+	sta.b $02                   ;C63223|8502    |000002;  
 	bra CODE_C6323D                      ;C63225|8016    |C6323D;  
 
 UNREACH_C63227:
@@ -3980,21 +3980,21 @@ CODE_C6324C:
 	sta.b $00                            ;C63260|8500    |000000;  
 	sep #$20                             ;C63262|E220    |      ;  
 	lda.b #$05                           ;C63264|A905    |      ;  
-	sta.b rUnkPtrLo_02                   ;C63266|8502    |000002;  
+	sta.b $02                   ;C63266|8502    |000002;  
 	jsl.l CODE_C672FB                    ;C63268|22FB72C6|C672FB;  
 	sep #$20                             ;C6326C|E220    |      ;  
 	lda.b #$00                           ;C6326E|A900    |      ;  
 	sta.b $03                            ;C63270|8503    |000003;  
 	rep #$20                             ;C63272|C220    |      ;  
 	lda.w #$5800                         ;C63274|A90058  |      ;  
-	sta.b rUnkPtrHi_02                   ;C63277|8504    |000004;  
+	sta.b $04                   ;C63277|8504    |000004;  
 	jsl.l CODE_C484CB                    ;C63279|22CB84C4|C484CB;  
 	rep #$20                             ;C6327D|C220    |      ;  
 	lda.w #$0006                         ;C6327F|A90600  |      ;  
 	sta.b $00                            ;C63282|8500    |000000;  
 	sep #$20                             ;C63284|E220    |      ;  
 	lda.b #$00                           ;C63286|A900    |      ;  
-	sta.b rUnkPtrLo_02                   ;C63288|8502    |000002;  
+	sta.b $02                   ;C63288|8502    |000002;  
 	jsl.l CODE_C48339                    ;C6328A|223983C4|C48339;  
 	jsl.l CODE_C483DC                    ;C6328E|22DC83C4|C483DC;  
 	jsl.l func_8085B1                    ;C63292|22B18580|8085B1;  
@@ -4004,21 +4004,21 @@ CODE_C6324C:
 	sta.b $00                            ;C6329F|8500    |000000;  
 	sep #$20                             ;C632A1|E220    |      ;  
 	lda.b #$03                           ;C632A3|A903    |      ;  
-	sta.b rUnkPtrLo_02                   ;C632A5|8502    |000002;  
+	sta.b $02                   ;C632A5|8502    |000002;  
 	jsl.l CODE_C672FB                    ;C632A7|22FB72C6|C672FB;  
 	sep #$20                             ;C632AB|E220    |      ;  
 	lda.b #$01                           ;C632AD|A901    |      ;  
 	sta.b $03                            ;C632AF|8503    |000003;  
 	rep #$20                             ;C632B1|C220    |      ;  
 	lda.w #$3000                         ;C632B3|A90030  |      ;  
-	sta.b rUnkPtrHi_02                   ;C632B6|8504    |000004;  
+	sta.b $04                   ;C632B6|8504    |000004;  
 	jsl.l CODE_C484CB                    ;C632B8|22CB84C4|C484CB;  
 	rep #$20                             ;C632BC|C220    |      ;  
 	lda.w #$0004                         ;C632BE|A90400  |      ;  
 	sta.b $00                            ;C632C1|8500    |000000;  
 	sep #$20                             ;C632C3|E220    |      ;  
 	lda.b #$00                           ;C632C5|A900    |      ;  
-	sta.b rUnkPtrLo_02                   ;C632C7|8502    |000002;  
+	sta.b $02                   ;C632C7|8502    |000002;  
 	jsl.l CODE_C48339                    ;C632C9|223983C4|C48339;  
 	jsl.l CODE_C483DC                    ;C632CD|22DC83C4|C483DC;  
 	jsl.l func_8085B1                    ;C632D1|22B18580|8085B1;  
@@ -4057,7 +4057,7 @@ CODE_C63311:
 	lda.w #$EF86                         ;C63332|A986EF  |      ;  
 	sta.b $00                            ;C63335|8500    |000000;  
 	lda.w #$3800                         ;C63337|A90038  |      ;  
-	sta.b rUnkPtrLo_02                   ;C6333A|8502    |000002;  
+	sta.b $02                   ;C6333A|8502    |000002;  
 	lda.l $7ED67B                        ;C6333C|AF7BD67E|7ED67B;  
 	and.w #$007F                         ;C63340|297F00  |      ;  
 	beq CODE_C6334A                      ;C63343|F005    |C6334A;  
@@ -4142,9 +4142,9 @@ CODE_C633E8:
 	lda.b #$01                           ;C63401|A901    |      ;  
 	sta.b $01                            ;C63403|8501    |000001;  
 	lda.b #$08                           ;C63405|A908    |      ;  
-	sta.b rUnkPtrLo_02                   ;C63407|8502    |000002;  
+	sta.b $02                   ;C63407|8502    |000002;  
 	lda.b #$1E                           ;C63409|A91E    |      ;  
-	sta.b rUnkPtrHi_02                   ;C6340B|8504    |000004;  
+	sta.b $04                   ;C6340B|8504    |000004;  
 	lda.b #$12                           ;C6340D|A912    |      ;  
 	sta.b $05                            ;C6340F|8505    |000005;  
 	jsl.l func_80A83C                    ;C63411|223CA880|80A83C;  
@@ -4204,17 +4204,17 @@ CODE_C63478:
 	lda.b #$0A                           ;C6348E|A90A    |      ;  
 
 CODE_C63490:
-	sta.b rUnkPtrLo_02                   ;C63490|8502    |000002;  
+	sta.b $02                   ;C63490|8502    |000002;  
 	jsl.l CODE_C674B0                    ;C63492|22B074C6|C674B0;  
-	lda.b rUnkPtrHi_02                   ;C63496|A504    |000004;  
+	lda.b $04                   ;C63496|A504    |000004;  
 	beq CODE_C634A1                      ;C63498|F007    |C634A1;  
 	db $22,$21,$78,$C6,$82,$33,$02       ;C6349A|        |C67821;  
 
 CODE_C634A1:
-	lda.b rUnkPtrLo_02                   ;C634A1|A502    |000002;  
+	lda.b $02                   ;C634A1|A502    |000002;  
 	beq CODE_C63518                      ;C634A3|F073    |C63518;  
 	sep #$20                             ;C634A5|E220    |      ;  
-	lda.b rUnkPtrLo_02                   ;C634A7|A502    |000002;  
+	lda.b $02                   ;C634A7|A502    |000002;  
 	and.b #$01                           ;C634A9|2901    |      ;  
 	beq CODE_C634E5                      ;C634AB|F038    |C634E5;  
 	lda.l $7ED677                        ;C634AD|AF77D67E|7ED677;  
@@ -4275,11 +4275,11 @@ CODE_C6351F:
 	rep #$20                             ;C6351F|C220    |      ;  
 	lda.w #$0040                         ;C63521|A94000  |      ;  
 	sta.b $00                            ;C63524|8500    |000000;  
-	lda.b rUnkPtrLo_02                   ;C63526|A502    |000002;  
+	lda.b $02                   ;C63526|A502    |000002;  
 	pha                                  ;C63528|48      |      ;  
 	jsl.l func_818049                    ;C63529|22498081|818049;  
 	pla                                  ;C6352D|68      |      ;  
-	sta.b rUnkPtrLo_02                   ;C6352E|8502    |000002;  
+	sta.b $02                   ;C6352E|8502    |000002;  
 	sep #$20                             ;C63530|E220    |      ;  
 	lda.b $03                            ;C63532|A503    |000003;  
 	inc a                                ;C63534|1A      |      ;  
@@ -4292,7 +4292,7 @@ CODE_C6351F:
 	jsl.l CODE_C66C84                    ;C63548|22846CC6|C66C84;  
 	rep #$20                             ;C6354C|C220    |      ;  
 	lda.b $00                            ;C6354E|A500    |000000;  
-	sta.b rUnkPtrLo_02                   ;C63550|8502    |000002;  
+	sta.b $02                   ;C63550|8502    |000002;  
 	sep #$20                             ;C63552|E220    |      ;  
 	lda.l $7ED676                        ;C63554|AF76D67E|7ED676;  
 	sta.b $00                            ;C63558|8500    |000000;  
@@ -4315,13 +4315,13 @@ CODE_C63567:
 	jsl.l func_808F6E                    ;C6357E|226E8F80|808F6E;  
 	lda.w #$0002                         ;C63582|A90200  |      ;  
 	sta.b $00                            ;C63585|8500    |000000;  
-	lda.b rUnkPtrLo_02                   ;C63587|A502    |000002;  
+	lda.b $02                   ;C63587|A502    |000002;  
 	pha                                  ;C63589|48      |      ;  
 	jsl.l CODE_C680D9                    ;C6358A|22D980C6|C680D9;  
 	pla                                  ;C6358E|68      |      ;  
-	sta.b rUnkPtrLo_02                   ;C6358F|8502    |000002;  
+	sta.b $02                   ;C6358F|8502    |000002;  
 	jsl.l func_80854A                    ;C63591|224A8580|80854A;  
-	ldx.b rUnkPtrLo_02                   ;C63595|A602    |000002;  
+	ldx.b $02                   ;C63595|A602    |000002;  
 	sep #$20                             ;C63597|E220    |      ;  
 	lda.l $B36011,x                      ;C63599|BF1160B3|B36011;  
 	sta.l $7ED622                        ;C6359D|8F22D67E|7ED622;  
@@ -4395,7 +4395,7 @@ CODE_C63567:
 	lda.b #$01                           ;C636A4|A901    |      ;  
 	sta.b $00                            ;C636A6|8500    |000000;  
 	lda.b #$00                           ;C636A8|A900    |      ;  
-	sta.b rUnkPtrLo_02                   ;C636AA|8502    |000002;  
+	sta.b $02                   ;C636AA|8502    |000002;  
 	rep #$20                             ;C636AC|C220    |      ;  
 	jsl.l CODE_C63AF9                    ;C636AE|22F93AC6|C63AF9;  
 	lda.w #$0100                         ;C636B2|A90001  |      ;  
@@ -4468,21 +4468,21 @@ CODE_C63733:
 	sta.b $00                            ;C6375A|8500    |000000;  
 	sep #$20                             ;C6375C|E220    |      ;  
 	lda.b #$05                           ;C6375E|A905    |      ;  
-	sta.b rUnkPtrLo_02                   ;C63760|8502    |000002;  
+	sta.b $02                   ;C63760|8502    |000002;  
 	jsl.l CODE_C672FB                    ;C63762|22FB72C6|C672FB;  
 	sep #$20                             ;C63766|E220    |      ;  
 	lda.b #$00                           ;C63768|A900    |      ;  
 	sta.b $03                            ;C6376A|8503    |000003;  
 	rep #$20                             ;C6376C|C220    |      ;  
 	lda.w #$5800                         ;C6376E|A90058  |      ;  
-	sta.b rUnkPtrHi_02                   ;C63771|8504    |000004;  
+	sta.b $04                   ;C63771|8504    |000004;  
 	jsl.l CODE_C484CB                    ;C63773|22CB84C4|C484CB;  
 	rep #$20                             ;C63777|C220    |      ;  
 	lda.w #$0006                         ;C63779|A90600  |      ;  
 	sta.b $00                            ;C6377C|8500    |000000;  
 	sep #$20                             ;C6377E|E220    |      ;  
 	lda.b #$00                           ;C63780|A900    |      ;  
-	sta.b rUnkPtrLo_02                   ;C63782|8502    |000002;  
+	sta.b $02                   ;C63782|8502    |000002;  
 	jsl.l CODE_C48339                    ;C63784|223983C4|C48339;  
 	jsl.l CODE_C483DC                    ;C63788|22DC83C4|C483DC;  
 	jsl.l func_8085B1                    ;C6378C|22B18580|8085B1;  
@@ -4492,21 +4492,21 @@ CODE_C63733:
 	sta.b $00                            ;C63799|8500    |000000;  
 	sep #$20                             ;C6379B|E220    |      ;  
 	lda.b #$03                           ;C6379D|A903    |      ;  
-	sta.b rUnkPtrLo_02                   ;C6379F|8502    |000002;  
+	sta.b $02                   ;C6379F|8502    |000002;  
 	jsl.l CODE_C672FB                    ;C637A1|22FB72C6|C672FB;  
 	sep #$20                             ;C637A5|E220    |      ;  
 	lda.b #$01                           ;C637A7|A901    |      ;  
 	sta.b $03                            ;C637A9|8503    |000003;  
 	rep #$20                             ;C637AB|C220    |      ;  
 	lda.w #$3000                         ;C637AD|A90030  |      ;  
-	sta.b rUnkPtrHi_02                   ;C637B0|8504    |000004;  
+	sta.b $04                   ;C637B0|8504    |000004;  
 	jsl.l CODE_C484CB                    ;C637B2|22CB84C4|C484CB;  
 	rep #$20                             ;C637B6|C220    |      ;  
 	lda.w #$0004                         ;C637B8|A90400  |      ;  
 	sta.b $00                            ;C637BB|8500    |000000;  
 	sep #$20                             ;C637BD|E220    |      ;  
 	lda.b #$00                           ;C637BF|A900    |      ;  
-	sta.b rUnkPtrLo_02                   ;C637C1|8502    |000002;  
+	sta.b $02                   ;C637C1|8502    |000002;  
 	jsl.l CODE_C48339                    ;C637C3|223983C4|C48339;  
 	jsl.l CODE_C483DC                    ;C637C7|22DC83C4|C483DC;  
 	jsl.l func_8085B1                    ;C637CB|22B18580|8085B1;  
@@ -4521,7 +4521,7 @@ CODE_C63733:
 	lda.w #$EF86                         ;C637EA|A986EF  |      ;  
 	sta.b $00                            ;C637ED|8500    |000000;  
 	lda.w #$3800                         ;C637EF|A90038  |      ;  
-	sta.b rUnkPtrLo_02                   ;C637F2|8502    |000002;  
+	sta.b $02                   ;C637F2|8502    |000002;  
 	lda.l $7ED67B                        ;C637F4|AF7BD67E|7ED67B;  
 	and.w #$007F                         ;C637F8|297F00  |      ;  
 	beq CODE_C63802                      ;C637FB|F005    |C63802;  
@@ -4537,7 +4537,7 @@ CODE_C63802:
 	sta.l $7ED67B                        ;C63813|8F7BD67E|7ED67B;  
 	jsl.l CODE_C68A4B                    ;C63817|224B8AC6|C68A4B;  
 	lda.b #$C6                           ;C6381B|A9C6    |      ;  
-	sta.b rUnkPtrLo_02                   ;C6381D|8502    |000002;  
+	sta.b $02                   ;C6381D|8502    |000002;  
 	rep #$20                             ;C6381F|C220    |      ;  
 	lda.w #$871D                         ;C63821|A91D87  |      ;  
 	sta.b $00                            ;C63824|8500    |000000;  
@@ -4589,15 +4589,15 @@ CODE_C63874:
 	lda.b #$0A                           ;C6388A|A90A    |      ;  
 
 CODE_C6388C:
-	sta.b rUnkPtrLo_02                   ;C6388C|8502    |000002;  
+	sta.b $02                   ;C6388C|8502    |000002;  
 	jsl.l CODE_C67696                    ;C6388E|229676C6|C67696;  
-	lda.b rUnkPtrLo_02                   ;C63892|A502    |000002;  
+	lda.b $02                   ;C63892|A502    |000002;  
 	bne CODE_C63899                      ;C63894|D003    |C63899;  
 	brl CODE_C63A17                      ;C63896|827E01  |C63A17;  
 
 CODE_C63899:
 	sep #$20                             ;C63899|E220    |      ;  
-	lda.b rUnkPtrLo_02                   ;C6389B|A502    |000002;  
+	lda.b $02                   ;C6389B|A502    |000002;  
 	and.b #$01                           ;C6389D|2901    |      ;  
 	bne CODE_C638A4                      ;C6389F|D003    |C638A4;  
 	db $82,$D2,$00                       ;C638A1|        |C63976;  
@@ -4631,12 +4631,12 @@ CODE_C638B4:
 	lda.w #$EF86                         ;C638E5|A986EF  |      ;  
 	sta.b $00                            ;C638E8|8500    |000000;  
 	lda.w #$3800                         ;C638EA|A90038  |      ;  
-	sta.b rUnkPtrLo_02                   ;C638ED|8502    |000002;  
+	sta.b $02                   ;C638ED|8502    |000002;  
 	lda.l $7ED67B                        ;C638EF|AF7BD67E|7ED67B;  
 	and.w #$007F                         ;C638F3|297F00  |      ;  
 	beq CODE_C638FD                      ;C638F6|F005    |C638FD;  
 	lda.w #$3C00                         ;C638F8|A9003C  |      ;  
-	sta.b rUnkPtrLo_02                   ;C638FB|8502    |000002;  
+	sta.b $02                   ;C638FB|8502    |000002;  
 
 CODE_C638FD:
 	jsl.l CODE_C66C21                    ;C638FD|22216CC6|C66C21;  
@@ -4656,12 +4656,12 @@ CODE_C638FD:
 	sta.b $03                            ;C6391E|8503    |000003;  
 	rep #$20                             ;C63920|C220    |      ;  
 	lda.w #$5800                         ;C63922|A90058  |      ;  
-	sta.b rUnkPtrHi_02                   ;C63925|8504    |000004;  
+	sta.b $04                   ;C63925|8504    |000004;  
 	phx                                  ;C63927|DA      |      ;  
 	jsl.l CODE_C484CB                    ;C63928|22CB84C4|C484CB;  
 	plx                                  ;C6392C|FA      |      ;  
 	lda.w #$5800                         ;C6392D|A90058  |      ;  
-	sta.b rUnkPtrHi_02                   ;C63930|8504    |000004;  
+	sta.b $04                   ;C63930|8504    |000004;  
 	sep #$20                             ;C63932|E220    |      ;  
 	lda.b #$01                           ;C63934|A901    |      ;  
 	sta.b $03                            ;C63936|8503    |000003;  
@@ -4683,7 +4683,7 @@ CODE_C63943:
 	sta.b $03                            ;C6395A|8503    |000003;  
 	rep #$20                             ;C6395C|C220    |      ;  
 	lda.w #$5800                         ;C6395E|A90058  |      ;  
-	sta.b rUnkPtrHi_02                   ;C63961|8504    |000004;  
+	sta.b $04                   ;C63961|8504    |000004;  
 	phx                                  ;C63963|DA      |      ;  
 	jsl.l CODE_C484CB                    ;C63964|22CB84C4|C484CB;  
 	plx                                  ;C63968|FA      |      ;  
@@ -4725,11 +4725,11 @@ CODE_C63A1E:
 	rep #$20                             ;C63A1E|C220    |      ;  
 	lda.w #$0040                         ;C63A20|A94000  |      ;  
 	sta.b $00                            ;C63A23|8500    |000000;  
-	lda.b rUnkPtrLo_02                   ;C63A25|A502    |000002;  
+	lda.b $02                   ;C63A25|A502    |000002;  
 	pha                                  ;C63A27|48      |      ;  
 	jsl.l func_818049                    ;C63A28|22498081|818049;  
 	pla                                  ;C63A2C|68      |      ;  
-	sta.b rUnkPtrLo_02                   ;C63A2D|8502    |000002;  
+	sta.b $02                   ;C63A2D|8502    |000002;  
 	sep #$20                             ;C63A2F|E220    |      ;  
 	lda.b $03                            ;C63A31|A503    |000003;  
 	inc a                                ;C63A33|1A      |      ;  
@@ -4742,7 +4742,7 @@ CODE_C63A1E:
 	jsl.l CODE_C66C84                    ;C63A47|22846CC6|C66C84;  
 	rep #$20                             ;C63A4B|C220    |      ;  
 	lda.b $00                            ;C63A4D|A500    |000000;  
-	sta.b rUnkPtrLo_02                   ;C63A4F|8502    |000002;  
+	sta.b $02                   ;C63A4F|8502    |000002;  
 	sep #$20                             ;C63A51|E220    |      ;  
 	lda.l $7ED676                        ;C63A53|AF76D67E|7ED676;  
 	sta.b $00                            ;C63A57|8500    |000000;  
@@ -4757,7 +4757,7 @@ CODE_C63A66:
 	jsl.l CODE_C68B36                    ;C63A6A|22368BC6|C68B36;  
 	sep #$20                             ;C63A6E|E220    |      ;  
 	lda.b #$C6                           ;C63A70|A9C6    |      ;  
-	sta.b rUnkPtrLo_02                   ;C63A72|8502    |000002;  
+	sta.b $02                   ;C63A72|8502    |000002;  
 	rep #$20                             ;C63A74|C220    |      ;  
 	lda.w #$871D                         ;C63A76|A91D87  |      ;  
 	sta.b $00                            ;C63A79|8500    |000000;  
@@ -4820,7 +4820,7 @@ CODE_C63AF9:
 	php                                  ;C63AF9|08      |      ;  
 	rep #$10                             ;C63AFA|C210    |      ;  
 	sep #$20                             ;C63AFC|E220    |      ;  
-	lda.b rUnkPtrLo_02                   ;C63AFE|A502    |000002;  
+	lda.b $02                   ;C63AFE|A502    |000002;  
 	sta.l $7ED643                        ;C63B00|8F43D67E|7ED643;  
 	lda.b $03                            ;C63B04|A503    |000003;  
 	sta.l $7ED642                        ;C63B06|8F42D67E|7ED642;  
@@ -4844,7 +4844,7 @@ CODE_C63B12:
 	sta.b $00                            ;C63B34|8500    |000000;  
 	sep #$20                             ;C63B36|E220    |      ;  
 	lda.b #$1E                           ;C63B38|A91E    |      ;  
-	sta.b rUnkPtrLo_02                   ;C63B3A|8502    |000002;  
+	sta.b $02                   ;C63B3A|8502    |000002;  
 	lda.b #$0E                           ;C63B3C|A90E    |      ;  
 	sta.b $03                            ;C63B3E|8503    |000003;  
 	jsl.l CODE_C6735E                    ;C63B40|225E73C6|C6735E;  
@@ -4853,7 +4853,7 @@ CODE_C63B12:
 	lda.l $7ED622                        ;C63B4A|AF22D67E|7ED622;  
 	sta.b $01                            ;C63B4E|8501    |000001;  
 	lda.l $7ED62A                        ;C63B50|AF2AD67E|7ED62A;  
-	sta.b rUnkPtrLo_02                   ;C63B54|8502    |000002;  
+	sta.b $02                   ;C63B54|8502    |000002;  
 	jsl.l func_80A834                    ;C63B56|2234A880|80A834;  
 	jsl.l CODE_C66420                    ;C63B5A|222064C6|C66420;  
 	sep #$20                             ;C63B5E|E220    |      ;  
@@ -4879,9 +4879,9 @@ CODE_C63B12:
 	sta.b $06                            ;C63B95|8506    |000006;  
 	rep #$20                             ;C63B97|C220    |      ;  
 	lda.w #$0600                         ;C63B99|A90006  |      ;  
-	sta.b rUnkPtrLo_02                   ;C63B9C|8502    |000002;  
+	sta.b $02                   ;C63B9C|8502    |000002;  
 	lda.w #$0406                         ;C63B9E|A90604  |      ;  
-	sta.b rUnkPtrHi_02                   ;C63BA1|8504    |000004;  
+	sta.b $04                   ;C63BA1|8504    |000004;  
 	jsl.l CODE_C06DDF                    ;C63BA3|22DF6DC0|C06DDF;  
 	sep #$20                             ;C63BA7|E220    |      ;  
 	lda.l $7ED625                        ;C63BA9|AF25D67E|7ED625;  
@@ -4902,9 +4902,9 @@ CODE_C63BB4:
 CODE_C63BCA:
 	sta.b $00                            ;C63BCA|8500    |000000;  
 	lda.w #$0600                         ;C63bcc|A90006  |      ;  
-	sta.b rUnkPtrLo_02                   ;C63BCF|8502    |000002;  
+	sta.b $02                   ;C63BCF|8502    |000002;  
 	lda.w #$0306                         ;C63BD1|A90603  |      ;  
-	sta.b rUnkPtrHi_02                   ;C63BD4|8504    |000004;  
+	sta.b $04                   ;C63BD4|8504    |000004;  
 	sep #$20                             ;C63BD6|E220    |      ;  
 	lda.l $7ED628                        ;C63BD8|AF28D67E|7ED628;  
 	sta.b $06                            ;C63BDC|8506    |000006;  
@@ -4961,7 +4961,7 @@ CODE_C63CB8:
 	tax                                  ;C63CC2|AA      |      ;  
 	sep #$20                             ;C63CC3|E220    |      ;  
 	lda.l DATA8_C63E7A,x                 ;C63CC5|BF7A3EC6|C63E7A;  
-	sta.b rUnkPtrLo_02                   ;C63CC9|8502    |000002;  
+	sta.b $02                   ;C63CC9|8502    |000002;  
 	lda.b #$06                           ;C63CCB|A906    |      ;  
 	sta.b $03                            ;C63CCD|8503    |000003;  
 	sep #$20                             ;C63CCF|E220    |      ;  
@@ -4971,7 +4971,7 @@ CODE_C63CB8:
 	sta.b $01                            ;C63CD9|8501    |000001;  
 	rep #$20                             ;C63CDB|C220    |      ;  
 	lda.w #$0406                         ;C63CDD|A90604  |      ;  
-	sta.b rUnkPtrHi_02                   ;C63CE0|8504    |000004;  
+	sta.b $04                   ;C63CE0|8504    |000004;  
 	sta.b $06                            ;C63CE2|8506    |000006;  
 	jsl.l CODE_C06C80                    ;C63CE4|22806CC0|C06C80;  
 	lda.l $7ED626                        ;C63CE8|AF26D67E|7ED626;  
@@ -4987,9 +4987,9 @@ CODE_C63CF5:
 	sta.b $01                            ;C63CFF|8501    |000001;  
 	rep #$20                             ;C63D01|C220    |      ;  
 	lda.w #$0605                         ;C63D03|A90506  |      ;  
-	sta.b rUnkPtrLo_02                   ;C63D06|8502    |000002;  
+	sta.b $02                   ;C63D06|8502    |000002;  
 	lda.w #$0406                         ;C63D08|A90604  |      ;  
-	sta.b rUnkPtrHi_02                   ;C63D0B|8504    |000004;  
+	sta.b $04                   ;C63D0B|8504    |000004;  
 	sta.b $06                            ;C63D0D|8506    |000006;  
 	jsl.l CODE_C06C80                    ;C63D0F|22806CC0|C06C80;  
 	jmp.w CODE_C63E40                    ;C63D13|4C403E  |C63E40;  
@@ -5001,9 +5001,9 @@ CODE_C63D16:
 	sta.b $00                            ;C63D1F|8500    |000000;  
 	pha                                  ;C63D21|48      |      ;  
 	lda.w #$0600                         ;C63D22|A90006  |      ;  
-	sta.b rUnkPtrLo_02                   ;C63D25|8502    |000002;  
+	sta.b $02                   ;C63D25|8502    |000002;  
 	lda.w #$0306                         ;C63D27|A90603  |      ;  
-	sta.b rUnkPtrHi_02                   ;C63D2A|8504    |000004;  
+	sta.b $04                   ;C63D2A|8504    |000004;  
 	sta.b $06                            ;C63D2C|8506    |000006;  
 	lda.l $7ED62B                        ;C63D2E|AF2BD67E|7ED62B;  
 	and.w #$00FF                         ;C63D32|29FF00  |      ;  
@@ -5021,9 +5021,9 @@ CODE_C63D46:
 	sta.b $01                            ;C63D54|8501    |000001;  
 	rep #$20                             ;C63D56|C220    |      ;  
 	lda.w #$0640                         ;C63D58|A94006  |      ;  
-	sta.b rUnkPtrLo_02                   ;C63D5B|8502    |000002;  
+	sta.b $02                   ;C63D5B|8502    |000002;  
 	lda.w #$0406                         ;C63D5D|A90604  |      ;  
-	sta.b rUnkPtrHi_02                   ;C63D60|8504    |000004;  
+	sta.b $04                   ;C63D60|8504    |000004;  
 	sta.b $06                            ;C63D62|8506    |000006;  
 	jsl.l CODE_C06C80                    ;C63D64|22806CC0|C06C80;  
 	sep #$20                             ;C63D68|E220    |      ;  
@@ -5033,9 +5033,9 @@ CODE_C63D46:
 	sta.b $01                            ;C63D72|8501    |000001;  
 	rep #$20                             ;C63D74|C220    |      ;  
 	lda.w #$0605                         ;C63D76|A90506  |      ;  
-	sta.b rUnkPtrLo_02                   ;C63D79|8502    |000002;  
+	sta.b $02                   ;C63D79|8502    |000002;  
 	lda.w #$0406                         ;C63D7B|A90604  |      ;  
-	sta.b rUnkPtrHi_02                   ;C63D7E|8504    |000004;  
+	sta.b $04                   ;C63D7E|8504    |000004;  
 	sta.b $06                            ;C63D80|8506    |000006;  
 	jsl.l CODE_C06C80                    ;C63D82|22806CC0|C06C80;  
 	jsl.l CODE_C075BB                    ;C63D86|22BB75C0|C075BB;  
@@ -5054,9 +5054,9 @@ CODE_C63D90:
 
 CODE_C63DAA:
 	lda.w #$060C                         ;C63DAA|A90C06  |      ;  
-	sta.b rUnkPtrLo_02                   ;C63DAD|8502    |000002;  
+	sta.b $02                   ;C63DAD|8502    |000002;  
 	lda.w #$0306                         ;C63DAF|A90603  |      ;  
-	sta.b rUnkPtrHi_02                   ;C63DB2|8504    |000004;  
+	sta.b $04                   ;C63DB2|8504    |000004;  
 	sep #$20                             ;C63DB4|E220    |      ;  
 	lda.l $7ED628                        ;C63DB6|AF28D67E|7ED628;  
 	sta.b $06                            ;C63DBA|8506    |000006;  
@@ -5090,8 +5090,8 @@ CODE_C63DED:
 	inc a                                ;C63DF0|1A      |      ;  
 
 CODE_C63DF1:
-	sta.b rUnkPtrHi_02                   ;C63DF1|8504    |000004;  
-	sty.b rUnkPtrLo_02                   ;C63DF3|8402    |000002;  
+	sta.b $04                   ;C63DF1|8504    |000004;  
+	sty.b $02                   ;C63DF3|8402    |000002;  
 	pha                                  ;C63DF5|48      |      ;  
 	phx                                  ;C63DF6|DA      |      ;  
 	sep #$20                             ;C63DF7|E220    |      ;  
@@ -5119,8 +5119,8 @@ CODE_C63E1E:
 	dec a                                ;C63E21|3A      |      ;  
 
 CODE_C63E22:
-	sta.b rUnkPtrHi_02                   ;C63E22|8504    |000004;  
-	sty.b rUnkPtrLo_02                   ;C63E24|8402    |000002;  
+	sta.b $04                   ;C63E22|8504    |000004;  
+	sty.b $02                   ;C63E24|8402    |000002;  
 	pha                                  ;C63E26|48      |      ;  
 	phx                                  ;C63E27|DA      |      ;  
 	sep #$20                             ;C63E28|E220    |      ;  
@@ -5177,9 +5177,9 @@ CODE_C63E98:
 	lda.b #$07                           ;C63EAA|A907    |      ;  
 	sta.b $00                            ;C63EAC|8500    |000000;  
 	jsl.l func_808F6E                    ;C63EAE|226E8F80|808F6E;  
-	lda.b rUnkPtrLo_02                   ;C63EB2|A502    |000002;  
+	lda.b $02                   ;C63EB2|A502    |000002;  
 	pha                                  ;C63EB4|48      |      ;  
-	lda.b rUnkPtrHi_02                   ;C63EB5|A504    |000004;  
+	lda.b $04                   ;C63EB5|A504    |000004;  
 	pha                                  ;C63EB7|48      |      ;  
 	lda.b $06                            ;C63EB8|A506    |000006;  
 	pha                                  ;C63EBA|48      |      ;  
@@ -5189,12 +5189,12 @@ CODE_C63E98:
 	pla                                  ;C63EC1|68      |      ;  
 	sta.b $06                            ;C63EC2|8506    |000006;  
 	pla                                  ;C63EC4|68      |      ;  
-	sta.b rUnkPtrHi_02                   ;C63EC5|8504    |000004;  
+	sta.b $04                   ;C63EC5|8504    |000004;  
 	pla                                  ;C63EC7|68      |      ;  
-	sta.b rUnkPtrLo_02                   ;C63EC8|8502    |000002;  
-	lda.b rUnkPtrLo_02                   ;C63ECA|A502    |000002;  
+	sta.b $02                   ;C63EC8|8502    |000002;  
+	lda.b $02                   ;C63ECA|A502    |000002;  
 	pha                                  ;C63ECC|48      |      ;  
-	lda.b rUnkPtrHi_02                   ;C63ECD|A504    |000004;  
+	lda.b $04                   ;C63ECD|A504    |000004;  
 	pha                                  ;C63ECF|48      |      ;  
 	lda.b $06                            ;C63ED0|A506    |000006;  
 	pha                                  ;C63ED2|48      |      ;  
@@ -5204,11 +5204,11 @@ CODE_C63E98:
 	pla                                  ;C63ED9|68      |      ;  
 	sta.b $06                            ;C63EDA|8506    |000006;  
 	pla                                  ;C63EDC|68      |      ;  
-	sta.b rUnkPtrHi_02                   ;C63EDD|8504    |000004;  
+	sta.b $04                   ;C63EDD|8504    |000004;  
 	pla                                  ;C63EDF|68      |      ;  
-	sta.b rUnkPtrLo_02                   ;C63EE0|8502    |000002;  
+	sta.b $02                   ;C63EE0|8502    |000002;  
 	stz.b $00                            ;C63EE2|6400    |000000;  
-	lda.b rUnkPtrLo_02                   ;C63EE4|A502    |000002;  
+	lda.b $02                   ;C63EE4|A502    |000002;  
 	sta.l $7ED643                        ;C63EE6|8F43D67E|7ED643;  
 	lda.b #$00                           ;C63EEA|A900    |      ;  
 	sta.b $00                            ;C63EEC|8500    |000000;  
@@ -5254,9 +5254,9 @@ CODE_C63F3E:
 	lda.b #$01                           ;C63F5F|A901    |      ;  
 	sta.b $01                            ;C63F61|8501    |000001;  
 	lda.b #$08                           ;C63F63|A908    |      ;  
-	sta.b rUnkPtrLo_02                   ;C63F65|8502    |000002;  
+	sta.b $02                   ;C63F65|8502    |000002;  
 	lda.b #$1F                           ;C63F67|A91F    |      ;  
-	sta.b rUnkPtrHi_02                   ;C63F69|8504    |000004;  
+	sta.b $04                   ;C63F69|8504    |000004;  
 	lda.b #$12                           ;C63F6B|A912    |      ;  
 	sta.b $05                            ;C63F6D|8505    |000005;  
 	lda.l $7ED613                        ;C63F6F|AF13D67E|7ED613;  
@@ -5268,7 +5268,7 @@ CODE_C63F3E:
 
 CODE_C63F7F:
 	lda.b #$1E                           ;C63F7F|A91E    |      ;  
-	sta.b rUnkPtrHi_02                   ;C63F81|8504    |000004;  
+	sta.b $04                   ;C63F81|8504    |000004;  
 	lda.b #$12                           ;C63F83|A912    |      ;  
 	sta.b $05                            ;C63F85|8505    |000005;  
 
@@ -5302,9 +5302,9 @@ CODE_C63FC4:
 	lda.w #$5700                         ;C63FC6|A90057  |      ;  
 	sta.b $00                            ;C63FC9|8500    |000000;  
 	lda.l UNREACH_C65312,x               ;C63FCB|BF1253C6|C65312;  
-	sta.b rUnkPtrLo_02                   ;C63FCF|8502    |000002;  
+	sta.b $02                   ;C63FCF|8502    |000002;  
 	lda.l UNREACH_C65314,x               ;C63FD1|BF1453C6|C65314;  
-	sta.b rUnkPtrHi_02                   ;C63FD5|8504    |000004;  
+	sta.b $04                   ;C63FD5|8504    |000004;  
 	stz.b $06                            ;C63FD7|6406    |000006;  
 	phx                                  ;C63FD9|DA      |      ;  
 	phy                                  ;C63FDA|5A      |      ;  
@@ -5321,9 +5321,9 @@ CODE_C63FF0:
 	lda.w #$5A01                         ;C63FF0|A9015A  |      ;  
 	sta.b $00                            ;C63FF3|8500    |000000;  
 	lda.l UNREACH_C65404,x               ;C63FF5|BF0454C6|C65404;  
-	sta.b rUnkPtrLo_02                   ;C63FF9|8502    |000002;  
+	sta.b $02                   ;C63FF9|8502    |000002;  
 	lda.l UNREACH_C65406,x               ;C63FFB|BF0654C6|C65406;  
-	sta.b rUnkPtrHi_02                   ;C63FFF|8504    |000004;  
+	sta.b $04                   ;C63FFF|8504    |000004;  
 	stz.b $06                            ;C64001|6406    |000006;  
 	phx                                  ;C64003|DA      |      ;  
 	phy                                  ;C64004|5A      |      ;  
@@ -5333,9 +5333,9 @@ CODE_C63FF0:
 	lda.w #$4902                         ;C6400B|A90249  |      ;  
 	sta.b $00                            ;C6400E|8500    |000000;  
 	lda.l UNREACH_C654F6,x               ;C64010|BFF654C6|C654F6;  
-	sta.b rUnkPtrLo_02                   ;C64014|8502    |000002;  
+	sta.b $02                   ;C64014|8502    |000002;  
 	lda.l UNREACH_C654F8,x               ;C64016|BFF854C6|C654F8;  
-	sta.b rUnkPtrHi_02                   ;C6401A|8504    |000004;  
+	sta.b $04                   ;C6401A|8504    |000004;  
 	stz.b $06                            ;C6401C|6406    |000006;  
 	phx                                  ;C6401E|DA      |      ;  
 	phy                                  ;C6401F|5A      |      ;  
@@ -5345,9 +5345,9 @@ CODE_C63FF0:
 	lda.w #$5903                         ;C64026|A90359  |      ;  
 	sta.b $00                            ;C64029|8500    |000000;  
 	lda.l UNREACH_C655E8,x               ;C6402B|BFE855C6|C655E8;  
-	sta.b rUnkPtrLo_02                   ;C6402F|8502    |000002;  
+	sta.b $02                   ;C6402F|8502    |000002;  
 	lda.l UNREACH_C655EA,x               ;C64031|BFEA55C6|C655EA;  
-	sta.b rUnkPtrHi_02                   ;C64035|8504    |000004;  
+	sta.b $04                   ;C64035|8504    |000004;  
 	stz.b $06                            ;C64037|6406    |000006;  
 	phx                                  ;C64039|DA      |      ;  
 	phy                                  ;C6403A|5A      |      ;  
@@ -5361,9 +5361,9 @@ CODE_C63FF0:
 	lda.w #$5604                         ;C6404D|A90456  |      ;  
 	sta.b $00                            ;C64050|8500    |000000;  
 	lda.l UNREACH_C656DA,x               ;C64052|BFDA56C6|C656DA;  
-	sta.b rUnkPtrLo_02                   ;C64056|8502    |000002;  
+	sta.b $02                   ;C64056|8502    |000002;  
 	lda.l UNREACH_C656DC,x               ;C64058|BFDC56C6|C656DC;  
-	sta.b rUnkPtrHi_02                   ;C6405C|8504    |000004;  
+	sta.b $04                   ;C6405C|8504    |000004;  
 	stz.b $06                            ;C6405E|6406    |000006;  
 	phx                                  ;C64060|DA      |      ;  
 	phy                                  ;C64061|5A      |      ;  
@@ -5373,9 +5373,9 @@ CODE_C63FF0:
 	lda.w #$4E05                         ;C64068|A9054E  |      ;  
 	sta.b $00                            ;C6406B|8500    |000000;  
 	lda.l UNREACH_C657CC,x               ;C6406D|BFCC57C6|C657CC;  
-	sta.b rUnkPtrLo_02                   ;C64071|8502    |000002;  
+	sta.b $02                   ;C64071|8502    |000002;  
 	lda.l UNREACH_C657CE,x               ;C64073|BFCE57C6|C657CE;  
-	sta.b rUnkPtrHi_02                   ;C64077|8504    |000004;  
+	sta.b $04                   ;C64077|8504    |000004;  
 	stz.b $06                            ;C64079|6406    |000006;  
 	phx                                  ;C6407B|DA      |      ;  
 	phy                                  ;C6407C|5A      |      ;  
@@ -5385,9 +5385,9 @@ CODE_C63FF0:
 	lda.w #$5406                         ;C64083|A90654  |      ;  
 	sta.b $00                            ;C64086|8500    |000000;  
 	lda.l UNREACH_C658BE,x               ;C64088|BFBE58C6|C658BE;  
-	sta.b rUnkPtrLo_02                   ;C6408C|8502    |000002;  
+	sta.b $02                   ;C6408C|8502    |000002;  
 	lda.l UNREACH_C658C0,x               ;C6408E|BFC058C6|C658C0;  
-	sta.b rUnkPtrHi_02                   ;C64092|8504    |000004;  
+	sta.b $04                   ;C64092|8504    |000004;  
 	stz.b $06                            ;C64094|6406    |000006;  
 	phx                                  ;C64096|DA      |      ;  
 	phy                                  ;C64097|5A      |      ;  
@@ -5433,9 +5433,9 @@ CODE_C640E6:
 	lda.w #$5700                         ;C640E8|A90057  |      ;  
 	sta.b $00                            ;C640EB|8500    |000000;  
 	lda.l UNREACH_C65312,x               ;C640ED|BF1253C6|C65312;  
-	sta.b rUnkPtrLo_02                   ;C640F1|8502    |000002;  
+	sta.b $02                   ;C640F1|8502    |000002;  
 	lda.l UNREACH_C65314,x               ;C640F3|BF1453C6|C65314;  
-	sta.b rUnkPtrHi_02                   ;C640F7|8504    |000004;  
+	sta.b $04                   ;C640F7|8504    |000004;  
 	stz.b $06                            ;C640F9|6406    |000006;  
 	phx                                  ;C640FB|DA      |      ;  
 	phy                                  ;C640FC|5A      |      ;  
@@ -5452,9 +5452,9 @@ CODE_C64112:
 	lda.w #$5A01                         ;C64112|A9015A  |      ;  
 	sta.b $00                            ;C64115|8500    |000000;  
 	lda.l UNREACH_C65404,x               ;C64117|BF0454C6|C65404;  
-	sta.b rUnkPtrLo_02                   ;C6411B|8502    |000002;  
+	sta.b $02                   ;C6411B|8502    |000002;  
 	lda.l UNREACH_C65406,x               ;C6411D|BF0654C6|C65406;  
-	sta.b rUnkPtrHi_02                   ;C64121|8504    |000004;  
+	sta.b $04                   ;C64121|8504    |000004;  
 	stz.b $06                            ;C64123|6406    |000006;  
 	phx                                  ;C64125|DA      |      ;  
 	phy                                  ;C64126|5A      |      ;  
@@ -5464,9 +5464,9 @@ CODE_C64112:
 	lda.w #$4902                         ;C6412D|A90249  |      ;  
 	sta.b $00                            ;C64130|8500    |000000;  
 	lda.l UNREACH_C654F6,x               ;C64132|BFF654C6|C654F6;  
-	sta.b rUnkPtrLo_02                   ;C64136|8502    |000002;  
+	sta.b $02                   ;C64136|8502    |000002;  
 	lda.l UNREACH_C654F8,x               ;C64138|BFF854C6|C654F8;  
-	sta.b rUnkPtrHi_02                   ;C6413C|8504    |000004;  
+	sta.b $04                   ;C6413C|8504    |000004;  
 	stz.b $06                            ;C6413E|6406    |000006;  
 	phx                                  ;C64140|DA      |      ;  
 	phy                                  ;C64141|5A      |      ;  
@@ -5476,9 +5476,9 @@ CODE_C64112:
 	lda.w #$5903                         ;C64148|A90359  |      ;  
 	sta.b $00                            ;C6414B|8500    |000000;  
 	lda.l UNREACH_C655E8,x               ;C6414D|BFE855C6|C655E8;  
-	sta.b rUnkPtrLo_02                   ;C64151|8502    |000002;  
+	sta.b $02                   ;C64151|8502    |000002;  
 	lda.l UNREACH_C655EA,x               ;C64153|BFEA55C6|C655EA;  
-	sta.b rUnkPtrHi_02                   ;C64157|8504    |000004;  
+	sta.b $04                   ;C64157|8504    |000004;  
 	stz.b $06                            ;C64159|6406    |000006;  
 	phx                                  ;C6415B|DA      |      ;  
 	phy                                  ;C6415C|5A      |      ;  
@@ -5492,9 +5492,9 @@ CODE_C64112:
 	lda.w #$5604                         ;C6416F|A90456  |      ;  
 	sta.b $00                            ;C64172|8500    |000000;  
 	lda.l UNREACH_C656DA,x               ;C64174|BFDA56C6|C656DA;  
-	sta.b rUnkPtrLo_02                   ;C64178|8502    |000002;  
+	sta.b $02                   ;C64178|8502    |000002;  
 	lda.l UNREACH_C656DC,x               ;C6417A|BFDC56C6|C656DC;  
-	sta.b rUnkPtrHi_02                   ;C6417E|8504    |000004;  
+	sta.b $04                   ;C6417E|8504    |000004;  
 	stz.b $06                            ;C64180|6406    |000006;  
 	phx                                  ;C64182|DA      |      ;  
 	phy                                  ;C64183|5A      |      ;  
@@ -5504,9 +5504,9 @@ CODE_C64112:
 	lda.w #$4E05                         ;C6418A|A9054E  |      ;  
 	sta.b $00                            ;C6418D|8500    |000000;  
 	lda.l UNREACH_C657CC,x               ;C6418F|BFCC57C6|C657CC;  
-	sta.b rUnkPtrLo_02                   ;C64193|8502    |000002;  
+	sta.b $02                   ;C64193|8502    |000002;  
 	lda.l UNREACH_C657CE,x               ;C64195|BFCE57C6|C657CE;  
-	sta.b rUnkPtrHi_02                   ;C64199|8504    |000004;  
+	sta.b $04                   ;C64199|8504    |000004;  
 	stz.b $06                            ;C6419B|6406    |000006;  
 	phx                                  ;C6419D|DA      |      ;  
 	phy                                  ;C6419E|5A      |      ;  
@@ -5516,9 +5516,9 @@ CODE_C64112:
 	lda.w #$5406                         ;C641A5|A90654  |      ;  
 	sta.b $00                            ;C641A8|8500    |000000;  
 	lda.l UNREACH_C658BE,x               ;C641AA|BFBE58C6|C658BE;  
-	sta.b rUnkPtrLo_02                   ;C641AE|8502    |000002;  
+	sta.b $02                   ;C641AE|8502    |000002;  
 	lda.l UNREACH_C658C0,x               ;C641B0|BFC058C6|C658C0;  
-	sta.b rUnkPtrHi_02                   ;C641B4|8504    |000004;  
+	sta.b $04                   ;C641B4|8504    |000004;  
 	stz.b $06                            ;C641B6|6406    |000006;  
 	phx                                  ;C641B8|DA      |      ;  
 	phy                                  ;C641B9|5A      |      ;  
@@ -5970,7 +5970,7 @@ CODE_C64E1D:
 	lda.w #$7FFF                         ;C64E2E|A9FF7F  |      ;  
 	sta.b $00                            ;C64E31|8500    |000000;  
 	sep #$20                             ;C64E33|E220    |      ;  
-	stz.b rUnkPtrLo_02                   ;C64E35|6402    |000002;  
+	stz.b $02                   ;C64E35|6402    |000002;  
 	jsl.l func_8087FF                    ;C64E37|22FF8780|8087FF;  
 	jsl.l func_8085B1                    ;C64E3B|22B18580|8085B1;  
 	jsl.l func_80854A                    ;C64E3F|224A8580|80854A;  
@@ -5992,33 +5992,33 @@ CODE_C64E7A:
 	sta.b $00                            ;C64E7F|8500    |000000;  
 	sep #$20                             ;C64E81|E220    |      ;  
 	lda.b #$03                           ;C64E83|A903    |      ;  
-	sta.b rUnkPtrLo_02                   ;C64E85|8502    |000002;  
+	sta.b $02                   ;C64E85|8502    |000002;  
 	jsl.l CODE_C672FB                    ;C64E87|22FB72C6|C672FB;  
 	sep #$20                             ;C64E8B|E220    |      ;  
 	lda.b #$00                           ;C64E8D|A900    |      ;  
 	sta.b $03                            ;C64E8F|8503    |000003;  
 	rep #$20                             ;C64E91|C220    |      ;  
 	lda.w #$5800                         ;C64E93|A90058  |      ;  
-	sta.b rUnkPtrHi_02                   ;C64E96|8504    |000004;  
+	sta.b $04                   ;C64E96|8504    |000004;  
 	jsl.l CODE_C484CB                    ;C64E98|22CB84C4|C484CB;  
 	lda.w #$0001                         ;C64E9C|A90100  |      ;  
 	sta.b $03                            ;C64E9F|8503    |000003;  
 	rep #$20                             ;C64EA1|C220    |      ;  
 	lda.w #$5C00                         ;C64EA3|A9005C  |      ;  
-	sta.b rUnkPtrHi_02                   ;C64EA6|8504    |000004;  
+	sta.b $04                   ;C64EA6|8504    |000004;  
 	jsl.l CODE_C484CB                    ;C64EA8|22CB84C4|C484CB;  
 	lda.w #$0004                         ;C64EAC|A90400  |      ;  
 	sta.b $00                            ;C64EAF|8500    |000000;  
 	sep #$20                             ;C64EB1|E220    |      ;  
 	lda.b #$00                           ;C64EB3|A900    |      ;  
-	sta.b rUnkPtrLo_02                   ;C64EB5|8502    |000002;  
+	sta.b $02                   ;C64EB5|8502    |000002;  
 	jsl.l CODE_C48339                    ;C64EB7|223983C4|C48339;  
 	jsl.l CODE_C483DC                    ;C64EBB|22DC83C4|C483DC;  
 	rep #$20                             ;C64EBF|C220    |      ;  
 	lda.w #$7FFF                         ;C64EC1|A9FF7F  |      ;  
 	sta.b $00                            ;C64EC4|8500    |000000;  
 	sep #$20                             ;C64EC6|E220    |      ;  
-	stz.b rUnkPtrLo_02                   ;C64EC8|6402    |000002;  
+	stz.b $02                   ;C64EC8|6402    |000002;  
 	jsl.l func_8087FF                    ;C64ECA|22FF8780|8087FF;  
 	jsl.l func_8085B1                    ;C64ECE|22B18580|8085B1;  
 	jsl.l func_80854A                    ;C64ED2|224A8580|80854A;  
@@ -6027,27 +6027,27 @@ CODE_C64E7A:
 	sta.b $00                            ;C64EDB|8500    |000000;  
 	sep #$20                             ;C64EDD|E220    |      ;  
 	lda.b #$01                           ;C64EDF|A901    |      ;  
-	sta.b rUnkPtrLo_02                   ;C64EE1|8502    |000002;  
+	sta.b $02                   ;C64EE1|8502    |000002;  
 	jsl.l CODE_C672FB                    ;C64EE3|22FB72C6|C672FB;  
 	sep #$20                             ;C64EE7|E220    |      ;  
 	lda.b #$00                           ;C64EE9|A900    |      ;  
 	sta.b $03                            ;C64EEB|8503    |000003;  
 	rep #$20                             ;C64EED|C220    |      ;  
 	lda.w #$3400                         ;C64EEF|A90034  |      ;  
-	sta.b rUnkPtrHi_02                   ;C64EF2|8504    |000004;  
+	sta.b $04                   ;C64EF2|8504    |000004;  
 	jsl.l CODE_C484CB                    ;C64EF4|22CB84C4|C484CB;  
 	lda.w #$0002                         ;C64EF8|A90200  |      ;  
 	sta.b $00                            ;C64EFB|8500    |000000;  
 	sep #$20                             ;C64EFD|E220    |      ;  
 	lda.b #$00                           ;C64EFF|A900    |      ;  
-	sta.b rUnkPtrLo_02                   ;C64F01|8502    |000002;  
+	sta.b $02                   ;C64F01|8502    |000002;  
 	jsl.l CODE_C48339                    ;C64F03|223983C4|C48339;  
 	jsl.l CODE_C483DC                    ;C64F07|22DC83C4|C483DC;  
 	rep #$20                             ;C64F0B|C220    |      ;  
 	lda.w #$7FFF                         ;C64F0D|A9FF7F  |      ;  
 	sta.b $00                            ;C64F10|8500    |000000;  
 	sep #$20                             ;C64F12|E220    |      ;  
-	stz.b rUnkPtrLo_02                   ;C64F14|6402    |000002;  
+	stz.b $02                   ;C64F14|6402    |000002;  
 	jsl.l func_8087FF                    ;C64F16|22FF8780|8087FF;  
 	jsl.l func_8085B1                    ;C64F1A|22B18580|8085B1;  
 	jsl.l func_80854A                    ;C64F1E|224A8580|80854A;  
@@ -6056,39 +6056,39 @@ CODE_C64E7A:
 	sta.b $00                            ;C64F27|8500    |000000;  
 	sep #$20                             ;C64F29|E220    |      ;  
 	lda.b #$02                           ;C64F2B|A902    |      ;  
-	sta.b rUnkPtrLo_02                   ;C64F2D|8502    |000002;  
+	sta.b $02                   ;C64F2D|8502    |000002;  
 	jsl.l CODE_C672FB                    ;C64F2F|22FB72C6|C672FB;  
 	sep #$20                             ;C64F33|E220    |      ;  
 	lda.b #$00                           ;C64F35|A900    |      ;  
 	sta.b $03                            ;C64F37|8503    |000003;  
 	rep #$20                             ;C64F39|C220    |      ;  
 	lda.w #$3800                         ;C64F3B|A90038  |      ;  
-	sta.b rUnkPtrHi_02                   ;C64F3E|8504    |000004;  
+	sta.b $04                   ;C64F3E|8504    |000004;  
 	jsl.l CODE_C484CB                    ;C64F40|22CB84C4|C484CB;  
 	lda.w #$0001                         ;C64F44|A90100  |      ;  
 	sta.b $03                            ;C64F47|8503    |000003;  
 	rep #$20                             ;C64F49|C220    |      ;  
 	lda.w #$3C00                         ;C64F4B|A9003C  |      ;  
-	sta.b rUnkPtrHi_02                   ;C64F4E|8504    |000004;  
+	sta.b $04                   ;C64F4E|8504    |000004;  
 	jsl.l CODE_C484CB                    ;C64F50|22CB84C4|C484CB;  
 	lda.w #$0003                         ;C64F54|A90300  |      ;  
 	sta.b $00                            ;C64F57|8500    |000000;  
 	sep #$20                             ;C64F59|E220    |      ;  
 	lda.b #$00                           ;C64F5B|A900    |      ;  
-	sta.b rUnkPtrLo_02                   ;C64F5D|8502    |000002;  
+	sta.b $02                   ;C64F5D|8502    |000002;  
 	jsl.l CODE_C48339                    ;C64F5F|223983C4|C48339;  
 	jsl.l CODE_C483DC                    ;C64F63|22DC83C4|C483DC;  
 	rep #$20                             ;C64F67|C220    |      ;  
 	lda.w #$7FFF                         ;C64F69|A9FF7F  |      ;  
 	sta.b $00                            ;C64F6C|8500    |000000;  
 	sep #$20                             ;C64F6E|E220    |      ;  
-	stz.b rUnkPtrLo_02                   ;C64F70|6402    |000002;  
+	stz.b $02                   ;C64F70|6402    |000002;  
 	jsl.l func_8087FF                    ;C64F72|22FF8780|8087FF;  
 	jsl.l func_8085B1                    ;C64F76|22B18580|8085B1;  
 	jsl.l func_80854A                    ;C64F7A|224A8580|80854A;  
 	jsl.l CODE_C680F9                    ;C64F7E|22F980C6|C680F9;  
 	lda.b #$C6                           ;C64F82|A9C6    |      ;  
-	sta.b rUnkPtrLo_02                   ;C64F84|8502    |000002;  
+	sta.b $02                   ;C64F84|8502    |000002;  
 	rep #$20                             ;C64F86|C220    |      ;  
 	lda.w #$82DF                         ;C64F88|A9DF82  |      ;  
 	sta.b $00                            ;C64F8B|8500    |000000;  
@@ -6096,15 +6096,15 @@ CODE_C64E7A:
 	rep #$20                             ;C64F91|C220    |      ;  
 	lda.w #$0008                         ;C64F93|A90800  |      ;  
 	sta.b $00                            ;C64F96|8500    |000000;  
-	stz.b rUnkPtrLo_02                   ;C64F98|6402    |000002;  
+	stz.b $02                   ;C64F98|6402    |000002;  
 	lda.w #$FFFF                         ;C64F9A|A9FFFF  |      ;  
-	sta.b rUnkPtrHi_02                   ;C64F9D|8504    |000004;  
+	sta.b $04                   ;C64F9D|8504    |000004;  
 	jsl.l func_808ED0                    ;C64F9F|22D08E80|808ED0;  
 	lda.w #$0004                         ;C64FA3|A90400  |      ;  
 	sta.b $00                            ;C64FA6|8500    |000000;  
-	stz.b rUnkPtrLo_02                   ;C64FA8|6402    |000002;  
+	stz.b $02                   ;C64FA8|6402    |000002;  
 	lda.w #$00CF                         ;C64FAA|A9CF00  |      ;  
-	sta.b rUnkPtrHi_02                   ;C64FAD|8504    |000004;  
+	sta.b $04                   ;C64FAD|8504    |000004;  
 	jsl.l func_808ED0                    ;C64FAF|22D08E80|808ED0;  
 	lda.w #$0242                         ;C64FB3|A94202  |      ;  
 	sta.l $7ED712                        ;C64FB6|8F12D77E|7ED712;  
@@ -6125,7 +6125,7 @@ CODE_C64E7A:
 	jsl.l func_808F59                    ;C64FE4|22598F80|808F59;  
 	stz.b $00                            ;C64FE8|6400    |000000;  
 	stz.b $01                            ;C64FEA|6401    |000001;  
-	stz.b rUnkPtrLo_02                   ;C64FEC|6402    |000002;  
+	stz.b $02                   ;C64FEC|6402    |000002;  
 	jsl.l func_8087FF                    ;C64FEE|22FF8780|8087FF;  
 	jsl.l func_8085B1                    ;C64FF2|22B18580|8085B1;  
 	jsl.l func_80854A                    ;C64FF6|224A8580|80854A;  
@@ -6207,8 +6207,8 @@ CODE_C6508C:
 	rep #$20                             ;C650BF|C220    |      ;  
 	lda.w #$0002                         ;C650C1|A90200  |      ;  
 	sta.b $00                            ;C650C4|8500    |000000;  
-	stz.b rUnkPtrLo_02                   ;C650C6|6402    |000002;  
-	stz.b rUnkPtrHi_02                   ;C650C8|6404    |000004;  
+	stz.b $02                   ;C650C6|6402    |000002;  
+	stz.b $04                   ;C650C8|6404    |000004;  
 	jsl.l func_808ED0                    ;C650CA|22D08E80|808ED0;  
 	jsl.l CODE_C65B5A                    ;C650CE|225A5BC6|C65B5A;  
 	lda.w #$0000                         ;C650D2|A90000  |      ;  
@@ -6221,7 +6221,7 @@ CODE_C6508C:
 	sta.b $00                            ;C650EA|8500    |000000;  
 	sep #$20                             ;C650EC|E220    |      ;  
 	lda.b #$1E                           ;C650EE|A91E    |      ;  
-	sta.b rUnkPtrLo_02                   ;C650F0|8502    |000002;  
+	sta.b $02                   ;C650F0|8502    |000002;  
 	lda.b #$0A                           ;C650F2|A90A    |      ;  
 	sta.b $03                            ;C650F4|8503    |000003;  
 	jsl.l CODE_C6735E                    ;C650F6|225E73C6|C6735E;  
@@ -6253,7 +6253,7 @@ CODE_C6513C:
 	jsl.l CODE_C660CB                    ;C6513C|22CB60C6|C660CB;  
 	sep #$20                             ;C65140|E220    |      ;  
 	lda.b #$C6                           ;C65142|A9C6    |      ;  
-	sta.b rUnkPtrLo_02                   ;C65144|8502    |000002;  
+	sta.b $02                   ;C65144|8502    |000002;  
 	rep #$20                             ;C65146|C220    |      ;  
 	lda.w #$82DF                         ;C65148|A9DF82  |      ;  
 	sta.b $00                            ;C6514B|8500    |000000;  
@@ -6268,7 +6268,7 @@ CODE_C6513C:
 	jsl.l CODE_C686A8                    ;C65168|22A886C6|C686A8;  
 	sep #$20                             ;C6516C|E220    |      ;  
 	lda.b #$C6                           ;C6516E|A9C6    |      ;  
-	sta.b rUnkPtrLo_02                   ;C65170|8502    |000002;  
+	sta.b $02                   ;C65170|8502    |000002;  
 	rep #$20                             ;C65172|C220    |      ;  
 	lda.w #$84E7                         ;C65174|A9E784  |      ;  
 	sta.b $00                            ;C65177|8500    |000000;  
@@ -6279,7 +6279,7 @@ CODE_C6513C:
 	sta.b $00                            ;C65186|8500    |000000;  
 	sep #$20                             ;C65188|E220    |      ;  
 	lda.b #$00                           ;C6518A|A900    |      ;  
-	sta.b rUnkPtrLo_02                   ;C6518C|8502    |000002;  
+	sta.b $02                   ;C6518C|8502    |000002;  
 	jsl.l CODE_C48339                    ;C6518E|223983C4|C48339;  
 	jsl.l CODE_C483DC                    ;C65192|22DC83C4|C483DC;  
 	jsl.l func_8085B1                    ;C65196|22B18580|8085B1;  
@@ -6288,13 +6288,13 @@ CODE_C6513C:
 	sta.b $00                            ;C6519F|8500    |000000;  
 	sep #$20                             ;C651A1|E220    |      ;  
 	lda.b #$04                           ;C651A3|A904    |      ;  
-	sta.b rUnkPtrLo_02                   ;C651A5|8502    |000002;  
+	sta.b $02                   ;C651A5|8502    |000002;  
 	jsl.l CODE_C672FB                    ;C651A7|22FB72C6|C672FB;  
 	lda.b #$01                           ;C651AB|A901    |      ;  
 	sta.b $03                            ;C651AD|8503    |000003;  
 	rep #$20                             ;C651AF|C220    |      ;  
 	lda.w #$3000                         ;C651B1|A90030  |      ;  
-	sta.b rUnkPtrHi_02                   ;C651B4|8504    |000004;  
+	sta.b $04                   ;C651B4|8504    |000004;  
 	jsl.l CODE_C484CB                    ;C651B6|22CB84C4|C484CB;  
 	rep #$20                             ;C651BA|C220    |      ;  
 	lda.w #$0005                         ;C651BC|A90500  |      ;  
@@ -6323,7 +6323,7 @@ CODE_C651D2:
 	sta.b $03                            ;C651F2|8503    |000003;  
 	rep #$20                             ;C651F4|C220    |      ;  
 	lda.w #$3000                         ;C651F6|A90030  |      ;  
-	sta.b rUnkPtrHi_02                   ;C651F9|8504    |000004;  
+	sta.b $04                   ;C651F9|8504    |000004;  
 	phx                                  ;C651FB|DA      |      ;  
 	jsl.l CODE_C484CB                    ;C651FC|22CB84C4|C484CB;  
 	plx                                  ;C65200|FA      |      ;  
@@ -6336,7 +6336,7 @@ CODE_C651D2:
 	sta.b $03                            ;C6520E|8503    |000003;  
 	rep #$20                             ;C65210|C220    |      ;  
 	lda.w #$3000                         ;C65212|A90030  |      ;  
-	sta.b rUnkPtrHi_02                   ;C65215|8504    |000004;  
+	sta.b $04                   ;C65215|8504    |000004;  
 	jsl.l CODE_C484CB                    ;C65217|22CB84C4|C484CB;  
 	lda.w #$0008                         ;C6521B|A90800  |      ;  
 	clc                                  ;C6521E|18      |      ;  
@@ -6356,7 +6356,7 @@ CODE_C65227:
 	jsl.l CODE_C686FD                    ;C65242|22FD86C6|C686FD;  
 	sep #$20                             ;C65246|E220    |      ;  
 	lda.b #$C6                           ;C65248|A9C6    |      ;  
-	sta.b rUnkPtrLo_02                   ;C6524A|8502    |000002;  
+	sta.b $02                   ;C6524A|8502    |000002;  
 	rep #$20                             ;C6524C|C220    |      ;  
 	lda.w #$84E7                         ;C6524E|A9E784  |      ;  
 	sta.b $00                            ;C65251|8500    |000000;  
@@ -6644,7 +6644,7 @@ CODE_C659B0:
 	php                                  ;C659B0|08      |      ;  
 	sep #$20                             ;C659B1|E220    |      ;  
 	rep #$10                             ;C659B3|C210    |      ;  
-	ldx.b rUnkPtrLo_02                   ;C659B5|A602    |000002;  
+	ldx.b $02                   ;C659B5|A602    |000002;  
 	lda.l $B36006,x                      ;C659B7|BF0660B3|B36006;  
 	bmi UNREACH_C659C7                   ;C659BB|300A    |C659C7;  
 	cmp.b $00                            ;C659BD|C500    |000000;  
@@ -6660,7 +6660,7 @@ CODE_C659C9:
 	rep #$20                             ;C659C9|C220    |      ;  
 	sep #$10                             ;C659CB|E210    |      ;  
 	ldy.b $00                            ;C659CD|A400    |000000;  
-	lda.b rUnkPtrLo_02                   ;C659CF|A502    |000002;  
+	lda.b $02                   ;C659CF|A502    |000002;  
 
 CODE_C659D1:
 	dey                                  ;C659D1|88      |      ;  
@@ -6670,7 +6670,7 @@ CODE_C659D1:
 	bra CODE_C659D1                      ;C659D8|80F7    |C659D1;  
 
 CODE_C659DA:
-	sta.b rUnkPtrLo_02                   ;C659DA|8502    |000002;  
+	sta.b $02                   ;C659DA|8502    |000002;  
 	plp                                  ;C659DC|28      |      ;  
 	rtl                                  ;C659DD|6B      |      ;  
 
@@ -6680,7 +6680,7 @@ CODE_C659DE:
 	rep #$10                             ;C659E1|C210    |      ;  
 	lda.b #$04                           ;C659E3|A904    |      ;  
 	sta.b $00                            ;C659E5|8500    |000000;  
-	stz.b rUnkPtrLo_02                   ;C659E7|6402    |000002;  
+	stz.b $02                   ;C659E7|6402    |000002;  
 	jsl.l CODE_C66C84                    ;C659E9|22846CC6|C66C84;  
 	ldx.b $00                            ;C659ED|A600    |000000;  
 	lda.l $B36006,x                      ;C659EF|BF0660B3|B36006;  
@@ -6689,7 +6689,7 @@ CODE_C659DE:
 	db $E6,$02                           ;C659F7|        |000002;  
 
 CODE_C659F9:
-	asl.b rUnkPtrLo_02                   ;C659F9|0602    |000002;  
+	asl.b $02                   ;C659F9|0602    |000002;  
 	lda.b #$03                           ;C659FB|A903    |      ;  
 	sta.b $00                            ;C659FD|8500    |000000;  
 	jsl.l CODE_C66C84                    ;C659FF|22846CC6|C66C84;  
@@ -6700,7 +6700,7 @@ CODE_C659F9:
 	db $E6,$02                           ;C65A0D|        |000002;  
 
 CODE_C65A0F:
-	asl.b rUnkPtrLo_02                   ;C65A0F|0602    |000002;  
+	asl.b $02                   ;C65A0F|0602    |000002;  
 	lda.b #$02                           ;C65A11|A902    |      ;  
 	sta.b $00                            ;C65A13|8500    |000000;  
 	jsl.l CODE_C66C84                    ;C65A15|22846CC6|C66C84;  
@@ -6711,7 +6711,7 @@ CODE_C65A0F:
 	db $E6,$02                           ;C65A23|        |000002;  
 
 CODE_C65A25:
-	asl.b rUnkPtrLo_02                   ;C65A25|0602    |000002;  
+	asl.b $02                   ;C65A25|0602    |000002;  
 	lda.b #$01                           ;C65A27|A901    |      ;  
 	sta.b $00                            ;C65A29|8500    |000000;  
 	jsl.l CODE_C66C84                    ;C65A2B|22846CC6|C66C84;  
@@ -6719,10 +6719,10 @@ CODE_C65A25:
 	lda.l $B36006,x                      ;C65A31|BF0660B3|B36006;  
 	beq CODE_C65A3B                      ;C65A35|F004    |C65A3B;  
 	bmi CODE_C65A3B                      ;C65A37|3002    |C65A3B;  
-	inc.b rUnkPtrLo_02                   ;C65A39|E602    |000002;  
+	inc.b $02                   ;C65A39|E602    |000002;  
 
 CODE_C65A3B:
-	lda.b rUnkPtrLo_02                   ;C65A3B|A502    |000002;  
+	lda.b $02                   ;C65A3B|A502    |000002;  
 	sta.b $00                            ;C65A3D|8500    |000000;  
 	plp                                  ;C65A3F|28      |      ;  
 	rtl                                  ;C65A40|6B      |      ;  
@@ -6880,22 +6880,22 @@ CODE_C65B5A:
 	lda.w #$9D56                         ;C65B6D|A9569D  |      ;  
 	sta.b $00                            ;C65B70|8500    |000000;  
 	lda.w #$DF86                         ;C65B72|A986DF  |      ;  
-	sta.b rUnkPtrLo_02                   ;C65B75|8502    |000002;  
+	sta.b $02                   ;C65B75|8502    |000002;  
 	sep #$20                             ;C65B77|E220    |      ;  
 	lda.b #$7F                           ;C65B79|A97F    |      ;  
-	sta.b rUnkPtrHi_02                   ;C65B7B|8504    |000004;  
+	sta.b $04                   ;C65B7B|8504    |000004;  
 
 CODE_C65B7D:
 	lda.b ($00)                          ;C65B7D|B200    |000000;  
 	sta.b [$02]                          ;C65B7F|8702    |000002;  
 	rep #$20                             ;C65B81|C220    |      ;  
 	inc.b $00                            ;C65B83|E600    |000000;  
-	inc.b rUnkPtrLo_02                   ;C65B85|E602    |000002;  
+	inc.b $02                   ;C65B85|E602    |000002;  
 	sep #$20                             ;C65B87|E220    |      ;  
 	lda.b #$00                           ;C65B89|A900    |      ;  
 	sta.b [$02]                          ;C65B8B|8702    |000002;  
 	rep #$20                             ;C65B8D|C220    |      ;  
-	inc.b rUnkPtrLo_02                   ;C65B8F|E602    |000002;  
+	inc.b $02                   ;C65B8F|E602    |000002;  
 	sep #$20                             ;C65B91|E220    |      ;  
 	dex                                  ;C65B93|CA      |      ;  
 	bne CODE_C65B7D                      ;C65B94|D0E7    |C65B7D;  
@@ -6921,11 +6921,11 @@ CODE_C65B7D:
 	sta.b $00                            ;C65BC0|8500    |000000;  
 	sep #$20                             ;C65BC2|E220    |      ;  
 	lda.b #$C6                           ;C65BC4|A9C6    |      ;  
-	sta.b rUnkPtrLo_02                   ;C65BC6|8502    |000002;  
+	sta.b $02                   ;C65BC6|8502    |000002;  
 	lda.b #$00                           ;C65BC8|A900    |      ;  
 	sta.b $03                            ;C65BCA|8503    |000003;  
 	lda.b #$01                           ;C65bcc|A901    |      ;  
-	sta.b rUnkPtrHi_02                   ;C65BCE|8504    |000004;  
+	sta.b $04                   ;C65BCE|8504    |000004;  
 	lda.b #$01                           ;C65BD0|A901    |      ;  
 	sta.b $05                            ;C65BD2|8505    |000005;  
 	rep #$20                             ;C65BD4|C220    |      ;  
@@ -6967,7 +6967,7 @@ CODE_C65C29:
 	bne CODE_C65C29                      ;C65C2F|D0F8    |C65C29;  
 	sep #$20                             ;C65C31|E220    |      ;  
 	lda.b #$1E                           ;C65C33|A91E    |      ;  
-	sta.b rUnkPtrLo_02                   ;C65C35|8502    |000002;  
+	sta.b $02                   ;C65C35|8502    |000002;  
 	lda.l $7ED677                        ;C65C37|AF77D67E|7ED677;  
 	sec                                  ;C65C3B|38      |      ;  
 	sbc.l $7ED678                        ;C65C3C|EF78D67E|7ED678;  
@@ -7014,7 +7014,7 @@ CODE_C65C85:
 	sta.b $00                            ;C65C8A|8500    |000000;  
 	sep #$20                             ;C65C8C|E220    |      ;  
 	lda.b #$0B                           ;C65C8E|A90B    |      ;  
-	sta.b rUnkPtrLo_02                   ;C65C90|8502    |000002;  
+	sta.b $02                   ;C65C90|8502    |000002;  
 	lda.b #$04                           ;C65C92|A904    |      ;  
 	sta.b $03                            ;C65C94|8503    |000003;  
 	phy                                  ;C65C96|5A      |      ;  
@@ -7030,7 +7030,7 @@ CODE_C65C85:
 	sta.b $00                            ;C65CA9|8500    |000000;  
 	sep #$20                             ;C65CAB|E220    |      ;  
 	lda.b #$00                           ;C65CAD|A900    |      ;  
-	sta.b rUnkPtrLo_02                   ;C65CAF|8502    |000002;  
+	sta.b $02                   ;C65CAF|8502    |000002;  
 	phy                                  ;C65CB1|5A      |      ;  
 	phb                                  ;C65CB2|8B      |      ;  
 	jsl.l CODE_C66CBA                    ;C65CB3|22BA6CC6|C66CBA;  
@@ -7042,7 +7042,7 @@ CODE_C65C85:
 	sta.b $00                            ;C65CC2|8500    |000000;  
 	sep #$20                             ;C65CC4|E220    |      ;  
 	lda.b #$09                           ;C65CC6|A909    |      ;  
-	sta.b rUnkPtrLo_02                   ;C65CC8|8502    |000002;  
+	sta.b $02                   ;C65CC8|8502    |000002;  
 	lda.b #$00                           ;C65CCA|A900    |      ;  
 	sta.b $03                            ;C65CCC|8503    |000003;  
 	phy                                  ;C65CCE|5A      |      ;  
@@ -7064,7 +7064,7 @@ CODE_C65CDE:
 	jsl.l CODE_C66C84                    ;C65CE8|22846CC6|C66C84;  
 	rep #$20                             ;C65CEC|C220    |      ;  
 	lda.b $00                            ;C65CEE|A500    |000000;  
-	sta.b rUnkPtrLo_02                   ;C65CF0|8502    |000002;  
+	sta.b $02                   ;C65CF0|8502    |000002;  
 	tya                                  ;C65CF2|98      |      ;  
 	and.w #$00FF                         ;C65CF3|29FF00  |      ;  
 	sep #$20                             ;C65CF6|E220    |      ;  
@@ -7085,7 +7085,7 @@ CODE_C65CDE:
 	asl a                                ;C65D0E|0A      |      ;  
 	asl a                                ;C65D0F|0A      |      ;  
 	pha                                  ;C65D10|48      |      ;  
-	ldx.b rUnkPtrLo_02                   ;C65D11|A602    |000002;  
+	ldx.b $02                   ;C65D11|A602    |000002;  
 	sep #$20                             ;C65D13|E220    |      ;  
 	lda.b #$7F                           ;C65D15|A97F    |      ;  
 	pha                                  ;C65D17|48      |      ;  
@@ -7107,12 +7107,12 @@ CODE_C65CDE:
 	sep #$20                             ;C65D34|E220    |      ;  
 	clc                                  ;C65D36|18      |      ;  
 	adc.l $7ED678                        ;C65D37|6F78D67E|7ED678;  
-	sta.b rUnkPtrHi_02                   ;C65D3B|8504    |000004;  
+	sta.b $04                   ;C65D3B|8504    |000004;  
 	stz.b $05                            ;C65D3D|6405    |000005;  
 	stz.b $06                            ;C65D3F|6406    |000006;  
 	stz.b $07                            ;C65D41|6407    |000007;  
 	lda.b #$01                           ;C65D43|A901    |      ;  
-	sta.b rUnkPtrLo_02                   ;C65D45|8502    |000002;  
+	sta.b $02                   ;C65D45|8502    |000002;  
 	lda.b #$03                           ;C65D47|A903    |      ;  
 	sta.b $03                            ;C65D49|8503    |000003;  
 	phx                                  ;C65D4B|DA      |      ;  
@@ -7131,7 +7131,7 @@ CODE_C65CDE:
 	sta.b $00                            ;C65D61|8500    |000000;  
 	sep #$20                             ;C65D63|E220    |      ;  
 	lda.b #$05                           ;C65D65|A905    |      ;  
-	sta.b rUnkPtrLo_02                   ;C65D67|8502    |000002;  
+	sta.b $02                   ;C65D67|8502    |000002;  
 	lda.b #$00                           ;C65D69|A900    |      ;  
 	sta.b $03                            ;C65D6B|8503    |000003;  
 	phx                                  ;C65D6D|DA      |      ;  
@@ -7145,12 +7145,12 @@ CODE_C65CDE:
 	lda.w #$04FD                         ;C65D79|A9FD04  |      ;  
 	sta.b $00                            ;C65D7C|8500    |000000;  
 	lda.l $B3600B,x                      ;C65D7E|BF0B60B3|B3600B;  
-	sta.b rUnkPtrHi_02                   ;C65D82|8504    |000004;  
+	sta.b $04                   ;C65D82|8504    |000004;  
 	lda.l $B3600D,x                      ;C65D84|BF0D60B3|B3600D;  
 	sta.b $06                            ;C65D88|8506    |000006;  
 	sep #$20                             ;C65D8A|E220    |      ;  
 	lda.b #$01                           ;C65D8C|A901    |      ;  
-	sta.b rUnkPtrLo_02                   ;C65D8E|8502    |000002;  
+	sta.b $02                   ;C65D8E|8502    |000002;  
 	lda.b #$08                           ;C65D90|A908    |      ;  
 	sta.b $03                            ;C65D92|8503    |000003;  
 	rep #$20                             ;C65D94|C220    |      ;  
@@ -7170,7 +7170,7 @@ CODE_C65CDE:
 	sta.b $00                            ;C65DAC|8500    |000000;  
 	sep #$20                             ;C65DAE|E220    |      ;  
 	lda.b #$08                           ;C65DB0|A908    |      ;  
-	sta.b rUnkPtrLo_02                   ;C65DB2|8502    |000002;  
+	sta.b $02                   ;C65DB2|8502    |000002;  
 	lda.b #$00                           ;C65DB4|A900    |      ;  
 	sta.b $03                            ;C65DB6|8503    |000003;  
 	phx                                  ;C65DB8|DA      |      ;  
@@ -7184,11 +7184,11 @@ CODE_C65CDE:
 	lda.w #$04FB                         ;C65DC4|A9FB04  |      ;  
 	sta.b $00                            ;C65DC7|8500    |000000;  
 	lda.l $B36012,x                      ;C65DC9|BF1260B3|B36012;  
-	sta.b rUnkPtrHi_02                   ;C65DCD|8504    |000004;  
+	sta.b $04                   ;C65DCD|8504    |000004;  
 	stz.b $06                            ;C65DCF|6406    |000006;  
 	sep #$20                             ;C65DD1|E220    |      ;  
 	lda.b #$01                           ;C65DD3|A901    |      ;  
-	sta.b rUnkPtrLo_02                   ;C65DD5|8502    |000002;  
+	sta.b $02                   ;C65DD5|8502    |000002;  
 	lda.b #$02                           ;C65DD7|A902    |      ;  
 	sta.b $03                            ;C65DD9|8503    |000003;  
 	rep #$20                             ;C65DDB|C220    |      ;  
@@ -7208,7 +7208,7 @@ CODE_C65CDE:
 	sta.b $00                            ;C65DF3|8500    |000000;  
 	sep #$20                             ;C65DF5|E220    |      ;  
 	lda.b #$04                           ;C65DF7|A904    |      ;  
-	sta.b rUnkPtrLo_02                   ;C65DF9|8502    |000002;  
+	sta.b $02                   ;C65DF9|8502    |000002;  
 	lda.b #$00                           ;C65DFB|A900    |      ;  
 	sta.b $03                            ;C65DFD|8503    |000003;  
 	phx                                  ;C65DFF|DA      |      ;  
@@ -7223,12 +7223,12 @@ CODE_C65CDE:
 	sta.b $00                            ;C65E0E|8500    |000000;  
 	sep #$20                             ;C65E10|E220    |      ;  
 	lda.b #$B3                           ;C65E12|A9B3    |      ;  
-	sta.b rUnkPtrHi_02                   ;C65E14|8504    |000004;  
+	sta.b $04                   ;C65E14|8504    |000004;  
 	rep #$20                             ;C65E16|C220    |      ;  
 	txa                                  ;C65E18|8A      |      ;  
 	clc                                  ;C65E19|18      |      ;  
 	adc.w #$6007                         ;C65E1A|690760  |      ;  
-	sta.b rUnkPtrLo_02                   ;C65E1D|8502    |000002;  
+	sta.b $02                   ;C65E1D|8502    |000002;  
 	phx                                  ;C65E1F|DA      |      ;  
 	phy                                  ;C65E20|5A      |      ;  
 	phb                                  ;C65E21|8B      |      ;  
@@ -7239,13 +7239,13 @@ CODE_C65CDE:
 
 CODE_C65E29:
 	lda.w #$EB86                         ;C65E29|A986EB  |      ;  
-	sta.b rUnkPtrLo_02                   ;C65E2C|8502    |000002;  
+	sta.b $02                   ;C65E2C|8502    |000002;  
 	phx                                  ;C65E2E|DA      |      ;  
 	phy                                  ;C65E2F|5A      |      ;  
 	jsl.l CODE_C4BF88                    ;C65E30|2288BFC4|C4BF88;  
 	ply                                  ;C65E34|7A      |      ;  
 	plx                                  ;C65E35|FA      |      ;  
-	lda.b rUnkPtrLo_02                   ;C65E36|A502    |000002;  
+	lda.b $02                   ;C65E36|A502    |000002;  
 	cmp.w #$FFFF                         ;C65E38|C9FFFF  |      ;  
 	beq CODE_C65E4F                      ;C65E3B|F012    |C65E4F;  
 	lda.b $00                            ;C65E3D|A500    |000000;  
@@ -7270,7 +7270,7 @@ CODE_C65E4F:
 	sta.b $00                            ;C65E5A|8500    |000000;  
 	sep #$20                             ;C65E5C|E220    |      ;  
 	lda.b #$08                           ;C65E5E|A908    |      ;  
-	sta.b rUnkPtrLo_02                   ;C65E60|8502    |000002;  
+	sta.b $02                   ;C65E60|8502    |000002;  
 	lda.b #$00                           ;C65E62|A900    |      ;  
 	sta.b $03                            ;C65E64|8503    |000003;  
 	phx                                  ;C65E66|DA      |      ;  
@@ -7350,7 +7350,7 @@ CODE_C65EE3:
 	jsl.l CODE_C66C84                    ;C65EED|22846CC6|C66C84;  
 	rep #$20                             ;C65EF1|C220    |      ;  
 	lda.b $00                            ;C65EF3|A500    |000000;  
-	sta.b rUnkPtrLo_02                   ;C65EF5|8502    |000002;  
+	sta.b $02                   ;C65EF5|8502    |000002;  
 	tya                                  ;C65EF7|98      |      ;  
 	and.w #$00FF                         ;C65EF8|29FF00  |      ;  
 	sep #$20                             ;C65EFB|E220    |      ;  
@@ -7371,7 +7371,7 @@ CODE_C65EE3:
 	asl a                                ;C65F13|0A      |      ;  
 	asl a                                ;C65F14|0A      |      ;  
 	pha                                  ;C65F15|48      |      ;  
-	ldx.b rUnkPtrLo_02                   ;C65F16|A602    |000002;  
+	ldx.b $02                   ;C65F16|A602    |000002;  
 	sep #$20                             ;C65F18|E220    |      ;  
 	lda.b #$7F                           ;C65F1A|A97F    |      ;  
 	pha                                  ;C65F1C|48      |      ;  
@@ -7393,12 +7393,12 @@ CODE_C65EE3:
 	sep #$20                             ;C65F39|E220    |      ;  
 	clc                                  ;C65F3B|18      |      ;  
 	adc.l $7ED678                        ;C65F3C|6F78D67E|7ED678;  
-	sta.b rUnkPtrHi_02                   ;C65F40|8504    |000004;  
+	sta.b $04                   ;C65F40|8504    |000004;  
 	stz.b $05                            ;C65F42|6405    |000005;  
 	stz.b $06                            ;C65F44|6406    |000006;  
 	stz.b $07                            ;C65F46|6407    |000007;  
 	lda.b #$01                           ;C65F48|A901    |      ;  
-	sta.b rUnkPtrLo_02                   ;C65F4A|8502    |000002;  
+	sta.b $02                   ;C65F4A|8502    |000002;  
 	lda.b #$03                           ;C65F4C|A903    |      ;  
 	sta.b $03                            ;C65F4E|8503    |000003;  
 	phx                                  ;C65F50|DA      |      ;  
@@ -7412,7 +7412,7 @@ CODE_C65EE3:
 	lda.w #$04FD                         ;C65F5C|A9FD04  |      ;  
 	sta.b $00                            ;C65F5F|8500    |000000;  
 	lda.w #$000A                         ;C65F61|A90A00  |      ;  
-	sta.b rUnkPtrLo_02                   ;C65F64|8502    |000002;  
+	sta.b $02                   ;C65F64|8502    |000002;  
 	phx                                  ;C65F66|DA      |      ;  
 	phy                                  ;C65F67|5A      |      ;  
 	phb                                  ;C65F68|8B      |      ;  
@@ -7429,7 +7429,7 @@ CODE_C65EE3:
 	sta.b $00                            ;C65F7C|8500    |000000;  
 	sep #$20                             ;C65F7E|E220    |      ;  
 	lda.b #$05                           ;C65F80|A905    |      ;  
-	sta.b rUnkPtrLo_02                   ;C65F82|8502    |000002;  
+	sta.b $02                   ;C65F82|8502    |000002;  
 	lda.b #$02                           ;C65F84|A902    |      ;  
 	sta.b $03                            ;C65F86|8503    |000003;  
 	phx                                  ;C65F88|DA      |      ;  
@@ -7444,12 +7444,12 @@ CODE_C65EE3:
 	lda.w #$04FD                         ;C65F96|A9FD04  |      ;  
 	sta.b $00                            ;C65F99|8500    |000000;  
 	lda.l $B3600B,x                      ;C65F9B|BF0B60B3|B3600B;  
-	sta.b rUnkPtrHi_02                   ;C65F9F|8504    |000004;  
+	sta.b $04                   ;C65F9F|8504    |000004;  
 	lda.l $B3600D,x                      ;C65FA1|BF0D60B3|B3600D;  
 	sta.b $06                            ;C65FA5|8506    |000006;  
 	sep #$20                             ;C65FA7|E220    |      ;  
 	lda.b #$01                           ;C65FA9|A901    |      ;  
-	sta.b rUnkPtrLo_02                   ;C65FAB|8502    |000002;  
+	sta.b $02                   ;C65FAB|8502    |000002;  
 	lda.b #$08                           ;C65FAD|A908    |      ;  
 	sta.b $03                            ;C65FAF|8503    |000003;  
 	rep #$20                             ;C65FB1|C220    |      ;  
@@ -7469,7 +7469,7 @@ CODE_C65EE3:
 	sta.b $00                            ;C65FC9|8500    |000000;  
 	sep #$20                             ;C65FCB|E220    |      ;  
 	lda.b #$08                           ;C65FCD|A908    |      ;  
-	sta.b rUnkPtrLo_02                   ;C65FCF|8502    |000002;  
+	sta.b $02                   ;C65FCF|8502    |000002;  
 	lda.b #$02                           ;C65FD1|A902    |      ;  
 	sta.b $03                            ;C65FD3|8503    |000003;  
 	phx                                  ;C65FD5|DA      |      ;  
@@ -7483,11 +7483,11 @@ CODE_C65EE3:
 	lda.w #$04FB                         ;C65FE1|A9FB04  |      ;  
 	sta.b $00                            ;C65FE4|8500    |000000;  
 	lda.l $B36012,x                      ;C65FE6|BF1260B3|B36012;  
-	sta.b rUnkPtrHi_02                   ;C65FEA|8504    |000004;  
+	sta.b $04                   ;C65FEA|8504    |000004;  
 	stz.b $06                            ;C65FEC|6406    |000006;  
 	sep #$20                             ;C65FEE|E220    |      ;  
 	lda.b #$01                           ;C65FF0|A901    |      ;  
-	sta.b rUnkPtrLo_02                   ;C65FF2|8502    |000002;  
+	sta.b $02                   ;C65FF2|8502    |000002;  
 	lda.b #$02                           ;C65FF4|A902    |      ;  
 	sta.b $03                            ;C65FF6|8503    |000003;  
 	rep #$20                             ;C65FF8|C220    |      ;  
@@ -7507,7 +7507,7 @@ CODE_C65EE3:
 	sta.b $00                            ;C66010|8500    |000000;  
 	sep #$20                             ;C66012|E220    |      ;  
 	lda.b #$04                           ;C66014|A904    |      ;  
-	sta.b rUnkPtrLo_02                   ;C66016|8502    |000002;  
+	sta.b $02                   ;C66016|8502    |000002;  
 	lda.b #$02                           ;C66018|A902    |      ;  
 	sta.b $03                            ;C6601A|8503    |000003;  
 	phx                                  ;C6601C|DA      |      ;  
@@ -7522,12 +7522,12 @@ CODE_C65EE3:
 	sta.b $00                            ;C6602B|8500    |000000;  
 	sep #$20                             ;C6602D|E220    |      ;  
 	lda.b #$B3                           ;C6602F|A9B3    |      ;  
-	sta.b rUnkPtrHi_02                   ;C66031|8504    |000004;  
+	sta.b $04                   ;C66031|8504    |000004;  
 	rep #$20                             ;C66033|C220    |      ;  
 	txa                                  ;C66035|8A      |      ;  
 	clc                                  ;C66036|18      |      ;  
 	adc.w #$6007                         ;C66037|690760  |      ;  
-	sta.b rUnkPtrLo_02                   ;C6603A|8502    |000002;  
+	sta.b $02                   ;C6603A|8502    |000002;  
 	phx                                  ;C6603C|DA      |      ;  
 	phy                                  ;C6603D|5A      |      ;  
 	phb                                  ;C6603E|8B      |      ;  
@@ -7538,13 +7538,13 @@ CODE_C65EE3:
 
 CODE_C66046:
 	lda.w #$EB86                         ;C66046|A986EB  |      ;  
-	sta.b rUnkPtrLo_02                   ;C66049|8502    |000002;  
+	sta.b $02                   ;C66049|8502    |000002;  
 	phx                                  ;C6604B|DA      |      ;  
 	phy                                  ;C6604C|5A      |      ;  
 	jsl.l CODE_C4BF88                    ;C6604D|2288BFC4|C4BF88;  
 	ply                                  ;C66051|7A      |      ;  
 	plx                                  ;C66052|FA      |      ;  
-	lda.b rUnkPtrLo_02                   ;C66053|A502    |000002;  
+	lda.b $02                   ;C66053|A502    |000002;  
 	cmp.w #$FFFF                         ;C66055|C9FFFF  |      ;  
 	beq CODE_C6606C                      ;C66058|F012    |C6606C;  
 	lda.b $00                            ;C6605A|A500    |000000;  
@@ -7569,7 +7569,7 @@ CODE_C6606C:
 	sta.b $00                            ;C66077|8500    |000000;  
 	sep #$20                             ;C66079|E220    |      ;  
 	lda.b #$08                           ;C6607B|A908    |      ;  
-	sta.b rUnkPtrLo_02                   ;C6607D|8502    |000002;  
+	sta.b $02                   ;C6607D|8502    |000002;  
 	lda.b #$02                           ;C6607F|A902    |      ;  
 	sta.b $03                            ;C66081|8503    |000003;  
 	phx                                  ;C66083|DA      |      ;  
@@ -7640,7 +7640,7 @@ CODE_C660F9:
 	lda.w #$EF86                         ;C66103|A986EF  |      ;  
 	sta.b $00                            ;C66106|8500    |000000;  
 	lda.w #$3800                         ;C66108|A90038  |      ;  
-	sta.b rUnkPtrLo_02                   ;C6610B|8502    |000002;  
+	sta.b $02                   ;C6610B|8502    |000002;  
 	jsl.l CODE_C66C21                    ;C6610D|22216CC6|C66C21;  
 	sep #$20                             ;C66111|E220    |      ;  
 	lda.l $7ED677                        ;C66113|AF77D67E|7ED677;  
@@ -7666,7 +7666,7 @@ CODE_C6612F:
 	jsl.l CODE_C66C84                    ;C6613D|22846CC6|C66C84;  
 	rep #$20                             ;C66141|C220    |      ;  
 	lda.b $00                            ;C66143|A500    |000000;  
-	sta.b rUnkPtrLo_02                   ;C66145|8502    |000002;  
+	sta.b $02                   ;C66145|8502    |000002;  
 	tya                                  ;C66147|98      |      ;  
 	and.w #$00FF                         ;C66148|29FF00  |      ;  
 	sep #$20                             ;C6614B|E220    |      ;  
@@ -7688,7 +7688,7 @@ CODE_C6612F:
 	asl a                                ;C66164|0A      |      ;  
 	asl a                                ;C66165|0A      |      ;  
 	pha                                  ;C66166|48      |      ;  
-	ldx.b rUnkPtrLo_02                   ;C66167|A602    |000002;  
+	ldx.b $02                   ;C66167|A602    |000002;  
 	sep #$20                             ;C66169|E220    |      ;  
 	lda.b #$7F                           ;C6616B|A97F    |      ;  
 	pha                                  ;C6616D|48      |      ;  
@@ -7710,12 +7710,12 @@ CODE_C6612F:
 	sep #$20                             ;C6618A|E220    |      ;  
 	clc                                  ;C6618C|18      |      ;  
 	adc.l $7ED678                        ;C6618D|6F78D67E|7ED678;  
-	sta.b rUnkPtrHi_02                   ;C66191|8504    |000004;  
+	sta.b $04                   ;C66191|8504    |000004;  
 	stz.b $05                            ;C66193|6405    |000005;  
 	stz.b $06                            ;C66195|6406    |000006;  
 	stz.b $07                            ;C66197|6407    |000007;  
 	lda.b #$01                           ;C66199|A901    |      ;  
-	sta.b rUnkPtrLo_02                   ;C6619B|8502    |000002;  
+	sta.b $02                   ;C6619B|8502    |000002;  
 	lda.b #$03                           ;C6619D|A903    |      ;  
 	sta.b $03                            ;C6619F|8503    |000003;  
 	phx                                  ;C661A1|DA      |      ;  
@@ -7729,7 +7729,7 @@ CODE_C6612F:
 	lda.w #$04FD                         ;C661AD|A9FD04  |      ;  
 	sta.b $00                            ;C661B0|8500    |000000;  
 	lda.w #$000A                         ;C661B2|A90A00  |      ;  
-	sta.b rUnkPtrLo_02                   ;C661B5|8502    |000002;  
+	sta.b $02                   ;C661B5|8502    |000002;  
 	phx                                  ;C661B7|DA      |      ;  
 	phy                                  ;C661B8|5A      |      ;  
 	phb                                  ;C661B9|8B      |      ;  
@@ -7746,7 +7746,7 @@ CODE_C6612F:
 	sta.b $00                            ;C661CD|8500    |000000;  
 	sep #$20                             ;C661CF|E220    |      ;  
 	lda.b #$05                           ;C661D1|A905    |      ;  
-	sta.b rUnkPtrLo_02                   ;C661D3|8502    |000002;  
+	sta.b $02                   ;C661D3|8502    |000002;  
 	tya                                  ;C661D5|98      |      ;  
 	dec a                                ;C661D6|3A      |      ;  
 	clc                                  ;C661D7|18      |      ;  
@@ -7770,12 +7770,12 @@ CODE_C661E5:
 	lda.w #$04FD                         ;C661F4|A9FD04  |      ;  
 	sta.b $00                            ;C661F7|8500    |000000;  
 	lda.l $B3600B,x                      ;C661F9|BF0B60B3|B3600B;  
-	sta.b rUnkPtrHi_02                   ;C661FD|8504    |000004;  
+	sta.b $04                   ;C661FD|8504    |000004;  
 	lda.l $B3600D,x                      ;C661FF|BF0D60B3|B3600D;  
 	sta.b $06                            ;C66203|8506    |000006;  
 	sep #$20                             ;C66205|E220    |      ;  
 	lda.b #$01                           ;C66207|A901    |      ;  
-	sta.b rUnkPtrLo_02                   ;C66209|8502    |000002;  
+	sta.b $02                   ;C66209|8502    |000002;  
 	lda.b #$08                           ;C6620B|A908    |      ;  
 	sta.b $03                            ;C6620D|8503    |000003;  
 	rep #$20                             ;C6620F|C220    |      ;  
@@ -7795,7 +7795,7 @@ CODE_C661E5:
 	sta.b $00                            ;C66227|8500    |000000;  
 	sep #$20                             ;C66229|E220    |      ;  
 	lda.b #$08                           ;C6622B|A908    |      ;  
-	sta.b rUnkPtrLo_02                   ;C6622D|8502    |000002;  
+	sta.b $02                   ;C6622D|8502    |000002;  
 	tya                                  ;C6622F|98      |      ;  
 	dec a                                ;C66230|3A      |      ;  
 	clc                                  ;C66231|18      |      ;  
@@ -7819,11 +7819,11 @@ CODE_C6623F:
 	lda.w #$04FB                         ;C6624E|A9FB04  |      ;  
 	sta.b $00                            ;C66251|8500    |000000;  
 	lda.l $B36012,x                      ;C66253|BF1260B3|B36012;  
-	sta.b rUnkPtrHi_02                   ;C66257|8504    |000004;  
+	sta.b $04                   ;C66257|8504    |000004;  
 	stz.b $06                            ;C66259|6406    |000006;  
 	sep #$20                             ;C6625B|E220    |      ;  
 	lda.b #$01                           ;C6625D|A901    |      ;  
-	sta.b rUnkPtrLo_02                   ;C6625F|8502    |000002;  
+	sta.b $02                   ;C6625F|8502    |000002;  
 	lda.b #$02                           ;C66261|A902    |      ;  
 	sta.b $03                            ;C66263|8503    |000003;  
 	rep #$20                             ;C66265|C220    |      ;  
@@ -7843,7 +7843,7 @@ CODE_C6623F:
 	sta.b $00                            ;C6627D|8500    |000000;  
 	sep #$20                             ;C6627F|E220    |      ;  
 	lda.b #$04                           ;C66281|A904    |      ;  
-	sta.b rUnkPtrLo_02                   ;C66283|8502    |000002;  
+	sta.b $02                   ;C66283|8502    |000002;  
 	tya                                  ;C66285|98      |      ;  
 	dec a                                ;C66286|3A      |      ;  
 	clc                                  ;C66287|18      |      ;  
@@ -7868,12 +7868,12 @@ CODE_C66295:
 	sta.b $00                            ;C662A7|8500    |000000;  
 	sep #$20                             ;C662A9|E220    |      ;  
 	lda.b #$B3                           ;C662AB|A9B3    |      ;  
-	sta.b rUnkPtrHi_02                   ;C662AD|8504    |000004;  
+	sta.b $04                   ;C662AD|8504    |000004;  
 	rep #$20                             ;C662AF|C220    |      ;  
 	txa                                  ;C662B1|8A      |      ;  
 	clc                                  ;C662B2|18      |      ;  
 	adc.w #$6007                         ;C662B3|690760  |      ;  
-	sta.b rUnkPtrLo_02                   ;C662B6|8502    |000002;  
+	sta.b $02                   ;C662B6|8502    |000002;  
 	phx                                  ;C662B8|DA      |      ;  
 	phy                                  ;C662B9|5A      |      ;  
 	phb                                  ;C662BA|8B      |      ;  
@@ -7884,13 +7884,13 @@ CODE_C66295:
 
 CODE_C662C2:
 	lda.w #$EB86                         ;C662C2|A986EB  |      ;  
-	sta.b rUnkPtrLo_02                   ;C662C5|8502    |000002;  
+	sta.b $02                   ;C662C5|8502    |000002;  
 	phx                                  ;C662C7|DA      |      ;  
 	phy                                  ;C662C8|5A      |      ;  
 	jsl.l CODE_C4BF88                    ;C662C9|2288BFC4|C4BF88;  
 	ply                                  ;C662CD|7A      |      ;  
 	plx                                  ;C662CE|FA      |      ;  
-	lda.b rUnkPtrLo_02                   ;C662CF|A502    |000002;  
+	lda.b $02                   ;C662CF|A502    |000002;  
 	cmp.w #$FFFF                         ;C662D1|C9FFFF  |      ;  
 	beq CODE_C662E8                      ;C662D4|F012    |C662E8;  
 	lda.b $00                            ;C662D6|A500    |000000;  
@@ -7916,7 +7916,7 @@ CODE_C662E8:
 	sta.b $00                            ;C662F4|8500    |000000;  
 	sep #$20                             ;C662F6|E220    |      ;  
 	lda.b #$08                           ;C662F8|A908    |      ;  
-	sta.b rUnkPtrLo_02                   ;C662FA|8502    |000002;  
+	sta.b $02                   ;C662FA|8502    |000002;  
 	tya                                  ;C662FC|98      |      ;  
 	dec a                                ;C662FD|3A      |      ;  
 	clc                                  ;C662FE|18      |      ;  
@@ -7968,12 +7968,12 @@ CODE_C6637F:
 	lda.l $B36014,x                      ;C66381|BF1460B3|B36014;  
 	bne UNREACH_C6639E                   ;C66385|D017    |C6639E;  
 	lda.b #$02                           ;C66387|A902    |      ;  
-	sta.b rUnkPtrLo_02                   ;C66389|8502    |000002;  
+	sta.b $02                   ;C66389|8502    |000002;  
 	lda.l $B36017,x                      ;C6638B|BF1760B3|B36017;  
 	sta.b $06                            ;C6638F|8506    |000006;  
 	rep #$20                             ;C66391|C220    |      ;  
 	lda.l $B36015,x                      ;C66393|BF1560B3|B36015;  
-	sta.b rUnkPtrHi_02                   ;C66397|8504    |000004;  
+	sta.b $04                   ;C66397|8504    |000004;  
 	lda.w #$0507                         ;C66399|A90705  |      ;  
 	bra CODE_C663C1                      ;C6639C|8023    |C663C1;  
 
@@ -8000,7 +8000,7 @@ CODE_C663C1:
 	sta.b $00                            ;C663D4|8500    |000000;  
 	sep #$20                             ;C663D6|E220    |      ;  
 	lda.b #$19                           ;C663D8|A919    |      ;  
-	sta.b rUnkPtrLo_02                   ;C663DA|8502    |000002;  
+	sta.b $02                   ;C663DA|8502    |000002;  
 	tya                                  ;C663DC|98      |      ;  
 	dec a                                ;C663DD|3A      |      ;  
 	clc                                  ;C663DE|18      |      ;  
@@ -8038,7 +8038,7 @@ CODE_C6640E:
 	lda.w #$EF86                         ;C66410|A986EF  |      ;  
 	sta.b $00                            ;C66413|8500    |000000;  
 	lda.w #$3800                         ;C66415|A90038  |      ;  
-	sta.b rUnkPtrLo_02                   ;C66418|8502    |000002;  
+	sta.b $02                   ;C66418|8502    |000002;  
 	jsl.l CODE_C66C21                    ;C6641A|22216CC6|C66C21;  
 	plp                                  ;C6641E|28      |      ;  
 	rtl                                  ;C6641F|6B      |      ;  
@@ -8061,11 +8061,11 @@ CODE_C66420:
 	sta.b $00                            ;C6643C|8500    |000000;  
 	sep #$20                             ;C6643E|E220    |      ;  
 	lda.b #$01                           ;C66440|A901    |      ;  
-	sta.b rUnkPtrLo_02                   ;C66442|8502    |000002;  
+	sta.b $02                   ;C66442|8502    |000002;  
 	lda.b #$02                           ;C66444|A902    |      ;  
 	sta.b $03                            ;C66446|8503    |000003;  
 	lda.l $7ED623                        ;C66448|AF23D67E|7ED623;  
-	sta.b rUnkPtrHi_02                   ;C6644C|8504    |000004;  
+	sta.b $04                   ;C6644C|8504    |000004;  
 	stz.b $05                            ;C6644E|6405    |000005;  
 	stz.b $06                            ;C66450|6406    |000006;  
 	stz.b $07                            ;C66452|6407    |000007;  
@@ -8079,7 +8079,7 @@ CODE_C66420:
 	sta.b $00                            ;C66465|8500    |000000;  
 	sep #$20                             ;C66467|E220    |      ;  
 	lda.b #$04                           ;C66469|A904    |      ;  
-	sta.b rUnkPtrLo_02                   ;C6646B|8502    |000002;  
+	sta.b $02                   ;C6646B|8502    |000002;  
 	lda.b #$00                           ;C6646D|A900    |      ;  
 	sta.b $03                            ;C6646F|8503    |000003;  
 	phb                                  ;C66471|8B      |      ;  
@@ -8087,7 +8087,7 @@ CODE_C66420:
 	plb                                  ;C66476|AB      |      ;  
 	sep #$20                             ;C66477|E220    |      ;  
 	lda.b #$00                           ;C66479|A900    |      ;  
-	sta.b rUnkPtrLo_02                   ;C6647B|8502    |000002;  
+	sta.b $02                   ;C6647B|8502    |000002;  
 	rep #$20                             ;C6647D|C220    |      ;  
 	lda.w #$0515                         ;C6647F|A91505  |      ;  
 	sta.b $00                            ;C66482|8500    |000000;  
@@ -8100,7 +8100,7 @@ CODE_C66420:
 	sta.b $00                            ;C66493|8500    |000000;  
 	sep #$20                             ;C66495|E220    |      ;  
 	lda.b #$03                           ;C66497|A903    |      ;  
-	sta.b rUnkPtrLo_02                   ;C66499|8502    |000002;  
+	sta.b $02                   ;C66499|8502    |000002;  
 	lda.b #$00                           ;C6649B|A900    |      ;  
 	sta.b $03                            ;C6649D|8503    |000003;  
 	phb                                  ;C6649F|8B      |      ;  
@@ -8111,12 +8111,12 @@ CODE_C66420:
 	sta.b $00                            ;C664AA|8500    |000000;  
 	sep #$20                             ;C664AC|E220    |      ;  
 	lda.l $7ED631                        ;C664AE|AF31D67E|7ED631;  
-	sta.b rUnkPtrHi_02                   ;C664B2|8504    |000004;  
+	sta.b $04                   ;C664B2|8504    |000004;  
 	stz.b $05                            ;C664B4|6405    |000005;  
 	stz.b $06                            ;C664B6|6406    |000006;  
 	stz.b $07                            ;C664B8|6407    |000007;  
 	lda.b #$01                           ;C664BA|A901    |      ;  
-	sta.b rUnkPtrLo_02                   ;C664BC|8502    |000002;  
+	sta.b $02                   ;C664BC|8502    |000002;  
 	lda.b #$02                           ;C664BE|A902    |      ;  
 	sta.b $03                            ;C664C0|8503    |000003;  
 	rep #$20                             ;C664C2|C220    |      ;  
@@ -8129,7 +8129,7 @@ CODE_C66420:
 	sta.b $00                            ;C664D3|8500    |000000;  
 	sep #$20                             ;C664D5|E220    |      ;  
 	lda.b #$02                           ;C664D7|A902    |      ;  
-	sta.b rUnkPtrLo_02                   ;C664D9|8502    |000002;  
+	sta.b $02                   ;C664D9|8502    |000002;  
 	lda.b #$00                           ;C664DB|A900    |      ;  
 	sta.b $03                            ;C664DD|8503    |000003;  
 	phb                                  ;C664DF|8B      |      ;  
@@ -8139,12 +8139,12 @@ CODE_C66420:
 	lda.w #$04FD                         ;C664E7|A9FD04  |      ;  
 	sta.b $00                            ;C664EA|8500    |000000;  
 	lda.l $7ED61C                        ;C664EC|AF1CD67E|7ED61C;  
-	sta.b rUnkPtrHi_02                   ;C664F0|8504    |000004;  
+	sta.b $04                   ;C664F0|8504    |000004;  
 	lda.l $7ED61E                        ;C664F2|AF1ED67E|7ED61E;  
 	sta.b $06                            ;C664F6|8506    |000006;  
 	sep #$20                             ;C664F8|E220    |      ;  
 	lda.b #$01                           ;C664FA|A901    |      ;  
-	sta.b rUnkPtrLo_02                   ;C664FC|8502    |000002;  
+	sta.b $02                   ;C664FC|8502    |000002;  
 	lda.b #$08                           ;C664FE|A908    |      ;  
 	sta.b $03                            ;C66500|8503    |000003;  
 	rep #$20                             ;C66502|C220    |      ;  
@@ -8157,7 +8157,7 @@ CODE_C66420:
 	sta.b $00                            ;C66513|8500    |000000;  
 	sep #$20                             ;C66515|E220    |      ;  
 	lda.b #$08                           ;C66517|A908    |      ;  
-	sta.b rUnkPtrLo_02                   ;C66519|8502    |000002;  
+	sta.b $02                   ;C66519|8502    |000002;  
 	lda.b #$00                           ;C6651B|A900    |      ;  
 	sta.b $03                            ;C6651D|8503    |000003;  
 	phb                                  ;C6651F|8B      |      ;  
@@ -8168,19 +8168,19 @@ CODE_C66420:
 	sta.b $00                            ;C6652A|8500    |000000;  
 	sep #$20                             ;C6652C|E220    |      ;  
 	lda.b #$7E                           ;C6652E|A97E    |      ;  
-	sta.b rUnkPtrHi_02                   ;C66530|8504    |000004;  
+	sta.b $04                   ;C66530|8504    |000004;  
 	rep #$20                             ;C66532|C220    |      ;  
 	lda.w #$D614                         ;C66534|A914D6  |      ;  
-	sta.b rUnkPtrLo_02                   ;C66537|8502    |000002;  
+	sta.b $02                   ;C66537|8502    |000002;  
 	phb                                  ;C66539|8B      |      ;  
 	jsl.l CODE_C4B94F                    ;C6653A|224FB9C4|C4B94F;  
 	plb                                  ;C6653E|AB      |      ;  
 
 CODE_C6653F:
 	lda.w #$EB86                         ;C6653F|A986EB  |      ;  
-	sta.b rUnkPtrLo_02                   ;C66542|8502    |000002;  
+	sta.b $02                   ;C66542|8502    |000002;  
 	jsl.l CODE_C4BF88                    ;C66544|2288BFC4|C4BF88;  
-	lda.b rUnkPtrLo_02                   ;C66548|A502    |000002;  
+	lda.b $02                   ;C66548|A502    |000002;  
 	cmp.w #$FFFF                         ;C6654A|C9FFFF  |      ;  
 	beq CODE_C6655D                      ;C6654D|F00E    |C6655D;  
 	lda.b $00                            ;C6654F|A500    |000000;  
@@ -8199,7 +8199,7 @@ CODE_C6655D:
 	sta.b $00                            ;C66566|8500    |000000;  
 	sep #$20                             ;C66568|E220    |      ;  
 	lda.b #$08                           ;C6656A|A908    |      ;  
-	sta.b rUnkPtrLo_02                   ;C6656C|8502    |000002;  
+	sta.b $02                   ;C6656C|8502    |000002;  
 	lda.b #$00                           ;C6656E|A900    |      ;  
 	sta.b $03                            ;C66570|8503    |000003;  
 	phb                                  ;C66572|8B      |      ;  
@@ -8230,12 +8230,12 @@ CODE_C665D8:
 	lda.l $7ED625                        ;C665DA|AF25D67E|7ED625;  
 	bne UNREACH_C665F7                   ;C665DE|D017    |C665F7;  
 	lda.b #$02                           ;C665E0|A902    |      ;  
-	sta.b rUnkPtrLo_02                   ;C665E2|8502    |000002;  
+	sta.b $02                   ;C665E2|8502    |000002;  
 	lda.l $7ED628                        ;C665E4|AF28D67E|7ED628;  
 	sta.b $06                            ;C665E8|8506    |000006;  
 	rep #$20                             ;C665EA|C220    |      ;  
 	lda.l $7ED626                        ;C665EC|AF26D67E|7ED626;  
-	sta.b rUnkPtrHi_02                   ;C665F0|8504    |000004;  
+	sta.b $04                   ;C665F0|8504    |000004;  
 	lda.w #$0507                         ;C665F2|A90705  |      ;  
 	bra CODE_C6661A                      ;C665F5|8023    |C6661A;  
 
@@ -8256,7 +8256,7 @@ CODE_C6661A:
 	sta.b $00                            ;C66627|8500    |000000;  
 	sep #$20                             ;C66629|E220    |      ;  
 	lda.b #$1C                           ;C6662B|A91C    |      ;  
-	sta.b rUnkPtrLo_02                   ;C6662D|8502    |000002;  
+	sta.b $02                   ;C6662D|8502    |000002;  
 	lda.b #$00                           ;C6662F|A900    |      ;  
 	sta.b $03                            ;C66631|8503    |000003;  
 	phb                                  ;C66633|8B      |      ;  
@@ -8270,7 +8270,7 @@ CODE_C6661A:
 	plb                                  ;C66644|AB      |      ;  
 	sep #$20                             ;C66645|E220    |      ;  
 	lda.b #$00                           ;C66647|A900    |      ;  
-	sta.b rUnkPtrLo_02                   ;C66649|8502    |000002;  
+	sta.b $02                   ;C66649|8502    |000002;  
 	rep #$20                             ;C6664B|C220    |      ;  
 	lda.w #$0517                         ;C6664D|A91705  |      ;  
 	sta.b $00                            ;C66650|8500    |000000;  
@@ -8283,7 +8283,7 @@ CODE_C6661A:
 	sta.b $00                            ;C66661|8500    |000000;  
 	sep #$20                             ;C66663|E220    |      ;  
 	lda.b #$04                           ;C66665|A904    |      ;  
-	sta.b rUnkPtrLo_02                   ;C66667|8502    |000002;  
+	sta.b $02                   ;C66667|8502    |000002;  
 	lda.b #$00                           ;C66669|A900    |      ;  
 	sta.b $03                            ;C6666B|8503    |000003;  
 	phb                                  ;C6666D|8B      |      ;  
@@ -8291,7 +8291,7 @@ CODE_C6661A:
 	plb                                  ;C66672|AB      |      ;  
 	sep #$20                             ;C66673|E220    |      ;  
 	lda.b #$00                           ;C66675|A900    |      ;  
-	sta.b rUnkPtrLo_02                   ;C66677|8502    |000002;  
+	sta.b $02                   ;C66677|8502    |000002;  
 	lda.l $7ED62A                        ;C66679|AF2AD67E|7ED62A;  
 	sta.b $00                            ;C6667D|8500    |000000;  
 	jsl.l CODE_C66C6C                    ;C6667F|226C6CC6|C66C6C;  
@@ -8305,7 +8305,7 @@ CODE_C6661A:
 	sta.b $00                            ;C66694|8500    |000000;  
 	sep #$20                             ;C66696|E220    |      ;  
 	lda.b #$17                           ;C66698|A917    |      ;  
-	sta.b rUnkPtrLo_02                   ;C6669A|8502    |000002;  
+	sta.b $02                   ;C6669A|8502    |000002;  
 	lda.b #$00                           ;C6669C|A900    |      ;  
 	sta.b $03                            ;C6669E|8503    |000003;  
 	phb                                  ;C666A0|8B      |      ;  
@@ -8319,7 +8319,7 @@ CODE_C6661A:
 	plb                                  ;C666B1|AB      |      ;  
 	sep #$20                             ;C666B2|E220    |      ;  
 	lda.b #$00                           ;C666B4|A900    |      ;  
-	sta.b rUnkPtrLo_02                   ;C666B6|8502    |000002;  
+	sta.b $02                   ;C666B6|8502    |000002;  
 	rep #$20                             ;C666B8|C220    |      ;  
 	lda.w #$0513                         ;C666BA|A91305  |      ;  
 	sta.b $00                            ;C666BD|8500    |000000;  
@@ -8332,7 +8332,7 @@ CODE_C6661A:
 	sta.b $00                            ;C666CE|8500    |000000;  
 	sep #$20                             ;C666D0|E220    |      ;  
 	lda.b #$06                           ;C666D2|A906    |      ;  
-	sta.b rUnkPtrLo_02                   ;C666D4|8502    |000002;  
+	sta.b $02                   ;C666D4|8502    |000002;  
 	lda.b #$00                           ;C666D6|A900    |      ;  
 	sta.b $03                            ;C666D8|8503    |000003;  
 	phb                                  ;C666DA|8B      |      ;  
@@ -8342,11 +8342,11 @@ CODE_C6661A:
 	lda.w #$04FD                         ;C666E2|A9FD04  |      ;  
 	sta.b $00                            ;C666E5|8500    |000000;  
 	lda.l $7ED62D                        ;C666E7|AF2DD67E|7ED62D;  
-	sta.b rUnkPtrHi_02                   ;C666EB|8504    |000004;  
+	sta.b $04                   ;C666EB|8504    |000004;  
 	stz.b $06                            ;C666ED|6406    |000006;  
 	sep #$20                             ;C666EF|E220    |      ;  
 	lda.b #$01                           ;C666F1|A901    |      ;  
-	sta.b rUnkPtrLo_02                   ;C666F3|8502    |000002;  
+	sta.b $02                   ;C666F3|8502    |000002;  
 	lda.b #$05                           ;C666F5|A905    |      ;  
 	sta.b $03                            ;C666F7|8503    |000003;  
 	rep #$20                             ;C666F9|C220    |      ;  
@@ -8359,7 +8359,7 @@ CODE_C6661A:
 	sta.b $00                            ;C6670A|8500    |000000;  
 	sep #$20                             ;C6670C|E220    |      ;  
 	lda.b #$05                           ;C6670E|A905    |      ;  
-	sta.b rUnkPtrLo_02                   ;C66710|8502    |000002;  
+	sta.b $02                   ;C66710|8502    |000002;  
 	lda.b #$00                           ;C66712|A900    |      ;  
 	sta.b $03                            ;C66714|8503    |000003;  
 	phb                                  ;C66716|8B      |      ;  
@@ -8367,7 +8367,7 @@ CODE_C6661A:
 	plb                                  ;C6671B|AB      |      ;  
 	sep #$20                             ;C6671C|E220    |      ;  
 	lda.b #$00                           ;C6671E|A900    |      ;  
-	sta.b rUnkPtrLo_02                   ;C66720|8502    |000002;  
+	sta.b $02                   ;C66720|8502    |000002;  
 	rep #$20                             ;C66722|C220    |      ;  
 	lda.w #$051D                         ;C66724|A91D05  |      ;  
 	sta.b $00                            ;C66727|8500    |000000;  
@@ -8380,7 +8380,7 @@ CODE_C6661A:
 	sta.b $00                            ;C66738|8500    |000000;  
 	sep #$20                             ;C6673A|E220    |      ;  
 	lda.b #$09                           ;C6673C|A909    |      ;  
-	sta.b rUnkPtrLo_02                   ;C6673E|8502    |000002;  
+	sta.b $02                   ;C6673E|8502    |000002;  
 	lda.b #$00                           ;C66740|A900    |      ;  
 	sta.b $03                            ;C66742|8503    |000003;  
 	phb                                  ;C66744|8B      |      ;  
@@ -8399,11 +8399,11 @@ CODE_C66759:
 	sbc.w #$0005                         ;C6675B|E90500  |      ;  
 	bcs CODE_C66759                      ;C6675E|B0F9    |C66759;  
 	txa                                  ;C66760|8A      |      ;  
-	sta.b rUnkPtrHi_02                   ;C66761|8504    |000004;  
+	sta.b $04                   ;C66761|8504    |000004;  
 	stz.b $06                            ;C66763|6406    |000006;  
 	sep #$20                             ;C66765|E220    |      ;  
 	lda.b #$01                           ;C66767|A901    |      ;  
-	sta.b rUnkPtrLo_02                   ;C66769|8502    |000002;  
+	sta.b $02                   ;C66769|8502    |000002;  
 	lda.b #$03                           ;C6676B|A903    |      ;  
 	sta.b $03                            ;C6676D|8503    |000003;  
 	rep #$20                             ;C6676F|C220    |      ;  
@@ -8416,7 +8416,7 @@ CODE_C66759:
 	sta.b $00                            ;C66780|8500    |000000;  
 	sep #$20                             ;C66782|E220    |      ;  
 	lda.b #$04                           ;C66784|A904    |      ;  
-	sta.b rUnkPtrLo_02                   ;C66786|8502    |000002;  
+	sta.b $02                   ;C66786|8502    |000002;  
 	lda.b #$00                           ;C66788|A900    |      ;  
 	sta.b $03                            ;C6678A|8503    |000003;  
 	phb                                  ;C6678C|8B      |      ;  
@@ -8430,7 +8430,7 @@ CODE_C66759:
 	plb                                  ;C6679D|AB      |      ;  
 	sep #$20                             ;C6679E|E220    |      ;  
 	lda.b #$00                           ;C667A0|A900    |      ;  
-	sta.b rUnkPtrLo_02                   ;C667A2|8502    |000002;  
+	sta.b $02                   ;C667A2|8502    |000002;  
 	rep #$20                             ;C667A4|C220    |      ;  
 	lda.w #$0514                         ;C667A6|A91405  |      ;  
 	sta.b $00                            ;C667A9|8500    |000000;  
@@ -8442,7 +8442,7 @@ CODE_C66759:
 	sta.b $00                            ;C667B6|8500    |000000;  
 	sep #$20                             ;C667B8|E220    |      ;  
 	lda.b #$04                           ;C667BA|A904    |      ;  
-	sta.b rUnkPtrLo_02                   ;C667BC|8502    |000002;  
+	sta.b $02                   ;C667BC|8502    |000002;  
 	lda.b #$00                           ;C667BE|A900    |      ;  
 	sta.b $03                            ;C667C0|8503    |000003;  
 	phb                                  ;C667C2|8B      |      ;  
@@ -8453,12 +8453,12 @@ CODE_C66759:
 	sta.b $00                            ;C667CD|8500    |000000;  
 	sep #$20                             ;C667CF|E220    |      ;  
 	lda.l $7ED62F                        ;C667D1|AF2FD67E|7ED62F;  
-	sta.b rUnkPtrHi_02                   ;C667D5|8504    |000004;  
+	sta.b $04                   ;C667D5|8504    |000004;  
 	stz.b $05                            ;C667D7|6405    |000005;  
 	stz.b $06                            ;C667D9|6406    |000006;  
 	stz.b $07                            ;C667DB|6407    |000007;  
 	lda.b #$01                           ;C667DD|A901    |      ;  
-	sta.b rUnkPtrLo_02                   ;C667DF|8502    |000002;  
+	sta.b $02                   ;C667DF|8502    |000002;  
 	lda.b #$03                           ;C667E1|A903    |      ;  
 	sta.b $03                            ;C667E3|8503    |000003;  
 	rep #$20                             ;C667E5|C220    |      ;  
@@ -8470,12 +8470,12 @@ CODE_C66759:
 	sta.b $00                            ;C667F2|8500    |000000;  
 	sep #$20                             ;C667F4|E220    |      ;  
 	lda.l $7ED630                        ;C667F6|AF30D67E|7ED630;  
-	sta.b rUnkPtrHi_02                   ;C667FA|8504    |000004;  
+	sta.b $04                   ;C667FA|8504    |000004;  
 	stz.b $05                            ;C667FC|6405    |000005;  
 	stz.b $06                            ;C667FE|6406    |000006;  
 	stz.b $07                            ;C66800|6407    |000007;  
 	lda.b #$01                           ;C66802|A901    |      ;  
-	sta.b rUnkPtrLo_02                   ;C66804|8502    |000002;  
+	sta.b $02                   ;C66804|8502    |000002;  
 	lda.b #$03                           ;C66806|A903    |      ;  
 	sta.b $03                            ;C66808|8503    |000003;  
 	rep #$20                             ;C6680A|C220    |      ;  
@@ -8488,7 +8488,7 @@ CODE_C66759:
 	sta.b $00                            ;C6681B|8500    |000000;  
 	sep #$20                             ;C6681D|E220    |      ;  
 	lda.b #$07                           ;C6681F|A907    |      ;  
-	sta.b rUnkPtrLo_02                   ;C66821|8502    |000002;  
+	sta.b $02                   ;C66821|8502    |000002;  
 	lda.b #$00                           ;C66823|A900    |      ;  
 	sta.b $03                            ;C66825|8503    |000003;  
 	phb                                  ;C66827|8B      |      ;  
@@ -8496,7 +8496,7 @@ CODE_C66759:
 	plb                                  ;C6682C|AB      |      ;  
 	sep #$20                             ;C6682D|E220    |      ;  
 	lda.b #$00                           ;C6682F|A900    |      ;  
-	sta.b rUnkPtrLo_02                   ;C66831|8502    |000002;  
+	sta.b $02                   ;C66831|8502    |000002;  
 	rep #$20                             ;C66833|C220    |      ;  
 	lda.w #$0516                         ;C66835|A91605  |      ;  
 	sta.b $00                            ;C66838|8500    |000000;  
@@ -8509,7 +8509,7 @@ CODE_C66759:
 	sta.b $00                            ;C66849|8500    |000000;  
 	sep #$20                             ;C6684B|E220    |      ;  
 	lda.b #$05                           ;C6684D|A905    |      ;  
-	sta.b rUnkPtrLo_02                   ;C6684F|8502    |000002;  
+	sta.b $02                   ;C6684F|8502    |000002;  
 	lda.b #$00                           ;C66851|A900    |      ;  
 	sta.b $03                            ;C66853|8503    |000003;  
 	phb                                  ;C66855|8B      |      ;  
@@ -8519,13 +8519,13 @@ CODE_C66759:
 	lda.w #$04FD                         ;C6685D|A9FD04  |      ;  
 	sta.b $00                            ;C66860|8500    |000000;  
 	lda.l $7ED632                        ;C66862|AF32D67E|7ED632;  
-	sta.b rUnkPtrHi_02                   ;C66866|8504    |000004;  
+	sta.b $04                   ;C66866|8504    |000004;  
 	sep #$20                             ;C66868|E220    |      ;  
 	lda.l $7ED634                        ;C6686A|AF34D67E|7ED634;  
 	sta.b $06                            ;C6686E|8506    |000006;  
 	stz.b $07                            ;C66870|6407    |000007;  
 	lda.b #$01                           ;C66872|A901    |      ;  
-	sta.b rUnkPtrLo_02                   ;C66874|8502    |000002;  
+	sta.b $02                   ;C66874|8502    |000002;  
 	lda.b #$08                           ;C66876|A908    |      ;  
 	sta.b $03                            ;C66878|8503    |000003;  
 	rep #$20                             ;C6687A|C220    |      ;  
@@ -8538,7 +8538,7 @@ CODE_C66759:
 	sta.b $00                            ;C6688B|8500    |000000;  
 	sep #$20                             ;C6688D|E220    |      ;  
 	lda.b #$07                           ;C6688F|A907    |      ;  
-	sta.b rUnkPtrLo_02                   ;C66891|8502    |000002;  
+	sta.b $02                   ;C66891|8502    |000002;  
 	lda.b #$00                           ;C66893|A900    |      ;  
 	sta.b $03                            ;C66895|8503    |000003;  
 	phb                                  ;C66897|8B      |      ;  
@@ -8552,7 +8552,7 @@ CODE_C66759:
 	plb                                  ;C668A8|AB      |      ;  
 	sep #$20                             ;C668A9|E220    |      ;  
 	lda.b #$00                           ;C668AB|A900    |      ;  
-	sta.b rUnkPtrLo_02                   ;C668AD|8502    |000002;  
+	sta.b $02                   ;C668AD|8502    |000002;  
 	rep #$20                             ;C668AF|C220    |      ;  
 	lda.w #$0518                         ;C668B1|A91805  |      ;  
 	sta.b $00                            ;C668B4|8500    |000000;  
@@ -8565,7 +8565,7 @@ CODE_C66759:
 	sta.b $00                            ;C668C5|8500    |000000;  
 	sep #$20                             ;C668C7|E220    |      ;  
 	lda.b #$04                           ;C668C9|A904    |      ;  
-	sta.b rUnkPtrLo_02                   ;C668CB|8502    |000002;  
+	sta.b $02                   ;C668CB|8502    |000002;  
 	lda.b #$00                           ;C668CD|A900    |      ;  
 	sta.b $03                            ;C668CF|8503    |000003;  
 	phb                                  ;C668D1|8B      |      ;  
@@ -8604,7 +8604,7 @@ CODE_C66904:
 
 CODE_C66917:
 	lda.b #$00                           ;C66917|A900    |      ;  
-	sta.b rUnkPtrLo_02                   ;C66919|8502    |000002;  
+	sta.b $02                   ;C66919|8502    |000002;  
 	lda.l $7ED638                        ;C6691B|AF38D67E|7ED638;  
 	beq CODE_C66963                      ;C6691F|F042    |C66963;  
 	db $30,$07,$C2,$20,$A9,$1A,$05,$80   ;C66921|        |C6692A;  
@@ -8634,7 +8634,7 @@ CODE_C6698D:
 	sta.b $00                            ;C66996|8500    |000000;  
 	sep #$20                             ;C66998|E220    |      ;  
 	lda.b #$17                           ;C6699A|A917    |      ;  
-	sta.b rUnkPtrLo_02                   ;C6699C|8502    |000002;  
+	sta.b $02                   ;C6699C|8502    |000002;  
 	lda.b #$00                           ;C6699E|A900    |      ;  
 	sta.b $03                            ;C669A0|8503    |000003;  
 	rep #$20                             ;C669A2|C220    |      ;  
@@ -8662,7 +8662,7 @@ CODE_C669D0:
 	plb                                  ;C669D5|AB      |      ;  
 	sep #$20                             ;C669D6|E220    |      ;  
 	lda.b #$00                           ;C669D8|A900    |      ;  
-	sta.b rUnkPtrLo_02                   ;C669DA|8502    |000002;  
+	sta.b $02                   ;C669DA|8502    |000002;  
 	rep #$20                             ;C669DC|C220    |      ;  
 	lda.w #$0519                         ;C669DE|A91905  |      ;  
 	sta.b $00                            ;C669E1|8500    |000000;  
@@ -8675,7 +8675,7 @@ CODE_C669D0:
 	sta.b $00                            ;C669F2|8500    |000000;  
 	sep #$20                             ;C669F4|E220    |      ;  
 	lda.b #$04                           ;C669F6|A904    |      ;  
-	sta.b rUnkPtrLo_02                   ;C669F8|8502    |000002;  
+	sta.b $02                   ;C669F8|8502    |000002;  
 	lda.b #$00                           ;C669FA|A900    |      ;  
 	sta.b $03                            ;C669FC|8503    |000003;  
 	phb                                  ;C669FE|8B      |      ;  
@@ -8714,7 +8714,7 @@ CODE_C66A31:
 
 CODE_C66A44:
 	lda.b #$00                           ;C66A44|A900    |      ;  
-	sta.b rUnkPtrLo_02                   ;C66A46|8502    |000002;  
+	sta.b $02                   ;C66A46|8502    |000002;  
 	lda.l $7ED63D                        ;C66A48|AF3DD67E|7ED63D;  
 	beq CODE_C66A92                      ;C66A4C|F044    |C66A92;  
 	db $30,$07,$C2,$20,$A9,$1A,$05,$80   ;C66A4E|        |C66A57;  
@@ -8745,7 +8745,7 @@ CODE_C66ABC:
 	sta.b $00                            ;C66AC7|8500    |000000;  
 	sep #$20                             ;C66AC9|E220    |      ;  
 	lda.b #$17                           ;C66ACB|A917    |      ;  
-	sta.b rUnkPtrLo_02                   ;C66ACD|8502    |000002;  
+	sta.b $02                   ;C66ACD|8502    |000002;  
 	lda.b #$00                           ;C66ACF|A900    |      ;  
 	rep #$20                             ;C66AD1|C220    |      ;  
 	lda.l $7ED63F                        ;C66AD3|AF3FD67E|7ED63F;  
@@ -8771,7 +8771,7 @@ CODE_C66AFD:
 	lda.w #$EF86                         ;C66AFF|A986EF  |      ;  
 	sta.b $00                            ;C66B02|8500    |000000;  
 	lda.w #$3800                         ;C66B04|A90038  |      ;  
-	sta.b rUnkPtrLo_02                   ;C66B07|8502    |000002;  
+	sta.b $02                   ;C66B07|8502    |000002;  
 	phb                                  ;C66B09|8B      |      ;  
 	jsl.l CODE_C66C21                    ;C66B0A|22216CC6|C66C21;  
 	plb                                  ;C66B0E|AB      |      ;  
@@ -8792,11 +8792,11 @@ CODE_C66B21:
 	sta.b $00                            ;C66B27|8500    |000000;  
 	sep #$20                             ;C66B29|E220    |      ;  
 	lda.b #$C6                           ;C66B2B|A9C6    |      ;  
-	sta.b rUnkPtrLo_02                   ;C66B2D|8502    |000002;  
+	sta.b $02                   ;C66B2D|8502    |000002;  
 	lda.b #$00                           ;C66B2F|A900    |      ;  
 	sta.b $03                            ;C66B31|8503    |000003;  
 	lda.b #$00                           ;C66B33|A900    |      ;  
-	sta.b rUnkPtrHi_02                   ;C66B35|8504    |000004;  
+	sta.b $04                   ;C66B35|8504    |000004;  
 	lda.b #$01                           ;C66B37|A901    |      ;  
 	sta.b $05                            ;C66B39|8505    |000005;  
 	rep #$20                             ;C66B3B|C220    |      ;  
@@ -8813,13 +8813,13 @@ CODE_C66B48:
 	lda.b $00                            ;C66B4D|A500    |000000;  
 	asl a                                ;C66B4F|0A      |      ;  
 	tax                                  ;C66B50|AA      |      ;  
-	lda.b rUnkPtrLo_02                   ;C66B51|A502    |000002;  
+	lda.b $02                   ;C66B51|A502    |000002;  
 	and.w #$00FF                         ;C66B53|29FF00  |      ;  
 	tay                                  ;C66B56|A8      |      ;  
 	clc                                  ;C66B57|18      |      ;  
 	adc.l $7ED674                        ;C66B58|6F74D67E|7ED674;  
 	sta.l $7ED674                        ;C66B5C|8F74D67E|7ED674;  
-	lda.b rUnkPtrLo_02                   ;C66B60|A502    |000002;  
+	lda.b $02                   ;C66B60|A502    |000002;  
 	and.w #$FF00                         ;C66B62|2900FF  |      ;  
 	asl a                                ;C66B65|0A      |      ;  
 	asl a                                ;C66B66|0A      |      ;  
@@ -8916,7 +8916,7 @@ CODE_C66C21:
 	lda.b #$80                           ;C66C43|A980    |      ;  
 	sta.l $7ED688                        ;C66C45|8F88D67E|7ED688;  
 	rep #$20                             ;C66C49|C220    |      ;  
-	lda.b rUnkPtrLo_02                   ;C66C4B|A502    |000002;  
+	lda.b $02                   ;C66C4B|A502    |000002;  
 	sta.l $7ED683                        ;C66C4D|8F83D67E|7ED683;  
 	sep #$20                             ;C66C51|E220    |      ;  
 	lda.b #$7E                           ;C66C53|A97E    |      ;  
@@ -8976,24 +8976,24 @@ CODE_C66CBA:
 	sep #$10                             ;C66CBD|E210    |      ;  
 	lda.b $00                            ;C66CBF|A500    |000000;  
 	sta.l $7ED65D                        ;C66CC1|8F5DD67E|7ED65D;  
-	lda.b rUnkPtrHi_02                   ;C66CC5|A504    |000004;  
+	lda.b $04                   ;C66CC5|A504    |000004;  
 	sta.l $7ED660                        ;C66CC7|8F60D67E|7ED660;  
 	sep #$20                             ;C66CCB|E220    |      ;  
 	lda.b $06                            ;C66CCD|A506    |000006;  
 	sta.l $7ED662                        ;C66CCF|8F62D67E|7ED662;  
-	lda.b rUnkPtrLo_02                   ;C66CD3|A502    |000002;  
+	lda.b $02                   ;C66CD3|A502    |000002;  
 	sta.l $7ED663                        ;C66CD5|8F63D67E|7ED663;  
 	cmp.b #$01                           ;C66CD9|C901    |      ;  
 	beq CODE_C66CE1                      ;C66CDB|F004    |C66CE1;  
 	jml.l CODE_C66D6B                    ;C66CDD|5C6B6DC6|C66D6B;  
 
 CODE_C66CE1:
-	lda.b rUnkPtrHi_02                   ;C66CE1|A504    |000004;  
+	lda.b $04                   ;C66CE1|A504    |000004;  
 	sta.b $00                            ;C66CE3|8500    |000000;  
 	lda.b $05                            ;C66CE5|A505    |000005;  
 	sta.b $01                            ;C66CE7|8501    |000001;  
 	lda.b $06                            ;C66CE9|A506    |000006;  
-	sta.b rUnkPtrLo_02                   ;C66CEB|8502    |000002;  
+	sta.b $02                   ;C66CEB|8502    |000002;  
 	lda.b $03                            ;C66CED|A503    |000003;  
 	pha                                  ;C66CEF|48      |      ;  
 	lda.b $07                            ;C66CF0|A507    |000007;  
@@ -9006,18 +9006,18 @@ CODE_C66CE1:
 	plb                                  ;C66CFE|AB      |      ;  
 	rep #$20                             ;C66CFF|C220    |      ;  
 	lda.w #$D668                         ;C66D01|A968D6  |      ;  
-	sta.b rUnkPtrHi_02                   ;C66D04|8504    |000004;  
-	lda.b rUnkPtrHi_02                   ;C66D06|A504    |000004;  
+	sta.b $04                   ;C66D04|8504    |000004;  
+	lda.b $04                   ;C66D06|A504    |000004;  
 	pha                                  ;C66D08|48      |      ;  
 	jsl.l CODE_C67F1F                    ;C66D09|221F7FC6|C67F1F;  
 	pla                                  ;C66D0D|68      |      ;  
-	sta.b rUnkPtrHi_02                   ;C66D0E|8504    |000004;  
+	sta.b $04                   ;C66D0E|8504    |000004;  
 	ldy.b #$00                           ;C66D10|A000    |      ;  
 
 CODE_C66D12:
 	rep #$20                             ;C66D12|C220    |      ;  
 	lda.w #$D668                         ;C66D14|A968D6  |      ;  
-	sta.b rUnkPtrHi_02                   ;C66D17|8504    |000004;  
+	sta.b $04                   ;C66D17|8504    |000004;  
 	sep #$20                             ;C66D19|E220    |      ;  
 	lda.b #$7E                           ;C66D1B|A97E    |      ;  
 	pha                                  ;C66D1D|48      |      ;  
@@ -9029,8 +9029,8 @@ CODE_C66D12:
 	plb                                  ;C66D26|AB      |      ;  
 	rep #$20                             ;C66D27|C220    |      ;  
 	lda.w #$EB86                         ;C66D29|A986EB  |      ;  
-	sta.b rUnkPtrLo_02                   ;C66D2C|8502    |000002;  
-	lda.b rUnkPtrLo_02                   ;C66D2E|A502    |000002;  
+	sta.b $02                   ;C66D2C|8502    |000002;  
+	lda.b $02                   ;C66D2E|A502    |000002;  
 	pha                                  ;C66D30|48      |      ;  
 	phy                                  ;C66D31|5A      |      ;  
 	phb                                  ;C66D32|8B      |      ;  
@@ -9038,8 +9038,8 @@ CODE_C66D12:
 	plb                                  ;C66D37|AB      |      ;  
 	ply                                  ;C66D38|7A      |      ;  
 	pla                                  ;C66D39|68      |      ;  
-	sta.b rUnkPtrLo_02                   ;C66D3A|8502    |000002;  
-	lda.b rUnkPtrLo_02                   ;C66D3C|A502    |000002;  
+	sta.b $02                   ;C66D3A|8502    |000002;  
+	lda.b $02                   ;C66D3C|A502    |000002;  
 	pha                                  ;C66D3E|48      |      ;  
 	phy                                  ;C66D3F|5A      |      ;  
 	phb                                  ;C66D40|8B      |      ;  
@@ -9047,7 +9047,7 @@ CODE_C66D12:
 	plb                                  ;C66D45|AB      |      ;  
 	ply                                  ;C66D46|7A      |      ;  
 	pla                                  ;C66D47|68      |      ;  
-	sta.b rUnkPtrLo_02                   ;C66D48|8502    |000002;  
+	sta.b $02                   ;C66D48|8502    |000002;  
 	iny                                  ;C66D4A|C8      |      ;  
 	sep #$20                             ;C66D4B|E220    |      ;  
 	tya                                  ;C66D4D|98      |      ;  
@@ -9057,7 +9057,7 @@ CODE_C66D12:
 	sta.b $00                            ;C66D56|8500    |000000;  
 	rep #$20                             ;C66D58|C220    |      ;  
 	lda.w #$EB86                         ;C66D5A|A986EB  |      ;  
-	sta.b rUnkPtrLo_02                   ;C66D5D|8502    |000002;  
+	sta.b $02                   ;C66D5D|8502    |000002;  
 	phb                                  ;C66D5F|8B      |      ;  
 	jsl.l CODE_C677C4                    ;C66D60|22C477C6|C677C4;  
 	plb                                  ;C66D64|AB      |      ;  
@@ -9074,10 +9074,10 @@ CODE_C66D6B:
 	cmp.b #$02                           ;C66D79|C902    |      ;  
 	bne CODE_C66D8B                      ;C66D7B|D00E    |C66D8B;  
 	lda.l $7ED662                        ;C66D7D|AF62D67E|7ED662;  
-	sta.b rUnkPtrHi_02                   ;C66D81|8504    |000004;  
+	sta.b $04                   ;C66D81|8504    |000004;  
 	rep #$20                             ;C66D83|C220    |      ;  
 	lda.l $7ED660                        ;C66D85|AF60D67E|7ED660;  
-	sta.b rUnkPtrLo_02                   ;C66D89|8502    |000002;  
+	sta.b $02                   ;C66D89|8502    |000002;  
 
 CODE_C66D8B:
 	phb                                  ;C66D8B|8B      |      ;  
@@ -9091,18 +9091,18 @@ CODE_C66D8B:
 CODE_C66D97:
 	rep #$20                             ;C66D97|C220    |      ;  
 	lda.w #$EB86                         ;C66D99|A986EB  |      ;  
-	sta.b rUnkPtrLo_02                   ;C66D9C|8502    |000002;  
+	sta.b $02                   ;C66D9C|8502    |000002;  
 	lda.b $06                            ;C66D9E|A506    |000006;  
 	pha                                  ;C66DA0|48      |      ;  
 	jsl.l CODE_C4BF88                    ;C66DA1|2288BFC4|C4BF88;  
 	pla                                  ;C66DA5|68      |      ;  
 	sta.b $06                            ;C66DA6|8506    |000006;  
-	lda.b rUnkPtrLo_02                   ;C66DA8|A502    |000002;  
+	lda.b $02                   ;C66DA8|A502    |000002;  
 	cmp.w #$FFFF                         ;C66DAA|C9FFFF  |      ;  
 	beq CODE_C66DC9                      ;C66DAD|F01A    |C66DC9;  
 	lda.b $00                            ;C66DAF|A500    |000000;  
 	pha                                  ;C66DB1|48      |      ;  
-	lda.b rUnkPtrLo_02                   ;C66DB2|A502    |000002;  
+	lda.b $02                   ;C66DB2|A502    |000002;  
 	pha                                  ;C66DB4|48      |      ;  
 	lda.b $06                            ;C66DB5|A506    |000006;  
 	pha                                  ;C66DB7|48      |      ;  
@@ -9112,7 +9112,7 @@ CODE_C66D97:
 	pla                                  ;C66DBE|68      |      ;  
 	sta.b $06                            ;C66DBF|8506    |000006;  
 	pla                                  ;C66DC1|68      |      ;  
-	sta.b rUnkPtrLo_02                   ;C66DC2|8502    |000002;  
+	sta.b $02                   ;C66DC2|8502    |000002;  
 	pla                                  ;C66DC4|68      |      ;  
 	sta.b $00                            ;C66DC5|8500    |000000;  
 	bra CODE_C66D97                      ;C66DC7|80CE    |C66D97;  
@@ -9130,7 +9130,7 @@ CODE_C66DCB:
 	sep #$20                             ;C66DD6|E220    |      ;  
 	lda.b #$02                           ;C66DD8|A902    |      ;  
 	sta.l $7ED64C                        ;C66DDA|8F4CD67E|7ED64C;  
-	lda.b rUnkPtrLo_02                   ;C66DDE|A502    |000002;  
+	lda.b $02                   ;C66DDE|A502    |000002;  
 	clc                                  ;C66DE0|18      |      ;  
 	adc.b #$0E                           ;C66DE1|690E    |      ;  
 	sta.b $00                            ;C66DE3|8500    |000000;  
@@ -9139,7 +9139,7 @@ CODE_C66DCB:
 	plb                                  ;C66DE8|AB      |      ;  
 	rep #$20                             ;C66DE9|C220    |      ;  
 	lda.w #$EB86                         ;C66DEB|A986EB  |      ;  
-	sta.b rUnkPtrLo_02                   ;C66DEE|8502    |000002;  
+	sta.b $02                   ;C66DEE|8502    |000002;  
 	phb                                  ;C66DF0|8B      |      ;  
 	jsl.l CODE_C677C4                    ;C66DF1|22C477C6|C677C4;  
 	plb                                  ;C66DF5|AB      |      ;  
@@ -9154,7 +9154,7 @@ CODE_C66DCB:
 	sta.b $00                            ;C66E08|8500    |000000;  
 	rep #$20                             ;C66E0A|C220    |      ;  
 	lda.w #$EB86                         ;C66E0C|A986EB  |      ;  
-	sta.b rUnkPtrLo_02                   ;C66E0F|8502    |000002;  
+	sta.b $02                   ;C66E0F|8502    |000002;  
 	phb                                  ;C66E11|8B      |      ;  
 	jsl.l CODE_C677C4                    ;C66E12|22C477C6|C677C4;  
 	plb                                  ;C66E16|AB      |      ;  
@@ -9212,7 +9212,7 @@ CODE_C66ED6:
 	pha                                  ;C66EDB|48      |      ;  
 	plb                                  ;C66EDC|AB      |      ;  
 	rep #$20                             ;C66EDD|C220    |      ;  
-	lda.b rUnkPtrHi_02                   ;C66EDF|A504    |000004;  
+	lda.b $04                   ;C66EDF|A504    |000004;  
 	and.w #$00FF                         ;C66EE1|29FF00  |      ;  
 	clc                                  ;C66EE4|18      |      ;  
 	adc.l $7ED644                        ;C66EE5|6F44D67E|7ED644;  
@@ -9262,7 +9262,7 @@ CODE_C66F89:
 	lda.l $7ED64A                        ;C66F93|AF4AD67E|7ED64A;  
 	sta.b $00                            ;C66F97|8500    |000000;  
 	sep #$20                             ;C66F99|E220    |      ;  
-	lda.b rUnkPtrHi_02                   ;C66F9B|A504    |000004;  
+	lda.b $04                   ;C66F9B|A504    |000004;  
 	sta.l $7ED64D                        ;C66F9D|8F4DD67E|7ED64D;  
 	lda.b $05                            ;C66FA1|A505    |000005;  
 	sta.l $7ED64E                        ;C66FA3|8F4ED67E|7ED64E;  
@@ -9292,7 +9292,7 @@ CODE_C66FD4:
 	ldy.b #$0F                           ;C66FD4|A00F    |      ;  
 	rep #$20                             ;C66FD6|C220    |      ;  
 	lda.l $7ED647                        ;C66FD8|AF47D67E|7ED647;  
-	sta.b rUnkPtrHi_02                   ;C66FDC|8504    |000004;  
+	sta.b $04                   ;C66FDC|8504    |000004;  
 	clc                                  ;C66FDE|18      |      ;  
 	adc.w #$0010                         ;C66FDF|691000  |      ;  
 	sta.b $06                            ;C66FE2|8506    |000006;  
@@ -9312,15 +9312,15 @@ CODE_C66FF8:
 CODE_C66FFD:
 	clc                                  ;C66FFD|18      |      ;  
 	adc.l $7ED64F                        ;C66FFE|6F4FD67E|7ED64F;  
-	adc.b rUnkPtrHi_02                   ;C67002|6504    |000004;  
-	sta.b rUnkPtrHi_02                   ;C67004|8504    |000004;  
+	adc.b $04                   ;C67002|6504    |000004;  
+	sta.b $04                   ;C67004|8504    |000004;  
 	sep #$20                             ;C67006|E220    |      ;  
 
 CODE_C67008:
 	lda.b #$00                           ;C67008|A900    |      ;  
 	sta.l $7ED653                        ;C6700A|8F53D67E|7ED653;  
 	lda.l $7ED652                        ;C6700E|AF52D67E|7ED652;  
-	sta.b rUnkPtrLo_02                   ;C67012|8502    |000002;  
+	sta.b $02                   ;C67012|8502    |000002;  
 	phy                                  ;C67014|5A      |      ;  
 	txy                                  ;C67015|9B      |      ;  
 
@@ -9333,7 +9333,7 @@ CODE_C67016:
 	lda.l $7ED653                        ;C6701F|AF53D67E|7ED653;  
 	rol a                                ;C67023|2A      |      ;  
 	sta.l $7ED653                        ;C67024|8F53D67E|7ED653;  
-	dec.b rUnkPtrLo_02                   ;C67028|C602    |000002;  
+	dec.b $02                   ;C67028|C602    |000002;  
 	bne CODE_C67016                      ;C6702A|D0EA    |C67016;  
 	ply                                  ;C6702C|7A      |      ;  
 	lda.l $7ED654                        ;C6702D|AF54D67E|7ED654;  
@@ -9431,7 +9431,7 @@ CODE_C670F1:
 	ldy.b #$0F                           ;C670F1|A00F    |      ;  
 	rep #$20                             ;C670F3|C220    |      ;  
 	lda.l $7ED647                        ;C670F5|AF47D67E|7ED647;  
-	sta.b rUnkPtrHi_02                   ;C670F9|8504    |000004;  
+	sta.b $04                   ;C670F9|8504    |000004;  
 	clc                                  ;C670FB|18      |      ;  
 	adc.w #$0010                         ;C670FC|691000  |      ;  
 	sta.b $06                            ;C670FF|8506    |000006;  
@@ -9478,15 +9478,15 @@ CODE_C6714A:
 CODE_C67154:
 	clc                                  ;C67154|18      |      ;  
 	adc.l $7ED64F                        ;C67155|6F4FD67E|7ED64F;  
-	adc.b rUnkPtrHi_02                   ;C67159|6504    |000004;  
-	sta.b rUnkPtrHi_02                   ;C6715B|8504    |000004;  
+	adc.b $04                   ;C67159|6504    |000004;  
+	sta.b $04                   ;C6715B|8504    |000004;  
 	sep #$20                             ;C6715D|E220    |      ;  
 
 CODE_C6715F:
 	phy                                  ;C6715F|5A      |      ;  
 	txy                                  ;C67160|9B      |      ;  
 	lda.b ($00),y                        ;C67161|B100    |000000;  
-	sta.b rUnkPtrLo_02                   ;C67163|8502    |000002;  
+	sta.b $02                   ;C67163|8502    |000002;  
 	ply                                  ;C67165|7A      |      ;  
 	lda.l $7ED654                        ;C67166|AF54D67E|7ED654;  
 	beq CODE_C6717D                      ;C6716A|F011    |C6717D;  
@@ -9498,7 +9498,7 @@ CODE_C6717D:
 	lda.l $7ED64C                        ;C6717D|AF4CD67E|7ED64C;  
 	and.b #$02                           ;C67181|2902    |      ;  
 	beq CODE_C6718B                      ;C67183|F006    |C6718B;  
-	lda.b rUnkPtrLo_02                   ;C67185|A502    |000002;  
+	lda.b $02                   ;C67185|A502    |000002;  
 	sta.b ($04),y                        ;C67187|9104    |000004;  
 	bra CODE_C6718E                      ;C67189|8003    |C6718E;  
 
@@ -9518,7 +9518,7 @@ CODE_C671A6:
 	lda.l $7ED64C                        ;C671A6|AF4CD67E|7ED64C;  
 	and.b #$01                           ;C671AA|2901    |      ;  
 	beq CODE_C671B4                      ;C671AC|F006    |C671B4;  
-	lda.b rUnkPtrLo_02                   ;C671AE|A502    |000002;  
+	lda.b $02                   ;C671AE|A502    |000002;  
 	sta.b ($04),y                        ;C671B0|9104    |000004;  
 	bra CODE_C671B7                      ;C671B2|8003    |C671B7;  
 
@@ -9587,7 +9587,7 @@ CODE_C6723B:
 	php                                  ;C6723B|08      |      ;  
 	sep #$20                             ;C6723C|E220    |      ;  
 	rep #$10                             ;C6723E|C210    |      ;  
-	lda.b rUnkPtrLo_02                   ;C67240|A502    |000002;  
+	lda.b $02                   ;C67240|A502    |000002;  
 	pha                                  ;C67242|48      |      ;  
 	plb                                  ;C67243|AB      |      ;  
 	rep #$20                             ;C67244|C220    |      ;  
@@ -9622,7 +9622,7 @@ CODE_C6727D:
 	lda.b #$00                           ;C6728E|A900    |      ;  
 	sta.l $7ED651                        ;C67290|8F51D67E|7ED651;  
 	lda.b #$7E                           ;C67294|A97E    |      ;  
-	lda.b rUnkPtrHi_02                   ;C67296|A504    |000004;  
+	lda.b $04                   ;C67296|A504    |000004;  
 	rep #$20                             ;C67298|C220    |      ;  
 	and.w #$00FF                         ;C6729A|29FF00  |      ;  
 	asl a                                ;C6729D|0A      |      ;  
@@ -9650,10 +9650,10 @@ CODE_C672AF:
 	asl a                                ;C672D1|0A      |      ;  
 	sta.b $00                            ;C672D2|8500    |000000;  
 	lda.l $7ED647                        ;C672D4|AF47D67E|7ED647;  
-	sta.b rUnkPtrLo_02                   ;C672D8|8502    |000002;  
+	sta.b $02                   ;C672D8|8502    |000002;  
 	sep #$20                             ;C672DA|E220    |      ;  
 	lda.l $7ED646                        ;C672DC|AF46D67E|7ED646;  
-	sta.b rUnkPtrHi_02                   ;C672E0|8504    |000004;  
+	sta.b $04                   ;C672E0|8504    |000004;  
 	rep #$20                             ;C672E2|C220    |      ;  
 	lda.w #$0000                         ;C672E4|A90000  |      ;  
 	ldy.w #$0000                         ;C672E7|A00000  |      ;  
@@ -9674,9 +9674,9 @@ CODE_C672FB:
 	rep #$20                             ;C672FC|C220    |      ;  
 	sep #$10                             ;C672FE|E210    |      ;  
 	lda.b $00                            ;C67300|A500    |000000;  
-	sta.b rUnkPtrHi_02                   ;C67302|8504    |000004;  
+	sta.b $04                   ;C67302|8504    |000004;  
 	sep #$20                             ;C67304|E220    |      ;  
-	lda.b rUnkPtrLo_02                   ;C67306|A502    |000002;  
+	lda.b $02                   ;C67306|A502    |000002;  
 	asl a                                ;C67308|0A      |      ;  
 	tax                                  ;C67309|AA      |      ;  
 	rep #$20                             ;C6730A|C220    |      ;  
@@ -9684,7 +9684,7 @@ CODE_C672FB:
 	sta.b $00                            ;C67310|8500    |000000;  
 	sep #$20                             ;C67312|E220    |      ;  
 	lda.b #$00                           ;C67314|A900    |      ;  
-	sta.b rUnkPtrLo_02                   ;C67316|8502    |000002;  
+	sta.b $02                   ;C67316|8502    |000002;  
 	sta.b $03                            ;C67318|8503    |000003;  
 	rep #$20                             ;C6731A|C220    |      ;  
 	jsl.l CODE_C46D0F                    ;C6731C|220F6DC4|C46D0F;  
@@ -9702,7 +9702,7 @@ CODE_C6732E:
 	php                                  ;C6732E|08      |      ;  
 	rep #$20                             ;C6732F|C220    |      ;  
 	lda.b $00                            ;C67331|A500    |000000;  
-	sta.b rUnkPtrHi_02                   ;C67333|8504    |000004;  
+	sta.b $04                   ;C67333|8504    |000004;  
 	sep #$20                             ;C67335|E220    |      ;  
 	lda.b #$00                           ;C67337|A900    |      ;  
 	sta.b $03                            ;C67339|8503    |000003;  
@@ -9712,7 +9712,7 @@ CODE_C6732E:
 	sta.b $00                            ;C67344|8500    |000000;  
 	sep #$20                             ;C67346|E220    |      ;  
 	lda.b #$00                           ;C67348|A900    |      ;  
-	sta.b rUnkPtrLo_02                   ;C6734A|8502    |000002;  
+	sta.b $02                   ;C6734A|8502    |000002;  
 	jsl.l CODE_C48339                    ;C6734C|223983C4|C48339;  
 	jsl.l CODE_C483DC                    ;C67350|22DC83C4|C483DC;  
 	jsl.l func_8085B1                    ;C67354|22B18580|8085B1;  
@@ -9736,8 +9736,8 @@ CODE_C6735E:
 	asl a                                ;C67370|0A      |      ;  
 	clc                                  ;C67371|18      |      ;  
 	adc.b $00                            ;C67372|6500    |000000;  
-	sta.b rUnkPtrHi_02                   ;C67374|8504    |000004;  
-	lda.b rUnkPtrLo_02                   ;C67376|A502    |000002;  
+	sta.b $04                   ;C67374|8504    |000004;  
+	lda.b $02                   ;C67376|A502    |000002;  
 	and.w #$00FF                         ;C67378|29FF00  |      ;  
 	tay                                  ;C6737B|A8      |      ;  
 	dey                                  ;C6737C|88      |      ;  
@@ -9747,12 +9747,12 @@ CODE_C6735E:
 	inx                                  ;C67385|E8      |      ;  
 	inx                                  ;C67386|E8      |      ;  
 	phx                                  ;C67387|DA      |      ;  
-	ldx.b rUnkPtrHi_02                   ;C67388|A604    |000004;  
+	ldx.b $04                   ;C67388|A604    |000004;  
 	lda.w #$23C2                         ;C6738A|A9C223  |      ;  
 	sta.l $7FEF86,x                      ;C6738D|9F86EF7F|7FEF86;  
 	inx                                  ;C67391|E8      |      ;  
 	inx                                  ;C67392|E8      |      ;  
-	stx.b rUnkPtrHi_02                   ;C67393|8604    |000004;  
+	stx.b $04                   ;C67393|8604    |000004;  
 	plx                                  ;C67395|FA      |      ;  
 
 CODE_C67396:
@@ -9761,37 +9761,37 @@ CODE_C67396:
 	inx                                  ;C6739D|E8      |      ;  
 	inx                                  ;C6739E|E8      |      ;  
 	phx                                  ;C6739F|DA      |      ;  
-	ldx.b rUnkPtrHi_02                   ;C673A0|A604    |000004;  
+	ldx.b $04                   ;C673A0|A604    |000004;  
 	lda.w #$23C4                         ;C673A2|A9C423  |      ;  
 	sta.l $7FEF86,x                      ;C673A5|9F86EF7F|7FEF86;  
 	inx                                  ;C673A9|E8      |      ;  
 	inx                                  ;C673AA|E8      |      ;  
-	stx.b rUnkPtrHi_02                   ;C673AB|8604    |000004;  
+	stx.b $04                   ;C673AB|8604    |000004;  
 	plx                                  ;C673AD|FA      |      ;  
 	dey                                  ;C673AE|88      |      ;  
 	bne CODE_C67396                      ;C673AF|D0E5    |C67396;  
 	lda.w #$23C5                         ;C673B1|A9C523  |      ;  
 	sta.l $7FEF86,x                      ;C673B4|9F86EF7F|7FEF86;  
 	phx                                  ;C673B8|DA      |      ;  
-	ldx.b rUnkPtrHi_02                   ;C673B9|A604    |000004;  
+	ldx.b $04                   ;C673B9|A604    |000004;  
 	lda.w #$23C6                         ;C673BB|A9C623  |      ;  
 	sta.l $7FEF86,x                      ;C673BE|9F86EF7F|7FEF86;  
 	inx                                  ;C673C2|E8      |      ;  
 	inx                                  ;C673C3|E8      |      ;  
-	stx.b rUnkPtrHi_02                   ;C673C4|8604    |000004;  
+	stx.b $04                   ;C673C4|8604    |000004;  
 	plx                                  ;C673C6|FA      |      ;  
 	lda.b $00                            ;C673C7|A500    |000000;  
 	clc                                  ;C673C9|18      |      ;  
 	adc.w #$0040                         ;C673CA|694000  |      ;  
 	sta.b $00                            ;C673CD|8500    |000000;  
 	tax                                  ;C673CF|AA      |      ;  
-	lda.b rUnkPtrLo_02                   ;C673D0|A502    |000002;  
+	lda.b $02                   ;C673D0|A502    |000002;  
 	and.w #$00FF                         ;C673D2|29FF00  |      ;  
 	dec a                                ;C673D5|3A      |      ;  
 	asl a                                ;C673D6|0A      |      ;  
 	clc                                  ;C673D7|18      |      ;  
 	adc.b $00                            ;C673D8|6500    |000000;  
-	sta.b rUnkPtrHi_02                   ;C673DA|8504    |000004;  
+	sta.b $04                   ;C673DA|8504    |000004;  
 	lda.b $03                            ;C673DC|A503    |000003;  
 	and.w #$00FF                         ;C673DE|29FF00  |      ;  
 	tay                                  ;C673E1|A8      |      ;  
@@ -9805,13 +9805,13 @@ CODE_C673E4:
 	clc                                  ;C673EC|18      |      ;  
 	adc.w #$0040                         ;C673ED|694000  |      ;  
 	pha                                  ;C673F0|48      |      ;  
-	ldx.b rUnkPtrHi_02                   ;C673F1|A604    |000004;  
+	ldx.b $04                   ;C673F1|A604    |000004;  
 	lda.w #$23C8                         ;C673F3|A9C823  |      ;  
 	sta.l $7FEF86,x                      ;C673F6|9F86EF7F|7FEF86;  
 	txa                                  ;C673FA|8A      |      ;  
 	clc                                  ;C673FB|18      |      ;  
 	adc.w #$0040                         ;C673FC|694000  |      ;  
-	sta.b rUnkPtrHi_02                   ;C673FF|8504    |000004;  
+	sta.b $04                   ;C673FF|8504    |000004;  
 	plx                                  ;C67401|FA      |      ;  
 	dey                                  ;C67402|88      |      ;  
 	bne CODE_C673E4                      ;C67403|D0DF    |C673E4;  
@@ -9852,7 +9852,7 @@ CODE_C674B0:
 CODE_C674BF:
 	rep #$20                             ;C674BF|C220    |      ;  
 	ldx.b $00                            ;C674C1|A600    |000000;  
-	lda.b rUnkPtrLo_02                   ;C674C3|A502    |000002;  
+	lda.b $02                   ;C674C3|A502    |000002;  
 	and.w #$00FF                         ;C674C5|29FF00  |      ;  
 	asl a                                ;C674C8|0A      |      ;  
 	tay                                  ;C674C9|A8      |      ;  
@@ -9884,26 +9884,26 @@ CODE_C674CA:
 	sta.l $7FEFC6,x                      ;C674F4|9FC6EF7F|7FEFC6;  
 	lda.b $00                            ;C674F8|A500    |000000;  
 	pha                                  ;C674FA|48      |      ;  
-	lda.b rUnkPtrLo_02                   ;C674FB|A502    |000002;  
+	lda.b $02                   ;C674FB|A502    |000002;  
 	pha                                  ;C674FD|48      |      ;  
 	lda.w #$EF86                         ;C674FE|A986EF  |      ;  
 	sta.b $00                            ;C67501|8500    |000000;  
 	lda.w #$3800                         ;C67503|A90038  |      ;  
-	sta.b rUnkPtrLo_02                   ;C67506|8502    |000002;  
+	sta.b $02                   ;C67506|8502    |000002;  
 	jsl.l CODE_C66C21                    ;C67508|22216CC6|C66C21;  
 	pla                                  ;C6750C|68      |      ;  
-	sta.b rUnkPtrLo_02                   ;C6750D|8502    |000002;  
+	sta.b $02                   ;C6750D|8502    |000002;  
 	pla                                  ;C6750F|68      |      ;  
 	sta.b $00                            ;C67510|8500    |000000;  
 
 CODE_C67512:
 	lda.b $00                            ;C67512|A500    |000000;  
 	pha                                  ;C67514|48      |      ;  
-	lda.b rUnkPtrLo_02                   ;C67515|A502    |000002;  
+	lda.b $02                   ;C67515|A502    |000002;  
 	pha                                  ;C67517|48      |      ;  
 	jsl.l CODE_C6806D                    ;C67518|226D80C6|C6806D;  
 	pla                                  ;C6751C|68      |      ;  
-	sta.b rUnkPtrLo_02                   ;C6751D|8502    |000002;  
+	sta.b $02                   ;C6751D|8502    |000002;  
 	pla                                  ;C6751F|68      |      ;  
 	sta.b $00                            ;C67520|8500    |000000;  
 	lda.b $06                            ;C67522|A506    |000006;  
@@ -9917,17 +9917,17 @@ CODE_C67512:
 	db $20,$A9,$00,$00,$8F,$7D,$D6,$7E   ;C67556|        |C600A9;  
 
 CODE_C6755E:
-	lda.b rUnkPtrHi_02                   ;C6755E|A504    |000004;  
+	lda.b $04                   ;C6755E|A504    |000004;  
 	beq CODE_C67512                      ;C67560|F0B0    |C67512;  
 	rep #$20                             ;C67562|C220    |      ;  
-	lda.b rUnkPtrHi_02                   ;C67564|A504    |000004;  
+	lda.b $04                   ;C67564|A504    |000004;  
 	and.w #$0004                         ;C67566|290400  |      ;  
 	beq CODE_C67598                      ;C67569|F02D    |C67598;  
 	sep #$20                             ;C6756B|E220    |      ;  
 	lda.b $03                            ;C6756D|A503    |000003;  
 	inc a                                ;C6756F|1A      |      ;  
 	sta.b $03                            ;C67570|8503    |000003;  
-	cmp.b rUnkPtrLo_02                   ;C67572|C502    |000002;  
+	cmp.b $02                   ;C67572|C502    |000002;  
 	bmi CODE_C67578                      ;C67574|3002    |C67578;  
 	stz.b $03                            ;C67576|6403    |000003;  
 
@@ -9936,23 +9936,23 @@ CODE_C67578:
 	ldx.b $00                            ;C6757A|A600    |000000;  
 	lda.w #$0049                         ;C6757C|A94900  |      ;  
 	sta.b $00                            ;C6757F|8500    |000000;  
-	lda.b rUnkPtrLo_02                   ;C67581|A502    |000002;  
+	lda.b $02                   ;C67581|A502    |000002;  
 	pha                                  ;C67583|48      |      ;  
-	lda.b rUnkPtrHi_02                   ;C67584|A504    |000004;  
+	lda.b $04                   ;C67584|A504    |000004;  
 	pha                                  ;C67586|48      |      ;  
 	phx                                  ;C67587|DA      |      ;  
 	jsl.l func_818049                    ;C67588|22498081|818049;  
 	plx                                  ;C6758C|FA      |      ;  
 	pla                                  ;C6758D|68      |      ;  
-	sta.b rUnkPtrHi_02                   ;C6758E|8504    |000004;  
+	sta.b $04                   ;C6758E|8504    |000004;  
 	pla                                  ;C67590|68      |      ;  
-	sta.b rUnkPtrLo_02                   ;C67591|8502    |000002;  
+	sta.b $02                   ;C67591|8502    |000002;  
 	stx.b $00                            ;C67593|8600    |000000;  
 	brl CODE_C674BF                      ;C67595|8227FF  |C674BF;  
 
 CODE_C67598:
 	rep #$20                             ;C67598|C220    |      ;  
-	lda.b rUnkPtrHi_02                   ;C6759A|A504    |000004;  
+	lda.b $04                   ;C6759A|A504    |000004;  
 	and.w #$0008                         ;C6759C|290800  |      ;  
 	beq CODE_C675CF                      ;C6759F|F02E    |C675CF;  
 	sep #$20                             ;C675A1|E220    |      ;  
@@ -9967,47 +9967,47 @@ CODE_C675AF:
 	ldx.b $00                            ;C675B1|A600    |000000;  
 	lda.w #$0049                         ;C675B3|A94900  |      ;  
 	sta.b $00                            ;C675B6|8500    |000000;  
-	lda.b rUnkPtrLo_02                   ;C675B8|A502    |000002;  
+	lda.b $02                   ;C675B8|A502    |000002;  
 	pha                                  ;C675BA|48      |      ;  
-	lda.b rUnkPtrHi_02                   ;C675BB|A504    |000004;  
+	lda.b $04                   ;C675BB|A504    |000004;  
 	pha                                  ;C675BD|48      |      ;  
 	phx                                  ;C675BE|DA      |      ;  
 	jsl.l func_818049                    ;C675BF|22498081|818049;  
 	plx                                  ;C675C3|FA      |      ;  
 	pla                                  ;C675C4|68      |      ;  
-	sta.b rUnkPtrHi_02                   ;C675C5|8504    |000004;  
+	sta.b $04                   ;C675C5|8504    |000004;  
 	pla                                  ;C675C7|68      |      ;  
-	sta.b rUnkPtrLo_02                   ;C675C8|8502    |000002;  
+	sta.b $02                   ;C675C8|8502    |000002;  
 	stx.b $00                            ;C675CA|8600    |000000;  
 	brl CODE_C674BF                      ;C675CC|82F0FE  |C674BF;  
 
 CODE_C675CF:
 	rep #$20                             ;C675CF|C220    |      ;  
-	lda.b rUnkPtrHi_02                   ;C675D1|A504    |000004;  
+	lda.b $04                   ;C675D1|A504    |000004;  
 	and.w #$0002                         ;C675D3|290200  |      ;  
 	beq CODE_C675E0                      ;C675D6|F008    |C675E0;  
 	sep #$20                             ;C675D8|E220    |      ;  
 	lda.b #$02                           ;C675DA|A902    |      ;  
-	sta.b rUnkPtrLo_02                   ;C675DC|8502    |000002;  
+	sta.b $02                   ;C675DC|8502    |000002;  
 	bra CODE_C67610                      ;C675DE|8030    |C67610;  
 
 CODE_C675E0:
 	rep #$20                             ;C675E0|C220    |      ;  
-	lda.b rUnkPtrHi_02                   ;C675E2|A504    |000004;  
+	lda.b $04                   ;C675E2|A504    |000004;  
 	and.w #$0001                         ;C675E4|290100  |      ;  
 	beq CODE_C675F1                      ;C675E7|F008    |C675F1;  
 	sep #$20                             ;C675E9|E220    |      ;  
 	lda.b #$01                           ;C675EB|A901    |      ;  
-	sta.b rUnkPtrLo_02                   ;C675ED|8502    |000002;  
+	sta.b $02                   ;C675ED|8502    |000002;  
 	bra CODE_C67610                      ;C675EF|801F    |C67610;  
 
 CODE_C675F1:
 	rep #$20                             ;C675F1|C220    |      ;  
-	lda.b rUnkPtrHi_02                   ;C675F3|A504    |000004;  
+	lda.b $04                   ;C675F3|A504    |000004;  
 	and.w #$8080                         ;C675F5|298080  |      ;  
 	bne CODE_C6760C                      ;C675F8|D012    |C6760C;  
 	rep #$20                             ;C675FA|C220    |      ;  
-	lda.b rUnkPtrHi_02                   ;C675FC|A504    |000004;  
+	lda.b $04                   ;C675FC|A504    |000004;  
 	and.w #$4040                         ;C675FE|294040  |      ;  
 	bne CODE_C67606                      ;C67601|D003    |C67606;  
 	brl CODE_C674BF                      ;C67603|82B9FE  |C674BF;  
@@ -10019,10 +10019,10 @@ CODE_C67606:
 
 CODE_C6760C:
 	sep #$20                             ;C6760C|E220    |      ;  
-	stz.b rUnkPtrLo_02                   ;C6760E|6402    |000002;  
+	stz.b $02                   ;C6760E|6402    |000002;  
 
 CODE_C67610:
-	stz.b rUnkPtrHi_02                   ;C67610|6404    |000004;  
+	stz.b $04                   ;C67610|6404    |000004;  
 	plp                                  ;C67612|28      |      ;  
 	rtl                                  ;C67613|6B      |      ;  
 	db $08,$00,$04,$00,$02,$00,$01,$00   ;C67614|        |      ;  
@@ -10050,45 +10050,45 @@ CODE_C67696:
 CODE_C67699:
 	jsl.l CODE_C6806D                    ;C67699|226D80C6|C6806D;  
 	rep #$20                             ;C6769D|C220    |      ;  
-	lda.b rUnkPtrHi_02                   ;C6769F|A504    |000004;  
+	lda.b $04                   ;C6769F|A504    |000004;  
 	and.w #$0004                         ;C676A1|290400  |      ;  
 	beq CODE_C676AE                      ;C676A4|F008    |C676AE;  
 	sep #$20                             ;C676A6|E220    |      ;  
 	lda.b #$01                           ;C676A8|A901    |      ;  
-	sta.b rUnkPtrLo_02                   ;C676AA|8502    |000002;  
+	sta.b $02                   ;C676AA|8502    |000002;  
 	bra CODE_C67700                      ;C676AC|8052    |C67700;  
 
 CODE_C676AE:
 	rep #$20                             ;C676AE|C220    |      ;  
-	lda.b rUnkPtrHi_02                   ;C676B0|A504    |000004;  
+	lda.b $04                   ;C676B0|A504    |000004;  
 	and.w #$0008                         ;C676B2|290800  |      ;  
 	beq CODE_C676BF                      ;C676B5|F008    |C676BF;  
 	db $E2,$20,$A9,$02,$85,$02,$80,$41   ;C676B7|        |      ;  
 
 CODE_C676BF:
 	rep #$20                             ;C676BF|C220    |      ;  
-	lda.b rUnkPtrHi_02                   ;C676C1|A504    |000004;  
+	lda.b $04                   ;C676C1|A504    |000004;  
 	and.w #$0002                         ;C676C3|290200  |      ;  
 	beq CODE_C676D0                      ;C676C6|F008    |C676D0;  
 	db $E2,$20,$A9,$02,$85,$02,$80,$30   ;C676C8|        |      ;  
 
 CODE_C676D0:
 	rep #$20                             ;C676D0|C220    |      ;  
-	lda.b rUnkPtrHi_02                   ;C676D2|A504    |000004;  
+	lda.b $04                   ;C676D2|A504    |000004;  
 	and.w #$0001                         ;C676D4|290100  |      ;  
 	beq CODE_C676E1                      ;C676D7|F008    |C676E1;  
 	sep #$20                             ;C676D9|E220    |      ;  
 	lda.b #$01                           ;C676DB|A901    |      ;  
-	sta.b rUnkPtrLo_02                   ;C676DD|8502    |000002;  
+	sta.b $02                   ;C676DD|8502    |000002;  
 	bra CODE_C67700                      ;C676DF|801F    |C67700;  
 
 CODE_C676E1:
 	rep #$20                             ;C676E1|C220    |      ;  
-	lda.b rUnkPtrHi_02                   ;C676E3|A504    |000004;  
+	lda.b $04                   ;C676E3|A504    |000004;  
 	and.w #$8080                         ;C676E5|298080  |      ;  
 	bne CODE_C676FC                      ;C676E8|D012    |C676FC;  
 	rep #$20                             ;C676EA|C220    |      ;  
-	lda.b rUnkPtrHi_02                   ;C676EC|A504    |000004;  
+	lda.b $04                   ;C676EC|A504    |000004;  
 	and.w #$4040                         ;C676EE|294040  |      ;  
 	bne UNREACH_C676F6                   ;C676F1|D003    |C676F6;  
 	brl CODE_C67699                      ;C676F3|82A3FF  |C67699;  
@@ -10098,10 +10098,10 @@ UNREACH_C676F6:
 
 CODE_C676FC:
 	sep #$20                             ;C676FC|E220    |      ;  
-	stz.b rUnkPtrLo_02                   ;C676FE|6402    |000002;  
+	stz.b $02                   ;C676FE|6402    |000002;  
 
 CODE_C67700:
-	stz.b rUnkPtrHi_02                   ;C67700|6404    |000004;  
+	stz.b $04                   ;C67700|6404    |000004;  
 	plp                                  ;C67702|28      |      ;  
 	rtl                                  ;C67703|6B      |      ;  
 
@@ -10137,10 +10137,10 @@ CODE_C6770C:
 	lda.b #$00                           ;C6774B|A900    |      ;  
 	sta.b $01                            ;C6774D|8501    |000001;  
 	lda.b #$7F                           ;C6774F|A97F    |      ;  
-	sta.b rUnkPtrHi_02                   ;C67751|8504    |000004;  
+	sta.b $04                   ;C67751|8504    |000004;  
 	rep #$20                             ;C67753|C220    |      ;  
 	lda.w #$DF86                         ;C67755|A986DF  |      ;  
-	sta.b rUnkPtrLo_02                   ;C67758|8502    |000002;  
+	sta.b $02                   ;C67758|8502    |000002;  
 	jsl.l func_80886F                    ;C6775A|226F8880|80886F;  
 	jsl.l func_8085B1                    ;C6775E|22B18580|8085B1;  
 	plp                                  ;C67762|28      |      ;  
@@ -10178,10 +10178,10 @@ CODE_C6776C:
 	lda.b #$00                           ;C677AB|A900    |      ;  
 	sta.b $01                            ;C677AD|8501    |000001;  
 	lda.b #$7F                           ;C677AF|A97F    |      ;  
-	sta.b rUnkPtrHi_02                   ;C677B1|8504    |000004;  
+	sta.b $04                   ;C677B1|8504    |000004;  
 	rep #$20                             ;C677B3|C220    |      ;  
 	lda.w #$DF86                         ;C677B5|A986DF  |      ;  
-	sta.b rUnkPtrLo_02                   ;C677B8|8502    |000002;  
+	sta.b $02                   ;C677B8|8502    |000002;  
 	jsl.l func_80886F                    ;C677BA|226F8880|80886F;  
 	jsl.l func_8085B1                    ;C677BE|22B18580|8085B1;  
 	plp                                  ;C677C2|28      |      ;  
@@ -10192,7 +10192,7 @@ CODE_C677C4:
 	rep #$20                             ;C677C5|C220    |      ;  
 	sep #$10                             ;C677C7|E210    |      ;  
 	lda.w #$A06E                         ;C677C9|A96EA0  |      ;  
-	sta.b rUnkPtrHi_02                   ;C677CC|8504    |000004;  
+	sta.b $04                   ;C677CC|8504    |000004;  
 	sep #$20                             ;C677CE|E220    |      ;  
 	lda.b #$D9                           ;C677D0|A9D9    |      ;  
 	sta.b $06                            ;C677D2|8506    |000006;  
@@ -10209,11 +10209,11 @@ CODE_C677DA:
 	rep #$20                             ;C677E1|C220    |      ;  
 	lda.b [$04],y                        ;C677E3|B704    |000004;  
 	inc a                                ;C677E5|1A      |      ;  
-	sta.b rUnkPtrHi_02                   ;C677E6|8504    |000004;  
+	sta.b $04                   ;C677E6|8504    |000004;  
 	lda.b [$04]                          ;C677E8|A704    |000004;  
 	sta.b $07                            ;C677EA|8507    |000007;  
 	rep #$20                             ;C677EC|C220    |      ;  
-	inc.b rUnkPtrHi_02                   ;C677EE|E604    |000004;  
+	inc.b $04                   ;C677EE|E604    |000004;  
 	ldx.b #$00                           ;C677F0|A200    |      ;  
 	ldy.b #$00                           ;C677F2|A000    |      ;  
 
@@ -10233,7 +10233,7 @@ CODE_C67801:
 	pha                                  ;C67805|48      |      ;  
 	plb                                  ;C67806|AB      |      ;  
 	rep #$20                             ;C67807|C220    |      ;  
-	lda.b rUnkPtrHi_02                   ;C67809|A504    |000004;  
+	lda.b $04                   ;C67809|A504    |000004;  
 	sta.b $00                            ;C6780B|8500    |000000;  
 	dec.b $00                            ;C6780D|C600    |000000;  
 	sep #$20                             ;C6780F|E220    |      ;  
@@ -10243,7 +10243,7 @@ CODE_C67801:
 	dec.b $00                            ;C67817|C600    |000000;  
 	sep #$20                             ;C67819|E220    |      ;  
 	lda.b ($00)                          ;C6781B|B200    |000000;  
-	sta.b rUnkPtrHi_02                   ;C6781D|8504    |000004;  
+	sta.b $04                   ;C6781D|8504    |000004;  
 	plp                                  ;C6781F|28      |      ;  
 	rtl                                  ;C67820|6B      |      ;  
 
@@ -10318,52 +10318,52 @@ CODE_C678AE:
 	ply                                  ;C678BA|7A      |      ;  
 	plx                                  ;C678BB|FA      |      ;  
 	lda.w #$EB86                         ;C678BC|A986EB  |      ;  
-	sta.b rUnkPtrLo_02                   ;C678BF|8502    |000002;  
+	sta.b $02                   ;C678BF|8502    |000002;  
 	phx                                  ;C678C1|DA      |      ;  
 	phy                                  ;C678C2|5A      |      ;  
 	jsl.l CODE_C4BF88                    ;C678C3|2288BFC4|C4BF88;  
 	ply                                  ;C678C7|7A      |      ;  
 	plx                                  ;C678C8|FA      |      ;  
-	lda.b rUnkPtrLo_02                   ;C678C9|A502    |000002;  
+	lda.b $02                   ;C678C9|A502    |000002;  
 	cmp.w #$FFFF                         ;C678CB|C9FFFF  |      ;  
 	beq CODE_C6792C                      ;C678CE|F05C    |C6792C;  
 	sep #$20                             ;C678D0|E220    |      ;  
 	sta.l $B36007,x                      ;C678D2|9F0760B3|B36007;  
 	rep #$20                             ;C678D6|C220    |      ;  
 	lda.w #$EB86                         ;C678D8|A986EB  |      ;  
-	sta.b rUnkPtrLo_02                   ;C678DB|8502    |000002;  
+	sta.b $02                   ;C678DB|8502    |000002;  
 	phx                                  ;C678DD|DA      |      ;  
 	phy                                  ;C678DE|5A      |      ;  
 	jsl.l CODE_C4BF88                    ;C678DF|2288BFC4|C4BF88;  
 	ply                                  ;C678E3|7A      |      ;  
 	plx                                  ;C678E4|FA      |      ;  
-	lda.b rUnkPtrLo_02                   ;C678E5|A502    |000002;  
+	lda.b $02                   ;C678E5|A502    |000002;  
 	cmp.w #$FFFF                         ;C678E7|C9FFFF  |      ;  
 	beq CODE_C6792C                      ;C678EA|F040    |C6792C;  
 	sep #$20                             ;C678EC|E220    |      ;  
 	sta.l $B36008,x                      ;C678EE|9F0860B3|B36008;  
 	rep #$20                             ;C678F2|C220    |      ;  
 	lda.w #$EB86                         ;C678F4|A986EB  |      ;  
-	sta.b rUnkPtrLo_02                   ;C678F7|8502    |000002;  
+	sta.b $02                   ;C678F7|8502    |000002;  
 	phx                                  ;C678F9|DA      |      ;  
 	phy                                  ;C678FA|5A      |      ;  
 	jsl.l CODE_C4BF88                    ;C678FB|2288BFC4|C4BF88;  
 	ply                                  ;C678FF|7A      |      ;  
 	plx                                  ;C67900|FA      |      ;  
-	lda.b rUnkPtrLo_02                   ;C67901|A502    |000002;  
+	lda.b $02                   ;C67901|A502    |000002;  
 	cmp.w #$FFFF                         ;C67903|C9FFFF  |      ;  
 	beq CODE_C6792C                      ;C67906|F024    |C6792C;  
 	sep #$20                             ;C67908|E220    |      ;  
 	sta.l $B36009,x                      ;C6790A|9F0960B3|B36009;  
 	rep #$20                             ;C6790E|C220    |      ;  
 	lda.w #$EB86                         ;C67910|A986EB  |      ;  
-	sta.b rUnkPtrLo_02                   ;C67913|8502    |000002;  
+	sta.b $02                   ;C67913|8502    |000002;  
 	phx                                  ;C67915|DA      |      ;  
 	phy                                  ;C67916|5A      |      ;  
 	jsl.l CODE_C4BF88                    ;C67917|2288BFC4|C4BF88;  
 	ply                                  ;C6791B|7A      |      ;  
 	plx                                  ;C6791C|FA      |      ;  
-	lda.b rUnkPtrLo_02                   ;C6791D|A502    |000002;  
+	lda.b $02                   ;C6791D|A502    |000002;  
 	cmp.w #$FFFF                         ;C6791F|C9FFFF  |      ;  
 	beq CODE_C6792C                      ;C67922|F008    |C6792C;  
 	sep #$20                             ;C67924|E220    |      ;  
@@ -10393,44 +10393,44 @@ CODE_C6793B:
 	plb                                  ;C67948|AB      |      ;  
 	plx                                  ;C67949|FA      |      ;  
 	lda.w #$EB86                         ;C6794A|A986EB  |      ;  
-	sta.b rUnkPtrLo_02                   ;C6794D|8502    |000002;  
+	sta.b $02                   ;C6794D|8502    |000002;  
 	phx                                  ;C6794F|DA      |      ;  
 	jsl.l CODE_C4BF88                    ;C67950|2288BFC4|C4BF88;  
 	plx                                  ;C67954|FA      |      ;  
-	lda.b rUnkPtrLo_02                   ;C67955|A502    |000002;  
+	lda.b $02                   ;C67955|A502    |000002;  
 	cmp.w #$FFFF                         ;C67957|C9FFFF  |      ;  
 	beq CODE_C679B2                      ;C6795A|F056    |C679B2;  
 	sep #$20                             ;C6795C|E220    |      ;  
 	sta.l $B36007,x                      ;C6795E|9F0760B3|B36007;  
 	rep #$20                             ;C67962|C220    |      ;  
 	lda.w #$EB86                         ;C67964|A986EB  |      ;  
-	sta.b rUnkPtrLo_02                   ;C67967|8502    |000002;  
+	sta.b $02                   ;C67967|8502    |000002;  
 	phx                                  ;C67969|DA      |      ;  
 	jsl.l CODE_C4BF88                    ;C6796A|2288BFC4|C4BF88;  
 	plx                                  ;C6796E|FA      |      ;  
-	lda.b rUnkPtrLo_02                   ;C6796F|A502    |000002;  
+	lda.b $02                   ;C6796F|A502    |000002;  
 	cmp.w #$FFFF                         ;C67971|C9FFFF  |      ;  
 	beq CODE_C679B2                      ;C67974|F03C    |C679B2;  
 	sep #$20                             ;C67976|E220    |      ;  
 	sta.l $B36008,x                      ;C67978|9F0860B3|B36008;  
 	rep #$20                             ;C6797C|C220    |      ;  
 	lda.w #$EB86                         ;C6797E|A986EB  |      ;  
-	sta.b rUnkPtrLo_02                   ;C67981|8502    |000002;  
+	sta.b $02                   ;C67981|8502    |000002;  
 	phx                                  ;C67983|DA      |      ;  
 	jsl.l CODE_C4BF88                    ;C67984|2288BFC4|C4BF88;  
 	plx                                  ;C67988|FA      |      ;  
-	lda.b rUnkPtrLo_02                   ;C67989|A502    |000002;  
+	lda.b $02                   ;C67989|A502    |000002;  
 	cmp.w #$FFFF                         ;C6798B|C9FFFF  |      ;  
 	beq CODE_C679B2                      ;C6798E|F022    |C679B2;  
 	sep #$20                             ;C67990|E220    |      ;  
 	sta.l $B36009,x                      ;C67992|9F0960B3|B36009;  
 	rep #$20                             ;C67996|C220    |      ;  
 	lda.w #$EB86                         ;C67998|A986EB  |      ;  
-	sta.b rUnkPtrLo_02                   ;C6799B|8502    |000002;  
+	sta.b $02                   ;C6799B|8502    |000002;  
 	phx                                  ;C6799D|DA      |      ;  
 	jsl.l CODE_C4BF88                    ;C6799E|2288BFC4|C4BF88;  
 	plx                                  ;C679A2|FA      |      ;  
-	lda.b rUnkPtrLo_02                   ;C679A3|A502    |000002;  
+	lda.b $02                   ;C679A3|A502    |000002;  
 	cmp.w #$FFFF                         ;C679A5|C9FFFF  |      ;  
 	beq CODE_C679B2                      ;C679A8|F008    |C679B2;  
 	sep #$20                             ;C679AA|E220    |      ;  
@@ -10456,52 +10456,52 @@ CODE_C679BB:
 	ply                                  ;C679C7|7A      |      ;  
 	plx                                  ;C679C8|FA      |      ;  
 	lda.w #$EB86                         ;C679C9|A986EB  |      ;  
-	sta.b rUnkPtrLo_02                   ;C679CC|8502    |000002;  
+	sta.b $02                   ;C679CC|8502    |000002;  
 	phx                                  ;C679CE|DA      |      ;  
 	phy                                  ;C679CF|5A      |      ;  
 	jsl.l CODE_C4BF88                    ;C679D0|2288BFC4|C4BF88;  
 	ply                                  ;C679D4|7A      |      ;  
 	plx                                  ;C679D5|FA      |      ;  
-	lda.b rUnkPtrLo_02                   ;C679D6|A502    |000002;  
+	lda.b $02                   ;C679D6|A502    |000002;  
 	cmp.w #$FFFF                         ;C679D8|C9FFFF  |      ;  
 	beq CODE_C67A39                      ;C679DB|F05C    |C67A39;  
 	sep #$20                             ;C679DD|E220    |      ;  
 	sta.l $B36007,x                      ;C679DF|9F0760B3|B36007;  
 	rep #$20                             ;C679E3|C220    |      ;  
 	lda.w #$EB86                         ;C679E5|A986EB  |      ;  
-	sta.b rUnkPtrLo_02                   ;C679E8|8502    |000002;  
+	sta.b $02                   ;C679E8|8502    |000002;  
 	phx                                  ;C679EA|DA      |      ;  
 	phy                                  ;C679EB|5A      |      ;  
 	jsl.l CODE_C4BF88                    ;C679EC|2288BFC4|C4BF88;  
 	ply                                  ;C679F0|7A      |      ;  
 	plx                                  ;C679F1|FA      |      ;  
-	lda.b rUnkPtrLo_02                   ;C679F2|A502    |000002;  
+	lda.b $02                   ;C679F2|A502    |000002;  
 	cmp.w #$FFFF                         ;C679F4|C9FFFF  |      ;  
 	beq CODE_C67A39                      ;C679F7|F040    |C67A39;  
 	sep #$20                             ;C679F9|E220    |      ;  
 	sta.l $B36008,x                      ;C679FB|9F0860B3|B36008;  
 	rep #$20                             ;C679FF|C220    |      ;  
 	lda.w #$EB86                         ;C67A01|A986EB  |      ;  
-	sta.b rUnkPtrLo_02                   ;C67A04|8502    |000002;  
+	sta.b $02                   ;C67A04|8502    |000002;  
 	phx                                  ;C67A06|DA      |      ;  
 	phy                                  ;C67A07|5A      |      ;  
 	jsl.l CODE_C4BF88                    ;C67A08|2288BFC4|C4BF88;  
 	ply                                  ;C67A0C|7A      |      ;  
 	plx                                  ;C67A0D|FA      |      ;  
-	lda.b rUnkPtrLo_02                   ;C67A0E|A502    |000002;  
+	lda.b $02                   ;C67A0E|A502    |000002;  
 	cmp.w #$FFFF                         ;C67A10|C9FFFF  |      ;  
 	beq CODE_C67A39                      ;C67A13|F024    |C67A39;  
 	sep #$20                             ;C67A15|E220    |      ;  
 	sta.l $B36009,x                      ;C67A17|9F0960B3|B36009;  
 	rep #$20                             ;C67A1B|C220    |      ;  
 	lda.w #$EB86                         ;C67A1D|A986EB  |      ;  
-	sta.b rUnkPtrLo_02                   ;C67A20|8502    |000002;  
+	sta.b $02                   ;C67A20|8502    |000002;  
 	phx                                  ;C67A22|DA      |      ;  
 	phy                                  ;C67A23|5A      |      ;  
 	jsl.l CODE_C4BF88                    ;C67A24|2288BFC4|C4BF88;  
 	ply                                  ;C67A28|7A      |      ;  
 	plx                                  ;C67A29|FA      |      ;  
-	lda.b rUnkPtrLo_02                   ;C67A2A|A502    |000002;  
+	lda.b $02                   ;C67A2A|A502    |000002;  
 	cmp.w #$FFFF                         ;C67A2C|C9FFFF  |      ;  
 	beq CODE_C67A39                      ;C67A2F|F008    |C67A39;  
 	sep #$20                             ;C67A31|E220    |      ;  
@@ -10531,44 +10531,44 @@ CODE_C67A48:
 	plb                                  ;C67A55|AB      |      ;  
 	plx                                  ;C67A56|FA      |      ;  
 	lda.w #$EB86                         ;C67A57|A986EB  |      ;  
-	sta.b rUnkPtrLo_02                   ;C67A5A|8502    |000002;  
+	sta.b $02                   ;C67A5A|8502    |000002;  
 	phx                                  ;C67A5C|DA      |      ;  
 	jsl.l CODE_C4BF88                    ;C67A5D|2288BFC4|C4BF88;  
 	plx                                  ;C67A61|FA      |      ;  
-	lda.b rUnkPtrLo_02                   ;C67A62|A502    |000002;  
+	lda.b $02                   ;C67A62|A502    |000002;  
 	cmp.w #$FFFF                         ;C67A64|C9FFFF  |      ;  
 	beq CODE_C67ABF                      ;C67A67|F056    |C67ABF;  
 	sep #$20                             ;C67A69|E220    |      ;  
 	sta.l $B36007,x                      ;C67A6B|9F0760B3|B36007;  
 	rep #$20                             ;C67A6F|C220    |      ;  
 	lda.w #$EB86                         ;C67A71|A986EB  |      ;  
-	sta.b rUnkPtrLo_02                   ;C67A74|8502    |000002;  
+	sta.b $02                   ;C67A74|8502    |000002;  
 	phx                                  ;C67A76|DA      |      ;  
 	jsl.l CODE_C4BF88                    ;C67A77|2288BFC4|C4BF88;  
 	plx                                  ;C67A7B|FA      |      ;  
-	lda.b rUnkPtrLo_02                   ;C67A7C|A502    |000002;  
+	lda.b $02                   ;C67A7C|A502    |000002;  
 	cmp.w #$FFFF                         ;C67A7E|C9FFFF  |      ;  
 	beq CODE_C67ABF                      ;C67A81|F03C    |C67ABF;  
 	sep #$20                             ;C67A83|E220    |      ;  
 	sta.l $B36008,x                      ;C67A85|9F0860B3|B36008;  
 	rep #$20                             ;C67A89|C220    |      ;  
 	lda.w #$EB86                         ;C67A8B|A986EB  |      ;  
-	sta.b rUnkPtrLo_02                   ;C67A8E|8502    |000002;  
+	sta.b $02                   ;C67A8E|8502    |000002;  
 	phx                                  ;C67A90|DA      |      ;  
 	jsl.l CODE_C4BF88                    ;C67A91|2288BFC4|C4BF88;  
 	plx                                  ;C67A95|FA      |      ;  
-	lda.b rUnkPtrLo_02                   ;C67A96|A502    |000002;  
+	lda.b $02                   ;C67A96|A502    |000002;  
 	cmp.w #$FFFF                         ;C67A98|C9FFFF  |      ;  
 	beq CODE_C67ABF                      ;C67A9B|F022    |C67ABF;  
 	sep #$20                             ;C67A9D|E220    |      ;  
 	sta.l $B36009,x                      ;C67A9F|9F0960B3|B36009;  
 	rep #$20                             ;C67AA3|C220    |      ;  
 	lda.w #$EB86                         ;C67AA5|A986EB  |      ;  
-	sta.b rUnkPtrLo_02                   ;C67AA8|8502    |000002;  
+	sta.b $02                   ;C67AA8|8502    |000002;  
 	phx                                  ;C67AAA|DA      |      ;  
 	jsl.l CODE_C4BF88                    ;C67AAB|2288BFC4|C4BF88;  
 	plx                                  ;C67AAF|FA      |      ;  
-	lda.b rUnkPtrLo_02                   ;C67AB0|A502    |000002;  
+	lda.b $02                   ;C67AB0|A502    |000002;  
 	cmp.w #$FFFF                         ;C67AB2|C9FFFF  |      ;  
 	beq CODE_C67ABF                      ;C67AB5|F008    |C67ABF;  
 	db $E2,$20,$9F,$0A,$60,$B3,$C2,$20   ;C67AB7|        |      ;  
@@ -10586,13 +10586,13 @@ CODE_C67ABF:
 	lda.w #$6006                         ;C67ACB|A90660  |      ;  
 	sta.b $00                            ;C67ACE|8500    |000000;  
 	lda.w #$1F44                         ;C67AD0|A9441F  |      ;  
-	sta.b rUnkPtrLo_02                   ;C67AD3|8502    |000002;  
+	sta.b $02                   ;C67AD3|8502    |000002;  
 	phy                                  ;C67AD5|5A      |      ;  
 	jsl.l CODE_C67F02                    ;C67AD6|22027FC6|C67F02;  
 	ply                                  ;C67ADA|7A      |      ;  
 	sep #$20                             ;C67ADB|E220    |      ;  
 	inx                                  ;C67ADD|E8      |      ;  
-	lda.b rUnkPtrHi_02                   ;C67ADE|A504    |000004;  
+	lda.b $04                   ;C67ADE|A504    |000004;  
 	sta.l $B37F4A                        ;C67AE0|8F4A7FB3|B37F4A;  
 	plp                                  ;C67AE4|28      |      ;  
 	rtl                                  ;C67AE5|6B      |      ;  
@@ -10788,10 +10788,10 @@ CODE_C67EDB:
 	ldx.w #$6006                         ;C67EE4|A20660  |      ;  
 	stx.b $00                            ;C67EE7|8600    |000000;  
 	ldx.w #$1F44                         ;C67EE9|A2441F  |      ;  
-	stx.b rUnkPtrLo_02                   ;C67EEC|8602    |000002;  
+	stx.b $02                   ;C67EEC|8602    |000002;  
 	jsl.l CODE_C67F02                    ;C67EEE|22027FC6|C67F02;  
 	sep #$20                             ;C67EF2|E220    |      ;  
-	lda.b rUnkPtrHi_02                   ;C67EF4|A504    |000004;  
+	lda.b $04                   ;C67EF4|A504    |000004;  
 	cmp.l $B37F4A                        ;C67EF6|CF4A7FB3|B37F4A;  
 	beq CODE_C67EFF                      ;C67EFA|F003    |C67EFF;  
 	db $28,$38,$6B                       ;C67EFC|        |      ;  
@@ -10812,13 +10812,13 @@ CODE_C67F0C:
 	clc                                  ;C67F0C|18      |      ;  
 	adc.b ($00),y                        ;C67F0D|7100    |000000;  
 	iny                                  ;C67F0F|C8      |      ;  
-	cpy.b rUnkPtrLo_02                   ;C67F10|C402    |000002;  
+	cpy.b $02                   ;C67F10|C402    |000002;  
 	bne CODE_C67F0C                      ;C67F12|D0F8    |C67F0C;  
-	sta.b rUnkPtrHi_02                   ;C67F14|8504    |000004;  
+	sta.b $04                   ;C67F14|8504    |000004;  
 	lda.b #$00                           ;C67F16|A900    |      ;  
 	sec                                  ;C67F18|38      |      ;  
-	sbc.b rUnkPtrHi_02                   ;C67F19|E504    |000004;  
-	sta.b rUnkPtrHi_02                   ;C67F1B|8504    |000004;  
+	sbc.b $04                   ;C67F19|E504    |000004;  
+	sta.b $04                   ;C67F1B|8504    |000004;  
 	plp                                  ;C67F1D|28      |      ;  
 	rtl                                  ;C67F1E|6B      |      ;  
 
@@ -10828,7 +10828,7 @@ CODE_C67F1F:
 	sep #$10                             ;C67F22|E210    |      ;  
 	lda.b $00                            ;C67F24|A500    |000000;  
 	sta.l $7ED664                        ;C67F26|8F64D67E|7ED664;  
-	lda.b rUnkPtrLo_02                   ;C67F2A|A502    |000002;  
+	lda.b $02                   ;C67F2A|A502    |000002;  
 	sta.l $7ED666                        ;C67F2C|8F66D67E|7ED666;  
 	sep #$20                             ;C67F30|E220    |      ;  
 	lda.b $06                            ;C67F32|A506    |000006;  
@@ -10908,7 +10908,7 @@ CODE_C67FCE:
 
 CODE_C67FD4:
 	rep #$20                             ;C67FD4|C220    |      ;  
-	inc.b rUnkPtrHi_02                   ;C67FD6|E604    |000004;  
+	inc.b $04                   ;C67FD6|E604    |000004;  
 	iny                                  ;C67FD8|C8      |      ;  
 	cpy.b $00                            ;C67FD9|C400    |000000;  
 	beq CODE_C67FFE                      ;C67FDB|F021    |C67FFE;  
@@ -10964,7 +10964,7 @@ CODE_C6806D:
 	sta.b $00                            ;C68080|8500    |000000;  
 	jsl.l func_80DCC6                    ;C68082|22C6DC80|80DCC6;  
 	lda.b $00                            ;C68086|A500    |000000;  
-	sta.b rUnkPtrHi_02                   ;C68088|8504    |000004;  
+	sta.b $04                   ;C68088|8504    |000004;  
 	beq CODE_C6808F                      ;C6808A|F003    |C6808F;  
 	plp                                  ;C6808C|28      |      ;  
 	sec                                  ;C6808D|38      |      ;  
@@ -14052,3 +14052,6 @@ DATA8_C6CCC8:
 	db $00,$FD,$FC,$00,$FD,$FC,$00,$FE   ;C6CCC8|        |      ;  
 	db $FD,$00,$FD,$FC,$00,$FD,$FB,$00   ;C6CCD0|        |      ;  
 	db $FD,$FC,$00,$FD,$FC,$00,$FD,$FC   ;C6CCD8|        |      ;
+
+padbyte $FF
+pad $c70000

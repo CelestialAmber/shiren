@@ -8209,4 +8209,4 @@ DATA8_DAF9C3:
 	db $03,$76,$2D,$12,$2E,$19,$FE,$02   ;DAFFE3|        |      ;  
 	db $77,$14,$1B,$1C,$1F,$FE,$02,$78   ;DAFFEB|        |      ;  
 	db $27,$1E,$24,$1F,$FE,$02,$FF,$71   ;DAFFF3|        |      ;  
-	db $0D,$0B,$04,$0F,$FE               ;DAFFFB|        |      ;  
+	db $0D,$0B,$04,$0F,$FE               ;DAFFFB|        |      ;

@@ -4788,7 +4788,10 @@ db "異国の風来人「フッ、なおったぜ・・」\n@"
 Text_FEFF9E:
 db "男の子「黄金のコンドルって、メイシン\nじゃなかったんだ・・・」\n@"
 
+check bankcross off ;needed to allow the data to cross banks
+
 ;feffbf
+;split across banks fe-ff
 Text_FEFFBF:
 db "女の子「わたし、願い事したのよ。"
 %next()
@@ -4797,6 +4800,8 @@ db "わたしの夢はね、大きくなったら\n風来人になりたいの�
 db "そしていろいろなとこを旅したいのよ。"
 %next()
 db "ああ、早く大きくならないかなあ・・」\n@"
+
+check bankcross on
 
 ;ff0014
 Text_FF0014:
@@ -5548,7 +5553,6 @@ Text_FF1072:
 db "@"
 
 ;ff1075
-Text_FF1075:
 DATA8_FF1075:
 db "今７@"
 

@@ -2944,6 +2944,9 @@ ORG $FA0000
 	db $3F,$FF,$3F,$FF,$3F,$FF,$3F,$FF   ;FA5BE0|        |      ;  
 	db $3F,$FF
 
+padbyte $FF
+pad $fa8000
+
 org $fa8000 
 
 DATA8_FA8000:
@@ -3378,6 +3381,9 @@ DATA8_FA899F:
 	db $80,$80,$00,$00,$00,$00,$00,$00   ;FA8CDF|        |      ;  
 	db $00,$00,$00,$00,$00,$00,$00,$00   ;FA8CE7|        |      ;  
 	db $00,$00
+
+padbyte $FF
+pad $fafffe
 
 org $fafffe
 

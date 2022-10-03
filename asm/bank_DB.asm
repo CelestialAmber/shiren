@@ -533,3 +533,6 @@ incbin "data/demos/demo5.bin"
 	
 ;db4f16	
 incbin "data/demos/demo6.bin"
+
+padbyte $FF
+pad $dc0000

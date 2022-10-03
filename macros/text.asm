@@ -1,5 +1,6 @@
 ;Prefix byte can be F5,F6,F9,FA,or FB
 ;Mostly used for names and numbers for different text
+
 ;0: variable prefix byte, 1: variable id
 ;these might have to be separated in the future if they do different things
 ;todo: find out what each prefix represents
@@ -10,8 +11,9 @@
 ;fb 86: 
 ;f9 10: number value (damage, points lowered/increased by…)
 ;f9 30: exp points
+
 macro textvar(prefixByte, id)
-    db prefixByte, id
+    db <prefixByte>, <id>
 endmacro
 
 ;prefix byte: FC
@@ -21,11 +23,14 @@ endmacro
 ;0: (0:)
 ;2:
 ;7f: wait (0: wait time?)
+
 macro textcmd(commandId, ...)
-    db $FC, commandId
-    if sizeof(...) > 0
-        db <...[0]>
-    end
+    db $FC, <commandId>
+    !a #= 0
+    while !a < sizeof(...)
+        db <...[!a]>
+        !a #= !a+1
+    endif
 endmacro
 
 ;Waits for player input before clearing text window.
@@ -41,5 +46,5 @@ endmacro
 ;Plays the specified sound effect/song.
 ;0: sound id
 macro playsound(id)
-    db $FD, id
+    db $FD, <id>
 endmacro

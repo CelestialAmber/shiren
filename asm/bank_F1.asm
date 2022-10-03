@@ -2924,3 +2924,6 @@ ORG $F10000
 	db $FF,$00,$FF,$00,$FF,$00,$FF,$00   ;F15B40|        |      ;  
 	db $FF,$00,$FF,$00,$FF,$00,$DA,$00   ;F15B48|        |      ;  
 	db $80,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;F15B50|        |      ;  
+
+padbyte $FF
+pad $f20000

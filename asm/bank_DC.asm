@@ -3951,3 +3951,6 @@ DATA8_DC71B8:
 ;the font is variable width/height?
 MainFontGraphicsData:
 incbin "gfx/font.bin"
+
+padbyte $FF
+pad $dd0000
