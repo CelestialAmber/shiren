@@ -1,437 +1,436 @@
-
 ;fe32d1
 Text_FE32D1:
-%textcmd($FC,$0,$4)
-db "草"
-%textcmd($FC,$0,$14)
-db "武器\n"
-%textcmd($FC,$0,$4)
-db "巻物"
-%textcmd($FC,$0,$7)
-db "盾\n"
-%textcmd($FC,$0,$4)
-db "杖"
-%textcmd($FC,$0,$14)
-db "腕輪\n"
-%textcmd($FC,$0,$4)
-db "壺"
-%textcmd($FC,$0,$14)
-db "矢\n"
-%textcmd($FC,$0,$4)
-db "食糧"
-%textcmd($FC,$0,$7)
-db "他@"
+textfunction $0 $4
+text "草"
+textfunction $0 $14
+text "武器\l"
+textfunction $0 $4
+text "巻物"
+textfunction $0 $7
+text "盾\l"
+textfunction $0 $4
+text "杖"
+textfunction $0 $14
+text "腕輪\l"
+textfunction $0 $4
+text "壺"
+textfunction $0 $14
+text "矢\l"
+textfunction $0 $4
+text "食糧"
+textfunction $0 $7
+text "他@"
 
 ;fe3307
 Text_FE3307:
-%textcmd($FC,$0,$4)
-db "薬草"
-%textcmd($FC,$0,$7)
-db "復活"
-%textcmd($FC,$0,$7)
-db "－－－"
-%textcmd($FC,$0,$8)
-db "毒草\n"
-%textcmd($FC,$0,$4)
-db "弟切"
-%textcmd($FC,$0,$7)
-db "－－－"
-%textcmd($FC,$0,$9)
-db "命草"
-%textcmd($FC,$0,$7)
-db "混乱\n"
-%textcmd($FC,$0,$4)
-db "幸せ"
-%textcmd($FC,$0,$8)
-db "くね"
-%textcmd($FC,$0,$A)
-db "胃拡"
-%textcmd($FC,$0,$9)
-db "睡眠\n"
-%textcmd($FC,$0,$4)
-db "目薬"
-%textcmd($FC,$0,$8)
-db "不幸"
-%textcmd($FC,$0,$8)
-db "胃縮"
-%textcmd($FC,$0,$9)
-db "雑草\n"
-%textcmd($FC,$0,$4)
-db "ドラ"
-%textcmd($FC,$0,$B)
-db "超不"
-%textcmd($FC,$0,$8)
-db "話種\n"
-%textcmd($FC,$0,$4)
-db "無敵"
-%textcmd($FC,$0,$7)
-db "キグ"
-%textcmd($FC,$0,$8)
-db "ちか\n"
-%textcmd($FC,$0,$4)
-db "天使"
-%textcmd($FC,$0,$7)
-db "物忘"
-%textcmd($FC,$0,$7)
-db "毒消@"
+textfunction $0 $4
+text "薬草"
+textfunction $0 $7
+text "復活"
+textfunction $0 $7
+text "－－－"
+textfunction $0 $8
+text "毒草\l"
+textfunction $0 $4
+text "弟切"
+textfunction $0 $7
+text "－－－"
+textfunction $0 $9
+text "命草"
+textfunction $0 $7
+text "混乱\l"
+textfunction $0 $4
+text "幸せ"
+textfunction $0 $8
+text "くね"
+textfunction $0 $A
+text "胃拡"
+textfunction $0 $9
+text "睡眠\l"
+textfunction $0 $4
+text "目薬"
+textfunction $0 $8
+text "不幸"
+textfunction $0 $8
+text "胃縮"
+textfunction $0 $9
+text "雑草\l"
+textfunction $0 $4
+text "ドラ"
+textfunction $0 $B
+text "超不"
+textfunction $0 $8
+text "話種\l"
+textfunction $0 $4
+text "無敵"
+textfunction $0 $7
+text "キグ"
+textfunction $0 $8
+text "ちか\l"
+textfunction $0 $4
+text "天使"
+textfunction $0 $7
+text "物忘"
+textfunction $0 $7
+text "毒消@"
 
 ;fe33ac
 Text_FE33AC:
-%textcmd($FC,$0,$4)
-db "お私"
-%textcmd($FC,$0,$8)
-db "ワナ"
-%textcmd($FC,$0,$9)
-db "大部"
-%textcmd($FC,$0,$7)
-db "地恵\n"
-%textcmd($FC,$0,$4)
-db "識別"
-%textcmd($FC,$0,$7)
-db "困時"
-%textcmd($FC,$0,$6)
-db "モ室"
-%textcmd($FC,$0,$7)
-db "メキ\n"
-%textcmd($FC,$0,$4)
-db "灯り"
-%textcmd($FC,$0,$A)
-db "敵倍"
-%textcmd($FC,$0,$7)
-db "混乱"
-%textcmd($FC,$0,$7)
-db "吸出\n"
-%textcmd($FC,$0,$4)
-db "壺大"
-%textcmd($FC,$0,$7)
-db "バク"
-%textcmd($FC,$0,$8)
-db "ジェ"
-%textcmd($FC,$0,$A)
-db "不拾\n"
-%textcmd($FC,$0,$4)
-db "真空"
-%textcmd($FC,$0,$7)
-db "パワ"
-%textcmd($FC,$0,$8)
-db "白紙"
-%textcmd($FC,$0,$8)
-db "時限\n"
-%textcmd($FC,$0,$4)
-db "口無"
-%textcmd($FC,$0,$7)
-db "－－－"
-%textcmd($FC,$0,$9)
-db "迷子\n"
-%textcmd($FC,$0,$4)
-db "－－－"
-%textcmd($FC,$0,$9)
-db "自爆"
-%textcmd($FC,$0,$9)
-db "天恵@"
+textfunction $0 $4
+text "お払"
+textfunction $0 $8
+text "ワナ"
+textfunction $0 $9
+text "大部"
+textfunction $0 $7
+text "地恵\l"
+textfunction $0 $4
+text "識別"
+textfunction $0 $7
+text "困時"
+textfunction $0 $6
+text "モ室"
+textfunction $0 $7
+text "メキ\l"
+textfunction $0 $4
+text "灯り"
+textfunction $0 $A
+text "敵倍"
+textfunction $0 $7
+text "混乱"
+textfunction $0 $7
+text "吸出\l"
+textfunction $0 $4
+text "壺大"
+textfunction $0 $7
+text "バク"
+textfunction $0 $8
+text "ジェ"
+textfunction $0 $A
+text "不拾\l"
+textfunction $0 $4
+text "真空"
+textfunction $0 $7
+text "パワ"
+textfunction $0 $8
+text "白紙"
+textfunction $0 $8
+text "時限\l"
+textfunction $0 $4
+text "口無"
+textfunction $0 $7
+text "－－－"
+textfunction $0 $9
+text "迷子\l"
+textfunction $0 $4
+text "－－－"
+textfunction $0 $9
+text "自爆"
+textfunction $0 $9
+text "天恵@"
 
 ;fe3451
 Text_FE3451:
-%textcmd($FC,$0,$4)
-db "封印"
-%textcmd($FC,$0,$7)
-db "ブフ\n"
-%textcmd($FC,$0,$4)
-db "吹飛"
-%textcmd($FC,$0,$7)
-db "骸骨\n"
-%textcmd($FC,$0,$4)
-db "幸せ"
-%textcmd($FC,$0,$8)
-db "金縛\n"
-%textcmd($FC,$0,$4)
-db "不幸"
-%textcmd($FC,$0,$7)
-db "一時\n"
-%textcmd($FC,$0,$4)
-db "身代"
-%textcmd($FC,$0,$7)
-db "痛分\n"
-%textcmd($FC,$0,$4)
-db "場所@"
+textfunction $0 $4
+text "封印"
+textfunction $0 $7
+text "ブフ\l"
+textfunction $0 $4
+text "吹飛"
+textfunction $0 $7
+text "骸骨\l"
+textfunction $0 $4
+text "幸せ"
+textfunction $0 $8
+text "金縛\l"
+textfunction $0 $4
+text "不幸"
+textfunction $0 $7
+text "一時\l"
+textfunction $0 $4
+text "身代"
+textfunction $0 $7
+text "痛分\l"
+textfunction $0 $4
+text "場所@"
 
 ;fe349e
 Text_FE349E:
-%textcmd($FC,$0,$4)
-db "保存"
-%textcmd($FC,$0,$7)
-db "背中"
-%textcmd($FC,$0,$7)
-db "魔物"
-%textcmd($FC,$0,$7)
-db "アホ\n"
-%textcmd($FC,$0,$4)
-db "やり"
-%textcmd($FC,$0,$B)
-db "倉庫"
-%textcmd($FC,$0,$7)
-db "変化"
-%textcmd($FC,$0,$7)
-db "不割\n"
-%textcmd($FC,$0,$4)
-db "分裂"
-%textcmd($FC,$0,$7)
-db "弱化"
-%textcmd($FC,$0,$7)
-db "合成"
-%textcmd($FC,$0,$7)
-db "う晴\n"
-%textcmd($FC,$0,$4)
-db "強化"
-%textcmd($FC,$0,$7)
-db "－－－"
-%textcmd($FC,$0,$A)
-db "トド\n"
-%textcmd($FC,$0,$4)
-db "識別"
-%textcmd($FC,$0,$7)
-db "底抜"
-%textcmd($FC,$0,$7)
-db "ガイ@"
+textfunction $0 $4
+text "保存"
+textfunction $0 $7
+text "背中"
+textfunction $0 $7
+text "魔物"
+textfunction $0 $7
+text "アホ\l"
+textfunction $0 $4
+text "やり"
+textfunction $0 $B
+text "倉庫"
+textfunction $0 $7
+text "変化"
+textfunction $0 $7
+text "不割\l"
+textfunction $0 $4
+text "分裂"
+textfunction $0 $7
+text "弱化"
+textfunction $0 $7
+text "合成"
+textfunction $0 $7
+text "う晴\l"
+textfunction $0 $4
+text "強化"
+textfunction $0 $7
+text "－－－"
+textfunction $0 $A
+text "トド\l"
+textfunction $0 $4
+text "識別"
+textfunction $0 $7
+text "底抜"
+textfunction $0 $7
+text "ガイ@"
 
 ;fe3513
 Text_FE3513:
-%textcmd($FC,$0,$4)
-db "にぎり\n"
-%textcmd($FC,$0,$4)
-db "大にぎ\n"
-%textcmd($FC,$0,$4)
-db "腐にぎ\n"
-%textcmd($FC,$0,$4)
-db "巨にぎ\n"
-%textcmd($FC,$0,$4)
-db "特にぎ@"
+textfunction $0 $4
+text "にぎり\l"
+textfunction $0 $4
+text "大にぎ\l"
+textfunction $0 $4
+text "腐にぎ\l"
+textfunction $0 $4
+text "巨にぎ\l"
+textfunction $0 $4
+text "特にぎ@"
 
 ;fe3539
 Text_FE3539:
-%textcmd($FC,$0,$4)
-db "こん棒　"
-%textcmd($FC,$0,$F)
-db "マンジ　"
-%textcmd($FC,$0,$C)
-db "１ツ目\n"
-%textcmd($FC,$0,$4)
-db "長巻　　"
-%textcmd($FC,$0,$E)
-db "成仏の鎌"
-%textcmd($FC,$0,$7)
-db "ドレイン\n"
-%textcmd($FC,$0,$4)
-db "ブフー　"
-%textcmd($FC,$0,$D)
-db "つるはし"
-%textcmd($FC,$0,$E)
-db "太陽の剣\n"
-%textcmd($FC,$0,$4)
-db "カタナ　"
-%textcmd($FC,$0,$10)
-db "必中の剣"
-%textcmd($FC,$0,$6)
-db "王者の剣\n"
-%textcmd($FC,$0,$4)
-db "ドラキラ"
-%textcmd($FC,$0,$C)
-db "ミノタウ\n"
-%textcmd($FC,$0,$4)
-db "どうたぬ"
-%textcmd($FC,$0,$A)
-db "妖刀かま@"
+textfunction $0 $4
+text "こん棒　"
+textfunction $0 $F
+text "マンジ　"
+textfunction $0 $C
+text "１ツ目\l"
+textfunction $0 $4
+text "長巻　　"
+textfunction $0 $E
+text "成仏の鎌"
+textfunction $0 $7
+text "ドレイン\l"
+textfunction $0 $4
+text "ブフー　"
+textfunction $0 $D
+text "つるはし"
+textfunction $0 $E
+text "太陽の剣\l"
+textfunction $0 $4
+text "カタナ　"
+textfunction $0 $10
+text "必中の剣"
+textfunction $0 $6
+text "王者の剣\l"
+textfunction $0 $4
+text "ドラキラ"
+textfunction $0 $C
+text "ミノタウ\l"
+textfunction $0 $4
+text "どうたぬ"
+textfunction $0 $A
+text "妖刀かま@"
 
 ;fe35bd
 Text_FE35BD:
-%textcmd($FC,$0,$4)
-db "皮甲の盾"
-%textcmd($FC,$0,$8)
-db "風魔の盾"
-%textcmd($FC,$0,$6)
-db "使い捨て\n"
-%textcmd($FC,$0,$4)
-db "青銅甲盾"
-%textcmd($FC,$0,$8)
-db "カウンタ"
-%textcmd($FC,$0,$E)
-db "地雷ナバ\n"
-%textcmd($FC,$0,$4)
-db "－－－－－－"
-%textcmd($FC,$0,$A)
-db "重装の盾"
-%textcmd($FC,$0,$7)
-db "トドの盾\n"
-%textcmd($FC,$0,$4)
-db "木の盾　"
-%textcmd($FC,$0,$A)
-db "やまびこ"
-%textcmd($FC,$0,$B)
-db "太陽の盾\n"
-%textcmd($FC,$0,$4)
-db "鉄甲の盾"
-%textcmd($FC,$0,$8)
-db "見切り盾\n"
-%textcmd($FC,$0,$4)
-db "ドラシル"
-%textcmd($FC,$0,$B)
-db "見かけ盾@"
+textfunction $0 $4
+text "皮甲の盾"
+textfunction $0 $8
+text "風魔の盾"
+textfunction $0 $6
+text "使い捨て\l"
+textfunction $0 $4
+text "青銅甲盾"
+textfunction $0 $8
+text "カウンタ"
+textfunction $0 $E
+text "地雷ナバ\l"
+textfunction $0 $4
+text "－－－－－－"
+textfunction $0 $A
+text "重装の盾"
+textfunction $0 $7
+text "トドの盾\l"
+textfunction $0 $4
+text "木の盾　"
+textfunction $0 $A
+text "やまびこ"
+textfunction $0 $B
+text "太陽の盾\l"
+textfunction $0 $4
+text "鉄甲の盾"
+textfunction $0 $8
+text "見切り盾\l"
+textfunction $0 $4
+text "ドラシル"
+textfunction $0 $B
+text "見かけ盾@"
 
 ;fe3645
 Text_FE3645:
-%textcmd($FC,$0,$4)
-db "通過"
-%textcmd($FC,$0,$7)
-db "会心"
-%textcmd($FC,$0,$7)
-db "透視\n"
-%textcmd($FC,$0,$4)
-db "値切"
-%textcmd($FC,$0,$7)
-db "痛恨"
-%textcmd($FC,$0,$7)
-db "混避\n"
-%textcmd($FC,$0,$4)
-db "罠師"
-%textcmd($FC,$0,$8)
-db "呪避"
-%textcmd($FC,$0,$7)
-db "識別\n"
-%textcmd($FC,$0,$4)
-db "固定"
-%textcmd($FC,$0,$7)
-db "遠投\n"
-%textcmd($FC,$0,$4)
-db "回復"
-%textcmd($FC,$0,$7)
-db "幸せ\n"
-%textcmd($FC,$0,$4)
-db "錆避"
-%textcmd($FC,$0,$7)
-db "垂流@"
+textfunction $0 $4
+text "通過"
+textfunction $0 $7
+text "会心"
+textfunction $0 $7
+text "透視\l"
+textfunction $0 $4
+text "値切"
+textfunction $0 $7
+text "痛恨"
+textfunction $0 $7
+text "混避\l"
+textfunction $0 $4
+text "罠師"
+textfunction $0 $8
+text "呪避"
+textfunction $0 $7
+text "識別\l"
+textfunction $0 $4
+text "固定"
+textfunction $0 $7
+text "遠投\l"
+textfunction $0 $4
+text "回復"
+textfunction $0 $7
+text "幸せ\l"
+textfunction $0 $4
+text "錆避"
+textfunction $0 $7
+text "垂流@"
 
 ;fe36b2
 Text_FE36B2:
-%textcmd($FC,$0,$4)
-db "木矢\n"
-%textcmd($FC,$0,$4)
-db "鉄矢\n"
-%textcmd($FC,$0,$4)
-db "銀矢@"
+textfunction $0 $4
+text "木矢\l"
+textfunction $0 $4
+text "鉄矢\l"
+textfunction $0 $4
+text "銀矢@"
 
 ;fe36ca
 Text_FE36CA:
-%textcmd($FC,$0,$4)
-db "肉\n"
-%textcmd($FC,$0,$4)
-db "目的１\n"
-%textcmd($FC,$0,$4)
-db "目的２\n"
-%textcmd($FC,$0,$4)
-db "目的３@"
+textfunction $0 $4
+text "肉\l"
+textfunction $0 $4
+text "目的１\l"
+textfunction $0 $4
+text "目的２\l"
+textfunction $0 $4
+text "目的３@"
 
 ;fe36e8
 Text_FE36E8:
-db "通常攻撃@"
+text "通常攻撃@"
 
 ;fe36f0
 Text_FE36F0:
-db "特殊攻撃@"
+text "特殊攻撃@"
 
 ;fe36f8
 Text_FE36F8:
-%textcmd($FC,$0,$8)
-db "右\n"
-%textcmd($FC,$0,$8)
-db "右上\n"
-%textcmd($FC,$0,$8)
-db "上\n"
-%textcmd($FC,$0,$8)
-db "左上\n"
-%textcmd($FC,$0,$8)
-db "左\n"
-%textcmd($FC,$0,$8)
-db "左下\n"
-%textcmd($FC,$0,$8)
-db "下\n"
-%textcmd($FC,$0,$8)
-db "右下@"
+textfunction $0 $8
+text "右\l"
+textfunction $0 $8
+text "右上\l"
+textfunction $0 $8
+text "上\l"
+textfunction $0 $8
+text "左上\l"
+textfunction $0 $8
+text "左\l"
+textfunction $0 $8
+text "左下\l"
+textfunction $0 $8
+text "下\l"
+textfunction $0 $8
+text "右下@"
 
 ;fe372a
 Text_FE372A:
-db "レベル"
-%textcmd($FC,$0,$4)
-%textvar($F9,$12)
-db "@"
+text "レベル"
+textfunction $0 $4
+numvar $12
+text "@"
 
 ;fe3733
 Text_FE3733:
-%textvar($FB,$87)
-db "@"
+strvar $87
+text "@"
 
 ;fe3736
 Text_FE3736:
-%textvar($FB,$0)
-db "から\n@"
+strvar $0
+text "から\l@"
 
 ;fe373c
 Text_FE373C:
-%textvar($F6,$F1)
-db "な座標"
-%textcmd($FC,$0,$4)
-%textvar($F9,$12)
-%textcmd($FC,$0,$10)
-db "Ｙ座標"
-%textcmd($FC,$0,$4)
-%textvar($F9,$12)
-db "\nマップ番号"
-%textcmd($FC,$0,$4)
-%textvar($F9,$13)
-%textcmd($FC,$0,$4)
-%textvar($F9,$13)
-%textcmd($FC,$0,$C)
-db "属性"
-%textcmd($FC,$0,$4)
-%textvar($F9,$12)
-%textcmd($FC,$0,$4)
-%textvar($F9,$12)
-db "\n@"
+cmdf6 $F1
+text "な座標"
+textfunction $0 $4
+numvar $12
+textfunction $0 $10
+text "Ｙ座標"
+textfunction $0 $4
+numvar $12
+text "\lマップ番号"
+textfunction $0 $4
+numvar $13
+textfunction $0 $4
+numvar $13
+textfunction $0 $C
+text "属性"
+textfunction $0 $4
+numvar $12
+textfunction $0 $4
+numvar $12
+text "\l@"
 
 ;fe377a
 Text_FE377A:
-db "ウインドウ番号エラー\n@"
+text "ウインドウ番号エラー\l@"
 
 ;fe3787
 Text_FE3787:
-%textcmd($FC,$0,$4)
-db "特技"
-%textcmd($FC,$0,$7)
-db "マップ\n"
-%textcmd($FC,$0,$4)
-db "戻る"
-%textcmd($FC,$0,$9)
-db "中断@"
+textfunction $0 $4
+text "特技"
+textfunction $0 $7
+text "マップ\l"
+textfunction $0 $4
+text "戻る"
+textfunction $0 $9
+text "中断@"
 
 ;fe37a2
 Text_FE37A2:
-%textcmd($FC,$0,$4)
-db "特技\n"
-%textcmd($FC,$0,$4)
-db "戻る\n"
-%textcmd($FC,$0,$4)
-db "中断@"
+textfunction $0 $4
+text "特技\l"
+textfunction $0 $4
+text "戻る\l"
+textfunction $0 $4
+text "中断@"
 
 ;fe37b8
 Text_FE37B8:
-db "シレン@"
+text "シレン@"
 
 ;fe37bc
 Text_FE37BC:
-db "にせ"
-%textvar($FB,$81)
-db "@"
+text "にせ"
+strvar $81
+text "@"
 
 ;fe37c1
 Text_FE37C1:
-%textvar($FB,$81)
-db "@"
+strvar $81
+text "@"

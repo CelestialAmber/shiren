@@ -1,1942 +1,1942 @@
-
 ;fe1298
 Text_FE1298:
-db "\n@"
+text "\l@"
 
 ;fe129a
 Text_FE129A:
-%textvar($FB,$80)
-db "をふった。\n@"
+strvar $80
+text "をふった。\l@"
 
 ;fe12a3
 Text_FE12A3:
-%textvar($FB,$80)
-db "\n@"
+strvar $80
+text "\l@"
 
 ;fe12a7
 Text_FE12A7:
-%textvar($FB,$86)
-db "はワープした。"
-%playsound($42)
-db "　\n@"
+strvar $86
+text "はワープした。"
+playsound $42
+text "　\l@"
 
 ;fe12b5
 Text_FE12B5:
-%textvar($FB,$86)
-db "は混乱した。"
-%playsound($B7)
-db "　\n@"
+strvar $86
+text "は混乱した。"
+playsound $B7
+text "　\l@"
 
 ;fe12c4
 Text_FE12C4:
-%playsound($B7)
-db "　"
-%textvar($FB,$86)
-db "と、そのまわりの\nモンスターは混乱した。\n@"
+playsound $B7
+text "　"
+strvar $86
+text "と、そのまわりの\lモンスターは混乱した。\l@"
 
 ;fe12e1
 Text_FE12E1:
-db "まわりのモンスターは混乱した。"
-%playsound($B7)
-db "　\n@"
+text "まわりのモンスターは混乱した。"
+playsound $B7
+text "　\l@"
 
 ;fe12f7
 Text_FE12F7:
-%textvar($F9,$30)
-db "ポイントの経験値を得た。\n@"
+numvar $30
+text "ポイントの経験値を得た。\l@"
 
 ;fe130b
 Text_FE130B:
-%textvar($F9,$10)
-db "ポイントのダメージを受けた。\n@"
+numvar $10
+text "ポイントのダメージを受けた。\l@"
 
 ;fe131e
 Text_FE131E:
-%textvar($F9,$10)
-db "ポイントのダメージを与えた。\n@"
+numvar $10
+text "ポイントのダメージを与えた。\l@"
 
 ;fe1331
 Text_FE1331:
-%textvar($F9,$10)
-db "ポイント下がった。\n@"
+numvar $10
+text "ポイント下がった。\l@"
 
 ;fe133e
 Text_FE133E:
-%textvar($F9,$10)
-db "ポイント上がった。\n@"
+numvar $10
+text "ポイント上がった。\l@"
 
 ;fe134b
 Text_FE134B:
-%textvar($FB,$80)
-db "が\n"
-%textvar($FB,$80)
-db "にすりかわった。\n@"
+strvar $80
+text "が\l"
+strvar $80
+text "にすりかわった。\l@"
 
 ;fe135b
 Text_FE135B:
-%textvar($FB,$80)
-db "は\n呪われていて、はずれなかった。"
-%playsound($5B)
-db "　\n@"
+strvar $80
+text "は\l呪われていて、はずれなかった。"
+playsound $5B
+text "　\l@"
 
 ;fe1374
 Text_FE1374:
-%textvar($FB,$80)
-db "が消えてしまった。\n@"
+strvar $80
+text "が消えてしまった。\l@"
 
 ;fe1382
 Text_FE1382:
-%textvar($FB,$80)
-db "が役にたった。\n@"
+strvar $80
+text "が役にたった。\l@"
 
 ;fe138e
 Text_FE138E:
-%textvar($FB,$80)
-db "だった。\n@"
+strvar $80
+text "だった。\l@"
 
 ;fe1396
 Text_FE1396:
-%playsound($7C)
-db "　"
-%textcmd($5)
-%textcmd($2)
-%textvar($F6,$FB)
-db "ダの回数が\n"
-%textvar($F9,$10)
-db "ポイントふえた。\n@"
+playsound $7C
+text "　"
+textfunction $5
+textfunction $2
+cmdf6 $FB
+text "ダの回数が\l"
+numvar $10
+text "ポイントふえた。\l@"
 
 ;fe13b3
 Text_FE13B3:
-%playsound($7C)
-db "　"
-%textcmd($5)
-%textcmd($2)
-%textvar($F6,$FB)
-db "ダの大きさが"
-%textvar($F9,$10)
-db "ふえた。\n@"
+playsound $7C
+text "　"
+textfunction $5
+textfunction $2
+cmdf6 $FB
+text "ダの大きさが"
+numvar $10
+text "ふえた。\l@"
 
 ;fe13ca
 Text_FE13CA:
-%textvar($FB,$80)
-db "の上に乗った。\n@"
+strvar $80
+text "の上に乗った。\l@"
 
 ;fe13d6
 Text_FE13D6:
-%textvar($FB,$80)
-db "は\n"
-%textvar($FB,$86)
-db "に当たった。\n@"
+strvar $80
+text "は\l"
+strvar $86
+text "に当たった。\l@"
 
 ;fe13e5
 Text_FE13E5:
-%playsound($7B)
-db "　"
-%textcmd($5)
-%textcmd($2)
-%textvar($F6,$FB)
-db "ダは\n大きいおにぎりに変わった。\n@"
+playsound $7B
+text "　"
+textfunction $5
+textfunction $2
+cmdf6 $FB
+text "ダは\l大きいおにぎりに変わった。\l@"
 
 ;fe1401
 Text_FE1401:
-%textvar($FB,$80)
-db "は地面に落ちた。\n@"
+strvar $80
+text "は地面に落ちた。\l@"
 
 ;fe140f
 Text_FE140F:
-%textvar($FB,$80)
-db "は地面に落ちて\n使いものにならなくなった。\n@"
+strvar $80
+text "は地面に落ちて\l使いものにならなくなった。\l@"
 
 ;fe142b
 Text_FE142B:
-%textvar($FB,$80)
-db "を薬にして飲んだ。\n@"
+strvar $80
+text "を薬にして飲んだ。\l@"
 
 ;fe143a
 Text_FE143A:
-%textvar($FB,$84)
-db "を装備した。"
-%playsound($55)
-db "　\n@"
+strvar $84
+text "を装備した。"
+playsound $55
+text "　\l@"
 
 ;fe1447
 Text_FE1447:
-%textvar($FB,$80)
-db "を続んだ。\n@"
+strvar $80
+text "を読んだ。\l@"
 
 ;fe1451
 Text_FE1451:
-%textvar($FB,$80)
-db "をはめた。"
-%playsound($57)
-db "　\n@"
+strvar $80
+text "をはめた。"
+playsound $57
+text "　\l@"
 
 ;fe145d
 Text_FE145D:
-%textvar($FB,$80)
-db "を拾った。"
-%playsound($4F)
-db "　\n@"
+strvar $80
+text "を拾った。"
+playsound $4F
+text "　\l@"
 
 ;fe146a
 Text_FE146A:
-%textvar($FB,$80)
-db "を足元に置いて\n"
-%textvar($FB,$80)
-db "を拾った。"
-%playsound($4F)
-db "　\n@"
+strvar $80
+text "を足元に置いて\l"
+strvar $80
+text "を拾った。"
+playsound $4F
+text "　\l@"
 
 ;fe1484
 Text_FE1484:
-%textvar($FB,$80)
-db "を拾った。"
-%playsound($50)
-db "　\n@"
+strvar $80
+text "を拾った。"
+playsound $50
+text "　\l@"
 
 ;fe1491
 Text_FE1491:
-%textvar($FB,$80)
-db "を足元に置いた。\n@"
+strvar $80
+text "を足元に置いた。\l@"
 
 ;fe14a0
 Text_FE14A0:
-%textvar($FB,$86)
-db "から\n@"
+strvar $86
+text "から\l@"
 
 ;fe14a6
 Text_FE14A6:
-%textvar($FB,$86)
-db "だった。\n@"
+strvar $86
+text "だった。\l@"
 
 ;fe14ae
 Text_FE14AE:
-%textvar($FB,$86)
-db "に足をつかまれて\n動けない！\n@"
+strvar $86
+text "に足をつかまれて\l動けない！\l@"
 
 ;fe14c2
 Text_FE14C2:
-%textvar($FB,$86)
-db "のステイタスが、すべて\n@"
+strvar $86
+text "のステイタスが、すべて\l@"
 
 ;fe14d1
 Text_FE14D1:
-db "炎が、"
-%textvar($FB,$86)
-db "をこがす。\n@"
+text "炎が、"
+strvar $86
+text "をこがす。\l@"
 
 ;fe14de
 Text_FE14DE:
-%textvar($FB,$86)
-db "の攻撃は、はずれた。\n@"
+strvar $86
+text "の攻撃は、はずれた。\l@"
 
 ;fe14ed
 Text_FE14ED:
-%textvar($FB,$86)
-db "の攻撃を、かわした。\n@"
+strvar $86
+text "の攻撃を、かわした。\l@"
 
 ;fe14fc
 Text_FE14FC:
-%textvar($FB,$86)
-db "は、ちからを吸いとった。\n@"
+strvar $86
+text "は、ちからを吸いとった。\l@"
 
 ;fe150d
 Text_FE150D:
-%textvar($FB,$86)
-db "はクネクネーをおどった。\n@"
+strvar $86
+text "はクネクネーをおどった。\l@"
 
 ;fe151d
 Text_FE151D:
-%textvar($FB,$86)
-db "は、"
-%textvar($FB,$80)
-db "をうってきた。\n@"
+strvar $86
+text "は、"
+strvar $80
+text "をうってきた。\l@"
 
 ;fe152c
 Text_FE152C:
-%textvar($FB,$86)
-db "は"
-%textvar($FB,$80)
-db "を食べた。\n@"
+strvar $86
+text "は"
+strvar $80
+text "を食べた。\l@"
 
 ;fe1538
 Text_FE1538:
-%textvar($FB,$86)
-db "は、"
-%textvar($FB,$86)
-db "から\n"
-%textvar($FB,$80)
-db "を、ぬすんだ。\n@"
+strvar $86
+text "は、"
+strvar $86
+text "から\l"
+strvar $80
+text "を、ぬすんだ。\l@"
 
 ;fe154c
 Text_FE154C:
-%textvar($FB,$86)
-db "は、"
-%textvar($FB,$86)
-db "に\n@"
+strvar $86
+text "は、"
+strvar $86
+text "に\l@"
 
 ;fe1555
 Text_FE1555:
-%textvar($FB,$85)
-db "は、"
-%textvar($FB,$86)
-db "に\n@"
+strvar $85
+text "は、"
+strvar $86
+text "に\l@"
 
 ;fe155e
 Text_FE155E:
-%textvar($FB,$86)
-db "は"
-%textvar($FB,$86)
-db "の\n足をつかんだ。\n@"
+strvar $86
+text "は"
+strvar $86
+text "の\l足をつかんだ。\l@"
 
 ;fe156f
 Text_FE156F:
-%textvar($FB,$86)
-db "は催眠術をかけた。\n@"
+strvar $86
+text "は催眠術をかけた。\l@"
 
 ;fe157f
 Text_FE157F:
-%textvar($FB,$86)
-db "は、へんな呪文を唱えた。\n@"
+strvar $86
+text "は、へんな呪文を唱えた。\l@"
 
 ;fe1592
 Text_FE1592:
-db "ＨＰが回復するようになった。\n@"
+text "ＨＰが回復するようになった。\l@"
 
 ;fe15a6
 Text_FE15A6:
-%textvar($FB,$86)
-db "は、睡眠液を吐いた。\n@"
+strvar $86
+text "は、睡眠液を吐いた。\l@"
 
 ;fe15b8
 Text_FE15B8:
-%textvar($FB,$86)
-db "は毒をはいた。\n@"
+strvar $86
+text "は毒をはいた。\l@"
 
 ;fe15c4
 Text_FE15C4:
-%textvar($FB,$86)
-db "は、くさった液をはいた。\n@"
+strvar $86
+text "は、くさった液をはいた。\l@"
 
 ;fe15d5
 Text_FE15D5:
-%textvar($FB,$86)
-db "はおびえだした。"
-%playsound($B8)
-db "　\n@"
+strvar $86
+text "はおびえだした。"
+playsound $B8
+text "　\l@"
 
 ;fe15e4
 Text_FE15E4:
-%playsound($B8)
-db "　"
-%textvar($FB,$86)
-db "と、そのまわりの\nモンスターはおびえだした。\n@"
+playsound $B8
+text "　"
+strvar $86
+text "と、そのまわりの\lモンスターはおびえだした。\l@"
 
 ;fe1601
 Text_FE1601:
-%playsound($9E)
-db "　"
-%textvar($FB,$86)
-db "はレベル"
-%textvar($F9,$10)
-db "に下がった。\n@"
+playsound $9E
+text "　"
+strvar $86
+text "はレベル"
+numvar $10
+text "に下がった。\l@"
 
 ;fe1614
 Text_FE1614:
-%textvar($FB,$86)
-db "はレベル"
-%textvar($F9,$10)
-db "に上がった。"
-%playsound($34)
-db "　\n@"
+strvar $86
+text "はレベル"
+numvar $10
+text "に上がった。"
+playsound $34
+text "　\l@"
 
 ;fe1627
 Text_FE1627:
-%textvar($FB,$86)
-db "はちからつきた。\n@"
+strvar $86
+text "はちからつきた。\l@"
 
 ;fe1633
 Text_FE1633:
-%textvar($FB,$86)
-db "はちからつきた。\n"
-%textcmd($2)
-%textvar($F6,$25)
-db "かし、"
-%textvar($FB,$80)
-db "を使って復活した。\n@"
+strvar $86
+text "はちからつきた。\l"
+textfunction $2
+cmdf6 $25
+text "かし、"
+strvar $80
+text "を使って復活した。\l@"
 
 ;fe1655
 Text_FE1655:
-%textvar($FB,$86)
-db "は眠ってしまった。"
-%playsound($96)
-db "　\n@"
+strvar $86
+text "は眠ってしまった。"
+playsound $96
+text "　\l@"
 
 ;fe1666
 Text_FE1666:
-%playsound($96)
-db "　"
-%textvar($FB,$86)
-db "と、そのまわりの\nモンスターは眠ってしまった。\n@"
+playsound $96
+text "　"
+strvar $86
+text "と、そのまわりの\lモンスターは眠ってしまった。\l@"
 
 ;fe1685
 Text_FE1685:
-%textvar($FB,$86)
-db "をやっつけた。\n@"
+strvar $86
+text "をやっつけた。\l@"
 
 ;fe1690
 Text_FE1690:
-db "・・・眠くてなにもできない。\n@"
+text "・・・眠くてなにもできない。\l@"
 
 ;fe16a1
 Text_FE16A1:
-db "ＨＰが"
-%textvar($F9,$10)
-db "ポイント下がった。\n@"
+text "ＨＰが"
+numvar $10
+text "ポイント下がった。\l@"
 
 ;fe16b3
 Text_FE16B3:
-db "ＨＰが"
-%textvar($F9,$10)
-db "ポイント上がった。"
-%playsound($90)
-db "　\n@"
+text "ＨＰが"
+numvar $10
+text "ポイント上がった。"
+playsound $90
+text "　\l@"
 
 ;fe16c8
 Text_FE16C8:
-db "ＨＰがたくさん回復するぞ。\n@"
+text "ＨＰがたくさん回復するぞ。\l@"
 
 ;fe16db
 Text_FE16DB:
-db "ＨＰがすこし回復するぞ。\n@"
+text "ＨＰがすこし回復するぞ。\l@"
 
 ;fe16ed
 Text_FE16ED:
-db "ＨＰや、ちからが下がってしまうぞ。\n@"
+text "ＨＰや、ちからが下がってしまうぞ。\l@"
 
 ;fe1702
 Text_FE1702:
-db "おなかが、へってきた・・・"
-%playsound($B5)
-db "　\n@"
+text "おなかが、へってきた・・・"
+playsound $B5
+text "　\l@"
 
 ;fe1714
 Text_FE1714:
-db "ハラペコで目が回ってきた・・・"
-%playsound($B5)
-db "　\n@"
+text "ハラペコで目が回ってきた・・・"
+playsound $B5
+text "　\l@"
 
 ;fe1729
 Text_FE1729:
-db "だめだ！　もう倒れそうだ！"
-%playsound($B5)
-db "　\n@"
+text "だめだ！　もう倒れそうだ！"
+playsound $B5
+text "　\l@"
 
 ;fe173c
 Text_FE173C:
-db "早く・・・なにか食べないと・・・"
-%playsound($B5)
-db "　\n@"
+text "早く・・・なにか食べないと・・・"
+playsound $B5
+text "　\l@"
 
 ;fe1752
 Text_FE1752:
-db "飢え死にしてしまう！"
-%playsound($B5)
-db "　\n@"
+text "飢え死にしてしまう！"
+playsound $B5
+text "　\l@"
 
 ;fe1763
 Text_FE1763:
-db "もう・・・だめだ・・・"
-%playsound($B5)
-db "　\n@"
+text "もう・・・だめだ・・・"
+playsound $B5
+text "　\l@"
 
 ;fe1773
 Text_FE1773:
-db "・・・・・・・・・・・・・・"
-%playsound($B5)
-db "　\n@"
+text "・・・・・・・・・・・・・・"
+playsound $B5
+text "　\l@"
 
 ;fe1786
 Text_FE1786:
-db "おなかが、いっぱいになった。\n@"
+text "おなかが、いっぱいになった。\l@"
 
 ;fe1796
 Text_FE1796:
-db "おなかはふくれたが\n@"
+text "おなかはふくれたが\l@"
 
 ;fe17a1
 Text_FE17A1:
-db "すこし、おなかがふくれた。\n@"
+text "すこし、おなかがふくれた。\l@"
 
 ;fe17b0
 Text_FE17B0:
-db "満腹度の最大値が"
-%textvar($F9,$10)
-db "％になった。"
-%playsound($A5)
-db "　\n@"
+text "満腹度の最大値が"
+numvar $10
+text "％になった。"
+playsound $A5
+text "　\l@"
 
 ;fe17cb
 Text_FE17CB:
-db "満腹度の最大値が"
-%textvar($F9,$10)
-db "％になった。"
-%playsound($A6)
-db "　\n@"
+text "満腹度の最大値が"
+numvar $10
+text "％になった。"
+playsound $A6
+text "　\l@"
 
 ;fe17e6
 Text_FE17E6:
-db "満腹度が"
-%textvar($F9,$10)
-db "％になった。\n@"
+text "満腹度が"
+numvar $10
+text "％になった。\l@"
 
 ;fe17f8
 Text_FE17F8:
-db "グウッ！・・・お腹がなっている！\n@"
+text "グウッ！・・・お腹がなっている！\l@"
 
 ;fe180b
 Text_FE180B:
-db "かかっていた呪いも解けた。"
-%playsound($8F)
-db "　\n@"
+text "かかっていた呪いも解けた。"
+playsound $8F
+text "　\l@"
 
 ;fe181f
 Text_FE181F:
-db "口が使えない！"
-%playsound($7E)
-db "　\n@"
+text "口が使えない！"
+playsound $7E
+text "　\l@"
 
 ;fe182d
 Text_FE182D:
-db "ここには置けない。\n@"
+text "ここには置けない。\l@"
 
 ;fe1839
 Text_FE1839:
-%playsound($76)
-db "　"
-%textcmd($2)
-%textvar($F6,$21)
-db "の巻物は続まずに足元に置くこと\nすると敵の攻撃を受けなくなる。\n@"
+playsound $76
+text "　"
+textfunction $2
+cmdf6 $21
+text "の巻物は読まずに足元に置くこと\lすると敵の攻撃を受けなくなる。\l@"
 
 ;fe1868
 Text_FE1868:
-db "これには毒をはね返す力があるぞ。\n@"
+text "これには毒をはね返す力があるぞ。\l@"
 
 ;fe187c
 Text_FE187C:
-db "これは"
-%textvar($FB,$80)
-db "だ。\n@"
+text "これは"
+strvar $80
+text "だ。\l@"
 
 ;fe1885
 Text_FE1885:
-%textcmd($2)
-%textvar($F6,$21)
-db "れは腐らないし、軽いから\nおなかも、へりにくいだろう。\n@"
+textfunction $2
+cmdf6 $21
+text "れは腐らないし、軽いから\lおなかも、へりにくいだろう。\l@"
 
 ;fe18a8
 Text_FE18A8:
-%textcmd($2)
-%textvar($F6,$21)
-db "れを薬にして飲むと\n@"
+textfunction $2
+cmdf6 $21
+text "れを薬にして飲むと\l@"
 
 ;fe18b9
 Text_FE18B9:
-%textcmd($2)
-%textvar($F6,$21)
-db "れをふると\n@"
+textfunction $2
+cmdf6 $21
+text "れをふると\l@"
 
 ;fe18c4
 Text_FE18C4:
-%textcmd($2)
-%textvar($F6,$21)
-db "れを続むと\n@"
+textfunction $2
+cmdf6 $21
+text "れを読むと\l@"
 
 ;fe18d0
 Text_FE18D0:
-db "しかし、なにも起きなかった。\n@"
+text "しかし、なにも起きなかった。\l@"
 
 ;fe18e1
 Text_FE18E1:
-db "普通の速さに戻った。\n@"
+text "普通の速さに戻った。\l@"
 
 ;fe18f1
 Text_FE18F1:
-db "普通の姿に戻った。\n@"
+text "普通の姿に戻った。\l@"
 
 ;fe1900
 Text_FE1900:
-db "つまずいて転んでしまった！\n@"
+text "つまずいて転んでしまった！\l@"
 
 ;fe1910
 Text_FE1910:
-db "どこにアイテムがあるかわかるぞ。\n@"
+text "どこにアイテムがあるかわかるぞ。\l@"
 
 ;fe1922
 Text_FE1922:
-db "ダンジョンが見渡せるようになるぞ。\n@"
+text "ダンジョンが見渡せるようになるぞ。\l@"
 
 ;fe1936
 Text_FE1936:
-%textcmd($2)
-%textvar($F6,$37)
-db "んと！　"
-%textvar($FB,$80)
-db "は\n@"
+textfunction $2
+cmdf6 $37
+text "んと！　"
+strvar $80
+text "は\l@"
 
 ;fe1943
 Text_FE1943:
-db "なんと！　"
-%textvar($FB,$86)
-db "は\n@"
+text "なんと！　"
+strvar $86
+text "は\l@"
 
 ;fe194d
 Text_FE194D:
-db "なんと！　アイテムは\nモンスターだった！\n@"
+text "なんと！　アイテムは\lモンスターだった！\l@"
 
 ;fe1963
 Text_FE1963:
-db "ふだんの倍の速さになった！"
-%playsound($94)
-db "　\n@"
+text "ふだんの倍の速さになった！"
+playsound $94
+text "　\l@"
 
 ;fe1977
 Text_FE1977:
-db "まっすぐ歩けなくなった！"
-%playsound($B7)
-db "　\n@"
+text "まっすぐ歩けなくなった！"
+playsound $B7
+text "　\l@"
 
 ;fe1989
 Text_FE1989:
-db "まっすぐ歩けるようになった！\n@"
+text "まっすぐ歩けるようになった！\l@"
 
 ;fe199a
 Text_FE199A:
-db "まわりのモンスターの動きが止まった。"
-%playsound($75)
-db "　\n@"
+text "まわりのモンスターの動きが止まった。"
+playsound $75
+text "　\l@"
 
 ;fe19b3
 Text_FE19B3:
-db "まわりのモンスターを止められるぞ。\n@"
+text "まわりのモンスターを止められるぞ。\l@"
 
 ;fe19c7
 Text_FE19C7:
-db "もうれつに眠くなってきた・・・"
-%playsound($96)
-db "　\n@"
+text "もうれつに眠くなってきた・・・"
+playsound $96
+text "　\l@"
 
 ;fe19dc
 Text_FE19DC:
-db "ものがちゃんと見えなくなった！"
-%playsound($B8)
-db "　\n@"
+text "ものがちゃんと見えなくなった！"
+playsound $B8
+text "　\l@"
 
 ;fe19f0
 Text_FE19F0:
-db "ものがちゃんと見えるようになった！\n@"
+text "ものがちゃんと見えるようになった！\l@"
 
 ;fe1a03
 Text_FE1A03:
-db "やっと目がさめた！\n@"
+text "やっと目がさめた！\l@"
 
 ;fe1a0e
 Text_FE1A0E:
-db "やっと目が見えるようになった！\n@"
+text "やっと目が見えるようになった！\l@"
 
 ;fe1a1f
 Text_FE1A1F:
-db "やっとはずれた！\n@"
+text "やっとはずれた！\l@"
 
 ;fe1a29
 Text_FE1A29:
-db "やっと目がさめた！\n@"
+text "やっと目がさめた！\l@"
 
 ;fe1a34
 Text_FE1A34:
-%playsound($82)
-db "　"
-%textcmd($5)
-%textcmd($2)
-%textvar($F6,$65)
-db "イテムが、すべて\nモンスターに変わってしまった。\n@"
+playsound $82
+text "　"
+textfunction $5
+textfunction $2
+cmdf6 $65
+text "イテムが、すべて\lモンスターに変わってしまった。\l@"
 
 ;fe1a58
 Text_FE1A58:
-db "ダンジョンが見わたせるようになった。\n@"
+text "ダンジョンが見わたせるようになった。\l@"
 
 ;fe1a6c
 Text_FE1A6C:
-%playsound($79)
-db "　アイテムの位置がわかった。\n@"
+playsound $79
+text "　アイテムの位置がわかった。\l@"
 
 ;fe1a80
 Text_FE1A80:
-%playsound($7A)
-db "　モンスターの位置がわかった。\n@"
+playsound $7A
+text "　モンスターの位置がわかった。\l@"
 
 ;fe1a95
 Text_FE1A95:
-%playsound($A0)
-db "　見えないものが見えるようになった！\n@"
+playsound $A0
+text "　見えないものが見えるようになった！\l@"
 
 ;fe1aab
 Text_FE1AAB:
-%playsound($82)
-db "　"
-%textcmd($5)
-%textcmd($2)
-%textvar($F6,$65)
-db "イテムの効果が、すべて\n@"
+playsound $82
+text "　"
+textfunction $5
+textfunction $2
+cmdf6 $65
+text "イテムの効果が、すべて\l@"
 
 ;fe1ac3
 Text_FE1AC3:
-%playsound($82)
-db "　"
-%textcmd($5)
-%textcmd($2)
-%textvar($F6,$A1)
-db "ンスターが、すべて\nアイテムに変わってしまった！\n@"
+playsound $82
+text "　"
+textfunction $5
+textfunction $2
+cmdf6 $A1
+text "ンスターが、すべて\lアイテムに変わってしまった！\l@"
 
 ;fe1ae7
 Text_FE1AE7:
-%playsound($82)
-db "　モンスターが、すべて死んでしまった！\n@"
+playsound $82
+text "　モンスターが、すべて死んでしまった！\l@"
 
 ;fe1aff
 Text_FE1AFF:
-db "モンスターをワープさせられるぞ。\n@"
+text "モンスターをワープさせられるぞ。\l@"
 
 ;fe1b11
 Text_FE1B11:
-db "モンスターを遠くから攻撃できるぞ。\n@"
+text "モンスターを遠くから攻撃できるぞ。\l@"
 
 ;fe1b26
 Text_FE1B26:
-db "モンスターを呼び寄せてしまうぞ。\n@"
+text "モンスターを呼び寄せてしまうぞ。\l@"
 
 ;fe1b3a
 Text_FE1B3A:
-db "モンスターを呼び寄せてしまった。"
-%playsound($78)
-db "　\n@"
+text "モンスターを呼び寄せてしまった。"
+playsound $78
+text "　\l@"
 
 ;fe1b51
 Text_FE1B51:
-db "モンスターを分裂させられるぞ。\n@"
+text "モンスターを分裂させられるぞ。\l@"
 
 ;fe1b64
 Text_FE1B64:
-db "モンスターを変身させられるぞ。\n@"
+text "モンスターを変身させられるぞ。\l@"
 
 ;fe1b77
 Text_FE1B77:
-db "モンスターを眠らせられるぞ。\n@"
+text "モンスターを眠らせられるぞ。\l@"
 
 ;fe1b88
 Text_FE1B88:
-db "トラばさみがはずれない！"
-%playsound($AC)
-db "　\n@"
+text "トラばさみがはずれない！"
+playsound $AC
+text "　\l@"
 
 ;fe1b99
 Text_FE1B99:
-%playsound($82)
-db "　一気に"
-%textvar($F9,$10)
-db "階まで下りてしまった。\n@"
+playsound $82
+text "　一気に"
+numvar $10
+text "階まで下りてしまった。\l@"
 
 ;fe1bb0
 Text_FE1BB0:
-db "見えないので続めない。\n@"
+text "見えないので読めない。\l@"
 
 ;fe1bbe
 Text_FE1BBE:
-db "口から火をふけるぞ。\n@"
+text "口から火をふけるぞ。\l@"
 
 ;fe1bcc
 Text_FE1BCC:
-db "口が使えなくなった！\n@"
+text "口が使えなくなった！\l@"
 
 ;fe1bda
 Text_FE1BDA:
-db "口が使えなくなってしまうぞ。\n@"
+text "口が使えなくなってしまうぞ。\l@"
 
 ;fe1bec
 Text_FE1BEC:
-db "最大ＨＰが"
-%textvar($F9,$10)
-db "ポイント下がった。\n@"
+text "最大ＨＰが"
+numvar $10
+text "ポイント下がった。\l@"
 
 ;fe1c01
 Text_FE1C01:
-db "最大ＨＰが"
-%textvar($F9,$10)
-db "ポイント上がった。"
-%playsound($A4)
-db "　\n@"
+text "最大ＨＰが"
+numvar $10
+text "ポイント上がった。"
+playsound $A4
+text "　\l@"
 
 ;fe1c19
 Text_FE1C19:
-db "持ち物が、いっぱいで持てない。\n@"
+text "持ち物が、いっぱいで持てない。\l@"
 
 ;fe1c2a
 Text_FE1C2A:
-db "時間が逆もどりした！\n@"
+text "時間が逆もどりした！\l@"
 
 ;fe1c38
 Text_FE1C38:
-db "呪われていた！"
-%playsound($5B)
-db "　\n@"
+text "呪われていた！"
+playsound $5B
+text "　\l@"
 
 ;fe1c45
 Text_FE1C45:
-db "盾がさびてしまった！\n@"
+text "盾がさびてしまった！\l@"
 
 ;fe1c51
 Text_FE1C51:
-db "床にワナがたくさんできてしまった！"
-%playsound($80)
-db "　\n@"
+text "床にワナがたくさんできてしまった！"
+playsound $80
+text "　\l@"
 
 ;fe1c68
 Text_FE1C68:
-%playsound($5B)
-db "　"
-%textcmd($5)
-%textcmd($2)
-%textvar($F6,$D1)
-db "備していた"
-%textvar($FB,$84)
-db "が\n呪われてしまった！\n@"
+playsound $5B
+text "　"
+textfunction $5
+textfunction $2
+cmdf6 $D1
+text "備していた"
+strvar $84
+text "が\l呪われてしまった！\l@"
 
 ;fe1c86
 Text_FE1C86:
-db "装備品に金のメッキが、なされた！\n@"
+text "装備品に金のメッキが、なされた！\l@"
 
 ;fe1c99
 Text_FE1C99:
-%textcmd($5)
-%textcmd($2)
-%textvar($F6,$D1)
-db "備していた"
-%textvar($FB,$84)
-db "の\n呪いが解けた！\n@"
+textfunction $5
+textfunction $2
+cmdf6 $D1
+text "備していた"
+strvar $84
+text "の\l呪いが解けた！\l@"
 
 ;fe1cb3
 Text_FE1CB3:
-db "装備しているものの呪いがとけるぞ。\n@"
+text "装備しているものの呪いがとけるぞ。\l@"
 
 ;fe1cc7
 Text_FE1CC7:
-db "装備している盾の性能が上がるぞ。\n@"
+text "装備している盾の性能が上がるぞ。\l@"
 
 ;fe1cdb
 Text_FE1CDB:
-db "装備している武器の性能が上がるぞ。\n@"
+text "装備している武器の性能が上がるぞ。\l@"
 
 ;fe1cf2
 Text_FE1CF2:
-db "大爆発をおこせるぞ。\n@"
+text "大爆発をおこせるぞ。\l@"
 
 ;fe1cff
 Text_FE1CFF:
-db "毒矢が飛んできた！\n@"
+text "毒矢が飛んできた！\l@"
 
 ;fe1d0d
 Text_FE1D0D:
-db "別の場所にワープした！\n@"
+text "別の場所にワープした！\l@"
 
 ;fe1d1b
 Text_FE1D1B:
-db "別の場所にワープできるぞ。\n@"
+text "別の場所にワープできるぞ。\l@"
 
 ;fe1d2b
 Text_FE1D2B:
-%textcmd($2)
-%textvar($F6,$FD)
-db "シ　眠っているモンスターの\n目をさましてしまった！\n@"
+textfunction $2
+cmdf6 $FD
+text "シ　眠っているモンスターの\l目をさましてしまった！\l@"
 
 ;fe1d4b
 Text_FE1D4B:
-db "眠ってしまうぞ。\n@"
+text "眠ってしまうぞ。\l@"
 
 ;fe1d56
 Text_FE1D56:
-db "目が見えなくなった！"
-%playsound($A2)
-db "　\n@"
+text "目が見えなくなった！"
+playsound $A2
+text "　\l@"
 
 ;fe1d65
 Text_FE1D65:
-db "目が見えなくなるぞ。\n@"
+text "目が見えなくなるぞ。\l@"
 
 ;fe1d71
 Text_FE1D71:
-db "目が見えるようになった！\n@"
+text "目が見えるようになった！\l@"
 
 ;fe1d7f
 Text_FE1D7F:
-db "矢が飛んできた！\n@"
+text "矢が飛んできた！\l@"
 
 ;fe1d8b
 Text_FE1D8B:
-db "ちからが回復した。"
-%playsound($91)
-db "　\n@"
+text "ちからが回復した。"
+playsound $91
+text "　\l@"
 
 ;fe1d9b
 Text_FE1D9B:
-db "ちからが"
-%textvar($F9,$10)
-db "ポイント上がった。"
-%playsound($92)
-db "　\n@"
+text "ちからが"
+numvar $10
+text "ポイント上がった。"
+playsound $92
+text "　\l@"
 
 ;fe1daf
 Text_FE1DAF:
-db "ちからの限界が"
-%textvar($F9,$10)
-db "ポイント上がった。"
-%playsound($93)
-db "　\n@"
+text "ちからの限界が"
+numvar $10
+text "ポイント上がった。"
+playsound $93
+text "　\l@"
 
 ;fe1dc8
 Text_FE1DC8:
-db "ちからが"
-%textvar($F9,$10)
-db "ポイント下がった。"
-%playsound($97)
-db "　\n@"
+text "ちからが"
+numvar $10
+text "ポイント下がった。"
+playsound $97
+text "　\l@"
 
 ;fe1ddc
 Text_FE1DDC:
-db "ちからの限界が"
-%textvar($F9,$10)
-db "ポイント下がった。"
-%playsound($98)
-db "　\n@"
+text "ちからの限界が"
+numvar $10
+text "ポイント下がった。"
+playsound $98
+text "　\l@"
 
 ;fe1df5
 Text_FE1DF5:
-db "ちからが回復するぞ。\n@"
+text "ちからが回復するぞ。\l@"
 
 ;fe1e03
 Text_FE1E03:
-db "ちからが上がるぞ。\n@"
+text "ちからが上がるぞ。\l@"
 
 ;fe1e0e
 Text_FE1E0E:
-db "しかし、ワープしなかった。\n@"
+text "しかし、ワープしなかった。\l@"
 
 ;fe1e1d
 Text_FE1E1D:
-db "しかし、おにぎりの効果で毒は消えた。\n@"
+text "しかし、おにぎりの効果で毒は消えた。\l@"
 
 ;fe1e35
 Text_FE1E35:
-db "しかし、おにぎりの効果で眠らなかった。\n@"
+text "しかし、おにぎりの効果で眠らなかった。\l@"
 
 ;fe1e4d
 Text_FE1E4D:
-db "しかし、腕輪の魔力がはねかえした。\n@"
+text "しかし、腕輪の魔力がはねかえした。\l@"
 
 ;fe1e61
 Text_FE1E61:
-db "しかし、メッキされた盾はさびなかった。\n@"
+text "しかし、メッキされた盾はさびなかった。\l@"
 
 ;fe1e76
 Text_FE1E76:
-db "しかし、"
-%textvar($FB,$80)
-db "はさびない。\n@"
+text "しかし、"
+strvar $80
+text "はさびない。\l@"
 
 ;fe1e84
 Text_FE1E84:
-%textcmd($5)
-%textcmd($2)
-%textvar($F6,$D1)
-db "備していた"
-%textvar($FB,$84)
-db "が\n@"
+textfunction $5
+textfunction $2
+cmdf6 $D1
+text "備していた"
+strvar $84
+text "が\l@"
 
 ;fe1e94
 Text_FE1E94:
-%textvar($FB,$80)
-db "に強化された。\n@"
+strvar $80
+text "に強化された。\l@"
 
 ;fe1ea0
 Text_FE1EA0:
-%textvar($FB,$84)
-db "の装備をはずした。"
-%playsound($56)
-db "　\n@"
+strvar $84
+text "の装備をはずした。"
+playsound $56
+text "　\l@"
 
 ;fe1eb0
 Text_FE1EB0:
-%textvar($FB,$84)
-db "の装備をはずした。"
-%playsound($58)
-db "　\n@"
+strvar $84
+text "の装備をはずした。"
+playsound $58
+text "　\l@"
 
 ;fe1ec0
 Text_FE1EC0:
-%textvar($FB,$86)
-db "は様子を見ている。\n@"
+strvar $86
+text "は様子を見ている。\l@"
 
 ;fe1ece
 Text_FE1ECE:
-db "突風だ！\n@"
+text "突風だ！\l@"
 
 ;fe1ed5
 Text_FE1ED5:
-db "・・・・・・風はおさまった。\n@"
+text "・・・・・・風はおさまった。\l@"
 
 ;fe1ee5
 Text_FE1EE5:
-db "・・・・・・さっきより強いぞ。\n@"
+text "・・・・・・さっきより強いぞ。\l@"
 
 ;fe1ef6
 Text_FE1EF6:
-%textvar($F6,$F2)
-db "すを支えきれない！\n@"
+cmdf6 $F2
+text "すを支えきれない！\l@"
 
 ;fe1f04
 Text_FE1F04:
-%textvar($FB,$81)
-db "は、風に飛ばされた。\n@"
+strvar $81
+text "は、風に飛ばされた。\l@"
 
 ;fe1f13
 Text_FE1F13:
-%textcmd($2)
-%textvar($F6,$FD)
-db "コ　ラッキー！　この識別の巻物は\nアイテムすべてを識別できた！\n@"
+textfunction $2
+cmdf6 $FD
+text "コ　ラッキー！　この識別の巻物は\lアイテムすべてを識別できた！\l@"
 
 ;fe1f3a
 Text_FE1F3A:
-db "矢を装備していない。\n@"
+text "矢を装備していない。\l@"
 
 ;fe1f47
 Text_FE1F47:
-db "このままスイッチを切って下さい。\n"
-%textcmd($2)
-%textvar($F6,$F2)
-db "＋に「冒険に出る」を選ぶと\nこの続きから始められます。\n@"
+text "このままスイッチを切って下さい。\l"
+textfunction $2
+cmdf6 $F2
+text "＋に「冒険に出る」を選ぶと\lこの続きから始められます。\l@"
 
 ;fe1f7f
 Text_FE1F7F:
-db "このままスイッチを切って下さい。\n次に「ぼうけんをする」をえらぶと\nこのつづきからはじめられます。\n@"
+text "このままスイッチを切って下さい。\l次に「ぼうけんをする」をえらぶと\lこのつづきからはじめられます。\l@"
 
 ;fe1fb4
 Text_FE1FB4:
-db "なんと！　階段は\nモンスターだった！\n@"
+text "なんと！　階段は\lモンスターだった！\l@"
 
 ;fe1fca
 Text_FE1FCA:
-db "しかし、今は目が見えない。\n@"
+text "しかし、今は目が見えない。\l@"
 
 ;fe1fd9
 Text_FE1FD9:
-db "これで遠くの敵を攻撃できる。\nあらかじめ装備しておけば\nＬボタンでうつこともできるぞ。\n@"
+text "これで遠くの敵を攻撃できる。\lあらかじめ装備しておけば\lＬボタンでうつこともできるぞ。\l@"
 
 ;fe200a
 Text_FE200A:
-db "しかしオボロ銀の盾は毒をはねかえした。\n@"
+text "しかしオボロ銀の盾は毒をはねかえした。\l@"
 
 ;fe2021
 Text_FE2021:
-%playsound($A2)
-db "　"
-%textcmd($5)
-%textcmd($2)
-%textvar($F6,$FB)
-db "デの目が\n見えなくなった。\n@"
+playsound $A2
+text "　"
+textfunction $5
+textfunction $2
+cmdf6 $FB
+text "デの目が\l見えなくなった。\l@"
 
 ;fe2039
 Text_FE2039:
-%playsound($A2)
-db "　"
-%textvar($FB,$86)
-db "と、そのまわりの\nモンスターの目が見えなくなった。\n@"
+playsound $A2
+text "　"
+strvar $86
+text "と、そのまわりの\lモンスターの目が見えなくなった。\l@"
 
 ;fe2059
 Text_FE2059:
-%textvar($FB,$80)
-db "は"
-%textvar($FB,$86)
-db "に当たった。\n@"
+strvar $80
+text "は"
+strvar $86
+text "に当たった。\l@"
 
 ;fe2067
 Text_FE2067:
-db "モンスターの位置がわかるぞ。\n@"
+text "モンスターの位置がわかるぞ。\l@"
 
 ;fe2079
 Text_FE2079:
-db "食べるとおなかがふくれるぞ。\n@"
+text "食べるとおなかがふくれるぞ。\l@"
 
 ;fe2089
 Text_FE2089:
-db "装備すると攻撃力が上がるぞ。\n@"
+text "装備すると攻撃力が上がるぞ。\l@"
 
 ;fe209a
 Text_FE209A:
-db "装備すると防御力が上がるぞ。\n@"
+text "装備すると防御力が上がるぞ。\l@"
 
 ;fe20ac
 Text_FE20AC:
-%playsound($82)
-db "　"
-%textcmd($5)
-%textcmd($2)
-%textvar($F6,$27)
-db "べてのモンスターが\nはぐれメタルになった。\n@"
+playsound $82
+text "　"
+textfunction $5
+textfunction $2
+cmdf6 $27
+text "べてのモンスターが\lはぐれメタルになった。\l@"
 
 ;fe20cc
 Text_FE20CC:
-%playsound($82)
-db "　すべてのステイタスが回復した。\n@"
+playsound $82
+text "　すべてのステイタスが回復した。\l@"
 
 ;fe20e2
 Text_FE20E2:
-%textcmd($2)
-%textvar($F6,$25)
-db "あわせの箱を持っていると\nリレミトの巻物はきかない！\n@"
+textfunction $2
+cmdf6 $25
+text "あわせの箱を持っていると\lリレミトの巻物はきかない！\l@"
 
 ;fe2103
 Text_FE2103:
-%textvar($FB,$80)
-db "は地面にはりついている。\n@"
+strvar $80
+text "は地面にはりついている。\l@"
 
 ;fe2114
 Text_FE2114:
-%textcmd($2)
-%textvar($F6,$37)
-db "んと！　"
-%textvar($FB,$80)
-db "だった。\n@"
+textfunction $2
+cmdf6 $37
+text "んと！　"
+strvar $80
+text "だった。\l@"
 
 ;fe2124
 Text_FE2124:
-db "しかし、"
-%textvar($FB,$0)
-db "は消えてしまった！\n@"
+text "しかし、"
+strvar $0
+text "は消えてしまった！\l@"
 
 ;fe2136
 Text_FE2136:
-%textcmd($2)
-%textvar($F6,$A1)
-db "ンスターに投げて飲ませると\nおどろいて、にげていくぞ。\n@"
+textfunction $2
+cmdf6 $A1
+text "ンスターに投げて飲ませると\lおどろいて、にげていくぞ。\l@"
 
 ;fe2159
 Text_FE2159:
-db "なにも落ちていない。\n@"
+text "なにも落ちていない。\l@"
 
 ;fe2166
 Text_FE2166:
-%textvar($FB,$80)
-db "の中に、\n"
-%textvar($FB,$80)
-db "を入れた。\n@"
+strvar $80
+text "の中に、\l"
+strvar $80
+text "を入れた。\l@"
 
 ;fe2176
 Text_FE2176:
-%textvar($FB,$80)
-db "の中から、\n"
-%textvar($FB,$80)
-db "を取り出した。\n@"
+strvar $80
+text "の中から、\l"
+strvar $80
+text "を取り出した。\l@"
 
 ;fe218a
 Text_FE218A:
-db "壺の中に壺は入れられない。\n@"
+text "壺の中に壺は入れられない。\l@"
 
 ;fe2199
 Text_FE2199:
-%textvar($FB,$80)
-db "が割れた。\n@"
+strvar $80
+text "が割れた。\l@"
 
 ;fe21a3
 Text_FE21A3:
-db "壺の中にはもう入らない。\n@"
+text "壺の中にはもう入らない。\l@"
 
 ;fe21b1
 Text_FE21B1:
-db "なんと！　"
-%textvar($FB,$80)
-db "だった。\n@"
+text "なんと！　"
+strvar $80
+text "だった。\l@"
 
 ;fe21be
 Text_FE21BE:
-%textvar($FB,$80)
-db "を押した。\n@"
+strvar $80
+text "を押した。\l@"
 
 ;fe21c8
 Text_FE21C8:
-db "アイテムエラー\n@"
+text "アイテムエラー\l@"
 
 ;fe21d1
 Text_FE21D1:
-%textvar($FB,$86)
-db "はハラヘリーを唱えた。\n@"
+strvar $86
+text "はハラヘリーを唱えた。\l@"
 
 ;fe21e1
 Text_FE21E1:
-%textvar($FB,$86)
-db "は呪いの呪文を唱えた。\nしかし、腕輪の魔力で呪われなかった。\n@"
+strvar $86
+text "は呪いの呪文を唱えた。\lしかし、腕輪の魔力で呪われなかった。\l@"
 
 ;fe2209
 Text_FE2209:
-%textvar($FB,$86)
-db "は仲間を呼んだ。\n@"
+strvar $86
+text "は仲間を呼んだ。\l@"
 
 ;fe2218
 Text_FE2218:
-%textvar($FB,$86)
-db "は"
-%textvar($FB,$86)
-db "に\n回復の呪文を唱えた。\n@"
+strvar $86
+text "は"
+strvar $86
+text "に\l回復の呪文を唱えた。\l@"
 
 ;fe2230
 Text_FE2230:
-db "しかし、腕輪の魔力でさびなかった。\n@"
+text "しかし、腕輪の魔力でさびなかった。\l@"
 
 ;fe2244
 Text_FE2244:
-db "しかし、腕輪の魔力で混乱しなかった。\n@"
+text "しかし、腕輪の魔力で混乱しなかった。\l@"
 
 ;fe225b
 Text_FE225B:
-%textvar($FB,$80)
-db "を落してしまった。\n@"
+strvar $80
+text "を落してしまった。\l@"
 
 ;fe2269
 Text_FE2269:
-%textvar($FB,$80)
-db "は、こわれてなくなった。"
-%playsound($59)
-db "　\n@"
+strvar $80
+text "は、こわれてなくなった。"
+playsound $59
+text "　\l@"
 
 ;fe227c
 Text_FE227C:
-%textvar($FB,$86)
-db "は目つぶしの呪文を唱えた。\n@"
+strvar $86
+text "は目つぶしの呪文を唱えた。\l@"
 
 ;fe2290
 Text_FE2290:
-db "ぬるま湯が吹き出してきた\n@"
+text "ぬるま湯が吹き出してきた\l@"
 
 ;fe22a0
 Text_FE22A0:
-db "おにぎりがぬるま湯をあびて\nデロデロになってしまった！\n@"
+text "おにぎりがぬるま湯をあびて\lデロデロになってしまった！\l@"
 
 ;fe22be
 Text_FE22BE:
-db "すべての装備がはずれてしまった！\n@"
+text "すべての装備がはずれてしまった！\l@"
 
 ;fe22d0
 Text_FE22D0:
-db "姿が見えるようになった。\n@"
+text "姿が見えるようになった。\l@"
 
 ;fe22df
 Text_FE22DF:
-%playsound($5A)
-db "　時限爆弾だ！\n@"
+playsound $5A
+text "　時限爆弾だ！\l@"
 
 ;fe22ed
 Text_FE22ED:
-db "会心の一撃！　"
-%textvar($FB,$86)
-db "に\n@"
+text "会心の一撃！　"
+strvar $86
+text "に\l@"
 
 ;fe22fc
 Text_FE22FC:
-db "痛恨の一撃！　"
-%textvar($FB,$86)
-db "から\n@"
+text "痛恨の一撃！　"
+strvar $86
+text "から\l@"
 
 ;fe230c
 Text_FE230C:
-db "復讐の一撃！　"
-%textvar($FB,$86)
-db "から\n@"
+text "復讐の一撃！　"
+strvar $86
+text "から\l@"
 
 ;fe231c
 Text_FE231C:
-db "巨大な岩石が落ちてきた！\n@"
+text "巨大な岩石が落ちてきた！\l@"
 
 ;fe232e
 Text_FE232E:
-%textvar($FB,$86)
-db "は動きが遅くなった！\n@"
+strvar $86
+text "は動きが遅くなった！\l@"
 
 ;fe233e
 Text_FE233E:
-%textvar($FB,$80)
-db "の中に入った。\n@"
+strvar $80
+text "の中に入った。\l@"
 
 ;fe2349
 Text_FE2349:
-db "壁が崩れてしまった！\n@"
+text "壁が崩れてしまった！\l@"
 
 ;fe2357
 Text_FE2357:
-db "まわりのものが崩れ落ち\n見晴らしがよくなった！"
-%playsound($88)
-db "　\n@"
+text "まわりのものが崩れ落ち\l見晴らしがよくなった！"
+playsound $88
+text "　\l@"
 
 ;fe2376
 Text_FE2376:
-%textvar($FB,$86)
-db "はモンスターに囲まれた！"
-%playsound($B1)
-db "　\n@"
+strvar $86
+text "はモンスターに囲まれた！"
+playsound $B1
+text "　\l@"
 
 ;fe238a
 Text_FE238A:
-db "光をあびた"
-%textvar($FB,$86)
-db "は\nおにぎりになってしまった！\n@"
+text "光をあびた"
+strvar $86
+text "は\lおにぎりになってしまった！\l@"
 
 ;fe23a3
 Text_FE23A3:
-%textvar($FB,$86)
-db "は目が回った！\n@"
+strvar $86
+text "は目が回った！\l@"
 
 ;fe23af
 Text_FE23AF:
-db "ものがちゃんと見えなくなった！\n@"
+text "ものがちゃんと見えなくなった！\l@"
 
 ;fe23c0
 Text_FE23C0:
-%textvar($FB,$86)
-db "は眠ってしまった！\n@"
+strvar $86
+text "は眠ってしまった！\l@"
 
 ;fe23ce
 Text_FE23CE:
-db "地面から白いガスが噴き出した！\n@"
+text "地面から白いガスが噴き出した！\l@"
 
 ;fe23e2
 Text_FE23E2:
-db "しかし、なにも装備していなかった。\n@"
+text "しかし、なにも装備していなかった。\l@"
 
 ;fe23f5
 Text_FE23F5:
-db "しかし、これ以上\n見晴らしはよくならなかった。\n@"
+text "しかし、これ以上\l見晴らしはよくならなかった。\l@"
 
 ;fe2410
 Text_FE2410:
-db "寝てるモンスターを起こしてしまった！\n@"
+text "寝てるモンスターを起こしてしまった！\l@"
 
 ;fe2426
 Text_FE2426:
-db "地面にワナがたくさんできてしまった！"
-%playsound($80)
-db "　\n@"
+text "地面にワナがたくさんできてしまった！"
+playsound $80
+text "　\l@"
 
 ;fe243e
 Text_FE243E:
-db "身代りの霊は"
-%textvar($FB,$86)
-db "を呼び寄せた。\n@"
+text "身代りの霊は"
+strvar $86
+text "を呼び寄せた。\l@"
 
 ;fe2454
 Text_FE2454:
-%textvar($FB,$80)
-db "の中身を吸い出した。\n@"
+strvar $80
+text "の中身を吸い出した。\l@"
 
 ;fe2464
 Text_FE2464:
-db "無敵状態になった。"
-%playsound($A8)
-db "　\n@"
+text "無敵状態になった。"
+playsound $A8
+text "　\l@"
 
 ;fe2476
 Text_FE2476:
-db "無敵状態ではなくなった。\n@"
+text "無敵状態ではなくなった。\l@"
 
 ;fe2488
 Text_FE2488:
-%textvar($FB,$86)
-db "は、おにぎりを食べている。\n@"
+strvar $86
+text "は、おにぎりを食べている。\l@"
 
 ;fe2499
 Text_FE2499:
-db "やっと食べ終えた。\n@"
+text "やっと食べ終えた。\l@"
 
 ;fe24a5
 Text_FE24A5:
-db "毒を受けつけなくなった！\n@"
+text "毒を受けつけなくなった！\l@"
 
 ;fe24b5
 Text_FE24B5:
-db "不眠状態になった！\n@"
+text "不眠状態になった！\l@"
 
 ;fe24c4
 Text_FE24C4:
-db "腹がへらなくなった！\n@"
+text "腹がへらなくなった！\l@"
 
 ;fe24d1
 Text_FE24D1:
-db "モンスターを起こさなくなった！\n@"
+text "モンスターを起こさなくなった！\l@"
 
 ;fe24e3
 Text_FE24E3:
-db "足元にワナを作った。\n@"
+text "足元にワナを作った。\l@"
 
 ;fe24f2
 Text_FE24F2:
-db "ここにはワナを作れない。\n@"
+text "ここにはワナを作れない。\l@"
 
 ;fe2501
 Text_FE2501:
-db "杖の効果で、"
-%textvar($FB,$86)
-db "に、\n@"
+text "杖の効果で、"
+strvar $86
+text "に、\l@"
 
 ;fe250f
 Text_FE250F:
-%playsound($9F)
-db "　"
-%textvar($FB,$86)
-db "は勝手に動き出した。\n@"
+playsound $9F
+text "　"
+strvar $86
+text "は勝手に動き出した。\l@"
 
 ;fe2523
 Text_FE2523:
-db "普通に動けるようになった。\n@"
+text "普通に動けるようになった。\l@"
 
 ;fe2535
 Text_FE2535:
-%textvar($FB,$80)
-db "をぬすんだ。\n@"
+strvar $80
+text "をぬすんだ。\l@"
 
 ;fe253f
 Text_FE253F:
-db "しかし、なにもぬすめなかった。\n@"
+text "しかし、なにもぬすめなかった。\l@"
 
 ;fe2550
 Text_FE2550:
-%playsound($A3)
-db "　識別したものを忘れてしまった！\n@"
+playsound $A3
+text "　識別したものを忘れてしまった！\l@"
 
 ;fe2566
 Text_FE2566:
-db "アイテムを拾えなくなってしまった！\n@"
+text "アイテムを拾えなくなってしまった！\l@"
 
 ;fe257a
 Text_FE257A:
-db "アイテムを拾えるようになった。\n@"
+text "アイテムを拾えるようになった。\l@"
 
 ;fe258c
 Text_FE258C:
-%textvar($FB,$86)
-db "は呪いの呪文を唱えた。\n装備中の盾が呪われた！"
-%playsound($5B)
-db "　\n@"
+strvar $86
+text "は呪いの呪文を唱えた。\l装備中の盾が呪われた！"
+playsound $5B
+text "　\l@"
 
 ;fe25af
 Text_FE25AF:
-%textvar($FB,$86)
-db "は呪いの呪文を唱えた。\n装備中のアイテムがすべて呪われた！"
-%playsound($5B)
-db "　\n@"
+strvar $86
+text "は呪いの呪文を唱えた。\l装備中のアイテムがすべて呪われた！"
+playsound $5B
+text "　\l@"
 
 ;fe25d8
 Text_FE25D8:
-%textvar($FB,$86)
-db "は呪いの呪文を唱えた。\n持っていたアイテムがすべて呪われた！"
-%playsound($5B)
-db "　\n@"
+strvar $86
+text "は呪いの呪文を唱えた。\l持っていたアイテムがすべて呪われた！"
+playsound $5B
+text "　\l@"
 
 ;fe2602
 Text_FE2602:
-%textvar($FB,$86)
-db "は"
-%textvar($FB,$86)
-db "に、\nのりうつった！\n@"
+strvar $86
+text "は"
+strvar $86
+text "に、\lのりうつった！\l@"
 
 ;fe2613
 Text_FE2613:
-%textvar($FB,$80)
-db "が、\n大きいおにぎりに変わってしまった！\n@"
+strvar $80
+text "が、\l大きいおにぎりに変わってしまった！\l@"
 
 ;fe262c
 Text_FE262C:
-%textvar($FB,$80)
-db "が、\n雑草に変わってしまった！\n@"
+strvar $80
+text "が、\l雑草に変わってしまった！\l@"
 
 ;fe2641
 Text_FE2641:
-%textvar($FB,$80)
-db "の中に、\n雑草が入ってしまった！\n@"
+strvar $80
+text "の中に、\l雑草が入ってしまった！\l@"
 
 ;fe2656
 Text_FE2656:
-%playsound($8F)
-db "　"
-%textcmd($5)
-%textcmd($2)
-%textvar($F6,$D1)
-db "備していた"
-%textvar($FB,$84)
-db "の\n呪いが解けた！\n@"
+playsound $8F
+text "　"
+textfunction $5
+textfunction $2
+cmdf6 $D1
+text "備していた"
+strvar $84
+text "の\l呪いが解けた！\l@"
 
 ;fe2673
 Text_FE2673:
-%playsound($8F)
-db "　"
-%textcmd($5)
-%textcmd($2)
-%textvar($F6,$E7)
-db "っていたアイテムの\n呪いが解けた！\n@"
+playsound $8F
+text "　"
+textfunction $5
+textfunction $2
+cmdf6 $E7
+text "っていたアイテムの\l呪いが解けた！\l@"
 
 ;fe2691
 Text_FE2691:
-db "剣がさびてしまった！\n@"
+text "剣がさびてしまった！\l@"
 
 ;fe269e
 Text_FE269E:
-db "しかし、メッキされた剣はさびなかった。\n@"
+text "しかし、メッキされた剣はさびなかった。\l@"
 
 ;fe26b4
 Text_FE26B4:
-%textvar($FB,$86)
-db "はちからつきた。\n"
-%textcmd($2)
-%textvar($F6,$25)
-db "かし、"
-%textvar($FB,$0)
-db "になって復活した。\n@"
+strvar $86
+text "はちからつきた。\l"
+textfunction $2
+cmdf6 $25
+text "かし、"
+strvar $0
+text "になって復活した。\l@"
 
 ;fe26d5
 Text_FE26D5:
-db "剣のメッキがはげてしまった！\n@"
+text "剣のメッキがはげてしまった！\l@"
 
 ;fe26e6
 Text_FE26E6:
-db "剣の合成が解けてしまった！\n@"
+text "剣の合成が解けてしまった！\l@"
 
 ;fe26f9
 Text_FE26F9:
-%cleartext()
-db "剣の『ドラゴン系モンスターに強い』\n能力が解けてしまった！\n@"
+cleartext
+text "剣の『ドラゴン系モンスターに強い』\l能力が解けてしまった！\l@"
 
 ;fe271d
 Text_FE271D:
-%cleartext()
-db "剣の『ゴースト系モンスターに強い』\n能力が解けてしまった！\n@"
+cleartext
+text "剣の『ゴースト系モンスターに強い』\l能力が解けてしまった！\l@"
 
 ;fe2741
 Text_FE2741:
-%cleartext()
-db "剣の『１ツ目モンスターに強い』\n能力が解けてしまった！\n@"
+cleartext
+text "剣の『１ツ目モンスターに強い』\l能力が解けてしまった！\l@"
 
 ;fe2762
 Text_FE2762:
-%cleartext()
-db "剣の『ステータスを吸い取る\nモンスターに強い』\n能力が解けてしまった！\n@"
+cleartext
+text "剣の『ステータスを吸い取る\lモンスターに強い』\l能力が解けてしまった！\l@"
 
 ;fe278d
 Text_FE278D:
-%cleartext()
-db "剣の『モンスターを肉にできる』\n能力が解けてしまった！\n@"
+cleartext
+text "剣の『モンスターを肉にできる』\l能力が解けてしまった！\l@"
 
 ;fe27af
 Text_FE27AF:
-%cleartext()
-db "剣の『かべを掘れる』\n能力が解けてしまった！\n@"
+cleartext
+text "剣の『かべを掘れる』\l能力が解けてしまった！\l@"
 
 ;fe27cc
 Text_FE27CC:
-%cleartext()
-db "剣の『必ず攻撃が当たる』\n能力が解けてしまった！\n@"
+cleartext
+text "剣の『必ず攻撃が当たる』\l能力が解けてしまった！\l@"
 
 ;fe27ed
 Text_FE27ED:
-%cleartext()
-db "剣の『会心の一撃がでる』\n能力が解けてしまった！\n@"
+cleartext
+text "剣の『会心の一撃がでる』\l能力が解けてしまった！\l@"
 
 ;fe280e
 Text_FE280E:
-%cleartext()
-db "剣の『前方３方向１度に攻撃できる』\n能力が解けてしまった！\n@"
+cleartext
+text "剣の『前方３方向１度に攻撃できる』\l能力が解けてしまった！\l@"
 
 ;fe2837
 Text_FE2837:
-db "盾のメッキがはげてしまった！\n@"
+text "盾のメッキがはげてしまった！\l@"
 
 ;fe2847
 Text_FE2847:
-db "盾の合成が解けてしまった！\n@"
+text "盾の合成が解けてしまった！\l@"
 
 ;fe2859
 Text_FE2859:
-%cleartext()
-db "盾の『おなかがへりにくい』\n能力が解けてしまった！\n@"
+cleartext
+text "盾の『おなかがへりにくい』\l能力が解けてしまった！\l@"
 
 ;fe2877
 Text_FE2877:
-db "\n@"
+text "\l@"
 
 ;fe2879
 Text_FE2879:
-%cleartext()
-db "盾の『さびない』\n能力が解けてしまった！\n@"
+cleartext
+text "盾の『さびない』\l能力が解けてしまった！\l@"
 
 ;fe2892
 Text_FE2892:
-db "\n@"
+text "\l@"
 
 ;fe2894
 Text_FE2894:
-%cleartext()
-db "盾の『ドラゴンの炎のちからを弱める』\n能力が解けてしまった！\n@"
+cleartext
+text "盾の『ドラゴンの炎のちからを弱める』\l能力が解けてしまった！\l@"
 
 ;fe28b9
 Text_FE28B9:
-%cleartext()
-db "盾の『受けたダメージを\n相手に半分返す』\n能力が解けてしまった！\n@"
+cleartext
+text "盾の『受けたダメージを\l相手に半分返す』\l能力が解けてしまった！\l@"
 
 ;fe28e4
 Text_FE28E4:
-%cleartext()
-db "盾の『魔法攻撃を跳ね返す』\n能力が解けてしまった！\n@"
+cleartext
+text "盾の『魔法攻撃を跳ね返す』\l能力が解けてしまった！\l@"
 
 ;fe2907
 Text_FE2907:
-%cleartext()
-db "盾の『敵の攻撃が当たりにくい』\n能力が解けてしまった！\n@"
+cleartext
+text "盾の『敵の攻撃が当たりにくい』\l能力が解けてしまった！\l@"
 
 ;fe292a
 Text_FE292A:
-db "\n@"
+text "\l@"
 
 ;fe292c
 Text_FE292C:
-%cleartext()
-db "盾の『爆発のダメージを少なくする』\n能力が解けてしまった！\n@"
+cleartext
+text "盾の『爆発のダメージを少なくする』\l能力が解けてしまった！\l@"
 
 ;fe2950
 Text_FE2950:
-%cleartext()
-db "盾の『ぬすまれない』\n能力が解けてしまった！\n@"
+cleartext
+text "盾の『ぬすまれない』\l能力が解けてしまった！\l@"
 
 ;fe296b
 Text_FE296B:
-db "アイテムが拾えない！\n@"
+text "アイテムが拾えない！\l@"
 
 ;fe2978
 Text_FE2978:
-%playsound($35)
-db "　"
-%textvar($FB,$86)
-db "は、レベルが上がって\n@"
+playsound $35
+text "　"
+strvar $86
+text "は、レベルが上がって\l@"
 
 ;fe2989
 Text_FE2989:
-%textvar($FB,$86)
-db "になった。\n@"
+strvar $86
+text "になった。\l@"
 
 ;fe2992
 Text_FE2992:
-%playsound($9E)
-db "　"
-%textvar($FB,$86)
-db "は、レベルが下がって\n@"
+playsound $9E
+text "　"
+strvar $86
+text "は、レベルが下がって\l@"
 
 ;fe29a3
 Text_FE29A3:
-%textcmd($5)
-%textcmd($2)
-db "@"
+textfunction $5
+textfunction $2
+text "@"
 
 ;fe29a8
 Text_FE29A8:
-db "拾うだけで識別できるようになった！\n@"
+text "拾うだけで識別できるようになった！\l@"
 
 ;fe29bd
 Text_FE29BD:
-%textcmd($2)
-%textvar($F6,$C3)
-%textvar($FB,$88)
-db "・・・』\nと、むなしくこだました。\n@"
+textfunction $2
+cmdf6 $C3
+strvar $88
+text "・・・』\lと、むなしくこだました。\l@"
 
 ;fe29d6
 Text_FE29D6:
-db "しかし、巻物は白紙だった。\n@"
+text "しかし、巻物は白紙だった。\l@"
 
 ;fe29e7
 Text_FE29E7:
-%textvar($FB,$86)
-db "は、眠っている。\n@"
+strvar $86
+text "は、眠っている。\l@"
 
 ;fe29f4
 Text_FE29F4:
-%textvar($FB,$86)
-db "の守備力が下がった。\n@"
+strvar $86
+text "の守備力が下がった。\l@"
 
 ;fe2a03
 Text_FE2A03:
-%textvar($FB,$86)
-db "の守備力が０になった。\n@"
+strvar $86
+text "の守備力が０になった。\l@"
 
 ;fe2a13
 Text_FE2A13:
-%textvar($FB,$86)
-db "の特技は封印された。\n@"
+strvar $86
+text "の特技は封印された。\l@"
 
 ;fe2a25
 Text_FE2A25:
-db "ここは、掘れない。\n@"
+text "ここは、掘れない。\l@"
 
 ;fe2a31
 Text_FE2A31:
-%textvar($FB,$86)
-db "は、特技が封印された。\n@"
+strvar $86
+text "は、特技が封印された。\l@"
 
 ;fe2a44
 Text_FE2A44:
-db "サビるものを装備していなかった。\n@"
+text "サビるものを装備していなかった。\l@"
 
 ;fe2a56
 Text_FE2A56:
-db "モンスターハウスだ！！\n@"
+text "モンスターハウスだ！！\l@"
 
 ;fe2a63
 Text_FE2A63:
-db "どろぼうハウスだ！！\n@"
+text "どろぼうハウスだ！！\l@"
 
 ;fe2a6f
 Text_FE2A6F:
-db "ドレインハウスだ！！\n@"
+text "ドレインハウスだ！！\l@"
 
 ;fe2a7b
 Text_FE2A7B:
-db "１ッ目ハウスだ！！\n@"
+text "１ッ目ハウスだ！！\l@"
 
 ;fe2a86
 Text_FE2A86:
-db "ゴーストハウスだ！！\n@"
+text "ゴーストハウスだ！！\l@"
 
 ;fe2a92
 Text_FE2A92:
-db "パワーハウスだ！！\n@"
+text "パワーハウスだ！！\l@"
 
 ;fe2a9d
 Text_FE2A9D:
-db "番犬隊だ！！\n@"
+text "番犬隊だ！！\l@"
 
 ;fe2aa7
 Text_FE2AA7:
-db "落し穴に足を踏み入れた！\n@"
+text "落し穴に足を踏み入れた！\l@"
 
 ;fe2ab9
 Text_FE2AB9:
-db "トラばさみにひっかかった！\n@"
+text "トラばさみにひっかかった！\l@"
 
 ;fe2ac8
 Text_FE2AC8:
-db "バネの上に乗った！\n@"
+text "バネの上に乗った！\l@"
 
 ;fe2ad4
 Text_FE2AD4:
-db "毒矢の罠を踏んでしまった！\n@"
+text "毒矢の罠を踏んでしまった！\l@"
 
 ;fe2ae7
 Text_FE2AE7:
-db "スイッチを踏む音がした！"
-%playsound($5A)
-db "　\n@"
+text "スイッチを踏む音がした！"
+playsound $5A
+text "　\l@"
 
 ;fe2afa
 Text_FE2AFA:
-db "地雷を踏んでしまった！"
-%playsound($5A)
-db "　\n@"
+text "地雷を踏んでしまった！"
+playsound $5A
+text "　\l@"
 
 ;fe2b0c
 Text_FE2B0C:
-db "地面にデッパリがあった！\n@"
+text "地面にデッパリがあった！\l@"
 
 ;fe2b1b
 Text_FE2B1B:
-db "警報スイッチを踏んでしまった！"
-%playsound($5A)
-db "　\n@"
+text "警報スイッチを踏んでしまった！"
+playsound $5A
+text "　\l@"
+
 
 ;fe2b32
 Text_FE2B32:
-db "召還スイッチを踏んでしまった！"
-%playsound($5A)
-db "　\n@"
+text "召喚スイッチを踏んでしまった！"
+playsound $5A
+text "　\l@"
 
 ;fe2b49
 Text_FE2B49:
-db "大部屋スイッチを踏んでしまった！"
-%playsound($5A)
-db "　\n@"
+text "大部屋スイッチを踏んでしまった！"
+playsound $5A
+text "　\l@"
 
 ;fe2b60
 Text_FE2B60:
-db "回転盤の上に乗った！\n@"
+text "回転盤の上に乗った！\l@"
 
 ;fe2b70
 Text_FE2B70:
-db "へんな装置を踏んでしまった！\n@"
+text "へんな装置を踏んでしまった！\l@"
 
 ;fe2b82
 Text_FE2B82:
-db "へんなスイッチを踏んでしまった！"
-%playsound($5A)
-db "　\n@"
+text "へんなスイッチを踏んでしまった！"
+playsound $5A
+text "　\l@"
 
 ;fe2b98
 Text_FE2B98:
-db "大型地雷を踏んでしまった！"
-%playsound($5A)
-db "　\n@"
+text "大型地雷を踏んでしまった！"
+playsound $5A
+text "　\l@"
 
 ;fe2bad
 Text_FE2BAD:
-db "しかし、落ちずにすんだ。\n@"
+text "しかし、落ちずにすんだ。\l@"
 
 ;fe2bbc
 Text_FE2BBC:
-db "しかし、スルリと抜けた。\n@"
+text "しかし、スルリと抜けた。\l@"
 
 ;fe2bcb
 Text_FE2BCB:
-db "しかし、仕掛けは動かなかった。\n@"
+text "しかし、仕掛けは動かなかった。\l@"
 
 ;fe2bdf
 Text_FE2BDF:
-db "しかし、うまくかわした。\n@"
+text "しかし、うまくかわした。\l@"
 
 ;fe2bed
 Text_FE2BED:
-db "しかし、地雷は爆発しなかった。\n@"
+text "しかし、地雷は爆発しなかった。\l@"
 
 ;fe2c00
 Text_FE2C00:
-db "しかし、たいしたことはなかった。\n@"
+text "しかし、たいしたことはなかった。\l@"
 
 ;fe2c12
 Text_FE2C12:
-db "しかし、特にかわりはないようだ。\n@"
+text "しかし、特にかわりはないようだ。\l@"
 
 ;fe2c25
 Text_FE2C25:
-db "しかし、大型地雷は爆発しなかった。\n@"
+text "しかし、大型地雷は爆発しなかった。\l@"
 
 ;fe2c3b
 Text_FE2C3B:
-db "－－－－小話その１－－－－\nそこで、妖刀かまいたちを\n装備してるのって・・・\n"
-%textcmd($2)
-%textvar($F6,$F2)
-db "ヒ井達？"
-%playsound($A7)
-db "　\n@"
+text "－－－－小話その１－－－－\lそこで、妖刀かまいたちを\l装備してるのって・・・\l"
+textfunction $2
+cmdf6 $F2
+text "ヒ井達？"
+playsound $A7
+text "　\l@"
 
 ;fe2c75
 Text_FE2C75:
-%textcmd($2)
-%textvar($F6,$FB)
-db "デはずっこけた。\n@"
+textfunction $2
+cmdf6 $FB
+text "デはずっこけた。\l@"
 
 ;fe2c83
 Text_FE2C83:
-%textcmd($2)
-%textvar($F6,$FD)
-db "サ　"
-%textvar($FB,$86)
-db "は固まった。\n@"
+textfunction $2
+cmdf6 $FD
+text "サ　"
+strvar $86
+text "は固まった。\l@"
 
 ;fe2c94
 Text_FE2C94:
-%textcmd($2)
-%textvar($F6,$FB)
-db "デは怒りだした。\n@"
+textfunction $2
+cmdf6 $FB
+text "デは怒りだした。\l@"
 
 ;fe2ca3
 Text_FE2CA3:
-%playsound($A8)
-db "　"
-%textvar($FB,$86)
-db "は無敵になった。\n@"
+playsound $A8
+text "　"
+strvar $86
+text "は無敵になった。\l@"
 
 ;fe2cb4
 Text_FE2CB4:
-%playsound($9C)
-db "　"
-%textvar($FB,$86)
-db "は生き返った。\n@"
+playsound $9C
+text "　"
+strvar $86
+text "は生き返った。\l@"
 
 ;fe2cc3
 Text_FE2CC3:
-%playsound($9D)
-db "　"
-%textvar($FB,$86)
-db "の姿が見えなくなった。\n@"
+playsound $9D
+text "　"
+strvar $86
+text "の姿が見えなくなった。\l@"
 
 ;fe2cd6
 Text_FE2CD6:
-%playsound($9F)
-db "　"
-%textvar($FB,$86)
-db "は\nバーサーカー状態になった。\n@"
+playsound $9F
+text "　"
+strvar $86
+text "は\lバーサーカー状態になった。\l@"
 
 ;fe2cee
 Text_FE2CEE:
-%playsound($A3)
-db "　識別したものを忘れてしまった。\n@"
+playsound $A3
+text "　識別したものを忘れてしまった。\l@"
 
 ;fe2d04
 Text_FE2D04:
-db "マップを忘れてしまった。\n@"
+text "マップを忘れてしまった。\l@"
 
 ;fe2d13
 Text_FE2D13:
-%textvar($FB,$86)
-db "の存在が封じられた。\n@"
+strvar $86
+text "の存在が封じられた。\l@"
 
 ;fe2d24
 Text_FE2D24:
-%textcmd($2)
-%textvar($F6,$21)
-db "の巻物は続まずに敵に投げること\nするとその敵が出て来なくなる。\n@"
+textfunction $2
+cmdf6 $21
+text "の巻物は読まずに敵に投げること\lするとその敵が出て来なくなる。\l@"
 
 ;fe2d4d
 Text_FE2D4D:
-%playsound($83)
-db "　モンスターの速さが２倍になった。\n@"
+playsound $83
+text "　モンスターの速さが２倍になった。\l@"
 
 ;fe2d64
 Text_FE2D64:
-db "動きが遅くなってしまった。\n@"
+text "動きが遅くなってしまった。\l@"
 
 ;fe2d75
 Text_FE2D75:
-db "十字キーで８方向に移動する。\nＡボタンでモンスターに攻撃できる。\n@"
+text "十字キーで８方向に移動する。\lＡボタンでモンスターに攻撃できる。\l@"
 
 ;fe2d9f
 Text_FE2D9F:
-db "Ｒボタンを押しながらだと、十字キーで\nナナメだけに動ける。\n@"
+text "Ｒボタンを押しながらだと、十字キーで\lナナメだけに動ける。\l@"
 
 ;fe2dc3
 Text_FE2DC3:
-db "Ｘボタンでウインドウが開く。\nＡボタンで決定、Ｂボタンでキャンセル。\n@"
+text "Ｘボタンでウインドウが開く。\lＡボタンで決定、Ｂボタンでキャンセル。\l@"
 
 ;fe2ded
 Text_FE2DED:
-db "Ｂボタンで速く移動する。\n同時にＡボタンで速く回復する。\n@"
+text "Ｂボタンで速く移動する。\l同時にＡボタンで速く回復する。\l@"
 
 ;fe2e14
 Text_FE2E14:
-db "Ｙボタンを押しながらだと、十字キーで\n動かずに向きだけをかえられる。\n@"
+text "Ｙボタンを押しながらだと、十字キーで\l動かずに向きだけをかえられる。\l@"
 
 ;fe2e3e
 Text_FE2E3E:
-db "セレクトボタンをおしているあいだ、\nマップだけを見ることができる。\n@"
+text "セレクトボタンをおしているあいだ、\lマップだけを見ることができる。\l@"
 
 ;fe2e61
 Text_FE2E61:
-db "Ｌボタンで装備している矢をうてる。\nＹボタンで持ち物を整頓できる。\n@"
+text "Ｌボタンで装備している矢をうてる。\lＹボタンで持ち物を整頓できる。\l@"

@@ -12,22 +12,34 @@ rom := shiren.sfc
 
 # Programs
 ifeq ($(WINDOWS),1)
-  WINE :=
   SHA1SUM := sha1sum
 else
-  WINE ?= wine
   SHA1SUM := shasum
 endif
-ASAR := tools/asar
 
-
+OBJS = main.o
 
 #Default target
 default: all
 
-all:
-	$(ASAR) main.asm $(rom)
-	$(SHA1SUM) -c shiren.sha1
+all: $(rom)
 
 clean:
-	rm $(rom)
+	rm $(rom) $(OBJS)
+
+#spc:
+#	make -C spc/
+
+
+#ifeq (,$(filter clean spc,$(MAKECMDGOALS)))
+
+#$(info $(shell make -C spc))
+
+#endif
+
+%.o: %.asm
+	wla-65816 -o $@ $<
+
+$(rom): $(OBJS)
+	wlalink -S linkfile $@
+	$(SHA1SUM) -c shiren.sha1

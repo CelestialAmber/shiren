@@ -1,1 +1,1 @@
-incsrc "macros/text.asm"
+.inc "macros/text.asm"
