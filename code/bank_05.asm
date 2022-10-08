@@ -7126,7 +7126,6 @@ CODE_C5CC1E:
 	rep #$30                             ;C5CC25|C230    |      ;  
 	ldy.w #$01BE                         ;C5CC27|A0BE01  |      ;  
 	lda.w #$FF00                         ;C5CC2A|A900FF  |      ;  
-
 CODE_C5CC2D:
 	sta.w $AC96,y                        ;C5CC2D|9996AC  |7FAC96;  
 	sta.w $AE5A,y                        ;C5CC30|995AAE  |7FAE5A;  
@@ -7155,21 +7154,20 @@ CODE_C5CC2D:
 	sta.b $02                   ;C5CC68|8502    |000002;  
 	ldx.w #$B05E                         ;C5CC6A|A25EB0  |      ;  
 	stx.b $04                   ;C5CC6D|8604    |000004;  
-	jsl.l CODE_C5F094                    ;C5CC6F|2294F0C5|C5F094;  
+	jsl.l CODE_C5F094  ;decompress the old style font numbers graphics  ;C5CC6F|2294F0C5|C5F094;  
 	ldx.w #$F5D4                         ;C5CC73|A2D4F5  |      ;  
 	stx.b $00                            ;C5CC76|8600    |000000;  
 	jsl.l func_808619                    ;C5CC78|22198680|808619;  
 	plb                                  ;C5CC7C|AB      |      ;  
 	ldx.w #$057E                         ;C5CC7D|A27E05  |      ;  
 	lda.w #$22A0                         ;C5CC80|A9A022  |      ;  
-
 CODE_C5CC83:
 	sta.w $D85E,x                        ;C5CC83|9D5ED8  |7FD85E;  
 	dex                                  ;C5CC86|CA      |      ;  
 	dex                                  ;C5CC87|CA      |      ;  
 	bpl CODE_C5CC83                      ;C5CC88|10F9    |C5CC83;  
 	jsl.l CODE_C62792                    ;C5CC8A|229227C6|C62792;  
-	stz.b $01                            ;C5CC8E|6401    |000001;  
+	stz.b w0001                            ;C5CC8E|6401    |000001;  
 	ldx.b $00                            ;C5CC90|A600    |000000;  
 	lda.l UNREACH_C5CEFA,x               ;C5CC92|BFFACEC5|C5CEFA;  
 	and.w #$00FF                         ;C5CC96|29FF00  |      ;  
@@ -7189,27 +7187,25 @@ CODE_C5CC83:
 	pha                                  ;C5CCB2|48      |      ;  
 	sec                                  ;C5CCB3|38      |      ;  
 	sbc.b $06                            ;C5CCB4|E506    |000006;  
-	stz.b $01                            ;C5CCB6|6401    |000001;  
+	stz.b w0001                            ;C5CCB6|6401    |000001;  
 	ldx.b $00                            ;C5CCB8|A600    |000000;  
 	beq CODE_C5CCEB                      ;C5CCBA|F02F    |C5CCEB;  
 	pha                                  ;C5CCBC|48      |      ;  
 	jsl.l CODE_C62771                    ;C5CCBD|227127C6|C62771;  
 	tdc                                  ;C5CCC1|7B      |      ;  
 	tay                                  ;C5CCC2|A8      |      ;  
-	stz.b $01                            ;C5CCC3|6401    |000001;  
+	stz.b w0001                            ;C5CCC3|6401    |000001;  
 	lda.b $00                            ;C5CCC5|A500    |000000;  
 	cmp.w #$000A                         ;C5CCC7|C90A00  |      ;  
 	bcs CODE_C5CCCF                      ;C5CCCA|B003    |C5CCCF;  
 	plx                                  ;C5CCCC|FA      |      ;  
 	bra CODE_C5CCE8                      ;C5CCCD|8019    |C5CCE8;  
-
 CODE_C5CCCF:
 	sec                                  ;C5CCCF|38      |      ;  
 	sbc.w #$000A                         ;C5CCD0|E90A00  |      ;  
 	bcc CODE_C5CCD8                      ;C5CCD3|9003    |C5CCD8;  
 	iny                                  ;C5CCD5|C8      |      ;  
 	bra CODE_C5CCCF                      ;C5CCD6|80F7    |C5CCCF;  
-
 CODE_C5CCD8:
 	adc.w #$000A                         ;C5CCD8|690A00  |      ;  
 	plx                                  ;C5CCDB|FA      |      ;  
@@ -7223,17 +7219,14 @@ CODE_C5CCD8:
 	jsr.w CODE_C5CDB0                    ;C5CCE3|20B0CD  |C5CDB0;  
 	plx                                  ;C5CCE6|FA      |      ;  
 	pla                                  ;C5CCE7|68      |      ;  
-
 CODE_C5CCE8:
 	jsr.w CODE_C5CDB0                    ;C5CCE8|20B0CD  |C5CDB0;  
-
 CODE_C5CCEB:
 	ply                                  ;C5CCEB|7A      |      ;  
 	plx                                  ;C5CCEC|FA      |      ;  
 	lda.w #$B05E                         ;C5CCED|A95EB0  |      ;  
 	sta.b $04                   ;C5CCF0|8504    |000004;  
 	stz.b $06                            ;C5CCF2|6406    |000006;  
-
 CODE_C5CCF4:
 	lda.l UNREACH_C5CDCF,x               ;C5CCF4|BFCFCDC5|C5CDCF;  
 	and.w #$00FF                         ;C5CCF8|29FF00  |      ;  
@@ -7246,7 +7239,6 @@ CODE_C5CCF4:
 	adc.b $00                            ;C5CD07|6500    |000000;  
 	tay                                  ;C5CD09|A8      |      ;  
 	bra CODE_C5CD37                      ;C5CD0A|802B    |C5CD37;  
-
 CODE_C5CD0C:
 	phx                                  ;C5CD0C|DA      |      ;  
 	asl a                                ;C5CD0D|0A      |      ;  
@@ -7273,7 +7265,6 @@ CODE_C5CD0C:
 	sta.b $04                   ;C5CD33|8504    |000004;  
 	ply                                  ;C5CD35|7A      |      ;  
 	plx                                  ;C5CD36|FA      |      ;  
-
 CODE_C5CD37:
 	inx                                  ;C5CD37|E8      |      ;  
 	cpy.w #$013C                         ;C5CD38|C03C01  |      ;  
@@ -7290,7 +7281,7 @@ CODE_C5CD37:
 	stx.b $00                            ;C5CD57|8600    |000000;  
 	jsl.l func_808619                    ;C5CD59|22198680|808619;  
 	jsl.l CODE_C62792                    ;C5CD5D|229227C6|C62792;  
-	stz.b $01                            ;C5CD61|6401    |000001;  
+	stz.b w0001                            ;C5CD61|6401    |000001;  
 	ldx.b $00                            ;C5CD63|A600    |000000;  
 	lda.l UNREACH_C5CEFA,x               ;C5CD65|BFFACEC5|C5CEFA;  
 	and.w #$00FF                         ;C5CD69|29FF00  |      ;  
@@ -7303,7 +7294,7 @@ CODE_C5CD74:
 	jsl.l CODE_C62B37                    ;C5CD75|22372BC6|C62B37;  
 	pla                                  ;C5CD79|68      |      ;  
 	tsb.b $00                            ;C5CD7A|0400    |000000;  
-	sta.b $01                            ;C5CD7C|8501    |000001;  
+	sta.b w0001                            ;C5CD7C|8501    |000001;  
 	plp                                  ;C5CD7E|28      |      ;  
 	rtl                                  ;C5CD7F|6B      |      ;  
 
@@ -8942,7 +8933,7 @@ CODE_C5E5CE:
 	php                                  ;C5E5CE|08      |      ;  
 	sep #$30                             ;C5E5CF|E230    |      ;  
 	jsr.w CODE_C5E4CE                    ;C5E5D1|20CEE4  |C5E4CE;  
-	lda.b $01                            ;C5E5D4|A501    |000001;  
+	lda.b w0001                            ;C5E5D4|A501    |000001;  
 	sta.l $7FDE2E,x                      ;C5E5D6|9F2EDE7F|7FDE2E;  
 	plp                                  ;C5E5DA|28      |      ;  
 	rtl                                  ;C5E5DB|6B      |      ;  
@@ -9230,7 +9221,7 @@ CODE_C5E837:
 	phb                                  ;C5E83A|8B      |      ;  
 	jsl.l CODE_C4C1AA                    ;C5E83B|22AAC1C4|C4C1AA;  
 	plb                                  ;C5E83F|AB      |      ;  
-	stz.b $01                            ;C5E840|6401    |000001;  
+	stz.b w0001                            ;C5E840|6401    |000001;  
 	bra CODE_C5E857                      ;C5E842|8013    |C5E857;  
 	.db $08,$C2,$30,$64,$01,$80,$0C       ;C5E844|        |      ;  
 
@@ -9848,7 +9839,7 @@ CODE_C5ED43:
 	sta.b $07                            ;C5ED4F|8507    |000007;  
 	tyx                                  ;C5ED51|BB      |      ;  
 	lda.b #$02                           ;C5ED52|A902    |      ;  
-	sta.b $01                            ;C5ED54|8501    |000001;  
+	sta.b w0001                            ;C5ED54|8501    |000001;  
 	lda.l $7FDEA6,x                      ;C5ED56|BFA6DE7F|7FDEA6;  
 	clc                                  ;C5ED5A|18      |      ;  
 	adc.l $7FDECA,x                      ;C5ED5B|7FCADE7F|7FDECA;  
@@ -9867,7 +9858,7 @@ CODE_C5ED43:
 CODE_C5ED77:
 	rep #$10                             ;C5ED77|C210    |      ;  
 	lda.b #$00                           ;C5ED79|A900    |      ;  
-	sta.b $01                            ;C5ED7B|8501    |000001;  
+	sta.b w0001                            ;C5ED7B|8501    |000001;  
 	lda.b $02                   ;C5ED7D|A502    |000002;  
 	bne CODE_C5ED9B                      ;C5ED7F|D01A    |C5ED9B;  
 	ldy.w #$20D3                         ;C5ED81|A0D320  |      ;  
@@ -10022,7 +10013,7 @@ CODE_C5EE88:
 	bpl CODE_C5EE61                      ;C5EE8A|10D5    |C5EE61;  
 
 CODE_C5EE8C:
-	lda.b $01,s                          ;C5EE8C|A301    |000001;  
+	lda.b w0001,s                          ;C5EE8C|A301    |000001;  
 	sta.b $00                            ;C5EE8E|8500    |000000;  
 	stz.b $02                   ;C5EE90|6402    |000002;  
 	phb                                  ;C5EE92|8B      |      ;  
@@ -10079,7 +10070,7 @@ CODE_C5EECA:
 	sbc.w $DED6,x                        ;C5EEE9|FDD6DE  |7FDED6;  
 	cmp.w #$0020                         ;C5EEEC|C92000  |      ;  
 	bpl CODE_C5EEFD                      ;C5EEEF|100C    |C5EEFD;  
-	lda.b $01,s                          ;C5EEF1|A301    |000001;  
+	lda.b w0001,s                          ;C5EEF1|A301    |000001;  
 	sta.b $00                            ;C5EEF3|8500    |000000;  
 	phb                                  ;C5EEF5|8B      |      ;  
 	jsl.l CODE_C5ECF0                    ;C5EEF6|22F0ECC5|C5ECF0;  
@@ -10150,7 +10141,7 @@ CODE_C5EF48:
 	clc                                  ;C5EF5E|18      |      ;  
 	adc.w $DECA,x                        ;C5EF5F|7DCADE  |7FDECA;  
 	adc.b #$0D                           ;C5EF62|690D    |      ;  
-	sta.b $01                            ;C5EF64|8501    |000001;  
+	sta.b w0001                            ;C5EF64|8501    |000001;  
 	tdc                                  ;C5EF66|7B      |      ;  
 	lda.w $DED6,x                        ;C5EF67|BDD6DE  |7FDED6;  
 	clc                                  ;C5EF6A|18      |      ;  
@@ -10165,7 +10156,7 @@ CODE_C5EF48:
 CODE_C5EF79:
 	dec a                                ;C5EF79|3A      |      ;  
 	xba                                  ;C5EF7A|EB      |      ;  
-	lda.b $01                            ;C5EF7B|A501    |000001;  
+	lda.b w0001                            ;C5EF7B|A501    |000001;  
 	cmp.w $AE9B,y                        ;C5EF7D|D99BAE  |7FAE9B;  
 	bcc CODE_C5EF85                      ;C5EF80|9003    |C5EF85;  
 	sta.w $AE9B,y                        ;C5EF82|999BAE  |7FAE9B;  
@@ -10196,7 +10187,7 @@ CODE_C5EF98:
 	sta.w $AE9C,y                        ;C5EFA4|999CAE  |7FAE9C;  
 
 CODE_C5EFA7:
-	lda.b $01                            ;C5EFA7|A501    |000001;  
+	lda.b w0001                            ;C5EFA7|A501    |000001;  
 	cmp.w $AE9D,y                        ;C5EFA9|D99DAE  |7FAE9D;  
 	bcc CODE_C5EFB1                      ;C5EFAC|9003    |C5EFB1;  
 	sta.w $AE9D,y                        ;C5EFAE|999DAE  |7FAE9D;  
@@ -10315,6 +10306,7 @@ CODE_C5F088:
 	plp                                  ;C5F092|28      |      ;  
 	rtl                                  ;C5F093|6B      |      ;  
 
+;used for decompressing the old style font
 CODE_C5F094:
 	php                                  ;C5F094|08      |      ;  
 	sep #$20                             ;C5F095|E220    |      ;  
@@ -10324,7 +10316,6 @@ CODE_C5F094:
 	plb                                  ;C5F09C|AB      |      ;  
 	lda.b [$00]                          ;C5F09D|A700    |000000;  
 	ldy.w #$0001                         ;C5F09F|A00100  |      ;  
-
 CODE_C5F0A2:
 	pha                                  ;C5F0A2|48      |      ;  
 	jsr.w CODE_C5F0AC                    ;C5F0A3|20ACF0  |C5F0AC;  
@@ -10332,8 +10323,9 @@ CODE_C5F0A2:
 	dec a                                ;C5F0A7|3A      |      ;  
 	bpl CODE_C5F0A2                      ;C5F0A8|10F8    |C5F0A2;  
 	plp                                  ;C5F0AA|28      |      ;  
-	rtl                                  ;C5F0AB|6B      |      ;  
+	rtl                                  ;C5F0AB|6B      |      ; 
 
+	
 CODE_C5F0AC:
 	ldx.b $04                   ;C5F0AC|A604    |000004;  
 	txa                                  ;C5F0AE|8A      |      ;  
@@ -10342,7 +10334,6 @@ CODE_C5F0AC:
 	sta.b $04                   ;C5F0B2|8504    |000004;  
 	bcc CODE_C5F0B8                      ;C5F0B4|9002    |C5F0B8;  
 	inc.b $05                            ;C5F0B6|E605    |000005;  
-
 CODE_C5F0B8:
 	lda.b [$00],y                        ;C5F0B8|B700    |000000;  
 	iny                                  ;C5F0BA|C8      |      ;  
@@ -10355,7 +10346,6 @@ CODE_C5F0B8:
 	sta.b $E5                            ;C5F0C8|85E5    |0000E5;  
 	bcc CODE_C5F0F5                      ;C5F0CA|9029    |C5F0F5;  
 	jmp.w CODE_C5F181                    ;C5F0CC|4C81F1  |C5F181;  
-
 CODE_C5F0CF:
 	lsr a                                ;C5F0CF|4A      |      ;  
 	sta.b $E5                            ;C5F0D0|85E5    |0000E5;  
@@ -10368,25 +10358,20 @@ CODE_C5F0CF:
 	sta.b $04                   ;C5F0DD|8504    |000004;  
 	bcc CODE_C5F0E3                      ;C5F0DF|9002    |C5F0E3;  
 	inc.b $05                            ;C5F0E1|E605    |000005;  
-
 CODE_C5F0E3:
 	lsr.b $E5                            ;C5F0E3|46E5    |0000E5;  
 	bcs CODE_C5F0EE                      ;C5F0E5|B007    |C5F0EE;  
 	lsr.b $E5                            ;C5F0E7|46E5    |0000E5;  
 	bcc CODE_C5F0F5                      ;C5F0E9|900A    |C5F0F5;  
 	jmp.w CODE_C5F181                    ;C5F0EB|4C81F1  |C5F181;  
-
 CODE_C5F0EE:
 	lsr.b $E5                            ;C5F0EE|46E5    |0000E5;  
 	bcc CODE_C5F0F8                      ;C5F0F0|9006    |C5F0F8;  
 	jmp.w CODE_C5F1AB                    ;C5F0F2|4CABF1  |C5F1AB;  
-
 CODE_C5F0F5:
 	jmp.w CODE_C5F118                    ;C5F0F5|4C18F1  |C5F118;  
-
 CODE_C5F0F8:
 	jmp.w CODE_C5F0FB                    ;C5F0F8|4CFBF0  |C5F0FB;  
-
 CODE_C5F0FB:
 	rep #$20                             ;C5F0FB|C220    |      ;  
 	stz.w $0000,x                        ;C5F0FD|9E0000  |7F0000;  
@@ -10399,7 +10384,6 @@ CODE_C5F0FB:
 	stz.w $000E,x                        ;C5F112|9E0E00  |7F000E;  
 	sep #$20                             ;C5F115|E220    |      ;  
 	rts                                  ;C5F117|60      |      ;  
-
 CODE_C5F118:
 	rep #$20                             ;C5F118|C220    |      ;  
 	tya                                  ;C5F11A|98      |      ;  
@@ -10407,7 +10391,6 @@ CODE_C5F118:
 	adc.b $00                            ;C5F11C|6500    |000000;  
 	bcc CODE_C5F122                      ;C5F11E|9002    |C5F122;  
 	.db $E6,$02                           ;C5F120|        |000002;  
-
 CODE_C5F122:
 	tay                                  ;C5F122|A8      |      ;  
 	sep #$20                             ;C5F123|E220    |      ;  
@@ -10443,14 +10426,12 @@ CODE_C5F122:
 	stz.w $000D,x                        ;C5F17A|9E0D00  |7F000D;  
 	stz.w $000F,x                        ;C5F17D|9E0F00  |7F000F;  
 	rts                                  ;C5F180|60      |      ;  
-
 CODE_C5F181:
 	lda.b #$08                           ;C5F181|A908    |      ;  
 	sta.b $E7                            ;C5F183|85E7    |0000E7;  
 	lda.b [$00],y                        ;C5F185|B700    |000000;  
 	iny                                  ;C5F187|C8      |      ;  
 	sta.b $E9                            ;C5F188|85E9    |0000E9;  
-
 CODE_C5F18A:
 	lsr.b $E9                            ;C5F18A|46E9    |0000E9;  
 	bcc CODE_C5F19E                      ;C5F18C|9010    |C5F19E;  
@@ -10463,7 +10444,6 @@ CODE_C5F18A:
 	dec.b $E7                            ;C5F199|C6E7    |0000E7;  
 	bne CODE_C5F18A                      ;C5F19B|D0ED    |C5F18A;  
 	rts                                  ;C5F19D|60      |      ;  
-
 CODE_C5F19E:
 	stz.w $0000,x                        ;C5F19E|9E0000  |7F0000;  
 	stz.w $0001,x                        ;C5F1A1|9E0100  |7F0001;  
@@ -10472,7 +10452,6 @@ CODE_C5F19E:
 	dec.b $E7                            ;C5F1A6|C6E7    |0000E7;  
 	bne CODE_C5F18A                      ;C5F1A8|D0E0    |C5F18A;  
 	rts                                  ;C5F1AA|60      |      ;  
-
 CODE_C5F1AB:
 	lda.b #$08                           ;C5F1AB|A908    |      ;  
 	sta.b $E7                            ;C5F1AD|85E7    |0000E7;  
@@ -10483,15 +10462,12 @@ CODE_C5F1AB:
 	bcs CODE_C5F1BE                      ;C5F1B5|B007    |C5F1BE;  
 	tdc                                  ;C5F1B7|7B      |      ;  
 	bra CODE_C5F1C1                      ;C5F1B8|8007    |C5F1C1;  
-
 CODE_C5F1BA:
 	lsr.b $E9                            ;C5F1BA|46E9    |0000E9;  
 	bcc CODE_C5F1C1                      ;C5F1BC|9003    |C5F1C1;  
-
 CODE_C5F1BE:
 	lda.b [$00],y                        ;C5F1BE|B700    |000000;  
 	iny                                  ;C5F1C0|C8      |      ;  
-
 CODE_C5F1C1:
 	sta.w $0000,x                        ;C5F1C1|9D0000  |7F0000;  
 	stz.w $0001,x                        ;C5F1C4|9E0100  |7F0001;  
@@ -10511,7 +10487,6 @@ CODE_C5F1CE:
 	lda.b [$00]                          ;C5F1D7|A700    |000000;  
 	and.w #$00FF                         ;C5F1D9|29FF00  |      ;  
 	ldy.w #$0001                         ;C5F1DC|A00100  |      ;  
-
 CODE_C5F1DF:
 	pha                                  ;C5F1DF|48      |      ;  
 	jsr.w CODE_C5F1E9                    ;C5F1E0|20E9F1  |C5F1E9;  
@@ -10587,7 +10562,7 @@ CODE_C5F24B:
 CODE_C5F253:
 	tay                                  ;C5F253|A8      |      ;  
 	phb                                  ;C5F254|8B      |      ;  
-	lda.b $01                            ;C5F255|A501    |000001;  
+	lda.b w0001                            ;C5F255|A501    |000001;  
 	pha                                  ;C5F257|48      |      ;  
 	plb                                  ;C5F258|AB      |      ;  
 	plb                                  ;C5F259|AB      |      ;  

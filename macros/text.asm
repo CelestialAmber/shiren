@@ -37,9 +37,9 @@
 	.db $F5, \1
 .endm
 
-;1: command id
+;
 .macro cmdf6
-	.db $F6, \1
+	.db $F6
 .endm
 
 ;1: command id

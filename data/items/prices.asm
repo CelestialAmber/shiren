@@ -12,13 +12,13 @@ HerbBuySellPrices:
 	.dw $0BB8,$0064 ;herb of victory
 	.dw $2710,$05DC ;angel seed
 	.dw $1388,$09C4 ;herb of revival
-	.dw $0000,$0000 ;herb of invisibility (unused)
+	.dw 0, 0 ;herb of invisibility (unused)
 	.dw $00C8,$0032 ;bitter herb
 	.dw $00C8,$0028 ;seed of misfortune
 	.dw $00C8,$001E ;seed of ill luck
 	.dw $00C8,$0064 ;kigny seed
 	.dw $0064,$0019 ;herb of amnesia (unused)
-	.dw $0000,$0000 ;--- (dummy entry)
+	.dw 0, 0 ;--- (dummy entry)
 	.dw $01F4,$00C8 ;life herb
 	.dw $03E8,$01F4 ;big belly seed
 	.dw $00C8,$003C ;little belly seed
@@ -39,13 +39,13 @@ ScrollBuySellPrices:
 	.db $E8,$03,$F4,$01 ;bigpot scroll
 	.db $E8,$03,$F4,$01 ;blastwave scroll
 	.db $F4,$01,$FA,$00 ;scroll of silence
-	.db $00,$00,$00,$00 ;-- scroll (dummy entry)
+	.dw 0, 0 ;-- scroll (dummy entry)
 	.db $E8,$03,$F4,$01 ;scroll of traps
 	.db $E8,$03,$FA,$00 ;scroll of need
 	.db $64,$00,$32,$00 ;scroll of haste
 	.db $C8,$00,$64,$00 ;scroll of sleep
 	.db $E8,$03,$64,$00 ;power up scroll
-	.db $00,$00,$00,$00 ;-- scroll (dummy entry)
+	.dw 0, 0 ;-- scroll (dummy entry)
 	.db $F4,$01,$64,$00 ;scroll of explosion
 	.db $90,$01,$C8,$00 ;great hall scroll
 	.db $50,$00,$28,$00 ;monster scroll
@@ -59,18 +59,18 @@ ScrollBuySellPrices:
 	.db $DC,$05,$EE,$02 ;extraction scroll
 	.db $2C,$01,$2C,$01 ;hands full scroll
 	.db $E8,$03,$64,$00 ;-- scroll
-	.db $00,$00,$00,$00 ;unused slots
-	.db $00,$00,$00,$00
-	.db $00,$00,$00,$00
-	.db $00,$00,$00,$00
-	.db $00,$00,$00,$00
-	.db $00,$00,$00,$00
-	.db $00,$00,$00,$00
-	.db $00,$00,$00,$00
-	.db $00,$00,$00,$00
-	.db $00,$00,$00,$00
-	.db $00,$00,$00,$00
-	.db $00,$00,$00,$00
+	.dw 0, 0 ;unused slots
+	.dw 0, 0
+	.dw 0, 0
+	.dw 0, 0
+	.dw 0, 0
+	.dw 0, 0
+	.dw 0, 0
+	.dw 0, 0
+	.dw 0, 0
+	.dw 0, 0
+	.dw 0, 0
+	.dw 0, 0
 
 ;rice ball buy/sell prices
 ;d9a394
@@ -80,7 +80,7 @@ RiceBallBuySellPrices:
 	.db $64,$00,$19,$00 ;rotten rice ball
 	.db $2C,$01,$4B,$00 ;giant rice ball
 	.db $32,$00,$0A,$00 ;special rice ball
-	.db $00,$00,$00,$00 ;unused slot
+	.dw 0, 0 ;unused slot
 
 ;weapon buy/sell prices
 ;d9a3ac
@@ -134,9 +134,9 @@ WeaponUpgradePriceBonus:
 	.db $E8,$03,$FA,$00
 	.db $DC,$05,$90,$01
 	.db $B0,$04,$2C,$01
-	.db $00,$00,$00,$00
-	.db $00,$00,$00,$00
-	.db $00,$00,$00,$00
+	.dw 0, 0
+	.dw 0, 0
+	.dw 0, 0
 
 ;arrow buy/sell prices
 ;d9a45c
@@ -144,16 +144,16 @@ ArrowBuySellPrices:
 	.db $0A,$00,$02,$00 ;wood arrow
 	.db $28,$00,$0A,$00 ;iron arrow
 	.db $50,$00,$14,$00 ;silver arrow
-	.db $00,$00,$00,$00
-	.db $00,$00,$00,$00
-	.db $00,$00,$00,$00
+	.dw 0, 0
+	.dw 0, 0
+	.dw 0, 0
 
 ;shield buy/sell prices
 ;d9a474
 ShieldBuySellPrices:
 	.db $90,$01,$C8,$00 ;hide shield
 	.db $2C,$01,$64,$00 ;bronzeward
-	.db $00,$00,$00,$00 ;anti-poison shield
+	.dw 0, 0 ;anti-poison shield
 	.db $90,$01,$96,$00 ;wood shield
 	.db $08,$07,$EE,$02 ;iron shield
 	.db $C4,$09,$E2,$04 ;dragonward
@@ -167,14 +167,14 @@ ShieldBuySellPrices:
 	.db $D0,$07,$EE,$02 ;blast shield
 	.db $E8,$03,$90,$01 ;walrus shield
 	.db $50,$C3,$E4,$57 ;stormward
-	.db $00,$00,$00,$00
-	.db $00,$00,$00,$00
+	.dw 0, 0
+	.dw 0, 0
 
 ;shield upgrade price bonus (per 1 point)
 ShieldUpgradePriceBonus:
 	.db $28,$00,$14,$00 ;hide shield
 	.db $1E,$00,$0A,$00 ;bronzeward
-	.db $00,$00,$00,$00 ;anti-poison shield
+	.dw 0, 0 ;anti-poison shield
 	.db $28,$00,$0F,$00 ;wood shield
 	.db $B4,$00,$4B,$00 ;iron shield
 	.db $FA,$00,$7D,$00 ;dragonward
@@ -188,25 +188,25 @@ ShieldUpgradePriceBonus:
 	.db $C8,$00,$4B,$00 ;blast shield
 	.db $64,$00,$28,$00 ;walrus shield
 	.db $88,$13,$CA,$08 ;stormward
-	.db $00,$00,$00,$00 ;
-	.db $00,$00,$00,$00 ;
+	.dw 0, 0 ;
+	.dw 0, 0 ;
 
 ;shield ability information?
 ;d9a504
 DATA8_D9A504:
 	.db $90,$01,$64,$00
-	.db $00,$00,$00,$00
+	.dw 0, 0
 	.db $C8,$00,$32,$00
-	.db $00,$00,$00,$00
+	.dw 0, 0
 	.db $C4,$09,$E2,$04
 	.db $C4,$09,$E2,$04
 	.db $70,$17,$B8,$0B
 	.db $C4,$09,$DC,$05
-	.db $00,$00,$00,$00
+	.dw 0, 0
 	.db $D0,$07,$EE,$02
 	.db $E8,$03,$90,$01
-	.db $00,$00,$00,$00
-	.db $00,$00,$00,$00                
+	.dw 0, 0
+	.dw 0, 0                
 
 ;armband buy/sell prices
 ;d9a538
@@ -270,7 +270,7 @@ MonsterMeatBuySellPrices:
 	.db $D0,$07,$E8,$03 ;hell gather
 	.db $08,$07,$20,$03 ;bowboy
 	.db $B8,$0B,$DC,$05 ;crossbowboy
-	.db $00,$00,$00,$00 ;bowboy x (unused)
+	.dw 0, 0 ;bowboy x (unused)
 	.db $E8,$03,$F4,$01 ;pickpocket
 	.db $D0,$07,$E8,$03 ;thief
 	.db $B8,$0B,$DC,$05 ;burglar
@@ -289,18 +289,18 @@ MonsterMeatBuySellPrices:
 	.db $D0,$07,$E8,$03 ;thiefwalrus
 	.db $B8,$0B,$DC,$05 ;greenwalrus
 	.db $A0,$0F,$D0,$07 ;ironwalrus
-	.db $00,$00,$00,$00 ;parthenos (unused)
-	.db $00,$00,$00,$00 ;parthenos x (unused)
-	.db $00,$00,$00,$00 ;parthenos x (unused)
+	.dw 0, 0 ;parthenos (unused)
+	.dw 0, 0 ;parthenos x (unused)
+	.dw 0, 0 ;parthenos x (unused)
 	.db $E8,$03,$F4,$01 ;kigny
 	.db $DC,$05,$EE,$02 ;kigny2
 	.db $88,$13,$DC,$05 ;kigny3
 	.db $B0,$04,$F4,$01 ;twisty hani
-	.db $00,$00,$00,$00 ;twisty hani x (unused)
-	.db $00,$00,$00,$00 ;twisty hani x (unused)
+	.dw 0, 0 ;twisty hani x (unused)
+	.dw 0, 0 ;twisty hani x (unused)
 	.db $70,$17,$B8,$0B ;air devil
-	.db $00,$00,$00,$00 ;air devil x (unused)
-	.db $00,$00,$00,$00 ;air devil x (unused)
+	.dw 0, 0 ;air devil x (unused)
+	.dw 0, 0 ;air devil x (unused)
 	.db $64,$00,$32,$00 ;n'duba
 	.db $C8,$00,$64,$00 ;n'dulu
 	.db $2C,$01,$96,$00 ;n'bama
@@ -323,23 +323,23 @@ MonsterMeatBuySellPrices:
 	.db $B8,$0B,$DC,$05 ;minotaur
 	.db $A0,$0F,$D0,$07 ;megataur
 	.db $DC,$05,$EE,$02 ;fluffy bunny
-	.db $00,$00,$00,$00 ;carbuncle x (unused)
-	.db $00,$00,$00,$00 ;carbuncle x (unused)
+	.dw 0, 0 ;carbuncle x (unused)
+	.dw 0, 0 ;carbuncle x (unused)
 	.db $88,$13,$C4,$09 ;evil soldier
 	.db $70,$17,$B8,$0B ;evil veteral
 	.db $58,$1B,$AC,$0D ;evil general
 	.db $B8,$0B,$DC,$05 ;dead soldier
-	.db $00,$00,$00,$00 ;dead soldier x (unused)
-	.db $00,$00,$00,$00 ;dead soldier x (unused)
-	.db $00,$00,$00,$00 ;master hen x (unused)
+	.dw 0, 0 ;dead soldier x (unused)
+	.dw 0, 0 ;dead soldier x (unused)
+	.dw 0, 0 ;master hen x (unused)
 	.db $F4,$01,$FA,$00 ;master hen
 	.db $E2,$04,$58,$02 ;great hen
 	.db $DC,$05,$EE,$02 ;hen
-	.db $00,$00,$00,$00 ;hen x (unused)
-	.db $00,$00,$00,$00 ;hen x (unused)
+	.dw 0, 0 ;hen x (unused)
+	.dw 0, 0 ;hen x (unused)
 	.db $88,$13,$C4,$09 ;dark owl
-	.db $00,$00,$00,$00 ;dark owl x (unused)
-	.db $00,$00,$00,$00 ;dark owl x (unused)
+	.dw 0, 0 ;dark owl x (unused)
+	.dw 0, 0 ;dark owl x (unused)
 	.db $E8,$03,$90,$01 ;knifegator
 	.db $D0,$07,$E8,$03 ;sabregator
 	.db $88,$13,$E2,$04 ;bladegator
@@ -376,15 +376,15 @@ MonsterMeatBuySellPrices:
 	.db $DC,$05,$EE,$02 ;polygon spin
 	.db $B8,$0B,$DC,$05 ;polygon jive
 	.db $40,$1F,$A0,$0F ;polygon song
-	.db $00,$00,$00,$00 ;tainted insect
-	.db $00,$00,$00,$00 ;tainted insect 2
-	.db $00,$00,$00,$00 ;tainted insect 3
+	.dw 0, 0 ;tainted insect
+	.dw 0, 0 ;tainted insect 2
+	.dw 0, 0 ;tainted insect 3
 	.db $F4,$01,$FA,$00 ;soldier ant
 	.db $58,$02,$2C,$01 ;corporal ant
 	.db $BC,$02,$5E,$01 ;captain ant
 	.db $B8,$0B,$DC,$05 ;mecharoid
-	.db $00,$00,$00,$00 ;mecharoid x (unused)
-	.db $00,$00,$00,$00 ;mecharoid x (unused)
+	.dw 0, 0 ;mecharoid x (unused)
+	.dw 0, 0 ;mecharoid x (unused)
 	.db $E8,$03,$F4,$01 ;dremlas
 	.db $D0,$07,$E8,$03 ;madremlas
 	.db $B8,$0B,$DC,$05 ;hardremlas
@@ -396,46 +396,46 @@ MonsterMeatBuySellPrices:
 	.db $B0,$04,$58,$02 ;item bandit
 	.db $AC,$0D,$D6,$06 ;baby tank
 	.db $A0,$0F,$D0,$07 ;mini tank
-	.db $00,$00,$00,$00 ;baby tank x (unused)
-	.db $00,$00,$00,$00 ;weapon meat (unused)
-	.db $00,$00,$00,$00 ;weapon meat
-	.db $00,$00,$00,$00 ;weapon meat
-	.db $00,$00,$00,$00 ;arrow meat
-	.db $00,$00,$00,$00 ;arrow meat
-	.db $00,$00,$00,$00 ;arrow meat
-	.db $00,$00,$00,$00 ;shield meat
-	.db $00,$00,$00,$00 ;shield meat
-	.db $00,$00,$00,$00 ;shield meat
-	.db $00,$00,$00,$00 ;armband meat
-	.db $00,$00,$00,$00 ;armband meat
-	.db $00,$00,$00,$00 ;armband meat
-	.db $00,$00,$00,$00 ;scroll meat
-	.db $00,$00,$00,$00 ;scroll meat
-	.db $00,$00,$00,$00 ;scroll meat
-	.db $00,$00,$00,$00 ;staff meat
-	.db $00,$00,$00,$00 ;staff meat
-	.db $00,$00,$00,$00 ;staff meat
-	.db $00,$00,$00,$00 ;herb meat
-	.db $00,$00,$00,$00 ;herb meat
-	.db $00,$00,$00,$00 ;herb meat
-	.db $00,$00,$00,$00 ;jar meat
-	.db $00,$00,$00,$00 ;jar meat
-	.db $00,$00,$00,$00 ;jar meat
-	.db $00,$00,$00,$00 ;rice meat
-	.db $00,$00,$00,$00 ;rice meat
-	.db $00,$00,$00,$00 ;rice meat
+	.dw 0, 0 ;baby tank x (unused)
+	.dw 0, 0 ;weapon meat (unused)
+	.dw 0, 0 ;weapon meat
+	.dw 0, 0 ;weapon meat
+	.dw 0, 0 ;arrow meat
+	.dw 0, 0 ;arrow meat
+	.dw 0, 0 ;arrow meat
+	.dw 0, 0 ;shield meat
+	.dw 0, 0 ;shield meat
+	.dw 0, 0 ;shield meat
+	.dw 0, 0 ;armband meat
+	.dw 0, 0 ;armband meat
+	.dw 0, 0 ;armband meat
+	.dw 0, 0 ;scroll meat
+	.dw 0, 0 ;scroll meat
+	.dw 0, 0 ;scroll meat
+	.dw 0, 0 ;staff meat
+	.dw 0, 0 ;staff meat
+	.dw 0, 0 ;staff meat
+	.dw 0, 0 ;herb meat
+	.dw 0, 0 ;herb meat
+	.dw 0, 0 ;herb meat
+	.dw 0, 0 ;jar meat
+	.dw 0, 0 ;jar meat
+	.dw 0, 0 ;jar meat
+	.dw 0, 0 ;rice meat
+	.dw 0, 0 ;rice meat
+	.dw 0, 0 ;rice meat
 	.db $64,$00,$32,$00 ;mini robber
 	.db $C8,$00,$64,$00 ;robber
 	.db $90,$01,$96,$00 ;robber chief
 	.db $96,$00,$46,$00 ;baby tengu
 	.db $2C,$01,$96,$00 ;young tengu
 	.db $58,$02,$C8,$00 ;tengu chief
-	.db $00,$00,$00,$00
-	.db $00,$00,$00,$00
-	.db $00,$00,$00,$00
-	.db $00,$00,$00,$00
-	.db $00,$00,$00,$00
-	.db $00,$00,$00,$00
+	.dw 0, 0
+	.dw 0, 0
+	.dw 0, 0
+	.dw 0, 0
+	.dw 0, 0
+	.dw 0, 0
 	.db $00,$00        
 
 ;jar buy/sell prices
@@ -449,7 +449,7 @@ JarBuySellPrices:
 	.db $DC,$05,$BC,$02 ;chiropractic jar
 	.db $C4,$09,$B0,$04 ;storehouse jar
 	.db $E8,$03,$C8,$00 ;weakening jar
-	.db $00,$00,$00,$00 ;dummy entry
+	.dw 0, 0 ;dummy entry
 	.db $C4,$09,$90,$01 ;bottomless jar
 	.db $D0,$07,$2C,$01 ;monster jar 
 	.db $E8,$03,$F4,$01 ;jar of change
@@ -463,16 +463,16 @@ JarBuySellPrices:
 ;jar size upgrade price bonus (per size upgrade)
 ;d9a8da
 JarSizeUpgradePriceBonus:
-	.db $00,$00,$00,$00 ;jar of holding
-	.db $00,$00,$00,$00 ;jar of hiding
+	.dw 0, 0 ;jar of holding
+	.dw 0, 0 ;jar of hiding
 	.db $2C,$01,$96,$00 ;division jar
 	.db $E8,$03,$F4,$01 ;strengthening jar
 	.db $64,$00,$32,$00 ;jar of identity
 	.db $96,$00,$46,$00 ;chiropractic jar
 	.db $FA,$00,$78,$00 ;storehouse jar
 	.db $64,$00,$14,$00 ;weakening jar
-	.db $00,$00,$00,$00 ;dummy entry
-	.db $00,$00,$00,$00 ;bottomless jar
+	.dw 0, 0 ;dummy entry
+	.dw 0, 0 ;bottomless jar
 	.db $C8,$00,$1E,$00 ;monster jar 
 	.db $64,$00,$32,$00 ;jar of change
 	.db $5E,$01,$96,$00 ;melding jar

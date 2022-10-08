@@ -7,6 +7,9 @@ endif
 
 rom := shiren.sfc
 
+#if set to 1, generate a debug rom instead
+#off by default for matching rom
+DEBUG ?= 0
 
 #Tools
 
@@ -25,7 +28,14 @@ default: all
 all: $(rom)
 
 clean:
-	rm $(rom) $(OBJS)
+	rm $(rom) $(OBJS) shiren.sym
+
+WLAFLAGS =
+
+#Add a debug flag if we're building a debug rom
+ifeq ($(DEBUG),1)
+WLAFLAGS += -D DEBUG=1
+endif
 
 #spc:
 #	make -C spc/
@@ -38,7 +48,7 @@ clean:
 #endif
 
 %.o: %.asm
-	wla-65816 -o $@ $<
+	wla-65816 $(WLAFLAGS) -o $@ $<
 
 $(rom): $(OBJS)
 	wlalink -S linkfile $@

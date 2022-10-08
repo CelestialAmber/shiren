@@ -1,77 +1,77 @@
 ;fe6038
-Text_FE6038:
+GoldenCityCutsceneText1:
 text "　　　　コッパ「あそこに見えるの、\l　　　　　　　　"
 textfunction $0 $5
 text "もしかして、黄金郷じゃ・・・@"
 
 ;fe6065
-Text_FE6065:
+GoldenCityCutsceneText2:
 text "　\l　　　　　　　　い、行ってみようぜ！」@"
 
 ;fe607b
-Text_FE607B:
+OpeningCutsceneText1:
 text "　　　　　　"
 textfunction $0 $4
 text "そして、その黄金郷こそが、\l　　　　　　テーブルマウンテンの頂上、@"
 
 ;fe60a8
-Text_FE60A8:
+OpeningCutsceneText2:
 text "　　　　「太陽の大地」にあるという風を聞き、@"
 
 ;fe60c2
-Text_FE60C2:
+OpeningCutsceneText3:
 text "　　　　　"
 textfunction $0 $4
 text "いままでも多くの風来人達が、\l　　　　　　　　　　　挑戦してきた@"
 
 ;fe60ef
-Text_FE60EF:
+OpeningCutsceneText4:
 text "　　　　　　　"
 textfunction $0 $5
 text "しかし、到達できた者は、@"
 
 ;fe6109
-Text_FE6109:
+OpeningCutsceneText5:
 text "　　　　　　　　　　まだ誰もいない@"
 
 ;fe611c
-Text_FE611C:
+IntroCutsceneText1:
 text "　　　　　　　　　　伝説の神鳥\l　　　　　　　　　黄金のコンドル@"
 
 ;fe6141
-Text_FE6141:
+IntroCutsceneText2:
 text "　　　　　　　　その黄金のコンドルが\l　　　　　　　"
 textfunction $0 $3
 text "棲むところ・・・そこには、@"
 
 ;fe616d
-Text_FE616D:
+IntroCutsceneText3:
 text "　　　　　　　　　　幻の黄金郷が\l　　　　　　"
 textfunction $0 $7
 text "存在すると伝えられている@"
 
 ;fe6199
-Text_FE6199:
+IntroCutsceneText4:
 text "　　　　　　"
 textfunction $0 $5
 text "この伝説を求めはじめた頃、\l　　　　　　一人の若き風来人に出会った。@"
 
 ;fe61cc
-Text_FE61CC:
+IntroCutsceneText5:
 text "　　　　　　　　　　"
 textfunction $0 $4
 text "名は、"
-strvar $81
+strvar TextStrVar_PlayerName
 text "@"
 
 ;fe61e0
-Text_FE61E0:
+IntroCutsceneText6:
 text "　　　　　　　友の遺志を受け継いでの\l　　　　　　　　　"
 textfunction $0 $5
 text "旅ガラスだという@"
 
 ;fe620d
-Text_FE620D:
+IntroCutsceneText7:
 text "　　　　　　"
 textfunction $0 $5
 text "コンビを組んで、はや半年。\l　　　　"
@@ -79,43 +79,43 @@ textfunction $0 $5
 text "しょっちゅうケンカばかりだが・・・@"
 
 ;fe6240
-Text_FE6240:
+IntroCutsceneText8:
 text "　　　　　　　　　　よっこいせっと！@"
 
 ;fe6253
-Text_FE6253:
+IntroCutsceneText9:
 text "　　　　　　おい、"
-strvar $81
+strvar TextStrVar_PlayerName
 text "！　見てみろよ！　@"
 
 ;fe6268
-Text_FE6268:
+IntroCutsceneText10:
 text "　　　　　　　　　こばみ谷だぜ"
-strvar $81
+strvar TextStrVar_PlayerName
 text "。\l　　　　　　　　やっと、ここまで来たな。　@"
 
 ;fe6292
-Text_FE6292:
+IntroCutsceneText11:
 text "　　　　　　　　　真ん中に、でっかい\l　　　　　　"
 textfunction $0 $5
 text "塔みたいな山が見えるだろ？　@"
 
 ;fe62c0
-Text_FE62C0:
+IntroCutsceneText12:
 text "　　　　　　"
 textfunction $0 $5
 text "あの頂上が、太陽の大地だ。　@"
 
 ;fe62db
-Text_FE62DB:
+IntroCutsceneText13:
 text "　　　　　　　　　　さあ、行こうぜ！　@"
 
 ;fe62ef
-Text_FE62EF:
+IntroCutsceneText14:
 text "　　　　　　　　　　　　おっと、\l　　　　　　　自己紹介が遅れちまった。@"
 
 ;fe6319
-Text_FE6319:
+IntroCutsceneText15:
 text "　　　　　　　　　　"
 textfunction $0 $4
 text "オイラはコッパ\l　　　　　"
@@ -123,49 +123,49 @@ textfunction $0 $4
 text "今じゃ数少ない「語りイタチ」だ。@"
 
 ;fe634a
-Text_FE634A:
+IntroCutsceneText16:
 text "　　　　　　　　"
-strvar $81
+strvar TextStrVar_PlayerName
 text "をこばみ谷に\l　　　　　　　さそったのもこのオイラ。@"
 
 ;fe6370
-Text_FE6370:
+IntroCutsceneText17:
 text "　　　　　　　　　黄金郷のウワサを\l　　　　　　　　　　聞いたからさ。@"
 
 ;fe6396
-Text_FE6396:
+IntroCutsceneText18:
 text "　　　　　　　しかし、ここまで来るのは\l　　　　　　　　　　大変だったぜ。@"
 
 ;fe63bd
-Text_FE63BD:
+IntroCutsceneText19:
 text "　　　　　　　　ま、オイラは袋の中で\l　　　　　　　寝てるだけだったが・・・@"
 
 ;fe63e6
-Text_FE63E6:
+IntroCutsceneText20:
 text "　　　　　　　　　　　　んっ？@"
 
 ;fe63f6
-Text_FE63F6:
+IntroCutsceneText21:
 text "　　　　　　　　　　　　@"
 
 ;fe6403
-Text_FE6403:
+IntroCutsceneText22:
 text "　　　　　　あっ、オーイ待ってくれよーっ！@"
 
 ;fe641a
-Text_FE641A:
+IntroCutsceneText23:
 text "　　　　　@"
 
 ;fe6420
-Text_FE6420:
+IntroCutsceneText24:
 text "　　　　　　　　　お互い、よく寝たな。　@"
 
 ;fe6437
-Text_FE6437:
+IntroCutsceneText25:
 text "　　　　　　　もう少しで渓谷の宿場だ。　@"
 
 ;fe6450
-Text_FE6450:
+IntroCutsceneText26:
 text "　　　　　　がんばって行こうぜ！　相棒！　@"
 
 ;fe6468
@@ -181,111 +181,111 @@ Text_FE649F:
 text "　　　@"
 
 ;fe64a3
-Text_FE64A3:
+EndingCutsceneText1:
 text "　　　　コッパ「"
-strvar $81
+strvar TextStrVar_PlayerName
 text "！・・・ほら、あそこ！\l　　　　　　　　　太陽の大地だ！！」@"
 
 ;fe64ce
-Text_FE64CE:
+EndingCutsceneText2:
 text "　　@"
 
 ;fe64d1
-Text_FE64D1:
+EndingCutsceneText3:
 text "　"
 textfunction $0 $4
 text "異国の風来人「あ、あれはっ！\l　　　　　　　　　　黄金のコンドルじゃないか！！\l@"
 
 ;fe6500
-Text_FE6500:
+EndingCutsceneText4:
 text "　　　　　　　"
 textfunction $0 $5
 text "伝説は、本当だったんだ！@"
 
 ;fe651b
-Text_FE651B:
+EndingCutsceneText5:
 text "　　　　　　　　・・・・・・・・・・・・@"
 
 ;fe6530
-Text_FE6530:
+EndingCutsceneText6:
 text "　　　　　　"
 textfunction $0 $4
 text "はっ！　こうしちゃいられない。@"
 
 ;fe6549
-Text_FE6549:
+EndingCutsceneText7:
 text "　　　　　　はやく、願い事、願い事・・・\l　　　　　　"
 textfunction $0 $4
 text "えーと、えーと、ええーーっと@"
 
 ;fe6576
-Text_FE6576:
+EndingCutsceneText8:
 text "　　　　　　　　　　　オ、オネショが\l　　　　　　　　　なおりますように・・・」@"
 
 ;fe659f
-Text_FE659F:
+EndingCutsceneText9:
 text "　　　　　サルヤマ「先生！　あれは・・・」@"
 
 ;fe65b6
-Text_FE65B6:
+EndingCutsceneText10:
 text "　　　ガイバラ「むう・・・\l　　　　　　　　　"
 textfunction $0 $2
 text "あれが伝説の・・・美しい」@"
 
 ;fe65e1
-Text_FE65E1:
+EndingCutsceneText11:
 text "　　　　サルヤマ「先生！\l　　　　　　　　　　"
 textfunction $0 $5
 text "みんな願い事してますよ。@"
 
 ;fe6609
-Text_FE6609:
+EndingCutsceneText12:
 text "　　　　　　　　　"
 textfunction $0 $5
 text "私たちも、早く！」@"
 
 ;fe6621
-Text_FE6621:
+EndingCutsceneText13:
 text "　　　　　ガイバラ「うむっ、願い事か！\l　　　　　　　　　　　　　よしっ！@"
 
 ;fe6647
-Text_FE6647:
+EndingCutsceneText14:
 text "　　　　　・・・願い事ねえ、願い事・・・\l　　　　"
 textfunction $0 $5
 text "・・・・・・・・・・・・・・・・・@"
 
 ;fe6675
-Text_FE6675:
+EndingCutsceneText15:
 text "　　　　　　　　ぬぬ・・ぬぬぬ・・・\l　　　　　　ぬぬぬぬぬぬぬぬ・・・・@"
 
 ;fe669b
-Text_FE669B:
+EndingCutsceneText16:
 text "　　　　　　　うおおおおおーーーーーっ！\l　　　　なんにも思いつかーーーーーーんっ！！@"
 
 ;fe66c8
-Text_FE66C8:
+EndingCutsceneText17:
 text "　　　　　　　　　サルヤマーーーーッ、\l　　　　　　　"
 textfunction $0 $5
 text "な、なんか、出せーーっ！」@"
 
 ;fe66f4
-Text_FE66F4:
+EndingCutsceneText18:
 text "　　　　　　　　サルヤマ「はい！　先生！」@"
 
 ;fe670b
-Text_FE670B:
+EndingCutsceneText19:
 text "　　　　ガイバラ「ち、ちがうーーーーっ！！」@"
 
 ;fe6722
-Text_FE6722:
+EndingCutsceneText20:
 text "　　　　かじ屋の娘「黄金のコンドル・・・」@"
 
 ;fe6739
-Text_FE6739:
+EndingCutsceneText21:
 text "　　　　　少女「わあーーっ、\l　　　　　　　　　おじいちゃん、みてみてー！」@"
 
 ;fe6761
-Text_FE6761:
+EndingCutsceneText22:
 text "　　　　　　"
 textfunction $0 $5
 text "老人「老いたわしの目じゃ、\l　　　　　　　　　　"
@@ -293,43 +293,43 @@ textfunction $0 $4
 text "よく見えんが・・・@"
 
 ;fe6791
-Text_FE6791:
+EndingCutsceneText23:
 text "　　　　　"
 textfunction $0 $5
 text "そうか・・・言い伝えは・・・・@"
 
 ;fe67ab
-Text_FE67AB:
+EndingCutsceneText24:
 text "　　　　　　　　　"
 textfunction $0 $5
 text "さっ、願い事じゃ。@"
 
 ;fe67c1
-Text_FE67C1:
+EndingCutsceneText25:
 text "　　　　　コンドルが行ってしまわぬうちに、\l　　　　　　　　　　早く祈るのじゃ」@"
 
 ;fe67ec
-Text_FE67EC:
+EndingCutsceneText26:
 text "　　　　　　　　　少女「えーと・・・@"
 
 ;fe6800
-Text_FE6800:
+EndingCutsceneText27:
 text "　　　　　　　おじいちゃんが、いつまでも\l　　　　　　元気でいられますように・・・」@"
 
 ;fe682c
-Text_FE682C:
+EndingCutsceneText28:
 text "　　"
 textfunction $0 $5
 text "老人「この子の花嫁姿が見られれば、\l　　　　　　わしは・・わしは・・・」@"
 
 ;fe685a
-Text_FE685A:
+EndingCutsceneText29:
 text "　　かじ屋の娘「私の大切なすべての人達が、\l　　　　　　　　　"
 textfunction $0 $5
 text "よく笑い、よく涙ぐみ、@"
 
 ;fe688e
-Text_FE688E:
+EndingCutsceneText30:
 text "　　　　　"
 textfunction $0 $5
 text "・・・もしかしたら恋をして、\l　　"
@@ -337,21 +337,22 @@ textfunction $0 $3
 text "生き生きと、生きてゆけますように・・・」@"
 
 ;fe68c0
-Text_FE68C0:
+ShopkeeperThiefText:
 text "泥棒！！\l@"
 
 ;fe68c8
-Text_FE68C8:
+ReceivedItemText:
 textfunction $2
-cmdf6 $FD
-text "も　"
-strvar $81
+cmdf6
+playsound $4F
+text "　"
+strvar TextStrVar_PlayerName
 text "は、\l"
-strvar $80
+strvar TextStrVar_ItemName
 text "をもらった。\l@"
 
 ;fe68dd
-Text_FE68DD:
+ShopkeeperWelcomeText:
 text "店主「いらっしゃいませ」\l@"
 
 ;fe68ec
@@ -373,11 +374,11 @@ numvar $30
 text "ギタンで買い取ります。\lよろしいですか？」\l@"
 
 ;fe6988
-Text_FE6988:
+ShopkeeperThatsAShameText:
 text "店主「それは残念です」\l@"
 
 ;fe6998
-Text_FE6998:
+ShopkeeperThankYouText:
 text "店主「ありがとうございました」\l@"
 
 ;fe69aa
@@ -467,7 +468,7 @@ text "酒場の店主「なんだよ、\lもったいつけやがって！\lち�
 ;fe6ca6
 Text_FE6CA6:
 text "酒場の店主「そうかい、\l"
-strvar $81
+strvar TextStrVar_PlayerName
 text "って　いうのかい。"
 next
 text "で、そっちのイタチがコッパかい。"
@@ -501,27 +502,27 @@ next
 text "旅の神クロンの追い風を！」\l@"
 
 ;fe6e25
-Text_FE6E25:
+BlindedGirlText1:
 text "少女「モンスターにやられて、\l目が見えなくなったんです。\l助けて下さい！」\l@"
 
 ;fe6e4e
-Text_FE6E4E:
+BlindedGirlText2:
 text "少女「あっ、目が見えるようになった！\lありがとう！"
 textfunction $2
 text "　チュッ！」\l@"
 
 ;fe6e72
-Text_FE6E72:
+BlindedGirlText3:
 text "少女「ありがとうございます。\lおかげさまで元気になりました。"
 next
 text "けど、まだ目は見えないんです」\l@"
 
 ;fe6ea4
-Text_FE6EA4:
+BlindedGirlText4:
 text "少女「あのー・・・\l困っているわけじゃ、ないんです。\lただ、目が見えないだけで・・・」\l@"
 
 ;fe6ed3
-Text_FE6ED3:
+BlindedGirlText5:
 text "少女「ありがとう！」\l@"
 
 ;fe6ee0
@@ -753,13 +754,13 @@ text "\l@"
 ;fe785c
 Text_FE785C:
 text "飛脚「"
-strvar $80
+strvar TextStrVar_ItemName
 text "だな。\lたしかに預かったぜ」\l@"
 
 ;fe7874
 Text_FE7874:
 text "飛脚「"
-strvar $80
+strvar TextStrVar_ItemName
 text "だな。"
 next
 text "壺だと、中身がなくなっちまうけど、\lそれでも、いいのかい？」\l@"
@@ -812,7 +813,7 @@ Text_FE7A4E:
 text "飛脚「わかった！\lたしかに預かったぜ」\l@"
 
 ;fe7a66
-Text_FE7A66:
+OryuDialogue1Text1:
 text "女「あなた、なかなかの男前ね。\l・・・ウフッ、気に入ったわ。"
 next
 text "い・"
@@ -826,21 +827,21 @@ textfunction $7F $14
 text "してあげる。\lちょっと目をつぶっててくれない？」\l@"
 
 ;fe7ab4
-Text_FE7AB4:
+OryuDialogue1Text2:
 text "女「あん、目を開けちゃダメよ！"
 next
 text "もっと　リラックスして・・・そう・・・\lその調子よ・・・\lそのまま目を開けないでね。　お願い」\l@"
 
 ;fe7af8
-Text_FE7AF8:
+OryuDialogue1Text3:
 text "女「いじわるな人・・・\l私のこと、信用してないのね？\l・・・さよなら・・・」\l@"
 
 ;fe7b23
-Text_FE7B23:
+OryuDialogue1Text4:
 text "女「・・・さよなら・・・」\l@"
 
 ;fe7b32
-Text_FE7B32:
+OryuDialogue1Text5:
 text "女「・・・じゃあ、いい？\l・・・やさしく・・いくわ・・・」"
 cleartext
 text "\l"
@@ -858,7 +859,7 @@ Text_FE7B9C:
 text "小太りの男「お前もか？・・・\l今度会ったら、生かしちゃおかねえ！」\l@"
 
 ;fe7bc4
-Text_FE7BC4:
+OryuDialogue2Text:
 text "女「私があなたに目つぶしを？・・・"
 next
 text "そうですか・・・すみません・・・\lそれはたぶん、私の姉のしわざです。"
@@ -882,7 +883,7 @@ cleartext
 text "女「あれぇー！　助けてー！」\l@"
 
 ;fe7cc2
-Text_FE7CC2:
+OryuHelpText:
 text "女「そんなー！　助けてー！」\l@"
 
 ;fe7cd3
@@ -894,7 +895,7 @@ Text_FE7CF7:
 text "小太りの男「お前もこの女の\l仲間なのか？\lだったら許さん！」\l@"
 
 ;fe7d1d
-Text_FE7D1D:
+OryuDialogue3Text1:
 text "女「私、あんたを二度も　だましたのに・"
 next
 text "助けてくれたのね。　ありがとう。\lこれに　こりて、悪い事はやめるわ。"
@@ -902,7 +903,7 @@ cleartext
 text "あの・・・\l私もあなたの旅仲間に入れてもらえる？」\l@"
 
 ;fe7d77
-Text_FE7D77:
+OryuDialogue3Text2:
 text "女「よかった・・私の名前は、お竜。"
 next
 text "このへんじゃ『目つぶしのお竜』で\l通ってんだ。\lよろしくね。　"
@@ -924,7 +925,7 @@ playsound $A2
 text "　「ドーーーーーーーーーーーーン！！」\l@"
 
 ;fe7df8
-Text_FE7DF8:
+OryuDialogue3Text3:
 text "\l"
 textfunction $80
 text "　　"
@@ -942,7 +943,7 @@ next
 text "そういえば、おまえ\lこのあいだの男に似ているなあ」\l@"
 
 ;fe7e5d
-Text_FE7E5D:
+OryuDialogue4Text1:
 text "お竜「あ、また会えた！"
 next
 text "私も、旅仲間に入れてもらえる？」\l@"
@@ -1214,7 +1215,7 @@ text "サルヤマ「あわわわわ・・・」\l@"
 ;fe874c
 Text_FE874C:
 text "サルヤマ「あっ、"
-strvar $81
+strvar TextStrVar_PlayerName
 text "さん！\l先生が、中でお待ちです。"
 next
 text "今度の作品は、先生も満足しているので\lもう壺を割る事もないかと・・・」\l@"
@@ -1248,7 +1249,7 @@ text "ガイバラ「んっ・・・\l合成の壺の説明を聞きたいか？
 ;fe885f
 Text_FE885F:
 text "サルヤマ「よかったですね、\l"
-strvar $81
+strvar TextStrVar_PlayerName
 text "さん！」\l@"
 
 ;fe8875
@@ -1304,8 +1305,8 @@ text "@"
 ;fe8a90
 Text_FE8A90:
 textfunction $2
-cmdf6 $F1
-text "／頭ケチ「失敗しちまった。　すまんねえ・\l２００ギタン払って、もう一回やるかい？」\l@"
+cmdf6
+text "座頭ケチ「失敗しちまった。　すまんねえ・\l２００ギタン払って、もう一回やるかい？」\l@"
 
 ;fe8ac5
 Text_FE8AC5:
@@ -1318,7 +1319,7 @@ text "４人組「このやろーー！」\l@"
 ;fe8aed
 Text_FE8AED:
 text "座頭ケチ「・・おおっ、その声は！\l"
-strvar $81
+strvar TextStrVar_PlayerName
 text "のダンナじゃありませんかい！"
 cleartext
 text "ごらんのとおり、追われる身でやんす。\lこんな世の中は、右も左も闇夜だあね。"
@@ -1354,7 +1355,7 @@ text "男「それ、みんな！　やっちまえーっ！」\l@"
 ;fe8c6f
 Text_FE8C6F:
 text "座頭ケチ「"
-strvar $81
+strvar TextStrVar_PlayerName
 text "のダンナァ！\lお願いだ、助けてくれーっ！」\l@"
 
 ;fe8c90
@@ -1430,8 +1431,8 @@ text "座頭ケチ「そうですかい・・・」\l@"
 ;fe8e71
 Text_FE8E71:
 textfunction $2
-cmdf6 $F1
-text "／頭ケチ「失敗しちまった。"
+cmdf6
+text "座頭ケチ「失敗しちまった。"
 textfunction $0 $4
 text "すまんねえ・」\l@"
 
@@ -1461,7 +1462,7 @@ text "おかみ「店がいそがしいんで、\lひとり　やとったんだ
 Text_FE8F4A:
 text "店員「・・・・・・・・・・！\lあのう・・・あんたの・・・\lあんたの名前、"
 next
-strvar $81
+strvar TextStrVar_PlayerName
 text "じゃないですか？」\l@"
 
 ;fe8f7f
@@ -1511,7 +1512,7 @@ cleartext
 text "そう言って、おっかあは死んだ。"
 next
 text "あとでお守りの中をのぞくと、\l『"
-strvar $81
+strvar TextStrVar_PlayerName
 text "の弟、ペケジ』\lと、書いた紙があった・・・」\l@"
 
 ;fe9196
@@ -1888,7 +1889,7 @@ text "三番弟子「ぐわぁっ！　やられたぁっ！"
 next
 text "・・と思ったが、何ともない。\lそれより、なぜだか壺識別が\lできるって気になってきたぞ。"
 cleartext
-strvar $81
+strvar TextStrVar_PlayerName
 text "さん、ありがとう！"
 next
 text "これからは、自信を持って\l壺の識別の修行に、はげみます！」\l@"
@@ -1904,7 +1905,7 @@ text "三番弟子「そうですか。　私は修行中\lなのでいつでも
 ;fe9f2d
 Text_FE9F2D:
 text "三番弟子「あ、"
-strvar $81
+strvar TextStrVar_PlayerName
 text "さん。"
 next
 text "壺の識別をしますか？」\l@"
@@ -1918,7 +1919,7 @@ cleartext
 textfunction $80
 playsound $4F
 text "　"
-strvar $81
+strvar TextStrVar_PlayerName
 text "は、ブフーの杖［０］をもらった\l@"
 
 ;fe9f9e
@@ -1932,7 +1933,7 @@ next
 textfunction $80
 playsound $4F
 text "　"
-strvar $81
+strvar TextStrVar_PlayerName
 text "は、マムルの肉を手渡した"
 cleartext
 textfunction $81
@@ -1962,7 +1963,7 @@ Text_FEA068:
 textfunction $80
 playsound $51
 text "　"
-strvar $81
+strvar TextStrVar_PlayerName
 text "は、\lマムルのしっぽ焼きを食べてみた。"
 next
 text "・・・むっ・・こりゃ、うまいっ！"
@@ -2115,7 +2116,7 @@ Text_FEA5AC:
 textfunction $80
 playsound $51
 text "　"
-strvar $81
+strvar TextStrVar_PlayerName
 text "は、\l「ぴーたんめん」を食べてみた。\l@"
 
 ;fea5c7
@@ -2123,7 +2124,7 @@ Text_FEA5C7:
 textfunction $80
 playsound $51
 text "　"
-strvar $81
+strvar TextStrVar_PlayerName
 text "は、\l「ゲイズ焼きそば」を食べてみた。\l@"
 
 ;fea5e4
@@ -2131,7 +2132,7 @@ Text_FEA5E4:
 textfunction $80
 playsound $51
 text "　"
-strvar $81
+strvar TextStrVar_PlayerName
 text "は、\l「トドの背中焼き」を食べてみた。\l@"
 
 ;fea602
@@ -2144,7 +2145,7 @@ text "お腹もクダし、\l満腹度が、１０％になった。"
 next
 textfunction $81
 text "コッパ「"
-strvar $81
+strvar TextStrVar_PlayerName
 text "！\lだ、だいじょうぶか？！」\l@"
 
 ;fea66a
@@ -2172,7 +2173,7 @@ text "三人「ありがとうございましたーっ！」\l@"
 ;fea747
 Text_FEA747:
 text "ナオキ「あっ、"
-strvar $81
+strvar TextStrVar_PlayerName
 text "さん！"
 next
 text "おれだよ、ナオキだよ。\lほら、前に『マムルのしっぽ焼き』を\lごちそうした・・・"
@@ -2299,18 +2300,18 @@ text "払わない@"
 ;feabad
 Text_FEABAD:
 text "コッパ「おい、"
-strvar $81
+strvar TextStrVar_PlayerName
 text "！\lこの人達、こまっているんだぜ」\l@"
 
 ;feabca
 Text_FEABCA:
 text "ナオキ「えっ！\l"
-strvar $81
+strvar TextStrVar_PlayerName
 text "さんが、なんで！"
 next
 text "まあ、お金が入るんだったら、\lおれは文句ないが・・"
 cleartext
-strvar $81
+strvar TextStrVar_PlayerName
 text "さんには、恩がある。\l一回で全部払ってくれなくてもいいよ。"
 next
 text "・・・けど、本当にいいのかい？」\l@"
@@ -2391,7 +2392,7 @@ Text_FEAE06:
 playsound $50
 text "　"
 textfunction $80
-strvar $81
+strvar TextStrVar_PlayerName
 text "は、\lナオキに"
 numvar $20
 text "ギタン払った。\l@"
@@ -2423,7 +2424,7 @@ text "トシオ「さすがは、ナオキさんですよ。\l料理がすごい
 ;feaec8
 Text_FEAEC8:
 text "トメ「"
-strvar $81
+strvar TextStrVar_PlayerName
 text "さんは、半分この店の\lオーナーみたいなもんじゃよ。"
 next
 text "借金の肩代りをしてもらってるからの」\l@"
@@ -2443,7 +2444,7 @@ text "しわしわの\lべろべろのウッヒッヒじゃあっ！！」\l@"
 ;feaf81
 Text_FEAF81:
 text "ナオキ「やあ、"
-strvar $81
+strvar TextStrVar_PlayerName
 text "さん。"
 next
 text "報酬を払ってくれるのかい？」\l@"
@@ -2497,7 +2498,7 @@ Text_FEB0BB:
 text "スズコ「お客さん、すごいでしょう。"
 next
 text "もう、私達だけでもやっていけます。\l"
-strvar $81
+strvar TextStrVar_PlayerName
 text "さんには、本当に\lお世話になりました」\l@"
 
 ;feb0fd
@@ -2507,13 +2508,13 @@ next
 text "もうおれは必要ないだろう、って・・・"
 cleartext
 text "で、"
-strvar $81
+strvar TextStrVar_PlayerName
 text "さんがきたら、\lこれを渡すようにたのまれたんです」"
 next
 textfunction $80
 playsound $C9
 text "　"
-strvar $81
+strvar TextStrVar_PlayerName
 text "は、ブフーの杖をもらった！\l@"
 
 ;feb160
@@ -2549,7 +2550,7 @@ text "ブフーもよだれを\lたらすほどのうまさだ！」\l@"
 ;feb20f
 Text_FEB20F:
 text "スズコ「あ、"
-strvar $81
+strvar TextStrVar_PlayerName
 text "さん！\lいらっしゃい！」\l@"
 
 ;feb225
@@ -2621,7 +2622,7 @@ text "\l@"
 ;feb37c
 Text_FEB37C:
 text "かじ屋「"
-strvar $80
+strvar TextStrVar_ItemName
 text "？"
 next
 text "武器じゃなきゃ、ダメだぜ」\l@"
@@ -2629,7 +2630,7 @@ text "武器じゃなきゃ、ダメだぜ」\l@"
 ;feb395
 Text_FEB395:
 text "かじ屋「"
-strvar $80
+strvar TextStrVar_ItemName
 text "？"
 next
 text "カナモノじゃなけりゃ、\lきたえられないなあ」\l@"
@@ -2643,7 +2644,7 @@ text "まっ、きたえてほしくなった時は、\lいつでもきな」\l@
 ;feb3df
 Text_FEB3DF:
 text "かじ屋「"
-strvar $80
+strvar TextStrVar_ItemName
 text "だな。\lよし！　大急ぎで仕上げるから、\lちょっと、待っててくれ」\l@"
 
 ;feb40a
@@ -2657,9 +2658,9 @@ Text_FEB426:
 playsound $4F
 text "　"
 textfunction $80
-strvar $81
+strvar TextStrVar_PlayerName
 text "は、\l"
-strvar $80
+strvar TextStrVar_ItemName
 text "を受け取った。\l@"
 
 ;feb43d
@@ -2777,7 +2778,7 @@ text "　あいよ！」\l@"
 ;feb7ba
 Text_FEB7BA:
 text "かじ屋「"
-strvar $80
+strvar TextStrVar_ItemName
 text "か？"
 next
 text "けど、これって使っているうちに\lこわれちまうんだろ？"
@@ -2785,7 +2786,7 @@ next
 text "きたえがいが、ないんだよな・・・"
 cleartext
 text "なあ、よかったら\lその"
-strvar $80
+strvar TextStrVar_ItemName
 text "を\lおれに、あずけちゃくれねえか？」\l@"
 
 ;feb811
@@ -2801,15 +2802,15 @@ Text_FEB831:
 text "かじ屋「あ、そうだ！"
 next
 text "前からあずかってた、\l"
-strvar $80
+strvar TextStrVar_ItemName
 text "をかえすぜ。"
 cleartext
 text "こわれないように、\l作りかえてみたんだ」"
 next
 textfunction $80
-strvar $81
+strvar TextStrVar_PlayerName
 text "は、こわれなくなった\l"
-strvar $80
+strvar TextStrVar_ItemName
 text "を受け取った。"
 playsound $4F
 text "　\l@"
@@ -2887,7 +2888,7 @@ text "男の子「わーい！」\l@"
 ;feba53
 Text_FEBA53:
 text "ララ「あ、"
-strvar $81
+strvar TextStrVar_PlayerName
 text "さん！"
 next
 text "いつぞやは、大変お世話になりました」\l@"
@@ -2941,9 +2942,9 @@ Text_FEBBD8:
 textfunction $80
 playsound $4F
 text "　"
-strvar $81
+strvar TextStrVar_PlayerName
 text "は、\l"
-strvar $80
+strvar TextStrVar_ItemName
 text "を、\l女の子に手渡した\l@"
 
 ;febbf3
@@ -2959,7 +2960,7 @@ Text_FEBC35:
 textfunction $80
 playsound $4F
 text "　"
-strvar $81
+strvar TextStrVar_PlayerName
 text "は、\l困った時の巻物を手にいれた\l@"
 
 ;febc50
@@ -3013,24 +3014,24 @@ next
 text "なんか、いい商売ないかねえ」\l@"
 
 ;febebf
-Text_FEBEBF:
+FortuneTellerText1:
 text "辻占い「おお、旅の者よ。\lわしは、運命神リーバにつかえる\l辻占いじゃ。"
 cleartext
 text "そなたの旅の行く末を占ってみるが\lどうじゃ？」\l@"
 
 ;febf06
-Text_FEBF06:
+FortuneTellerDecisionText:
 textfunction $0 $5
 text "占ってもらう\l"
 textfunction $0 $5
 text "ことわる@"
 
 ;febf19
-Text_FEBF19:
+FortuneTellerNoText:
 text "辻占い「そうか・・・」\l@"
 
 ;febf28
-Text_FEBF28:
+FortuneTellerYesText:
 text "辻占い「では、いくぞ。"
 next
 text "ぬぬぬぬぬぬぬーーーーっ！！"
@@ -3040,11 +3041,11 @@ next
 text "今回の旅の風ぐあいは、\l@"
 
 ;febf57
-Text_FEBF57:
+FortuneTellerOneLastThingText:
 text "あと、気をつけることとして、\l@"
 
 ;febf67
-Text_FEBF67:
+FortuneTellerDontForgetText:
 text "それを忘れぬようにな。\lぬぬぬぬぬぬぬーーーーっ！！」\l@"
 
 ;febf85
@@ -3052,73 +3053,73 @@ Text_FEBF85:
 text "辻占い「今日の占いは、\lもう終わりじゃ」\l@"
 
 ;febfa0
-Text_FEBFA0:
+FortuneResultsText1:
 text "なんと、順風じゃ。"
 next
 text "すべてが追い風となるじゃろう。\l@"
 
 ;febfbd
-Text_FEBFBD:
+FortuneResultsText2:
 text "春風じゃ。"
 next
 text "おだやかな旅となるじゃろう。\l@"
 
 ;febfd4
-Text_FEBFD4:
+FortuneResultsText3:
 text "無風じゃ。"
 next
 text "とくに波乱はないじゃろう。\l@"
 
 ;febfec
-Text_FEBFEC:
+FortuneResultsText4:
 text "突風じゃ。"
 next
 text "いきなり、危険な目にあうじゃろう。\l@"
 
 ;fec008
-Text_FEC008:
+FortuneResultsText5:
 text "熱風じゃ。"
 next
 text "炎や爆発に、なやませられるじゃろう。\l@"
 
 ;fec025
-Text_FEC025:
+FortuneResultsText6:
 text "こがらしじゃ。"
 next
 text "なぜか、むなしい旅となるじゃろう。\l@"
 
 ;fec040
-Text_FEC040:
+FortuneResultsText7:
 text "逆風じゃ。"
 next
 text "気をつけなされ。　旅の神の加誤は、\lないと思ったほうがよい。\l@"
 
 ;fec06b
-Text_FEC06B:
+FortuneResultsText8:
 text "こりゃ・・・なんと、暴風雨じゃ！"
 next
 text "悪いことは、言わん。\l今日は、出直した方がよさそうじゃ。\l@"
 
 ;fec0a1
-Text_FEC0A1:
+FortuneTellerTip1Text:
 text "『復活の草』は、飲んではイカン。"
 next
 text "持っているだけで、いいぞえ。\l@"
 
 ;fec0c5
-Text_FEC0C5:
+FortuneTellerTip2Text:
 text "『ジェノサイドの巻物』は、\l読んではイカン。"
 next
 text "投げて使うのじゃ。\l@"
 
 ;fec0ea
-Text_FEC0EA:
+FortuneTellerTip3Text:
 text "町の人にイタズラしてはイカン。"
 next
 text "杖をふるなど、もってのほかじゃ。\l@"
 
 ;fec10d
-Text_FEC10D:
+FortuneTellerTip4Text:
 text "壺は、投げる前に\l腕輪を確認することじゃ。"
 next
 text "これは、今わからんでも\lそのうちわかる。\l@"
@@ -3178,7 +3179,7 @@ text "なかなか見つからないようだがな」\l@"
 ;fec3ee
 Text_FEC3EE:
 text "コッパ「おい、"
-strvar $81
+strvar TextStrVar_PlayerName
 text "。"
 next
 text "となりの部屋から\l何か聞こえてこないか？・・・」\l@"
@@ -3203,7 +3204,7 @@ text "ちぇ、聞きのがしちゃったじゃないか！」\l@"
 ;fec482
 Text_FEC482:
 textfunction $80
-strvar $81
+strvar TextStrVar_PlayerName
 text "とコッパは、\l壁に耳をあててみた。"
 cleartext
 textfunction $81
@@ -3262,11 +3263,11 @@ cleartext
 textfunction $80
 text "なにか、ひとつ\l大人になった気がする・・・"
 next
-strvar $81
+strvar TextStrVar_PlayerName
 text "の経験値が\l１０００アップした。\l@"
 
 ;fec64b
-Text_FEC64B:
+CanyonHamletNPC1Dialogue1Text:
 text "男「お、三度笠の旅姿たあ、\lいまどきめずらしいな」"
 cleartext
 text "コッパ「友の形見なんだとさ。"
@@ -3278,7 +3279,7 @@ next
 text "こりゃまた、めずらしい」\l@"
 
 ;fec6c1
-Text_FEC6C1:
+CanyonHamletNPC1Dialogue2Text:
 text "男「めずらしいよなあ・・・"
 next
 text "語りイタチかあ・・・"
@@ -3312,7 +3313,7 @@ text "酒場の娘「おとうさんに言えば、\l食料を分けてもらえ
 ;fec7a1
 Text_FEC7A1:
 text "酒場の娘「あっ！\l"
-strvar $81
+strvar TextStrVar_PlayerName
 text "くんにコッパちゃん！"
 next
 text "私ね、あれから　いろんな話を\l聞いてみたんだけどさ、\l@"
@@ -3554,9 +3555,9 @@ Text_FED1F5:
 textfunction $80
 playsound $4F
 text "　"
-strvar $81
+strvar TextStrVar_PlayerName
 text "は、\l"
-strvar $80
+strvar TextStrVar_ItemName
 text "をもらった。\l@"
 
 ;fed209
@@ -3566,7 +3567,7 @@ text "地変学者フェイ「また、ちがう\lダンジョンを作ってみ
 ;fed23d
 Text_FED23D:
 text "地変学者フェイ「あ、"
-strvar $81
+strvar TextStrVar_PlayerName
 text "さん！\lたいへんなことになったアルよ！"
 cleartext
 text "ダンジョンをむずかしくしようと思って、\l穴を深くまで、掘ってたアル。"
@@ -3579,7 +3580,7 @@ text "なんだか\lとんでもないダンジョンが、\lできあがって�
 cleartext
 text "ワタシ、１回だけ入ったけど、\lとても恐くて、もう入れないアル。"
 next
-strvar $81
+strvar TextStrVar_PlayerName
 text "さん、ワタシのかわりに\lちょっと、もぐってくれないアルか？」\l@"
 
 ;fed30a
@@ -3587,7 +3588,7 @@ Text_FED30A:
 text "地変学者フェイ「そうアルか・・・"
 next
 text "さすがの"
-strvar $81
+strvar TextStrVar_PlayerName
 text "さんも、\lオクビョウ風に吹かれたアルか・・・\l残念アル」\l@"
 
 ;fed345
@@ -3597,7 +3598,7 @@ text "地変学者フェイ「ここのダンジョンに\lもぐってみるア
 ;fed367
 Text_FED367:
 text "地変学者フェイ「"
-strvar $81
+strvar TextStrVar_PlayerName
 text "さん、\lすごく勇気あるアル。\lがんばってくるヨロシ」\l@"
 
 ;fed391
@@ -3712,7 +3713,7 @@ text "じゃ、そこに乗ってくれ」\l@"
 ;fed6f4
 Text_FED6F4:
 text "車屋のゴロ「やあ、"
-strvar $81
+strvar TextStrVar_PlayerName
 text "さん！"
 next
 text "やっと新しい商売が、\l見つかったんですよ。\l見てのとおり、車屋ですがね・・・"
@@ -3730,7 +3731,7 @@ text "私は、いつでもここにいますから、\l山頂の町まで行き
 ;fed7c7
 Text_FED7C7:
 text "車屋のゴロ「あ、"
-strvar $81
+strvar TextStrVar_PlayerName
 text "さん。"
 next
 text "山頂の町まで、乗っていきますか？」\l@"
@@ -3752,11 +3753,11 @@ text "\l@"
 ;fed848
 Text_FED848:
 text "四番弟子「はあ、はあ・・\lあ、"
-strvar $81
+strvar TextStrVar_PlayerName
 text "さん！"
 cleartext
 text "ガ、ガイバラ先生が！\lはあ、はあ・・・\l"
-strvar $81
+strvar TextStrVar_PlayerName
 text "さん！　お願いです！\lガイバラ先生を助けて下さい！」\l@"
 
 ;fed894
@@ -3768,7 +3769,7 @@ text "はあ、はあ・・\lくわしいことは、サルヤマさんに\l聞�
 ;fed8da
 Text_FED8DA:
 text "サルヤマ「あ、"
-strvar $81
+strvar TextStrVar_PlayerName
 text "さん！"
 next
 text "ガイバラ先生が、壺に必要な土を取りに\l洞窟にもぐったまま帰ってこないんです。"
@@ -3802,13 +3803,13 @@ cleartext
 text "ここに入ると、持ち物は全部\lなくなってしまうので、\l持ち物は、預かり場に置いてから\lここに入って下さい。"
 cleartext
 text "あと、"
-strvar $81
+strvar TextStrVar_PlayerName
 text "さんは、\l『ワナ道』という武道を\lごぞんじですか？」\l@"
 
 ;feda4b
 Text_FEDA4B:
 text "サルヤマ「"
-strvar $81
+strvar TextStrVar_PlayerName
 text "さんは、旅の道中\lよく　ワナにかかったりして、\lくやしい思いをしてませんか？"
 cleartext
 text "しかし、怪物どもはかからない・・・\lよけい、くやしいですよね。"
@@ -3884,7 +3885,7 @@ Text_FEDD69:
 textfunction $80
 playsound $C9
 text "　"
-strvar $81
+strvar TextStrVar_PlayerName
 text "は、\lうっぷんばらしの壺をもらった！"
 cleartext
 textfunction $81
@@ -3897,7 +3898,7 @@ text "、と」\l@"
 ;feddb9
 Text_FEDDB9:
 text "サルヤマ「あ、"
-strvar $81
+strvar TextStrVar_PlayerName
 text "さん。"
 next
 text "先生は？"
@@ -3967,7 +3968,7 @@ cleartext
 text "さすらいの料理人とか言ってたけど、\lそんなに強そうじゃなかったし、\lちょっと心配だわね」"
 cleartext
 text "コッパ「"
-strvar $81
+strvar TextStrVar_PlayerName
 text "！"
 next
 text "あいつだ！"
@@ -3979,17 +3980,17 @@ text "どうする？　オイラ達も\l入ってみるか？」\l@"
 ;fee0be
 Text_FEE0BE:
 text "ナオキ「あ、"
-strvar $81
+strvar TextStrVar_PlayerName
 text "さん！\lどうしてこんなところに！"
 cleartext
 text "ま、いいや。　それより\lめずらしい肉がとれたんだ。"
 next
 text "たくさんあるから\l"
-strvar $81
+strvar TextStrVar_PlayerName
 text "さんにも、わけてやるよ」"
 cleartext
 textfunction $80
-strvar $81
+strvar TextStrVar_PlayerName
 text "は、\l正面戦士の肉を受け取った。"
 playsound $4F
 text "　"
@@ -4072,13 +4073,13 @@ text "・・・だよな。\lなんか、さみしすぎないか？」\l@"
 ;fee464
 Text_FEE464:
 text "コッパ「おい、"
-strvar $81
+strvar TextStrVar_PlayerName
 text "！　こっちだ！」\l@"
 
 ;fee477
 Text_FEE477:
 text "コッパ「おい、"
-strvar $81
+strvar TextStrVar_PlayerName
 text "！"
 next
 text "ここに、何か書いてあるぜ。\l読んでみろよ」\l@"
@@ -4243,7 +4244,7 @@ text "下の森には、有毒な生物がいるので、\l私達は、それか
 ;fee7e9
 Text_FEE7E9:
 text "シロのヘイジ「あ、"
-strvar $81
+strvar TextStrVar_PlayerName
 text "さんじゃ\lないですか！"
 next
 text "ここまでくれば、テーブルマウンテンは\l目の前ッス。"
@@ -4309,7 +4310,7 @@ text "妹「兄ちゃん、早く帰ってくるヨロシ。\lおみやげ、待
 ;feea95
 Text_FEEA95:
 text "マムル「"
-strvar $81
+strvar TextStrVar_PlayerName
 text "さん、\lいっしょに記念撮影しようよ。"
 next
 text "はい、チーズ！"
@@ -4331,7 +4332,7 @@ text "マムル「早いもン勝ちだよ」\l@"
 ;feeb18
 Text_FEEB18:
 text "地変学者フェイ「"
-strvar $81
+strvar TextStrVar_PlayerName
 text "さん、\lなんだか　マムルくさいアル・・・"
 cleartext
 text "エッ！　このダンジョンが、\lワタシの家まで、つうじているッ？！"
@@ -4665,7 +4666,7 @@ text "シェエエエエーーッ！！」\l@"
 ;fefab9
 Text_FEFAB9:
 text "酒場の娘「あっ！\l"
-strvar $81
+strvar TextStrVar_PlayerName
 text "くんにコッパちゃん！\lやったね！　おめでとう！！"
 cleartext
 text "けど、ほんとに　行っちゃうんだから\lすごいよね。"
@@ -4771,7 +4772,7 @@ next
 text "たくさんあるぞ。　家内安全、商売繁昌、\lヨメがゆうことを聞く事、孫ができる事、"
 cleartext
 text "若い客には大盛りで出すべし、\l"
-strvar $81
+strvar TextStrVar_PlayerName
 text "さんに、わしの気持ちが\l届く事、などなど・・・」\l@"
 
 ;feff4b
@@ -4849,7 +4850,7 @@ text "こいつぁ、ゆかいだ！　ハッハッハー！」\l@"
 ;ff01ac
 Text_FF01AC:
 text "ナナメのジロキチ「やった！　やった！\lすごいぜ、"
-strvar $81
+strvar TextStrVar_PlayerName
 text "！　やるねえっ！"
 cleartext
 text "こんど、おれも旅仲間にしてくれよ！"
@@ -4859,7 +4860,7 @@ text "ナナメなことだったら、ぜんぶおれが\l引き受けるから
 ;ff0204
 Text_FF0204:
 text "チビのビエー「ぼくも、大人になったら\l"
-strvar $81
+strvar TextStrVar_PlayerName
 text "さんのような風来人になって、\lいろいろ旅してまわるんだ。"
 cleartext
 text "そのためにも、まずは語りイタチを\l探してこなくちゃ！」\l@"
@@ -4867,14 +4868,14 @@ text "そのためにも、まずは語りイタチを\l探してこなくちゃ
 ;ff0256
 Text_FF0256:
 text "シロのヘイジ「さすが、"
-strvar $81
+strvar TextStrVar_PlayerName
 text "さん！"
 next
 text "やるッス！　すごいッス！　最高ッス！」\l@"
 
 ;ff027e
 Text_FF027E:
-strvar $86
+strvar TextStrVar_EntityName
 text "「・・・・・・・」\l@"
 
 ;ff028b
@@ -5053,34 +5054,36 @@ text "\l@"
 
 ;ff0a21
 Text_FF0A21:
-cmdf6 $F1
-text "！人は餓死してしまった・・・\lなんだか、老人の怨みを買ったような\l気がする・・・\l@"
+cmdf6
+text "老人は餓死してしまった・・・\lなんだか、老人の怨みを買ったような\l気がする・・・\l@"
 
 ;ff0a54
 Text_FF0A54:
-cmdf6 $F1
-text "！人はおにぎりの毒にあたって死んだ・・\l@"
+cmdf6
+text "老人はおにぎりの毒にあたって死んだ・・\l@"
 
 ;ff0a6d
 Text_FF0A6D:
-cmdf6 $FD
-text "バ　"
-strvar $86
+cmdf6
+playsound $8F
+text "　"
+strvar TextStrVar_EntityName
 text "は、おはらいの呪文を唱えた。\l@"
 
 ;ff0a86
 Text_FF0A86:
-cmdf6 $FD
-text "コ　腕輪が全部、識別された\l@"
+cmdf6
+playsound $73
+text "　腕輪が全部、識別された\l@"
 
 ;ff0a9a
-Text_FF0A9A:
+GirlSeemsLostText:
 textfunction $2
-cmdf6 $36
-text "うやら迷子になっているようだ。\l子供を連れて行きますか？\l@"
+cmdf6
+text "どうやら迷子になっているようだ。\l子供を連れて行きますか？\l@"
 
 ;ff0abf
-Text_FF0ABF:
+LostGirlChoicesText:
 textfunction $0 $6
 text "連れて行く\l"
 textfunction $0 $6
@@ -5096,15 +5099,15 @@ text "助けない@"
 ;ff0ae2
 Text_FF0AE2:
 textfunction $2
-cmdf6 $25
-text "かし、かくして目つぶしのお竜が\l旅仲間になった！"
+cmdf6
+text "しかし、かくして目つぶしのお竜が\l旅仲間になった！"
 playsound $37
 text "　\l@"
 
 ;ff0b06
 Text_FF0B06:
-cmdf6 $18
-text "竜が、旅仲間になった！"
+cmdf6
+text "お竜が、旅仲間になった！"
 playsound $37
 text "　\l@"
 
@@ -5117,8 +5120,9 @@ text "してもらわない@"
 
 ;ff0b33
 Text_FF0B33:
-cmdf6 $FB
-text "チは、座頭ケチに２００ギタン\l払った。"
+cmdf6
+strvar TextStrVar_PlayerName
+text "は、座頭ケチに２００ギタン\l払った。"
 playsound $50
 text "　"
 next
@@ -5127,7 +5131,7 @@ text "@"
 ;ff0b50
 Text_FF0B50:
 text "座頭ケチは、"
-strvar $81
+strvar TextStrVar_PlayerName
 text "の背中のツボを\l押した！"
 playsound $C2
 text "　\l@"
@@ -5183,7 +5187,7 @@ text "待て！　金なら、おれが！\l@"
 
 ;ff0c5d
 Text_FF0C5D:
-strvar $81
+strvar TextStrVar_PlayerName
 text "は、１０００ギタンを渡した。"
 playsound $50
 text "　\l@"
@@ -5493,69 +5497,3 @@ textfunction $0 $56
 text "「倉庫」"
 textfunction $0 $55
 text "」\l@"
-
-;ff0fc3
-Text_FF0FC3:
-text "デバッグ用にアイテムを用意します。\lアイテム種別を選んで下さい。\l@"
-
-;ff0fea
-Text_FF0FEA:
-text "どの草ですか？\l@"
-
-;ff0ff3
-Text_FF0FF3:
-text "どの巻物ですか？\l@"
-
-;ff0ffd
-Text_FF0FFD:
-text "どの杖ですか？\l@"
-
-;ff1006
-Text_FF1006:
-text "どの壺ですか？\l@"
-
-;ff100f
-Text_FF100F:
-text "どの食糧ですか？\l@"
-
-;ff101a
-Text_FF101A:
-text "どの武器ですか？\l@"
-
-;ff1026
-Text_FF1026:
-text "どの盾ですか？\l@"
-
-;ff102f
-Text_FF102F:
-text "どの腕輪ですか？\l@"
-
-;ff1039
-Text_FF1039:
-text "どの矢ですか？\l@"
-
-;ff1043
-Text_FF1043:
-text "どのアイテムですか？\l@"
-
-;ff104f
-Text_FF104F:
-cmdf6 $F1
-text "ぼは？（キャンセルすると自動設定）\l@"
-
-;ff1068
-Text_FF1068:
-cmdf6 $A1
-text "ンスターは？\l@"
-
-;ff1072
-Text_FF1072:
-textfunction $5
-text "@"
-
-;ff1075
-Text_FF1075:
-text "今７@"
-
-;ff1078
-.db $FF

@@ -95,7 +95,7 @@ text "いいえ@"
 Text_FE2F42:
 numvar $11
 text "：風来の"
-strvar $81
+strvar TextStrVar_PlayerName
 text "@"
 
 ;fe2f4c
@@ -162,7 +162,7 @@ text "回目@"
 Text_FE2FB6:
 numvar $11
 text "：風来の"
-strvar $81
+strvar TextStrVar_PlayerName
 text "\l"
 textfunction $0 $18
 text "を消してもよろしいですか？@"
@@ -240,7 +240,7 @@ text "－\l透明なアイテムなので、よくわからない。@"
 ;fe3179
 Text_FE3179:
 text "－"
-strvar $80
+strvar TextStrVar_ItemName
 text "－\l@"
 
 ;fe317f

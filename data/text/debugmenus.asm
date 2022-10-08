@@ -330,15 +330,15 @@ textfunction $0 $4
 text "目的３@"
 
 ;fe36e8
-Text_FE36E8:
+AnimTestMenuRegularAttackText:
 text "通常攻撃@"
 
 ;fe36f0
-Text_FE36F0:
+AnimTestMenuSpecialAttackText:
 text "特殊攻撃@"
 
 ;fe36f8
-Text_FE36F8:
+AnimTestMenuDirsText:
 textfunction $0 $8
 text "右\l"
 textfunction $0 $8
@@ -374,9 +374,9 @@ strvar $0
 text "から\l@"
 
 ;fe373c
-Text_FE373C:
-cmdf6 $F1
-text "な座標"
+FreeLookDebugInfoText:
+cmdf6
+text "Ｘ座標"
 textfunction $0 $4
 numvar $12
 textfunction $0 $10
@@ -427,10 +427,10 @@ text "シレン@"
 ;fe37bc
 Text_FE37BC:
 text "にせ"
-strvar $81
+strvar TextStrVar_PlayerName
 text "@"
 
 ;fe37c1
 Text_FE37C1:
-strvar $81
+strvar TextStrVar_PlayerName
 text "@"

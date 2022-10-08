@@ -157,7 +157,7 @@ TextPointerTable:
 	.dw Text_FE1CFF
 	.dw Text_FE1D0D
 	.dw Text_FE1D1B
-	.dw Text_FE1D2B
+	.dw AlarmTrapText
 	.dw Text_FE1D4B
 	.dw Text_FE1D56
 	.dw Text_FE1D65
@@ -445,13 +445,13 @@ TextPointerTable:
 	.dw Text_FE3645
 	.dw Text_FE36B2
 	.dw Text_FE36CA
-	.dw Text_FE36E8
-	.dw Text_FE36F0
-	.dw Text_FE36F8
+	.dw AnimTestMenuRegularAttackText
+	.dw AnimTestMenuSpecialAttackText
+	.dw AnimTestMenuDirsText
 	.dw Text_FE372A
 	.dw Text_FE3733
 	.dw Text_FE3736
-	.dw Text_FE373C
+	.dw FreeLookDebugInfoText
 	.dw Text_FE377A
 	.dw Text_FE3787
 	.dw Text_FE37A2
@@ -1596,80 +1596,80 @@ TextPointerTable:
 	.dw Text_FE601F
 	.dw Text_FE602C
 	.dw Text_FE6034
-	.dw Text_FE6038
-	.dw Text_FE6065
-	.dw Text_FE607B
-	.dw Text_FE60A8
-	.dw Text_FE60C2
-	.dw Text_FE60EF
-	.dw Text_FE6109
-	.dw Text_FE611C
-	.dw Text_FE6141
-	.dw Text_FE616D
-	.dw Text_FE6199
-	.dw Text_FE61CC
-	.dw Text_FE61E0
-	.dw Text_FE620D
-	.dw Text_FE6240
-	.dw Text_FE6253
-	.dw Text_FE6268
-	.dw Text_FE6292
-	.dw Text_FE62C0
-	.dw Text_FE62DB
-	.dw Text_FE62EF
-	.dw Text_FE6319
-	.dw Text_FE634A
-	.dw Text_FE6370
-	.dw Text_FE6396
-	.dw Text_FE63BD
-	.dw Text_FE63E6
-	.dw Text_FE63F6
-	.dw Text_FE6403
-	.dw Text_FE641A
-	.dw Text_FE6420
-	.dw Text_FE6437
-	.dw Text_FE6450
+	.dw GoldenCityCutsceneText1
+	.dw GoldenCityCutsceneText2
+	.dw OpeningCutsceneText1
+	.dw OpeningCutsceneText2
+	.dw OpeningCutsceneText3
+	.dw OpeningCutsceneText4
+	.dw OpeningCutsceneText5
+	.dw IntroCutsceneText1
+	.dw IntroCutsceneText2
+	.dw IntroCutsceneText3
+	.dw IntroCutsceneText4
+	.dw IntroCutsceneText5
+	.dw IntroCutsceneText6
+	.dw IntroCutsceneText7
+	.dw IntroCutsceneText8
+	.dw IntroCutsceneText9
+	.dw IntroCutsceneText10
+	.dw IntroCutsceneText11
+	.dw IntroCutsceneText12
+	.dw IntroCutsceneText13
+	.dw IntroCutsceneText14
+	.dw IntroCutsceneText15
+	.dw IntroCutsceneText16
+	.dw IntroCutsceneText17
+	.dw IntroCutsceneText18
+	.dw IntroCutsceneText19
+	.dw IntroCutsceneText20
+	.dw IntroCutsceneText21
+	.dw IntroCutsceneText22
+	.dw IntroCutsceneText23
+	.dw IntroCutsceneText24
+	.dw IntroCutsceneText25
+	.dw IntroCutsceneText26
 	.dw Text_FE6468
 	.dw Text_FE6482
 	.dw Text_FE649F
-	.dw Text_FE64A3
-	.dw Text_FE64CE
-	.dw Text_FE64D1
-	.dw Text_FE6500
-	.dw Text_FE651B
-	.dw Text_FE6530
-	.dw Text_FE6549
-	.dw Text_FE6576
-	.dw Text_FE659F
-	.dw Text_FE65B6
-	.dw Text_FE65E1
-	.dw Text_FE6609
-	.dw Text_FE6621
-	.dw Text_FE6647
-	.dw Text_FE6675
-	.dw Text_FE669B
-	.dw Text_FE66C8
-	.dw Text_FE66F4
-	.dw Text_FE670B
-	.dw Text_FE6722
-	.dw Text_FE6739
-	.dw Text_FE6761
-	.dw Text_FE6791
-	.dw Text_FE67AB
-	.dw Text_FE67C1
-	.dw Text_FE67EC
-	.dw Text_FE6800
-	.dw Text_FE682C
-	.dw Text_FE685A
-	.dw Text_FE688E
-	.dw Text_FE68C0
-	.dw Text_FE68C8
-	.dw Text_FE68DD
+	.dw EndingCutsceneText1
+	.dw EndingCutsceneText2
+	.dw EndingCutsceneText3
+	.dw EndingCutsceneText4
+	.dw EndingCutsceneText5
+	.dw EndingCutsceneText6
+	.dw EndingCutsceneText7
+	.dw EndingCutsceneText8
+	.dw EndingCutsceneText9
+	.dw EndingCutsceneText10
+	.dw EndingCutsceneText11
+	.dw EndingCutsceneText12
+	.dw EndingCutsceneText13
+	.dw EndingCutsceneText14
+	.dw EndingCutsceneText15
+	.dw EndingCutsceneText16
+	.dw EndingCutsceneText17
+	.dw EndingCutsceneText18
+	.dw EndingCutsceneText19
+	.dw EndingCutsceneText20
+	.dw EndingCutsceneText21
+	.dw EndingCutsceneText22
+	.dw EndingCutsceneText23
+	.dw EndingCutsceneText24
+	.dw EndingCutsceneText25
+	.dw EndingCutsceneText26
+	.dw EndingCutsceneText27
+	.dw EndingCutsceneText28
+	.dw EndingCutsceneText29
+	.dw EndingCutsceneText30
+	.dw ShopkeeperThiefText
+	.dw ReceivedItemText
+	.dw ShopkeeperWelcomeText
 	.dw Text_FE68EC
 	.dw Text_FE6926
 	.dw Text_FE6953
-	.dw Text_FE6988
-	.dw Text_FE6998
+	.dw ShopkeeperThatsAShameText
+	.dw ShopkeeperThankYouText
 	.dw Text_FE69AA
 	.dw Text_FE69C2
 	.dw Text_FE69DF
@@ -1690,11 +1690,11 @@ TextPointerTable:
 	.dw Text_FE6D49
 	.dw Text_FE6D95
 	.dw Text_FE6DB0
-	.dw Text_FE6E25
-	.dw Text_FE6E4E
-	.dw Text_FE6E72
-	.dw Text_FE6EA4
-	.dw Text_FE6ED3
+	.dw BlindedGirlText1
+	.dw BlindedGirlText2
+	.dw BlindedGirlText3
+	.dw BlindedGirlText4
+	.dw BlindedGirlText5
 	.dw Text_FE6EE0
 	.dw Text_FE6EFF
 	.dw Text_FE6F0C
@@ -1744,24 +1744,24 @@ TextPointerTable:
 	.dw Text_FE79DA
 	.dw Text_FE7A3B
 	.dw Text_FE7A4E
-	.dw Text_FE7A66
-	.dw Text_FE7AB4
-	.dw Text_FE7AF8
-	.dw Text_FE7B23
-	.dw Text_FE7B32
+	.dw OryuDialogue1Text1
+	.dw OryuDialogue1Text2
+	.dw OryuDialogue1Text3
+	.dw OryuDialogue1Text4
+	.dw OryuDialogue1Text5
 	.dw Text_FE7B6C
 	.dw Text_FE7B9C
-	.dw Text_FE7BC4
+	.dw OryuDialogue2Text
 	.dw Text_FE7C6C
-	.dw Text_FE7CC2
+	.dw OryuHelpText
 	.dw Text_FE7CD3
 	.dw Text_FE7CF7
-	.dw Text_FE7D1D
-	.dw Text_FE7D77
-	.dw Text_FE7DF8
+	.dw OryuDialogue3Text1
+	.dw OryuDialogue3Text2
+	.dw OryuDialogue3Text3
 	.dw Text_FE7E14
 	.dw Text_FE7E35
-	.dw Text_FE7E5D
+	.dw OryuDialogue4Text1
 	.dw Text_FE7E80
 	.dw Text_FE7E93
 	.dw Text_FE7EA8
@@ -2066,25 +2066,25 @@ TextPointerTable:
 	.dw Text_FEBD61
 	.dw Text_FEBE04
 	.dw Text_FEBE91
-	.dw Text_FEBEBF
-	.dw Text_FEBF06
-	.dw Text_FEBF19
-	.dw Text_FEBF28
-	.dw Text_FEBF57
-	.dw Text_FEBF67
+	.dw FortuneTellerText1
+	.dw FortuneTellerDecisionText
+	.dw FortuneTellerNoText
+	.dw FortuneTellerYesText
+	.dw FortuneTellerOneLastThingText
+	.dw FortuneTellerDontForgetText
 	.dw Text_FEBF85
-	.dw Text_FEBFA0
-	.dw Text_FEBFBD
-	.dw Text_FEBFD4
-	.dw Text_FEBFEC
-	.dw Text_FEC008
-	.dw Text_FEC025
-	.dw Text_FEC040
-	.dw Text_FEC06B
-	.dw Text_FEC0A1
-	.dw Text_FEC0C5
-	.dw Text_FEC0EA
-	.dw Text_FEC10D
+	.dw FortuneResultsText1
+	.dw FortuneResultsText2
+	.dw FortuneResultsText3
+	.dw FortuneResultsText4
+	.dw FortuneResultsText5
+	.dw FortuneResultsText6
+	.dw FortuneResultsText7
+	.dw FortuneResultsText8
+	.dw FortuneTellerTip1Text
+	.dw FortuneTellerTip2Text
+	.dw FortuneTellerTip3Text
+	.dw FortuneTellerTip4Text
 	.dw Text_FEC13D
 	.dw Text_FEC1AD
 	.dw Text_FEC218
@@ -2096,8 +2096,8 @@ TextPointerTable:
 	.dw Text_FEC438
 	.dw Text_FEC459
 	.dw Text_FEC482
-	.dw Text_FEC64B
-	.dw Text_FEC6C1
+	.dw CanyonHamletNPC1Dialogue1Text
+	.dw CanyonHamletNPC1Dialogue2Text
 	.dw Text_FEC6E5
 	.dw Text_FEC718
 	.dw Text_FEC77E
@@ -2315,8 +2315,8 @@ TextPointerTable:
 	.dw Text_FF0A54
 	.dw Text_FF0A6D
 	.dw Text_FF0A86
-	.dw Text_FF0A9A
-	.dw Text_FF0ABF
+	.dw GirlSeemsLostText
+	.dw LostGirlChoicesText
 	.dw Text_FF0AD1
 	.dw Text_FF0AE2
 	.dw Text_FF0B06
@@ -2372,18 +2372,18 @@ TextPointerTable:
 	.dw Text_FF0F88
 	.dw Text_FF0F9B
 	.dw Text_FF0FB3
-	.dw Text_FF0FC3
-	.dw Text_FF0FEA
-	.dw Text_FF0FF3
-	.dw Text_FF0FFD
-	.dw Text_FF1006
-	.dw Text_FF100F
-	.dw Text_FF101A
-	.dw Text_FF1026
-	.dw Text_FF102F
-	.dw Text_FF1039
-	.dw Text_FF1043
-	.dw Text_FF104F
+	.dw DebugItemMenuText
+	.dw DebugItemMenuChooseHerbText
+	.dw DebugItemMenuChooseScrollText
+	.dw DebugItemMenuChooseStaffText
+	.dw DebugItemMenuChooseJarText
+	.dw DebugItemMenuChooseRiceballText
+	.dw DebugItemMenuChooseWeaponText
+	.dw DebugItemMenuChooseShieldText
+	.dw DebugItemMenuChooseArmbandText
+	.dw DebugItemMenuChooseArrowText
+	.dw DebugItemMenuChooseMiscText
+	.dw DebugItemMenuSetValueText
 	.dw Text_FF1068
 	.dw Text_FF1072
 
@@ -2394,8 +2394,8 @@ TextPointerTable:
 ;menu/window text
 .inc "data/text/windowmenutext.asm"
 
-;dungeon menu text
-.inc "data/text/dungeonmenu.asm"
+;debug menus text
+.inc "data/text/debugmenus.asm"
 
 ;enemy names
 .inc "data/text/enemynames.asm"
@@ -2410,3 +2410,6 @@ TextPointerTable:
 
 ;dialogue
 .inc "data/text/dialogue.asm"
+
+;debug item menu
+.inc "data/text/debugitemmenu.asm"

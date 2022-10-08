@@ -4,24 +4,24 @@ text "\l@"
 
 ;fe129a
 Text_FE129A:
-strvar $80
+strvar TextStrVar_ItemName
 text "をふった。\l@"
 
 ;fe12a3
 Text_FE12A3:
-strvar $80
+strvar TextStrVar_ItemName
 text "\l@"
 
 ;fe12a7
 Text_FE12A7:
-strvar $86
+strvar TextStrVar_EntityName
 text "はワープした。"
 playsound $42
 text "　\l@"
 
 ;fe12b5
 Text_FE12B5:
-strvar $86
+strvar TextStrVar_EntityName
 text "は混乱した。"
 playsound $B7
 text "　\l@"
@@ -30,7 +30,7 @@ text "　\l@"
 Text_FE12C4:
 playsound $B7
 text "　"
-strvar $86
+strvar TextStrVar_EntityName
 text "と、そのまわりの\lモンスターは混乱した。\l@"
 
 ;fe12e1
@@ -66,31 +66,31 @@ text "ポイント上がった。\l@"
 
 ;fe134b
 Text_FE134B:
-strvar $80
+strvar TextStrVar_ItemName
 text "が\l"
-strvar $80
+strvar TextStrVar_ItemName
 text "にすりかわった。\l@"
 
 ;fe135b
 Text_FE135B:
-strvar $80
+strvar TextStrVar_ItemName
 text "は\l呪われていて、はずれなかった。"
 playsound $5B
 text "　\l@"
 
 ;fe1374
 Text_FE1374:
-strvar $80
+strvar TextStrVar_ItemName
 text "が消えてしまった。\l@"
 
 ;fe1382
 Text_FE1382:
-strvar $80
+strvar TextStrVar_ItemName
 text "が役にたった。\l@"
 
 ;fe138e
 Text_FE138E:
-strvar $80
+strvar TextStrVar_ItemName
 text "だった。\l@"
 
 ;fe1396
@@ -99,8 +99,9 @@ playsound $7C
 text "　"
 textfunction $5
 textfunction $2
-cmdf6 $FB
-text "ダの回数が\l"
+cmdf6
+strvar TextStrVar_ItemName
+text "の回数が\l"
 numvar $10
 text "ポイントふえた。\l@"
 
@@ -110,21 +111,22 @@ playsound $7C
 text "　"
 textfunction $5
 textfunction $2
-cmdf6 $FB
-text "ダの大きさが"
+cmdf6
+strvar TextStrVar_ItemName
+text "の大きさが"
 numvar $10
 text "ふえた。\l@"
 
 ;fe13ca
 Text_FE13CA:
-strvar $80
+strvar TextStrVar_ItemName
 text "の上に乗った。\l@"
 
 ;fe13d6
 Text_FE13D6:
-strvar $80
+strvar TextStrVar_ItemName
 text "は\l"
-strvar $86
+strvar TextStrVar_EntityName
 text "に当たった。\l@"
 
 ;fe13e5
@@ -133,22 +135,23 @@ playsound $7B
 text "　"
 textfunction $5
 textfunction $2
-cmdf6 $FB
-text "ダは\l大きいおにぎりに変わった。\l@"
+cmdf6
+strvar TextStrVar_ItemName
+text "は\l大きいおにぎりに変わった。\l@"
 
 ;fe1401
 Text_FE1401:
-strvar $80
+strvar TextStrVar_ItemName
 text "は地面に落ちた。\l@"
 
 ;fe140f
 Text_FE140F:
-strvar $80
+strvar TextStrVar_ItemName
 text "は地面に落ちて\l使いものにならなくなった。\l@"
 
 ;fe142b
 Text_FE142B:
-strvar $80
+strvar TextStrVar_ItemName
 text "を薬にして飲んだ。\l@"
 
 ;fe143a
@@ -160,142 +163,142 @@ text "　\l@"
 
 ;fe1447
 Text_FE1447:
-strvar $80
+strvar TextStrVar_ItemName
 text "を読んだ。\l@"
 
 ;fe1451
 Text_FE1451:
-strvar $80
+strvar TextStrVar_ItemName
 text "をはめた。"
 playsound $57
 text "　\l@"
 
 ;fe145d
 Text_FE145D:
-strvar $80
+strvar TextStrVar_ItemName
 text "を拾った。"
 playsound $4F
 text "　\l@"
 
 ;fe146a
 Text_FE146A:
-strvar $80
+strvar TextStrVar_ItemName
 text "を足元に置いて\l"
-strvar $80
+strvar TextStrVar_ItemName
 text "を拾った。"
 playsound $4F
 text "　\l@"
 
 ;fe1484
 Text_FE1484:
-strvar $80
+strvar TextStrVar_ItemName
 text "を拾った。"
 playsound $50
 text "　\l@"
 
 ;fe1491
 Text_FE1491:
-strvar $80
+strvar TextStrVar_ItemName
 text "を足元に置いた。\l@"
 
 ;fe14a0
 Text_FE14A0:
-strvar $86
+strvar TextStrVar_EntityName
 text "から\l@"
 
 ;fe14a6
 Text_FE14A6:
-strvar $86
+strvar TextStrVar_EntityName
 text "だった。\l@"
 
 ;fe14ae
 Text_FE14AE:
-strvar $86
+strvar TextStrVar_EntityName
 text "に足をつかまれて\l動けない！\l@"
 
 ;fe14c2
 Text_FE14C2:
-strvar $86
+strvar TextStrVar_EntityName
 text "のステイタスが、すべて\l@"
 
 ;fe14d1
 Text_FE14D1:
 text "炎が、"
-strvar $86
+strvar TextStrVar_EntityName
 text "をこがす。\l@"
 
 ;fe14de
 Text_FE14DE:
-strvar $86
+strvar TextStrVar_EntityName
 text "の攻撃は、はずれた。\l@"
 
 ;fe14ed
 Text_FE14ED:
-strvar $86
+strvar TextStrVar_EntityName
 text "の攻撃を、かわした。\l@"
 
 ;fe14fc
 Text_FE14FC:
-strvar $86
+strvar TextStrVar_EntityName
 text "は、ちからを吸いとった。\l@"
 
 ;fe150d
 Text_FE150D:
-strvar $86
+strvar TextStrVar_EntityName
 text "はクネクネーをおどった。\l@"
 
 ;fe151d
 Text_FE151D:
-strvar $86
+strvar TextStrVar_EntityName
 text "は、"
-strvar $80
+strvar TextStrVar_ItemName
 text "をうってきた。\l@"
 
 ;fe152c
 Text_FE152C:
-strvar $86
+strvar TextStrVar_EntityName
 text "は"
-strvar $80
+strvar TextStrVar_ItemName
 text "を食べた。\l@"
 
 ;fe1538
 Text_FE1538:
-strvar $86
+strvar TextStrVar_EntityName
 text "は、"
-strvar $86
+strvar TextStrVar_EntityName
 text "から\l"
-strvar $80
+strvar TextStrVar_ItemName
 text "を、ぬすんだ。\l@"
 
 ;fe154c
 Text_FE154C:
-strvar $86
+strvar TextStrVar_EntityName
 text "は、"
-strvar $86
+strvar TextStrVar_EntityName
 text "に\l@"
 
 ;fe1555
 Text_FE1555:
 strvar $85
 text "は、"
-strvar $86
+strvar TextStrVar_EntityName
 text "に\l@"
 
 ;fe155e
 Text_FE155E:
-strvar $86
+strvar TextStrVar_EntityName
 text "は"
-strvar $86
+strvar TextStrVar_EntityName
 text "の\l足をつかんだ。\l@"
 
 ;fe156f
 Text_FE156F:
-strvar $86
+strvar TextStrVar_EntityName
 text "は催眠術をかけた。\l@"
 
 ;fe157f
 Text_FE157F:
-strvar $86
+strvar TextStrVar_EntityName
 text "は、へんな呪文を唱えた。\l@"
 
 ;fe1592
@@ -304,22 +307,22 @@ text "ＨＰが回復するようになった。\l@"
 
 ;fe15a6
 Text_FE15A6:
-strvar $86
+strvar TextStrVar_EntityName
 text "は、睡眠液を吐いた。\l@"
 
 ;fe15b8
 Text_FE15B8:
-strvar $86
+strvar TextStrVar_EntityName
 text "は毒をはいた。\l@"
 
 ;fe15c4
 Text_FE15C4:
-strvar $86
+strvar TextStrVar_EntityName
 text "は、くさった液をはいた。\l@"
 
 ;fe15d5
 Text_FE15D5:
-strvar $86
+strvar TextStrVar_EntityName
 text "はおびえだした。"
 playsound $B8
 text "　\l@"
@@ -328,21 +331,21 @@ text "　\l@"
 Text_FE15E4:
 playsound $B8
 text "　"
-strvar $86
+strvar TextStrVar_EntityName
 text "と、そのまわりの\lモンスターはおびえだした。\l@"
 
 ;fe1601
 Text_FE1601:
 playsound $9E
 text "　"
-strvar $86
+strvar TextStrVar_EntityName
 text "はレベル"
 numvar $10
 text "に下がった。\l@"
 
 ;fe1614
 Text_FE1614:
-strvar $86
+strvar TextStrVar_EntityName
 text "はレベル"
 numvar $10
 text "に上がった。"
@@ -351,22 +354,22 @@ text "　\l@"
 
 ;fe1627
 Text_FE1627:
-strvar $86
+strvar TextStrVar_EntityName
 text "はちからつきた。\l@"
 
 ;fe1633
 Text_FE1633:
-strvar $86
+strvar TextStrVar_EntityName
 text "はちからつきた。\l"
 textfunction $2
-cmdf6 $25
-text "かし、"
-strvar $80
+cmdf6
+text "しかし、"
+strvar TextStrVar_ItemName
 text "を使って復活した。\l@"
 
 ;fe1655
 Text_FE1655:
-strvar $86
+strvar TextStrVar_EntityName
 text "は眠ってしまった。"
 playsound $96
 text "　\l@"
@@ -375,12 +378,12 @@ text "　\l@"
 Text_FE1666:
 playsound $96
 text "　"
-strvar $86
+strvar TextStrVar_EntityName
 text "と、そのまわりの\lモンスターは眠ってしまった。\l@"
 
 ;fe1685
 Text_FE1685:
-strvar $86
+strvar TextStrVar_EntityName
 text "をやっつけた。\l@"
 
 ;fe1690
@@ -514,8 +517,8 @@ Text_FE1839:
 playsound $76
 text "　"
 textfunction $2
-cmdf6 $21
-text "の巻物は読まずに足元に置くこと\lすると敵の攻撃を受けなくなる。\l@"
+cmdf6
+text "この巻物は読まずに足元に置くこと\lすると敵の攻撃を受けなくなる。\l@"
 
 ;fe1868
 Text_FE1868:
@@ -524,32 +527,32 @@ text "これには毒をはね返す力があるぞ。\l@"
 ;fe187c
 Text_FE187C:
 text "これは"
-strvar $80
+strvar TextStrVar_ItemName
 text "だ。\l@"
 
 ;fe1885
 Text_FE1885:
 textfunction $2
-cmdf6 $21
-text "れは腐らないし、軽いから\lおなかも、へりにくいだろう。\l@"
+cmdf6
+text "これは腐らないし、軽いから\lおなかも、へりにくいだろう。\l@"
 
 ;fe18a8
 Text_FE18A8:
 textfunction $2
-cmdf6 $21
-text "れを薬にして飲むと\l@"
+cmdf6
+text "これを薬にして飲むと\l@"
 
 ;fe18b9
 Text_FE18B9:
 textfunction $2
-cmdf6 $21
-text "れをふると\l@"
+cmdf6
+text "これをふると\l@"
 
 ;fe18c4
 Text_FE18C4:
 textfunction $2
-cmdf6 $21
-text "れを読むと\l@"
+cmdf6
+text "これを読むと\l@"
 
 ;fe18d0
 Text_FE18D0:
@@ -578,15 +581,15 @@ text "ダンジョンが見渡せるようになるぞ。\l@"
 ;fe1936
 Text_FE1936:
 textfunction $2
-cmdf6 $37
-text "んと！　"
-strvar $80
+cmdf6
+text "なんと！　"
+strvar TextStrVar_ItemName
 text "は\l@"
 
 ;fe1943
 Text_FE1943:
 text "なんと！　"
-strvar $86
+strvar TextStrVar_EntityName
 text "は\l@"
 
 ;fe194d
@@ -657,8 +660,8 @@ playsound $82
 text "　"
 textfunction $5
 textfunction $2
-cmdf6 $65
-text "イテムが、すべて\lモンスターに変わってしまった。\l@"
+cmdf6
+text "アイテムが、すべて\lモンスターに変わってしまった。\l@"
 
 ;fe1a58
 Text_FE1A58:
@@ -685,8 +688,8 @@ playsound $82
 text "　"
 textfunction $5
 textfunction $2
-cmdf6 $65
-text "イテムの効果が、すべて\l@"
+cmdf6
+text "アイテムの効果が、すべて\l@"
 
 ;fe1ac3
 Text_FE1AC3:
@@ -694,8 +697,8 @@ playsound $82
 text "　"
 textfunction $5
 textfunction $2
-cmdf6 $A1
-text "ンスターが、すべて\lアイテムに変わってしまった！\l@"
+cmdf6
+text "モンスターが、すべて\lアイテムに変わってしまった！\l@"
 
 ;fe1ae7
 Text_FE1AE7:
@@ -805,8 +808,8 @@ playsound $5B
 text "　"
 textfunction $5
 textfunction $2
-cmdf6 $D1
-text "備していた"
+cmdf6
+text "装備していた"
 strvar $84
 text "が\l呪われてしまった！\l@"
 
@@ -818,8 +821,8 @@ text "装備品に金のメッキが、なされた！\l@"
 Text_FE1C99:
 textfunction $5
 textfunction $2
-cmdf6 $D1
-text "備していた"
+cmdf6
+text "装備していた"
 strvar $84
 text "の\l呪いが解けた！\l@"
 
@@ -852,10 +855,11 @@ Text_FE1D1B:
 text "別の場所にワープできるぞ。\l@"
 
 ;fe1d2b
-Text_FE1D2B:
+AlarmTrapText:
 textfunction $2
-cmdf6 $FD
-text "シ　眠っているモンスターの\l目をさましてしまった！\l@"
+cmdf6
+playsound $77
+text "　眠っているモンスターの\l目をさましてしまった！\l@"
 
 ;fe1d4b
 Text_FE1D4B:
@@ -948,21 +952,21 @@ text "しかし、メッキされた盾はさびなかった。\l@"
 ;fe1e76
 Text_FE1E76:
 text "しかし、"
-strvar $80
+strvar TextStrVar_ItemName
 text "はさびない。\l@"
 
 ;fe1e84
 Text_FE1E84:
 textfunction $5
 textfunction $2
-cmdf6 $D1
-text "備していた"
+cmdf6
+text "装備していた"
 strvar $84
 text "が\l@"
 
 ;fe1e94
 Text_FE1E94:
-strvar $80
+strvar TextStrVar_ItemName
 text "に強化された。\l@"
 
 ;fe1ea0
@@ -981,7 +985,7 @@ text "　\l@"
 
 ;fe1ec0
 Text_FE1EC0:
-strvar $86
+strvar TextStrVar_EntityName
 text "は様子を見ている。\l@"
 
 ;fe1ece
@@ -998,19 +1002,20 @@ text "・・・・・・さっきより強いぞ。\l@"
 
 ;fe1ef6
 Text_FE1EF6:
-cmdf6 $F2
-text "すを支えきれない！\l@"
+cmdf6
+text "体を支えきれない！\l@"
 
 ;fe1f04
 Text_FE1F04:
-strvar $81
+strvar TextStrVar_PlayerName
 text "は、風に飛ばされた。\l@"
 
 ;fe1f13
 Text_FE1F13:
 textfunction $2
-cmdf6 $FD
-text "コ　ラッキー！　この識別の巻物は\lアイテムすべてを識別できた！\l@"
+cmdf6
+playsound $73
+text "　ラッキー！　この識別の巻物は\lアイテムすべてを識別できた！\l@"
 
 ;fe1f3a
 Text_FE1F3A:
@@ -1020,8 +1025,8 @@ text "矢を装備していない。\l@"
 Text_FE1F47:
 text "このままスイッチを切って下さい。\l"
 textfunction $2
-cmdf6 $F2
-text "＋に「冒険に出る」を選ぶと\lこの続きから始められます。\l@"
+cmdf6
+text "次に「冒険に出る」を選ぶと\lこの続きから始められます。\l@"
 
 ;fe1f7f
 Text_FE1F7F:
@@ -1049,21 +1054,22 @@ playsound $A2
 text "　"
 textfunction $5
 textfunction $2
-cmdf6 $FB
-text "デの目が\l見えなくなった。\l@"
+cmdf6
+strvar TextStrVar_EntityName
+text "の目が\l見えなくなった。\l@"
 
 ;fe2039
 Text_FE2039:
 playsound $A2
 text "　"
-strvar $86
+strvar TextStrVar_EntityName
 text "と、そのまわりの\lモンスターの目が見えなくなった。\l@"
 
 ;fe2059
 Text_FE2059:
-strvar $80
+strvar TextStrVar_ItemName
 text "は"
-strvar $86
+strvar TextStrVar_EntityName
 text "に当たった。\l@"
 
 ;fe2067
@@ -1088,8 +1094,8 @@ playsound $82
 text "　"
 textfunction $5
 textfunction $2
-cmdf6 $27
-text "べてのモンスターが\lはぐれメタルになった。\l@"
+cmdf6
+text "すべてのモンスターが\lはぐれメタルになった。\l@"
 
 ;fe20cc
 Text_FE20CC:
@@ -1099,20 +1105,20 @@ text "　すべてのステイタスが回復した。\l@"
 ;fe20e2
 Text_FE20E2:
 textfunction $2
-cmdf6 $25
-text "あわせの箱を持っていると\lリレミトの巻物はきかない！\l@"
+cmdf6
+text "しあわせの箱を持っていると\lリレミトの巻物はきかない！\l@"
 
 ;fe2103
 Text_FE2103:
-strvar $80
+strvar TextStrVar_ItemName
 text "は地面にはりついている。\l@"
 
 ;fe2114
 Text_FE2114:
 textfunction $2
-cmdf6 $37
-text "んと！　"
-strvar $80
+cmdf6
+text "なんと！　"
+strvar TextStrVar_ItemName
 text "だった。\l@"
 
 ;fe2124
@@ -1124,8 +1130,8 @@ text "は消えてしまった！\l@"
 ;fe2136
 Text_FE2136:
 textfunction $2
-cmdf6 $A1
-text "ンスターに投げて飲ませると\lおどろいて、にげていくぞ。\l@"
+cmdf6
+text "モンスターに投げて飲ませると\lおどろいて、にげていくぞ。\l@"
 
 ;fe2159
 Text_FE2159:
@@ -1133,16 +1139,16 @@ text "なにも落ちていない。\l@"
 
 ;fe2166
 Text_FE2166:
-strvar $80
+strvar TextStrVar_ItemName
 text "の中に、\l"
-strvar $80
+strvar TextStrVar_ItemName
 text "を入れた。\l@"
 
 ;fe2176
 Text_FE2176:
-strvar $80
+strvar TextStrVar_ItemName
 text "の中から、\l"
-strvar $80
+strvar TextStrVar_ItemName
 text "を取り出した。\l@"
 
 ;fe218a
@@ -1151,7 +1157,7 @@ text "壺の中に壺は入れられない。\l@"
 
 ;fe2199
 Text_FE2199:
-strvar $80
+strvar TextStrVar_ItemName
 text "が割れた。\l@"
 
 ;fe21a3
@@ -1161,12 +1167,12 @@ text "壺の中にはもう入らない。\l@"
 ;fe21b1
 Text_FE21B1:
 text "なんと！　"
-strvar $80
+strvar TextStrVar_ItemName
 text "だった。\l@"
 
 ;fe21be
 Text_FE21BE:
-strvar $80
+strvar TextStrVar_ItemName
 text "を押した。\l@"
 
 ;fe21c8
@@ -1175,24 +1181,24 @@ text "アイテムエラー\l@"
 
 ;fe21d1
 Text_FE21D1:
-strvar $86
+strvar TextStrVar_EntityName
 text "はハラヘリーを唱えた。\l@"
 
 ;fe21e1
 Text_FE21E1:
-strvar $86
+strvar TextStrVar_EntityName
 text "は呪いの呪文を唱えた。\lしかし、腕輪の魔力で呪われなかった。\l@"
 
 ;fe2209
 Text_FE2209:
-strvar $86
+strvar TextStrVar_EntityName
 text "は仲間を呼んだ。\l@"
 
 ;fe2218
 Text_FE2218:
-strvar $86
+strvar TextStrVar_EntityName
 text "は"
-strvar $86
+strvar TextStrVar_EntityName
 text "に\l回復の呪文を唱えた。\l@"
 
 ;fe2230
@@ -1205,19 +1211,19 @@ text "しかし、腕輪の魔力で混乱しなかった。\l@"
 
 ;fe225b
 Text_FE225B:
-strvar $80
+strvar TextStrVar_ItemName
 text "を落してしまった。\l@"
 
 ;fe2269
 Text_FE2269:
-strvar $80
+strvar TextStrVar_ItemName
 text "は、こわれてなくなった。"
 playsound $59
 text "　\l@"
 
 ;fe227c
 Text_FE227C:
-strvar $86
+strvar TextStrVar_EntityName
 text "は目つぶしの呪文を唱えた。\l@"
 
 ;fe2290
@@ -1244,19 +1250,19 @@ text "　時限爆弾だ！\l@"
 ;fe22ed
 Text_FE22ED:
 text "会心の一撃！　"
-strvar $86
+strvar TextStrVar_EntityName
 text "に\l@"
 
 ;fe22fc
 Text_FE22FC:
 text "痛恨の一撃！　"
-strvar $86
+strvar TextStrVar_EntityName
 text "から\l@"
 
 ;fe230c
 Text_FE230C:
 text "復讐の一撃！　"
-strvar $86
+strvar TextStrVar_EntityName
 text "から\l@"
 
 ;fe231c
@@ -1265,12 +1271,12 @@ text "巨大な岩石が落ちてきた！\l@"
 
 ;fe232e
 Text_FE232E:
-strvar $86
+strvar TextStrVar_EntityName
 text "は動きが遅くなった！\l@"
 
 ;fe233e
 Text_FE233E:
-strvar $80
+strvar TextStrVar_ItemName
 text "の中に入った。\l@"
 
 ;fe2349
@@ -1285,7 +1291,7 @@ text "　\l@"
 
 ;fe2376
 Text_FE2376:
-strvar $86
+strvar TextStrVar_EntityName
 text "はモンスターに囲まれた！"
 playsound $B1
 text "　\l@"
@@ -1293,12 +1299,12 @@ text "　\l@"
 ;fe238a
 Text_FE238A:
 text "光をあびた"
-strvar $86
+strvar TextStrVar_EntityName
 text "は\lおにぎりになってしまった！\l@"
 
 ;fe23a3
 Text_FE23A3:
-strvar $86
+strvar TextStrVar_EntityName
 text "は目が回った！\l@"
 
 ;fe23af
@@ -1307,7 +1313,7 @@ text "ものがちゃんと見えなくなった！\l@"
 
 ;fe23c0
 Text_FE23C0:
-strvar $86
+strvar TextStrVar_EntityName
 text "は眠ってしまった！\l@"
 
 ;fe23ce
@@ -1335,12 +1341,12 @@ text "　\l@"
 ;fe243e
 Text_FE243E:
 text "身代りの霊は"
-strvar $86
+strvar TextStrVar_EntityName
 text "を呼び寄せた。\l@"
 
 ;fe2454
 Text_FE2454:
-strvar $80
+strvar TextStrVar_ItemName
 text "の中身を吸い出した。\l@"
 
 ;fe2464
@@ -1355,7 +1361,7 @@ text "無敵状態ではなくなった。\l@"
 
 ;fe2488
 Text_FE2488:
-strvar $86
+strvar TextStrVar_EntityName
 text "は、おにぎりを食べている。\l@"
 
 ;fe2499
@@ -1389,14 +1395,14 @@ text "ここにはワナを作れない。\l@"
 ;fe2501
 Text_FE2501:
 text "杖の効果で、"
-strvar $86
+strvar TextStrVar_EntityName
 text "に、\l@"
 
 ;fe250f
 Text_FE250F:
 playsound $9F
 text "　"
-strvar $86
+strvar TextStrVar_EntityName
 text "は勝手に動き出した。\l@"
 
 ;fe2523
@@ -1405,7 +1411,7 @@ text "普通に動けるようになった。\l@"
 
 ;fe2535
 Text_FE2535:
-strvar $80
+strvar TextStrVar_ItemName
 text "をぬすんだ。\l@"
 
 ;fe253f
@@ -1427,45 +1433,45 @@ text "アイテムを拾えるようになった。\l@"
 
 ;fe258c
 Text_FE258C:
-strvar $86
+strvar TextStrVar_EntityName
 text "は呪いの呪文を唱えた。\l装備中の盾が呪われた！"
 playsound $5B
 text "　\l@"
 
 ;fe25af
 Text_FE25AF:
-strvar $86
+strvar TextStrVar_EntityName
 text "は呪いの呪文を唱えた。\l装備中のアイテムがすべて呪われた！"
 playsound $5B
 text "　\l@"
 
 ;fe25d8
 Text_FE25D8:
-strvar $86
+strvar TextStrVar_EntityName
 text "は呪いの呪文を唱えた。\l持っていたアイテムがすべて呪われた！"
 playsound $5B
 text "　\l@"
 
 ;fe2602
 Text_FE2602:
-strvar $86
+strvar TextStrVar_EntityName
 text "は"
-strvar $86
+strvar TextStrVar_EntityName
 text "に、\lのりうつった！\l@"
 
 ;fe2613
 Text_FE2613:
-strvar $80
+strvar TextStrVar_ItemName
 text "が、\l大きいおにぎりに変わってしまった！\l@"
 
 ;fe262c
 Text_FE262C:
-strvar $80
+strvar TextStrVar_ItemName
 text "が、\l雑草に変わってしまった！\l@"
 
 ;fe2641
 Text_FE2641:
-strvar $80
+strvar TextStrVar_ItemName
 text "の中に、\l雑草が入ってしまった！\l@"
 
 ;fe2656
@@ -1474,8 +1480,8 @@ playsound $8F
 text "　"
 textfunction $5
 textfunction $2
-cmdf6 $D1
-text "備していた"
+cmdf6
+text "装備していた"
 strvar $84
 text "の\l呪いが解けた！\l@"
 
@@ -1485,8 +1491,8 @@ playsound $8F
 text "　"
 textfunction $5
 textfunction $2
-cmdf6 $E7
-text "っていたアイテムの\l呪いが解けた！\l@"
+cmdf6
+text "持っていたアイテムの\l呪いが解けた！\l@"
 
 ;fe2691
 Text_FE2691:
@@ -1498,11 +1504,11 @@ text "しかし、メッキされた剣はさびなかった。\l@"
 
 ;fe26b4
 Text_FE26B4:
-strvar $86
+strvar TextStrVar_EntityName
 text "はちからつきた。\l"
 textfunction $2
-cmdf6 $25
-text "かし、"
+cmdf6
+text "しかし、"
 strvar $0
 text "になって復活した。\l@"
 
@@ -1627,19 +1633,19 @@ text "アイテムが拾えない！\l@"
 Text_FE2978:
 playsound $35
 text "　"
-strvar $86
+strvar TextStrVar_EntityName
 text "は、レベルが上がって\l@"
 
 ;fe2989
 Text_FE2989:
-strvar $86
+strvar TextStrVar_EntityName
 text "になった。\l@"
 
 ;fe2992
 Text_FE2992:
 playsound $9E
 text "　"
-strvar $86
+strvar TextStrVar_EntityName
 text "は、レベルが下がって\l@"
 
 ;fe29a3
@@ -1655,7 +1661,8 @@ text "拾うだけで識別できるようになった！\l@"
 ;fe29bd
 Text_FE29BD:
 textfunction $2
-cmdf6 $C3
+cmdf6
+text "『"
 strvar $88
 text "・・・』\lと、むなしくこだました。\l@"
 
@@ -1665,22 +1672,22 @@ text "しかし、巻物は白紙だった。\l@"
 
 ;fe29e7
 Text_FE29E7:
-strvar $86
+strvar TextStrVar_EntityName
 text "は、眠っている。\l@"
 
 ;fe29f4
 Text_FE29F4:
-strvar $86
+strvar TextStrVar_EntityName
 text "の守備力が下がった。\l@"
 
 ;fe2a03
 Text_FE2A03:
-strvar $86
+strvar TextStrVar_EntityName
 text "の守備力が０になった。\l@"
 
 ;fe2a13
 Text_FE2A13:
-strvar $86
+strvar TextStrVar_EntityName
 text "の特技は封印された。\l@"
 
 ;fe2a25
@@ -1689,7 +1696,7 @@ text "ここは、掘れない。\l@"
 
 ;fe2a31
 Text_FE2A31:
-strvar $86
+strvar TextStrVar_EntityName
 text "は、特技が封印された。\l@"
 
 ;fe2a44
@@ -1831,57 +1838,60 @@ text "しかし、大型地雷は爆発しなかった。\l@"
 Text_FE2C3B:
 text "－－－－小話その１－－－－\lそこで、妖刀かまいたちを\l装備してるのって・・・\l"
 textfunction $2
-cmdf6 $F2
-text "ヒ井達？"
+cmdf6
+text "鎌井達？"
 playsound $A7
 text "　\l@"
 
 ;fe2c75
 Text_FE2C75:
 textfunction $2
-cmdf6 $FB
-text "デはずっこけた。\l@"
+cmdf6
+strvar TextStrVar_EntityName
+text "はずっこけた。\l@"
 
 ;fe2c83
 Text_FE2C83:
 textfunction $2
-cmdf6 $FD
-text "サ　"
-strvar $86
+cmdf6
+playsound $75
+text "　"
+strvar TextStrVar_EntityName
 text "は固まった。\l@"
 
 ;fe2c94
 Text_FE2C94:
 textfunction $2
-cmdf6 $FB
-text "デは怒りだした。\l@"
+cmdf6
+strvar TextStrVar_EntityName
+text "は怒りだした。\l@"
 
 ;fe2ca3
 Text_FE2CA3:
 playsound $A8
 text "　"
-strvar $86
+strvar TextStrVar_EntityName
 text "は無敵になった。\l@"
 
 ;fe2cb4
 Text_FE2CB4:
 playsound $9C
 text "　"
-strvar $86
+strvar TextStrVar_EntityName
 text "は生き返った。\l@"
 
 ;fe2cc3
 Text_FE2CC3:
 playsound $9D
 text "　"
-strvar $86
+strvar TextStrVar_EntityName
 text "の姿が見えなくなった。\l@"
 
 ;fe2cd6
 Text_FE2CD6:
 playsound $9F
 text "　"
-strvar $86
+strvar TextStrVar_EntityName
 text "は\lバーサーカー状態になった。\l@"
 
 ;fe2cee
@@ -1895,14 +1905,14 @@ text "マップを忘れてしまった。\l@"
 
 ;fe2d13
 Text_FE2D13:
-strvar $86
+strvar TextStrVar_EntityName
 text "の存在が封じられた。\l@"
 
 ;fe2d24
 Text_FE2D24:
 textfunction $2
-cmdf6 $21
-text "の巻物は読まずに敵に投げること\lするとその敵が出て来なくなる。\l@"
+cmdf6
+text "この巻物は読まずに敵に投げること\lするとその敵が出て来なくなる。\l@"
 
 ;fe2d4d
 Text_FE2D4D:

@@ -49,7 +49,7 @@ func_818049:
 	plb                                  ;81804A|AB      |      ;  
 	php                                  ;81804B|08      |      ;  
 	sep #$30                             ;81804C|E230    |      ;  
-	lda.b $01                            ;81804E|A501    |000001;  
+	lda.b w0001                            ;81804E|A501    |000001;  
 	bmi func_818092                      ;818050|3040    |C18092;  
 	bne func_8180A7                      ;818052|D053    |C180A7;  
 	ldy.b $00                            ;818054|A400    |000000;  
@@ -367,12 +367,12 @@ func_818251:
 	sta.w $0C04,x                        ;818268|9D040C  |810C04;  
 	lda.b #$64                           ;81826B|A964    |      ;  
 	sta.w $0C1D,x                        ;81826D|9D1D0C  |810C1D;  
-	lda.b #$DD                           ;818270|A9DD    |      ;  
+	lda.b #$DD  ;set bank to dd (right after 0x4000 in memory)   ;818270|A9DD    |      ;  
 	sta.b $61                            ;818272|8561    |000061;  
 	rep #$30                             ;818274|C230    |      ;  
 	lda.w #$4000                         ;818276|A90040  |      ;  
 	sta.b $5F                            ;818279|855F    |00005F;  
-	lda.b [$5F]                          ;81827B|A75F    |00005F;  
+	lda.b [$5F]  ;DATA8_DD4000    ;81827B|A75F    |00005F;  
 	clc                                  ;81827D|18      |      ;  
 	adc.b $5F                            ;81827E|655F    |00005F;  
 	ply                                  ;818280|7A      |      ;  
@@ -405,21 +405,20 @@ func_818251:
 	tax                                  ;8182AE|AA      |      ;  
 	pha                                  ;8182AF|48      |      ;  
 	pha                                  ;8182B0|48      |      ;  
-
 func_8182B1:
 	lda.b [$5F],y                        ;8182B1|B75F    |00005F;  
 	iny                                  ;8182B3|C8      |      ;  
 	sta.b $02,s                          ;8182B4|8302    |000002;  
 	lda.b [$5F],y                        ;8182B6|B75F    |00005F;  
 	iny                                  ;8182B8|C8      |      ;  
-	sta.b $01,s                          ;8182B9|8301    |000001;  
+	sta.b w0001,s                          ;8182B9|8301    |000001;  
 	ora.b $02,s                          ;8182BB|0302    |000002;  
 	beq func_81830F                      ;8182BD|F050    |C1830F;  
 	lda.b $02,s                          ;8182BF|A302    |000002;  
 	clc                                  ;8182C1|18      |      ;  
 	adc.b $5F                            ;8182C2|655F    |00005F;  
 	sta.w $0CC2,x                        ;8182C4|9DC20C  |810CC2;  
-	lda.b $01,s                          ;8182C7|A301    |000001;  
+	lda.b w0001,s                          ;8182C7|A301    |000001;  
 	adc.b $60                            ;8182C9|6560    |000060;  
 	sta.w $0CD2,x                        ;8182CB|9DD20C  |810CD2;  
 	lda.b #$00                           ;8182CE|A900    |      ;  
@@ -579,7 +578,7 @@ func_8183E6:
 	jsr.w func_81831D                    ;8183E8|201D83  |C1831D;  
 	pla                                  ;8183EB|68      |      ;  
 	inc a                                ;8183EC|1A      |      ;  
-	cmp.b $01,s                          ;8183ED|C301    |000001;  
+	cmp.b w0001,s                          ;8183ED|C301    |000001;  
 	bcc func_8183E6                      ;8183EF|90F5    |C183E6;  
 	pla                                  ;8183F1|68      |      ;  
 	plx                                  ;8183F2|FA      |      ;  
@@ -933,7 +932,7 @@ func_81860A:
 	bne func_818651                      ;818640|D00F    |C18651;  
 	ldx.w $0EA3                          ;818642|AEA30E  |810EA3;  
 	lda.w $0C04,x                        ;818645|BD040C  |810C04;  
-	ora.b $01,s                          ;818648|0301    |000001;  
+	ora.b w0001,s                          ;818648|0301    |000001;  
 	tax                                  ;81864A|AA      |      ;  
 	lda.w UNREACH_8186A3,x               ;81864B|BDA386  |8186A3;  
 	sta.w $0EA2                          ;81864E|8DA20E  |810EA2;  
@@ -1186,7 +1185,7 @@ func_818938:
 	jsr.w func_81831D                    ;81893A|201D83  |C1831D;  
 	pla                                  ;81893D|68      |      ;  
 	inc a                                ;81893E|1A      |      ;  
-	cmp.b $01,s                          ;81893F|C301    |000001;  
+	cmp.b w0001,s                          ;81893F|C301    |000001;  
 	bcc func_818938                      ;818941|90F5    |C18938;  
 	pla                                  ;818943|68      |      ;  
 	rts                                  ;818944|60      |      ;  
@@ -1303,9 +1302,9 @@ func_8189F2:
 
 func_818A00:
 	iny                                  ;818A00|C8      |      ;  
-	sbc.b $01,s                          ;818A01|E301    |000001;  
+	sbc.b w0001,s                          ;818A01|E301    |000001;  
 	bcs func_818A00                      ;818A03|B0FB    |C18A00;  
-	adc.b $01,s                          ;818A05|6301    |000001;  
+	adc.b w0001,s                          ;818A05|6301    |000001;  
 	sep #$20                             ;818A07|E220    |      ;  
 	sta.w $0E02,x                        ;818A09|9D020E  |810E02;  
 	rep #$20                             ;818A0C|C220    |      ;  
@@ -1355,11 +1354,11 @@ func_818A4D:
 	bra func_818A5D                      ;818A58|8003    |C18A5D;  
 
 func_818A5A:
-	sbc.b $01,s                          ;818A5A|E301    |000001;  
+	sbc.b w0001,s                          ;818A5A|E301    |000001;  
 	iny                                  ;818A5C|C8      |      ;  
 
 func_818A5D:
-	cmp.b $01,s                          ;818A5D|C301    |000001;  
+	cmp.b w0001,s                          ;818A5D|C301    |000001;  
 	bcs func_818A5A                      ;818A5F|B0F9    |C18A5A;  
 	sta.w $0E72,x                        ;818A61|9D720E  |810E72;  
 	tya                                  ;818A64|98      |      ;  
@@ -1549,7 +1548,7 @@ func_818BAB:
 	adc.b $02,s                          ;818BB5|6302    |000002;  
 	sta.b $52                            ;818BB7|8552    |000052;  
 	lda.b $53                            ;818BB9|A553    |000053;  
-	adc.b $01,s                          ;818BBB|6301    |000001;  
+	adc.b w0001,s                          ;818BBB|6301    |000001;  
 	sta.b $53                            ;818BBD|8553    |000053;  
 	pla                                  ;818BBF|68      |      ;  
 	pla                                  ;818BC0|68      |      ;  
@@ -2058,7 +2057,6 @@ func_818F0F:
 	sbc.l DATA8_DD4000                   ;818F17|EF0040DD|DD4000;  
 	ldy.w #$FFFF                         ;818F1B|A0FFFF  |      ;  
 	sec                                  ;818F1E|38      |      ;  
-
 func_818F1F:
 	iny                                  ;818F1F|C8      |      ;  
 	sbc.w #$0003                         ;818F20|E90300  |      ;  
@@ -2079,7 +2077,6 @@ func_818F1F:
 	rep #$10                             ;818F40|C210    |      ;  
 	dex                                  ;818F42|CA      |      ;  
 	dey                                  ;818F43|88      |      ;  
-
 func_818F44:
 	inx                                  ;818F44|E8      |      ;  
 	iny                                  ;818F45|C8      |      ;  
@@ -2091,7 +2088,6 @@ func_818F44:
 	bne func_818F44                      ;818F4E|D0F4    |C18F44;  
 	txa                                  ;818F50|8A      |      ;  
 	sta.w $1039                          ;818F51|8D3910  |811039;  
-
 func_818F54:
 	inx                                  ;818F54|E8      |      ;  
 	iny                                  ;818F55|C8      |      ;  
@@ -2515,7 +2511,7 @@ UNREACH_C19225:
 func_81933D:
 	php                                  ;81933D|08      |      ;  
 	sep #$20                             ;81933E|E220    |      ;  
-	lda.b $01                            ;819340|A501    |000001;  
+	lda.b w0001                            ;819340|A501    |000001;  
 	beq func_819354                      ;819342|F010    |C19354;  
 	cmp.b #$30                           ;819344|C930    |      ;  
 	bcc func_819350                      ;819346|9008    |C19350;  
@@ -2525,7 +2521,7 @@ func_81933D:
 
 func_819350:
 	lda.b #$C9                           ;819350|A9C9    |      ;  
-	sta.b $01                            ;819352|8501    |000001;  
+	sta.b w0001                            ;819352|8501    |000001;  
 
 func_819354:
 	plp                                  ;819354|28      |      ;  
@@ -5191,7 +5187,7 @@ func_81AB25:
 	and.b $02                   ;81AB2B|2502    |000002;  
 	eor.b #$FF                           ;81AB2D|49FF    |      ;  
 	sta.b $00                            ;81AB2F|8500    |000000;  
-	sta.b $01                            ;81AB31|8501    |000001;  
+	sta.b w0001                            ;81AB31|8501    |000001;  
 	eor.b #$FF                           ;81AB33|49FF    |      ;  
 	ora.w $0000,x                        ;81AB35|1D0000  |7E0000;  
 	sta.w $0000,x                        ;81AB38|9D0000  |7E0000;  
@@ -5207,7 +5203,7 @@ func_81AB25:
 	and.b $02                   ;81AB52|2502    |000002;  
 	eor.b #$FF                           ;81AB54|49FF    |      ;  
 	sta.b $00                            ;81AB56|8500    |000000;  
-	sta.b $01                            ;81AB58|8501    |000001;  
+	sta.b w0001                            ;81AB58|8501    |000001;  
 	eor.b #$FF                           ;81AB5A|49FF    |      ;  
 	ora.w $0200,x                        ;81AB5C|1D0002  |7E0200;  
 	sta.w $0200,x                        ;81AB5F|9D0002  |7E0200;  
@@ -5230,7 +5226,7 @@ func_81AB25:
 	adc.b $04                   ;81AB7F|6504    |000004;  
 	tax                                  ;81AB81|AA      |      ;  
 	tdc                                  ;81AB82|7B      |      ;  
-	lda.b $01,s                          ;81AB83|A301    |000001;  
+	lda.b w0001,s                          ;81AB83|A301    |000001;  
 	clc                                  ;81AB85|18      |      ;  
 	adc.b $04                   ;81AB86|6504    |000004;  
 	tay                                  ;81AB88|A8      |      ;  
@@ -5280,7 +5276,7 @@ func_81ABBF:
 	inx                                  ;81ABDC|E8      |      ;  
 	dec.b $00                            ;81ABDD|C600    |000000;  
 	bne func_81ABBF                      ;81ABDF|D0DE    |C1ABBF;  
-	lda.b $01,s                          ;81ABE1|A301    |000001;  
+	lda.b w0001,s                          ;81ABE1|A301    |000001;  
 	clc                                  ;81ABE3|18      |      ;  
 	adc.b $04                   ;81ABE4|6504    |000004;  
 	tax                                  ;81ABE6|AA      |      ;  
@@ -5648,7 +5644,7 @@ func_81B06C:
 	ldx.w $2A96,y                        ;81B07A|BE962A  |7E2A96;  
 	bmi func_81B08C                      ;81B07D|300D    |C1B08C;  
 	clc                                  ;81B07F|18      |      ;  
-	adc.b $01,s                          ;81B080|6301    |000001;  
+	adc.b w0001,s                          ;81B080|6301    |000001;  
 	cmp.w $29E6,y                        ;81B082|D9E629  |7E29E6;  
 	bcc func_81B096                      ;81B085|900F    |C1B096;  
 
@@ -5658,7 +5654,7 @@ func_81B087:
 
 func_81B08C:
 	sec                                  ;81B08C|38      |      ;  
-	sbc.b $01,s                          ;81B08D|E301    |000001;  
+	sbc.b w0001,s                          ;81B08D|E301    |000001;  
 	bcc func_81B087                      ;81B08F|90F6    |C1B087;  
 	cmp.w $29E6,y                        ;81B091|D9E629  |7E29E6;  
 	bcc func_81B087                      ;81B094|90F1    |C1B087;  
@@ -5669,7 +5665,7 @@ func_81B096:
 	ldx.w $2AEE,y                        ;81B09C|BEEE2A  |7E2AEE;  
 	bmi func_81B0AE                      ;81B09F|300D    |C1B0AE;  
 	clc                                  ;81B0A1|18      |      ;  
-	adc.b $01,s                          ;81B0A2|6301    |000001;  
+	adc.b w0001,s                          ;81B0A2|6301    |000001;  
 	cmp.w $2A3E,y                        ;81B0A4|D93E2A  |7E2A3E;  
 	bcc func_81B0B8                      ;81B0A7|900F    |C1B0B8;  
 
@@ -5679,7 +5675,7 @@ func_81B0A9:
 
 func_81B0AE:
 	sec                                  ;81B0AE|38      |      ;  
-	sbc.b $01,s                          ;81B0AF|E301    |000001;  
+	sbc.b w0001,s                          ;81B0AF|E301    |000001;  
 	bcc func_81B0A9                      ;81B0B1|90F6    |C1B0A9;  
 	cmp.w $2A3E,y                        ;81B0B3|D93E2A  |7E2A3E;  
 	bcc func_81B0A9                      ;81B0B6|90F1    |C1B0A9;  
@@ -6013,7 +6009,7 @@ func_81B488:
 
 func_81B48B:
 	jsr.w func_81BE49                    ;81B48B|2049BE  |C1BE49;  
-	sta.b $01                            ;81B48E|8501    |000001;  
+	sta.b w0001                            ;81B48E|8501    |000001;  
 	jsr.w func_81BE41                    ;81B490|2041BE  |C1BE41;  
 	sep #$20                             ;81B493|E220    |      ;  
 	bit.b #$40                           ;81B495|8940    |      ;  
@@ -6082,7 +6078,7 @@ func_81B4DF:
 	ror a                                ;81B4FC|6A      |      ;  
 	sta.b $02                   ;81B4FD|8502    |000002;  
 	jsr.w func_81BE49                    ;81B4FF|2049BE  |C1BE49;  
-	sta.b $01                            ;81B502|8501    |000001;  
+	sta.b w0001                            ;81B502|8501    |000001;  
 	sty.b $04                   ;81B504|8404    |000004;  
 	phy                                  ;81B506|5A      |      ;  
 	phb                                  ;81B507|8B      |      ;  
@@ -6434,7 +6430,7 @@ func_81B893:
 	tax                                  ;81B893|AA      |      ;  
 	lda.l DATA8_C00002,x                 ;81B894|BF0200C0|C00002;  
 	sta.b $00                            ;81B898|8500    |000000;  
-	stz.b $01                            ;81B89A|6401    |000001;  
+	stz.b w0001                            ;81B89A|6401    |000001;  
 	and.w #$FE00                         ;81B89C|2900FE  |      ;  
 	sta.b $02                   ;81B89F|8502    |000002;  
 	lda.l DATA8_C00000,x                 ;81B8A1|BF0000C0|C00000;  
@@ -6882,7 +6878,7 @@ func_81BE98:
 	lsr a                                ;81BEA7|4A      |      ;  
 	lsr a                                ;81BEA8|4A      |      ;  
 	lsr a                                ;81BEA9|4A      |      ;  
-	sta.b $01                            ;81BEAA|8501    |000001;  
+	sta.b w0001                            ;81BEAA|8501    |000001;  
 	rts                                  ;81BEAC|60      |      ;
 
 DATA8_81BEAD:
@@ -6923,7 +6919,7 @@ func_81BF32:
 func_81BF42:
 	jsl.l CODE_C63A81                    ;81BF42|22813AC6|C63A81;  
 	inc.b $00                            ;81BF46|E600    |000000;  
-	lda.b $01                            ;81BF48|A501    |000001;  
+	lda.b w0001                            ;81BF48|A501    |000001;  
 	inc a                                ;81BF4A|1A      |      ;  
 	beq func_81BF50                      ;81BF4B|F003    |C1BF50;  
 	sec                                  ;81BF4D|38      |      ;  
@@ -6937,14 +6933,14 @@ func_81BF53:
 	jsl.l CODE_C23B89                    ;81BF53|22893BC2|C23B89;  
 	lda.b $00                            ;81BF57|A500    |000000;  
 	pha                                  ;81BF59|48      |      ;  
-	lda.b $01                            ;81BF5A|A501    |000001;  
+	lda.b w0001                            ;81BF5A|A501    |000001;  
 	cmp.b #$FF                           ;81BF5C|C9FF    |      ;  
 	beq func_81BF6D                      ;81BF5E|F00D    |C1BF6D;  
 	sta.b $00                            ;81BF60|8500    |000000;  
 	phb                                  ;81BF62|8B      |      ;  
 	jsl.l CODE_C30710                    ;81BF63|221007C3|C30710;  
 	plb                                  ;81BF67|AB      |      ;  
-	lda.b $01                            ;81BF68|A501    |000001;  
+	lda.b w0001                            ;81BF68|A501    |000001;  
 	sec                                  ;81BF6A|38      |      ;  
 	sbc.b #$16                           ;81BF6B|E916    |      ;  
 
@@ -6991,7 +6987,7 @@ func_81BFAA:
 	phb                                  ;81BFB0|8B      |      ;  
 	jsl.l CODE_C30710                    ;81BFB1|221007C3|C30710;  
 	plb                                  ;81BFB5|AB      |      ;  
-	lda.b $01                            ;81BFB6|A501    |000001;  
+	lda.b w0001                            ;81BFB6|A501    |000001;  
 
 func_81BFB8:
 	inc a                                ;81BFB8|1A      |      ;  
@@ -7404,7 +7400,7 @@ func_81C2DC:
 	beq func_81C31B                      ;81C2ED|F02C    |C1C31B;  
 	cmp.w #$007A                         ;81C2EF|C97A00  |      ;  
 	bcs func_81C31B                      ;81C2F2|B027    |C1C31B;  
-	lda.b $01                            ;81C2F4|A501    |000001;  
+	lda.b w0001                            ;81C2F4|A501    |000001;  
 	and.w #$00FF                         ;81C2F6|29FF00  |      ;  
 	beq func_81C31B                      ;81C2F9|F020    |C1C31B;  
 	dec a                                ;81C2FB|3A      |      ;  
@@ -7453,7 +7449,7 @@ func_81C322:
 	tsb.b $02                   ;81C347|0402    |000002;  
 
 func_81C349:
-	lda.b $01                            ;81C349|A501    |000001;  
+	lda.b w0001                            ;81C349|A501    |000001;  
 	and.w #$00FF                         ;81C34B|29FF00  |      ;  
 	bne func_81C35C                      ;81C34E|D00C    |C1C35C;  
 	sta.w $22AE,y                        ;81C350|99AE22  |7E22AE;  
@@ -7695,7 +7691,7 @@ func_81C545:
 	sta.b $02                   ;81C55E|8502    |000002;  
 
 func_81C560:
-	lda.b $01                            ;81C560|A501    |000001;  
+	lda.b w0001                            ;81C560|A501    |000001;  
 	and.w #$00FF                         ;81C562|29FF00  |      ;  
 	bne func_81C573                      ;81C565|D00C    |C1C573;  
 	sta.w $22AE,y                        ;81C567|99AE22  |7E22AE;  
@@ -7853,7 +7849,7 @@ func_81C67D:
 	tdc                                  ;81C67D|7B      |      ;  
 	sta.w $2306,y                        ;81C67E|990623  |7E2306;  
 	sta.w $235E,y                        ;81C681|995E23  |7E235E;  
-	lda.b $01                            ;81C684|A501    |000001;  
+	lda.b w0001                            ;81C684|A501    |000001;  
 	and.w #$00FF                         ;81C686|29FF00  |      ;  
 	asl a                                ;81C689|0A      |      ;  
 	sta.w $22AE,y                        ;81C68A|99AE22  |7E22AE;  
@@ -7985,7 +7981,7 @@ func_81C76B:
 	tdc                                  ;81C76B|7B      |      ;  
 	sta.w $2306,y                        ;81C76C|990623  |7E2306;  
 	sta.w $235E,y                        ;81C76F|995E23  |7E235E;  
-	lda.b $01                            ;81C772|A501    |000001;  
+	lda.b w0001                            ;81C772|A501    |000001;  
 	and.w #$00FF                         ;81C774|29FF00  |      ;  
 	asl a                                ;81C777|0A      |      ;  
 	sta.w $22AE,y                        ;81C778|99AE22  |7E22AE;  
@@ -8056,7 +8052,7 @@ func_81C80C:
 	tdc                                  ;81C80C|7B      |      ;  
 	sta.w $2306,y                        ;81C80D|990623  |7E2306;  
 	sta.w $235E,y                        ;81C810|995E23  |7E235E;  
-	lda.b $01                            ;81C813|A501    |000001;  
+	lda.b w0001                            ;81C813|A501    |000001;  
 	and.w #$00FF                         ;81C815|29FF00  |      ;  
 	asl a                                ;81C818|0A      |      ;  
 	sta.w $22AE,y                        ;81C819|99AE22  |7E22AE;  
@@ -8351,7 +8347,7 @@ func_81CA4C:
 func_81CA54:
 	tay                                  ;81CA54|A8      |      ;  
 	phb                                  ;81CA55|8B      |      ;  
-	lda.b $01                            ;81CA56|A501    |000001;  
+	lda.b w0001                            ;81CA56|A501    |000001;  
 	pha                                  ;81CA58|48      |      ;  
 	plb                                  ;81CA59|AB      |      ;  
 	plb                                  ;81CA5A|AB      |      ;  
@@ -8724,7 +8720,7 @@ func_81CE09:
 	lda.l $7F9CD5                        ;81CE09|AFD59C7F|7F9CD5;  
 	sta.b $00                            ;81CE0D|8500    |000000;  
 	lda.l $7F9CD4                        ;81CE0F|AFD49C7F|7F9CD4;  
-	sta.b $01                            ;81CE13|8501    |000001;  
+	sta.b w0001                            ;81CE13|8501    |000001;  
 	jsl.l CODE_C486A7                    ;81CE15|22A786C4|C486A7;  
 	lda.b $00                            ;81CE19|A500    |000000;  
 	sta.l $7F9CD5                        ;81CE1B|8FD59C7F|7F9CD5;  
@@ -8737,7 +8733,7 @@ Data_81CE24:
 	.db $A8,$CE,$B3,$CE,$6B,$CE,$09,$CE   ;81CE2C|        |      ;  
 
 func_81CE34:
-	lda.b $01                            ;81CE34|A501    |000001;  
+	lda.b w0001                            ;81CE34|A501    |000001;  
 	sta.b $00                            ;81CE36|8500    |000000;  
 	pha                                  ;81CE38|48      |      ;  
 	lda.b $02                   ;81CE39|A502    |000002;  
@@ -8753,14 +8749,14 @@ func_81CE47:
 	pla                                  ;81CE52|68      |      ;  
 	sta.b $00                            ;81CE53|8500    |000000;  
 	jsl.l CODE_C3E69F                    ;81CE55|229FE6C3|C3E69F;  
-	lda.b $01                            ;81CE59|A501    |000001;  
+	lda.b w0001                            ;81CE59|A501    |000001;  
 	pha                                  ;81CE5B|48      |      ;  
 	jsl.l CODE_C48584                    ;81CE5C|228485C4|C48584;  
 	jsl.l func_809D10                    ;81CE60|22109D80|809D10;  
 	pla                                  ;81CE64|68      |      ;  
 	sta.b $00                            ;81CE65|8500    |000000;  
 	jsl.l CODE_C3E6AB                    ;81CE67|22ABE6C3|C3E6AB;  
-	lda.b $01                            ;81CE6B|A501    |000001;  
+	lda.b w0001                            ;81CE6B|A501    |000001;  
 	phb                                  ;81CE6D|8B      |      ;  
 	pha                                  ;81CE6E|48      |      ;  
 	jsl.l CODE_C48584                    ;81CE6F|228485C4|C48584;  
@@ -8774,23 +8770,23 @@ func_81CE47:
 	plb                                  ;81CE88|AB      |      ;  
 	jmp.w func_81CD8E                    ;81CE89|4C8ECD  |C1CD8E;  
 	.db $82,$4E,$FF                       ;81CE8C|        |C1CDDD;  
-	lda.b $01                            ;81CE8F|A501    |000001;  
+	lda.b w0001                            ;81CE8F|A501    |000001;  
 	sta.b $00                            ;81CE91|8500    |000000;  
 	jsl.l CODE_C3E706                    ;81CE93|2206E7C3|C3E706;  
 
 func_81CE97:
 	jmp.w func_81CDEE                    ;81CE97|4CEECD  |C1CDEE;  
 	rep #$20                             ;81CE9A|C220    |      ;  
-	lda.b $01                            ;81CE9C|A501    |000001;  
+	lda.b w0001                            ;81CE9C|A501    |000001;  
 	sta.b $00                            ;81CE9E|8500    |000000;  
 	jsl.l CODE_C3E72B                    ;81CEA0|222BE7C3|C3E72B;  
 	sep #$20                             ;81CEA4|E220    |      ;  
 	bra func_81CE97                      ;81CEA6|80EF    |C1CE97;  
-	lda.b $01                            ;81CEA8|A501    |000001;  
+	lda.b w0001                            ;81CEA8|A501    |000001;  
 	sta.b $00                            ;81CEAA|8500    |000000;  
 	jsl.l CODE_C49589                    ;81CEAC|228995C4|C49589;  
 	jmp.w func_81CE09                    ;81CEB0|4C09CE  |C1CE09;  
-	lda.b $01                            ;81CEB3|A501    |000001;  
+	lda.b w0001                            ;81CEB3|A501    |000001;  
 	inc a                                ;81CEB5|1A      |      ;  
 	pha                                  ;81CEB6|48      |      ;  
 	jsl.l CODE_C67EA7                    ;81CEB7|22A77EC6|C67EA7;  
@@ -8913,7 +8909,7 @@ func_81CFE0:
 	bne func_81D009                      ;81CFF8|D00F    |C1D009;  
 	jsl.l CODE_C3E698                    ;81CFFA|2298E6C3|C3E698;  
 	lda.b $00                            ;81CFFE|A500    |000000;  
-	sta.b $01                            ;81D000|8501    |000001;  
+	sta.b w0001                            ;81D000|8501    |000001;  
 	lda.b #$01                           ;81D002|A901    |      ;  
 	sta.b $02                   ;81D004|8502    |000002;  
 	jmp.w func_81CE34                    ;81D006|4C34CE  |C1CE34;  
@@ -10339,7 +10335,7 @@ func_81DA57:
 	pha                                  ;81DA57|48      |      ;  
 	lda.b $89                            ;81DA58|A589    |000089;  
 	and.b #$80                           ;81DA5A|2980    |      ;  
-	ora.b $01,s                          ;81DA5C|0301    |000001;  
+	ora.b w0001,s                          ;81DA5C|0301    |000001;  
 	sta.b $89                            ;81DA5E|8589    |000089;  
 	pla                                  ;81DA60|68      |      ;  
 	plp                                  ;81DA61|28      |      ;  

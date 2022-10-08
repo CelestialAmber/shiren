@@ -768,7 +768,7 @@ text "何者か@"
 
 ;fe3be9
 Text_FE3BE9:
-strvar $81
+strvar TextStrVar_PlayerName
 text "@"
 
 ;fe3bec
@@ -1009,7 +1009,7 @@ text "予備４２@"
 
 ;fe3d87
 Text_FE3D87:
-strvar $81
+strvar TextStrVar_PlayerName
 text "@"
 
 ;fe3d8a
