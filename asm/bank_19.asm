@@ -174,7 +174,7 @@
 	
 	
 ;d90546
-.incbin "gfx/fonts/opening_font.bin"
+.incbin "gfx/fonts/opening_font.4bpp"
 
 DATA8_D94506:
 	.db $00                               ;D94506|        |      ;  
@@ -205,7 +205,7 @@ DATA8_D94537:
 	.db $00,$00,$00,$00,$00,$00,$00       ;D9453F|        |      ;  
 
 DATA8_D94546:
-.incbin "gfx/logo.bin"
+.incbin "gfx/logo.4bpp"
 
 DATA8_D96546:
 	.db $C2,$65
@@ -512,7 +512,7 @@ DATA8_D96546:
 	
 ;d96dca
 ;2bpp font
-.incbin "gfx/fonts/font1.bin"
+.incbin "gfx/fonts/font1.2bpp"
 	
 ;d98dca
 	.db $1E,$8F,$55,$8F   ;D98DC6|        |      ;  

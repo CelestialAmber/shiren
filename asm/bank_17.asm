@@ -7803,26 +7803,26 @@
 	.db $00,$40,$00,$70,$20,$20,$00,$60   ;D7F3B8
 	.db $00							     ;D7F3C0
 
-data_D7F3C1:
+Data_d7f3c1:
 .db $00
-.incbin "gfx/shiren/shiren_idle_right_0.bin"
+.incbin "gfx/characters/shiren/shiren_walk_right_0.4bpp"
 
-data_D7F5C2:
+Data_d7f5c2:
 .db $00
-.incbin "gfx/shiren/shiren_idle_right_1.bin"
+.incbin "gfx/characters/shiren/shiren_walk_right_1.4bpp"
 
-data_D7F7C3:
+Data_d7f7c3:
 .db $00
-.incbin "gfx/shiren/shiren_idle_right_2.bin"
+.incbin "gfx/characters/shiren/shiren_walk_right_2.4bpp"
 
-data_D7F9C4:
+Data_d7f9c4:
 .db $00
-.incbin "gfx/shiren/shiren_idle_upright_0.bin"
+.incbin "gfx/characters/shiren/shiren_walk_upright_0.4bpp"
 
-data_D7FBC5:
+Data_d7fbc5:
 .db $00
-.incbin "gfx/shiren/shiren_idle_upright_1.bin"
+.incbin "gfx/characters/shiren/shiren_walk_upright_1.4bpp"
 
-data_D7FDC6:
+Data_d7fdc6:
 .db $00
-.incbin "gfx/shiren/shiren_idle_upright_2.bin"
+.incbin "gfx/characters/shiren/shiren_walk_upright_2.4bpp"

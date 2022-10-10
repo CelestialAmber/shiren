@@ -57,7 +57,7 @@ DATA8_DC0070:
 .incbin "gfx/ui.bin"
 	
 ;dc0280
-.incbin "gfx/fonts/font_kointai_numbers.bin"
+.incbin "gfx/fonts/font_kointai_numbers.1bpp.lz"
 
 DATA8_DC0400:
 	.dw $04BE
@@ -157,7 +157,7 @@ DATA8_DC0400:
 	.dw $1ACD
 	
 ;dc04be
-.incbin "gfx/fonts/font_kointai.bin"
+.incbin "gfx/fonts/font_kointai.1bpp.lz"
 	
 ;dc1ad1	
 	.db $36,$A3,$01,$FF,$FF,$18,$E0   ;DC1AD0|        |      ;  
@@ -3211,4 +3211,4 @@ DATA8_DC71B8:
 ;each character is 24x24
 ;the font is variable width/height?
 MainFontGraphicsData:
-.incbin "gfx/fonts/font.bin"
+.incbin "gfx/fonts/font.1bpp"

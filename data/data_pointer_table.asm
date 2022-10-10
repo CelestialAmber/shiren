@@ -2,106 +2,107 @@ DATA8_C0018E:
 	.db $84,$60
 	.dl $D455A4
 	.db $38
-	.dl $D7F3C1
+	.dl Data_d7f3c1
 	.db $08 
-	.dl $D7F5C2
+	.dl Data_d7f5c2
 	.db $08
-	.dl $D7F7C3
+	.dl Data_d7f7c3
 	.db $08
-	.dl $D7F9C4
+	.dl Data_d7f9c4
 	.db $08
-	.dl $D7FBC5
+	.dl Data_d7fbc5
 	.db $08
-	.dl $D7FDC6
+	.dl Data_d7fdc6
 	.db $08
-	.dl $D80000
+	.dl Data_d80000
 	.db $08
-	.dl $D80201
+	.dl Data_d80201
 	.db $08
-	.dl $D80402
+	.dl Data_d80402
 	.db $08
-	.dl $D80603
+	.dl Data_d80603
 	.db $08
-	.dl $D80804
+	.dl Data_d80804
 	.db $08
-	.dl $D80A05
+	.dl Data_d80a05
 	.db $08
-	.dl $D80C06
+	.dl Data_d80c06
 	.db $08
-	.dl $D80E07
+	.dl Data_d80e07
 	.db $08
-	.dl $D81008
+	.dl Data_d81008
 	.db $08
-	.dl $D81209
+	.dl Data_d81209
 	.db $08
-	.dl $D8140A
+	.dl Data_d8140a
 	.db $08
-	.dl $D8160B
+	.dl Data_d8160b
 	.db $08
-	.dl $D8180C
+	.dl Data_d8180c
 	.db $08
-	.dl $D81A0D
+	.dl Data_d81a0d
 	.db $08
-	.dl $D81C0E
+	.dl Data_d81c0e
 	.db $08
-	.dl $D81E0F
+	.dl Data_d81e0f
 	.db $08
-	.dl $D82010
+	.dl Data_d82010
 	.db $08
-	.dl $D82211
+	.dl Data_d82211
 	.db $08
-	.dl $D82412
+	.dl Data_d82412
 	.db $08
-	.dl $D8255B
+	.dl Data_d8255b
 	.db $08
-	.dl $D826B6
+	.dl Data_d826b6
 	.db $08
-	.dl $D82821
+	.dl Data_d82821
 	.db $08
-	.dl $D8299C
+	.dl Data_d8299c
 	.db $08
-	.dl $D82B15
+	.dl Data_d82b15
 	.db $08
-	.dl $D82C84
+	.dl Data_d82c84
 	.db $08
-	.dl $D82E1B
+	.dl Data_d82e1b
 	.db $08
-	.dl $D8180C
+	.dl Data_d8180c
 	.db $08
-	.dl $D8180C
+	.dl Data_d8180c
 	.db $08
-	.dl $D8324C
+	.dl Data_d8324c
 	.db $08
-	.dl $D8337E
+	.dl Data_d8337e
 	.db $08
-	.dl $D834B7
+	.dl Data_d834b7
 	.db $08
-	.dl $D8360C
+	.dl Data_d8360c
 	.db $08
-	.dl $D8375F
+	.dl Data_d8375f
 	.db $08
-	.dl $D83899
+	.dl Data_d83899
 	.db $08
-	.dl $D839E4
+	.dl Data_d839e4
 	.db $08
-	.dl $D83B3D
+	.dl Data_d83b3d
 	.db $08
-	.dl $D83CBA
+	.dl Data_d83cba
 	.db $08
-	.dl $D83E0F
+	.dl Data_d83e0f
 	.db $08
-	.dl $D83F69
+	.dl Data_d83f69
 	.db $08
-	.dl $D840B3
+	.dl Data_d840b3
 	.db $08
-	.dl $D84202
+	.dl Data_d84202
 	.db $08
-	.dl $D8434D
+	.dl Data_d8434d
 	.db $08
-	.dl $D8446D
+	.dl Data_d8446d
 	.db $08
-	.dl $D845B1
-	.db $08                
+	.dl Data_d845b1
+	.db $08
+
 	.dl $C70000
 	.db $0A
 	.dl $C700AC
@@ -12262,305 +12263,306 @@ DATA8_C0018E:
 	.db $4A
 	.dl $D7F344
 	.db $4A
-	.dl $D7F3C1
+	
+	.dl Data_d7f3c1
 	.db $06
-	.dl $D7F5C2
+	.dl Data_d7f5c2
 	.db $06
-	.dl $D7F7C3
+	.dl Data_d7f7c3
 	.db $06
-	.dl $D7F9C4
+	.dl Data_d7f9c4
 	.db $06
-	.dl $D7FBC5
+	.dl Data_d7fbc5
 	.db $06
-	.dl $D7FDC6
+	.dl Data_d7fdc6
 	.db $06
-	.dl $D80000
+	.dl Data_d80000
 	.db $06
-	.dl $D80201
+	.dl Data_d80201
 	.db $06
-	.dl $D80402
+	.dl Data_d80402
 	.db $06
-	.dl $D80603
+	.dl Data_d80603
 	.db $06
-	.dl $D80804
+	.dl Data_d80804
 	.db $06
-	.dl $D80A05
+	.dl Data_d80a05
 	.db $06
-	.dl $D80C06
+	.dl Data_d80c06
 	.db $06
-	.dl $D80E07
+	.dl Data_d80e07
 	.db $06
-	.dl $D81008
+	.dl Data_d81008
 	.db $06
-	.dl $D81209
+	.dl Data_d81209
 	.db $06
-	.dl $D8140A
+	.dl Data_d8140a
 	.db $06
-	.dl $D8160B
+	.dl Data_d8160b
 	.db $06
-	.dl $D8180C
+	.dl Data_d8180c
 	.db $06
-	.dl $D81A0D
+	.dl Data_d81a0d
 	.db $06
-	.dl $D81C0E
+	.dl Data_d81c0e
 	.db $06
-	.dl $D81E0F
+	.dl Data_d81e0f
 	.db $06
-	.dl $D82010
+	.dl Data_d82010
 	.db $06
-	.dl $D82211
+	.dl Data_d82211
 	.db $06
-	.dl $D82412
+	.dl Data_d82412
 	.db $06
-	.dl $D8255B
+	.dl Data_d8255b
 	.db $06
-	.dl $D826B6
+	.dl Data_d826b6
 	.db $06
-	.dl $D82821
+	.dl Data_d82821
 	.db $06
-	.dl $D8299C
+	.dl Data_d8299c
 	.db $06
-	.dl $D82B15
+	.dl Data_d82b15
 	.db $06
-	.dl $D82C84
+	.dl Data_d82c84
 	.db $06
-	.dl $D82E1B
+	.dl Data_d82e1b
 	.db $06
-	.dl $D82F70
+	.dl Data_d82f70
 	.db $06
-	.dl $D830E5
+	.dl Data_d830e5
 	.db $06
-	.dl $D8324C
+	.dl Data_d8324c
 	.db $06
-	.dl $D8337E
+	.dl Data_d8337e
 	.db $06
-	.dl $D834B7
+	.dl Data_d834b7
 	.db $06
-	.dl $D8360C
+	.dl Data_d8360c
 	.db $06
-	.dl $D8375F
+	.dl Data_d8375f
 	.db $06
-	.dl $D83899
+	.dl Data_d83899
 	.db $06
-	.dl $D839E4
+	.dl Data_d839e4
 	.db $06
-	.dl $D83B3D
+	.dl Data_d83b3d
 	.db $06
-	.dl $D83CBA
+	.dl Data_d83cba
 	.db $06
-	.dl $D83E0F
+	.dl Data_d83e0f
 	.db $06
-	.dl $D83F69
+	.dl Data_d83f69
 	.db $06
-	.dl $D840B3
+	.dl Data_d840b3
 	.db $06
-	.dl $D84202
+	.dl Data_d84202
 	.db $06
-	.dl $D8434D
+	.dl Data_d8434d
 	.db $06
-	.dl $D8446D
+	.dl Data_d8446d
 	.db $06
-	.dl $D845B1
+	.dl Data_d845b1
 	.db $06
-	.dl $D8324C
+	.dl Data_d8324c
 	.db $06
-	.dl $D8337E
+	.dl Data_d8337e
 	.db $06
-	.dl $D834B7
+	.dl Data_d834b7
 	.db $06
-	.dl $D8360C
+	.dl Data_d8360c
 	.db $06
-	.dl $D8375F
+	.dl Data_d8375f
 	.db $06
-	.dl $D83899
+	.dl Data_d83899
 	.db $06
-	.dl $D839E4
+	.dl Data_d839e4
 	.db $06
-	.dl $D83B3D
+	.dl Data_d83b3d
 	.db $06
-	.dl $D83CBA
+	.dl Data_d83cba
 	.db $06
-	.dl $D83E0F
+	.dl Data_d83e0f
 	.db $06
-	.dl $D83F69
+	.dl Data_d83f69
 	.db $06
-	.dl $D840B3
+	.dl Data_d840b3
 	.db $06
-	.dl $D84202
+	.dl Data_d84202
 	.db $06
-	.dl $D8434D
+	.dl Data_d8434d
 	.db $06
-	.dl $D8446D
+	.dl Data_d8446d
 	.db $06
-	.dl $D845B1
+	.dl Data_d845b1
 	.db $06
-	.dl $D8324C
+	.dl Data_d8324c
 	.db $06
-	.dl $D8337E
+	.dl Data_d8337e
 	.db $06
-	.dl $D846FC
+	.dl Data_d846fc
 	.db $06
-	.dl $D834B7
+	.dl Data_d834b7
 	.db $06
-	.dl $D8360C
+	.dl Data_d8360c
 	.db $06
-	.dl $D84838
+	.dl Data_d84838
 	.db $06
-	.dl $D8375F
+	.dl Data_d8375f
 	.db $06
-	.dl $D83899
+	.dl Data_d83899
 	.db $06
-	.dl $D84972
+	.dl Data_d84972
 	.db $06
-	.dl $D839E4
+	.dl Data_d839e4
 	.db $06
-	.dl $D83B3D
+	.dl Data_d83b3d
 	.db $06                
-	.dl $D84AB2
+	.dl Data_d84ab2
 	.db $06                
-	.dl $D83CBA
+	.dl Data_d83cba
 	.db $06                
-	.dl $D83E0F
+	.dl Data_d83e0f
 	.db $06
-	.dl $D84BF8
+	.dl Data_d84bf8
 	.db $06
-	.dl $D83F69
+	.dl Data_d83f69
 	.db $06
-	.dl $D840B3
+	.dl Data_d840b3
 	.db $06
-	.dl $D84D4D
+	.dl Data_d84d4d
 	.db $06
-	.dl $D84202
+	.dl Data_d84202
 	.db $06
-	.dl $D8434D
+	.dl Data_d8434d
 	.db $06
-	.dl $D84EA1
+	.dl Data_d84ea1
 	.db $06
-	.dl $D8446D
+	.dl Data_d8446d
 	.db $06
-	.dl $D845B1
+	.dl Data_d845b1
 	.db $06
-	.dl $D84FF1
+	.dl Data_d84ff1
 	.db $06                
-	.dl $D7F3C1
+	.dl Data_d7f3c1
 	.db $06                
-	.dl $D7F5C2
+	.dl Data_d7f5c2
 	.db $06
-	.dl $D7F7C3
+	.dl Data_d7f7c3
 	.db $06
-	.dl $D7F9C4
+	.dl Data_d7f9c4
 	.db $06
-	.dl $D7FBC5
+	.dl Data_d7fbc5
 	.db $06
-	.dl $D7FDC6
+	.dl Data_d7fdc6
 	.db $06                
-	.dl $D80000
+	.dl Data_d80000
 	.db $06
-	.dl $D80201
+	.dl Data_d80201
 	.db $06
-	.dl $D80402
+	.dl Data_d80402
 	.db $06
-	.dl $D80603
+	.dl Data_d80603
 	.db $06
-	.dl $D80804
+	.dl Data_d80804
 	.db $06
-	.dl $D80A05
+	.dl Data_d80a05
 	.db $06
-	.dl $D80C06
+	.dl Data_d80c06
 	.db $06                
-	.dl $D80E07
+	.dl Data_d80e07
 	.db $06
-	.dl $D81008
+	.dl Data_d81008
 	.db $06
-	.dl $D81209
+	.dl Data_d81209
 	.db $06                
-	.dl $D8140A
+	.dl Data_d8140a
 	.db $06
-	.dl $D8160B
+	.dl Data_d8160b
 	.db $06
-	.dl $D8180C
+	.dl Data_d8180c
 	.db $06
-	.dl $D81A0D
+	.dl Data_d81a0d
 	.db $06
-	.dl $D81C0E
+	.dl Data_d81c0e
 	.db $06
-	.dl $D81E0F
+	.dl Data_d81e0f
 	.db $06
-	.dl $D82010
+	.dl Data_d82010
 	.db $06
-	.dl $D82211
+	.dl Data_d82211
 	.db $06
-	.dl $D85139
+	.dl Data_d85139
 	.db $06                
-	.dl $D852C4
+	.dl Data_d852c4
 	.db $06                
-	.dl $D85441
+	.dl Data_d85441
 	.db $06
-	.dl $D85591
+	.dl Data_d85591
 	.db $06
-	.dl $D856DD
+	.dl Data_d856dd
 	.db $06
-	.dl $D8586C
+	.dl Data_d8586c
 	.db $06
-	.dl $D859F5
+	.dl Data_d859f5
 	.db $06
-	.dl $D85B72
+	.dl Data_d85b72
 	.db $06
-	.dl $D85CAE
+	.dl Data_d85cae
 	.db $06
-	.dl $D85E27
+	.dl Data_d85e27
 	.db $02
-	.dl $D85E6A
+	.dl Data_d85e6a
 	.db $02
-	.dl $D85F0C
+	.dl Data_d85f0c
 	.db $06
-	.dl $D86032
+	.dl Data_d86032
 	.db $06
-	.dl $D8615A
+	.dl Data_d8615a
 	.db $06
-	.dl $D862D9
+	.dl Data_d862d9
 	.db $06
-	.dl $D8644E
+	.dl Data_d8644e
 	.db $06
-	.dl $D8659D
+	.dl Data_d8659d
 	.db $06
-	.dl $D86718
+	.dl Data_d86718
 	.db $06
-	.dl $D868AB
+	.dl Data_d868ab
 	.db $06
-	.dl $D86718
+	.dl Data_d86718
 	.db $46
-	.dl $D8659D
+	.dl Data_d8659d
 	.db $46                
-	.dl $D86A44
+	.dl Data_d86a44
 	.db $06
-	.dl $D86BD5
+	.dl Data_d86bd5
 	.db $06
-	.dl $D86A44
+	.dl Data_d86a44
 	.db $46
-	.dl $D86D6E
+	.dl Data_d86d6e
 	.db $06
-	.dl $D86DFC
+	.dl Data_d86dfc
 	.db $06
-	.dl $D86EA8
+	.dl Data_d86ea8
 	.db $06
-	.dl $D86F56
+	.dl Data_d86f56
 	.db $06
-	.dl $D8709E
+	.dl Data_d8709e
 	.db $06
-	.dl $D871DE
+	.dl Data_d871de
 	.db $02
-	.dl $D87261
+	.dl Data_d87261
 	.db $02
-	.dl $D872D4
+	.dl Data_d872d4
 	.db $06
-	.dl $D830E5
+	.dl Data_d830e5
 	.db $06
-	.dl $D87449
+	.dl Data_d87449
 	.db $06
-	.dl $D874BF
+	.dl Data_d874bf
 	.db $06
-	.dl $D87521
+	.dl Data_d87521
 	.db $06                
-	.dl $D87599
+	.dl Data_d87599
 	.db $06 

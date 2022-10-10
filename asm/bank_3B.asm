@@ -6596,7 +6596,12 @@ DATA8_FBC34C:
 	.db $10,$2E,$09,$91,$15,$D3,$1D,$36   ;FbccA4
 	.db $2A,$E5,$30,$48,$3D,$CC,$4D,$4A   ;FbccAC
 	.db $25,$CE,$35,$B5,$4A,$7B,$6B,$37   ;FbccB4
-	.db $6B,$79,$73,$BB,$7B,$0E,$0E,$15   ;FbccBC
+	.db $6B,$79,$73,$BB,$7B
+	
+	
+;fbccc1
+;dungeon item sprites
+	.db $0E,$0E,$15   ;FbccBC
 	.db $11,$08,$08,$39,$38,$54,$4C,$2A   ;FbccC4
 	.db $22,$73,$73,$A9,$89,$0E,$00,$1B   ;FbccCC
 	.db $0E,$0F,$07,$3E,$07,$67,$3B,$35   ;FbccD4
@@ -6924,7 +6929,10 @@ DATA8_FBC34C:
 	.db $00,$F8,$00,$FF,$00,$3F,$00,$87   ;FBD6E4
 	.db $80,$70,$70,$00,$00,$FF,$80,$FF   ;FBD6EC
 	.db $C0,$FF,$F8,$FF,$FF,$FF,$FF,$7F   ;FBD6F4
-	.db $FF,$0F,$7F,$00,$00,$FF,$BC,$1D   ;FBD6FC
+	.db $FF,$0F,$7F,$00,$00
+	
+;fbd701
+	.db $FF,$BC,$1D   ;FBD6FC
 	.db $02,$01,$05,$02,$08,$07,$10,$0F   ;FBD704
 	.db $12,$0D,$00,$00,$00,$07,$00,$0F   ;FBD70C
 	.db $00,$1F,$FC,$3D,$60,$80,$90,$60   ;FBD714
