@@ -2389,27 +2389,27 @@ TextPointerTable:
 
 
 ;dungeon messages
-.inc "data/text/dungeonmessages.asm"
+.include "data/text/dungeonmessages.asm"
 
 ;menu/window text
-.inc "data/text/windowmenutext.asm"
+.include "data/text/windowmenutext.asm"
 
 ;debug menus text
-.inc "data/text/debugmenus.asm"
+.include "data/text/debugmenus.asm"
 
 ;enemy names
-.inc "data/text/enemynames.asm"
+.include "data/text/enemynames.asm"
 
 ;item names
-.inc "data/text/itemnames.asm"
+.include "data/text/itemnames.asm"
 
-.inc "data/text/text_1.asm"
+.include "data/text/text_1.asm"
 
 ;item descriptions
-.inc "data/text/itemdescriptions.asm"
+.include "data/text/itemdescriptions.asm"
 
 ;dialogue
-.inc "data/text/dialogue.asm"
+.include "data/text/dialogue.asm"
 
 ;debug item menu
-.inc "data/text/debugitemmenu.asm"
+.include "data/text/debugitemmenu.asm"

@@ -1,6 +1,6 @@
-.inc "rominfo.asm"
-.inc "hardware.asm"
-.inc "wram.asm"
-.inc "macros.asm"
+.include "rominfo.asm"
+.include "hardware.asm"
+.include "wram.asm"
+.include "macros.asm"
 
-.inc "constants/text.asm"
+.include "constants/text.asm"

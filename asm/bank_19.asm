@@ -1187,4 +1187,4 @@ DATA8_D9A14E:
 	.db $2B,$10,$EF,$01,$11,$EE,$01,$01   ;D9A28E|        |      ;  
 	.db $00,$00                           ;D9A296|        |      ;  
 
-.inc "data/items/prices.asm"
+.include "data/items/prices.asm"

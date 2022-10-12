@@ -120,7 +120,7 @@ SPC_066d:
 	or a,!$0670	
 	mov (x),a	
 	mov $f3,#$00
-	ret;067c: 6f
+	ret ;067c: 6f
 
 SPC_067d:
 	and $08,#$0f	

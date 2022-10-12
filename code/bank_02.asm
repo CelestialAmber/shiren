@@ -13394,8 +13394,8 @@ CODE_C2942A:
 	plp                                  ;C29459|28      |      ;  
 	rtl                                  ;C2945A|6B      |      ;  
 
-.inc "data/player/strength_stat_table.asm"
-.inc "data/enemies/stats.asm"
+.include "data/player/strength_stat_table.asm"
+.include "data/enemies/stats.asm"
 
 DATA8_C2A462:
 	.db $38,$39,$01,$38,$39,$01,$04       ;C2A462|        |      ;  
@@ -14635,7 +14635,7 @@ DATA8_C2BD78:
 UNREACH_C2CA03:
 	.db $00                               ;C2CA03|        |      ;  
 
-.inc "data/player/level_exp_table.asm"
+.include "data/player/level_exp_table.asm"
 
 UNREACH_C2CAD9:
 	.db $0A,$05,$03,$30,$02,$01,$01,$01   ;C2CAD9|        |      ;  

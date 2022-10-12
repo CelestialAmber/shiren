@@ -1,1 +1,1 @@
-.inc "macros/text.asm"
+.include "macros/text.asm"
