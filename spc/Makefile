@@ -4,7 +4,7 @@ default: all
 all: bankdd_spccode.bin
 
 clean:
-	rm bankdd_spccode.bin
+	rm bankdd_spccode.bin SPCEngine.o bankdd_spccode.sym
 
 %.o: %.asm
 	wla-spc700 -o $@ $<

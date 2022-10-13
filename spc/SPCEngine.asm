@@ -1,5 +1,7 @@
+.include "rominfo.asm"
 
-.org $5b0
+.bank 0
+.org $0
 
 ;5b0
 SPCStart:
@@ -110,7 +112,7 @@ SPC_062a:
 	mov x,#$1c	
 	bra SPC_066d
 SPC_066c:
-	mov (x+),a	;mov (x)+, a
+	mov (x)+,a	;mov (x)+, a
 SPC_066d:
 	mov a,$01+x	
 	;this instruction gets modified?
@@ -179,7 +181,7 @@ SPC_06cd:
 	pop x			
 	mov a,(x)		
 	or a,#$40	
-	jmp  !SPC_0797	
+	jmp !SPC_0797	
 
 SPC_06d4:
 	mov a,$09		
@@ -590,18 +592,18 @@ SPC_097a:
 	div ya,x	
 	asl a		
 	mov x,a	
-	mov a,SPC_UnknownData_9d8+x
+	mov a,!SPC_UnknownData_9d8+x
 	mov $01,a
-	mov a,SPC_UnknownData_9d7+x
+	mov a,!SPC_UnknownData_9d7+x
 	mov $00,a
 	mov a,y
 	asl a	
 	mov x,a
-	mov a,SPC_UnknownData_9ef+x
+	mov a,!SPC_UnknownData_9ef+x
 	mov y,$01	
 	mul ya	
 	movw $02,ya
-	mov a,SPC_UnknownData_9f0+x
+	mov a,!SPC_UnknownData_9f0+x
 	mov x,a	
 	mov y,$00	
 	mul ya	
@@ -696,20 +698,20 @@ SPC_0ac1:
 	mov !$0b15,y
 	clrc		
 SPC_0af0:
-	bbc $f4.0,!SPC_0af0 ;bbc0 $f4
+	bbc $f4.0, SPC_0af0
 	mov a,$f5		
 	mov !$0000+x,a			;0af5: d5 00 00  
 	movw ya,$f6
-	set $f4.0 ;set0 $f4
+	set1 $f4.0
 	mov !$0000+x,a			;0afc: d5 00 00  
 	mov a,y
 	mov !$0000+x,a			;0b00: d5 00 00
 SPC_0b03:
-	bbs0 $f4,!SPC_0b03
+	bbs $f4.0, SPC_0b03
 	mov a,$f5		
 	mov !$0000+x,a			;0b08: d5 00 00  
 	movw ya,$f6
-	clr0 $f4
+	clr1 $f4.0
 	mov !$0000+x,a			;0b0f: d5 00 00  
 	mov a,y
 	mov !$0000+x,a			;0b13: d5 00 00  
@@ -733,44 +735,44 @@ SPC_0b2a:
 	mov a,$8e	
 	mov !$0201+x,a
 	mov y,#$00	
-	mov a,($8d)+y
+	mov a,[$8d]+y ;mov a,($8d)+y
 	clrc		
 	adc a,!$0200+x
 	mov !$0202+x,a
 	inc y		
-	mov a,($8d)+y
+	mov a,[$8d]+y
 	adc a,!$0201+x
 	mov !$0203+x,a
 	inc y		
 	mov x,$0a	
-	mov a,($8d)+y
+	mov a,[$8d]+y
 	mov !$0300+x,a
 	inc y		
-	mov a,($8d)+y
+	mov a,[$8d]+y
 	mov !$0340+x,a
 	inc y		
-	mov a,($8d)+y
+	mov a,[$8d]+y
 	mov !$0380+x,a
 	inc y		
-	mov a,($8d)+y
+	mov a,[$8d]+y
 	mov !$03c0+x,a
 	inc y		
-	mov a,($8d)+y
+	mov a,[$8d]+y
 	mov !$0400+x,a
 	inc y		
-	mov a,($8d)+y
+	mov a,[$8d]+y
 	mov !$0440+x,a
 	inc y		
-	mov a,($8d)+y
+	mov a,[$8d]+y
 	mov !$0480+x,a
 	inc y		
-	mov a,($8d)+y
+	mov a,[$8d]+y
 	mov !$04c0+x,a
 	inc y		
-	mov a,($8d)+y
+	mov a,[$8d]+y
 	mov !$0500+x,a
 	inc y		
-	mov a,($8d)+y
+	mov a,[$8d]+y
 	mov !$0540+x,a
 	inc y		
 	ret			
@@ -790,7 +792,7 @@ SPC_0b94:
 	asl a		
 	mov x,a	
 	mov a,$0a	
-	jmp (!SPC_Jumptable_0ba2+x)
+	jmp [!SPC_Jumptable_0ba2+x]
 
 SPC_Jumptable_0ba2:
 	.dw SPC_0bca
@@ -968,8 +970,6 @@ SPC_0c94:
 	ret
 
 ;end of spc700 code
-base off
-arch 65816
 	
 ;dd4b80
 	.db $02,$00,$00,$00,$00,$00,$00,$00

@@ -37,8 +37,7 @@
 .include "asm/bank_1A.asm"
 .include "asm/bank_1B.asm"
 .include "asm/bank_1C.asm"
-.include "asm/bank_1D.asm" ;bank 1d-1e, and start of bank 1f
-.include "asm/bank_1F.asm"
+.include "asm/bank_1D.asm" ;bank 1d-1f
 .include "asm/bank_20.asm"
 .include "asm/bank_21.asm"
 .include "asm/bank_22.asm"

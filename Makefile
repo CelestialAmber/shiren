@@ -29,6 +29,7 @@ all: $(rom)
 
 clean:
 	rm $(rom) $(OBJS) shiren.sym
+	make clean -C spc
 
 WLAFLAGS =
 
@@ -37,15 +38,10 @@ ifeq ($(DEBUG),1)
 WLAFLAGS += -D DEBUG=1
 endif
 
-#spc:
-#	make -C spc/
-
-
-#ifeq (,$(filter clean spc,$(MAKECMDGOALS)))
-
-#$(info $(shell make -C spc))
-
-#endif
+#Build the spc code if it hasn't been built yet
+ifeq (,$(filter clean spc,$(MAKECMDGOALS)))
+$(info $(shell make -C spc))
+endif
 
 %.o: %.asm
 	wla-65816 $(WLAFLAGS) -o $@ $<
