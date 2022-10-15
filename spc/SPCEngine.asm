@@ -355,7 +355,7 @@ SPC_07d8:
 	mov a,!$0170+y
 	beq SPC_0806
 	mov a,$10+x
-	.db $0e,$f3,$00 ;tset1 !$00f3
+	tset1 !$00f3
 	mov $f2,#$6c
 	mov a,$35+x
 	and a,#$1f
@@ -363,17 +363,17 @@ SPC_07d8:
 	bra SPC_080b
 SPC_0806:
 	mov a,$10+x
-	.db $4e,$f3,$00 ;tclr1 !$00f3	
+	tclr1 !$00f3
 SPC_080b:
 	mov $f2,#$4d
 	mov a,!$0160+y
 	bne SPC_081a
 	mov a,$10+x
-	.db $4e,$f3,$00 ;tclr1 !$00f3	
+	tclr1 !$00f3	
 	bra SPC_081f
 SPC_081a:
 	mov a,$10+x
-	.db $0e,$f3,$00 ;tset1 !$00f3
+	tset1 !$00f3
 SPC_081f:
 	or a,$91	
 	mov $91,a	
@@ -446,7 +446,7 @@ SPC_0864:
 	mov y,$04
 	mul ya	
 	mov a,y	
-	.db $aa,$00,$60  ;mov1 c,!$0000,3   88c
+	mov1 c,$0000.3
 	bcc SPC_0894 
 	eor a,#$ff	
 	inc a		

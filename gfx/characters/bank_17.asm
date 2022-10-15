@@ -3901,28 +3901,28 @@
 	.db $1F,$0F,$0F,$07,$55,$00,$05,$03,$03,$01,$02,$01,$01,$00,$A5,$00  ;D7F390
 	.db $55,$80,$00,$78,$80,$9C,$F8,$FE,$D4,$F5,$1F,$7D,$F6,$8A,$7C,$7C  ;D7F3A0
 	.db $80,$80,$80,$78,$90,$10,$00,$B0,$00,$40,$00,$70,$20,$20,$00,$60  ;D7F3B0
-	.db $00 ;D7F3C0
+	.db $00
 
 Data_d7f3c1:
 .db $00
-.incbin "gfx/characters/shiren/shiren_walk_right_0.4bpp"
+.incbin "gfx/characters/shiren/walk_right_0.4bpp"
 
 Data_d7f5c2:
 .db $00
-.incbin "gfx/characters/shiren/shiren_walk_right_1.4bpp"
+.incbin "gfx/characters/shiren/walk_right_1.4bpp"
 
 Data_d7f7c3:
 .db $00
-.incbin "gfx/characters/shiren/shiren_walk_right_2.4bpp"
+.incbin "gfx/characters/shiren/walk_right_2.4bpp"
 
 Data_d7f9c4:
 .db $00
-.incbin "gfx/characters/shiren/shiren_walk_upright_0.4bpp"
+.incbin "gfx/characters/shiren/walk_upright_0.4bpp"
 
 Data_d7fbc5:
 .db $00
-.incbin "gfx/characters/shiren/shiren_walk_upright_1.4bpp"
+.incbin "gfx/characters/shiren/walk_upright_1.4bpp"
 
 Data_d7fdc6:
 .db $00
-.incbin "gfx/characters/shiren/shiren_walk_upright_2.4bpp"
+.incbin "gfx/characters/shiren/walk_upright_2.4bpp"
