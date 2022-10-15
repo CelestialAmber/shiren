@@ -89,7 +89,7 @@ DATA8_C00002:
 	.db $DC,$5C,$DC,$5C,$F8,$5D,$78,$5E   ;C00184
 	.db $F8,$5E                           ;C0018C
 
-.include "data/data_pointer_table.asm"              
+.include "gfx/characters/character_sprites_pointer_table.asm"              
 
 CODE_C063B8:
 	jsl.l CODE_C063BD                    ;C063B8|22BD63C0|C063BD;  

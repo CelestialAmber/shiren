@@ -15,24 +15,8 @@
 .include "code/bank_06.asm"
 
 ;character graphics data
-.include "gfx/characters/bank_07.asm"
-.include "gfx/characters/bank_08.asm"
-.include "gfx/characters/bank_09.asm"
-.include "gfx/characters/bank_0A.asm"
-.include "gfx/characters/bank_0B.asm"
-.include "gfx/characters/bank_0C.asm"
-.include "gfx/characters/bank_0D.asm"
-.include "gfx/characters/bank_0E.asm"
-.include "gfx/characters/bank_0F.asm"
-.include "gfx/characters/bank_10.asm"
-.include "gfx/characters/bank_11.asm"
-.include "gfx/characters/bank_12.asm"
-.include "gfx/characters/bank_13.asm"
-.include "gfx/characters/bank_14.asm"
-.include "gfx/characters/bank_15.asm"
-.include "gfx/characters/bank_16.asm"
-.include "gfx/characters/bank_17.asm"
-.include "gfx/characters/bank_18.asm"
+;bank 07-18
+.include "gfx/characters/character_sprites.asm"
 
 ;font graphics data
 .include "asm/bank_19.asm"
