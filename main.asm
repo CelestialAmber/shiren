@@ -25,13 +25,13 @@
 .include "asm/bank_1B.asm"
 .include "asm/bank_1C.asm"
 .include "asm/bank_1D.asm" ;bank 1d-1f
-.include "asm/bank_20.asm"
-.include "asm/bank_21.asm"
-.include "asm/bank_22.asm"
-.include "asm/bank_23.asm"
-.include "asm/bank_24.asm"
-.include "asm/bank_25.asm"
+
+;map tilesets graphics data
+;bank 20-26
+.include "gfx/map_tilesets/map_tilesets.asm"
+;rest of bank 26
 .include "asm/bank_26.asm"
+
 .include "asm/bank_27.asm"
 .include "asm/bank_28.asm"
 .include "asm/bank_29.asm"

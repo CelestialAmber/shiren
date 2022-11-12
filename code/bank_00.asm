@@ -2735,7 +2735,7 @@ CODE_C07BB3:
 	lda.b $02                   ;C07BC6|A502    |000002;  
 	bne CODE_C07BCE                      ;C07BC8|D004    |C07BCE;  
 	lda.b $03                            ;C07BCA|A503    |000003;  
-	bne CODE_C07BD6                      ;C07bcc|D008    |C07BD6;  
+	bne CODE_C07BD6                      ;C07BCC|D008    |C07BD6;  
 
 CODE_C07BCE:
 	stz.b w0001                            ;C07BCE|6401    |000001;  

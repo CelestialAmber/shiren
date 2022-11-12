@@ -1507,7 +1507,7 @@ func_808B43:
 	lsr a                                ;808BC8|4A      |      ;  
 	sta.b $1D                            ;808BC9|851D    |00001D;  
 	plx                                  ;808BCB|FA      |      ;  
-	lda.w RDMPYL                          ;808bcc|AD1642  |804216;  
+	lda.w RDMPYL                          ;808BCC|AD1642  |804216;  
 	stx.w WRMPYB                          ;808BCF|8E0342  |804203;  
 	and.w #$01F0                         ;808BD2|29F001  |      ;  
 	lsr a                                ;808BD5|4A      |      ;  
@@ -3432,7 +3432,7 @@ func_809B6D:
 	lda.b #$80                           ;809BC5|A980    |      ;  
 	sta.w VMAIN                          ;809BC7|8D1521  |002115;  
 	lda.b #$01                           ;809BCA|A901    |      ;  
-	ldy.w #$0800                         ;809bcc|A00008  |      ;  
+	ldy.w #$0800                         ;809BCC|A00008  |      ;  
 	sty.w DAS0L                          ;809BCF|8C0543  |004305;  
 	ldx.b $25                            ;809BD2|A625    |000025;  
 	stx.w VMADDL                          ;809BD4|8E1621  |002116;  
@@ -4191,7 +4191,7 @@ func_80A371:
 
 func_80A376:
 	lda.l DungeonObjectSprites1,x                 ;80A376|BFE9D5FD|FDD5E9;  
-	ora.l DATA8_FDD5F9,x                 ;80A37A|1FF9D5FD|FDD5F9;  
+	ora.l DungeonObjectSprites1+16,x                 ;80A37A|1FF9D5FD|FDD5F9;  
 	sta.b $00                            ;80A37E|8500    |000000;  
 	xba                                  ;80A380|EB      |      ;  
 	ora.b $00                            ;80A381|0500    |000000;  
@@ -4202,7 +4202,7 @@ func_80A376:
 	sta.w $0000,y                        ;80A38F|990000  |7F0000;  
 	lda.b $00                            ;80A392|A500    |000000;  
 	and.w $0010,y                        ;80A394|391000  |7F0010;  
-	ora.l DATA8_FDD5F9,x                 ;80A397|1FF9D5FD|FDD5F9;  
+	ora.l DungeonObjectSprites1+16,x                 ;80A397|1FF9D5FD|FDD5F9;  
 	sta.w $0010,y                        ;80A39B|991000  |7F0010;  
 	inx                                  ;80A39E|E8      |      ;  
 	inx                                  ;80A39F|E8      |      ;  
@@ -4238,7 +4238,7 @@ func_80A3C1:
 
 func_80A3C6:
 	lda.l DungeonObjectSprites2,x                 ;80A3C6|BF69E4FD|FDE469;  
-	ora.l DATA8_FDE479,x                 ;80A3CA|1F79E4FD|FDE479;  
+	ora.l DungeonObjectSprites2+16,x                 ;80A3CA|1F79E4FD|FDE479;  
 	sta.b $00                            ;80A3CE|8500    |000000;  
 	xba                                  ;80A3D0|EB      |      ;  
 	ora.b $00                            ;80A3D1|0500    |000000;  
@@ -4249,7 +4249,7 @@ func_80A3C6:
 	sta.w $0000,y                        ;80A3DF|990000  |7F0000;  
 	lda.b $00                            ;80A3E2|A500    |000000;  
 	and.w $0010,y                        ;80A3E4|391000  |7F0010;  
-	ora.l DATA8_FDE479,x                 ;80A3E7|1F79E4FD|FDE479;  
+	ora.l DungeonObjectSprites2+16,x                 ;80A3E7|1F79E4FD|FDE479;  
 	sta.w $0010,y                        ;80A3EB|991000  |7F0010;  
 	inx                                  ;80A3EE|E8      |      ;  
 	inx                                  ;80A3EF|E8      |      ;  
@@ -7237,8 +7237,8 @@ func_80BB4D:
 	.db $D2,$D0,$37,$A8,$DD,$82,$6B,$D0   ;80BCAE|        |0000D0;  
 	.db $03,$A0,$D6,$00,$DD,$02,$6B,$D0   ;80BCB6|        |0000A0;  
 	.db $01,$C8,$DD,$43,$6B,$D0,$1C,$C8   ;80BCBE|        |0000C8;  
-	.db $C8,$80,$18,$A0,$02,$00,$BD,$82   ;80bcc6
-	.db $6B,$F0,$03,$A0,$06,$00,$BD,$43   ;80bccE
+	.db $C8,$80,$18,$A0,$02,$00,$BD,$82   ;80BCC6
+	.db $6B,$F0,$03,$A0,$06,$00,$BD,$43   ;80BCCE
 	.db $6B,$F0,$02,$C8,$C8,$BD,$02,$6B   ;80BCD6
 	.db $F0,$01,$C8,$98,$9D,$C2,$4A,$9D   ;80BCDE|        |C0BCE1;  
 	.db $82,$55,$A5,$41,$25,$42,$F0,$0D   ;80BCE6|        |C0623E;  
@@ -8969,7 +8969,7 @@ func_80CBC3:
 	ldx.w $043E                          ;80CBC3|AE3E04  |7F043E;  
 	lda.l DATA8_80D013,x                 ;80CBC6|BF13D080|80D013;  
 	sta.b $33                            ;80CBCA|8533    |000033;  
-	lda.w $043E                          ;80Cbcc|AD3E04  |7F043E;  
+	lda.w $043E                          ;80CBCC|AD3E04  |7F043E;  
 	asl a                                ;80CBCF|0A      |      ;  
 	asl a                                ;80CBD0|0A      |      ;  
 	ora.w $043C                          ;80CBD1|0D3C04  |7F043C;  
@@ -9892,7 +9892,7 @@ func_80D5AF:
 	tax                                  ;80D5BE|AA      |      ;  
 	lda.l DATA8_E00000,x                 ;80D5BF|BF0000E0|E00000;  
 	sta.b $31                            ;80D5C3|8531    |000031;  
-	lda.l DATA8_E00001,x                 ;80D5C5|BF0100E0|E00001;  
+	lda.l DATA8_E00000+1,x                 ;80D5C5|BF0100E0|E00001;  
 	sta.b $32                            ;80D5C9|8532    |000032;  
 	stz.b $3F                            ;80D5CB|643F    |00003F;  
 	jmp.w func_80D5F1                    ;80D5CD|4CF1D5  |C0D5F1;  
@@ -10708,7 +10708,7 @@ DATA8_80DBB7:
 	.db $00,$01,$02,$03,$03,$04,$05,$06   ;80DBBB
 	.db $04                               ;80DBC3|        |000005;  
 	.db $05,$07,$08,$09,$06,$07,$0A,$0B   ;80DBC4
-	.db $08,$09,$0C,$0D                   ;80Dbcc
+	.db $08,$09,$0C,$0D                   ;80DBCC
 	.db $0E                               ;80DBD0|        |00E208;  
 
 func_80DBD1:
@@ -14660,7 +14660,7 @@ DATA8_80FA8F:
 	.db $01,$C9,$91,$08,$BF,$91,$00,$08   ;80FBB4
 	.db $DE,$91,$18,$E0,$91,$44,$E2,$91   ;80FBBC
 	.db $44,$E2,$91,$08,$E4,$91,$00,$01   ;80FBC4
-	.db $9A,$8E,$07,$9E,$8E,$18,$AE,$8E   ;80Fbcc
+	.db $9A,$8E,$07,$9E,$8E,$18,$AE,$8E   ;80FBCC
 	.db $E0,$BA,$8E,$84,$3A,$90,$A4,$4A   ;80FBD4
 	.db $90,$08,$A2,$8E,$10,$B2,$8E,$10   ;80FBDC
 	.db $B6,$8E,$08,$A6,$8E,$08,$AA,$8E   ;80FBE4

@@ -1,7 +1,12 @@
+;Each entry has the sprite data address and a byte after it
+;The byte after the address is the character id?
+;Not sure what the first two bytes are
+
 CharacterSpritesTable:
 	.db $84,$60
 	.dl Data_d455a4
 	.db $38
+	;Shiren
 	.dl Data_d7f3c1
 	.db $08 
 	.dl Data_d7f5c2
@@ -102,7 +107,7 @@ CharacterSpritesTable:
 	.db $08
 	.dl Data_d845b1
 	.db $08
-
+	;Mamel
 	.dl Data_c70000
 	.db $0A
 	.dl Data_c700ac
@@ -199,6 +204,7 @@ CharacterSpritesTable:
 	.db $4A
 	.dl Data_c711c4
 	.db $4A
+	;Death Reaper
 	.dl Data_c713a2
 	.db $0C
 	.dl Data_c71505

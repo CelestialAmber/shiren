@@ -1480,7 +1480,7 @@ CODE_C40BB7:
 	pha                                  ;C40BC6|48      |      ;  
 	phb                                  ;C40BC7|8B      |      ;  
 	jsl.l CODE_C4594C                    ;C40BC8|224C59C4|C4594C;  
-	plb                                  ;C40bcc|AB      |      ;  
+	plb                                  ;C40BCC|AB      |      ;  
 	pla                                  ;C40BCD|68      |      ;  
 	sta.b $06                            ;C40BCE|8506    |000006;  
 	phb                                  ;C40BD0|8B      |      ;  
@@ -17974,7 +17974,7 @@ CODE_C4BBB5:
 	jsr.w CODE_C4BC3E                    ;C4BBC3|203EBC  |C4BC3E;  
 	jmp.w CODE_C4B9CD                    ;C4BBC6|4CCDB9  |C4B9CD;  
 	lda.w $D26D                          ;C4BBC9|AD6DD2  |7ED26D;  
-	and.w #$00FF                         ;C4Bbcc|29FF00  |      ;  
+	and.w #$00FF                         ;C4BBCC|29FF00  |      ;  
 	cmp.w #$0004                         ;C4BBCF|C90400  |      ;  
 	bcc CODE_C4BBD7                      ;C4BBD2|9003    |C4BBD7;  
 	.db $A9,$00,$00                       ;C4BBD4
@@ -18076,16 +18076,16 @@ UNREACH_C4BC63:
 	and.w #$00FF                         ;C4BCB9|29FF00  |      ;  
 	cmp.w #$0004                         ;C4BCBC|C90400  |      ;  
 	bcc CODE_C4bcc4                      ;C4BCBF|9003    |C4bcc4;  
-	lda.w #$0000                         ;C4bcc1|A90000  |      ;  
+	lda.w #$0000                         ;C4BCC1|A90000  |      ;  
 
 CODE_C4bcc4:
-	asl a                                ;C4bcc4|0A      |      ;  
-	tax                                  ;C4bcc5|AA      |      ;  
-	lda.l DATA8_C4BD14,x                 ;C4bcc6|BF14BDC4|C4BD14;  
-	sta.b $02                   ;C4bccA|8502    |000002;  
-	plx                                  ;C4bccC|FA      |      ;  
-	lda.b $00                            ;C4bccD|A500    |000000;  
-	and.w #$00FF                         ;C4bccF|29FF00  |      ;  
+	asl a                                ;C4BCC4|0A      |      ;  
+	tax                                  ;C4BCC5|AA      |      ;  
+	lda.l DATA8_C4BD14,x                 ;C4BCC6|BF14BDC4|C4BD14;  
+	sta.b $02                   ;C4BCCA|8502    |000002;  
+	plx                                  ;C4BCCC|FA      |      ;  
+	lda.b $00                            ;C4BCCD|A500    |000000;  
+	and.w #$00FF                         ;C4BCCF|29FF00  |      ;  
 	cmp.w #$0000                         ;C4BCD2|C90000  |      ;  
 	beq CODE_C4BCFD                      ;C4BCD5|F026    |C4BCFD;  
 	cmp.w #$00C0                         ;C4BCD7|C9C000  |      ;  

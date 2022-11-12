@@ -10079,1785 +10079,1819 @@ Data_d37cdb:
 Data_d37dd3:
 .incbin "gfx/characters/npcs/npc2/d37dd3.4bpp.lz"
 
-;npc 3
+;shopkeeper
 
 ;d37ec6
 Data_d37ec6:
-.incbin "gfx/characters/npcs/d37ec6.4bpp.lz"
+.incbin "gfx/characters/npcs/npc3/d37ec6.4bpp.lz"
 
 ;d3801e
 Data_d3801e:
-.incbin "gfx/characters/npcs/d3801e.4bpp.lz"
+.incbin "gfx/characters/npcs/npc3/d3801e.4bpp.lz"
 
 ;d3816e
 Data_d3816e:
-.incbin "gfx/characters/npcs/d3816e.4bpp.lz"
+.incbin "gfx/characters/npcs/npc3/d3816e.4bpp.lz"
 
 ;d382b4
 Data_d382b4:
-.incbin "gfx/characters/npcs/d382b4.4bpp.lz"
+.incbin "gfx/characters/npcs/npc3/d382b4.4bpp.lz"
 
 ;d38406
 Data_d38406:
-.incbin "gfx/characters/npcs/d38406.4bpp.lz"
+.incbin "gfx/characters/npcs/npc3/d38406.4bpp.lz"
 
 ;d38546
 Data_d38546:
-.incbin "gfx/characters/npcs/d38546.4bpp.lz"
+.incbin "gfx/characters/npcs/npc3/d38546.4bpp.lz"
 
 ;d3868c
 Data_d3868c:
-.incbin "gfx/characters/npcs/d3868c.4bpp.lz"
+.incbin "gfx/characters/npcs/npc3/d3868c.4bpp.lz"
 
 ;d38801
 Data_d38801:
-.incbin "gfx/characters/npcs/d38801.4bpp.lz"
+.incbin "gfx/characters/npcs/npc3/d38801.4bpp.lz"
 
 ;d38972
 Data_d38972:
-.incbin "gfx/characters/npcs/d38972.4bpp.lz"
+.incbin "gfx/characters/npcs/npc3/d38972.4bpp.lz"
 
 ;d38aeb
 Data_d38aeb:
-.incbin "gfx/characters/npcs/d38aeb.4bpp.lz"
+.incbin "gfx/characters/npcs/npc3/d38aeb.4bpp.lz"
 
 ;d38c51
 Data_d38c51:
-.incbin "gfx/characters/npcs/d38c51.4bpp.lz"
+.incbin "gfx/characters/npcs/npc3/d38c51.4bpp.lz"
 
 ;d38db3
 Data_d38db3:
-.incbin "gfx/characters/npcs/d38db3.4bpp.lz"
+.incbin "gfx/characters/npcs/npc3/d38db3.4bpp.lz"
 
 ;d38f0b
 Data_d38f0b:
-.incbin "gfx/characters/npcs/d38f0b.4bpp.lz"
+.incbin "gfx/characters/npcs/npc3/d38f0b.4bpp.lz"
 
 ;d390a2
 Data_d390a2:
-.incbin "gfx/characters/npcs/d390a2.4bpp.lz"
+.incbin "gfx/characters/npcs/npc3/d390a2.4bpp.lz"
 
 ;d39219
 Data_d39219:
-.incbin "gfx/characters/npcs/d39219.4bpp.lz"
+.incbin "gfx/characters/npcs/npc3/d39219.4bpp.lz"
 
 ;d3938e
 Data_d3938e:
-.incbin "gfx/characters/npcs/d3938e.4bpp.lz"
+.incbin "gfx/characters/npcs/npc3/d3938e.4bpp.lz"
 
 ;d394f5
 Data_d394f5:
-.incbin "gfx/characters/npcs/d394f5.4bpp.lz"
+.incbin "gfx/characters/npcs/npc3/d394f5.4bpp.lz"
 
 ;d39668
 Data_d39668:
-.incbin "gfx/characters/npcs/d39668.4bpp.lz"
+.incbin "gfx/characters/npcs/npc3/d39668.4bpp.lz"
 
 ;d397ba
 Data_d397ba:
-.incbin "gfx/characters/npcs/d397ba.4bpp.lz"
+.incbin "gfx/characters/npcs/npc3/d397ba.4bpp.lz"
 
 ;d39928
 Data_d39928:
-.incbin "gfx/characters/npcs/d39928.4bpp.lz"
+.incbin "gfx/characters/npcs/npc3/d39928.4bpp.lz"
 
 ;d39ac5
 Data_d39ac5:
-.incbin "gfx/characters/npcs/d39ac5.4bpp.lz"
+.incbin "gfx/characters/npcs/npc3/d39ac5.4bpp.lz"
 
 ;d39c34
 Data_d39c34:
-.incbin "gfx/characters/npcs/d39c34.4bpp.lz"
+.incbin "gfx/characters/npcs/npc3/d39c34.4bpp.lz"
 
 ;d39d5b
 Data_d39d5b:
-.incbin "gfx/characters/npcs/d39d5b.4bpp.lz"
+.incbin "gfx/characters/npcs/npc3/d39d5b.4bpp.lz"
 
 ;d39ead
 Data_d39ead:
-.incbin "gfx/characters/npcs/d39ead.4bpp.lz"
+.incbin "gfx/characters/npcs/npc3/d39ead.4bpp.lz"
 
 ;d39ffa
 Data_d39ffa:
-.incbin "gfx/characters/npcs/d39ffa.4bpp.lz"
+.incbin "gfx/characters/npcs/npc3/d39ffa.4bpp.lz"
 
 ;d3a163
 Data_d3a163:
-.incbin "gfx/characters/npcs/d3a163.4bpp.lz"
+.incbin "gfx/characters/npcs/npc3/d3a163.4bpp.lz"
 
 ;d3a2e8
 Data_d3a2e8:
-.incbin "gfx/characters/npcs/d3a2e8.4bpp.lz"
+.incbin "gfx/characters/npcs/npc3/d3a2e8.4bpp.lz"
 
 ;d3a430
 Data_d3a430:
-.incbin "gfx/characters/npcs/d3a430.4bpp.lz"
+.incbin "gfx/characters/npcs/npc3/d3a430.4bpp.lz"
 
 ;d3a569
 Data_d3a569:
-.incbin "gfx/characters/npcs/d3a569.4bpp.lz"
+.incbin "gfx/characters/npcs/npc3/d3a569.4bpp.lz"
 
 ;d3a710
 Data_d3a710:
-.incbin "gfx/characters/npcs/d3a710.4bpp.lz"
+.incbin "gfx/characters/npcs/npc3/d3a710.4bpp.lz"
+
+;old lady
 
 ;d3a89b
 Data_d3a89b:
-.incbin "gfx/characters/npcs/d3a89b.4bpp.lz"
+.incbin "gfx/characters/npcs/npc4/d3a89b.4bpp.lz"
 
 ;d3a9b5
 Data_d3a9b5:
-.incbin "gfx/characters/npcs/d3a9b5.4bpp.lz"
+.incbin "gfx/characters/npcs/npc4/d3a9b5.4bpp.lz"
 
 ;d3aabf
 Data_d3aabf:
-.incbin "gfx/characters/npcs/d3aabf.4bpp.lz"
+.incbin "gfx/characters/npcs/npc4/d3aabf.4bpp.lz"
 
 ;d3abc9
 Data_d3abc9:
-.incbin "gfx/characters/npcs/d3abc9.4bpp.lz"
+.incbin "gfx/characters/npcs/npc4/d3abc9.4bpp.lz"
 
 ;d3acd9
 Data_d3acd9:
-.incbin "gfx/characters/npcs/d3acd9.4bpp.lz"
+.incbin "gfx/characters/npcs/npc4/d3acd9.4bpp.lz"
 
 ;d3ade9
 Data_d3ade9:
-.incbin "gfx/characters/npcs/d3ade9.4bpp.lz"
+.incbin "gfx/characters/npcs/npc4/d3ade9.4bpp.lz"
 
 ;d3aef3
 Data_d3aef3:
-.incbin "gfx/characters/npcs/d3aef3.4bpp.lz"
+.incbin "gfx/characters/npcs/npc4/d3aef3.4bpp.lz"
 
 ;d3b00f
 Data_d3b00f:
-.incbin "gfx/characters/npcs/d3b00f.4bpp.lz"
+.incbin "gfx/characters/npcs/npc4/d3b00f.4bpp.lz"
 
 ;d3b11d
 Data_d3b11d:
-.incbin "gfx/characters/npcs/d3b11d.4bpp.lz"
+.incbin "gfx/characters/npcs/npc4/d3b11d.4bpp.lz"
 
 ;d3b22b
 Data_d3b22b:
-.incbin "gfx/characters/npcs/d3b22b.4bpp.lz"
+.incbin "gfx/characters/npcs/npc4/d3b22b.4bpp.lz"
 
 ;d3b32b
 Data_d3b32b:
-.incbin "gfx/characters/npcs/d3b32b.4bpp.lz"
+.incbin "gfx/characters/npcs/npc4/d3b32b.4bpp.lz"
 
 ;d3b419
 Data_d3b419:
-.incbin "gfx/characters/npcs/d3b419.4bpp.lz"
+.incbin "gfx/characters/npcs/npc4/d3b419.4bpp.lz"
 
 ;d3b517
 Data_d3b517:
-.incbin "gfx/characters/npcs/d3b517.4bpp.lz"
+.incbin "gfx/characters/npcs/npc4/d3b517.4bpp.lz"
 
 ;d3b64f
 Data_d3b64f:
-.incbin "gfx/characters/npcs/d3b64f.4bpp.lz"
+.incbin "gfx/characters/npcs/npc4/d3b64f.4bpp.lz"
 
 ;d3b76f
 Data_d3b76f:
-.incbin "gfx/characters/npcs/d3b76f.4bpp.lz"
+.incbin "gfx/characters/npcs/npc4/d3b76f.4bpp.lz"
 
 ;d3b8a6
 Data_d3b8a6:
-.incbin "gfx/characters/npcs/d3b8a6.4bpp.lz"
+.incbin "gfx/characters/npcs/npc4/d3b8a6.4bpp.lz"
 
 ;d3b9ff
 Data_d3b9ff:
-.incbin "gfx/characters/npcs/d3b9ff.4bpp.lz"
+.incbin "gfx/characters/npcs/npc4/d3b9ff.4bpp.lz"
 
 ;d3bb56
 Data_d3bb56:
-.incbin "gfx/characters/npcs/d3bb56.4bpp.lz"
+.incbin "gfx/characters/npcs/npc4/d3bb56.4bpp.lz"
 
 ;d3bc7d
 Data_d3bc7d:
-.incbin "gfx/characters/npcs/d3bc7d.4bpp.lz"
+.incbin "gfx/characters/npcs/npc4/d3bc7d.4bpp.lz"
 
 ;d3bd93
 Data_d3bd93:
-.incbin "gfx/characters/npcs/d3bd93.4bpp.lz"
+.incbin "gfx/characters/npcs/npc4/d3bd93.4bpp.lz"
+
+;foreign vagabond
 
 ;d3be75
 Data_d3be75:
-.incbin "gfx/characters/npcs/d3be75.4bpp.lz"
+.incbin "gfx/characters/npcs/npc5/d3be75.4bpp.lz"
 
 ;d3bfc1
 Data_d3bfc1:
-.incbin "gfx/characters/npcs/d3bfc1.4bpp.lz"
+.incbin "gfx/characters/npcs/npc5/d3bfc1.4bpp.lz"
 
 ;d3c103
 Data_d3c103:
-.incbin "gfx/characters/npcs/d3c103.4bpp.lz"
+.incbin "gfx/characters/npcs/npc5/d3c103.4bpp.lz"
 
 ;d3c24b
 Data_d3c24b:
-.incbin "gfx/characters/npcs/d3c24b.4bpp.lz"
+.incbin "gfx/characters/npcs/npc5/d3c24b.4bpp.lz"
 
 ;d3c39b
 Data_d3c39b:
-.incbin "gfx/characters/npcs/d3c39b.4bpp.lz"
+.incbin "gfx/characters/npcs/npc5/d3c39b.4bpp.lz"
 
 ;d3c4e3
 Data_d3c4e3:
-.incbin "gfx/characters/npcs/d3c4e3.4bpp.lz"
+.incbin "gfx/characters/npcs/npc5/d3c4e3.4bpp.lz"
 
 ;d3c62b
 Data_d3c62b:
-.incbin "gfx/characters/npcs/d3c62b.4bpp.lz"
+.incbin "gfx/characters/npcs/npc5/d3c62b.4bpp.lz"
 
 ;d3c77b
 Data_d3c77b:
-.incbin "gfx/characters/npcs/d3c77b.4bpp.lz"
+.incbin "gfx/characters/npcs/npc5/d3c77b.4bpp.lz"
 
 ;d3c8bd
 Data_d3c8bd:
-.incbin "gfx/characters/npcs/d3c8bd.4bpp.lz"
+.incbin "gfx/characters/npcs/npc5/d3c8bd.4bpp.lz"
 
 ;d3ca21
 Data_d3ca21:
-.incbin "gfx/characters/npcs/d3ca21.4bpp.lz"
+.incbin "gfx/characters/npcs/npc5/d3ca21.4bpp.lz"
 
 ;d3cb67
 Data_d3cb67:
-.incbin "gfx/characters/npcs/d3cb67.4bpp.lz"
+.incbin "gfx/characters/npcs/npc5/d3cb67.4bpp.lz"
 
 ;d3ccb7
 Data_d3ccb7:
-.incbin "gfx/characters/npcs/d3ccb7.4bpp.lz"
+.incbin "gfx/characters/npcs/npc5/d3ccb7.4bpp.lz"
 
 ;d3ce05
 Data_d3ce05:
-.incbin "gfx/characters/npcs/d3ce05.4bpp.lz"
+.incbin "gfx/characters/npcs/npc5/d3ce05.4bpp.lz"
 
 ;d3cf4d
 Data_d3cf4d:
-.incbin "gfx/characters/npcs/d3cf4d.4bpp.lz"
+.incbin "gfx/characters/npcs/npc5/d3cf4d.4bpp.lz"
 
 ;d3d092
 Data_d3d092:
-.incbin "gfx/characters/npcs/d3d092.4bpp.lz"
+.incbin "gfx/characters/npcs/npc5/d3d092.4bpp.lz"
 
 ;d3d1c9
 Data_d3d1c9:
-.incbin "gfx/characters/npcs/d3d1c9.4bpp.lz"
+.incbin "gfx/characters/npcs/npc5/d3d1c9.4bpp.lz"
 
 ;d3d2fb
 Data_d3d2fb:
-.incbin "gfx/characters/npcs/d3d2fb.4bpp.lz"
+.incbin "gfx/characters/npcs/npc5/d3d2fb.4bpp.lz"
 
 ;d3d434
 Data_d3d434:
-.incbin "gfx/characters/npcs/d3d434.4bpp.lz"
+.incbin "gfx/characters/npcs/npc5/d3d434.4bpp.lz"
+
+;npc 6
 
 ;d3d566
 Data_d3d566:
-.incbin "gfx/characters/npcs/d3d566.4bpp.lz"
+.incbin "gfx/characters/npcs/npc6/d3d566.4bpp.lz"
 
 ;d3d6df
 Data_d3d6df:
-.incbin "gfx/characters/npcs/d3d6df.4bpp.lz"
+.incbin "gfx/characters/npcs/npc6/d3d6df.4bpp.lz"
 
 ;d3d868
 Data_d3d868:
-.incbin "gfx/characters/npcs/d3d868.4bpp.lz"
+.incbin "gfx/characters/npcs/npc6/d3d868.4bpp.lz"
 
 ;d3d9c7
 Data_d3d9c7:
-.incbin "gfx/characters/npcs/d3d9c7.4bpp.lz"
+.incbin "gfx/characters/npcs/npc6/d3d9c7.4bpp.lz"
 
 ;d3db66
 Data_d3db66:
-.incbin "gfx/characters/npcs/d3db66.4bpp.lz"
+.incbin "gfx/characters/npcs/npc6/d3db66.4bpp.lz"
 
 ;d3dd01
 Data_d3dd01:
-.incbin "gfx/characters/npcs/d3dd01.4bpp.lz"
+.incbin "gfx/characters/npcs/npc6/d3dd01.4bpp.lz"
 
 ;d3de8a
 Data_d3de8a:
-.incbin "gfx/characters/npcs/d3de8a.4bpp.lz"
+.incbin "gfx/characters/npcs/npc6/d3de8a.4bpp.lz"
 
 ;d3e007
 Data_d3e007:
-.incbin "gfx/characters/npcs/d3e007.4bpp.lz"
+.incbin "gfx/characters/npcs/npc6/d3e007.4bpp.lz"
 
 ;d3e166
 Data_d3e166:
-.incbin "gfx/characters/npcs/d3e166.4bpp.lz"
+.incbin "gfx/characters/npcs/npc6/d3e166.4bpp.lz"
 
 ;d3e2d5
 Data_d3e2d5:
-.incbin "gfx/characters/npcs/d3e2d5.4bpp.lz"
+.incbin "gfx/characters/npcs/npc6/d3e2d5.4bpp.lz"
 
 ;d3e484
 Data_d3e484:
-.incbin "gfx/characters/npcs/d3e484.4bpp.lz"
+.incbin "gfx/characters/npcs/npc6/d3e484.4bpp.lz"
 
 ;d3e60d
 Data_d3e60d:
-.incbin "gfx/characters/npcs/d3e60d.4bpp.lz"
+.incbin "gfx/characters/npcs/npc6/d3e60d.4bpp.lz"
 
 ;d3e7ba
 Data_d3e7ba:
-.incbin "gfx/characters/npcs/d3e7ba.4bpp.lz"
+.incbin "gfx/characters/npcs/npc6/d3e7ba.4bpp.lz"
 
 ;d3e99f
 Data_d3e99f:
-.incbin "gfx/characters/npcs/d3e99f.4bpp.lz"
+.incbin "gfx/characters/npcs/npc6/d3e99f.4bpp.lz"
 
 ;d3eb58
 Data_d3eb58:
-.incbin "gfx/characters/npcs/d3eb58.4bpp.lz"
+.incbin "gfx/characters/npcs/npc6/d3eb58.4bpp.lz"
 
 ;d3ed11
 Data_d3ed11:
-.incbin "gfx/characters/npcs/d3ed11.4bpp.lz"
+.incbin "gfx/characters/npcs/npc6/d3ed11.4bpp.lz"
 
 ;d3ee94
 Data_d3ee94:
-.incbin "gfx/characters/npcs/d3ee94.4bpp.lz"
+.incbin "gfx/characters/npcs/npc6/d3ee94.4bpp.lz"
 
 ;d3eff1
 Data_d3eff1:
-.incbin "gfx/characters/npcs/d3eff1.4bpp.lz"
+.incbin "gfx/characters/npcs/npc6/d3eff1.4bpp.lz"
 
 ;d3f162
 Data_d3f162:
-.incbin "gfx/characters/npcs/d3f162.4bpp.lz"
+.incbin "gfx/characters/npcs/npc6/d3f162.4bpp.lz"
 
 ;d3f2f3
 Data_d3f2f3:
-.incbin "gfx/characters/npcs/d3f2f3.4bpp.lz"
+.incbin "gfx/characters/npcs/npc6/d3f2f3.4bpp.lz"
+
+;npc 7
 
 ;d3f49c
 Data_d3f49c:
-.incbin "gfx/characters/npcs/d3f49c.4bpp.lz"
+.incbin "gfx/characters/npcs/npc7/d3f49c.4bpp.lz"
 
 ;d3f5e7
 Data_d3f5e7:
-.incbin "gfx/characters/npcs/d3f5e7.4bpp.lz"
+.incbin "gfx/characters/npcs/npc7/d3f5e7.4bpp.lz"
 
 ;d3f732
 Data_d3f732:
-.incbin "gfx/characters/npcs/d3f732.4bpp.lz"
+.incbin "gfx/characters/npcs/npc7/d3f732.4bpp.lz"
 
 ;d3f870
 Data_d3f870:
-.incbin "gfx/characters/npcs/d3f870.4bpp.lz"
+.incbin "gfx/characters/npcs/npc7/d3f870.4bpp.lz"
 
 ;d3f9b0
 Data_d3f9b0:
-.incbin "gfx/characters/npcs/d3f9b0.4bpp.lz"
+.incbin "gfx/characters/npcs/npc7/d3f9b0.4bpp.lz"
 
 ;d3faf6
 Data_d3faf6:
-.incbin "gfx/characters/npcs/d3faf6.4bpp.lz"
+.incbin "gfx/characters/npcs/npc7/d3faf6.4bpp.lz"
 
 ;d3fc2c
 Data_d3fc2c:
-.incbin "gfx/characters/npcs/d3fc2c.4bpp.lz"
+.incbin "gfx/characters/npcs/npc7/d3fc2c.4bpp.lz"
 
 ;d3fd6e
 Data_d3fd6e:
-.incbin "gfx/characters/npcs/d3fd6e.4bpp.lz"
+.incbin "gfx/characters/npcs/npc7/d3fd6e.4bpp.lz"
 
 ;d3feb2
 Data_d3feb2:
-.incbin "gfx/characters/npcs/d3feb2.4bpp.lz"
+.incbin "gfx/characters/npcs/npc7/d3feb2.4bpp.lz"
 
 ;d3fff0
 Data_d3fff0:
-.incbin "gfx/characters/npcs/d3fff0.4bpp.lz" read 0x10
+.incbin "gfx/characters/npcs/npc7/d3fff0.4bpp.lz" read 0x10
 
 .bank $14
 .org $0000
 
-.incbin "gfx/characters/npcs/d3fff0.4bpp.lz" skip 0x10
+.incbin "gfx/characters/npcs/npc7/d3fff0.4bpp.lz" skip 0x10
 
 ;d40138
 Data_d40138:
-.incbin "gfx/characters/npcs/d40138.4bpp.lz"
+.incbin "gfx/characters/npcs/npc7/d40138.4bpp.lz"
 
 ;d4027a
 Data_d4027a:
-.incbin "gfx/characters/npcs/d4027a.4bpp.lz"
+.incbin "gfx/characters/npcs/npc7/d4027a.4bpp.lz"
 
 ;d403be
 Data_d403be:
-.incbin "gfx/characters/npcs/d403be.4bpp.lz"
+.incbin "gfx/characters/npcs/npc7/d403be.4bpp.lz"
 
 ;d4050c
 Data_d4050c:
-.incbin "gfx/characters/npcs/d4050c.4bpp.lz"
+.incbin "gfx/characters/npcs/npc7/d4050c.4bpp.lz"
 
 ;d40652
 Data_d40652:
-.incbin "gfx/characters/npcs/d40652.4bpp.lz"
+.incbin "gfx/characters/npcs/npc7/d40652.4bpp.lz"
 
 ;d407fb
 Data_d407fb:
-.incbin "gfx/characters/npcs/d407fb.4bpp.lz"
+.incbin "gfx/characters/npcs/npc7/d407fb.4bpp.lz"
 
 ;d40984
 Data_d40984:
-.incbin "gfx/characters/npcs/d40984.4bpp.lz"
+.incbin "gfx/characters/npcs/npc7/d40984.4bpp.lz"
 
 ;d40b1b
 Data_d40b1b:
-.incbin "gfx/characters/npcs/d40b1b.4bpp.lz"
+.incbin "gfx/characters/npcs/npc7/d40b1b.4bpp.lz"
 
 ;d40cd4
 Data_d40cd4:
-.incbin "gfx/characters/npcs/d40cd4.4bpp.lz"
+.incbin "gfx/characters/npcs/npc7/d40cd4.4bpp.lz"
+
+;npc 8
 
 ;d40e75
 Data_d40e75:
-.incbin "gfx/characters/npcs/d40e75.4bpp.lz"
+.incbin "gfx/characters/npcs/npc8/d40e75.4bpp.lz"
 
 ;d40f62
 Data_d40f62:
-.incbin "gfx/characters/npcs/d40f62.4bpp.lz"
+.incbin "gfx/characters/npcs/npc8/d40f62.4bpp.lz"
 
 ;d41062
 Data_d41062:
-.incbin "gfx/characters/npcs/d41062.4bpp.lz"
+.incbin "gfx/characters/npcs/npc8/d41062.4bpp.lz"
 
 ;d41150
 Data_d41150:
-.incbin "gfx/characters/npcs/d41150.4bpp.lz"
+.incbin "gfx/characters/npcs/npc8/d41150.4bpp.lz"
 
 ;d41250
 Data_d41250:
-.incbin "gfx/characters/npcs/d41250.4bpp.lz"
+.incbin "gfx/characters/npcs/npc8/d41250.4bpp.lz"
 
 ;d4136a
 Data_d4136a:
-.incbin "gfx/characters/npcs/d4136a.4bpp.lz"
+.incbin "gfx/characters/npcs/npc8/d4136a.4bpp.lz"
 
 ;d41468
 Data_d41468:
-.incbin "gfx/characters/npcs/d41468.4bpp.lz"
+.incbin "gfx/characters/npcs/npc8/d41468.4bpp.lz"
 
 ;d415ae
 Data_d415ae:
-.incbin "gfx/characters/npcs/d415ae.4bpp.lz"
+.incbin "gfx/characters/npcs/npc8/d415ae.4bpp.lz"
 
 ;d416e8
 Data_d416e8:
-.incbin "gfx/characters/npcs/d416e8.4bpp.lz"
+.incbin "gfx/characters/npcs/npc8/d416e8.4bpp.lz"
 
 ;d41816
 Data_d41816:
-.incbin "gfx/characters/npcs/d41816.4bpp.lz"
+.incbin "gfx/characters/npcs/npc8/d41816.4bpp.lz"
 
 ;d41948
 Data_d41948:
-.incbin "gfx/characters/npcs/d41948.4bpp.lz"
+.incbin "gfx/characters/npcs/npc8/d41948.4bpp.lz"
 
 ;d41a62
 Data_d41a62:
-.incbin "gfx/characters/npcs/d41a62.4bpp.lz"
+.incbin "gfx/characters/npcs/npc8/d41a62.4bpp.lz"
 
 ;d41b90
 Data_d41b90:
-.incbin "gfx/characters/npcs/d41b90.4bpp.lz"
+.incbin "gfx/characters/npcs/npc8/d41b90.4bpp.lz"
 
 ;d41cd6
 Data_d41cd6:
-.incbin "gfx/characters/npcs/d41cd6.4bpp.lz"
+.incbin "gfx/characters/npcs/npc8/d41cd6.4bpp.lz"
 
 ;d41e06
 Data_d41e06:
-.incbin "gfx/characters/npcs/d41e06.4bpp.lz"
+.incbin "gfx/characters/npcs/npc8/d41e06.4bpp.lz"
 
 ;d41f3c
 Data_d41f3c:
-.incbin "gfx/characters/npcs/d41f3c.4bpp.lz"
+.incbin "gfx/characters/npcs/npc8/d41f3c.4bpp.lz"
 
 ;d42062
 Data_d42062:
-.incbin "gfx/characters/npcs/d42062.4bpp.lz"
+.incbin "gfx/characters/npcs/npc8/d42062.4bpp.lz"
 
 ;d42194
 Data_d42194:
-.incbin "gfx/characters/npcs/d42194.4bpp.lz"
+.incbin "gfx/characters/npcs/npc8/d42194.4bpp.lz"
 
 ;d422c4
 Data_d422c4:
-.incbin "gfx/characters/npcs/d422c4.4bpp.lz"
+.incbin "gfx/characters/npcs/npc8/d422c4.4bpp.lz"
 
 ;d42402
 Data_d42402:
-.incbin "gfx/characters/npcs/d42402.4bpp.lz"
+.incbin "gfx/characters/npcs/npc8/d42402.4bpp.lz"
+
+;npc 9
 
 ;d42542
 Data_d42542:
-.incbin "gfx/characters/npcs/d42542.4bpp.lz"
+.incbin "gfx/characters/npcs/npc9/d42542.4bpp.lz"
 
 ;d4264e
 Data_d4264e:
-.incbin "gfx/characters/npcs/d4264e.4bpp.lz"
+.incbin "gfx/characters/npcs/npc9/d4264e.4bpp.lz"
 
 ;d42750
 Data_d42750:
-.incbin "gfx/characters/npcs/d42750.4bpp.lz"
+.incbin "gfx/characters/npcs/npc9/d42750.4bpp.lz"
 
 ;d42884
 Data_d42884:
-.incbin "gfx/characters/npcs/d42884.4bpp.lz"
+.incbin "gfx/characters/npcs/npc9/d42884.4bpp.lz"
 
 ;d429cc
 Data_d429cc:
-.incbin "gfx/characters/npcs/d429cc.4bpp.lz"
+.incbin "gfx/characters/npcs/npc9/d429cc.4bpp.lz"
 
 ;d42b0e
 Data_d42b0e:
-.incbin "gfx/characters/npcs/d42b0e.4bpp.lz"
+.incbin "gfx/characters/npcs/npc9/d42b0e.4bpp.lz"
 
 ;d42c55
 Data_d42c55:
-.incbin "gfx/characters/npcs/d42c55.4bpp.lz"
+.incbin "gfx/characters/npcs/npc9/d42c55.4bpp.lz"
 
 ;d42da5
 Data_d42da5:
-.incbin "gfx/characters/npcs/d42da5.4bpp.lz"
+.incbin "gfx/characters/npcs/npc9/d42da5.4bpp.lz"
 
 ;d42ef1
 Data_d42ef1:
-.incbin "gfx/characters/npcs/d42ef1.4bpp.lz"
+.incbin "gfx/characters/npcs/npc9/d42ef1.4bpp.lz"
 
 ;d43031
 Data_d43031:
-.incbin "gfx/characters/npcs/d43031.4bpp.lz"
+.incbin "gfx/characters/npcs/npc9/d43031.4bpp.lz"
 
 ;d43179
 Data_d43179:
-.incbin "gfx/characters/npcs/d43179.4bpp.lz"
+.incbin "gfx/characters/npcs/npc9/d43179.4bpp.lz"
 
 ;d43295
 Data_d43295:
-.incbin "gfx/characters/npcs/d43295.4bpp.lz"
+.incbin "gfx/characters/npcs/npc9/d43295.4bpp.lz"
 
 ;d433d1
 Data_d433d1:
-.incbin "gfx/characters/npcs/d433d1.4bpp.lz"
+.incbin "gfx/characters/npcs/npc9/d433d1.4bpp.lz"
 
 ;d43531
 Data_d43531:
-.incbin "gfx/characters/npcs/d43531.4bpp.lz"
+.incbin "gfx/characters/npcs/npc9/d43531.4bpp.lz"
 
 ;d4366b
 Data_d4366b:
-.incbin "gfx/characters/npcs/d4366b.4bpp.lz"
+.incbin "gfx/characters/npcs/npc9/d4366b.4bpp.lz"
 
 ;d437bd
 Data_d437bd:
-.incbin "gfx/characters/npcs/d437bd.4bpp.lz"
+.incbin "gfx/characters/npcs/npc9/d437bd.4bpp.lz"
 
 ;d43914
 Data_d43914:
-.incbin "gfx/characters/npcs/d43914.4bpp.lz"
+.incbin "gfx/characters/npcs/npc9/d43914.4bpp.lz"
 
 ;d43a65
 Data_d43a65:
-.incbin "gfx/characters/npcs/d43a65.4bpp.lz"
+.incbin "gfx/characters/npcs/npc9/d43a65.4bpp.lz"
 
 ;d43c02
 Data_d43c02:
-.incbin "gfx/characters/npcs/d43c02.4bpp.lz"
+.incbin "gfx/characters/npcs/npc9/d43c02.4bpp.lz"
 
 ;d43d79
 Data_d43d79:
-.incbin "gfx/characters/npcs/d43d79.4bpp.lz"
+.incbin "gfx/characters/npcs/npc9/d43d79.4bpp.lz"
+
+;little girl (10)
 
 ;d43f24
 Data_d43f24:
-.incbin "gfx/characters/npcs/d43f24.4bpp.lz"
+.incbin "gfx/characters/npcs/npc10/d43f24.4bpp.lz"
 
 ;d43ff7
 Data_d43ff7:
-.incbin "gfx/characters/npcs/d43ff7.4bpp.lz"
+.incbin "gfx/characters/npcs/npc10/d43ff7.4bpp.lz"
 
 ;d440d9
 Data_d440d9:
-.incbin "gfx/characters/npcs/d440d9.4bpp.lz"
+.incbin "gfx/characters/npcs/npc10/d440d9.4bpp.lz"
 
 ;d441a8
 Data_d441a8:
-.incbin "gfx/characters/npcs/d441a8.4bpp.lz"
+.incbin "gfx/characters/npcs/npc10/d441a8.4bpp.lz"
 
 ;d442aa
 Data_d442aa:
-.incbin "gfx/characters/npcs/d442aa.4bpp.lz"
+.incbin "gfx/characters/npcs/npc10/d442aa.4bpp.lz"
 
 ;d443c1
 Data_d443c1:
-.incbin "gfx/characters/npcs/d443c1.4bpp.lz"
+.incbin "gfx/characters/npcs/npc10/d443c1.4bpp.lz"
 
 ;d444c9
 Data_d444c9:
-.incbin "gfx/characters/npcs/d444c9.4bpp.lz"
+.incbin "gfx/characters/npcs/npc10/d444c9.4bpp.lz"
 
 ;d445ea
 Data_d445ea:
-.incbin "gfx/characters/npcs/d445ea.4bpp.lz"
+.incbin "gfx/characters/npcs/npc10/d445ea.4bpp.lz"
 
 ;d44711
 Data_d44711:
-.incbin "gfx/characters/npcs/d44711.4bpp.lz"
+.incbin "gfx/characters/npcs/npc10/d44711.4bpp.lz"
 
 ;d44825
 Data_d44825:
-.incbin "gfx/characters/npcs/d44825.4bpp.lz"
+.incbin "gfx/characters/npcs/npc10/d44825.4bpp.lz"
 
 ;d44925
 Data_d44925:
-.incbin "gfx/characters/npcs/d44925.4bpp.lz"
+.incbin "gfx/characters/npcs/npc10/d44925.4bpp.lz"
 
 ;d44a27
 Data_d44a27:
-.incbin "gfx/characters/npcs/d44a27.4bpp.lz"
+.incbin "gfx/characters/npcs/npc10/d44a27.4bpp.lz"
 
 ;d44b11
 Data_d44b11:
-.incbin "gfx/characters/npcs/d44b11.4bpp.lz"
+.incbin "gfx/characters/npcs/npc10/d44b11.4bpp.lz"
 
 ;d44c3e
 Data_d44c3e:
-.incbin "gfx/characters/npcs/d44c3e.4bpp.lz"
+.incbin "gfx/characters/npcs/npc10/d44c3e.4bpp.lz"
 
 ;d44d77
 Data_d44d77:
-.incbin "gfx/characters/npcs/d44d77.4bpp.lz"
+.incbin "gfx/characters/npcs/npc10/d44d77.4bpp.lz"
 
 ;d44e9b
 Data_d44e9b:
-.incbin "gfx/characters/npcs/d44e9b.4bpp.lz"
+.incbin "gfx/characters/npcs/npc10/d44e9b.4bpp.lz"
 
 ;d44fa8
 Data_d44fa8:
-.incbin "gfx/characters/npcs/d44fa8.4bpp.lz"
+.incbin "gfx/characters/npcs/npc10/d44fa8.4bpp.lz"
 
 ;d450fb
 Data_d450fb:
-.incbin "gfx/characters/npcs/d450fb.4bpp.lz"
+.incbin "gfx/characters/npcs/npc10/d450fb.4bpp.lz"
 
 ;d45278
 Data_d45278:
-.incbin "gfx/characters/npcs/d45278.4bpp.lz"
+.incbin "gfx/characters/npcs/npc10/d45278.4bpp.lz"
 
 ;d453ad
 Data_d453ad:
-.incbin "gfx/characters/npcs/d453ad.4bpp.lz"
+.incbin "gfx/characters/npcs/npc10/d453ad.4bpp.lz"
 
 ;d454fa
 Data_d454fa:
-.incbin "gfx/characters/npcs/d454fa.4bpp.lz"
+.incbin "gfx/characters/npcs/npc10/d454fa.4bpp.lz"
 
 ;d455a4
 Data_d455a4:
-.incbin "gfx/characters/npcs/d455a4.4bpp.lz"
+.incbin "gfx/characters/npcs/npc10/d455a4.4bpp.lz"
+
+;npc 11
 
 ;d455ed
 Data_d455ed:
-.incbin "gfx/characters/npcs/d455ed.4bpp.lz"
+.incbin "gfx/characters/npcs/npc11/d455ed.4bpp.lz"
 
 ;d456dc
 Data_d456dc:
-.incbin "gfx/characters/npcs/d456dc.4bpp.lz"
+.incbin "gfx/characters/npcs/npc11/d456dc.4bpp.lz"
 
 ;d457c4
 Data_d457c4:
-.incbin "gfx/characters/npcs/d457c4.4bpp.lz"
+.incbin "gfx/characters/npcs/npc11/d457c4.4bpp.lz"
 
 ;d458c8
 Data_d458c8:
-.incbin "gfx/characters/npcs/d458c8.4bpp.lz"
+.incbin "gfx/characters/npcs/npc11/d458c8.4bpp.lz"
 
 ;d459b8
 Data_d459b8:
-.incbin "gfx/characters/npcs/d459b8.4bpp.lz"
+.incbin "gfx/characters/npcs/npc11/d459b8.4bpp.lz"
 
 ;d45ab0
 Data_d45ab0:
-.incbin "gfx/characters/npcs/d45ab0.4bpp.lz"
+.incbin "gfx/characters/npcs/npc11/d45ab0.4bpp.lz"
 
 ;d45bd4
 Data_d45bd4:
-.incbin "gfx/characters/npcs/d45bd4.4bpp.lz"
+.incbin "gfx/characters/npcs/npc11/d45bd4.4bpp.lz"
 
 ;d45d0c
 Data_d45d0c:
-.incbin "gfx/characters/npcs/d45d0c.4bpp.lz"
+.incbin "gfx/characters/npcs/npc11/d45d0c.4bpp.lz"
 
 ;d45e3e
 Data_d45e3e:
-.incbin "gfx/characters/npcs/d45e3e.4bpp.lz"
+.incbin "gfx/characters/npcs/npc11/d45e3e.4bpp.lz"
 
 ;d45f22
 Data_d45f22:
-.incbin "gfx/characters/npcs/d45f22.4bpp.lz"
+.incbin "gfx/characters/npcs/npc11/d45f22.4bpp.lz"
 
 ;d4600e
 Data_d4600e:
-.incbin "gfx/characters/npcs/d4600e.4bpp.lz"
+.incbin "gfx/characters/npcs/npc11/d4600e.4bpp.lz"
 
 ;d46124
 Data_d46124:
-.incbin "gfx/characters/npcs/d46124.4bpp.lz"
+.incbin "gfx/characters/npcs/npc11/d46124.4bpp.lz"
 
 ;d46230
 Data_d46230:
-.incbin "gfx/characters/npcs/d46230.4bpp.lz"
+.incbin "gfx/characters/npcs/npc11/d46230.4bpp.lz"
 
 ;d4635c
 Data_d4635c:
-.incbin "gfx/characters/npcs/d4635c.4bpp.lz"
+.incbin "gfx/characters/npcs/npc11/d4635c.4bpp.lz"
 
 ;d464a0
 Data_d464a0:
-.incbin "gfx/characters/npcs/d464a0.4bpp.lz"
+.incbin "gfx/characters/npcs/npc11/d464a0.4bpp.lz"
 
 ;d465d8
 Data_d465d8:
-.incbin "gfx/characters/npcs/d465d8.4bpp.lz"
+.incbin "gfx/characters/npcs/npc11/d465d8.4bpp.lz"
 
 ;d46716
 Data_d46716:
-.incbin "gfx/characters/npcs/d46716.4bpp.lz"
+.incbin "gfx/characters/npcs/npc11/d46716.4bpp.lz"
 
 ;d46808
 Data_d46808:
-.incbin "gfx/characters/npcs/d46808.4bpp.lz"
+.incbin "gfx/characters/npcs/npc11/d46808.4bpp.lz"
 
 ;d4692f
 Data_d4692f:
-.incbin "gfx/characters/npcs/d4692f.4bpp.lz"
+.incbin "gfx/characters/npcs/npc11/d4692f.4bpp.lz"
 
 ;d46a53
 Data_d46a53:
-.incbin "gfx/characters/npcs/d46a53.4bpp.lz"
+.incbin "gfx/characters/npcs/npc11/d46a53.4bpp.lz"
 
 ;d46b75
 Data_d46b75:
-.incbin "gfx/characters/npcs/d46b75.4bpp.lz"
+.incbin "gfx/characters/npcs/npc11/d46b75.4bpp.lz"
+
+;npc 12
 
 ;d46c99
 Data_d46c99:
-.incbin "gfx/characters/npcs/d46c99.4bpp.lz"
+.incbin "gfx/characters/npcs/npc12/d46c99.4bpp.lz"
 
 ;d46ddc
 Data_d46ddc:
-.incbin "gfx/characters/npcs/d46ddc.4bpp.lz"
+.incbin "gfx/characters/npcs/npc12/d46ddc.4bpp.lz"
 
 ;d46f08
 Data_d46f08:
-.incbin "gfx/characters/npcs/d46f08.4bpp.lz"
+.incbin "gfx/characters/npcs/npc12/d46f08.4bpp.lz"
 
 ;d47040
 Data_d47040:
-.incbin "gfx/characters/npcs/d47040.4bpp.lz"
+.incbin "gfx/characters/npcs/npc12/d47040.4bpp.lz"
 
 ;d47179
 Data_d47179:
-.incbin "gfx/characters/npcs/d47179.4bpp.lz"
+.incbin "gfx/characters/npcs/npc12/d47179.4bpp.lz"
 
 ;d472be
 Data_d472be:
-.incbin "gfx/characters/npcs/d472be.4bpp.lz"
+.incbin "gfx/characters/npcs/npc12/d472be.4bpp.lz"
 
 ;d473ee
 Data_d473ee:
-.incbin "gfx/characters/npcs/d473ee.4bpp.lz"
+.incbin "gfx/characters/npcs/npc12/d473ee.4bpp.lz"
 
 ;d47577
 Data_d47577:
-.incbin "gfx/characters/npcs/d47577.4bpp.lz"
+.incbin "gfx/characters/npcs/npc12/d47577.4bpp.lz"
 
 ;d476fa
 Data_d476fa:
-.incbin "gfx/characters/npcs/d476fa.4bpp.lz"
+.incbin "gfx/characters/npcs/npc12/d476fa.4bpp.lz"
 
 ;d4787d
 Data_d4787d:
-.incbin "gfx/characters/npcs/d4787d.4bpp.lz"
+.incbin "gfx/characters/npcs/npc12/d4787d.4bpp.lz"
 
 ;d479a5
 Data_d479a5:
-.incbin "gfx/characters/npcs/d479a5.4bpp.lz"
+.incbin "gfx/characters/npcs/npc12/d479a5.4bpp.lz"
 
 ;d47ad7
 Data_d47ad7:
-.incbin "gfx/characters/npcs/d47ad7.4bpp.lz"
+.incbin "gfx/characters/npcs/npc12/d47ad7.4bpp.lz"
 
 ;d47c09
 Data_d47c09:
-.incbin "gfx/characters/npcs/d47c09.4bpp.lz"
+.incbin "gfx/characters/npcs/npc12/d47c09.4bpp.lz"
 
 ;d47d4a
 Data_d47d4a:
-.incbin "gfx/characters/npcs/d47d4a.4bpp.lz"
+.incbin "gfx/characters/npcs/npc12/d47d4a.4bpp.lz"
 
 ;d47e93
 Data_d47e93:
-.incbin "gfx/characters/npcs/d47e93.4bpp.lz"
+.incbin "gfx/characters/npcs/npc12/d47e93.4bpp.lz"
 
 ;d47fb9
 Data_d47fb9:
-.incbin "gfx/characters/npcs/d47fb9.4bpp.lz"
+.incbin "gfx/characters/npcs/npc12/d47fb9.4bpp.lz"
 
 ;d4812e
 Data_d4812e:
-.incbin "gfx/characters/npcs/d4812e.4bpp.lz"
+.incbin "gfx/characters/npcs/npc12/d4812e.4bpp.lz"
 
 ;d482a5
 Data_d482a5:
-.incbin "gfx/characters/npcs/d482a5.4bpp.lz"
+.incbin "gfx/characters/npcs/npc12/d482a5.4bpp.lz"
 
 ;d483ec
 Data_d483ec:
-.incbin "gfx/characters/npcs/d483ec.4bpp.lz"
+.incbin "gfx/characters/npcs/npc12/d483ec.4bpp.lz"
 
 ;d4856b
 Data_d4856b:
-.incbin "gfx/characters/npcs/d4856b.4bpp.lz"
+.incbin "gfx/characters/npcs/npc12/d4856b.4bpp.lz"
 
 ;d486d0
 Data_d486d0:
-.incbin "gfx/characters/npcs/d486d0.4bpp.lz"
+.incbin "gfx/characters/npcs/npc12/d486d0.4bpp.lz"
 
 ;d48841
 Data_d48841:
-.incbin "gfx/characters/npcs/d48841.4bpp.lz"
+.incbin "gfx/characters/npcs/npc12/d48841.4bpp.lz"
 
 ;d48996
 Data_d48996:
-.incbin "gfx/characters/npcs/d48996.4bpp.lz"
+.incbin "gfx/characters/npcs/npc12/d48996.4bpp.lz"
 
 ;d48ac2
 Data_d48ac2:
-.incbin "gfx/characters/npcs/d48ac2.4bpp.lz"
+.incbin "gfx/characters/npcs/npc12/d48ac2.4bpp.lz"
 
 ;d48c0f
 Data_d48c0f:
-.incbin "gfx/characters/npcs/d48c0f.4bpp.lz"
+.incbin "gfx/characters/npcs/npc12/d48c0f.4bpp.lz"
 
 ;d48d80
 Data_d48d80:
-.incbin "gfx/characters/npcs/d48d80.4bpp.lz"
+.incbin "gfx/characters/npcs/npc12/d48d80.4bpp.lz"
 
 ;d48f09
 Data_d48f09:
-.incbin "gfx/characters/npcs/d48f09.4bpp.lz"
+.incbin "gfx/characters/npcs/npc12/d48f09.4bpp.lz"
 
 ;d4908c
 Data_d4908c:
-.incbin "gfx/characters/npcs/d4908c.4bpp.lz"
+.incbin "gfx/characters/npcs/npc12/d4908c.4bpp.lz"
 
 ;d49217
 Data_d49217:
-.incbin "gfx/characters/npcs/d49217.4bpp.lz"
+.incbin "gfx/characters/npcs/npc12/d49217.4bpp.lz"
 
 ;d49370
 Data_d49370:
-.incbin "gfx/characters/npcs/d49370.4bpp.lz"
+.incbin "gfx/characters/npcs/npc12/d49370.4bpp.lz"
 
 ;d494b9
 Data_d494b9:
-.incbin "gfx/characters/npcs/d494b9.4bpp.lz"
+.incbin "gfx/characters/npcs/npc12/d494b9.4bpp.lz"
 
 ;d4961c
 Data_d4961c:
-.incbin "gfx/characters/npcs/d4961c.4bpp.lz"
+.incbin "gfx/characters/npcs/npc12/d4961c.4bpp.lz"
 
 ;d4977b
 Data_d4977b:
-.incbin "gfx/characters/npcs/d4977b.4bpp.lz"
+.incbin "gfx/characters/npcs/npc12/d4977b.4bpp.lz"
 
 ;d497b0
 Data_d497b0:
-.incbin "gfx/characters/npcs/d497b0.4bpp.lz"
+.incbin "gfx/characters/npcs/npc12/d497b0.4bpp.lz"
 
 ;d49907
 Data_d49907:
-.incbin "gfx/characters/npcs/d49907.4bpp.lz"
+.incbin "gfx/characters/npcs/npc12/d49907.4bpp.lz"
 
 ;d49a58
 Data_d49a58:
-.incbin "gfx/characters/npcs/d49a58.4bpp.lz"
+.incbin "gfx/characters/npcs/npc12/d49a58.4bpp.lz"
 
 ;d49a8d
 Data_d49a8d:
-.incbin "gfx/characters/npcs/d49a8d.4bpp.lz"
+.incbin "gfx/characters/npcs/npc12/d49a8d.4bpp.lz"
 
 ;d49c08
 Data_d49c08:
-.incbin "gfx/characters/npcs/d49c08.4bpp.lz"
+.incbin "gfx/characters/npcs/npc12/d49c08.4bpp.lz"
 
 ;d49d63
 Data_d49d63:
-.incbin "gfx/characters/npcs/d49d63.4bpp.lz"
+.incbin "gfx/characters/npcs/npc12/d49d63.4bpp.lz"
 
 ;d49d80
 Data_d49d80:
-.incbin "gfx/characters/npcs/d49d80.4bpp.lz"
+.incbin "gfx/characters/npcs/npc12/d49d80.4bpp.lz"
 
 ;d49ed1
 Data_d49ed1:
-.incbin "gfx/characters/npcs/d49ed1.4bpp.lz"
+.incbin "gfx/characters/npcs/npc12/d49ed1.4bpp.lz"
 
 ;d4a03e
 Data_d4a03e:
-.incbin "gfx/characters/npcs/d4a03e.4bpp.lz"
+.incbin "gfx/characters/npcs/npc12/d4a03e.4bpp.lz"
 
 ;d4a18f
 Data_d4a18f:
-.incbin "gfx/characters/npcs/d4a18f.4bpp.lz"
+.incbin "gfx/characters/npcs/npc12/d4a18f.4bpp.lz"
 
 ;d4a2f6
 Data_d4a2f6:
-.incbin "gfx/characters/npcs/d4a2f6.4bpp.lz"
+.incbin "gfx/characters/npcs/npc12/d4a2f6.4bpp.lz"
 
 ;d4a32b
 Data_d4a32b:
-.incbin "gfx/characters/npcs/d4a32b.4bpp.lz"
+.incbin "gfx/characters/npcs/npc12/d4a32b.4bpp.lz"
 
 ;d4a4b6
 Data_d4a4b6:
-.incbin "gfx/characters/npcs/d4a4b6.4bpp.lz"
+.incbin "gfx/characters/npcs/npc12/d4a4b6.4bpp.lz"
 
 ;d4a601
 Data_d4a601:
-.incbin "gfx/characters/npcs/d4a601.4bpp.lz"
+.incbin "gfx/characters/npcs/npc12/d4a601.4bpp.lz"
+
+;npc 13
 
 ;d4a622
 Data_d4a622:
-.incbin "gfx/characters/npcs/d4a622.4bpp.lz"
+.incbin "gfx/characters/npcs/npc13/d4a622.4bpp.lz"
 
 ;d4a756
 Data_d4a756:
-.incbin "gfx/characters/npcs/d4a756.4bpp.lz"
+.incbin "gfx/characters/npcs/npc13/d4a756.4bpp.lz"
 
 ;d4a888
 Data_d4a888:
-.incbin "gfx/characters/npcs/d4a888.4bpp.lz"
+.incbin "gfx/characters/npcs/npc13/d4a888.4bpp.lz"
 
 ;d4a9b2
 Data_d4a9b2:
-.incbin "gfx/characters/npcs/d4a9b2.4bpp.lz"
+.incbin "gfx/characters/npcs/npc13/d4a9b2.4bpp.lz"
 
 ;d4aae6
 Data_d4aae6:
-.incbin "gfx/characters/npcs/d4aae6.4bpp.lz"
+.incbin "gfx/characters/npcs/npc13/d4aae6.4bpp.lz"
 
 ;d4ac0a
 Data_d4ac0a:
-.incbin "gfx/characters/npcs/d4ac0a.4bpp.lz"
+.incbin "gfx/characters/npcs/npc13/d4ac0a.4bpp.lz"
 
 ;d4ad20
 Data_d4ad20:
-.incbin "gfx/characters/npcs/d4ad20.4bpp.lz"
+.incbin "gfx/characters/npcs/npc13/d4ad20.4bpp.lz"
 
 ;d4ae50
 Data_d4ae50:
-.incbin "gfx/characters/npcs/d4ae50.4bpp.lz"
+.incbin "gfx/characters/npcs/npc13/d4ae50.4bpp.lz"
 
 ;d4af71
 Data_d4af71:
-.incbin "gfx/characters/npcs/d4af71.4bpp.lz"
+.incbin "gfx/characters/npcs/npc13/d4af71.4bpp.lz"
 
 ;d4b0b1
 Data_d4b0b1:
-.incbin "gfx/characters/npcs/d4b0b1.4bpp.lz"
+.incbin "gfx/characters/npcs/npc13/d4b0b1.4bpp.lz"
 
 ;d4b1df
 Data_d4b1df:
-.incbin "gfx/characters/npcs/d4b1df.4bpp.lz"
+.incbin "gfx/characters/npcs/npc13/d4b1df.4bpp.lz"
 
 ;d4b315
 Data_d4b315:
-.incbin "gfx/characters/npcs/d4b315.4bpp.lz"
+.incbin "gfx/characters/npcs/npc13/d4b315.4bpp.lz"
 
 ;d4b45d
 Data_d4b45d:
-.incbin "gfx/characters/npcs/d4b45d.4bpp.lz"
+.incbin "gfx/characters/npcs/npc13/d4b45d.4bpp.lz"
 
 ;d4b59f
 Data_d4b59f:
-.incbin "gfx/characters/npcs/d4b59f.4bpp.lz"
+.incbin "gfx/characters/npcs/npc13/d4b59f.4bpp.lz"
 
 ;d4b6d1
 Data_d4b6d1:
-.incbin "gfx/characters/npcs/d4b6d1.4bpp.lz"
+.incbin "gfx/characters/npcs/npc13/d4b6d1.4bpp.lz"
 
 ;d4b7f1
 Data_d4b7f1:
-.incbin "gfx/characters/npcs/d4b7f1.4bpp.lz"
+.incbin "gfx/characters/npcs/npc13/d4b7f1.4bpp.lz"
 
 ;d4b8eb
 Data_d4b8eb:
-.incbin "gfx/characters/npcs/d4b8eb.4bpp.lz"
+.incbin "gfx/characters/npcs/npc13/d4b8eb.4bpp.lz"
 
 ;d4ba0f
 Data_d4ba0f:
-.incbin "gfx/characters/npcs/d4ba0f.4bpp.lz"
+.incbin "gfx/characters/npcs/npc13/d4ba0f.4bpp.lz"
 
 ;d4bb29
 Data_d4bb29:
-.incbin "gfx/characters/npcs/d4bb29.4bpp.lz"
+.incbin "gfx/characters/npcs/npc13/d4bb29.4bpp.lz"
+
+;npc 14
 
 ;d4bc48
 Data_d4bc48:
-.incbin "gfx/characters/npcs/d4bc48.4bpp.lz"
+.incbin "gfx/characters/npcs/npc14/d4bc48.4bpp.lz"
 
 ;d4bd80
 Data_d4bd80:
-.incbin "gfx/characters/npcs/d4bd80.4bpp.lz"
+.incbin "gfx/characters/npcs/npc14/d4bd80.4bpp.lz"
 
 ;d4beb2
 Data_d4beb2:
-.incbin "gfx/characters/npcs/d4beb2.4bpp.lz"
+.incbin "gfx/characters/npcs/npc14/d4beb2.4bpp.lz"
 
 ;d4bfee
 Data_d4bfee:
-.incbin "gfx/characters/npcs/d4bfee.4bpp.lz"
+.incbin "gfx/characters/npcs/npc14/d4bfee.4bpp.lz"
 
 ;d4c122
 Data_d4c122:
-.incbin "gfx/characters/npcs/d4c122.4bpp.lz"
+.incbin "gfx/characters/npcs/npc14/d4c122.4bpp.lz"
 
 ;d4c246
 Data_d4c246:
-.incbin "gfx/characters/npcs/d4c246.4bpp.lz"
+.incbin "gfx/characters/npcs/npc14/d4c246.4bpp.lz"
 
 ;d4c372
 Data_d4c372:
-.incbin "gfx/characters/npcs/d4c372.4bpp.lz"
+.incbin "gfx/characters/npcs/npc14/d4c372.4bpp.lz"
 
 ;d4c4a4
 Data_d4c4a4:
-.incbin "gfx/characters/npcs/d4c4a4.4bpp.lz"
+.incbin "gfx/characters/npcs/npc14/d4c4a4.4bpp.lz"
 
 ;d4c5d4
 Data_d4c5d4:
-.incbin "gfx/characters/npcs/d4c5d4.4bpp.lz"
+.incbin "gfx/characters/npcs/npc14/d4c5d4.4bpp.lz"
 
 ;d4c70a
 Data_d4c70a:
-.incbin "gfx/characters/npcs/d4c70a.4bpp.lz"
+.incbin "gfx/characters/npcs/npc14/d4c70a.4bpp.lz"
 
 ;d4c850
 Data_d4c850:
-.incbin "gfx/characters/npcs/d4c850.4bpp.lz"
+.incbin "gfx/characters/npcs/npc14/d4c850.4bpp.lz"
 
 ;d4c974
 Data_d4c974:
-.incbin "gfx/characters/npcs/d4c974.4bpp.lz"
+.incbin "gfx/characters/npcs/npc14/d4c974.4bpp.lz"
 
 ;d4caae
 Data_d4caae:
-.incbin "gfx/characters/npcs/d4caae.4bpp.lz"
+.incbin "gfx/characters/npcs/npc14/d4caae.4bpp.lz"
 
 ;d4cbfa
 Data_d4cbfa:
-.incbin "gfx/characters/npcs/d4cbfa.4bpp.lz"
+.incbin "gfx/characters/npcs/npc14/d4cbfa.4bpp.lz"
 
 ;d4cd2c
 Data_d4cd2c:
-.incbin "gfx/characters/npcs/d4cd2c.4bpp.lz"
+.incbin "gfx/characters/npcs/npc14/d4cd2c.4bpp.lz"
 
 ;d4ce6a
 Data_d4ce6a:
-.incbin "gfx/characters/npcs/d4ce6a.4bpp.lz"
+.incbin "gfx/characters/npcs/npc14/d4ce6a.4bpp.lz"
 
 ;d4cfc7
 Data_d4cfc7:
-.incbin "gfx/characters/npcs/d4cfc7.4bpp.lz"
+.incbin "gfx/characters/npcs/npc14/d4cfc7.4bpp.lz"
 
 ;d4d126
 Data_d4d126:
-.incbin "gfx/characters/npcs/d4d126.4bpp.lz"
+.incbin "gfx/characters/npcs/npc14/d4d126.4bpp.lz"
 
 ;d4d289
 Data_d4d289:
-.incbin "gfx/characters/npcs/d4d289.4bpp.lz"
+.incbin "gfx/characters/npcs/npc14/d4d289.4bpp.lz"
 
 ;d4d3e0
 Data_d4d3e0:
-.incbin "gfx/characters/npcs/d4d3e0.4bpp.lz"
+.incbin "gfx/characters/npcs/npc14/d4d3e0.4bpp.lz"
+
+;npc 15
 
 ;d4d525
 Data_d4d525:
-.incbin "gfx/characters/npcs/d4d525.4bpp.lz"
+.incbin "gfx/characters/npcs/npc15/d4d525.4bpp.lz"
 
 ;d4d641
 Data_d4d641:
-.incbin "gfx/characters/npcs/d4d641.4bpp.lz"
+.incbin "gfx/characters/npcs/npc15/d4d641.4bpp.lz"
 
 ;d4d751
 Data_d4d751:
-.incbin "gfx/characters/npcs/d4d751.4bpp.lz"
+.incbin "gfx/characters/npcs/npc15/d4d751.4bpp.lz"
 
 ;d4d877
 Data_d4d877:
-.incbin "gfx/characters/npcs/d4d877.4bpp.lz"
+.incbin "gfx/characters/npcs/npc15/d4d877.4bpp.lz"
 
 ;d4d9ad
 Data_d4d9ad:
-.incbin "gfx/characters/npcs/d4d9ad.4bpp.lz"
+.incbin "gfx/characters/npcs/npc15/d4d9ad.4bpp.lz"
 
 ;d4dac1
 Data_d4dac1:
-.incbin "gfx/characters/npcs/d4dac1.4bpp.lz"
+.incbin "gfx/characters/npcs/npc15/d4dac1.4bpp.lz"
 
 ;d4dbfd
 Data_d4dbfd:
-.incbin "gfx/characters/npcs/d4dbfd.4bpp.lz"
+.incbin "gfx/characters/npcs/npc15/d4dbfd.4bpp.lz"
 
 ;d4dd53
 Data_d4dd53:
-.incbin "gfx/characters/npcs/d4dd53.4bpp.lz"
+.incbin "gfx/characters/npcs/npc15/d4dd53.4bpp.lz"
 
 ;d4de85
 Data_d4de85:
-.incbin "gfx/characters/npcs/d4de85.4bpp.lz"
+.incbin "gfx/characters/npcs/npc15/d4de85.4bpp.lz"
 
 ;d4dfbf
 Data_d4dfbf:
-.incbin "gfx/characters/npcs/d4dfbf.4bpp.lz"
+.incbin "gfx/characters/npcs/npc15/d4dfbf.4bpp.lz"
 
 ;d4e107
 Data_d4e107:
-.incbin "gfx/characters/npcs/d4e107.4bpp.lz"
+.incbin "gfx/characters/npcs/npc15/d4e107.4bpp.lz"
 
 ;d4e255
 Data_d4e255:
-.incbin "gfx/characters/npcs/d4e255.4bpp.lz"
+.incbin "gfx/characters/npcs/npc15/d4e255.4bpp.lz"
 
 ;d4e39f
 Data_d4e39f:
-.incbin "gfx/characters/npcs/d4e39f.4bpp.lz"
+.incbin "gfx/characters/npcs/npc15/d4e39f.4bpp.lz"
 
 ;d4e4e7
 Data_d4e4e7:
-.incbin "gfx/characters/npcs/d4e4e7.4bpp.lz"
+.incbin "gfx/characters/npcs/npc15/d4e4e7.4bpp.lz"
 
 ;d4e619
 Data_d4e619:
-.incbin "gfx/characters/npcs/d4e619.4bpp.lz"
+.incbin "gfx/characters/npcs/npc15/d4e619.4bpp.lz"
 
 ;d4e761
 Data_d4e761:
-.incbin "gfx/characters/npcs/d4e761.4bpp.lz"
+.incbin "gfx/characters/npcs/npc15/d4e761.4bpp.lz"
 
 ;d4e8bf
 Data_d4e8bf:
-.incbin "gfx/characters/npcs/d4e8bf.4bpp.lz"
+.incbin "gfx/characters/npcs/npc15/d4e8bf.4bpp.lz"
 
 ;d4e9fb
 Data_d4e9fb:
-.incbin "gfx/characters/npcs/d4e9fb.4bpp.lz"
+.incbin "gfx/characters/npcs/npc15/d4e9fb.4bpp.lz"
 
 ;d4eb35
 Data_d4eb35:
-.incbin "gfx/characters/npcs/d4eb35.4bpp.lz"
+.incbin "gfx/characters/npcs/npc15/d4eb35.4bpp.lz"
 
 ;d4ec77
 Data_d4ec77:
-.incbin "gfx/characters/npcs/d4ec77.4bpp.lz"
+.incbin "gfx/characters/npcs/npc15/d4ec77.4bpp.lz"
 
 ;d4edbf
 Data_d4edbf:
-.incbin "gfx/characters/npcs/d4edbf.4bpp.lz"
+.incbin "gfx/characters/npcs/npc15/d4edbf.4bpp.lz"
 
 ;d4eee7
 Data_d4eee7:
-.incbin "gfx/characters/npcs/d4eee7.4bpp.lz"
+.incbin "gfx/characters/npcs/npc15/d4eee7.4bpp.lz"
 
 ;d4f00f
 Data_d4f00f:
-.incbin "gfx/characters/npcs/d4f00f.4bpp.lz"
+.incbin "gfx/characters/npcs/npc15/d4f00f.4bpp.lz"
 
 ;d4f14b
 Data_d4f14b:
-.incbin "gfx/characters/npcs/d4f14b.4bpp.lz"
+.incbin "gfx/characters/npcs/npc15/d4f14b.4bpp.lz"
 
 ;d4f285
 Data_d4f285:
-.incbin "gfx/characters/npcs/d4f285.4bpp.lz"
+.incbin "gfx/characters/npcs/npc15/d4f285.4bpp.lz"
 
 ;d4f3bf
 Data_d4f3bf:
-.incbin "gfx/characters/npcs/d4f3bf.4bpp.lz"
+.incbin "gfx/characters/npcs/npc15/d4f3bf.4bpp.lz"
 
 ;d4f4e9
 Data_d4f4e9:
-.incbin "gfx/characters/npcs/d4f4e9.4bpp.lz"
+.incbin "gfx/characters/npcs/npc15/d4f4e9.4bpp.lz"
 
 ;d4f617
 Data_d4f617:
-.incbin "gfx/characters/npcs/d4f617.4bpp.lz"
+.incbin "gfx/characters/npcs/npc15/d4f617.4bpp.lz"
 
 ;d4f737
 Data_d4f737:
-.incbin "gfx/characters/npcs/d4f737.4bpp.lz"
+.incbin "gfx/characters/npcs/npc15/d4f737.4bpp.lz"
 
 ;d4f885
 Data_d4f885:
-.incbin "gfx/characters/npcs/d4f885.4bpp.lz"
+.incbin "gfx/characters/npcs/npc15/d4f885.4bpp.lz"
 
 ;d4f9e0
 Data_d4f9e0:
-.incbin "gfx/characters/npcs/d4f9e0.4bpp.lz"
+.incbin "gfx/characters/npcs/npc15/d4f9e0.4bpp.lz"
 
 ;d4fb26
 Data_d4fb26:
-.incbin "gfx/characters/npcs/d4fb26.4bpp.lz"
+.incbin "gfx/characters/npcs/npc15/d4fb26.4bpp.lz"
 
 ;d4fca3
 Data_d4fca3:
-.incbin "gfx/characters/npcs/d4fca3.4bpp.lz"
+.incbin "gfx/characters/npcs/npc15/d4fca3.4bpp.lz"
 
 ;d4fde0
 Data_d4fde0:
-.incbin "gfx/characters/npcs/d4fde0.4bpp.lz"
+.incbin "gfx/characters/npcs/npc15/d4fde0.4bpp.lz"
 
 ;d4ff2b
 Data_d4ff2b:
-.incbin "gfx/characters/npcs/d4ff2b.4bpp.lz" read 0xd5
+.incbin "gfx/characters/npcs/npc15/d4ff2b.4bpp.lz" read 0xd5
 
 .bank $15
 .org $0000
 
-.incbin "gfx/characters/npcs/d4ff2b.4bpp.lz" skip 0xd5
+.incbin "gfx/characters/npcs/npc15/d4ff2b.4bpp.lz" skip 0xd5
 
 ;d50075
 Data_d50075:
-.incbin "gfx/characters/npcs/d50075.4bpp.lz"
+.incbin "gfx/characters/npcs/npc15/d50075.4bpp.lz"
 
 ;d501e8
 Data_d501e8:
-.incbin "gfx/characters/npcs/d501e8.4bpp.lz"
+.incbin "gfx/characters/npcs/npc15/d501e8.4bpp.lz"
 
 ;d50325
 Data_d50325:
-.incbin "gfx/characters/npcs/d50325.4bpp.lz"
+.incbin "gfx/characters/npcs/npc15/d50325.4bpp.lz"
 
 ;d50472
 Data_d50472:
-.incbin "gfx/characters/npcs/d50472.4bpp.lz"
+.incbin "gfx/characters/npcs/npc15/d50472.4bpp.lz"
 
 ;d5059b
 Data_d5059b:
-.incbin "gfx/characters/npcs/d5059b.4bpp.lz"
+.incbin "gfx/characters/npcs/npc15/d5059b.4bpp.lz"
 
 ;d5070c
 Data_d5070c:
-.incbin "gfx/characters/npcs/d5070c.4bpp.lz"
+.incbin "gfx/characters/npcs/npc15/d5070c.4bpp.lz"
 
 ;d50842
 Data_d50842:
-.incbin "gfx/characters/npcs/d50842.4bpp.lz"
+.incbin "gfx/characters/npcs/npc15/d50842.4bpp.lz"
 
 ;d509ad
 Data_d509ad:
-.incbin "gfx/characters/npcs/d509ad.4bpp.lz"
+.incbin "gfx/characters/npcs/npc15/d509ad.4bpp.lz"
 
 ;d50af5
 Data_d50af5:
-.incbin "gfx/characters/npcs/d50af5.4bpp.lz"
+.incbin "gfx/characters/npcs/npc15/d50af5.4bpp.lz"
 
 ;d50c5e
 Data_d50c5e:
-.incbin "gfx/characters/npcs/d50c5e.4bpp.lz"
+.incbin "gfx/characters/npcs/npc15/d50c5e.4bpp.lz"
 
 ;d50d7a
 Data_d50d7a:
-.incbin "gfx/characters/npcs/d50d7a.4bpp.lz"
+.incbin "gfx/characters/npcs/npc15/d50d7a.4bpp.lz"
 
 ;d50ea4
 Data_d50ea4:
-.incbin "gfx/characters/npcs/d50ea4.4bpp.lz"
+.incbin "gfx/characters/npcs/npc15/d50ea4.4bpp.lz"
 
 ;d50fca
 Data_d50fca:
-.incbin "gfx/characters/npcs/d50fca.4bpp.lz"
+.incbin "gfx/characters/npcs/npc15/d50fca.4bpp.lz"
 
 ;d51115
 Data_d51115:
-.incbin "gfx/characters/npcs/d51115.4bpp.lz"
+.incbin "gfx/characters/npcs/npc15/d51115.4bpp.lz"
 
 ;d5127a
 Data_d5127a:
-.incbin "gfx/characters/npcs/d5127a.4bpp.lz"
+.incbin "gfx/characters/npcs/npc15/d5127a.4bpp.lz"
 
 ;d513ac
 Data_d513ac:
-.incbin "gfx/characters/npcs/d513ac.4bpp.lz"
+.incbin "gfx/characters/npcs/npc15/d513ac.4bpp.lz"
 
 ;d514f4
 Data_d514f4:
-.incbin "gfx/characters/npcs/d514f4.4bpp.lz"
+.incbin "gfx/characters/npcs/npc15/d514f4.4bpp.lz"
 
 ;d51630
 Data_d51630:
-.incbin "gfx/characters/npcs/d51630.4bpp.lz"
+.incbin "gfx/characters/npcs/npc15/d51630.4bpp.lz"
 
 ;d51754
 Data_d51754:
-.incbin "gfx/characters/npcs/d51754.4bpp.lz"
+.incbin "gfx/characters/npcs/npc15/d51754.4bpp.lz"
 
 ;d5187e
 Data_d5187e:
-.incbin "gfx/characters/npcs/d5187e.4bpp.lz"
+.incbin "gfx/characters/npcs/npc15/d5187e.4bpp.lz"
 
 ;d519d9
 Data_d519d9:
-.incbin "gfx/characters/npcs/d519d9.4bpp.lz"
+.incbin "gfx/characters/npcs/npc15/d519d9.4bpp.lz"
 
 ;d51b15
 Data_d51b15:
-.incbin "gfx/characters/npcs/d51b15.4bpp.lz"
+.incbin "gfx/characters/npcs/npc15/d51b15.4bpp.lz"
+
+;npc 16
 
 ;d51c3d
 Data_d51c3d:
-.incbin "gfx/characters/npcs/d51c3d.4bpp.lz"
+.incbin "gfx/characters/npcs/npc16/d51c3d.4bpp.lz"
 
 ;d51d81
 Data_d51d81:
-.incbin "gfx/characters/npcs/d51d81.4bpp.lz"
+.incbin "gfx/characters/npcs/npc16/d51d81.4bpp.lz"
 
 ;d51ecd
 Data_d51ecd:
-.incbin "gfx/characters/npcs/d51ecd.4bpp.lz"
+.incbin "gfx/characters/npcs/npc16/d51ecd.4bpp.lz"
 
 ;d52029
 Data_d52029:
-.incbin "gfx/characters/npcs/d52029.4bpp.lz"
+.incbin "gfx/characters/npcs/npc16/d52029.4bpp.lz"
 
 ;d5215d
 Data_d5215d:
-.incbin "gfx/characters/npcs/d5215d.4bpp.lz"
+.incbin "gfx/characters/npcs/npc16/d5215d.4bpp.lz"
 
 ;d5229f
 Data_d5229f:
-.incbin "gfx/characters/npcs/d5229f.4bpp.lz"
+.incbin "gfx/characters/npcs/npc16/d5229f.4bpp.lz"
 
 ;d523e1
 Data_d523e1:
-.incbin "gfx/characters/npcs/d523e1.4bpp.lz"
+.incbin "gfx/characters/npcs/npc16/d523e1.4bpp.lz"
 
 ;d5252a
 Data_d5252a:
-.incbin "gfx/characters/npcs/d5252a.4bpp.lz"
+.incbin "gfx/characters/npcs/npc16/d5252a.4bpp.lz"
 
 ;d5265a
 Data_d5265a:
-.incbin "gfx/characters/npcs/d5265a.4bpp.lz"
+.incbin "gfx/characters/npcs/npc16/d5265a.4bpp.lz"
 
 ;d5278c
 Data_d5278c:
-.incbin "gfx/characters/npcs/d5278c.4bpp.lz"
+.incbin "gfx/characters/npcs/npc16/d5278c.4bpp.lz"
 
 ;d528be
 Data_d528be:
-.incbin "gfx/characters/npcs/d528be.4bpp.lz"
+.incbin "gfx/characters/npcs/npc16/d528be.4bpp.lz"
 
 ;d529f0
 Data_d529f0:
-.incbin "gfx/characters/npcs/d529f0.4bpp.lz"
+.incbin "gfx/characters/npcs/npc16/d529f0.4bpp.lz"
 
 ;d52b2e
 Data_d52b2e:
-.incbin "gfx/characters/npcs/d52b2e.4bpp.lz"
+.incbin "gfx/characters/npcs/npc16/d52b2e.4bpp.lz"
 
 ;d52c4c
 Data_d52c4c:
-.incbin "gfx/characters/npcs/d52c4c.4bpp.lz"
+.incbin "gfx/characters/npcs/npc16/d52c4c.4bpp.lz"
 
 ;d52d90
 Data_d52d90:
-.incbin "gfx/characters/npcs/d52d90.4bpp.lz"
+.incbin "gfx/characters/npcs/npc16/d52d90.4bpp.lz"
 
 ;d52ec2
 Data_d52ec2:
-.incbin "gfx/characters/npcs/d52ec2.4bpp.lz"
+.incbin "gfx/characters/npcs/npc16/d52ec2.4bpp.lz"
 
 ;d5301f
 Data_d5301f:
-.incbin "gfx/characters/npcs/d5301f.4bpp.lz"
+.incbin "gfx/characters/npcs/npc16/d5301f.4bpp.lz"
 
 ;d5317b
 Data_d5317b:
-.incbin "gfx/characters/npcs/d5317b.4bpp.lz"
+.incbin "gfx/characters/npcs/npc16/d5317b.4bpp.lz"
 
 ;d532d7
 Data_d532d7:
-.incbin "gfx/characters/npcs/d532d7.4bpp.lz"
+.incbin "gfx/characters/npcs/npc16/d532d7.4bpp.lz"
 
 ;d53413
 Data_d53413:
-.incbin "gfx/characters/npcs/d53413.4bpp.lz"
+.incbin "gfx/characters/npcs/npc16/d53413.4bpp.lz"
 
 ;d5354f
 Data_d5354f:
-.incbin "gfx/characters/npcs/d5354f.4bpp.lz"
+.incbin "gfx/characters/npcs/npc16/d5354f.4bpp.lz"
 
 ;d5369b
 Data_d5369b:
-.incbin "gfx/characters/npcs/d5369b.4bpp.lz"
+.incbin "gfx/characters/npcs/npc16/d5369b.4bpp.lz"
 
 ;d537ad
 Data_d537ad:
-.incbin "gfx/characters/npcs/d537ad.4bpp.lz"
+.incbin "gfx/characters/npcs/npc16/d537ad.4bpp.lz"
 
 ;d538c3
 Data_d538c3:
-.incbin "gfx/characters/npcs/d538c3.4bpp.lz"
+.incbin "gfx/characters/npcs/npc16/d538c3.4bpp.lz"
 
 ;d539c5
 Data_d539c5:
-.incbin "gfx/characters/npcs/d539c5.4bpp.lz"
+.incbin "gfx/characters/npcs/npc16/d539c5.4bpp.lz"
 
 ;d53ae3
 Data_d53ae3:
-.incbin "gfx/characters/npcs/d53ae3.4bpp.lz"
+.incbin "gfx/characters/npcs/npc16/d53ae3.4bpp.lz"
 
 ;d53c05
 Data_d53c05:
-.incbin "gfx/characters/npcs/d53c05.4bpp.lz"
+.incbin "gfx/characters/npcs/npc16/d53c05.4bpp.lz"
 
 ;d53d2f
 Data_d53d2f:
-.incbin "gfx/characters/npcs/d53d2f.4bpp.lz"
+.incbin "gfx/characters/npcs/npc16/d53d2f.4bpp.lz"
 
 ;d53e76
 Data_d53e76:
-.incbin "gfx/characters/npcs/d53e76.4bpp.lz"
+.incbin "gfx/characters/npcs/npc16/d53e76.4bpp.lz"
 
 ;d53fd1
 Data_d53fd1:
-.incbin "gfx/characters/npcs/d53fd1.4bpp.lz"
+.incbin "gfx/characters/npcs/npc16/d53fd1.4bpp.lz"
 
 ;d54125
 Data_d54125:
-.incbin "gfx/characters/npcs/d54125.4bpp.lz"
+.incbin "gfx/characters/npcs/npc16/d54125.4bpp.lz"
 
 ;d54264
 Data_d54264:
-.incbin "gfx/characters/npcs/d54264.4bpp.lz"
+.incbin "gfx/characters/npcs/npc16/d54264.4bpp.lz"
+
+;npc 17
 
 ;d54392
 Data_d54392:
-.incbin "gfx/characters/npcs/d54392.4bpp.lz"
+.incbin "gfx/characters/npcs/npc17/d54392.4bpp.lz"
 
 ;d544e2
 Data_d544e2:
-.incbin "gfx/characters/npcs/d544e2.4bpp.lz"
+.incbin "gfx/characters/npcs/npc17/d544e2.4bpp.lz"
 
 ;d54635
 Data_d54635:
-.incbin "gfx/characters/npcs/d54635.4bpp.lz"
+.incbin "gfx/characters/npcs/npc17/d54635.4bpp.lz"
 
 ;d5478b
 Data_d5478b:
-.incbin "gfx/characters/npcs/d5478b.4bpp.lz"
+.incbin "gfx/characters/npcs/npc17/d5478b.4bpp.lz"
 
 ;d548d5
 Data_d548d5:
-.incbin "gfx/characters/npcs/d548d5.4bpp.lz"
+.incbin "gfx/characters/npcs/npc17/d548d5.4bpp.lz"
 
 ;d54a1b
 Data_d54a1b:
-.incbin "gfx/characters/npcs/d54a1b.4bpp.lz"
+.incbin "gfx/characters/npcs/npc17/d54a1b.4bpp.lz"
 
 ;d54b59
 Data_d54b59:
-.incbin "gfx/characters/npcs/d54b59.4bpp.lz"
+.incbin "gfx/characters/npcs/npc17/d54b59.4bpp.lz"
 
 ;d54cbc
 Data_d54cbc:
-.incbin "gfx/characters/npcs/d54cbc.4bpp.lz"
+.incbin "gfx/characters/npcs/npc17/d54cbc.4bpp.lz"
 
 ;d54e19
 Data_d54e19:
-.incbin "gfx/characters/npcs/d54e19.4bpp.lz"
+.incbin "gfx/characters/npcs/npc17/d54e19.4bpp.lz"
 
 ;d54f6a
 Data_d54f6a:
-.incbin "gfx/characters/npcs/d54f6a.4bpp.lz"
+.incbin "gfx/characters/npcs/npc17/d54f6a.4bpp.lz"
 
 ;d550a6
 Data_d550a6:
-.incbin "gfx/characters/npcs/d550a6.4bpp.lz"
+.incbin "gfx/characters/npcs/npc17/d550a6.4bpp.lz"
 
 ;d551d8
 Data_d551d8:
-.incbin "gfx/characters/npcs/d551d8.4bpp.lz"
+.incbin "gfx/characters/npcs/npc17/d551d8.4bpp.lz"
 
 ;d55314
 Data_d55314:
-.incbin "gfx/characters/npcs/d55314.4bpp.lz"
+.incbin "gfx/characters/npcs/npc17/d55314.4bpp.lz"
 
 ;d5547d
 Data_d5547d:
-.incbin "gfx/characters/npcs/d5547d.4bpp.lz"
+.incbin "gfx/characters/npcs/npc17/d5547d.4bpp.lz"
 
 ;d555d2
 Data_d555d2:
-.incbin "gfx/characters/npcs/d555d2.4bpp.lz"
+.incbin "gfx/characters/npcs/npc17/d555d2.4bpp.lz"
 
 ;d55725
 Data_d55725:
-.incbin "gfx/characters/npcs/d55725.4bpp.lz"
+.incbin "gfx/characters/npcs/npc17/d55725.4bpp.lz"
 
 ;d5587c
 Data_d5587c:
-.incbin "gfx/characters/npcs/d5587c.4bpp.lz"
+.incbin "gfx/characters/npcs/npc17/d5587c.4bpp.lz"
 
 ;d559c3
 Data_d559c3:
-.incbin "gfx/characters/npcs/d559c3.4bpp.lz"
+.incbin "gfx/characters/npcs/npc17/d559c3.4bpp.lz"
 
 ;d55b14
 Data_d55b14:
-.incbin "gfx/characters/npcs/d55b14.4bpp.lz"
+.incbin "gfx/characters/npcs/npc17/d55b14.4bpp.lz"
 
 ;d55c8d
 Data_d55c8d:
-.incbin "gfx/characters/npcs/d55c8d.4bpp.lz"
+.incbin "gfx/characters/npcs/npc17/d55c8d.4bpp.lz"
+
+;npc 18
 
 ;d55de6
 Data_d55de6:
-.incbin "gfx/characters/npcs/d55de6.4bpp.lz"
+.incbin "gfx/characters/npcs/npc18/d55de6.4bpp.lz"
 
 ;d55ee4
 Data_d55ee4:
-.incbin "gfx/characters/npcs/d55ee4.4bpp.lz"
+.incbin "gfx/characters/npcs/npc18/d55ee4.4bpp.lz"
 
 ;d55fe6
 Data_d55fe6:
-.incbin "gfx/characters/npcs/d55fe6.4bpp.lz"
+.incbin "gfx/characters/npcs/npc18/d55fe6.4bpp.lz"
 
 ;d560f8
 Data_d560f8:
-.incbin "gfx/characters/npcs/d560f8.4bpp.lz"
+.incbin "gfx/characters/npcs/npc18/d560f8.4bpp.lz"
 
 ;d561d8
 Data_d561d8:
-.incbin "gfx/characters/npcs/d561d8.4bpp.lz"
+.incbin "gfx/characters/npcs/npc18/d561d8.4bpp.lz"
 
 ;d562bc
 Data_d562bc:
-.incbin "gfx/characters/npcs/d562bc.4bpp.lz"
+.incbin "gfx/characters/npcs/npc18/d562bc.4bpp.lz"
 
 ;d563b4
 Data_d563b4:
-.incbin "gfx/characters/npcs/d563b4.4bpp.lz"
+.incbin "gfx/characters/npcs/npc18/d563b4.4bpp.lz"
 
 ;d564c8
 Data_d564c8:
-.incbin "gfx/characters/npcs/d564c8.4bpp.lz"
+.incbin "gfx/characters/npcs/npc18/d564c8.4bpp.lz"
 
 ;d565dc
 Data_d565dc:
-.incbin "gfx/characters/npcs/d565dc.4bpp.lz"
+.incbin "gfx/characters/npcs/npc18/d565dc.4bpp.lz"
 
 ;d566f6
 Data_d566f6:
-.incbin "gfx/characters/npcs/d566f6.4bpp.lz"
+.incbin "gfx/characters/npcs/npc18/d566f6.4bpp.lz"
 
 ;d567d8
 Data_d567d8:
-.incbin "gfx/characters/npcs/d567d8.4bpp.lz"
+.incbin "gfx/characters/npcs/npc18/d567d8.4bpp.lz"
 
 ;d568ba
 Data_d568ba:
-.incbin "gfx/characters/npcs/d568ba.4bpp.lz"
+.incbin "gfx/characters/npcs/npc18/d568ba.4bpp.lz"
 
 ;d569a0
 Data_d569a0:
-.incbin "gfx/characters/npcs/d569a0.4bpp.lz"
+.incbin "gfx/characters/npcs/npc18/d569a0.4bpp.lz"
 
 ;d56a9e
 Data_d56a9e:
-.incbin "gfx/characters/npcs/d56a9e.4bpp.lz"
+.incbin "gfx/characters/npcs/npc18/d56a9e.4bpp.lz"
 
 ;d56b88
 Data_d56b88:
-.incbin "gfx/characters/npcs/d56b88.4bpp.lz"
+.incbin "gfx/characters/npcs/npc18/d56b88.4bpp.lz"
 
 ;d56cb4
 Data_d56cb4:
-.incbin "gfx/characters/npcs/d56cb4.4bpp.lz"
+.incbin "gfx/characters/npcs/npc18/d56cb4.4bpp.lz"
 
 ;d56de8
 Data_d56de8:
-.incbin "gfx/characters/npcs/d56de8.4bpp.lz"
+.incbin "gfx/characters/npcs/npc18/d56de8.4bpp.lz"
 
 ;d56f24
 Data_d56f24:
-.incbin "gfx/characters/npcs/d56f24.4bpp.lz"
+.incbin "gfx/characters/npcs/npc18/d56f24.4bpp.lz"
 
 ;d57026
 Data_d57026:
-.incbin "gfx/characters/npcs/d57026.4bpp.lz"
+.incbin "gfx/characters/npcs/npc18/d57026.4bpp.lz"
 
 ;d5710e
 Data_d5710e:
-.incbin "gfx/characters/npcs/d5710e.4bpp.lz"
+.incbin "gfx/characters/npcs/npc18/d5710e.4bpp.lz"
 
 ;d571ea
 Data_d571ea:
-.incbin "gfx/characters/npcs/d571ea.4bpp.lz"
+.incbin "gfx/characters/npcs/npc18/d571ea.4bpp.lz"
 
 ;d572be
 Data_d572be:
-.incbin "gfx/characters/npcs/d572be.4bpp.lz"
+.incbin "gfx/characters/npcs/npc18/d572be.4bpp.lz"
 
 ;d573b7
 Data_d573b7:
-.incbin "gfx/characters/npcs/d573b7.4bpp.lz"
+.incbin "gfx/characters/npcs/npc18/d573b7.4bpp.lz"
 
 ;d574a3
 Data_d574a3:
-.incbin "gfx/characters/npcs/d574a3.4bpp.lz"
+.incbin "gfx/characters/npcs/npc18/d574a3.4bpp.lz"
 
 ;d575a0
 Data_d575a0:
-.incbin "gfx/characters/npcs/d575a0.4bpp.lz"
+.incbin "gfx/characters/npcs/npc18/d575a0.4bpp.lz"
+
+;npc 19
 
 ;d57684
 Data_d57684:
-.incbin "gfx/characters/npcs/d57684.4bpp.lz"
+.incbin "gfx/characters/npcs/npc19/d57684.4bpp.lz"
 
 ;d577c4
 Data_d577c4:
-.incbin "gfx/characters/npcs/d577c4.4bpp.lz"
+.incbin "gfx/characters/npcs/npc19/d577c4.4bpp.lz"
 
 ;d578f4
 Data_d578f4:
-.incbin "gfx/characters/npcs/d578f4.4bpp.lz"
+.incbin "gfx/characters/npcs/npc19/d578f4.4bpp.lz"
 
 ;d57a34
 Data_d57a34:
-.incbin "gfx/characters/npcs/d57a34.4bpp.lz"
+.incbin "gfx/characters/npcs/npc19/d57a34.4bpp.lz"
 
 ;d57b76
 Data_d57b76:
-.incbin "gfx/characters/npcs/d57b76.4bpp.lz"
+.incbin "gfx/characters/npcs/npc19/d57b76.4bpp.lz"
 
 ;d57cac
 Data_d57cac:
-.incbin "gfx/characters/npcs/d57cac.4bpp.lz"
+.incbin "gfx/characters/npcs/npc19/d57cac.4bpp.lz"
 
 ;d57de4
 Data_d57de4:
-.incbin "gfx/characters/npcs/d57de4.4bpp.lz"
+.incbin "gfx/characters/npcs/npc19/d57de4.4bpp.lz"
 
 ;d57f22
 Data_d57f22:
-.incbin "gfx/characters/npcs/d57f22.4bpp.lz"
+.incbin "gfx/characters/npcs/npc19/d57f22.4bpp.lz"
 
 ;d58052
 Data_d58052:
-.incbin "gfx/characters/npcs/d58052.4bpp.lz"
+.incbin "gfx/characters/npcs/npc19/d58052.4bpp.lz"
 
 ;d58180
 Data_d58180:
-.incbin "gfx/characters/npcs/d58180.4bpp.lz"
+.incbin "gfx/characters/npcs/npc19/d58180.4bpp.lz"
 
 ;d582c2
 Data_d582c2:
-.incbin "gfx/characters/npcs/d582c2.4bpp.lz"
+.incbin "gfx/characters/npcs/npc19/d582c2.4bpp.lz"
 
 ;d583f8
 Data_d583f8:
-.incbin "gfx/characters/npcs/d583f8.4bpp.lz"
+.incbin "gfx/characters/npcs/npc19/d583f8.4bpp.lz"
 
 ;d58530
 Data_d58530:
-.incbin "gfx/characters/npcs/d58530.4bpp.lz"
+.incbin "gfx/characters/npcs/npc19/d58530.4bpp.lz"
 
 ;d58672
 Data_d58672:
-.incbin "gfx/characters/npcs/d58672.4bpp.lz"
+.incbin "gfx/characters/npcs/npc19/d58672.4bpp.lz"
 
 ;d587a4
 Data_d587a4:
-.incbin "gfx/characters/npcs/d587a4.4bpp.lz"
+.incbin "gfx/characters/npcs/npc19/d587a4.4bpp.lz"
 
 ;d588e6
 Data_d588e6:
-.incbin "gfx/characters/npcs/d588e6.4bpp.lz"
+.incbin "gfx/characters/npcs/npc19/d588e6.4bpp.lz"
 
 ;d58a34
 Data_d58a34:
-.incbin "gfx/characters/npcs/d58a34.4bpp.lz"
+.incbin "gfx/characters/npcs/npc19/d58a34.4bpp.lz"
 
 ;d58b72
 Data_d58b72:
-.incbin "gfx/characters/npcs/d58b72.4bpp.lz"
+.incbin "gfx/characters/npcs/npc19/d58b72.4bpp.lz"
 
 ;d58cb2
 Data_d58cb2:
-.incbin "gfx/characters/npcs/d58cb2.4bpp.lz"
+.incbin "gfx/characters/npcs/npc19/d58cb2.4bpp.lz"
 
 ;d58dfc
 Data_d58dfc:
-.incbin "gfx/characters/npcs/d58dfc.4bpp.lz"
+.incbin "gfx/characters/npcs/npc19/d58dfc.4bpp.lz"
 
 ;d58f3e
 Data_d58f3e:
-.incbin "gfx/characters/npcs/d58f3e.4bpp.lz"
+.incbin "gfx/characters/npcs/npc19/d58f3e.4bpp.lz"
 
 ;d59080
 Data_d59080:
-.incbin "gfx/characters/npcs/d59080.4bpp.lz"
+.incbin "gfx/characters/npcs/npc19/d59080.4bpp.lz"
 
 ;d591ce
 Data_d591ce:
-.incbin "gfx/characters/npcs/d591ce.4bpp.lz"
+.incbin "gfx/characters/npcs/npc19/d591ce.4bpp.lz"
 
 ;d5930c
 Data_d5930c:
-.incbin "gfx/characters/npcs/d5930c.4bpp.lz"
+.incbin "gfx/characters/npcs/npc19/d5930c.4bpp.lz"
 
 ;d5944c
 Data_d5944c:
-.incbin "gfx/characters/npcs/d5944c.4bpp.lz"
+.incbin "gfx/characters/npcs/npc19/d5944c.4bpp.lz"
 
 ;d5956d
 Data_d5956d:
-.incbin "gfx/characters/npcs/d5956d.4bpp.lz"
+.incbin "gfx/characters/npcs/npc19/d5956d.4bpp.lz"
 
 ;d59674
 Data_d59674:
-.incbin "gfx/characters/npcs/d59674.4bpp.lz"
+.incbin "gfx/characters/npcs/npc19/d59674.4bpp.lz"
 
 ;d59773
 Data_d59773:
-.incbin "gfx/characters/npcs/d59773.4bpp.lz"
+.incbin "gfx/characters/npcs/npc19/d59773.4bpp.lz"
 
 ;d59874
 Data_d59874:
-.incbin "gfx/characters/npcs/d59874.4bpp.lz"
+.incbin "gfx/characters/npcs/npc19/d59874.4bpp.lz"
 
 ;d5999b
 Data_d5999b:
-.incbin "gfx/characters/npcs/d5999b.4bpp.lz"
+.incbin "gfx/characters/npcs/npc19/d5999b.4bpp.lz"
 
 ;d59ac2
 Data_d59ac2:
-.incbin "gfx/characters/npcs/d59ac2.4bpp.lz"
+.incbin "gfx/characters/npcs/npc19/d59ac2.4bpp.lz"
 
 ;d59bf3
 Data_d59bf3:
-.incbin "gfx/characters/npcs/d59bf3.4bpp.lz"
+.incbin "gfx/characters/npcs/npc19/d59bf3.4bpp.lz"
+
+;npc 20
 
 ;d59d26
 Data_d59d26:
