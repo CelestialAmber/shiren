@@ -4,3 +4,4 @@
 .include "macros.asm"
 
 .include "constants/text.asm"
+.include "constants/npc.asm"

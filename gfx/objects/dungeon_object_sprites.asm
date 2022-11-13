@@ -62,8 +62,9 @@ DungeonObjectSprites1:
 .incbin "gfx/objects/traps/3de3e9.4bpp"
 
 
-;dungeon object sprites (32x32)
+
 DungeonObjectSprites2:
+;32x32 sprites
 ;stairs (up)
 .incbin "gfx/objects/stairs_up.4bpp"
 ;stairs (down)
@@ -73,9 +74,7 @@ DungeonObjectSprites2:
 ;unknown
 .incbin "gfx/objects/3dea69.4bpp"
 
-
 ;32x24 sprites
-
 ;pitfall trap
 .incbin "gfx/objects/traps/pitfall_trap.4bpp"
 ;tiger trap 
@@ -85,16 +84,14 @@ DungeonObjectSprites2:
 ;landmine trap
 .incbin "gfx/objects/traps/landmine_trap.4bpp"
 ;unknown (gray square tile with red on it)
-;FDF269
-.incbin "gfx/objects/3df269.4bpp"
+.incbin "gfx/objects/traps/3df269.4bpp"
 ;unknown (looks like a triforce with a green circle at the center)
-;FDF3E9
-.incbin "gfx/objects/3df3e9.4bpp"
+.incbin "gfx/objects/traps/3df3e9.4bpp"
 ;trap spawner
 .incbin "gfx/objects/traps/trapspawner.4bpp"
-;FDF6E9
-.incbin "gfx/objects/3df6e9.4bpp"
-;FDF869
-.incbin "gfx/objects/3df869.4bpp"
+;boulder trap
+.incbin "gfx/objects/traps/boulder_trap.4bpp"
+;big landmine trap
+.incbin "gfx/objects/traps/biglandmine_trap.4bpp"
 ;FDF9E9
-.incbin "gfx/objects/3df9e9.4bpp"
+.incbin "gfx/objects/traps/3df9e9.4bpp"
