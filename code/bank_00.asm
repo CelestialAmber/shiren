@@ -134,12 +134,11 @@ CODE_C063D6:
 	sep #$20                             ;C06409|E220    |      ;  
 	ldx.w #$0013                         ;C0640B|A21300  |      ;  
 	tdc                                  ;C0640E|7B      |      ;  
-
-CODE_C0640F:
+.lbl_C0640F
 	sta.l $7E80D6,x                      ;C0640F|9FD6807E|7E80D6;  
 	sta.l $7E8112,x                      ;C06413|9F12817E|7E8112;  
 	dex                                  ;C06417|CA      |      ;  
-	bpl CODE_C0640F                      ;C06418|10F5    |C0640F;  
+	bpl .lbl_C0640F                      ;C06418|10F5    |C0640F;  
 	plp                                  ;C0641A|28      |      ;  
 	rtl                                  ;C0641B|6B      |      ;  
 
@@ -194,12 +193,11 @@ CODE_C0641C:
 	sta.b $02                   ;C064A8|8502    |000002;  
 	jsl.l func_808A5C                    ;C064AA|225C8A80|808A5C;  
 	lda.l $7E843C                        ;C064AE|AF3C847E|7E843C;  
-	beq CODE_C064BD                      ;C064B2|F009    |C064BD;  
+	beq .lbl_C064BD                      ;C064B2|F009    |C064BD;  
 	lda.w #$0078                         ;C064B4|A97800  |      ;  
 	sta.b $00                            ;C064B7|8500    |000000;  
 	jsl.l func_808EC5                    ;C064B9|22C58E80|808EC5;  
-
-CODE_C064BD:
+.lbl_C064BD
 	jsl.l func_8085B1                    ;C064BD|22B18580|8085B1;  
 	lda.w #$0080                         ;C064C1|A98000  |      ;  
 	sta.b $00                            ;C064C4|8500    |000000;  
@@ -276,8 +274,7 @@ CODE_C0656C:
 	jsl.l func_808F59                    ;C06574|22598F80|808F59;  
 	tdc                                  ;C06578|7B      |      ;  
 	tax                                  ;C06579|AA      |      ;  
-
-CODE_C0657A:
+.lbl_C0657A
 	phx                                  ;C0657A|DA      |      ;  
 	lda.w #$000A                         ;C0657B|A90A00  |      ;  
 	sta.b $00                            ;C0657E|8500    |000000;  
@@ -296,19 +293,18 @@ CODE_C0657A:
 	inx                                  ;C065A2|E8      |      ;  
 	inx                                  ;C065A3|E8      |      ;  
 	cpx.w #$0011                         ;C065A4|E01100  |      ;  
-	bcc CODE_C0657A                      ;C065A7|90D1    |C0657A;  
+	bcc .lbl_C0657A                      ;C065A7|90D1    |C0657A;  
 	lda.l $7E843C                        ;C065A9|AF3C847E|7E843C;  
-	beq CODE_C065E0                      ;C065AD|F031    |C065E0;  
+	beq .lbl_C065E0                      ;C065AD|F031    |C065E0;  
 	jsl.l func_808EBA                    ;C065AF|22BA8E80|808EBA;  
 	ldx.b $00                            ;C065B3|A600    |000000;  
-	beq CODE_C065DC                      ;C065B5|F025    |C065DC;  
+	beq .lbl_C065DC                      ;C065B5|F025    |C065DC;  
 	lda.w #$0000                         ;C065B7|A90000  |      ;  
 	sta.b $00                            ;C065BA|8500    |000000;  
 	phx                                  ;C065BC|DA      |      ;  
 	jsl.l func_80DD40                    ;C065BD|2240DD80|80DD40;  
 	plx                                  ;C065C1|FA      |      ;  
-
-CODE_C065C2:
+.lbl_C065C2
 	phx                                  ;C065C2|DA      |      ;  
 	jsl.l func_80854A                    ;C065C3|224A8580|80854A;  
 	jsl.l func_808D3D                    ;C065C7|223D8D80|808D3D;  
@@ -317,14 +313,12 @@ CODE_C065C2:
 	jsl.l func_80DC69                    ;C065D0|2269DC80|80DC69;  
 	plx                                  ;C065D4|FA      |      ;  
 	lda.b $00                            ;C065D5|A500    |000000;  
-	bne CODE_C065E0                      ;C065D7|D007    |C065E0;  
+	bne .lbl_C065E0                      ;C065D7|D007    |C065E0;  
 	dex                                  ;C065D9|CA      |      ;  
-	bpl CODE_C065C2                      ;C065DA|10E6    |C065C2;  
-
-CODE_C065DC:
+	bpl .lbl_C065C2                      ;C065DA|10E6    |C065C2;  
+.lbl_C065DC
 	jsl.l CODE_C5CF82                    ;C065DC|2282CFC5|C5CF82;  
-
-CODE_C065E0:
+.lbl_C065E0
 	jsl.l func_808A00                    ;C065E0|22008A80|808A00;  
 	jsl.l func_8085B1                    ;C065E4|22B18580|8085B1;  
 	jsl.l CODE_C5CFF6                    ;C065E8|22F6CFC5|C5CFF6;  
@@ -346,13 +340,12 @@ CODE_C0661A:
 	php                                  ;C0661E|08      |      ;  
 	sep #$30                             ;C0661F|E230    |      ;  
 	lda.l $7E81A4                        ;C06621|AFA4817E|7E81A4;  
-	beq CODE_C06631                      ;C06625|F00A    |C06631;  
+	beq .lbl_C06631                      ;C06625|F00A    |C06631;  
 	dec a                                ;C06627|3A      |      ;  
 	dec a                                ;C06628|3A      |      ;  
 	sta.l $7E81A4                        ;C06629|8FA4817E|7E81A4;  
 	jsl.l CODE_C06BCA                    ;C0662D|22CA6BC0|C06BCA;  
-
-CODE_C06631:
+.lbl_C06631
 	plp                                  ;C06631|28      |      ;  
 	rtl                                  ;C06632|6B      |      ;  
 	.db $08,$E2,$30,$AF,$A4,$81,$7E,$F0   ;C06633
@@ -372,18 +365,16 @@ CODE_C0666B:
 	plb                                  ;C06675|AB      |      ;  
 	ldx.w $81A6                          ;C06676|AEA681  |7E81A6;  
 	cpx.w $81A4                          ;C06679|ECA481  |7E81A4;  
-	bne CODE_C06687                      ;C0667C|D009    |C06687;  
+	bne .lbl_C06687                      ;C0667C|D009    |C06687;  
 	plp                                  ;C0667E|28      |      ;  
 	sec                                  ;C0667F|38      |      ;  
 	rtl                                  ;C06680|6B      |      ;  
-
-CODE_C06681:
+.lbl_C06681
 	dec.w $81AE                          ;C06681|CEAE81  |7E81AE;  
 	plp                                  ;C06684|28      |      ;  
 	clc                                  ;C06685|18      |      ;  
 	rtl                                  ;C06686|6B      |      ;  
-
-CODE_C06687:
+.lbl_C06687
 	rep #$20                             ;C06687|C220    |      ;  
 	lda.w $823C,x                        ;C06689|BD3C82  |7E823C;  
 	sta.b $02                   ;C0668C|8502    |000002;  
@@ -398,10 +389,10 @@ CODE_C06687:
 	inx                                  ;C066A1|E8      |      ;  
 	stx.w $81A6                          ;C066A2|8EA681  |7E81A6;  
 	ldx.w $81AE                          ;C066A5|AEAE81  |7E81AE;  
-	bne CODE_C06681                      ;C066A8|D0D7    |C06681;  
+	bne .lbl_C06681                      ;C066A8|D0D7    |C06681;  
 	sep #$20                             ;C066AA|E220    |      ;  
 	cmp.b #$14                           ;C066AC|C914    |      ;  
-	bcs CODE_C066C3                      ;C066AE|B013    |C066C3;  
+	bcs .lbl_C066C3                      ;C066AE|B013    |C066C3;  
 	pha                                  ;C066B0|48      |      ;  
 	phy                                  ;C066B1|5A      |      ;  
 	jsl.l func_81C521                    ;C066B2|2221C581|81C521;  
@@ -413,16 +404,15 @@ CODE_C06687:
 	plp                                  ;C066C0|28      |      ;  
 	clc                                  ;C066C1|18      |      ;  
 	rtl                                  ;C066C2|6B      |      ;  
-
-CODE_C066C3:
+.lbl_C066C3
 	cmp.b #$FC                           ;C066C3|C9FC    |      ;  
-	beq CODE_C066EE                      ;C066C5|F027    |C066EE;  
+	beq .lbl_C066EE                      ;C066C5|F027    |C066EE;  
 	cmp.b #$FD                           ;C066C7|C9FD    |      ;  
-	beq CODE_C066FD                      ;C066C9|F032    |C066FD;  
+	beq .lbl_C066FD                      ;C066C9|F032    |C066FD;  
 	cmp.b #$FE                           ;C066CB|C9FE    |      ;  
-	beq CODE_C06717                      ;C066CD|F048    |C06717;  
+	beq .lbl_C06717                      ;C066CD|F048    |C06717;  
 	cmp.b #$FF                           ;C066CF|C9FF    |      ;  
-	beq CODE_C0671F                      ;C066D1|F04C    |C0671F;  
+	beq .lbl_C0671F                      ;C066D1|F04C    |C0671F;  
 	sec                                  ;C066D3|38      |      ;  
 	sbc.b #$1E                           ;C066D4|E91E    |      ;  
 	sta.b $00                            ;C066D6|8500    |000000;  
@@ -436,8 +426,7 @@ CODE_C066C3:
 UNREACH_C066E3:
 	.db $29,$7F,$85,$02,$22,$F0,$C7,$81   ;C066E3
 	.db $28,$18,$6B                       ;C066EB
-
-CODE_C066EE:
+.lbl_C066EE
 	lda.b $04                   ;C066EE|A504    |000004;  
 	sta.b $00                            ;C066F0|8500    |000000;  
 	lda.b $05                            ;C066F2|A505    |000005;  
@@ -446,33 +435,28 @@ CODE_C066EE:
 	plp                                  ;C066FA|28      |      ;  
 	clc                                  ;C066FB|18      |      ;  
 	rtl                                  ;C066FC|6B      |      ;  
-
-CODE_C066FD:
+.lbl_C066FD
 	lda.b $04                   ;C066FD|A504    |000004;  
 	sta.b $00                            ;C066FF|8500    |000000;  
 	lda.b $05                            ;C06701|A505    |000005;  
 	sta.b w0001                            ;C06703|8501    |000001;  
 	lda.b $02                   ;C06705|A502    |000002;  
-	bne CODE_C06710                      ;C06707|D007    |C06710;  
+	bne .lbl_C06710                      ;C06707|D007    |C06710;  
 	.db $22,$7A,$B7,$80,$28,$18,$6B       ;C06709|        |80B77A;  
-
-CODE_C06710:
+.lbl_C06710
 	jsl.l func_80B7E1                    ;C06710|22E1B780|80B7E1;  
 	plp                                  ;C06714|28      |      ;  
 	clc                                  ;C06715|18      |      ;  
 	rtl                                  ;C06716|6B      |      ;  
-
-CODE_C06717:
+.lbl_C06717
 	lda.b $02                   ;C06717|A502    |000002;  
-	bmi CODE_C06722                      ;C06719|3007    |C06722;  
+	bmi .lbl_C06722                      ;C06719|3007    |C06722;  
 	jsl.l func_81C874                    ;C0671B|2274C881|81C874;  
-
-CODE_C0671F:
+.lbl_C0671F
 	plp                                  ;C0671F|28      |      ;  
 	clc                                  ;C06720|18      |      ;  
 	rtl                                  ;C06721|6B      |      ;  
-
-CODE_C06722:
+.lbl_C06722
 	asl a                                ;C06722|0A      |      ;  
 	tax                                  ;C06723|AA      |      ;  
 	lsr a                                ;C06724|4A      |      ;  
@@ -548,24 +532,21 @@ CODE_C0681A:
 	plb                                  ;C06820|AB      |      ;  
 	ldx.w $81A6                          ;C06821|AEA681  |7E81A6;  
 	cpx.w $81A4                          ;C06824|ECA481  |7E81A4;  
-	beq CODE_C0683A                      ;C06827|F011    |C0683A;  
+	beq .lbl_C0683A                      ;C06827|F011    |C0683A;  
 	ldy.b #$01                           ;C06829|A001    |      ;  
-
-CODE_C0682B:
+.lbl_C0682B
 	lda.w $81BC,x                        ;C0682B|BDBC81  |7E81BC;  
 	cmp.b #$FF                           ;C0682E|C9FF    |      ;  
-	beq CODE_C0683C                      ;C06830|F00A    |C0683C;  
+	beq .lbl_C0683C                      ;C06830|F00A    |C0683C;  
 	iny                                  ;C06832|C8      |      ;  
 	inx                                  ;C06833|E8      |      ;  
 	inx                                  ;C06834|E8      |      ;  
 	cpx.w $81A4                          ;C06835|ECA481  |7E81A4;  
-	bne CODE_C0682B                      ;C06838|D0F1    |C0682B;  
-
-CODE_C0683A:
+	bne .lbl_C0682B                      ;C06838|D0F1    |C0682B;  
+.lbl_C0683A
 	plp                                  ;C0683A|28      |      ;  
 	rtl                                  ;C0683B|6B      |      ;  
-
-CODE_C0683C:
+.lbl_C0683C
 	tya                                  ;C0683C|98      |      ;  
 	clc                                  ;C0683D|18      |      ;  
 	adc.w $81A8                          ;C0683E|6DA881  |7E81A8;  
@@ -609,10 +590,9 @@ DATA8_C0689C:
 	.db $BE,$68,$C7,$68,$BE,$68,$BE,$68   ;C068AA|        |00C768;  
 	jsl.l func_808A07                    ;C068B2|22078A80|808A07;  
 	lda.b $00                            ;C068B6|A500    |000000;  
-	beq CODE_C068BE                      ;C068B8|F004    |C068BE;  
+	beq .lbl_C068BE                      ;C068B8|F004    |C068BE;  
 	.db $22,$00,$8A,$80                   ;C068BA|        |808A00;  
-
-CODE_C068BE:
+.lbl_C068BE
 	plp                                  ;C068BE|28      |      ;  
 	rtl                                  ;C068BF|6B      |      ;  
 	.db $A9,$10,$00,$8F,$56,$84,$7E,$22   ;C068C0
@@ -631,12 +611,11 @@ CODE_C068BE:
 CODE_C068F5:
 	jsl.l func_808A07                    ;C068F5|22078A80|808A07;  
 	lda.b $00                            ;C068F9|A500    |000000;  
-	bne CODE_C06909                      ;C068FB|D00C    |C06909;  
+	bne .lbl_C06909                      ;C068FB|D00C    |C06909;  
 	jsl.l func_808DAD                    ;C068FD|22AD8D80|808DAD;  
 	jsl.l func_808D3D                    ;C06901|223D8D80|808D3D;  
 	jsl.l func_8089F6                    ;C06905|22F68980|8089F6;  
-
-CODE_C06909:
+.lbl_C06909
 	plp                                  ;C06909|28      |      ;  
 	rtl                                  ;C0690A|6B      |      ;  
 
@@ -645,7 +624,7 @@ CODE_C0690B:
 	sep #$30                             ;C0690C|E230    |      ;  
 	lda.l $7E81A4                        ;C0690E|AFA4817E|7E81A4;  
 	cmp.b #$80                           ;C06912|C980    |      ;  
-	bcs CODE_C06926                      ;C06914|B010    |C06926;  
+	bcs .lbl_C06926                      ;C06914|B010    |C06926;  
 	tax                                  ;C06916|AA      |      ;  
 	inc a                                ;C06917|1A      |      ;  
 	inc a                                ;C06918|1A      |      ;  
@@ -654,8 +633,7 @@ CODE_C0690B:
 	lda.b $00                            ;C0691E|A500    |000000;  
 	rep #$20                             ;C06920|C220    |      ;  
 	sta.l $7E81BC,x                      ;C06922|9FBC817E|7E81BC;  
-
-CODE_C06926:
+.lbl_C06926
 	plp                                  ;C06926|28      |      ;  
 	rtl                                  ;C06927|6B      |      ;  
 	.db $08,$E2,$30,$A6,$00,$7B,$9F,$D6   ;C06928
@@ -667,15 +645,14 @@ CODE_C0693A:
 	sep #$30                             ;C0693B|E230    |      ;  
 	lda.l $7E81A4                        ;C0693D|AFA4817E|7E81A4;  
 	cmp.b #$80                           ;C06941|C980    |      ;  
-	bcs CODE_C06952                      ;C06943|B00D    |C06952;  
+	bcs .lbl_C06952                      ;C06943|B00D    |C06952;  
 	tax                                  ;C06945|AA      |      ;  
 	inc a                                ;C06946|1A      |      ;  
 	inc a                                ;C06947|1A      |      ;  
 	sta.l $7E81A4                        ;C06948|8FA4817E|7E81A4;  
 	lda.b #$FF                           ;C0694C|A9FF    |      ;  
 	sta.l $7E81BC,x                      ;C0694E|9FBC817E|7E81BC;  
-
-CODE_C06952:
+.lbl_C06952
 	plp                                  ;C06952|28      |      ;  
 	rtl                                  ;C06953|6B      |      ;  
 	.db $08,$E2,$30,$AF,$A4,$81,$7E,$C9   ;C06954
@@ -689,7 +666,7 @@ CODE_C0697C:
 	sep #$30                             ;C0697D|E230    |      ;  
 	lda.l $7E81A4                        ;C0697F|AFA4817E|7E81A4;  
 	cmp.b #$80                           ;C06983|C980    |      ;  
-	bcs CODE_C069E2                      ;C06985|B05B    |C069E2;  
+	bcs .lbl_C069E2                      ;C06985|B05B    |C069E2;  
 	tax                                  ;C06987|AA      |      ;  
 	inc a                                ;C06988|1A      |      ;  
 	inc a                                ;C06989|1A      |      ;  
@@ -702,7 +679,7 @@ CODE_C0697C:
 	sep #$20                             ;C0699C|E220    |      ;  
 	lda.b $00                            ;C0699E|A500    |000000;  
 	cmp.b #$FF                           ;C069A0|C9FF    |      ;  
-	beq CODE_C069BD                      ;C069A2|F019    |C069BD;  
+	beq .lbl_C069BD                      ;C069A2|F019    |C069BD;  
 	phx                                  ;C069A4|DA      |      ;  
 	jsl.l CODE_C30710                    ;C069A5|221007C3|C30710;  
 	plx                                  ;C069A9|FA      |      ;  
@@ -710,16 +687,14 @@ CODE_C0697C:
 	inc a                                ;C069AC|1A      |      ;  
 	ldy.b $05                            ;C069AD|A405    |000005;  
 	cpy.b #$E6                           ;C069AF|C0E6    |      ;  
-	beq CODE_C069BD                      ;C069B1|F00A    |C069BD;  
+	beq .lbl_C069BD                      ;C069B1|F00A    |C069BD;  
 	ldy.b w0001                            ;C069B3|A401    |000001;  
 	cpy.b #$7B                           ;C069B5|C07B    |      ;  
-	bne CODE_C069BE                      ;C069B7|D005    |C069BE;  
+	bne .lbl_C069BE                      ;C069B7|D005    |C069BE;  
 	.db $A9,$0D,$80,$01                   ;C069B9
-
-CODE_C069BD:
+.lbl_C069BD
 	tdc                                  ;C069BD|7B      |      ;  
-
-CODE_C069BE:
+.lbl_C069BE
 	clc                                  ;C069BE|18      |      ;  
 	adc.b #$E5                           ;C069BF|69E5    |      ;  
 	sta.l $7E823C,x                      ;C069C1|9F3C827E|7E823C;  
@@ -732,11 +707,10 @@ CODE_C069BE:
 	plx                                  ;C069D4|FA      |      ;  
 	lda.b w0001                            ;C069D5|A501    |000001;  
 	cmp.b #$80                           ;C069D7|C980    |      ;  
-	beq CODE_C069E2                      ;C069D9|F007    |C069E2;  
-	bcc CODE_C069E2                      ;C069DB|9005    |C069E2;  
+	beq .lbl_C069E2                      ;C069D9|F007    |C069E2;  
+	bcc .lbl_C069E2                      ;C069DB|9005    |C069E2;  
 	.db $7B,$9F,$3C,$82,$7E               ;C069DD
-
-CODE_C069E2:
+.lbl_C069E2
 	plp                                  ;C069E2|28      |      ;  
 	rtl                                  ;C069E3|6B      |      ;  
 
@@ -745,7 +719,7 @@ CODE_C069E4:
 	sep #$30                             ;C069E5|E230    |      ;  
 	lda.l $7E81A4                        ;C069E7|AFA4817E|7E81A4;  
 	cmp.b #$80                           ;C069EB|C980    |      ;  
-	bcs CODE_C06A0C                      ;C069ED|B01D    |C06A0C;  
+	bcs .lbl_C06A0C                      ;C069ED|B01D    |C06A0C;  
 	tax                                  ;C069EF|AA      |      ;  
 	inc a                                ;C069F0|1A      |      ;  
 	inc a                                ;C069F1|1A      |      ;  
@@ -758,8 +732,7 @@ CODE_C069E4:
 	sep #$20                             ;C06A04|E220    |      ;  
 	lda.b $00                            ;C06A06|A500    |000000;  
 	sta.l $7E823C,x                      ;C06A08|9F3C827E|7E823C;  
-
-CODE_C06A0C:
+.lbl_C06A0C
 	plp                                  ;C06A0C|28      |      ;  
 	rtl                                  ;C06A0D|6B      |      ;  
 
@@ -771,7 +744,7 @@ CODE_C06A0E:
 	plb                                  ;C06A14|AB      |      ;  
 	ldx.w $81A4                          ;C06A15|AEA481  |7E81A4;  
 	cpx.b #$80                           ;C06A18|E080    |      ;  
-	bcs CODE_C06A37                      ;C06A1A|B01B    |C06A37;  
+	bcs .lbl_C06A37                      ;C06A1A|B01B    |C06A37;  
 	lda.b #$FE                           ;C06A1C|A9FE    |      ;  
 	sta.w $81BC,x                        ;C06A1E|9DBC81  |7E81BC;  
 	rep #$20                             ;C06A21|C220    |      ;  
@@ -784,8 +757,7 @@ CODE_C06A0E:
 	inx                                  ;C06A32|E8      |      ;  
 	inx                                  ;C06A33|E8      |      ;  
 	stx.w $81A4                          ;C06A34|8EA481  |7E81A4;  
-
-CODE_C06A37:
+.lbl_C06A37
 	plp                                  ;C06A37|28      |      ;  
 	rtl                                  ;C06A38|6B      |      ;  
 
@@ -798,7 +770,7 @@ CODE_C06A39:
 	plb                                  ;C06A43|AB      |      ;  
 	ldx.w $81A4                          ;C06A44|AEA481  |7E81A4;  
 	cpx.b #$80                           ;C06A47|E080    |      ;  
-	bcs CODE_C06A64                      ;C06A49|B019    |C06A64;  
+	bcs .lbl_C06A64                      ;C06A49|B019    |C06A64;  
 	lda.b #$FE                           ;C06A4B|A9FE    |      ;  
 	sta.w $81BC,x                        ;C06A4D|9DBC81  |7E81BC;  
 	rep #$20                             ;C06A50|C220    |      ;  
@@ -810,8 +782,7 @@ CODE_C06A39:
 	inx                                  ;C06A5F|E8      |      ;  
 	inx                                  ;C06A60|E8      |      ;  
 	stx.w $81A4                          ;C06A61|8EA481  |7E81A4;  
-
-CODE_C06A64:
+.lbl_C06A64
 	plp                                  ;C06A64|28      |      ;  
 	rtl                                  ;C06A65|6B      |      ;  
 	.db $08,$C2,$20,$E2,$10,$A5,$02,$0A   ;C06A66
@@ -825,15 +796,14 @@ CODE_C06A93:
 	php                                  ;C06A93|08      |      ;  
 	rep #$20                             ;C06A94|C220    |      ;  
 	lda.l $7E8442                        ;C06A96|AF42847E|7E8442;  
-	bne CODE_C06AAC                      ;C06A9A|D010    |C06AAC;  
+	bne .lbl_C06AAC                      ;C06A9A|D010    |C06AAC;  
 	lda.b $00                            ;C06A9C|A500    |000000;  
 	cmp.l $7E843E                        ;C06A9E|CF3E847E|7E843E;  
-	bne CODE_C06AAC                      ;C06AA2|D008    |C06AAC;  
+	bne .lbl_C06AAC                      ;C06AA2|D008    |C06AAC;  
 	lda.b $02                   ;C06AA4|A502    |000002;  
 	cmp.l $7E8440                        ;C06AA6|CF40847E|7E8440;  
-	beq CODE_C06AC7                      ;C06AAA|F01B    |C06AC7;  
-
-CODE_C06AAC:
+	beq .lbl_C06AC7                      ;C06AAA|F01B    |C06AC7;  
+.lbl_C06AAC
 	lda.b $00                            ;C06AAC|A500    |000000;  
 	sta.l $7E8444                        ;C06AAE|8F44847E|7E8444;  
 	sta.l $7E843E                        ;C06AB2|8F3E847E|7E843E;  
@@ -842,8 +812,7 @@ CODE_C06AAC:
 	sta.l $7E8440                        ;C06ABC|8F40847E|7E8440;  
 	lda.w #$0001                         ;C06AC0|A90100  |      ;  
 	sta.l $7E8442                        ;C06AC3|8F42847E|7E8442;  
-
-CODE_C06AC7:
+.lbl_C06AC7
 	plp                                  ;C06AC7|28      |      ;  
 	rtl                                  ;C06AC8|6B      |      ;  
 
@@ -851,15 +820,14 @@ CODE_C06AC9:
 	php                                  ;C06AC9|08      |      ;  
 	rep #$20                             ;C06ACA|C220    |      ;  
 	lda.l $7E8442                        ;C06ACC|AF42847E|7E8442;  
-	bne CODE_C06AE2                      ;C06AD0|D010    |C06AE2;  
+	bne .lbl_C06AE2                      ;C06AD0|D010    |C06AE2;  
 	lda.b $00                            ;C06AD2|A500    |000000;  
 	cmp.l $7E843E                        ;C06AD4|CF3E847E|7E843E;  
-	bne CODE_C06AE2                      ;C06AD8|D008    |C06AE2;  
+	bne .lbl_C06AE2                      ;C06AD8|D008    |C06AE2;  
 	lda.b $02                   ;C06ADA|A502    |000002;  
 	cmp.l $7E8440                        ;C06ADC|CF40847E|7E8440;  
-	beq CODE_C06B3D                      ;C06AE0|F05B    |C06B3D;  
-
-CODE_C06AE2:
+	beq .lbl_C06B3D                      ;C06AE0|F05B    |C06B3D;  
+.lbl_C06AE2
 	lda.b $00                            ;C06AE2|A500    |000000;  
 	sta.l $7E8444                        ;C06AE4|8F44847E|7E8444;  
 	sta.l $7E843E                        ;C06AE8|8F3E847E|7E843E;  
@@ -899,8 +867,7 @@ CODE_C06AE2:
 	pla                                  ;C06B36|68      |      ;  
 	sta.b $00                            ;C06B37|8500    |000000;  
 	jsl.l func_80BDFD                    ;C06B39|22FDBD80|80BDFD;  
-
-CODE_C06B3D:
+.lbl_C06B3D
 	plp                                  ;C06B3D|28      |      ;  
 	rtl                                  ;C06B3E|6B      |      ;  
 	.db $08,$C2,$20,$7B,$8F,$42,$84,$7E   ;C06B3F
@@ -914,7 +881,7 @@ CODE_C06B49:
 	plb                                  ;C06B4F|AB      |      ;  
 	ldx.w $81A4                          ;C06B50|AEA481  |7E81A4;  
 	cpx.b #$80                           ;C06B53|E080    |      ;  
-	bcs CODE_C06B9A                      ;C06B55|B043    |C06B9A;  
+	bcs .lbl_C06B9A                      ;C06B55|B043    |C06B9A;  
 	rep #$20                             ;C06B57|C220    |      ;  
 	lda.b $00                            ;C06B59|A500    |000000;  
 	adc.w #$011E                         ;C06B5B|691E01  |      ;  
@@ -936,18 +903,16 @@ CODE_C06B49:
 	beq UNREACH_C06B8D                   ;C06B7E|F00D    |C06B8D;  
 	lda.b w0001                            ;C06B80|A501    |000001;  
 	cmp.b #$7B                           ;C06B82|C97B    |      ;  
-	bne CODE_C06B95                      ;C06B84|D00F    |C06B95;  
+	bne .lbl_C06B95                      ;C06B84|D00F    |C06B95;  
 	.db $A9,$0D,$9D,$BD,$81,$80,$08       ;C06B86
 
 UNREACH_C06B8D:
 	.db $BD,$3D,$82,$09,$80,$9D,$3D,$82   ;C06B8D|        |00823D;  
-
-CODE_C06B95:
+.lbl_C06B95
 	inx                                  ;C06B95|E8      |      ;  
 	inx                                  ;C06B96|E8      |      ;  
 	stx.w $81A4                          ;C06B97|8EA481  |7E81A4;  
-
-CODE_C06B9A:
+.lbl_C06B9A
 	plp                                  ;C06B9A|28      |      ;  
 	rtl                                  ;C06B9B|6B      |      ;  
 	.db $08,$E2,$30,$A9,$7E,$48,$AB,$AE   ;C06B9C
@@ -966,10 +931,9 @@ CODE_C06BCA:
 	plb                                  ;C06BD2|AB      |      ;  
 	ldx.w $81A4                          ;C06BD3|AEA481  |7E81A4;  
 	cpx.b #$80                           ;C06BD6|E080    |      ;  
-	bcc CODE_C06BDC                      ;C06BD8|9002    |C06BDC;  
+	bcc .lbl_C06BDC                      ;C06BD8|9002    |C06BDC;  
 	.db $28,$6B                           ;C06BDA
-
-CODE_C06BDC:
+.lbl_C06BDC
 	lda.b $04                   ;C06BDC|A504    |000004;  
 	sta.w $82BC,x                        ;C06BDE|9DBC82  |7E82BC;  
 	lda.b $06                            ;C06BE1|A506    |000006;  
@@ -989,59 +953,53 @@ CODE_C06BE6:
 	sta.w $823C,x                        ;C06BF8|9D3C82  |7E823C;  
 	sep #$20                             ;C06BFB|E220    |      ;  
 	cpy.b #$13                           ;C06BFD|C013    |      ;  
-	bne CODE_C06C2D                      ;C06BFF|D02C    |C06C2D;  
+	bne .lbl_C06C2D                      ;C06BFF|D02C    |C06C2D;  
 	lda.w $819E                          ;C06C01|AD9E81  |7E819E;  
-	bne CODE_C06C20                      ;C06C04|D01A    |C06C20;  
+	bne .lbl_C06C20                      ;C06C04|D01A    |C06C20;  
 	rep #$20                             ;C06C06|C220    |      ;  
 	lda.w $82BC,x                        ;C06C08|BDBC82  |7E82BC;  
 	cmp.w $81A0                          ;C06C0B|CDA081  |7E81A0;  
-	beq CODE_C06C18                      ;C06C0E|F008    |C06C18;  
+	beq .lbl_C06C18                      ;C06C0E|F008    |C06C18;  
 	sta.w $81A0                          ;C06C10|8DA081  |7E81A0;  
 	lda.w #$FFFF                         ;C06C13|A9FFFF  |      ;  
 	bra CODE_C06C1B                      ;C06C16|8003    |C06C1B;  
-
-CODE_C06C18:
+.lbl_C06C18
 	lda.w #$0001                         ;C06C18|A90100  |      ;  
 
 CODE_C06C1B:
 	sta.w $819E                          ;C06C1B|8D9E81  |7E819E;  
 	sep #$20                             ;C06C1E|E220    |      ;  
-
-CODE_C06C20:
+.lbl_C06C20
 	phx                                  ;C06C20|DA      |      ;  
 	jsl.l CODE_C28603                    ;C06C21|220386C2|C28603;  
 	plx                                  ;C06C25|FA      |      ;  
 	stz.b $06                            ;C06C26|6406    |000006;  
 	lda.w $81BD,x                        ;C06C28|BDBD81  |7E81BD;  
-	bra CODE_C06C4C                      ;C06C2B|801F    |C06C4C;  
-
-CODE_C06C2D:
+	bra .lbl_C06C4C                      ;C06C2B|801F    |C06C4C;  
+.lbl_C06C2D
 	phx                                  ;C06C2D|DA      |      ;  
 	jsl.l CODE_C28603                    ;C06C2E|220386C2|C28603;  
 	plx                                  ;C06C32|FA      |      ;  
 	lda.w $81BD,x                        ;C06C33|BDBD81  |7E81BD;  
 	ldy.b $07                            ;C06C36|A407    |000007;  
-	beq CODE_C06C4C                      ;C06C38|F012    |C06C4C;  
+	beq .lbl_C06C4C                      ;C06C38|F012    |C06C4C;  
 	.db $85,$01,$BD,$3C,$82,$C9,$82,$B0   ;C06C3A|        |000001;  
 	.db $09,$22,$3D,$93,$81,$A5,$01,$9D   ;C06C42
 	.db $BD,$81                           ;C06C4A|        |00C981;  
-
-CODE_C06C4C:
+.lbl_C06C4C
 	cmp.b #$01                           ;C06C4C|C901    |      ;  
-	bne CODE_C06C59                      ;C06C4E|D009    |C06C59;  
+	bne .lbl_C06C59                      ;C06C4E|D009    |C06C59;  
 	lda.b $02                   ;C06C50|A502    |000002;  
-	beq CODE_C06C59                      ;C06C52|F005    |C06C59;  
+	beq .lbl_C06C59                      ;C06C52|F005    |C06C59;  
 	.db $A9,$06,$9D,$3D,$82               ;C06C54
-
-CODE_C06C59:
+.lbl_C06C59
 	lda.b $06                            ;C06C59|A506    |000006;  
 	ora.b $00                            ;C06C5B|0500    |000000;  
-	beq CODE_C06C67                      ;C06C5D|F008    |C06C67;  
+	beq .lbl_C06C67                      ;C06C5D|F008    |C06C67;  
 	lda.w $823D,x                        ;C06C5F|BD3D82  |7E823D;  
 	ora.b #$80                           ;C06C62|0980    |      ;  
 	sta.w $823D,x                        ;C06C64|9D3D82  |7E823D;  
-
-CODE_C06C67:
+.lbl_C06C67
 	lda.w $81BC,x                        ;C06C67|BDBC81  |7E81BC;  
 	sta.b $00                            ;C06C6A|8500    |000000;  
 	phx                                  ;C06C6C|DA      |      ;  
@@ -1063,7 +1021,7 @@ CODE_C06C80:
 	plb                                  ;C06C88|AB      |      ;  
 	ldx.w $81A4                          ;C06C89|AEA481  |7E81A4;  
 	cpx.b #$80                           ;C06C8C|E080    |      ;  
-	bcs CODE_C06CB7                      ;C06C8E|B027    |C06CB7;  
+	bcs .lbl_C06CB7                      ;C06C8E|B027    |C06CB7;  
 	lda.b $04                   ;C06C90|A504    |000004;  
 	sta.w $82BC,x                        ;C06C92|9DBC82  |7E82BC;  
 	lda.b $06                            ;C06C95|A506    |000006;  
@@ -1081,8 +1039,7 @@ CODE_C06C80:
 	inx                                  ;C06CB2|E8      |      ;  
 	inx                                  ;C06CB3|E8      |      ;  
 	stx.w $81A4                          ;C06CB4|8EA481  |7E81A4;  
-
-CODE_C06CB7:
+.lbl_C06CB7
 	plp                                  ;C06CB7|28      |      ;  
 	rtl                                  ;C06CB8|6B      |      ;  
 
@@ -1129,7 +1086,7 @@ CODE_C06CF4:
 	inc a                                ;C06CFF|1A      |      ;  
 	sta.w $80D6,y                        ;C06D00|99D680  |7E80D6;  
 	lda.w $80EA,y                        ;C06D03|B9EA80  |7E80EA;  
-	beq CODE_C06D6F                      ;C06D06|F067    |C06D6F;  
+	beq .lbl_C06D6F                      ;C06D06|F067    |C06D6F;  
 	lda.b $03                            ;C06D08|A503    |000003;  
 	sta.w $818A,y                        ;C06D0A|998A81  |7E818A;  
 	lda.b $04                   ;C06D0D|A504    |000004;  
@@ -1142,14 +1099,13 @@ CODE_C06CF4:
 	lda.b $02                   ;C06D1D|A502    |000002;  
 	bne UNREACH_C06D29                   ;C06D1F|D008    |C06D29;  
 	lda.b $05                            ;C06D21|A505    |000005;  
-	beq CODE_C06D2D                      ;C06D23|F008    |C06D2D;  
+	beq .lbl_C06D2D                      ;C06D23|F008    |C06D2D;  
 	lda.b #$01                           ;C06D25|A901    |      ;  
 	bra CODE_C06D33                      ;C06D27|800A    |C06D33;  
 
 UNREACH_C06D29:
 	.db $A9,$05,$80,$06                   ;C06D29
-
-CODE_C06D2D:
+.lbl_C06D2D
 	ldx.b $04                   ;C06D2D|A604    |000004;  
 	lda.l DATA8_C06DD6,x                 ;C06D2F|BFD66DC0|C06DD6;  
 
@@ -1157,23 +1113,20 @@ CODE_C06D33:
 	sta.w $80FE,y                        ;C06D33|99FE80  |7E80FE;  
 	tdc                                  ;C06D36|7B      |      ;  
 	cpy.b #$13                           ;C06D37|C013    |      ;  
-	beq CODE_C06D4F                      ;C06D39|F014    |C06D4F;  
+	beq .lbl_C06D4F                      ;C06D39|F014    |C06D4F;  
 	lda.b $07                            ;C06D3B|A507    |000007;  
-	beq CODE_C06D4D                      ;C06D3D|F00E    |C06D4D;  
+	beq .lbl_C06D4D                      ;C06D3D|F00E    |C06D4D;  
 	.db $B9,$D6,$80,$85,$01,$22,$3D,$93   ;C06D3F|        |0080D6;  
 	.db $81,$A5,$01,$99,$D6,$80           ;C06D47|        |0000A5;  
-
-CODE_C06D4D:
+.lbl_C06D4D
 	lda.b $06                            ;C06D4D|A506    |000006;  
-
-CODE_C06D4F:
+.lbl_C06D4F
 	ora.b $00                            ;C06D4F|0500    |000000;  
-	beq CODE_C06D5B                      ;C06D51|F008    |C06D5B;  
+	beq .lbl_C06D5B                      ;C06D51|F008    |C06D5B;  
 	lda.w $818A,y                        ;C06D53|B98A81  |7E818A;  
 	ora.b #$80                           ;C06D56|0980    |      ;  
 	sta.w $818A,y                        ;C06D58|998A81  |7E818A;  
-
-CODE_C06D5B:
+.lbl_C06D5B
 	lda.b #$02                           ;C06D5B|A902    |      ;  
 	sta.w $80EA,y                        ;C06D5D|99EA80  |7E80EA;  
 	sty.b $00                            ;C06D60|8400    |000000;  
@@ -1184,8 +1137,7 @@ CODE_C06D5B:
 	sta.w $8112,y                        ;C06D6A|991281  |7E8112;  
 	plp                                  ;C06D6D|28      |      ;  
 	rtl                                  ;C06D6E|6B      |      ;  
-
-CODE_C06D6F:
+.lbl_C06D6F
 	lda.b $03                            ;C06D6F|A503    |000003;  
 	sta.w $814E,y                        ;C06D71|994E81  |7E814E;  
 	lda.b $04                   ;C06D74|A504    |000004;  
@@ -1198,14 +1150,13 @@ CODE_C06D6F:
 	lda.b $02                   ;C06D84|A502    |000002;  
 	bne UNREACH_C06D90                   ;C06D86|D008    |C06D90;  
 	lda.b $05                            ;C06D88|A505    |000005;  
-	beq CODE_C06D94                      ;C06D8A|F008    |C06D94;  
+	beq .lbl_C06D94                      ;C06D8A|F008    |C06D94;  
 	lda.b #$01                           ;C06D8C|A901    |      ;  
 	bra CODE_C06D9A                      ;C06D8E|800A    |C06D9A;  
 
 UNREACH_C06D90:
 	.db $A9,$05,$80,$06                   ;C06D90
-
-CODE_C06D94:
+.lbl_C06D94
 	ldx.b $04                   ;C06D94|A604    |000004;  
 	lda.l DATA8_C06DD9,x                 ;C06D96|BFD96DC0|C06DD9;  
 
@@ -1213,26 +1164,23 @@ CODE_C06D9A:
 	sta.w $80FE,y                        ;C06D9A|99FE80  |7E80FE;  
 	tdc                                  ;C06D9D|7B      |      ;  
 	cpy.b #$13                           ;C06D9E|C013    |      ;  
-	beq CODE_C06DB6                      ;C06DA0|F014    |C06DB6;  
+	beq .lbl_C06DB6                      ;C06DA0|F014    |C06DB6;  
 	lda.b $07                            ;C06DA2|A507    |000007;  
-	beq CODE_C06DB4                      ;C06DA4|F00E    |C06DB4;  
+	beq .lbl_C06DB4                      ;C06DA4|F00E    |C06DB4;  
 	lda.w $80D6,y                        ;C06DA6|B9D680  |7E80D6;  
 	sta.b w0001                            ;C06DA9|8501    |000001;  
 	jsl.l func_81933D                    ;C06DAB|223D9381|81933D;  
 	lda.b w0001                            ;C06DAF|A501    |000001;  
 	sta.w $80D6,y                        ;C06DB1|99D680  |7E80D6;  
-
-CODE_C06DB4:
+.lbl_C06DB4
 	lda.b $06                            ;C06DB4|A506    |000006;  
-
-CODE_C06DB6:
+.lbl_C06DB6
 	ora.b $00                            ;C06DB6|0500    |000000;  
-	beq CODE_C06DC2                      ;C06DB8|F008    |C06DC2;  
+	beq .lbl_C06DC2                      ;C06DB8|F008    |C06DC2;  
 	lda.w $814E,y                        ;C06DBA|B94E81  |7E814E;  
 	ora.b #$80                           ;C06DBD|0980    |      ;  
 	sta.w $814E,y                        ;C06DBF|994E81  |7E814E;  
-
-CODE_C06DC2:
+.lbl_C06DC2
 	lda.b #$01                           ;C06DC2|A901    |      ;  
 	sta.w $80EA,y                        ;C06DC4|99EA80  |7E80EA;  
 	sty.b $00                            ;C06DC7|8400    |000000;  
@@ -1276,7 +1224,7 @@ CODE_C06DFE:
 	lda.l $7E8462                        ;C06E01|AF62847E|7E8462;  
 	tax                                  ;C06E05|AA      |      ;  
 	cpx.w #$0080                         ;C06E06|E08000  |      ;  
-	bcs CODE_C06E26                      ;C06E09|B01B    |C06E26;  
+	bcs .lbl_C06E26                      ;C06E09|B01B    |C06E26;  
 	phx                                  ;C06E0B|DA      |      ;  
 	jsl.l CODE_C4B94F                    ;C06E0C|224FB9C4|C4B94F;  
 	plx                                  ;C06E10|FA      |      ;  
@@ -1288,7 +1236,7 @@ CODE_C06DFE:
 	inx                                  ;C06E20|E8      |      ;  
 	txa                                  ;C06E21|8A      |      ;  
 	sta.l $7E8462                        ;C06E22|8F62847E|7E8462;  
-CODE_C06E26:
+.lbl_C06E26
 	plp                                  ;C06E26|28      |      ;  
 	rtl                                  ;C06E27|6B      |      ;  
 	.db $08,$C2,$30,$AF,$64,$84,$7E,$CF   ;C06E28
@@ -1326,53 +1274,47 @@ CODE_C06E70:
 	rep #$30                             ;C06E77|C230    |      ;  
 	lda.w $8464                          ;C06E79|AD6484  |7E8464;  
 	cmp.w $8462                          ;C06E7C|CD6284  |7E8462;  
-	beq CODE_C06EC6                      ;C06E7F|F045    |C06EC6;  
+	beq .lbl_C06EC6                      ;C06E7F|F045    |C06EC6;  
 	tax                                  ;C06E81|AA      |      ;  
 	lda.w $81A4                          ;C06E82|ADA481  |7E81A4;  
-	beq CODE_C06E96                      ;C06E85|F00F    |C06E96;  
-
-CODE_C06E87:
+	beq .lbl_C06E96                      ;C06E85|F00F    |C06E96;  
+.lbl_C06E87
 	lda.w $84E6,x                        ;C06E87|BDE684  |7E84E6;  
 	cmp.w $81A6                          ;C06E8A|CDA681  |7E81A6;  
-	beq CODE_C06E91                      ;C06E8D|F002    |C06E91;  
-	bcs CODE_C06EC6                      ;C06E8F|B035    |C06EC6;  
-
-CODE_C06E91:
+	beq .lbl_C06E91                      ;C06E8D|F002    |C06E91;  
+	bcs .lbl_C06EC6                      ;C06E8F|B035    |C06EC6;  
+.lbl_C06E91
 	cmp.w $81AC                          ;C06E91|CDAC81  |7E81AC;  
 	bcc UNREACH_C06EC3                   ;C06E94|902D    |C06EC3;  
-
-CODE_C06E96:
+.lbl_C06E96
 	lda.w $8464                          ;C06E96|AD6484  |7E8464;  
 	tax                                  ;C06E99|AA      |      ;  
 	inc a                                ;C06E9A|1A      |      ;  
 	inc a                                ;C06E9B|1A      |      ;  
 	sta.w $8464                          ;C06E9C|8D6484  |7E8464;  
 	lda.w $81AA                          ;C06E9F|ADAA81  |7E81AA;  
-	bne CODE_C06EAF                      ;C06EA2|D00B    |C06EAF;  
+	bne .lbl_C06EAF                      ;C06EA2|D00B    |C06EAF;  
 	lda.w $8466,x                        ;C06EA4|BD6684  |7E8466;  
 	sta.b $00                            ;C06EA7|8500    |000000;  
 	phb                                  ;C06EA9|8B      |      ;  
 	jsl.l func_80EC2C                    ;C06EAA|222CEC80|80EC2C;  
 	plb                                  ;C06EAE|AB      |      ;  
-
-CODE_C06EAF:
+.lbl_C06EAF
 	lda.w $8464                          ;C06EAF|AD6484  |7E8464;  
 	tax                                  ;C06EB2|AA      |      ;  
 	cmp.w $8462                          ;C06EB3|CD6284  |7E8462;  
-	bne CODE_C06E87                      ;C06EB6|D0CF    |C06E87;  
+	bne .lbl_C06E87                      ;C06EB6|D0CF    |C06E87;  
 	lda.w $81AA                          ;C06EB8|ADAA81  |7E81AA;  
-	beq CODE_C06EC0                      ;C06EBB|F003    |C06EC0;  
+	beq .lbl_C06EC0                      ;C06EBB|F003    |C06EC0;  
 	.db $CE,$AA,$81                       ;C06EBD|        |0081AA;  
-
-CODE_C06EC0:
+.lbl_C06EC0
 	plp                                  ;C06EC0|28      |      ;  
 	clc                                  ;C06EC1|18      |      ;  
 	rtl                                  ;C06EC2|6B      |      ;  
 
 UNREACH_C06EC3:
 	.db $9C,$AA,$81                       ;C06EC3|        |0081AA;  
-
-CODE_C06EC6:
+.lbl_C06EC6
 	plp                                  ;C06EC6|28      |      ;  
 	sec                                  ;C06EC7|38      |      ;  
 	rtl                                  ;C06EC8|6B      |      ;  
@@ -1399,20 +1341,18 @@ CODE_C06EE5:
 	ldx.w $80CC                          ;C06EF1|AECC80  |7E80CC;  
 	ldy.w $80CE                          ;C06EF4|ACCE80  |7E80CE;  
 	lda.w $8442                          ;C06EF7|AD4284  |7E8442;  
-	beq CODE_C06F02                      ;C06EFA|F006    |C06F02;  
+	beq .lbl_C06F02                      ;C06EFA|F006    |C06F02;  
 	ldx.w $8444                          ;C06EFC|AE4484  |7E8444;  
 	ldy.w $8446                          ;C06EFF|AC4684  |7E8446;  
-
-CODE_C06F02:
+.lbl_C06F02
 	stx.w $843E                          ;C06F02|8E3E84  |7E843E;  
 	sty.w $8440                          ;C06F05|8C4084  |7E8440;  
 	lda.w $8448                          ;C06F08|AD4884  |7E8448;  
-	beq CODE_C06F10                      ;C06F0B|F003    |C06F10;  
+	beq .lbl_C06F10                      ;C06F0B|F003    |C06F10;  
 	.db $20,$85,$6F                       ;C06F0D|        |C06F85;  
-
-CODE_C06F10:
+.lbl_C06F10
 	ldx.w $8454                          ;C06F10|AE5484  |7E8454;  
-	beq CODE_C06F2F                      ;C06F13|F01A    |C06F2F;  
+	beq .lbl_C06F2F                      ;C06F13|F01A    |C06F2F;  
 	pea.w $6F70                          ;C06F15|F4706F  |7E6F70;  
 	jmp.w (Jumptable_C06F1B-2,x)       ;C06F18|7C196F  |C06F19;
 
@@ -1428,10 +1368,9 @@ Jumptable_C06F1B:
 	.db $32,$71
 	.db $7A,$71
 	.db $D5,$71
-
-CODE_C06F2F:
+.lbl_C06F2F
 	lda.w $8450                          ;C06F2F|AD5084  |7E8450;  
-	beq CODE_C06F74                      ;C06F32|F040    |C06F74;  
+	beq .lbl_C06F74                      ;C06F32|F040    |C06F74;  
 	.db $CE,$52,$84,$10,$0B,$A9,$01,$00   ;C06F34|        |008452;  
 	.db $8D,$B6,$81,$9C,$50,$84,$80,$2D   ;C06F3C|        |0081B6;  
 	.db $8B,$A9,$0A,$00,$85,$00,$A9,$08   ;C06F44
@@ -1441,8 +1380,7 @@ CODE_C06F2F:
 	.db $84,$7E,$85,$04,$22,$5C,$8A,$80   ;C06F64|        |00007E;  
 	.db $22,$B1,$85,$80,$AB               ;C06F6C|        |8085B1;  
 	inc.w $843C                          ;C06F71|EE3C84  |7E843C;  
-
-CODE_C06F74:
+.lbl_C06F74
 	lda.w $843C                          ;C06F74|AD3C84  |7E843C;  
 	sta.b $04                   ;C06F77|8504    |000004;  
 	lda.w $843E                          ;C06F79|AD3E84  |7E843E;  
@@ -1469,7 +1407,7 @@ CODE_C06F74:
 	.db $85,$04,$AF,$56,$84,$7E,$85,$06   ;C06FF5|        |000004;  
 	.db $22,$5C,$8A,$80,$AB,$4C,$F1,$70   ;C06FFD|        |808A5C;  
 	dec.w $845A                          ;C07005|CE5A84  |7E845A;  
-	bpl CODE_C0705E                      ;C07008|1054    |C0705E;  
+	bpl .lbl_C0705E                      ;C07008|1054    |C0705E;  
 	ldx.w $8458                          ;C0700A|AE5884  |7E8458;  
 	lda.l UNREACH_C0721D,x               ;C0700D|BF1D72C0|C0721D;  
 	and.w #$00FF                         ;C07011|29FF00  |      ;  
@@ -1478,20 +1416,19 @@ CODE_C06F74:
 	lda.l UNREACH_C07247,x               ;C0701A|BF4772C0|C07247;  
 	and.w #$00FF                         ;C0701E|29FF00  |      ;  
 	cmp.w $8456                          ;C07021|CD5684  |7E8456;  
-	bcs CODE_C07097                      ;C07024|B071    |C07097;  
+	bcs .lbl_C07097                      ;C07024|B071    |C07097;  
 	sta.w $8456                          ;C07026|8D5684  |7E8456;  
 	jmp.w CODE_C070EE                    ;C07029|4CEE70  |C070EE;  
 	dec.w $845A                          ;C0702C|CE5A84  |7E845A;  
-	bpl CODE_C0705E                      ;C0702F|102D    |C0705E;  
+	bpl .lbl_C0705E                      ;C0702F|102D    |C0705E;  
 	ldx.w $8458                          ;C07031|AE5884  |7E8458;  
-
-CODE_C07034:
+.lbl_C07034
 	lda.l UNREACH_C07232,x               ;C07034|BF3272C0|C07232;  
 	and.w #$00FF                         ;C07038|29FF00  |      ;  
 	sta.w $845A                          ;C0703B|8D5A84  |7E845A;  
 	dec.w $8456                          ;C0703E|CE5684  |7E8456;  
 	lda.w $8456                          ;C07041|AD5684  |7E8456;  
-	bpl CODE_C07097                      ;C07044|1051    |C07097;  
+	bpl .lbl_C07097                      ;C07044|1051    |C07097;  
 	phb                                  ;C07046|8B      |      ;  
 	lda.w #$0000                         ;C07047|A90000  |      ;  
 	sta.b $00                            ;C0704A|8500    |000000;  
@@ -1501,14 +1438,13 @@ CODE_C07034:
 	jsl.l func_808A00                    ;C07056|22008A80|808A00;  
 	plb                                  ;C0705A|AB      |      ;  
 	jmp.w CODE_C070EE                    ;C0705B|4CEE70  |C070EE;  
-
-CODE_C0705E:
+.lbl_C0705E
 	jmp.w CODE_C070F1                    ;C0705E|4CF170  |C070F1;  
 	dec.w $845A                          ;C07061|CE5A84  |7E845A;  
-	bpl CODE_C0705E                      ;C07064|10F8    |C0705E;  
+	bpl .lbl_C0705E                      ;C07064|10F8    |C0705E;  
 	ldx.w $8458                          ;C07066|AE5884  |7E8458;  
 	lda.w $845C                          ;C07069|AD5C84  |7E845C;  
-	bne CODE_C07034                      ;C0706C|D0C6    |C07034;  
+	bne .lbl_C07034                      ;C0706C|D0C6    |C07034;  
 	lda.l UNREACH_C0721D,x               ;C0706E|BF1D72C0|C0721D;  
 	and.w #$00FF                         ;C07072|29FF00  |      ;  
 	sta.w $845A                          ;C07075|8D5A84  |7E845A;  
@@ -1516,14 +1452,13 @@ CODE_C0705E:
 	lda.l UNREACH_C07247,x               ;C0707B|BF4772C0|C07247;  
 	and.w #$00FF                         ;C0707F|29FF00  |      ;  
 	cmp.w $8456                          ;C07082|CD5684  |7E8456;  
-	bcs CODE_C07097                      ;C07085|B010    |C07097;  
+	bcs .lbl_C07097                      ;C07085|B010    |C07097;  
 	sta.w $8456                          ;C07087|8D5684  |7E8456;  
 	inc.w $845C                          ;C0708A|EE5C84  |7E845C;  
 	lda.l UNREACH_C0725C,x               ;C0708D|BF5C72C0|C0725C;  
 	and.w #$00FF                         ;C07091|29FF00  |      ;  
 	sta.w $845A                          ;C07094|8D5A84  |7E845A;  
-
-CODE_C07097:
+.lbl_C07097
 	lda.w $8458                          ;C07097|AD5884  |7E8458;  
 	asl a                                ;C0709A|0A      |      ;  
 	tax                                  ;C0709B|AA      |      ;  
@@ -1532,35 +1467,33 @@ CODE_C07097:
 	lda.l UNREACH_C07271,x               ;C070A2|BF7172C0|C07271;  
 	sta.b $00                            ;C070A6|8500    |000000;  
 	cmp.w #$000C                         ;C070A8|C90C00  |      ;  
-	beq CODE_C070CC                      ;C070AB|F01F    |C070CC;  
+	beq .lbl_C070CC                      ;C070AB|F01F    |C070CC;  
 	cmp.w #$000A                         ;C070AD|C90A00  |      ;  
 	beq UNREACH_C070DD                   ;C070B0|F02B    |C070DD;  
 	cmp.w #$0006                         ;C070B2|C90600  |      ;  
 	beq UNREACH_C070DD                   ;C070B5|F026    |C070DD;  
 	lda.l UNREACH_C072C5,x               ;C070B7|BFC572C0|C072C5;  
 	sta.b $04                   ;C070BB|8504    |000004;  
-	bpl CODE_C070E6                      ;C070BD|1027    |C070E6;  
+	bpl .lbl_C070E6                      ;C070BD|1027    |C070E6;  
 	lda.w $8456                          ;C070BF|AD5684  |7E8456;  
 	sta.b $06                            ;C070C2|8506    |000006;  
 	phb                                  ;C070C4|8B      |      ;  
 	jsl.l func_808A10                    ;C070C5|22108A80|808A10;  
 	plb                                  ;C070C9|AB      |      ;  
-	bra CODE_C070E6                      ;C070CA|801A    |C070E6;  
-
-CODE_C070CC:
+	bra .lbl_C070E6                      ;C070CA|801A    |C070E6;  
+.lbl_C070CC
 	lda.l UNREACH_C072C5,x               ;C070CC|BFC572C0|C072C5;  
 	sta.b $04                   ;C070D0|8504    |000004;  
 	lda.w #$0010                         ;C070D2|A91000  |      ;  
 	sec                                  ;C070D5|38      |      ;  
 	sbc.w $8456                          ;C070D6|ED5684  |7E8456;  
 	sta.b $06                            ;C070D9|8506    |000006;  
-	bra CODE_C070E6                      ;C070DB|8009    |C070E6;  
+	bra .lbl_C070E6                      ;C070DB|8009    |C070E6;  
 
 UNREACH_C070DD:
 	.db $A9,$10,$00,$38,$ED,$56,$84,$85   ;C070DD
 	.db $04                               ;C070E5|        |00008B;  
-
-CODE_C070E6:
+.lbl_C070E6
 	phb                                  ;C070E6|8B      |      ;  
 	jsl.l func_808A5C                    ;C070E7|225C8A80|808A5C;  
 	plb                                  ;C070EB|AB      |      ;  
@@ -1593,13 +1526,13 @@ CODE_C070F1:
 	.db $60,$CE,$5C,$84,$10,$07,$22,$00   ;C0716C
 	.db $8A,$80,$9C,$54,$84,$60           ;C07174
 	dec.w $845A                          ;C0717A|CE5A84  |7E845A;  
-	bpl CODE_C071C0                      ;C0717D|1041    |C071C0;  
+	bpl .lbl_C071C0                      ;C0717D|1041    |C071C0;  
 	lda.w #$0001                         ;C0717F|A90100  |      ;  
 	sta.w $845A                          ;C07182|8D5A84  |7E845A;  
 	inc.w $845C                          ;C07185|EE5C84  |7E845C;  
 	lda.w $845C                          ;C07188|AD5C84  |7E845C;  
 	bit.w #$0001                         ;C0718B|890100  |      ;  
-	beq CODE_C071C1                      ;C0718E|F031    |C071C1;  
+	beq .lbl_C071C1                      ;C0718E|F031    |C071C1;  
 	phb                                  ;C07190|8B      |      ;  
 	jsl.l func_8089F6                    ;C07191|22F68980|8089F6;  
 	lda.w #$0010                         ;C07195|A91000  |      ;  
@@ -1618,28 +1551,25 @@ CODE_C070F1:
 	jsl.l func_808A5C                    ;C071B7|225C8A80|808A5C;  
 	jsl.l func_8085B1                    ;C071BB|22B18580|8085B1;  
 	plb                                  ;C071BF|AB      |      ;  
-
-CODE_C071C0:
+.lbl_C071C0
 	rts                                  ;C071C0|60      |      ;  
-
-CODE_C071C1:
+.lbl_C071C1
 	jsl.l func_808A00                    ;C071C1|22008A80|808A00;  
 	jsl.l func_8085B1                    ;C071C5|22B18580|8085B1;  
 	lda.w $845C                          ;C071C9|AD5C84  |7E845C;  
 	cmp.w #$0008                         ;C071CC|C90800  |      ;  
-	bcc CODE_C071D4                      ;C071CF|9003    |C071D4;  
+	bcc .lbl_C071D4                      ;C071CF|9003    |C071D4;  
 	stz.w $8454                          ;C071D1|9C5484  |7E8454;  
-
-CODE_C071D4:
+.lbl_C071D4
 	rts                                  ;C071D4|60      |      ;  
 	dec.w $845A                          ;C071D5|CE5A84  |7E845A;  
-	bpl CODE_C07208                      ;C071D8|102E    |C07208;  
+	bpl .lbl_C07208                      ;C071D8|102E    |C07208;  
 	lda.w #$0000                         ;C071DA|A90000  |      ;  
 	sta.w $845A                          ;C071DD|8D5A84  |7E845A;  
 	inc.w $845C                          ;C071E0|EE5C84  |7E845C;  
 	lda.w $845C                          ;C071E3|AD5C84  |7E845C;  
 	bit.w #$0001                         ;C071E6|890100  |      ;  
-	beq CODE_C07209                      ;C071E9|F01E    |C07209;  
+	beq .lbl_C07209                      ;C071E9|F01E    |C07209;  
 	phb                                  ;C071EB|8B      |      ;  
 	jsl.l func_8089F6                    ;C071EC|22F68980|8089F6;  
 	lda.w #$0010                         ;C071F0|A91000  |      ;  
@@ -1651,19 +1581,16 @@ CODE_C071D4:
 	jsl.l func_808A5C                    ;C071FF|225C8A80|808A5C;  
 	jsl.l func_8085B1                    ;C07203|22B18580|8085B1;  
 	plb                                  ;C07207|AB      |      ;  
-
-CODE_C07208:
+.lbl_C07208
 	rts                                  ;C07208|60      |      ;  
-
-CODE_C07209:
+.lbl_C07209
 	jsl.l func_808A00                    ;C07209|22008A80|808A00;  
 	jsl.l func_8085B1                    ;C0720D|22B18580|8085B1;  
 	lda.w $845C                          ;C07211|AD5C84  |7E845C;  
 	cmp.w #$0004                         ;C07214|C90400  |      ;  
-	bcc CODE_C0721C                      ;C07217|9003    |C0721C;  
+	bcc .lbl_C0721C                      ;C07217|9003    |C0721C;  
 	stz.w $8454                          ;C07219|9C5484  |7E8454;  
-
-CODE_C0721C:
+.lbl_C0721C
 	rts                                  ;C0721C|60      |      ;  
 
 UNREACH_C0721D:
@@ -1750,79 +1677,72 @@ CODE_C07339:
 	sta.l $7E81A2                        ;C0733D|8FA2817E|7E81A2;  
 	lda.l $7E81A4                        ;C07341|AFA4817E|7E81A4;  
 	ora.l $7E8462                        ;C07345|0F62847E|7E8462;  
-	bne CODE_C0735A                      ;C07349|D00F    |C0735A;  
+	bne .lbl_C0735A                      ;C07349|D00F    |C0735A;  
 	tdc                                  ;C0734B|7B      |      ;  
 	sta.l $7E81B2                        ;C0734C|8FB2817E|7E81B2;  
 	sta.l $7E81A4                        ;C07350|8FA4817E|7E81A4;  
 	sta.l $7E8462                        ;C07354|8F62847E|7E8462;  
 	plp                                  ;C07358|28      |      ;  
 	rtl                                  ;C07359|6B      |      ;  
-
-CODE_C0735A:
+.lbl_C0735A
 	lda.w #$0013                         ;C0735A|A91300  |      ;  
 	sta.b $00                            ;C0735D|8500    |000000;  
 	jsl.l CODE_C210AC                    ;C0735F|22AC10C2|C210AC;  
 	lda.l $7E81B2                        ;C07363|AFB2817E|7E81B2;  
-	beq CODE_C0738E                      ;C07367|F025    |C0738E;  
+	beq .lbl_C0738E                      ;C07367|F025    |C0738E;  
 	.db $7B,$8F,$B0,$81,$7E,$AF,$B4,$81   ;C07369
 	.db $7E,$E2,$20,$18,$69,$05,$38,$E5   ;C07371|        |0020E2;  
 	.db $00,$90,$CF,$C9,$0B,$B0,$CB,$EB   ;C07379
 	.db $69,$04,$38,$E5,$01,$90,$C3,$C9   ;C07381
 	.db $09,$B0,$BF,$C2,$20               ;C07389
-
-CODE_C0738E:
+.lbl_C0738E
 	lda.l $7E819E                        ;C0738E|AF9E817E|7E819E;  
-	bne CODE_C073A4                      ;C07392|D010    |C073A4;  
+	bne .lbl_C073A4                      ;C07392|D010    |C073A4;  
 	lda.l $7E81A4                        ;C07394|AFA4817E|7E81A4;  
-	beq CODE_C073B4                      ;C07398|F01A    |C073B4;  
+	beq .lbl_C073B4                      ;C07398|F01A    |C073B4;  
 	lda.b $00                            ;C0739A|A500    |000000;  
 	cmp.l $7E81A0                        ;C0739C|CFA0817E|7E81A0;  
-	beq CODE_C073B4                      ;C073A0|F012    |C073B4;  
+	beq .lbl_C073B4                      ;C073A0|F012    |C073B4;  
 	.db $80,$06                           ;C073A2|        |C073AA;  
-
-CODE_C073A4:
-	bpl CODE_C073B4                      ;C073A4|100E    |C073B4;  
+.lbl_C073A4
+	bpl .lbl_C073B4                      ;C073A4|100E    |C073B4;  
 	.db $AF,$A0,$81,$7E,$48,$20,$54,$75   ;C073A6|        |7E81A0;  
 	.db $68,$85,$00,$20,$05,$7C           ;C073AE
-
-CODE_C073B4:
+.lbl_C073B4
 	jsl.l CODE_C28B23                    ;C073B4|22238BC2|C28B23;  
 	ldx.w #$0001                         ;C073B8|A20100  |      ;  
 	stz.b w0001                            ;C073BB|6401    |000001;  
 	lda.b $00                            ;C073BD|A500    |000000;  
-	bne CODE_C073D1                      ;C073BF|D010    |C073D1;  
+	bne .lbl_C073D1                      ;C073BF|D010    |C073D1;  
 	jsl.l CODE_C627F1                    ;C073C1|22F127C6|C627F1;  
 	stz.b w0001                            ;C073C5|6401    |000001;  
 	lda.b $00                            ;C073C7|A500    |000000;  
 	cmp.w #$0000                         ;C073C9|C90000  |      ;  
-	beq CODE_C073D1                      ;C073CC|F003    |C073D1;  
+	beq .lbl_C073D1                      ;C073CC|F003    |C073D1;  
 	ldx.w #$0000                         ;C073CE|A20000  |      ;  
-
-CODE_C073D1:
+.lbl_C073D1
 	stx.b $00                            ;C073D1|8600    |000000;  
 	jsl.l func_80F375                    ;C073D3|2275F380|80F375;  
 	jsl.l CODE_C072EF                    ;C073D7|22EF72C0|C072EF;  
 	jsl.l func_80B5D6                    ;C073DB|22D6B580|80B5D6;  
 	lda.l debugMode                   ;C073DF|AF008080|808000;  
-	bne CODE_C073F5                      ;C073E3|D010    |C073F5;  
+	bne .lbl_C073F5                      ;C073E3|D010    |C073F5;  
 	.db $A9,$02,$00,$85,$00,$22,$0C,$DC   ;C073E5
 	.db $80,$A5,$00,$89,$10,$00,$D0,$28   ;C073ED|        |C07394;  
-CODE_C073F5:
+.lbl_C073F5
 	jsl.l CODE_C0666B                    ;C073F5|226B66C0|C0666B;  
-	bcc CODE_C073FE                      ;C073F9|9003    |C073FE;  
-	jmp.w CODE_C074C8                    ;C073FB|4CC874  |C074C8;  
-
-CODE_C073FE:
+	bcc .lbl_C073FE                      ;C073F9|9003    |C073FE;  
+	jmp.w .lbl_C074C8                    ;C073FB|4CC874  |C074C8;  
+.lbl_C073FE
 	tdc                                  ;C073FE|7B      |      ;  
 	sta.l $7E81A8                        ;C073FF|8FA8817E|7E81A8;  
 	sta.l $7E81B8                        ;C07403|8FB8817E|7E81B8;  
 	lda.l $7E81A2                        ;C07407|AFA2817E|7E81A2;  
-	beq CODE_C07420                      ;C0740B|F013    |C07420;  
+	beq .lbl_C07420                      ;C0740B|F013    |C07420;  
 	.db $A9,$00,$00,$85,$00,$22,$69,$DC   ;C0740D
 	.db $80,$A5,$00,$89,$FF,$F0,$F0,$03   ;C07415|        |C073BC;  
 	.db $4C,$0B,$75                       ;C0741D|        |C0750B;  
-
-CODE_C07420:
+.lbl_C07420
 	jsl.l CODE_C06EE5                    ;C07420|22E56EC0|C06EE5;  
 	lda.b $04                   ;C07424|A504    |000004;  
 	pha                                  ;C07426|48      |      ;  
@@ -1832,7 +1752,7 @@ CODE_C07420:
 	adc.b $00                            ;C0742D|6500    |000000;  
 	pha                                  ;C0742F|48      |      ;  
 	lda.l $7E8442                        ;C07430|AF42847E|7E8442;  
-	beq CODE_C0746E                      ;C07434|F038    |C0746E;  
+	beq .lbl_C0746E                      ;C07434|F038    |C0746E;  
 	lda.l $7E843E                        ;C07436|AF3E847E|7E843E;  
 	clc                                  ;C0743A|18      |      ;  
 	adc.w #$0010                         ;C0743B|691000  |      ;  
@@ -1859,8 +1779,7 @@ CODE_C07420:
 	lda.l $7E8440                        ;C07464|AF40847E|7E8440;  
 	sta.b $04                   ;C07468|8504    |000004;  
 	jsl.l func_80B161                    ;C0746A|2261B180|80B161;  
-
-CODE_C0746E:
+.lbl_C0746E
 	lda.l $7E843E                        ;C0746E|AF3E847E|7E843E;  
 	sta.b $00                            ;C07472|8500    |000000;  
 	lda.l $7E8440                        ;C07474|AF40847E|7E8440;  
@@ -1869,47 +1788,40 @@ CODE_C0746E:
 	jsl.l func_80D19F                    ;C0747E|229FD180|80D19F;  
 	jsl.l func_81C29C                    ;C07482|229CC281|81C29C;  
 	jsl.l func_80B5DD                    ;C07486|22DDB580|80B5DD;  
-	bcc CODE_C07496                      ;C0748A|900A    |C07496;  
+	bcc .lbl_C07496                      ;C0748A|900A    |C07496;  
 	.db $22,$4A,$85,$80,$22,$23,$BE,$80   ;C0748C|        |80854A;  
 	.db $80,$0A                           ;C07494|        |C074A0;  
-
-CODE_C07496:
+.lbl_C07496
 	jsl.l func_80854A                    ;C07496|224A8580|80854A;  
 	lda.l $7E81B0                        ;C0749A|AFB0817E|7E81B0;  
 	bne UNREACH_C0750A                   ;C0749E|D06A    |C0750A;  
 	lda.l $7E81A8                        ;C074A0|AFA8817E|7E81A8;  
-	beq CODE_C074B3                      ;C074A4|F00D    |C074B3;  
-
-CODE_C074A6:
+	beq .lbl_C074B3                      ;C074A4|F00D    |C074B3;  
+.lbl_C074A6
 	pha                                  ;C074A6|48      |      ;  
 	jsl.l CODE_C0666B                    ;C074A7|226B66C0|C0666B;  
 	pla                                  ;C074AB|68      |      ;  
 	dec a                                ;C074AC|3A      |      ;  
-	bne CODE_C074A6                      ;C074AD|D0F7    |C074A6;  
+	bne .lbl_C074A6                      ;C074AD|D0F7    |C074A6;  
 	pla                                  ;C074AF|68      |      ;  
-
-CODE_C074B0:
-	jmp.w CODE_C073FE                    ;C074B0|4CFE73  |C073FE;  
-
-CODE_C074B3:
+.lbl_C074B0
+	jmp.w .lbl_C073FE                    ;C074B0|4CFE73  |C073FE;  
+.lbl_C074B3
 	lda.l $7E81B8                        ;C074B3|AFB8817E|7E81B8;  
-	beq CODE_C074C2                      ;C074B7|F009    |C074C2;  
-
-CODE_C074B9:
+	beq .lbl_C074C2                      ;C074B7|F009    |C074C2;  
+.lbl_C074B9
 	pha                                  ;C074B9|48      |      ;  
 	jsl.l CODE_C06E4C                    ;C074BA|224C6EC0|C06E4C;  
 	pla                                  ;C074BE|68      |      ;  
 	dec a                                ;C074BF|3A      |      ;  
-	bne CODE_C074B9                      ;C074C0|D0F7    |C074B9;  
-
-CODE_C074C2:
+	bne .lbl_C074B9                      ;C074C0|D0F7    |C074B9;  
+.lbl_C074C2
 	pla                                  ;C074C2|68      |      ;  
-	bne CODE_C074B0                      ;C074C3|D0EB    |C074B0;  
-	jmp.w CODE_C073F5                    ;C074C5|4CF573  |C073F5;  
-
-CODE_C074C8:
+	bne .lbl_C074B0                      ;C074C3|D0EB    |C074B0;  
+	jmp.w .lbl_C073F5                    ;C074C5|4CF573  |C073F5;  
+.lbl_C074C8
 	jsl.l CODE_C06E70                    ;C074C8|22706EC0|C06E70;  
-	bcc CODE_C074C8                      ;C074CC|90FA    |C074C8;  
+	bcc .lbl_C074C8                      ;C074CC|90FA    |C074C8;  
 	jsl.l CODE_C07BB3                    ;C074CE|22B37BC0|C07BB3;  
 	tdc                                  ;C074D2|7B      |      ;  
 	sta.l $7E81A4                        ;C074D3|8FA4817E|7E81A4;  
@@ -1917,13 +1829,12 @@ CODE_C074C8:
 	lda.l $7E81A2                        ;C074DB|AFA2817E|7E81A2;  
 	bne UNREACH_C0751E                   ;C074DF|D03D    |C0751E;  
 	lda.l $7E81B6                        ;C074E1|AFB6817E|7E81B6;  
-	beq CODE_C07504                      ;C074E5|F01D    |C07504;  
+	beq .lbl_C07504                      ;C074E5|F01D    |C07504;  
 	.db $22,$4A,$85,$80,$A9,$00,$01,$85   ;C074E7|        |80854A;  
 	.db $00,$22,$64,$96,$80,$22,$84,$96   ;C074EF
 	.db $80,$22,$00,$8A,$80,$22,$B1,$85   ;C074F7|        |C0751B;  
 	.db $80,$22,$4A,$85,$80               ;C074FF|        |C07523;  
-
-CODE_C07504:
+.lbl_C07504
 	jsl.l CODE_C5D05D                    ;C07504|225DD0C5|C5D05D;  
 	plp                                  ;C07508|28      |      ;  
 	rtl                                  ;C07509|6B      |      ;  
@@ -1969,11 +1880,11 @@ CODE_C075BB:
 	jsl.l func_80854A                    ;C075D7|224A8580|80854A;  
 	jsl.l CODE_C072EF                    ;C075DB|22EF72C0|C072EF;  
 	lda.l $7E81A4                        ;C075DF|AFA4817E|7E81A4;  
-	beq CODE_C07634                      ;C075E3|F04F    |C07634;  
+	beq .lbl_C07634                      ;C075E3|F04F    |C07634;  
 
 CODE_C075E5:
 	jsl.l CODE_C0666B                    ;C075E5|226B66C0|C0666B;  
-	bcs CODE_C07634                      ;C075E9|B049    |C07634;  
+	bcs .lbl_C07634                      ;C075E9|B049    |C07634;  
 
 CODE_C075EB:
 	tdc                                  ;C075EB|7B      |      ;  
@@ -1983,12 +1894,11 @@ CODE_C075EB:
 	jsl.l func_80DCC6                    ;C075F5|22C6DC80|80DCC6;  
 	lda.b $00                            ;C075F9|A500    |000000;  
 	bit.w #$F0FF                         ;C075FB|89FFF0  |      ;  
-	beq CODE_C07603                      ;C075FE|F003    |C07603;  
+	beq .lbl_C07603                      ;C075FE|F003    |C07603;  
 
 UNREACH_C07600:
 	.db $4C,$43,$76                       ;C07600|        |C07643;  
-
-CODE_C07603:
+.lbl_C07603
 	lda.l $7E81B0                        ;C07603|AFB0817E|7E81B0;  
 	bne UNREACH_C07600                   ;C07607|D0F7    |C07600;  
 	jsl.l CODE_C06EE5                    ;C07609|22E56EC0|C06EE5;  
@@ -2001,25 +1911,21 @@ CODE_C07603:
 	pha                                  ;C07618|48      |      ;  
 	jsl.l func_80854A                    ;C07619|224A8580|80854A;  
 	lda.l $7E81A8                        ;C0761D|AFA8817E|7E81A8;  
-	beq CODE_C0762F                      ;C07621|F00C    |C0762F;  
-
-CODE_C07623:
+	beq .lbl_C0762F                      ;C07621|F00C    |C0762F;  
+.lbl_C07623
 	pha                                  ;C07623|48      |      ;  
 	jsl.l CODE_C0666B                    ;C07624|226B66C0|C0666B;  
 	pla                                  ;C07628|68      |      ;  
 	dec a                                ;C07629|3A      |      ;  
-	bne CODE_C07623                      ;C0762A|D0F7    |C07623;  
+	bne .lbl_C07623                      ;C0762A|D0F7    |C07623;  
 	pla                                  ;C0762C|68      |      ;  
-
-CODE_C0762D:
+.lbl_C0762D
 	bra CODE_C075EB                      ;C0762D|80BC    |C075EB;  
-
-CODE_C0762F:
+.lbl_C0762F
 	pla                                  ;C0762F|68      |      ;  
-	bne CODE_C0762D                      ;C07630|D0FB    |C0762D;  
+	bne .lbl_C0762D                      ;C07630|D0FB    |C0762D;  
 	bra CODE_C075E5                      ;C07632|80B1    |C075E5;  
-
-CODE_C07634:
+.lbl_C07634
 	tdc                                  ;C07634|7B      |      ;  
 	sta.l $7E81A4                        ;C07635|8FA4817E|7E81A4;  
 	sta.l $7E8462                        ;C07639|8F62847E|7E8462;  
@@ -2034,10 +1940,9 @@ CODE_C07634:
 CODE_C07656:
 	jsl.l func_808A07                    ;C07656|22078A80|808A07;  
 	lda.b $00                            ;C0765A|A500    |000000;  
-	beq CODE_C07662                      ;C0765C|F004    |C07662;  
+	beq .lbl_C07662                      ;C0765C|F004    |C07662;  
 	.db $22,$00,$8A,$80                   ;C0765E|        |808A00;  
-
-CODE_C07662:
+.lbl_C07662
 	rts                                  ;C07662|60      |      ;  
 
 CODE_C07663:
@@ -2061,30 +1966,26 @@ CODE_C0768A:
 	php                                  ;C0768A|08      |      ;  
 	rep #$30                             ;C0768B|C230    |      ;  
 	lda.l $7E81A8                        ;C0768D|AFA8817E|7E81A8;  
-	beq CODE_C0769E                      ;C07691|F00B    |C0769E;  
-
-CODE_C07693:
+	beq .lbl_C0769E                      ;C07691|F00B    |C0769E;  
+.lbl_C07693
 	pha                                  ;C07693|48      |      ;  
 	jsl.l CODE_C0666B                    ;C07694|226B66C0|C0666B;  
 	pla                                  ;C07698|68      |      ;  
 	dec a                                ;C07699|3A      |      ;  
-	bne CODE_C07693                      ;C0769A|D0F7    |C07693;  
-	bra CODE_C076AA                      ;C0769C|800C    |C076AA;  
-
-CODE_C0769E:
+	bne .lbl_C07693                      ;C0769A|D0F7    |C07693;  
+	bra .lbl_C076AA                      ;C0769C|800C    |C076AA;  
+.lbl_C0769E
 	lda.l $7E81BA                        ;C0769E|AFBA817E|7E81BA;  
-	bne CODE_C076AA                      ;C076A2|D006    |C076AA;  
+	bne .lbl_C076AA                      ;C076A2|D006    |C076AA;  
 	jsl.l CODE_C0666B                    ;C076A4|226B66C0|C0666B;  
-	bcs CODE_C076CE                      ;C076A8|B024    |C076CE;  
-
-CODE_C076AA:
+	bcs .lbl_C076CE                      ;C076A8|B024    |C076CE;  
+.lbl_C076AA
 	tdc                                  ;C076AA|7B      |      ;  
 	sta.l $7E81A8                        ;C076AB|8FA8817E|7E81A8;  
 	lda.l $7E81B0                        ;C076AF|AFB0817E|7E81B0;  
-	beq CODE_C076B8                      ;C076B3|F003    |C076B8;  
+	beq .lbl_C076B8                      ;C076B3|F003    |C076B8;  
 	.db $4C,$43,$76                       ;C076B5|        |C07643;  
-
-CODE_C076B8:
+.lbl_C076B8
 	jsl.l CODE_C06EE5                    ;C076B8|22E56EC0|C06EE5;  
 	lda.b $04                   ;C076BC|A504    |000004;  
 	pha                                  ;C076BE|48      |      ;  
@@ -2096,8 +1997,7 @@ CODE_C076B8:
 	plp                                  ;C076CB|28      |      ;  
 	clc                                  ;C076CC|18      |      ;  
 	rtl                                  ;C076CD|6B      |      ;  
-
-CODE_C076CE:
+.lbl_C076CE
 	tdc                                  ;C076CE|7B      |      ;  
 	sta.l $7E81A4                        ;C076CF|8FA4817E|7E81A4;  
 	sta.l $7E81A6                        ;C076D3|8FA6817E|7E81A6;  
@@ -2113,47 +2013,44 @@ CODE_C076E9:
 	php                                  ;C076E9|08      |      ;  
 	sep #$30                             ;C076EA|E230    |      ;  
 	lda.l debugMode                   ;C076EC|AF008080|808000;  
-	bne CODE_C07712                      ;C076F0|D020    |C07712;  
+	bne .lbl_C07712                      ;C076F0|D020    |C07712;  
 	.db $A9,$02,$85,$00,$22,$0C,$DC,$80   ;C076F2
 	.db $A5,$00,$89,$10,$F0,$12,$22,$DF   ;C076FA|        |000000;  
 	.db $E7,$80,$22,$9B,$E6,$80,$22,$C5   ;C07702|        |000080;  
 	.db $E8,$80,$22,$B3,$7B,$C0,$28,$6B   ;C0770A
-CODE_C07712:
+.lbl_C07712
 	lda.b #$13                           ;C07712|A913    |      ;  
 	sta.b $00                            ;C07714|8500    |000000;  
 	jsl.l CODE_C285A2                    ;C07716|22A285C2|C285A2;  
 	stz.b w0001                            ;C0771A|6401    |000001;  
 	stz.b $00                            ;C0771C|6400    |000000;  
 	lda.b $02                   ;C0771E|A502    |000002;  
-	bne CODE_C07728                      ;C07720|D006    |C07728;  
+	bne .lbl_C07728                      ;C07720|D006    |C07728;  
 	lda.b $03                            ;C07722|A503    |000003;  
-	beq CODE_C07728                      ;C07724|F002    |C07728;  
+	beq .lbl_C07728                      ;C07724|F002    |C07728;  
 	inc.b $00                            ;C07726|E600    |000000;  
-
-CODE_C07728:
+.lbl_C07728
 	jsl.l func_81A169                    ;C07728|2269A181|81A169;  
 	lda.b #$7E                           ;C0772C|A97E    |      ;  
 	pha                                  ;C0772E|48      |      ;  
 	plb                                  ;C0772F|AB      |      ;  
 	ldy.b #$13                           ;C07730|A013    |      ;  
-
-CODE_C07732:
+.lbl_C07732
 	lda.w $80EA,y                        ;C07732|B9EA80  |7E80EA;  
-	beq CODE_C07767                      ;C07735|F030    |C07767;  
+	beq .lbl_C07767                      ;C07735|F030    |C07767;  
 	lda.w $80FE,y                        ;C07737|B9FE80  |7E80FE;  
 	sta.b $02                   ;C0773A|8502    |000002;  
 	sty.b $00                            ;C0773C|8400    |000000;  
 	lda.w $80D6,y                        ;C0773E|B9D680  |7E80D6;  
 	sta.b w0001                            ;C07741|8501    |000001;  
-	beq CODE_C07754                      ;C07743|F00F    |C07754;  
+	beq .lbl_C07754                      ;C07743|F00F    |C07754;  
 	lda.w $814E,y                        ;C07745|B94E81  |7E814E;  
 	sta.b $03                            ;C07748|8503    |000003;  
 	lda.w $8126,y                        ;C0774A|B92681  |7E8126;  
 	sta.b $04                   ;C0774D|8504    |000004;  
 	lda.w $813A,y                        ;C0774F|B93A81  |7E813A;  
 	sta.b $05                            ;C07752|8505    |000005;  
-
-CODE_C07754:
+.lbl_C07754
 	phy                                  ;C07754|5A      |      ;  
 	phb                                  ;C07755|8B      |      ;  
 	jsl.l func_81C322                    ;C07756|2222C381|81C322;  
@@ -2163,10 +2060,9 @@ CODE_C07754:
 	lda.w $8112,y                        ;C0775E|B91281  |7E8112;  
 	sta.b w0001                            ;C07761|8501    |000001;  
 	jsl.l func_81C2DC                    ;C07763|22DCC281|81C2DC;  
-
-CODE_C07767:
+.lbl_C07767
 	dey                                  ;C07767|88      |      ;  
-	bpl CODE_C07732                      ;C07768|10C8    |C07732;  
+	bpl .lbl_C07732                      ;C07768|10C8    |C07732;  
 	lda.w $8139                          ;C0776A|AD3981  |7E8139;  
 	sta.w $81A0                          ;C0776D|8DA081  |7E81A0;  
 	lda.w $814D                          ;C07770|AD4D81  |7E814D;  
@@ -2211,12 +2107,11 @@ CODE_C07767:
 	sta.b w0001                            ;C077C3|8501    |000001;  
 	jsl.l CODE_C3909E                    ;C077C5|229E90C3|C3909E;  
 	lda.b $00                            ;C077C9|A500    |000000;  
-	bpl CODE_C077D5                      ;C077CB|1008    |C077D5;  
+	bpl .lbl_C077D5                      ;C077CB|1008    |C077D5;  
 	ldx.w $80C8                          ;C077CD|AEC880  |7E80C8;  
 	ldy.w $80CA                          ;C077D0|ACCA80  |7E80CA;  
 	bra CODE_C077DB                      ;C077D3|8006    |C077DB;  
-
-CODE_C077D5:
+.lbl_C077D5
 	ldx.w $80CC                          ;C077D5|AECC80  |7E80CC;  
 	ldy.w $80CE                          ;C077D8|ACCE80  |7E80CE;  
 
@@ -2244,12 +2139,11 @@ CODE_C077DB:
 	bcs UNREACH_C0780C                   ;C07804|B006    |C0780C;  
 	iny                                  ;C07806|C8      |      ;  
 	cpy.w #$0003                         ;C07807|C00300  |      ;  
-	bcc CODE_C07812                      ;C0780A|9006    |C07812;  
+	bcc .lbl_C07812                      ;C0780A|9006    |C07812;  
 
 UNREACH_C0780C:
 	.db $22,$B3,$7B,$C0,$28,$6B           ;C0780C|        |C07BB3;  
-
-CODE_C07812:
+.lbl_C07812
 	stz.w $80BE                          ;C07812|9CBE80  |7E80BE;  
 	jsl.l func_81A0AB                    ;C07815|22ABA081|81A0AB;  
 
@@ -2269,7 +2163,7 @@ CODE_C07819:
 	plb                                  ;C07836|AB      |      ;  
 	lda.w $80BE                          ;C07837|ADBE80  |7E80BE;  
 	cmp.w #$000F                         ;C0783A|C90F00  |      ;  
-	beq CODE_C078A0                      ;C0783D|F061    |C078A0;  
+	beq .lbl_C078A0                      ;C0783D|F061    |C078A0;  
 	inc a                                ;C0783F|1A      |      ;  
 	sta.w $80BE                          ;C07840|8DBE80  |7E80BE;  
 	sta.b $04                   ;C07843|8504    |000004;  
@@ -2291,28 +2185,25 @@ CODE_C07819:
 	rts                                  ;C07867|60      |      ;  
 	jsl.l func_80E8ED                    ;C07868|22EDE880|80E8ED;  
 	jsl.l func_80E8D2                    ;C0786C|22D2E880|80E8D2;  
-
-CODE_C07870:
+.lbl_C07870
 	jsl.l func_80854A                    ;C07870|224A8580|80854A;  
 	plb                                  ;C07874|AB      |      ;  
 	jmp.w CODE_C07819                    ;C07875|4C1978  |C07819;  
 	tya                                  ;C07878|98      |      ;  
-	beq CODE_C07881                      ;C07879|F006    |C07881;  
+	beq .lbl_C07881                      ;C07879|F006    |C07881;  
 	jsl.l func_80E7DF                    ;C0787B|22DFE780|80E7DF;  
-	bra CODE_C07870                      ;C0787F|80EF    |C07870;  
-
-CODE_C07881:
+	bra .lbl_C07870                      ;C0787F|80EF    |C07870;  
+.lbl_C07881
 	plb                                  ;C07881|AB      |      ;  
 	jsl.l func_80E7DF                    ;C07882|22DFE780|80E7DF;  
 	jsl.l func_80E69B                    ;C07886|229BE680|80E69B;  
 	jsl.l func_81A074                    ;C0788A|2274A081|81A074;  
 	jsl.l func_80B5DD                    ;C0788E|22DDB580|80B5DD;  
-	bcc CODE_C078C6                      ;C07892|9032    |C078C6;  
+	bcc .lbl_C078C6                      ;C07892|9032    |C078C6;  
 	.db $22,$4A,$85,$80,$80,$3A           ;C07894|        |80854A;  
 	jsl.l func_80E69B                    ;C0789A|229BE680|80E69B;  
-	bra CODE_C07870                      ;C0789E|80D0    |C07870;  
-
-CODE_C078A0:
+	bra .lbl_C07870                      ;C0789E|80D0    |C07870;  
+.lbl_C078A0
 	jsl.l func_80B5DD                    ;C078A0|22DDB580|80B5DD;  
 	php                                  ;C078A4|08      |      ;  
 	jsl.l func_81A074                    ;C078A5|2274A081|81A074;  
@@ -2321,19 +2212,17 @@ CODE_C078A0:
 	lda.l $7E80CA                        ;C078AF|AFCA807E|7E80CA;  
 	sta.b $02                   ;C078B3|8502    |000002;  
 	plp                                  ;C078B5|28      |      ;  
-	bcs CODE_C078D0                      ;C078B6|B018    |C078D0;  
+	bcs .lbl_C078D0                      ;C078B6|B018    |C078D0;  
 	stz.b $04                   ;C078B8|6404    |000004;  
 	jsl.l func_81A104                    ;C078BA|2204A181|81A104;  
 	jsl.l func_80D19F                    ;C078BE|229FD180|80D19F;  
 	jsl.l func_81C29C                    ;C078C2|229CC281|81C29C;  
-
-CODE_C078C6:
+.lbl_C078C6
 	jsl.l func_80854A                    ;C078C6|224A8580|80854A;  
 	jsl.l func_80BE5F                    ;C078CA|225FBE80|80BE5F;  
 	plp                                  ;C078CE|28      |      ;  
 	rtl                                  ;C078CF|6B      |      ;  
-
-CODE_C078D0:
+.lbl_C078D0
 	jsl.l func_8196DC                    ;C078D0|22DC9681|8196DC;  
 	lda.l $7E80C4                        ;C078D4|AFC4807E|7E80C4;  
 	sta.b $00                            ;C078D8|8500    |000000;  
@@ -2344,7 +2233,7 @@ CODE_C078D0:
 	plp                                  ;C078E8|28      |      ;  
 	rtl                                  ;C078E9|6B      |      ;  
 	tya                                  ;C078EA|98      |      ;  
-	bne CODE_C07870                      ;C078EB|D083    |C07870;  
+	bne .lbl_C07870                      ;C078EB|D083    |C07870;  
 	lda.w #$0008                         ;C078ED|A90800  |      ;  
 	sta.l $7E80BE                        ;C078F0|8FBE807E|7E80BE;  
 	jsl.l func_81A074                    ;C078F4|2274A081|81A074;  
@@ -2355,16 +2244,15 @@ CODE_C078D0:
 	plb                                  ;C07908|AB      |      ;  
 	sep #$30                             ;C07909|E230    |      ;  
 	ldx.b #$12                           ;C0790B|A212    |      ;  
-
-CODE_C0790D:
+.lbl_C0790D
 	lda.w $80EA,x                        ;C0790D|BDEA80  |7E80EA;  
-	bne CODE_C07952                      ;C07910|D040    |C07952;  
+	bne .lbl_C07952                      ;C07910|D040    |C07952;  
 	stx.b $00                            ;C07912|8600    |000000;  
 	phx                                  ;C07914|DA      |      ;  
 	jsl.l CODE_C210D4                    ;C07915|22D410C2|C210D4;  
 	plx                                  ;C07919|FA      |      ;  
 	lda.b $00                            ;C0791A|A500    |000000;  
-	beq CODE_C0797E                      ;C0791C|F060    |C0797E;  
+	beq .lbl_C0797E                      ;C0791C|F060    |C0797E;  
 	ldy.b $03                            ;C0791E|A403    |000003;  
 	stx.b $00                            ;C07920|8600    |000000;  
 	phx                                  ;C07922|DA      |      ;  
@@ -2374,17 +2262,15 @@ CODE_C0790D:
 	plx                                  ;C07929|FA      |      ;  
 	sty.b $03                            ;C0792A|8403    |000003;  
 	lda.b $02                   ;C0792C|A502    |000002;  
-	bne CODE_C07938                      ;C0792E|D008    |C07938;  
+	bne .lbl_C07938                      ;C0792E|D008    |C07938;  
 	lda.b $05                            ;C07930|A505    |000005;  
-	beq CODE_C0793C                      ;C07932|F008    |C0793C;  
+	beq .lbl_C0793C                      ;C07932|F008    |C0793C;  
 	lda.b #$00                           ;C07934|A900    |      ;  
 	bra CODE_C07944                      ;C07936|800C    |C07944;  
-
-CODE_C07938:
+.lbl_C07938
 	lda.b #$04                           ;C07938|A904    |      ;  
 	bra CODE_C07944                      ;C0793A|8008    |C07944;  
-
-CODE_C0793C:
+.lbl_C0793C
 	txy                                  ;C0793C|9B      |      ;  
 	ldx.b $04                   ;C0793D|A604    |000004;  
 	lda.l DATA8_C06DDC,x                 ;C0793F|BFDC6DC0|C06DDC;  
@@ -2398,15 +2284,14 @@ CODE_C07944:
 	jsl.l func_81C4C6                    ;C0794A|22C6C481|81C4C6;  
 	plb                                  ;C0794E|AB      |      ;  
 	plx                                  ;C0794F|FA      |      ;  
-	bra CODE_C0797E                      ;C07950|802C    |C0797E;  
-
-CODE_C07952:
+	bra .lbl_C0797E                      ;C07950|802C    |C0797E;  
+.lbl_C07952
 	cmp.b #$02                           ;C07952|C902    |      ;  
-	bne CODE_C0797B                      ;C07954|D025    |C0797B;  
+	bne .lbl_C0797B                      ;C07954|D025    |C0797B;  
 	stx.b $00                            ;C07956|8600    |000000;  
 	lda.w $80D6,x                        ;C07958|BDD680  |7E80D6;  
 	sta.b w0001                            ;C0795B|8501    |000001;  
-	beq CODE_C07973                      ;C0795D|F014    |C07973;  
+	beq .lbl_C07973                      ;C0795D|F014    |C07973;  
 	lda.w $818A,x                        ;C0795F|BD8A81  |7E818A;  
 	sta.b $03                            ;C07962|8503    |000003;  
 	lda.w $80FE,x                        ;C07964|BDFE80  |7E80FE;  
@@ -2415,20 +2300,17 @@ CODE_C07952:
 	sta.b $04                   ;C0796C|8504    |000004;  
 	lda.w $8176,x                        ;C0796E|BD7681  |7E8176;  
 	sta.b $05                            ;C07971|8505    |000005;  
-
-CODE_C07973:
+.lbl_C07973
 	phx                                  ;C07973|DA      |      ;  
 	phb                                  ;C07974|8B      |      ;  
 	jsl.l func_81C322                    ;C07975|2222C381|81C322;  
 	plb                                  ;C07979|AB      |      ;  
 	plx                                  ;C0797A|FA      |      ;  
-
-CODE_C0797B:
+.lbl_C0797B
 	stz.w $80EA,x                        ;C0797B|9EEA80  |7E80EA;  
-
-CODE_C0797E:
+.lbl_C0797E
 	dex                                  ;C0797E|CA      |      ;  
-	bpl CODE_C0790D                      ;C0797F|108C    |C0790D;  
+	bpl .lbl_C0790D                      ;C0797F|108C    |C0790D;  
 	stz.w $80FD                          ;C07981|9CFD80  |7E80FD;  
 	rep #$30                             ;C07984|C230    |      ;  
 	jmp.w CODE_C07819                    ;C07986|4C1978  |C07819;
@@ -2463,12 +2345,11 @@ CODE_C079A7:
 	sta.w $80BC                          ;C079B3|8DBC80  |7E80BC;  
 	jsl.l func_81A0AB                    ;C079B6|22ABA081|81A0AB;  
 	stz.w $80BE                          ;C079BA|9CBE80  |7E80BE;  
-
-CODE_C079BD:
+.lbl_C079BD
 	inc.w $80BE                          ;C079BD|EEBE80  |7E80BE;  
 	lda.w $80BE                          ;C079C0|ADBE80  |7E80BE;  
 	cmp.w #$0011                         ;C079C3|C91100  |      ;  
-	bcs CODE_C079F3                      ;C079C6|B02B    |C079F3;  
+	bcs .lbl_C079F3                      ;C079C6|B02B    |C079F3;  
 	sta.b $04                   ;C079C8|8504    |000004;  
 	lda.w $80CC                          ;C079CA|ADCC80  |7E80CC;  
 	sta.b $00                            ;C079CD|8500    |000000;  
@@ -2485,12 +2366,11 @@ CODE_C079BD:
 	plb                                  ;C079E8|AB      |      ;  
 	lda.b $00                            ;C079E9|A500    |000000;  
 	bit.w #$F0FF                         ;C079EB|89FFF0  |      ;  
-	beq CODE_C079BD                      ;C079EE|F0CD    |C079BD;  
+	beq .lbl_C079BD                      ;C079EE|F0CD    |C079BD;  
 	plp                                  ;C079F0|28      |      ;  
 	sec                                  ;C079F1|38      |      ;  
 	rtl                                  ;C079F2|6B      |      ;  
-
-CODE_C079F3:
+.lbl_C079F3
 	plp                                  ;C079F3|28      |      ;  
 	clc                                  ;C079F4|18      |      ;  
 	rtl                                  ;C079F5|6B      |      ;  
@@ -2502,11 +2382,10 @@ CODE_C079F6:
 	lda.b $00                            ;C079FD|A500    |000000;  
 	pha                                  ;C079FF|48      |      ;  
 	cmp.b #$02                           ;C07A00|C902    |      ;  
-	beq CODE_C07A09                      ;C07A02|F005    |C07A09;  
+	beq .lbl_C07A09                      ;C07A02|F005    |C07A09;  
 	ldx.b #$FF                           ;C07A04|A2FF    |      ;  
 	jmp.w CODE_C07A9C                    ;C07A06|4C9C7A  |C07A9C;  
-
-CODE_C07A09:
+.lbl_C07A09
 	lda.b #$13                           ;C07A09|A913    |      ;  
 	sta.b $00                            ;C07A0B|8500    |000000;  
 	jsl.l CODE_C210AC                    ;C07A0D|22AC10C2|C210AC;  
@@ -2524,24 +2403,22 @@ CODE_C07A09:
 	sta.b w0001                            ;C07A26|8501    |000001;  
 	lda.b $02                   ;C07A28|A502    |000002;  
 	bit.b #$80                           ;C07A2A|8980    |      ;  
-	bne CODE_C07A40                      ;C07A2C|D012    |C07A40;  
+	bne .lbl_C07A40                      ;C07A2C|D012    |C07A40;  
 	cpy.b #$83                           ;C07A2E|C083    |      ;  
-	beq CODE_C07A54                      ;C07A30|F022    |C07A54;  
+	beq .lbl_C07A54                      ;C07A30|F022    |C07A54;  
 	.db $22,$AF,$59,$C3,$A5,$02,$89,$80   ;C07A32|        |C359AF;  
 	.db $F0,$18,$A2,$06,$80,$5A           ;C07A3A|        |C07A54;  
-
-CODE_C07A40:
+.lbl_C07A40
 	jsl.l CODE_C359AF                    ;C07A40|22AF59C3|C359AF;  
 	lda.b $02                   ;C07A44|A502    |000002;  
 	bit.b #$80                           ;C07A46|8980    |      ;  
-	bne CODE_C07A54                      ;C07A48|D00A    |C07A54;  
+	bne .lbl_C07A54                      ;C07A48|D00A    |C07A54;  
 	lda.b w0001                            ;C07A4A|A501    |000001;  
 	cmp.b #$83                           ;C07A4C|C983    |      ;  
-	beq CODE_C07A54                      ;C07A4E|F004    |C07A54;  
+	beq .lbl_C07A54                      ;C07A4E|F004    |C07A54;  
 	ldx.b #$02                           ;C07A50|A202    |      ;  
 	bra CODE_C07A9A                      ;C07A52|8046    |C07A9A;  
-
-CODE_C07A54:
+.lbl_C07A54
 	lda.b w0001,s                          ;C07A54|A301    |000001;  
 	dec a                                ;C07A56|3A      |      ;  
 	sta.b $00                            ;C07A57|8500    |000000;  
@@ -2556,7 +2433,7 @@ CODE_C07A54:
 	sta.b w0001                            ;C07A6A|8501    |000001;  
 	lda.b $02                   ;C07A6C|A502    |000002;  
 	bit.b #$80                           ;C07A6E|8980    |      ;  
-	bne CODE_C07A84                      ;C07A70|D012    |C07A84;  
+	bne .lbl_C07A84                      ;C07A70|D012    |C07A84;  
 	cpy.b #$83                           ;C07A72|C083    |      ;  
 	beq UNREACH_C07A98                   ;C07A74|F022    |C07A98;  
 	jsl.l CODE_C359AF                    ;C07A76|22AF59C3|C359AF;  
@@ -2565,8 +2442,7 @@ CODE_C07A54:
 	beq UNREACH_C07A98                   ;C07A7E|F018    |C07A98;  
 	ldx.b #$00                           ;C07A80|A200    |      ;  
 	bra CODE_C07A9A                      ;C07A82|8016    |C07A9A;  
-
-CODE_C07A84:
+.lbl_C07A84
 	jsl.l CODE_C359AF                    ;C07A84|22AF59C3|C359AF;  
 	lda.b $02                   ;C07A88|A502    |000002;  
 	bit.b #$80                           ;C07A8A|8980    |      ;  
@@ -2590,7 +2466,7 @@ CODE_C07A9C:
 	sta.b $00                            ;C07A9F|8500    |000000;  
 	jsl.l CODE_C210FF                    ;C07AA1|22FF10C2|C210FF;  
 	plx                                  ;C07AA5|FA      |      ;  
-	bmi CODE_C07AC5                      ;C07AA6|301D    |C07AC5;  
+	bmi .lbl_C07AC5                      ;C07AA6|301D    |C07AC5;  
 	lda.b #$7F                           ;C07AA8|A97F    |      ;  
 	trb.b $03                            ;C07AAA|1403    |000003;  
 	txa                                  ;C07AAC|8A      |      ;  
@@ -2604,8 +2480,7 @@ CODE_C07A9C:
 	adc.b $05                            ;C07ABD|6505    |000005;  
 	sta.b $05                            ;C07ABF|8505    |000005;  
 	jsl.l CODE_C06CF4                    ;C07AC1|22F46CC0|C06CF4;  
-
-CODE_C07AC5:
+.lbl_C07AC5
 	pla                                  ;C07AC5|68      |      ;  
 	asl a                                ;C07AC6|0A      |      ;  
 	tax                                  ;C07AC7|AA      |      ;  
@@ -2618,20 +2493,19 @@ CODE_C07AC5:
 	pha                                  ;C07AD8|48      |      ;  
 	plb                                  ;C07AD9|AB      |      ;  
 	lda.w $80FD                          ;C07ADA|ADFD80  |7E80FD;  
-	beq CODE_C07B11                      ;C07ADD|F032    |C07B11;  
+	beq .lbl_C07B11                      ;C07ADD|F032    |C07B11;  
 	lda.w $8111                          ;C07ADF|AD1181  |7E8111;  
 	sta.b $02                   ;C07AE2|8502    |000002;  
 	lda.w $80E9                          ;C07AE4|ADE980  |7E80E9;  
 	sta.b w0001                            ;C07AE7|8501    |000001;  
-	beq CODE_C07AFA                      ;C07AE9|F00F    |C07AFA;  
+	beq .lbl_C07AFA                      ;C07AE9|F00F    |C07AFA;  
 	lda.w $8161                          ;C07AEB|AD6181  |7E8161;  
 	sta.b $03                            ;C07AEE|8503    |000003;  
 	lda.w $8139                          ;C07AF0|AD3981  |7E8139;  
 	sta.b $04                   ;C07AF3|8504    |000004;  
 	lda.w $814D                          ;C07AF5|AD4D81  |7E814D;  
 	sta.b $05                            ;C07AF8|8505    |000005;  
-
-CODE_C07AFA:
+.lbl_C07AFA
 	lda.b #$13                           ;C07AFA|A913    |      ;  
 	sta.b $00                            ;C07AFC|8500    |000000;  
 	phb                                  ;C07AFE|8B      |      ;  
@@ -2642,8 +2516,7 @@ CODE_C07AFA:
 	lda.w $8125                          ;C07B08|AD2581  |7E8125;  
 	sta.b w0001                            ;C07B0B|8501    |000001;  
 	jsl.l func_81C2DC                    ;C07B0D|22DCC281|81C2DC;  
-
-CODE_C07B11:
+.lbl_C07B11
 	rep #$30                             ;C07B11|C230    |      ;  
 	lda.w #$0006                         ;C07B13|A90600  |      ;  
 	sta.w $80BC                          ;C07B16|8DBC80  |7E80BC;  
@@ -2668,8 +2541,7 @@ CODE_C07B11:
 	sta.b $00                            ;C07B40|8500    |000000;  
 	jsl.l func_809664                    ;C07B42|22649680|809664;  
 	stz.w $80BE                          ;C07B46|9CBE80  |7E80BE;  
-
-CODE_C07B49:
+.lbl_C07B49
 	inc.w $80BE                          ;C07B49|EEBE80  |7E80BE;  
 	lda.w $80BE                          ;C07B4C|ADBE80  |7E80BE;  
 	sta.b $04                   ;C07B4F|8504    |000004;  
@@ -2688,7 +2560,7 @@ CODE_C07B49:
 	jsl.l func_80969A                    ;C07B78|229A9680|80969A;  
 	plb                                  ;C07B7C|AB      |      ;  
 	lda.b $00                            ;C07B7D|A500    |000000;  
-	beq CODE_C07B9B                      ;C07B7F|F01A    |C07B9B;  
+	beq .lbl_C07B9B                      ;C07B7F|F01A    |C07B9B;  
 	lda.w #$0000                         ;C07B81|A90000  |      ;  
 	sta.b $00                            ;C07B84|8500    |000000;  
 	phb                                  ;C07B86|8B      |      ;  
@@ -2696,11 +2568,10 @@ CODE_C07B49:
 	plb                                  ;C07B8B|AB      |      ;  
 	lda.b $00                            ;C07B8C|A500    |000000;  
 	bit.w #$F0FF                         ;C07B8E|89FFF0  |      ;  
-	beq CODE_C07B49                      ;C07B91|F0B6    |C07B49;  
+	beq .lbl_C07B49                      ;C07B91|F0B6    |C07B49;  
 	jsl.l func_80967A                    ;C07B93|227A9680|80967A;  
 	jsl.l func_80854A                    ;C07B97|224A8580|80854A;  
-
-CODE_C07B9B:
+.lbl_C07B9B
 	plp                                  ;C07B9B|28      |      ;  
 	rtl                                  ;C07B9C|6B      |      ;  
 
@@ -2733,16 +2604,14 @@ CODE_C07BB3:
 	sta.b $00                            ;C07BC0|8500    |000000;  
 	jsl.l CODE_C285A2                    ;C07BC2|22A285C2|C285A2;  
 	lda.b $02                   ;C07BC6|A502    |000002;  
-	bne CODE_C07BCE                      ;C07BC8|D004    |C07BCE;  
+	bne .lbl_C07BCE                      ;C07BC8|D004    |C07BCE;  
 	lda.b $03                            ;C07BCA|A503    |000003;  
-	bne CODE_C07BD6                      ;C07BCC|D008    |C07BD6;  
-
-CODE_C07BCE:
+	bne .lbl_C07BD6                      ;C07BCC|D008    |C07BD6;  
+.lbl_C07BCE
 	stz.b w0001                            ;C07BCE|6401    |000001;  
 	stz.b $00                            ;C07BD0|6400    |000000;  
 	jsl.l func_81A169                    ;C07BD2|2269A181|81A169;  
-
-CODE_C07BD6:
+.lbl_C07BD6
 	lda.b #$13                           ;C07BD6|A913    |      ;  
 	sta.b $00                            ;C07BD8|8500    |000000;  
 	jsl.l CODE_C210AC                    ;C07BDA|22AC10C2|C210AC;  
@@ -2819,20 +2688,18 @@ CODE_C07C05:
 
 CODE_C07C89:
 	php                                  ;C07C89|08      |      ;  
-
-CODE_C07C8A:
+.lbl_C07C8A
 	rep #$20                             ;C07C8A|C220    |      ;  
 	lda.l $7E80BC                        ;C07C8C|AFBC807E|7E80BC;  
 	cmp.w #$0002                         ;C07C90|C90200  |      ;  
-	beq CODE_C07CA9                      ;C07C93|F014    |C07CA9;  
+	beq .lbl_C07CA9                      ;C07C93|F014    |C07CA9;  
 	cmp.w #$0003                         ;C07C95|C90300  |      ;  
-	beq CODE_C07CA9                      ;C07C98|F00F    |C07CA9;  
+	beq .lbl_C07CA9                      ;C07C98|F00F    |C07CA9;  
 	lda.w #$0002                         ;C07C9A|A90200  |      ;  
 	sta.l $7E80BC                        ;C07C9D|8FBC807E|7E80BC;  
 	jsl.l CODE_C07DB7                    ;C07CA1|22B77DC0|C07DB7;  
 	jsl.l CODE_C07D52                    ;C07CA5|22527DC0|C07D52;  
-
-CODE_C07CA9:
+.lbl_C07CA9
 	lda.l $7E80CC                        ;C07CA9|AFCC807E|7E80CC;  
 	sta.b $00                            ;C07CAD|8500    |000000;  
 	lda.l $7E80CE                        ;C07CAF|AFCE807E|7E80CE;  
@@ -2851,23 +2718,21 @@ CODE_C07CC7:
 	sta.b $00                            ;C07CCC|8500    |000000;  
 	jsl.l CODE_C285A2                    ;C07CCE|22A285C2|C285A2;  
 	lda.b $02                   ;C07CD2|A502    |000002;  
-	bne CODE_C07C8A                      ;C07CD4|D0B4    |C07C8A;  
+	bne .lbl_C07C8A                      ;C07CD4|D0B4    |C07C8A;  
 	lda.b $03                            ;C07CD6|A503    |000003;  
-	beq CODE_C07C8A                      ;C07CD8|F0B0    |C07C8A;  
+	beq .lbl_C07C8A                      ;C07CD8|F0B0    |C07C8A;  
 	rep #$20                             ;C07CDA|C220    |      ;  
 	lda.l $7E80BC                        ;C07CDC|AFBC807E|7E80BC;  
 	cmp.w #$0002                         ;C07CE0|C90200  |      ;  
-	beq CODE_C07CF2                      ;C07CE3|F00D    |C07CF2;  
+	beq .lbl_C07CF2                      ;C07CE3|F00D    |C07CF2;  
 	cmp.w #$0003                         ;C07CE5|C90300  |      ;  
-	beq CODE_C07CF9                      ;C07CE8|F00F    |C07CF9;  
+	beq .lbl_C07CF9                      ;C07CE8|F00F    |C07CF9;  
 	jsl.l CODE_C07DB7                    ;C07CEA|22B77DC0|C07DB7;  
 	jsl.l CODE_C07D52                    ;C07CEE|22527DC0|C07D52;  
-
-CODE_C07CF2:
+.lbl_C07CF2
 	lda.w #$0003                         ;C07CF2|A90300  |      ;  
 	sta.l $7E80BC                        ;C07CF5|8FBC807E|7E80BC;  
-
-CODE_C07CF9:
+.lbl_C07CF9
 	rep #$20                             ;C07CF9|C220    |      ;  
 	lda.l $7E80CC                        ;C07CFB|AFCC807E|7E80CC;  
 	sta.b $00                            ;C07CFF|8500    |000000;  
@@ -2885,14 +2750,13 @@ CODE_C07D19:
 	rep #$20                             ;C07D1A|C220    |      ;  
 	jsl.l func_81A1A8                    ;C07D1C|22A8A181|81A1A8;  
 	lda.b $00                            ;C07D20|A500    |000000;  
-	beq CODE_C07D47                      ;C07D22|F023    |C07D47;  
+	beq .lbl_C07D47                      ;C07D22|F023    |C07D47;  
 	.db $A9,$02,$00,$8F,$BC,$80,$7E,$AF   ;C07D24
 	.db $CC,$80,$7E,$85,$00,$AF,$CE,$80   ;C07D2C|        |007E80;  
 	.db $7E,$85,$02,$22,$2A,$A1,$81,$22   ;C07D34|        |000285;  
 	.db $9F,$D1,$80,$22,$9C,$C2,$81,$22   ;C07D3C|        |2280D1;  
 	.db $4A,$85,$80                       ;C07D44
-
-CODE_C07D47:
+.lbl_C07D47
 	plp                                  ;C07D47|28      |      ;  
 	rtl                                  ;C07D48|6B      |      ;  
 
@@ -2940,22 +2804,20 @@ CODE_C07DB7:
 	pha                                  ;C07DC4|48      |      ;  
 	plb                                  ;C07DC5|AB      |      ;  
 	ldx.b #$13                           ;C07DC6|A213    |      ;  
-
-CODE_C07DC8:
+.lbl_C07DC8
 	stz.w $80EA,x                        ;C07DC8|9EEA80  |7E80EA;  
 	dex                                  ;C07DCB|CA      |      ;  
-	bpl CODE_C07DC8                      ;C07DCC|10FA    |C07DC8;  
+	bpl .lbl_C07DC8                      ;C07DCC|10FA    |C07DC8;  
 	lda.b $02                   ;C07DCE|A502    |000002;  
 	bne UNREACH_C07DDA                   ;C07DD0|D008    |C07DDA;  
 	lda.b $05                            ;C07DD2|A505    |000005;  
-	beq CODE_C07DDE                      ;C07DD4|F008    |C07DDE;  
+	beq .lbl_C07DDE                      ;C07DD4|F008    |C07DDE;  
 	lda.b #$03                           ;C07DD6|A903    |      ;  
 	bra CODE_C07DE4                      ;C07DD8|800A    |C07DE4;  
 
 UNREACH_C07DDA:
 	.db $A9,$07,$80,$06                   ;C07DDA
-
-CODE_C07DDE:
+.lbl_C07DDE
 	ldx.b $04                   ;C07DDE|A604    |000004;  
 	lda.l DATA8_C07E8B,x                 ;C07DE0|BF8B7EC0|C07E8B;  
 
@@ -2968,16 +2830,14 @@ CODE_C07DE4:
 	jsl.l CODE_C210D4                    ;C07DED|22D410C2|C210D4;  
 	plx                                  ;C07DF1|FA      |      ;  
 	lda.b $00                            ;C07DF2|A500    |000000;  
-	beq CODE_C07E00                      ;C07DF4|F00A    |C07E00;  
+	beq .lbl_C07E00                      ;C07DF4|F00A    |C07E00;  
 	tya                                  ;C07DF6|98      |      ;  
-	beq CODE_C07DFD                      ;C07DF7|F004    |C07DFD;  
+	beq .lbl_C07DFD                      ;C07DF7|F004    |C07DFD;  
 	.db $A9,$80,$04,$03                   ;C07DF9
-
-CODE_C07DFD:
+.lbl_C07DFD
 	lda.b w0001                            ;C07DFD|A501    |000001;  
 	inc a                                ;C07DFF|1A      |      ;  
-
-CODE_C07E00:
+.lbl_C07E00
 	sta.b w0001                            ;C07E00|8501    |000001;  
 	lda.b #$13                           ;C07E02|A913    |      ;  
 	sta.b $00                            ;C07E04|8500    |000000;  
@@ -2991,28 +2851,25 @@ CODE_C07E00:
 	sta.b $00                            ;C07E16|8500    |000000;  
 	jsl.l func_81C2DC                    ;C07E18|22DCC281|81C2DC;  
 	ldy.b #$12                           ;C07E1C|A012    |      ;  
-
-CODE_C07E1E:
+.lbl_C07E1E
 	sty.b $00                            ;C07E1E|8400    |000000;  
 	jsl.l CODE_C210D4                    ;C07E20|22D410C2|C210D4;  
 	lda.b $00                            ;C07E24|A500    |000000;  
-	beq CODE_C07E5D                      ;C07E26|F035    |C07E5D;  
+	beq .lbl_C07E5D                      ;C07E26|F035    |C07E5D;  
 	sty.b $00                            ;C07E28|8400    |000000;  
 	phy                                  ;C07E2A|5A      |      ;  
 	jsl.l CODE_C28603                    ;C07E2B|220386C2|C28603;  
 	ply                                  ;C07E2F|7A      |      ;  
 	lda.b $02                   ;C07E30|A502    |000002;  
-	bne CODE_C07E3C                      ;C07E32|D008    |C07E3C;  
+	bne .lbl_C07E3C                      ;C07E32|D008    |C07E3C;  
 	lda.b $05                            ;C07E34|A505    |000005;  
-	beq CODE_C07E40                      ;C07E36|F008    |C07E40;  
+	beq .lbl_C07E40                      ;C07E36|F008    |C07E40;  
 	lda.b #$03                           ;C07E38|A903    |      ;  
 	bra CODE_C07E46                      ;C07E3A|800A    |C07E46;  
-
-CODE_C07E3C:
+.lbl_C07E3C
 	lda.b #$07                           ;C07E3C|A907    |      ;  
 	bra CODE_C07E46                      ;C07E3E|8006    |C07E46;  
-
-CODE_C07E40:
+.lbl_C07E40
 	ldx.b $04                   ;C07E40|A604    |000004;  
 	lda.l DATA8_C07E8B,x                 ;C07E42|BF8B7EC0|C07E8B;  
 
@@ -3022,28 +2879,25 @@ CODE_C07E46:
 	phx                                  ;C07E4A|DA      |      ;  
 	lda.b $06                            ;C07E4B|A506    |000006;  
 	ora.b $00                            ;C07E4D|0500    |000000;  
-	beq CODE_C07E61                      ;C07E4F|F010    |C07E61;  
+	beq .lbl_C07E61                      ;C07E4F|F010    |C07E61;  
 	sty.b $00                            ;C07E51|8400    |000000;  
 	jsl.l CODE_C210D4                    ;C07E53|22D410C2|C210D4;  
 	lda.b #$80                           ;C07E57|A980    |      ;  
 	tsb.b $03                            ;C07E59|0403    |000003;  
 	bra CODE_C07E67                      ;C07E5B|800A    |C07E67;  
-
-CODE_C07E5D:
+.lbl_C07E5D
 	stz.b w0001                            ;C07E5D|6401    |000001;  
-	bra CODE_C07E70                      ;C07E5F|800F    |C07E70;  
-
-CODE_C07E61:
+	bra .lbl_C07E70                      ;C07E5F|800F    |C07E70;  
+.lbl_C07E61
 	sty.b $00                            ;C07E61|8400    |000000;  
 	jsl.l CODE_C210D4                    ;C07E63|22D410C2|C210D4;  
 
 CODE_C07E67:
 	inc.b w0001                            ;C07E67|E601    |000001;  
 	plx                                  ;C07E69|FA      |      ;  
-	beq CODE_C07E70                      ;C07E6A|F004    |C07E70;  
+	beq .lbl_C07E70                      ;C07E6A|F004    |C07E70;  
 	jsl.l func_81933D                    ;C07E6C|223D9381|81933D;  
-
-CODE_C07E70:
+.lbl_C07E70
 	sty.b $00                            ;C07E70|8400    |000000;  
 	phy                                  ;C07E72|5A      |      ;  
 	jsl.l func_81C322                    ;C07E73|2222C381|81C322;  
@@ -3055,7 +2909,7 @@ CODE_C07E70:
 	sty.b $00                            ;C07E80|8400    |000000;  
 	jsl.l func_81C2DC                    ;C07E82|22DCC281|81C2DC;  
 	dey                                  ;C07E86|88      |      ;  
-	bpl CODE_C07E1E                      ;C07E87|1095    |C07E1E;  
+	bpl .lbl_C07E1E                      ;C07E87|1095    |C07E1E;  
 	plp                                  ;C07E89|28      |      ;  
 	rtl                                  ;C07E8A|6B      |      ;  
 

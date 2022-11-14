@@ -1,9 +1,9 @@
-;npc script commands
+;npc events script commands
 
 ;Command 0
 ;calls an asm function and jumps to the given script address if carry is clear
 ;1: function address (16 bit), 2: script address (16 bit)
-.macro exec_and_bcc
+.macro exec_bcc
     .db $00
     .dw \1
     .dw \2 - NPCScript
@@ -12,7 +12,7 @@
 ;Command 1
 ;calls an asm function and jumps to the given script address if carry is set
 ;1: function address (16 bit), 2: script address (16 bit)
-.macro exec_and_bcs
+.macro exec_bcs
     .db $01
     .dw \1
     .dw \2 - NPCScript

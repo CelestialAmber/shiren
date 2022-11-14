@@ -123,7 +123,7 @@ WeaponUpgradePriceBonus:
 	.db $A0,$0F,$D6,$06 ;kabra reborn
 
 ;weapon ability information?
-;referenced by CODE_C33D67?
+;referenced by .lbl_C33D67?
 ;d9a42c
 	.db $F4,$01,$82,$00 ;dragonkiller
 	.db $F4,$01,$96,$00 ;sickle slayer

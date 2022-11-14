@@ -122,10 +122,9 @@ CODE_C4000B:
 	phb                                  ;C400F2|8B      |      ;  
 	jsl.l CODE_C44A96                    ;C400F3|22964AC4|C44A96;  
 	plb                                  ;C400F7|AB      |      ;  
-	bcc CODE_C400FD                      ;C400F8|9003    |C400FD;  
-	brl CODE_C40145                      ;C400FA|824800  |C40145;  
-
-CODE_C400FD:
+	bcc .lbl_C400FD                      ;C400F8|9003    |C400FD;  
+	brl .lbl_C40145                      ;C400FA|824800  |C40145;  
+.lbl_C400FD
 	ldy.w #$00FF                         ;C400FD|A0FF00  |      ;  
 	sty.b $00                            ;C40100|8400    |000000;  
 	jsl.l func_809664                    ;C40102|22649680|809664;  
@@ -145,25 +144,23 @@ CODE_C400FD:
 	phb                                  ;C40122|8B      |      ;  
 	jsl.l CODE_C4095B                    ;C40123|225B09C4|C4095B;  
 	plb                                  ;C40127|AB      |      ;  
-	bcs CODE_C40145                      ;C40128|B01B    |C40145;  
+	bcs .lbl_C40145                      ;C40128|B01B    |C40145;  
 	ldx.w #$0003                         ;C4012A|A20300  |      ;  
-
-CODE_C4012D:
+.lbl_C4012D
 	phx                                  ;C4012D|DA      |      ;  
 	phb                                  ;C4012E|8B      |      ;  
 	jsl.l CODE_C45BCE                    ;C4012F|22CE5BC4|C45BCE;  
 	plb                                  ;C40133|AB      |      ;  
 	plx                                  ;C40134|FA      |      ;  
-	bcs CODE_C40145                      ;C40135|B00E    |C40145;  
+	bcs .lbl_C40145                      ;C40135|B00E    |C40145;  
 	dex                                  ;C40137|CA      |      ;  
-	bne CODE_C4012D                      ;C40138|D0F3    |C4012D;  
+	bne .lbl_C4012D                      ;C40138|D0F3    |C4012D;  
 	phb                                  ;C4013A|8B      |      ;  
 	jsl.l CODE_C6324C                    ;C4013B|224C32C6|C6324C;  
 	plb                                  ;C4013F|AB      |      ;  
-	bcs CODE_C40145                      ;C40140|B003    |C40145;  
+	bcs .lbl_C40145                      ;C40140|B003    |C40145;  
 	brl CODE_C4000B                      ;C40142|82C6FE  |C4000B;  
-
-CODE_C40145:
+.lbl_C40145
 	phb                                  ;C40145|8B      |      ;  
 	jsl.l CODE_C44A53                    ;C40146|22534AC4|C44A53;  
 	plb                                  ;C4014A|AB      |      ;  
@@ -174,11 +171,11 @@ CODE_C4014D:
 	php                                  ;C4014D|08      |      ;  
 	rep #$20                             ;C4014E|C220    |      ;  
 	lda.l debugMode                   ;C40150|AF008080|808000;  
-	bne CODE_C4016A                      ;C40154|D014    |C4016A;  
+	bne .lbl_C4016A                      ;C40154|D014    |C4016A;  
 	.db $A9,$00,$00,$85,$00,$22,$0C,$DC   ;C40156
 	.db $80,$A5,$00,$89,$20,$00,$F0,$04   ;C4015E|        |C40105;  
 	.db $22,$34,$02,$C4                   ;C40166|        |C40234;  
-CODE_C4016A:
+.lbl_C4016A
 	sep #$20                             ;C4016A|E220    |      ;  
 	rep #$10                             ;C4016C|C210    |      ;  
 	ldx.w #$0400                         ;C4016E|A20004  |      ;  
@@ -195,67 +192,65 @@ CODE_C4016A:
 	phb                                  ;C4018C|8B      |      ;  
 	jsl.l CODE_C40317                    ;C4018D|221703C4|C40317;  
 	plb                                  ;C40191|AB      |      ;  
-	bcc CODE_C40197                      ;C40192|9003    |C40197;  
-	brl CODE_C40205                      ;C40194|826E00  |C40205;  
-
-CODE_C40197:
+	bcc .lbl_C40197                      ;C40192|9003    |C40197;  
+	brl .lbl_C40205                      ;C40194|826E00  |C40205;  
+.lbl_C40197
 	phb                                  ;C40197|8B      |      ;  
 	jsl.l CODE_C44A53                    ;C40198|22534AC4|C44A53;  
 	plb                                  ;C4019C|AB      |      ;  
 	phb                                  ;C4019D|8B      |      ;  
 	jsl.l CODE_C404EF                    ;C4019E|22EF04C4|C404EF;  
 	plb                                  ;C401A2|AB      |      ;  
-	bcs CODE_C40205                      ;C401A3|B060    |C40205;  
+	bcs .lbl_C40205                      ;C401A3|B060    |C40205;  
 	phb                                  ;C401A5|8B      |      ;  
 	jsl.l CODE_C44A53                    ;C401A6|22534AC4|C44A53;  
 	plb                                  ;C401AA|AB      |      ;  
 	phb                                  ;C401AB|8B      |      ;  
 	jsl.l CODE_C40709                    ;C401AC|220907C4|C40709;  
 	plb                                  ;C401B0|AB      |      ;  
-	bcs CODE_C40205                      ;C401B1|B052    |C40205;  
+	bcs .lbl_C40205                      ;C401B1|B052    |C40205;  
 	phb                                  ;C401B3|8B      |      ;  
 	jsl.l CODE_C44A53                    ;C401B4|22534AC4|C44A53;  
 	plb                                  ;C401B8|AB      |      ;  
 	phb                                  ;C401B9|8B      |      ;  
 	jsl.l CODE_C40CB8                    ;C401BA|22B80CC4|C40CB8;  
 	plb                                  ;C401BE|AB      |      ;  
-	bcs CODE_C40205                      ;C401BF|B044    |C40205;  
+	bcs .lbl_C40205                      ;C401BF|B044    |C40205;  
 	phb                                  ;C401C1|8B      |      ;  
 	jsl.l CODE_C40E4C                    ;C401C2|224C0EC4|C40E4C;  
 	plb                                  ;C401C6|AB      |      ;  
-	bcs CODE_C40205                      ;C401C7|B03C    |C40205;  
+	bcs .lbl_C40205                      ;C401C7|B03C    |C40205;  
 	phb                                  ;C401C9|8B      |      ;  
 	jsl.l CODE_C410A0                    ;C401CA|22A010C4|C410A0;  
 	plb                                  ;C401CE|AB      |      ;  
-	bcs CODE_C40205                      ;C401CF|B034    |C40205;  
+	bcs .lbl_C40205                      ;C401CF|B034    |C40205;  
 	phb                                  ;C401D1|8B      |      ;  
 	jsl.l CODE_C44A53                    ;C401D2|22534AC4|C44A53;  
 	plb                                  ;C401D6|AB      |      ;  
 	phb                                  ;C401D7|8B      |      ;  
 	jsl.l CODE_C411FB                    ;C401D8|22FB11C4|C411FB;  
 	plb                                  ;C401DC|AB      |      ;  
-	bcs CODE_C40205                      ;C401DD|B026    |C40205;  
+	bcs .lbl_C40205                      ;C401DD|B026    |C40205;  
 	phb                                  ;C401DF|8B      |      ;  
 	jsl.l CODE_C412CA                    ;C401E0|22CA12C4|C412CA;  
 	plb                                  ;C401E4|AB      |      ;  
-	bcs CODE_C40205                      ;C401E5|B01E    |C40205;  
+	bcs .lbl_C40205                      ;C401E5|B01E    |C40205;  
 	phb                                  ;C401E7|8B      |      ;  
 	jsl.l CODE_C413A0                    ;C401E8|22A013C4|C413A0;  
 	plb                                  ;C401EC|AB      |      ;  
-	bcs CODE_C40205                      ;C401ED|B016    |C40205;  
+	bcs .lbl_C40205                      ;C401ED|B016    |C40205;  
 	phb                                  ;C401EF|8B      |      ;  
 	jsl.l CODE_C44A53                    ;C401F0|22534AC4|C44A53;  
 	plb                                  ;C401F4|AB      |      ;  
 	phb                                  ;C401F5|8B      |      ;  
 	jsl.l CODE_C41628                    ;C401F6|222816C4|C41628;  
 	plb                                  ;C401FA|AB      |      ;  
-	bcs CODE_C40205                      ;C401FB|B008    |C40205;  
+	bcs .lbl_C40205                      ;C401FB|B008    |C40205;  
 	phb                                  ;C401FD|8B      |      ;  
 	jsl.l CODE_C41767                    ;C401FE|226717C4|C41767;  
 	plb                                  ;C40202|AB      |      ;  
-	bcs CODE_C40205                      ;C40203|B000    |C40205;  
-
-CODE_C40205:
+	bcs .lbl_C40205                      ;C40203|B000    |C40205;  
+.lbl_C40205
 	phb                                  ;C40205|8B      |      ;  
 	jsl.l func_808451                    ;C40206|22518480|808451;  
 	plb                                  ;C4020A|AB      |      ;  
@@ -384,7 +379,7 @@ CODE_C40317:
 
 CODE_C403C1:
 	cpy.w #$0000                         ;C403C1|C00000  |      ;  
-	beq CODE_C403D2                      ;C403C4|F00C    |C403D2;  
+	beq .lbl_C403D2                      ;C403C4|F00C    |C403D2;  
 	lda.b #$01                           ;C403C6|A901    |      ;  
 	sta.b $03                            ;C403C8|8503    |000003;  
 	phy                                  ;C403CA|5A      |      ;  
@@ -392,8 +387,7 @@ CODE_C403C1:
 	jsl.l CODE_C482D0                    ;C403CC|22D082C4|C482D0;  
 	plb                                  ;C403D0|AB      |      ;  
 	ply                                  ;C403D1|7A      |      ;  
-
-CODE_C403D2:
+.lbl_C403D2
 	lda.b #$01                           ;C403D2|A901    |      ;  
 	sta.b $03                            ;C403D4|8503    |000003;  
 	ldx.w #$6800                         ;C403D6|A20068  |      ;  
@@ -410,13 +404,12 @@ CODE_C403D2:
 	jsl.l CODE_C43F40                    ;C403EA|22403FC4|C43F40;  
 	plb                                  ;C403EE|AB      |      ;  
 	ply                                  ;C403EF|7A      |      ;  
-	bcc CODE_C403F5                      ;C403F0|9003    |C403F5;  
-	brl CODE_C404EC                      ;C403F2|82F700  |C404EC;  
-
-CODE_C403F5:
+	bcc .lbl_C403F5                      ;C403F0|9003    |C403F5;  
+	brl .lbl_C404EC                      ;C403F2|82F700  |C404EC;  
+.lbl_C403F5
 	iny                                  ;C403F5|C8      |      ;  
 	cpy.w #$0004                         ;C403F6|C00400  |      ;  
-	bne CODE_C4040F                      ;C403F9|D014    |C4040F;  
+	bne .lbl_C4040F                      ;C403F9|D014    |C4040F;  
 	ldx.w #$0007                         ;C403FB|A20700  |      ;  
 	stx.b $00                            ;C403FE|8600    |000000;  
 	lda.b #$01                           ;C40400|A901    |      ;  
@@ -427,8 +420,7 @@ CODE_C403F5:
 	plb                                  ;C4040A|AB      |      ;  
 	ply                                  ;C4040B|7A      |      ;  
 	ldy.w #$0000                         ;C4040C|A00000  |      ;  
-
-CODE_C4040F:
+.lbl_C4040F
 	ldx.w $9CE8                          ;C4040F|AEE89C  |7F9CE8;  
 	dex                                  ;C40412|CA      |      ;  
 	dex                                  ;C40413|CA      |      ;  
@@ -444,7 +436,7 @@ CODE_C4040F:
 	jsl.l func_808ED0                    ;C40428|22D08E80|808ED0;  
 	ldx.w $9CE8                          ;C4042C|AEE89C  |7F9CE8;  
 	cpx.w #$FF50                         ;C4042F|E050FF  |      ;  
-	bcc CODE_C40444                      ;C40432|9010    |C40444;  
+	bcc .lbl_C40444                      ;C40432|9010    |C40444;  
 	lda.b #$03                           ;C40434|A903    |      ;  
 	sta.b $00                            ;C40436|8500    |000000;  
 	lda.b #$01                           ;C40438|A901    |      ;  
@@ -454,30 +446,26 @@ CODE_C4040F:
 	jsl.l CODE_C44154                    ;C4043E|225441C4|C44154;  
 	plb                                  ;C40442|AB      |      ;  
 	ply                                  ;C40443|7A      |      ;  
-
-CODE_C40444:
+.lbl_C40444
 	ldx.w $9CE8                          ;C40444|AEE89C  |7F9CE8;  
 	cpx.w #$FF00                         ;C40447|E000FF  |      ;  
-	beq CODE_C4044F                      ;C4044A|F003    |C4044F;  
+	beq .lbl_C4044F                      ;C4044A|F003    |C4044F;  
 	brl CODE_C403C1                      ;C4044C|8272FF  |C403C1;  
-
-CODE_C4044F:
+.lbl_C4044F
 	ldx.w #$0080                         ;C4044F|A28000  |      ;  
 	stx.b $00                            ;C40452|8600    |000000;  
 	phb                                  ;C40454|8B      |      ;  
 	jsl.l CODE_C43F40                    ;C40455|22403FC4|C43F40;  
 	plb                                  ;C40459|AB      |      ;  
-	bcc CODE_C4045F                      ;C4045A|9003    |C4045F;  
+	bcc .lbl_C4045F                      ;C4045A|9003    |C4045F;  
 	.db $82,$8D,$00                       ;C4045C|        |C404EC;  
-
-CODE_C4045F:
+.lbl_C4045F
 	ldx.w #$0002                         ;C4045F|A20200  |      ;  
 	stx.b $00                            ;C40462|8600    |000000;  
 	phb                                  ;C40464|8B      |      ;  
 	jsl.l func_818049                    ;C40465|22498081|818049;  
 	plb                                  ;C40469|AB      |      ;  
-
-CODE_C4046A:
+.lbl_C4046A
 	ldx.w $9CF4                          ;C4046A|AEF49C  |7F9CF4;  
 	inx                                  ;C4046D|E8      |      ;  
 	stx.w $9CF4                          ;C4046E|8EF49C  |7F9CF4;  
@@ -503,7 +491,7 @@ CODE_C4046A:
 	jsl.l CODE_C43F40                    ;C4049B|22403FC4|C43F40;  
 	plb                                  ;C4049F|AB      |      ;  
 	ply                                  ;C404A0|7A      |      ;  
-	bcs CODE_C404EC                      ;C404A1|B049    |C404EC;  
+	bcs .lbl_C404EC                      ;C404A1|B049    |C404EC;  
 	jsl.l func_8085F7                    ;C404A3|22F78580|8085F7;  
 	ldx.w #$0003                         ;C404A7|A20300  |      ;  
 	stx.b $00                            ;C404AA|8600    |000000;  
@@ -512,23 +500,23 @@ CODE_C4046A:
 	jsl.l CODE_C43F40                    ;C404AE|22403FC4|C43F40;  
 	plb                                  ;C404B2|AB      |      ;  
 	ply                                  ;C404B3|7A      |      ;  
-	bcs CODE_C404EC                      ;C404B4|B036    |C404EC;  
+	bcs .lbl_C404EC                      ;C404B4|B036    |C404EC;  
 	ldx.w $9CF4                          ;C404B6|AEF49C  |7F9CF4;  
 	cpx.w #$0100                         ;C404B9|E00001  |      ;  
-	bne CODE_C4046A                      ;C404BC|D0AC    |C4046A;  
+	bne .lbl_C4046A                      ;C404BC|D0AC    |C4046A;  
 	ldx.w #$01A0                         ;C404BE|A2A001  |      ;  
 	stx.b $00                            ;C404C1|8600    |000000;  
 	phb                                  ;C404C3|8B      |      ;  
 	jsl.l CODE_C43F40                    ;C404C4|22403FC4|C43F40;  
 	plb                                  ;C404C8|AB      |      ;  
-	bcs CODE_C404EC                      ;C404C9|B021    |C404EC;  
+	bcs .lbl_C404EC                      ;C404C9|B021    |C404EC;  
 	ldx.w #$0020                         ;C404CB|A22000  |      ;  
 	stx.b $00                            ;C404CE|8600    |000000;  
 	jsl.l func_809664                    ;C404D0|22649680|809664;  
 	phb                                  ;C404D4|8B      |      ;  
 	jsl.l CODE_C43F17                    ;C404D5|22173FC4|C43F17;  
 	plb                                  ;C404D9|AB      |      ;  
-	bcs CODE_C404EC                      ;C404DA|B010    |C404EC;  
+	bcs .lbl_C404EC                      ;C404DA|B010    |C404EC;  
 	ldx.w #$493E                         ;C404DC|A23E49  |      ;  
 	stx.b $00                            ;C404DF|8600    |000000;  
 	lda.b #$C4                           ;C404E1|A9C4    |      ;  
@@ -537,8 +525,7 @@ CODE_C4046A:
 	plp                                  ;C404E9|28      |      ;  
 	clc                                  ;C404EA|18      |      ;  
 	rtl                                  ;C404EB|6B      |      ;  
-
-CODE_C404EC:
+.lbl_C404EC
 	plp                                  ;C404EC|28      |      ;  
 	sec                                  ;C404ED|38      |      ;  
 	rtl                                  ;C404EE|6B      |      ;  
@@ -636,10 +623,9 @@ CODE_C404EF:
 	phb                                  ;C405BD|8B      |      ;  
 	jsl.l CODE_C43F17                    ;C405BE|22173FC4|C43F17;  
 	plb                                  ;C405C2|AB      |      ;  
-	bcc CODE_C405C8                      ;C405C3|9003    |C405C8;  
+	bcc .lbl_C405C8                      ;C405C3|9003    |C405C8;  
 	.db $82,$3E,$01                       ;C405C5|        |C40706;  
-
-CODE_C405C8:
+.lbl_C405C8
 	stz.b $06                            ;C405C8|6406    |000006;  
 	stz.w $9CF0                          ;C405CA|9CF09C  |7F9CF0;  
 	stz.w $9CFE                          ;C405CD|9CFE9C  |7F9CFE;  
@@ -649,7 +635,7 @@ CODE_C405D0:
 	inc.w $9CFE                          ;C405D3|EEFE9C  |7F9CFE;  
 	lda.w $9CF0                          ;C405D6|ADF09C  |7F9CF0;  
 	bit.b $06                            ;C405D9|2406    |000006;  
-	bne CODE_C40611                      ;C405DB|D034    |C40611;  
+	bne .lbl_C40611                      ;C405DB|D034    |C40611;  
 	ldx.w $9CF4                          ;C405DD|AEF49C  |7F9CF4;  
 	dex                                  ;C405E0|CA      |      ;  
 	stx.w $9CF4                          ;C405E1|8EF49C  |7F9CF4;  
@@ -670,11 +656,10 @@ CODE_C405D0:
 	ldx.w #$0000                         ;C40608|A20000  |      ;  
 	stx.b $04                   ;C4060B|8604    |000004;  
 	jsl.l func_808ED0                    ;C4060D|22D08E80|808ED0;  
-
-CODE_C40611:
+.lbl_C40611
 	lda.w $9CF0                          ;C40611|ADF09C  |7F9CF0;  
 	bit.b #$01                           ;C40614|8901    |      ;  
-	beq CODE_C40629                      ;C40616|F011    |C40629;  
+	beq .lbl_C40629                      ;C40616|F011    |C40629;  
 	ldx.w #$0002                         ;C40618|A20200  |      ;  
 	stx.b $00                            ;C4061B|8600    |000000;  
 	lda.b $06                            ;C4061D|A506    |000006;  
@@ -684,8 +669,7 @@ CODE_C40611:
 	plb                                  ;C40625|AB      |      ;  
 	pla                                  ;C40626|68      |      ;  
 	sta.b $06                            ;C40627|8506    |000006;  
-
-CODE_C40629:
+.lbl_C40629
 	ldx.w #$0001                         ;C40629|A20100  |      ;  
 	stx.b $00                            ;C4062C|8600    |000000;  
 	lda.b $06                            ;C4062E|A506    |000006;  
@@ -695,24 +679,21 @@ CODE_C40629:
 	plb                                  ;C40636|AB      |      ;  
 	pla                                  ;C40637|68      |      ;  
 	sta.b $06                            ;C40638|8506    |000006;  
-	bcc CODE_C4063F                      ;C4063A|9003    |C4063F;  
+	bcc .lbl_C4063F                      ;C4063A|9003    |C4063F;  
 	.db $82,$C7,$00                       ;C4063C|        |C40706;  
-
-CODE_C4063F:
+.lbl_C4063F
 	lda.w $9CF0                          ;C4063F|ADF09C  |7F9CF0;  
 	cmp.b #$80                           ;C40642|C980    |      ;  
-	bne CODE_C4064C                      ;C40644|D006    |C4064C;  
+	bne .lbl_C4064C                      ;C40644|D006    |C4064C;  
 	lda.b #$01                           ;C40646|A901    |      ;  
 	sta.b $06                            ;C40648|8506    |000006;  
-	bra CODE_C4064C                      ;C4064A|8000    |C4064C;  
-
-CODE_C4064C:
+	bra .lbl_C4064C                      ;C4064A|8000    |C4064C;  
+.lbl_C4064C
 	lda.w $9CF0                          ;C4064C|ADF09C  |7F9CF0;  
 	cmp.b #$C8                           ;C4064F|C9C8    |      ;  
-	beq CODE_C40656                      ;C40651|F003    |C40656;  
+	beq .lbl_C40656                      ;C40651|F003    |C40656;  
 	brl CODE_C405D0                      ;C40653|827AFF  |C405D0;  
-
-CODE_C40656:
+.lbl_C40656
 	ldx.w #$0000                         ;C40656|A20000  |      ;  
 	stx.w $9CF0                          ;C40659|8EF09C  |7F9CF0;  
 	stz.w $9CFE                          ;C4065C|9CFE9C  |7F9CFE;  
@@ -724,13 +705,12 @@ CODE_C4065F:
 	inc.w $9CFE                          ;C40666|EEFE9C  |7F9CFE;  
 	lda.w $9CFE                          ;C40669|ADFE9C  |7F9CFE;  
 	cmp.b #$03                           ;C4066C|C903    |      ;  
-	bne CODE_C40673                      ;C4066E|D003    |C40673;  
+	bne .lbl_C40673                      ;C4066E|D003    |C40673;  
 	stz.w $9CFE                          ;C40670|9CFE9C  |7F9CFE;  
-
-CODE_C40673:
+.lbl_C40673
 	lda.w $9CF0                          ;C40673|ADF09C  |7F9CF0;  
 	bit.b #$01                           ;C40676|8901    |      ;  
-	bne CODE_C406C1                      ;C40678|D047    |C406C1;  
+	bne .lbl_C406C1                      ;C40678|D047    |C406C1;  
 	ldx.w $9CF4                          ;C4067A|AEF49C  |7F9CF4;  
 	inx                                  ;C4067D|E8      |      ;  
 	stx.w $9CF4                          ;C4067E|8EF49C  |7F9CF4;  
@@ -739,7 +719,7 @@ CODE_C40673:
 	stx.w $9CE8                          ;C40685|8EE89C  |7F9CE8;  
 	ldx.w $9CF0                          ;C40688|AEF09C  |7F9CF0;  
 	cpx.w #$0230                         ;C4068B|E03002  |      ;  
-	bcs CODE_C406B6                      ;C4068E|B026    |C406B6;  
+	bcs .lbl_C406B6                      ;C4068E|B026    |C406B6;  
 	ldx.w #$0004                         ;C40690|A20400  |      ;  
 	stx.b $00                            ;C40693|8600    |000000;  
 	ldx.w $9CF4                          ;C40695|AEF49C  |7F9CF4;  
@@ -754,22 +734,19 @@ CODE_C40673:
 	ldx.w #$0000                         ;C406AD|A20000  |      ;  
 	stx.b $04                   ;C406B0|8604    |000004;  
 	jsl.l func_808ED0                    ;C406B2|22D08E80|808ED0;  
-
-CODE_C406B6:
+.lbl_C406B6
 	ldx.w #$0002                         ;C406B6|A20200  |      ;  
 	stx.b $00                            ;C406B9|8600    |000000;  
 	phb                                  ;C406BB|8B      |      ;  
 	jsl.l CODE_C4677C                    ;C406BC|227C67C4|C4677C;  
 	plb                                  ;C406C0|AB      |      ;  
-
-CODE_C406C1:
+.lbl_C406C1
 	lda.w $9CFE                          ;C406C1|ADFE9C  |7F9CFE;  
-	beq CODE_C406CD                      ;C406C4|F007    |C406CD;  
+	beq .lbl_C406CD                      ;C406C4|F007    |C406CD;  
 	ldx.w $9CEA                          ;C406C6|AEEA9C  |7F9CEA;  
 	inx                                  ;C406C9|E8      |      ;  
 	stx.w $9CEA                          ;C406CA|8EEA9C  |7F9CEA;  
-
-CODE_C406CD:
+.lbl_C406CD
 	ldx.w #$0001                         ;C406CD|A20100  |      ;  
 	stx.b $00                            ;C406D0|8600    |000000;  
 	phb                                  ;C406D2|8B      |      ;  
@@ -778,10 +755,9 @@ CODE_C406CD:
 	bcs UNREACH_C40706                   ;C406D8|B02C    |C40706;  
 	ldx.w $9CF0                          ;C406DA|AEF09C  |7F9CF0;  
 	cpx.w #$03D0                         ;C406DD|E0D003  |      ;  
-	beq CODE_C406E5                      ;C406E0|F003    |C406E5;  
+	beq .lbl_C406E5                      ;C406E0|F003    |C406E5;  
 	brl CODE_C4065F                      ;C406E2|827AFF  |C4065F;  
-
-CODE_C406E5:
+.lbl_C406E5
 	ldx.w #$0010                         ;C406E5|A21000  |      ;  
 	stx.b $00                            ;C406E8|8600    |000000;  
 	phb                                  ;C406EA|8B      |      ;  
@@ -916,10 +892,9 @@ CODE_C40709:
 	phb                                  ;C407FD|8B      |      ;  
 	jsl.l CODE_C43F67                    ;C407FE|22673FC4|C43F67;  
 	plb                                  ;C40802|AB      |      ;  
-	bcc CODE_C40808                      ;C40803|9003    |C40808;  
+	bcc .lbl_C40808                      ;C40803|9003    |C40808;  
 	.db $82,$50,$01                       ;C40805|        |C40958;  
-
-CODE_C40808:
+.lbl_C40808
 	ldx.w #$0026                         ;C40808|A22600  |      ;  
 	stx.b $00                            ;C4080B|8600    |000000;  
 	phb                                  ;C4080D|8B      |      ;  
@@ -932,11 +907,10 @@ CODE_C40808:
 	jsl.l CODE_C43F17                    ;C4081D|22173FC4|C43F17;  
 	plb                                  ;C40821|AB      |      ;  
 	ldy.w #$00FF                         ;C40822|A0FF00  |      ;  
-
-CODE_C40825:
+.lbl_C40825
 	tya                                  ;C40825|98      |      ;  
 	bit.b #$01                           ;C40826|8901    |      ;  
-	bne CODE_C40837                      ;C40828|D00D    |C40837;  
+	bne .lbl_C40837                      ;C40828|D00D    |C40837;  
 	ldx.w #$0003                         ;C4082A|A20300  |      ;  
 	stx.b $00                            ;C4082D|8600    |000000;  
 	phy                                  ;C4082F|5A      |      ;  
@@ -944,8 +918,7 @@ CODE_C40825:
 	jsl.l CODE_C4677C                    ;C40831|227C67C4|C4677C;  
 	plb                                  ;C40835|AB      |      ;  
 	ply                                  ;C40836|7A      |      ;  
-
-CODE_C40837:
+.lbl_C40837
 	ldx.w #$0001                         ;C40837|A20100  |      ;  
 	stx.b $00                            ;C4083A|8600    |000000;  
 	phy                                  ;C4083C|5A      |      ;  
@@ -953,12 +926,11 @@ CODE_C40837:
 	jsl.l CODE_C43F67                    ;C4083E|22673FC4|C43F67;  
 	plb                                  ;C40842|AB      |      ;  
 	ply                                  ;C40843|7A      |      ;  
-	bcc CODE_C40849                      ;C40844|9003    |C40849;  
+	bcc .lbl_C40849                      ;C40844|9003    |C40849;  
 	.db $82,$0F,$01                       ;C40846|        |C40958;  
-
-CODE_C40849:
+.lbl_C40849
 	dey                                  ;C40849|88      |      ;  
-	bne CODE_C40825                      ;C4084A|D0D9    |C40825;  
+	bne .lbl_C40825                      ;C4084A|D0D9    |C40825;  
 	stz.b $02                   ;C4084C|6402    |000002;  
 	stz.b $04                   ;C4084E|6404    |000004;  
 
@@ -967,33 +939,30 @@ CODE_C40850:
 	inc.b $04                   ;C40852|E604    |000004;  
 	lda.b $04                   ;C40854|A504    |000004;  
 	cmp.b #$03                           ;C40856|C903    |      ;  
-	bne CODE_C4085C                      ;C40858|D002    |C4085C;  
+	bne .lbl_C4085C                      ;C40858|D002    |C4085C;  
 	stz.b $04                   ;C4085A|6404    |000004;  
-
-CODE_C4085C:
+.lbl_C4085C
 	ldx.w $9CEC                          ;C4085C|AEEC9C  |7F9CEC;  
 	cpx.w #$FF01                         ;C4085F|E001FF  |      ;  
-	beq CODE_C40868                      ;C40862|F004    |C40868;  
+	beq .lbl_C40868                      ;C40862|F004    |C40868;  
 	dex                                  ;C40864|CA      |      ;  
 	stx.w $9CEC                          ;C40865|8EEC9C  |7F9CEC;  
-
-CODE_C40868:
+.lbl_C40868
 	lda.b $02                   ;C40868|A502    |000002;  
 	bit.b #$03                           ;C4086A|8903    |      ;  
-	bne CODE_C4087A                      ;C4086C|D00C    |C4087A;  
+	bne .lbl_C4087A                      ;C4086C|D00C    |C4087A;  
 	ldx.w $9CEE                          ;C4086E|AEEE9C  |7F9CEE;  
 	cpx.w #$FDC8                         ;C40871|E0C8FD  |      ;  
-	beq CODE_C4087A                      ;C40874|F004    |C4087A;  
+	beq .lbl_C4087A                      ;C40874|F004    |C4087A;  
 	dex                                  ;C40876|CA      |      ;  
 	stx.w $9CEE                          ;C40877|8EEE9C  |7F9CEE;  
-
-CODE_C4087A:
+.lbl_C4087A
 	ldx.w $9CF0                          ;C4087A|AEF09C  |7F9CF0;  
 	inx                                  ;C4087D|E8      |      ;  
 	stx.w $9CF0                          ;C4087E|8EF09C  |7F9CF0;  
 	lda.b $02                   ;C40881|A502    |000002;  
 	bit.b #$01                           ;C40883|8901    |      ;  
-	beq CODE_C40899                      ;C40885|F012    |C40899;  
+	beq .lbl_C40899                      ;C40885|F012    |C40899;  
 	lda.b $02                   ;C40887|A502    |000002;  
 	pha                                  ;C40889|48      |      ;  
 	lda.b $04                   ;C4088A|A504    |000004;  
@@ -1005,36 +974,32 @@ CODE_C4087A:
 	sta.b $04                   ;C40894|8504    |000004;  
 	pla                                  ;C40896|68      |      ;  
 	sta.b $02                   ;C40897|8502    |000002;  
-
-CODE_C40899:
+.lbl_C40899
 	lda.b $02                   ;C40899|A502    |000002;  
 	and.b #$01                           ;C4089B|2901    |      ;  
-	bne CODE_C408B2                      ;C4089D|D013    |C408B2;  
+	bne .lbl_C408B2                      ;C4089D|D013    |C408B2;  
 	ldx.w $9CFA                          ;C4089F|AEFA9C  |7F9CFA;  
 	cpx.w #$FF01                         ;C408A2|E001FF  |      ;  
-	beq CODE_C408AB                      ;C408A5|F004    |C408AB;  
+	beq .lbl_C408AB                      ;C408A5|F004    |C408AB;  
 	dex                                  ;C408A7|CA      |      ;  
 	stx.w $9CFA                          ;C408A8|8EFA9C  |7F9CFA;  
-
-CODE_C408AB:
+.lbl_C408AB
 	ldx.w $9CFE                          ;C408AB|AEFE9C  |7F9CFE;  
 	inx                                  ;C408AE|E8      |      ;  
 	stx.w $9CFE                          ;C408AF|8EFE9C  |7F9CFE;  
-
-CODE_C408B2:
+.lbl_C408B2
 	lda.b $02                   ;C408B2|A502    |000002;  
 	bit.b #$03                           ;C408B4|8903    |      ;  
-	bne CODE_C408C4                      ;C408B6|D00C    |C408C4;  
+	bne .lbl_C408C4                      ;C408B6|D00C    |C408C4;  
 	ldx.w $9CFC                          ;C408B8|AEFC9C  |7F9CFC;  
 	cpx.w #$FE00                         ;C408BB|E000FE  |      ;  
-	beq CODE_C408C4                      ;C408BE|F004    |C408C4;  
+	beq .lbl_C408C4                      ;C408BE|F004    |C408C4;  
 	dex                                  ;C408C0|CA      |      ;  
 	stx.w $9CFC                          ;C408C1|8EFC9C  |7F9CFC;  
-
-CODE_C408C4:
+.lbl_C408C4
 	lda.b $02                   ;C408C4|A502    |000002;  
 	and.b #$01                           ;C408C6|2901    |      ;  
-	bne CODE_C408DC                      ;C408C8|D012    |C408DC;  
+	bne .lbl_C408DC                      ;C408C8|D012    |C408DC;  
 	lda.b $02                   ;C408CA|A502    |000002;  
 	pha                                  ;C408CC|48      |      ;  
 	lda.b $04                   ;C408CD|A504    |000004;  
@@ -1046,11 +1011,10 @@ CODE_C408C4:
 	sta.b $04                   ;C408D7|8504    |000004;  
 	pla                                  ;C408D9|68      |      ;  
 	sta.b $02                   ;C408DA|8502    |000002;  
-
-CODE_C408DC:
+.lbl_C408DC
 	lda.b $02                   ;C408DC|A502    |000002;  
 	bit.b #$01                           ;C408DE|8901    |      ;  
-	bne CODE_C408F9                      ;C408E0|D017    |C408F9;  
+	bne .lbl_C408F9                      ;C408E0|D017    |C408F9;  
 	ldx.w #$0003                         ;C408E2|A20300  |      ;  
 	stx.b $00                            ;C408E5|8600    |000000;  
 	lda.b $02                   ;C408E7|A502    |000002;  
@@ -1064,8 +1028,7 @@ CODE_C408DC:
 	sta.b $04                   ;C408F4|8504    |000004;  
 	pla                                  ;C408F6|68      |      ;  
 	sta.b $02                   ;C408F7|8502    |000002;  
-
-CODE_C408F9:
+.lbl_C408F9
 	ldx.w #$0001                         ;C408F9|A20100  |      ;  
 	stx.b $00                            ;C408FC|8600    |000000;  
 	lda.b $02                   ;C408FE|A502    |000002;  
@@ -1082,16 +1045,14 @@ CODE_C408F9:
 	bcs UNREACH_C40958                   ;C40910|B046    |C40958;  
 	ldx.w $9CF0                          ;C40912|AEF09C  |7F9CF0;  
 	cpx.w #$0368                         ;C40915|E06803  |      ;  
-	beq CODE_C4091D                      ;C40918|F003    |C4091D;  
+	beq .lbl_C4091D                      ;C40918|F003    |C4091D;  
 	brl CODE_C40850                      ;C4091A|8233FF  |C40850;  
-
-CODE_C4091D:
+.lbl_C4091D
 	ldy.w #$0080                         ;C4091D|A08000  |      ;  
-
-CODE_C40920:
+.lbl_C40920
 	tya                                  ;C40920|98      |      ;  
 	bit.b #$01                           ;C40921|8901    |      ;  
-	bne CODE_C40932                      ;C40923|D00D    |C40932;  
+	bne .lbl_C40932                      ;C40923|D00D    |C40932;  
 	ldx.w #$0003                         ;C40925|A20300  |      ;  
 	stx.b $00                            ;C40928|8600    |000000;  
 	phy                                  ;C4092A|5A      |      ;  
@@ -1099,8 +1060,7 @@ CODE_C40920:
 	jsl.l CODE_C4677C                    ;C4092C|227C67C4|C4677C;  
 	plb                                  ;C40930|AB      |      ;  
 	ply                                  ;C40931|7A      |      ;  
-
-CODE_C40932:
+.lbl_C40932
 	ldx.w #$0001                         ;C40932|A20100  |      ;  
 	stx.b $00                            ;C40935|8600    |000000;  
 	phy                                  ;C40937|5A      |      ;  
@@ -1110,7 +1070,7 @@ CODE_C40932:
 	ply                                  ;C4093E|7A      |      ;  
 	bcs UNREACH_C40958                   ;C4093F|B017    |C40958;  
 	dey                                  ;C40941|88      |      ;  
-	bne CODE_C40920                      ;C40942|D0DC    |C40920;  
+	bne .lbl_C40920                      ;C40942|D0DC    |C40920;  
 	ldx.w #$00FF                         ;C40944|A2FF00  |      ;  
 	stx.b $00                            ;C40947|8600    |000000;  
 	jsl.l func_809664                    ;C40949|22649680|809664;  
@@ -1211,16 +1171,14 @@ CODE_C4095B:
 	phb                                  ;C40A11|8B      |      ;  
 	jsl.l CODE_C43F17                    ;C40A12|22173FC4|C43F17;  
 	plb                                  ;C40A16|AB      |      ;  
-	bcc CODE_C40A1C                      ;C40A17|9003    |C40A1C;  
+	bcc .lbl_C40A1C                      ;C40A17|9003    |C40A1C;  
 	.db $82,$8C,$02                       ;C40A19|        |C40CA8;  
-
-CODE_C40A1C:
+.lbl_C40A1C
 	ldy.w #$00FD                         ;C40A1C|A0FD00  |      ;  
-
-CODE_C40A1F:
+.lbl_C40A1F
 	tya                                  ;C40A1F|98      |      ;  
 	bit.b #$01                           ;C40A20|8901    |      ;  
-	bne CODE_C40A31                      ;C40A22|D00D    |C40A31;  
+	bne .lbl_C40A31                      ;C40A22|D00D    |C40A31;  
 	ldx.w #$0000                         ;C40A24|A20000  |      ;  
 	stx.b $00                            ;C40A27|8600    |000000;  
 	phy                                  ;C40A29|5A      |      ;  
@@ -1228,8 +1186,7 @@ CODE_C40A1F:
 	jsl.l CODE_C4677C                    ;C40A2B|227C67C4|C4677C;  
 	plb                                  ;C40A2F|AB      |      ;  
 	ply                                  ;C40A30|7A      |      ;  
-
-CODE_C40A31:
+.lbl_C40A31
 	ldx.w #$0001                         ;C40A31|A20100  |      ;  
 	stx.b $00                            ;C40A34|8600    |000000;  
 	phy                                  ;C40A36|5A      |      ;  
@@ -1237,12 +1194,11 @@ CODE_C40A31:
 	jsl.l CODE_C43F40                    ;C40A38|22403FC4|C43F40;  
 	plb                                  ;C40A3C|AB      |      ;  
 	ply                                  ;C40A3D|7A      |      ;  
-	bcc CODE_C40A43                      ;C40A3E|9003    |C40A43;  
+	bcc .lbl_C40A43                      ;C40A3E|9003    |C40A43;  
 	.db $82,$65,$02                       ;C40A40|        |C40CA8;  
-
-CODE_C40A43:
+.lbl_C40A43
 	dey                                  ;C40A43|88      |      ;  
-	bne CODE_C40A1F                      ;C40A44|D0D9    |C40A1F;  
+	bne .lbl_C40A1F                      ;C40A44|D0D9    |C40A1F;  
 	stz.b $02                   ;C40A46|6402    |000002;  
 	stz.b $04                   ;C40A48|6404    |000004;  
 
@@ -1251,33 +1207,30 @@ CODE_C40A4A:
 	inc.b $04                   ;C40A4C|E604    |000004;  
 	lda.b $04                   ;C40A4E|A504    |000004;  
 	cmp.b #$03                           ;C40A50|C903    |      ;  
-	bne CODE_C40A56                      ;C40A52|D002    |C40A56;  
+	bne .lbl_C40A56                      ;C40A52|D002    |C40A56;  
 	stz.b $04                   ;C40A54|6404    |000004;  
-
-CODE_C40A56:
+.lbl_C40A56
 	ldx.w $9CEC                          ;C40A56|AEEC9C  |7F9CEC;  
 	cpx.w #$FF01                         ;C40A59|E001FF  |      ;  
-	beq CODE_C40A62                      ;C40A5C|F004    |C40A62;  
+	beq .lbl_C40A62                      ;C40A5C|F004    |C40A62;  
 	dex                                  ;C40A5E|CA      |      ;  
 	stx.w $9CEC                          ;C40A5F|8EEC9C  |7F9CEC;  
-
-CODE_C40A62:
+.lbl_C40A62
 	lda.b $02                   ;C40A62|A502    |000002;  
 	bit.b #$03                           ;C40A64|8903    |      ;  
-	bne CODE_C40A74                      ;C40A66|D00C    |C40A74;  
+	bne .lbl_C40A74                      ;C40A66|D00C    |C40A74;  
 	ldx.w $9CEE                          ;C40A68|AEEE9C  |7F9CEE;  
 	cpx.w #$FDC8                         ;C40A6B|E0C8FD  |      ;  
-	beq CODE_C40A74                      ;C40A6E|F004    |C40A74;  
+	beq .lbl_C40A74                      ;C40A6E|F004    |C40A74;  
 	dex                                  ;C40A70|CA      |      ;  
 	stx.w $9CEE                          ;C40A71|8EEE9C  |7F9CEE;  
-
-CODE_C40A74:
+.lbl_C40A74
 	ldx.w $9CF0                          ;C40A74|AEF09C  |7F9CF0;  
 	inx                                  ;C40A77|E8      |      ;  
 	stx.w $9CF0                          ;C40A78|8EF09C  |7F9CF0;  
 	lda.b $02                   ;C40A7B|A502    |000002;  
 	bit.b #$01                           ;C40A7D|8901    |      ;  
-	beq CODE_C40A93                      ;C40A7F|F012    |C40A93;  
+	beq .lbl_C40A93                      ;C40A7F|F012    |C40A93;  
 	lda.b $02                   ;C40A81|A502    |000002;  
 	pha                                  ;C40A83|48      |      ;  
 	lda.b $04                   ;C40A84|A504    |000004;  
@@ -1289,36 +1242,32 @@ CODE_C40A74:
 	sta.b $04                   ;C40A8E|8504    |000004;  
 	pla                                  ;C40A90|68      |      ;  
 	sta.b $02                   ;C40A91|8502    |000002;  
-
-CODE_C40A93:
+.lbl_C40A93
 	lda.b $02                   ;C40A93|A502    |000002;  
 	and.b #$01                           ;C40A95|2901    |      ;  
-	bne CODE_C40AAC                      ;C40A97|D013    |C40AAC;  
+	bne .lbl_C40AAC                      ;C40A97|D013    |C40AAC;  
 	ldx.w $9CFA                          ;C40A99|AEFA9C  |7F9CFA;  
 	cpx.w #$FEF2                         ;C40A9C|E0F2FE  |      ;  
-	beq CODE_C40AA5                      ;C40A9F|F004    |C40AA5;  
+	beq .lbl_C40AA5                      ;C40A9F|F004    |C40AA5;  
 	dex                                  ;C40AA1|CA      |      ;  
 	stx.w $9CFA                          ;C40AA2|8EFA9C  |7F9CFA;  
-
-CODE_C40AA5:
+.lbl_C40AA5
 	ldx.w $9CFE                          ;C40AA5|AEFE9C  |7F9CFE;  
 	inx                                  ;C40AA8|E8      |      ;  
 	stx.w $9CFE                          ;C40AA9|8EFE9C  |7F9CFE;  
-
-CODE_C40AAC:
+.lbl_C40AAC
 	lda.b $02                   ;C40AAC|A502    |000002;  
 	bit.b #$03                           ;C40AAE|8903    |      ;  
-	bne CODE_C40ABE                      ;C40AB0|D00C    |C40ABE;  
+	bne .lbl_C40ABE                      ;C40AB0|D00C    |C40ABE;  
 	ldx.w $9CFC                          ;C40AB2|AEFC9C  |7F9CFC;  
 	cpx.w #$FE00                         ;C40AB5|E000FE  |      ;  
-	beq CODE_C40ABE                      ;C40AB8|F004    |C40ABE;  
+	beq .lbl_C40ABE                      ;C40AB8|F004    |C40ABE;  
 	dex                                  ;C40ABA|CA      |      ;  
 	stx.w $9CFC                          ;C40ABB|8EFC9C  |7F9CFC;  
-
-CODE_C40ABE:
+.lbl_C40ABE
 	lda.b $02                   ;C40ABE|A502    |000002;  
 	and.b #$01                           ;C40AC0|2901    |      ;  
-	bne CODE_C40AD6                      ;C40AC2|D012    |C40AD6;  
+	bne .lbl_C40AD6                      ;C40AC2|D012    |C40AD6;  
 	lda.b $02                   ;C40AC4|A502    |000002;  
 	pha                                  ;C40AC6|48      |      ;  
 	lda.b $04                   ;C40AC7|A504    |000004;  
@@ -1330,11 +1279,10 @@ CODE_C40ABE:
 	sta.b $04                   ;C40AD1|8504    |000004;  
 	pla                                  ;C40AD3|68      |      ;  
 	sta.b $02                   ;C40AD4|8502    |000002;  
-
-CODE_C40AD6:
+.lbl_C40AD6
 	lda.b $02                   ;C40AD6|A502    |000002;  
 	bit.b #$01                           ;C40AD8|8901    |      ;  
-	bne CODE_C40AEE                      ;C40ADA|D012    |C40AEE;  
+	bne .lbl_C40AEE                      ;C40ADA|D012    |C40AEE;  
 	lda.b $02                   ;C40ADC|A502    |000002;  
 	pha                                  ;C40ADE|48      |      ;  
 	lda.b $04                   ;C40ADF|A504    |000004;  
@@ -1346,8 +1294,7 @@ CODE_C40AD6:
 	sta.b $04                   ;C40AE9|8504    |000004;  
 	pla                                  ;C40AEB|68      |      ;  
 	sta.b $02                   ;C40AEC|8502    |000002;  
-
-CODE_C40AEE:
+.lbl_C40AEE
 	ldx.w #$0001                         ;C40AEE|A20100  |      ;  
 	stx.b $00                            ;C40AF1|8600    |000000;  
 	lda.b $02                   ;C40AF3|A502    |000002;  
@@ -1361,29 +1308,25 @@ CODE_C40AEE:
 	sta.b $04                   ;C40B00|8504    |000004;  
 	pla                                  ;C40B02|68      |      ;  
 	sta.b $02                   ;C40B03|8502    |000002;  
-	bcc CODE_C40B0A                      ;C40B05|9003    |C40B0A;  
+	bcc .lbl_C40B0A                      ;C40B05|9003    |C40B0A;  
 	.db $82,$9E,$01                       ;C40B07|        |C40CA8;  
-
-CODE_C40B0A:
+.lbl_C40B0A
 	ldx.w $9CF0                          ;C40B0A|AEF09C  |7F9CF0;  
 	cpx.w #$0308                         ;C40B0D|E00803  |      ;  
-	beq CODE_C40B15                      ;C40B10|F003    |C40B15;  
+	beq .lbl_C40B15                      ;C40B10|F003    |C40B15;  
 	brl CODE_C40A4A                      ;C40B12|8235FF  |C40A4A;  
-
-CODE_C40B15:
+.lbl_C40B15
 	ldy.w #$00E0                         ;C40B15|A0E000  |      ;  
-
-CODE_C40B18:
+.lbl_C40B18
 	tya                                  ;C40B18|98      |      ;  
 	bit.b #$01                           ;C40B19|8901    |      ;  
-	bne CODE_C40B25                      ;C40B1B|D008    |C40B25;  
+	bne .lbl_C40B25                      ;C40B1B|D008    |C40B25;  
 	phy                                  ;C40B1D|5A      |      ;  
 	phb                                  ;C40B1E|8B      |      ;  
 	jsl.l CODE_C4677C                    ;C40B1F|227C67C4|C4677C;  
 	plb                                  ;C40B23|AB      |      ;  
 	ply                                  ;C40B24|7A      |      ;  
-
-CODE_C40B25:
+.lbl_C40B25
 	ldx.w #$0001                         ;C40B25|A20100  |      ;  
 	stx.b $00                            ;C40B28|8600    |000000;  
 	phy                                  ;C40B2A|5A      |      ;  
@@ -1391,21 +1334,19 @@ CODE_C40B25:
 	jsl.l CODE_C43F40                    ;C40B2C|22403FC4|C43F40;  
 	plb                                  ;C40B30|AB      |      ;  
 	ply                                  ;C40B31|7A      |      ;  
-	bcc CODE_C40B37                      ;C40B32|9003    |C40B37;  
+	bcc .lbl_C40B37                      ;C40B32|9003    |C40B37;  
 	.db $82,$71,$01                       ;C40B34|        |C40CA8;  
-
-CODE_C40B37:
+.lbl_C40B37
 	dey                                  ;C40B37|88      |      ;  
-	bne CODE_C40B18                      ;C40B38|D0DE    |C40B18;  
+	bne .lbl_C40B18                      ;C40B38|D0DE    |C40B18;  
 	ldx.w #$0020                         ;C40B3A|A22000  |      ;  
 	stx.b $00                            ;C40B3D|8600    |000000;  
 	phb                                  ;C40B3F|8B      |      ;  
 	jsl.l CODE_C43F40                    ;C40B40|22403FC4|C43F40;  
 	plb                                  ;C40B44|AB      |      ;  
-	bcc CODE_C40B4A                      ;C40B45|9003    |C40B4A;  
+	bcc .lbl_C40B4A                      ;C40B45|9003    |C40B4A;  
 	.db $82,$5E,$01                       ;C40B47|        |C40CA8;  
-
-CODE_C40B4A:
+.lbl_C40B4A
 	lda.b #$0F                           ;C40B4A|A90F    |      ;  
 	sta.w $A9BD                          ;C40B4C|8DBDA9  |7FA9BD;  
 	lda.b #$03                           ;C40B4F|A903    |      ;  
@@ -1416,13 +1357,11 @@ CODE_C40B4A:
 	sta.b $06                            ;C40B59|8506    |000006;  
 	lda.b #$18                           ;C40B5B|A918    |      ;  
 	sta.b $07                            ;C40B5D|8507    |000007;  
-
-CODE_C40B5F:
+.lbl_C40B5F
 	dec.b $07                            ;C40B5F|C607    |000007;  
-	bpl CODE_C40B65                      ;C40B61|1002    |C40B65;  
+	bpl .lbl_C40B65                      ;C40B61|1002    |C40B65;  
 	inc.b $07                            ;C40B63|E607    |000007;  
-
-CODE_C40B65:
+.lbl_C40B65
 	dec.b $06                            ;C40B65|C606    |000006;  
 	rep #$20                             ;C40B67|C220    |      ;  
 	lda.b $04                   ;C40B69|A504    |000004;  
@@ -1450,12 +1389,11 @@ CODE_C40B65:
 	pla                                  ;C40B8F|68      |      ;  
 	sta.b $04                   ;C40B90|8504    |000004;  
 	sep #$20                             ;C40B92|E220    |      ;  
-	bcc CODE_C40B99                      ;C40B94|9003    |C40B99;  
+	bcc .lbl_C40B99                      ;C40B94|9003    |C40B99;  
 	.db $82,$0F,$01                       ;C40B96|        |C40CA8;  
-
-CODE_C40B99:
+.lbl_C40B99
 	lda.b $06                            ;C40B99|A506    |000006;  
-	bne CODE_C40B5F                      ;C40B9B|D0C2    |C40B5F;  
+	bne .lbl_C40B5F                      ;C40B9B|D0C2    |C40B5F;  
 	lda.b #$03                           ;C40B9D|A903    |      ;  
 	sta.b $06                            ;C40B9F|8506    |000006;  
 	phb                                  ;C40BA1|8B      |      ;  
@@ -1466,10 +1404,9 @@ CODE_C40B99:
 	phb                                  ;C40BAC|8B      |      ;  
 	jsl.l CODE_C43F40                    ;C40BAD|22403FC4|C43F40;  
 	plb                                  ;C40BB1|AB      |      ;  
-	bcc CODE_C40BB7                      ;C40BB2|9003    |C40BB7;  
+	bcc .lbl_C40BB7                      ;C40BB2|9003    |C40BB7;  
 	.db $82,$F1,$00                       ;C40BB4|        |C40CA8;  
-
-CODE_C40BB7:
+.lbl_C40BB7
 	lda.b #$0F                           ;C40BB7|A90F    |      ;  
 	sta.w $A9BD                          ;C40BB9|8DBDA9  |7FA9BD;  
 	phb                                  ;C40BBC|8B      |      ;  
@@ -1498,8 +1435,7 @@ CODE_C40BB7:
 	jsl.l CODE_C45668                    ;C40BE7|226856C4|C45668;  
 	plb                                  ;C40BEB|AB      |      ;  
 	ldy.w #$0000                         ;C40BEC|A00000  |      ;  
-
-CODE_C40BEF:
+.lbl_C40BEF
 	sty.b $06                            ;C40BEF|8406    |000006;  
 	phy                                  ;C40BF1|5A      |      ;  
 	phb                                  ;C40BF2|8B      |      ;  
@@ -1513,16 +1449,14 @@ CODE_C40BEF:
 	jsl.l CODE_C43F40                    ;C40C00|22403FC4|C43F40;  
 	plb                                  ;C40C04|AB      |      ;  
 	ply                                  ;C40C05|7A      |      ;  
-	bcc CODE_C40C0B                      ;C40C06|9003    |C40C0B;  
+	bcc .lbl_C40C0B                      ;C40C06|9003    |C40C0B;  
 	.db $82,$9D,$00                       ;C40C08|        |C40CA8;  
-
-CODE_C40C0B:
+.lbl_C40C0B
 	iny                                  ;C40C0B|C8      |      ;  
 	cpy.w #$0031                         ;C40C0C|C03100  |      ;  
-	bne CODE_C40BEF                      ;C40C0F|D0DE    |C40BEF;  
+	bne .lbl_C40BEF                      ;C40C0F|D0DE    |C40BEF;  
 	ldy.w #$0001                         ;C40C11|A00100  |      ;  
-
-CODE_C40C14:
+.lbl_C40C14
 	sty.b $06                            ;C40C14|8406    |000006;  
 	phy                                  ;C40C16|5A      |      ;  
 	phb                                  ;C40C17|8B      |      ;  
@@ -1539,10 +1473,9 @@ CODE_C40C14:
 	bcs UNREACH_C40CA8                   ;C40C2B|B07B    |C40CA8;  
 	iny                                  ;C40C2D|C8      |      ;  
 	cpy.w #$0048                         ;C40C2E|C04800  |      ;  
-	bne CODE_C40C14                      ;C40C31|D0E1    |C40C14;  
+	bne .lbl_C40C14                      ;C40C31|D0E1    |C40C14;  
 	ldy.w #$0001                         ;C40C33|A00100  |      ;  
-
-CODE_C40C36:
+.lbl_C40C36
 	sty.b $06                            ;C40C36|8406    |000006;  
 	phy                                  ;C40C38|5A      |      ;  
 	phb                                  ;C40C39|8B      |      ;  
@@ -1559,7 +1492,7 @@ CODE_C40C36:
 	bcs UNREACH_C40CA8                   ;C40C4D|B059    |C40CA8;  
 	iny                                  ;C40C4F|C8      |      ;  
 	cpy.w #$0040                         ;C40C50|C04000  |      ;  
-	bne CODE_C40C36                      ;C40C53|D0E1    |C40C36;  
+	bne .lbl_C40C36                      ;C40C53|D0E1    |C40C36;  
 	ldx.w #$0100                         ;C40C55|A20001  |      ;  
 	stx.b $00                            ;C40C58|8600    |000000;  
 	phb                                  ;C40C5A|8B      |      ;  
@@ -1567,8 +1500,7 @@ CODE_C40C36:
 	plb                                  ;C40C5F|AB      |      ;  
 	bcs UNREACH_C40CA8                   ;C40C60|B046    |C40CA8;  
 	ldy.w #$0390                         ;C40C62|A09003  |      ;  
-
-CODE_C40C65:
+.lbl_C40C65
 	phy                                  ;C40C65|5A      |      ;  
 	phb                                  ;C40C66|8B      |      ;  
 	jsl.l CODE_C4572D                    ;C40C67|222D57C4|C4572D;  
@@ -1588,7 +1520,7 @@ CODE_C40C65:
 	ply                                  ;C40C81|7A      |      ;  
 	bcs UNREACH_C40CA8                   ;C40C82|B024    |C40CA8;  
 	dey                                  ;C40C84|88      |      ;  
-	bne CODE_C40C65                      ;C40C85|D0DE    |C40C65;  
+	bne .lbl_C40C65                      ;C40C85|D0DE    |C40C65;  
 	ldx.w #$0028                         ;C40C87|A22800  |      ;  
 	stx.b $00                            ;C40C8A|8600    |000000;  
 	jsl.l func_809664                    ;C40C8C|22649680|809664;  
@@ -1698,42 +1630,38 @@ CODE_C40CB8:
 	phb                                  ;C40D7B|8B      |      ;  
 	jsl.l CODE_C43F67                    ;C40D7C|22673FC4|C43F67;  
 	plb                                  ;C40D80|AB      |      ;  
-	bcc CODE_C40D86                      ;C40D81|9003    |C40D86;  
+	bcc .lbl_C40D86                      ;C40D81|9003    |C40D86;  
 	.db $82,$C3,$00                       ;C40D83|        |C40E49;  
-
-CODE_C40D86:
+.lbl_C40D86
 	ldx.w #$00FF                         ;C40D86|A2FF00  |      ;  
 	stx.b $00                            ;C40D89|8600    |000000;  
 	jsl.l func_809650                    ;C40D8B|22509680|809650;  
 	phb                                  ;C40D8F|8B      |      ;  
 	jsl.l CODE_C43F17                    ;C40D90|22173FC4|C43F17;  
 	plb                                  ;C40D94|AB      |      ;  
-	bcc CODE_C40DAA                      ;C40D95|9013    |C40DAA;  
+	bcc .lbl_C40DAA                      ;C40D95|9013    |C40DAA;  
 	.db $82,$AF,$00,$A2,$20,$00,$86,$00   ;C40D97|        |C40E49;  
 	.db $8B,$22,$40,$3F,$C4,$AB,$90,$03   ;C40D9F
 	.db $82,$9F,$00                       ;C40DA7|        |C40E49;  
-
-CODE_C40DAA:
+.lbl_C40DAA
 	ldx.w #$0054                         ;C40DAA|A25400  |      ;  
 	stx.b $00                            ;C40DAD|8600    |000000;  
 	phb                                  ;C40DAF|8B      |      ;  
 	jsl.l CODE_C43F67                    ;C40DB0|22673FC4|C43F67;  
 	plb                                  ;C40DB4|AB      |      ;  
-	bcc CODE_C40DBA                      ;C40DB5|9003    |C40DBA;  
+	bcc .lbl_C40DBA                      ;C40DB5|9003    |C40DBA;  
 	.db $82,$8F,$00                       ;C40DB7|        |C40E49;  
-
-CODE_C40DBA:
+.lbl_C40DBA
 	ldx.w #$0000                         ;C40DBA|A20000  |      ;  
 	stx.w $9CF0                          ;C40DBD|8EF09C  |7F9CF0;  
 	stz.w $9CFE                          ;C40DC0|9CFE9C  |7F9CFE;  
-
-CODE_C40DC3:
+.lbl_C40DC3
 	ldx.w $9CF0                          ;C40DC3|AEF09C  |7F9CF0;  
 	inx                                  ;C40DC6|E8      |      ;  
 	stx.w $9CF0                          ;C40DC7|8EF09C  |7F9CF0;  
 	lda.w $9CF0                          ;C40DCA|ADF09C  |7F9CF0;  
 	bit.b #$01                           ;C40DCD|8901    |      ;  
-	bne CODE_C40E05                      ;C40DCF|D034    |C40E05;  
+	bne .lbl_C40E05                      ;C40DCF|D034    |C40E05;  
 	ldx.w $9CF4                          ;C40DD1|AEF49C  |7F9CF4;  
 	inx                                  ;C40DD4|E8      |      ;  
 	stx.w $9CF4                          ;C40DD5|8EF49C  |7F9CF4;  
@@ -1754,8 +1682,7 @@ CODE_C40DC3:
 	ldx.w #$0000                         ;C40DFC|A20000  |      ;  
 	stx.b $04                   ;C40DFF|8604    |000004;  
 	jsl.l func_808ED0                    ;C40E01|22D08E80|808ED0;  
-
-CODE_C40E05:
+.lbl_C40E05
 	ldx.w #$0001                         ;C40E05|A20100  |      ;  
 	stx.b $00                            ;C40E08|8600    |000000;  
 	phb                                  ;C40E0A|8B      |      ;  
@@ -1764,10 +1691,9 @@ CODE_C40E05:
 	bcs UNREACH_C40E49                   ;C40E10|B037    |C40E49;  
 	ldx.w $9CF0                          ;C40E12|AEF09C  |7F9CF0;  
 	cpx.w #$00A0                         ;C40E15|E0A000  |      ;  
-	bne CODE_C40DC3                      ;C40E18|D0A9    |C40DC3;  
+	bne .lbl_C40DC3                      ;C40E18|D0A9    |C40DC3;  
 	ldx.w #$00A0                         ;C40E1A|A2A000  |      ;  
-
-CODE_C40E1D:
+.lbl_C40E1D
 	stx.b $00                            ;C40E1D|8600    |000000;  
 	phx                                  ;C40E1F|DA      |      ;  
 	phb                                  ;C40E20|8B      |      ;  
@@ -1791,7 +1717,7 @@ CODE_C40E1D:
 	dex                                  ;C40E3F|CA      |      ;  
 	dex                                  ;C40E40|CA      |      ;  
 	cpx.w #$0020                         ;C40E41|E02000  |      ;  
-	bcs CODE_C40E1D                      ;C40E44|B0D7    |C40E1D;  
+	bcs .lbl_C40E1D                      ;C40E44|B0D7    |C40E1D;  
 	plp                                  ;C40E46|28      |      ;  
 	clc                                  ;C40E47|18      |      ;  
 	rtl                                  ;C40E48|6B      |      ;  
@@ -1849,14 +1775,13 @@ CODE_C40E4C:
 CODE_C40EB4:
 	lda.l DATA8_C4107A,x                 ;C40EB4|BF7A10C4|C4107A;  
 	cmp.w #$0050                         ;C40EB8|C95000  |      ;  
-	beq CODE_C40F1D                      ;C40EBB|F060    |C40F1D;  
+	beq .lbl_C40F1D                      ;C40EBB|F060    |C40F1D;  
 	sta.b $00                            ;C40EBD|8500    |000000;  
 	lda.l DATA8_C4107C,x                 ;C40EBF|BF7C10C4|C4107C;  
 	sta.b $02                   ;C40EC3|8502    |000002;  
 	lda.l DATA8_C4107E,x                 ;C40EC5|BF7E10C4|C4107E;  
 	sta.b $04                   ;C40EC9|8504    |000004;  
-
-CODE_C40ECB:
+.lbl_C40ECB
 	lda.w $9CE8                          ;C40ECB|ADE89C  |7F9CE8;  
 	clc                                  ;C40ECE|18      |      ;  
 	adc.b $00                            ;C40ECF|6500    |000000;  
@@ -1894,7 +1819,7 @@ CODE_C40ECB:
 	pla                                  ;C40F0E|68      |      ;  
 	sta.b $00                            ;C40F0F|8500    |000000;  
 	dec.b $04                   ;C40F11|C604    |000004;  
-	bne CODE_C40ECB                      ;C40F13|D0B6    |C40ECB;  
+	bne .lbl_C40ECB                      ;C40F13|D0B6    |C40ECB;  
 	inx                                  ;C40F15|E8      |      ;  
 	inx                                  ;C40F16|E8      |      ;  
 	inx                                  ;C40F17|E8      |      ;  
@@ -1902,22 +1827,19 @@ CODE_C40ECB:
 	inx                                  ;C40F19|E8      |      ;  
 	inx                                  ;C40F1A|E8      |      ;  
 	bra CODE_C40EB4                      ;C40F1B|8097    |C40EB4;  
-
-CODE_C40F1D:
+.lbl_C40F1D
 	ldy.w #$0000                         ;C40F1D|A00000  |      ;  
-
-CODE_C40F20:
+.lbl_C40F20
 	rep #$20                             ;C40F20|C220    |      ;  
 	tya                                  ;C40F22|98      |      ;  
 	asl a                                ;C40F23|0A      |      ;  
 	tax                                  ;C40F24|AA      |      ;  
 	lda.l DATA8_C41060,x                 ;C40F25|BF6010C4|C41060;  
 	tax                                  ;C40F29|AA      |      ;  
-
-CODE_C40F2A:
+.lbl_C40F2A
 	txa                                  ;C40F2A|8A      |      ;  
 	bit.w #$0001                         ;C40F2B|890100  |      ;  
-	bne CODE_C40F3F                      ;C40F2E|D00F    |C40F3F;  
+	bne .lbl_C40F3F                      ;C40F2E|D00F    |C40F3F;  
 	lda.w #$0005                         ;C40F30|A90500  |      ;  
 	sta.b $00                            ;C40F33|8500    |000000;  
 	phx                                  ;C40F35|DA      |      ;  
@@ -1927,8 +1849,7 @@ CODE_C40F2A:
 	plb                                  ;C40F3C|AB      |      ;  
 	ply                                  ;C40F3D|7A      |      ;  
 	plx                                  ;C40F3E|FA      |      ;  
-
-CODE_C40F3F:
+.lbl_C40F3F
 	lda.w #$0001                         ;C40F3F|A90100  |      ;  
 	sta.b $00                            ;C40F42|8500    |000000;  
 	phx                                  ;C40F44|DA      |      ;  
@@ -1938,12 +1859,11 @@ CODE_C40F3F:
 	plb                                  ;C40F4B|AB      |      ;  
 	ply                                  ;C40F4C|7A      |      ;  
 	plx                                  ;C40F4D|FA      |      ;  
-	bcc CODE_C40F53                      ;C40F4E|9003    |C40F53;  
+	bcc .lbl_C40F53                      ;C40F4E|9003    |C40F53;  
 	.db $82,$0A,$01                       ;C40F50|        |C4105D;  
-
-CODE_C40F53:
+.lbl_C40F53
 	dex                                  ;C40F53|CA      |      ;  
-	bne CODE_C40F2A                      ;C40F54|D0D4    |C40F2A;  
+	bne .lbl_C40F2A                      ;C40F54|D0D4    |C40F2A;  
 	sep #$20                             ;C40F56|E220    |      ;  
 	lda.b #$01                           ;C40F58|A901    |      ;  
 	sta.b $03                            ;C40F5A|8503    |000003;  
@@ -1970,7 +1890,7 @@ CODE_C40F53:
 	ply                                  ;C40F80|7A      |      ;  
 	iny                                  ;C40F81|C8      |      ;  
 	cpy.w #$000C                         ;C40F82|C00C00  |      ;  
-	bne CODE_C40F20                      ;C40F85|D099    |C40F20;  
+	bne .lbl_C40F20                      ;C40F85|D099    |C40F20;  
 	ldx.w #$0107                         ;C40F87|A20701  |      ;  
 	stx.w $9CE8                          ;C40F8A|8EE89C  |7F9CE8;  
 	ldx.w #$0008                         ;C40F8D|A20800  |      ;  
@@ -1985,10 +1905,9 @@ CODE_C40F53:
 	phb                                  ;C40FA5|8B      |      ;  
 	jsl.l CODE_C43F40                    ;C40FA6|22403FC4|C43F40;  
 	plb                                  ;C40FAA|AB      |      ;  
-	bcc CODE_C40FB0                      ;C40FAB|9003    |C40FB0;  
+	bcc .lbl_C40FB0                      ;C40FAB|9003    |C40FB0;  
 	.db $82,$AD,$00                       ;C40FAD|        |C4105D;  
-
-CODE_C40FB0:
+.lbl_C40FB0
 	phb                                  ;C40FB0|8B      |      ;  
 	jsl.l CODE_C063D1                    ;C40FB1|22D163C0|C063D1;  
 	plb                                  ;C40FB5|AB      |      ;  
@@ -2025,19 +1944,17 @@ CODE_C40FB0:
 	ldx.w #$0000                         ;C40FFA|A20000  |      ;  
 	stx.w $9CF0                          ;C40FFD|8EF09C  |7F9CF0;  
 	stz.w $9CFE                          ;C41000|9CFE9C  |7F9CFE;  
-
-CODE_C41003:
+.lbl_C41003
 	ldx.w $9CFE                          ;C41003|AEFE9C  |7F9CFE;  
 	inx                                  ;C41006|E8      |      ;  
 	stx.w $9CFE                          ;C41007|8EFE9C  |7F9CFE;  
 	lda.w $9CFE                          ;C4100A|ADFE9C  |7F9CFE;  
 	bit.b #$01                           ;C4100D|8901    |      ;  
-	bne CODE_C41018                      ;C4100F|D007    |C41018;  
+	bne .lbl_C41018                      ;C4100F|D007    |C41018;  
 	ldx.w $9CF4                          ;C41011|AEF49C  |7F9CF4;  
 	inx                                  ;C41014|E8      |      ;  
 	stx.w $9CF4                          ;C41015|8EF49C  |7F9CF4;  
-
-CODE_C41018:
+.lbl_C41018
 	ldx.w $9CE8                          ;C41018|AEE89C  |7F9CE8;  
 	inx                                  ;C4101B|E8      |      ;  
 	stx.w $9CE8                          ;C4101C|8EE89C  |7F9CE8;  
@@ -2063,7 +1980,7 @@ CODE_C41018:
 	bcs UNREACH_C4105D                   ;C41050|B00B    |C4105D;  
 	ldx.w $9CFE                          ;C41052|AEFE9C  |7F9CFE;  
 	cpx.w #$0060                         ;C41055|E06000  |      ;  
-	bne CODE_C41003                      ;C41058|D0A9    |C41003;  
+	bne .lbl_C41003                      ;C41058|D0A9    |C41003;  
 	plp                                  ;C4105A|28      |      ;  
 	clc                                  ;C4105B|18      |      ;  
 	rtl                                  ;C4105C|6B      |      ;  
@@ -2150,8 +2067,7 @@ CODE_C410A0:
 	sta.b $00                            ;C4112C|8500    |000000;  
 	jsl.l func_808F59                    ;C4112E|22598F80|808F59;  
 	ldx.w #$0020                         ;C41132|A22000  |      ;  
-
-CODE_C41135:
+.lbl_C41135
 	stx.b $00                            ;C41135|8600    |000000;  
 	phx                                  ;C41137|DA      |      ;  
 	phb                                  ;C41138|8B      |      ;  
@@ -2170,29 +2086,26 @@ CODE_C41135:
 	jsl.l CODE_C43F40                    ;C4114E|22403FC4|C43F40;  
 	plb                                  ;C41152|AB      |      ;  
 	plx                                  ;C41153|FA      |      ;  
-	bcc CODE_C41159                      ;C41154|9003    |C41159;  
+	bcc .lbl_C41159                      ;C41154|9003    |C41159;  
 	.db $82,$9F,$00                       ;C41156|        |C411F8;  
-
-CODE_C41159:
+.lbl_C41159
 	inx                                  ;C41159|E8      |      ;  
 	inx                                  ;C4115A|E8      |      ;  
 	inx                                  ;C4115B|E8      |      ;  
 	cpx.w #$00A0                         ;C4115C|E0A000  |      ;  
-	bcc CODE_C41135                      ;C4115F|90D4    |C41135;  
+	bcc .lbl_C41135                      ;C4115F|90D4    |C41135;  
 	ldx.w #$0060                         ;C41161|A26000  |      ;  
 	stx.b $00                            ;C41164|8600    |000000;  
 	phb                                  ;C41166|8B      |      ;  
 	jsl.l CODE_C43F67                    ;C41167|22673FC4|C43F67;  
 	plb                                  ;C4116B|AB      |      ;  
-	bcc CODE_C41171                      ;C4116C|9003    |C41171;  
+	bcc .lbl_C41171                      ;C4116C|9003    |C41171;  
 	.db $82,$87,$00                       ;C4116E|        |C411F8;  
-
-CODE_C41171:
+.lbl_C41171
 	ldx.w #$0000                         ;C41171|A20000  |      ;  
 	stx.w $9CF0                          ;C41174|8EF09C  |7F9CF0;  
 	stz.w $9CFE                          ;C41177|9CFE9C  |7F9CFE;  
-
-CODE_C4117A:
+.lbl_C4117A
 	ldx.w $9CF0                          ;C4117A|AEF09C  |7F9CF0;  
 	inx                                  ;C4117D|E8      |      ;  
 	stx.w $9CF0                          ;C4117E|8EF09C  |7F9CF0;  
@@ -2204,7 +2117,7 @@ CODE_C4117A:
 	stx.w $9CE8                          ;C4118C|8EE89C  |7F9CE8;  
 	ldx.w $9CF0                          ;C4118F|AEF09C  |7F9CF0;  
 	cpx.w #$0100                         ;C41192|E00001  |      ;  
-	bcs CODE_C411BD                      ;C41195|B026    |C411BD;  
+	bcs .lbl_C411BD                      ;C41195|B026    |C411BD;  
 	ldx.w #$0004                         ;C41197|A20400  |      ;  
 	stx.b $00                            ;C4119A|8600    |000000;  
 	ldx.w $9CF4                          ;C4119C|AEF49C  |7F9CF4;  
@@ -2219,26 +2132,23 @@ CODE_C4117A:
 	ldx.w #$0000                         ;C411B4|A20000  |      ;  
 	stx.b $04                   ;C411B7|8604    |000004;  
 	jsl.l func_808ED0                    ;C411B9|22D08E80|808ED0;  
-
-CODE_C411BD:
+.lbl_C411BD
 	ldx.w $9CF0                          ;C411BD|AEF09C  |7F9CF0;  
 	cpx.w #$00A0                         ;C411C0|E0A000  |      ;  
-	bne CODE_C411CE                      ;C411C3|D009    |C411CE;  
+	bne .lbl_C411CE                      ;C411C3|D009    |C411CE;  
 	ldx.w #$0040                         ;C411C5|A24000  |      ;  
 	stx.b $00                            ;C411C8|8600    |000000;  
 	jsl.l func_809664                    ;C411CA|22649680|809664;  
-
-CODE_C411CE:
+.lbl_C411CE
 	ldx.w $9CF0                          ;C411CE|AEF09C  |7F9CF0;  
 	bit.b #$01                           ;C411D1|8901    |      ;  
-	bne CODE_C411E0                      ;C411D3|D00B    |C411E0;  
+	bne .lbl_C411E0                      ;C411D3|D00B    |C411E0;  
 	ldx.w #$0006                         ;C411D5|A20600  |      ;  
 	stx.b $00                            ;C411D8|8600    |000000;  
 	phb                                  ;C411DA|8B      |      ;  
 	jsl.l CODE_C4677C                    ;C411DB|227C67C4|C4677C;  
 	plb                                  ;C411DF|AB      |      ;  
-
-CODE_C411E0:
+.lbl_C411E0
 	ldx.w #$0001                         ;C411E0|A20100  |      ;  
 	stx.b $00                            ;C411E3|8600    |000000;  
 	phb                                  ;C411E5|8B      |      ;  
@@ -2247,7 +2157,7 @@ CODE_C411E0:
 	bcs UNREACH_C411F8                   ;C411EB|B00B    |C411F8;  
 	ldx.w $9CF0                          ;C411ED|AEF09C  |7F9CF0;  
 	cpx.w #$0130                         ;C411F0|E03001  |      ;  
-	bne CODE_C4117A                      ;C411F3|D085    |C4117A;  
+	bne .lbl_C4117A                      ;C411F3|D085    |C4117A;  
 	plp                                  ;C411F5|28      |      ;  
 	clc                                  ;C411F6|18      |      ;  
 	rtl                                  ;C411F7|6B      |      ;  
@@ -2322,11 +2232,10 @@ CODE_C411FB:
 	plb                                  ;C41284|AB      |      ;  
 	bcs UNREACH_C412C7                   ;C41285|B040    |C412C7;  
 	ldy.w #$0140                         ;C41287|A04001  |      ;  
-
-CODE_C4128A:
+.lbl_C4128A
 	tya                                  ;C4128A|98      |      ;  
 	bit.b #$07                           ;C4128B|8907    |      ;  
-	bne CODE_C412A1                      ;C4128D|D012    |C412A1;  
+	bne .lbl_C412A1                      ;C4128D|D012    |C412A1;  
 	lda.b #$49                           ;C4128F|A949    |      ;  
 	sta.b $00                            ;C41291|8500    |000000;  
 	lda.b #$06                           ;C41293|A906    |      ;  
@@ -2335,8 +2244,7 @@ CODE_C4128A:
 	jsl.l func_8089AA                    ;C41298|22AA8980|8089AA;  
 	ply                                  ;C4129C|7A      |      ;  
 	jsl.l func_8085B1                    ;C4129D|22B18580|8085B1;  
-
-CODE_C412A1:
+.lbl_C412A1
 	ldx.w #$0001                         ;C412A1|A20100  |      ;  
 	stx.b $00                            ;C412A4|8600    |000000;  
 	phy                                  ;C412A6|5A      |      ;  
@@ -2346,7 +2254,7 @@ CODE_C412A1:
 	ply                                  ;C412AD|7A      |      ;  
 	bcs UNREACH_C412C7                   ;C412AE|B017    |C412C7;  
 	dey                                  ;C412B0|88      |      ;  
-	bne CODE_C4128A                      ;C412B1|D0D7    |C4128A;  
+	bne .lbl_C4128A                      ;C412B1|D0D7    |C4128A;  
 	ldx.w #$00FF                         ;C412B3|A2FF00  |      ;  
 	stx.b $00                            ;C412B6|8600    |000000;  
 	jsl.l func_809664                    ;C412B8|22649680|809664;  
@@ -2557,16 +2465,14 @@ CODE_C413A0:
 	phb                                  ;C41474|8B      |      ;  
 	jsl.l CODE_C43F17                    ;C41475|22173FC4|C43F17;  
 	plb                                  ;C41479|AB      |      ;  
-	bcc CODE_C4147F                      ;C4147A|9003    |C4147F;  
+	bcc .lbl_C4147F                      ;C4147A|9003    |C4147F;  
 	.db $82,$9E,$01                       ;C4147C|        |C4161D;  
-
-CODE_C4147F:
+.lbl_C4147F
 	ldx.w #$0000                         ;C4147F|A20000  |      ;  
-
-CODE_C41482:
+.lbl_C41482
 	txa                                  ;C41482|8A      |      ;  
 	bit.b #$07                           ;C41483|8907    |      ;  
-	bne CODE_C414A6                      ;C41485|D01F    |C414A6;  
+	bne .lbl_C414A6                      ;C41485|D01F    |C414A6;  
 	lda.b #$0A                           ;C41487|A90A    |      ;  
 	sta.b $00                            ;C41489|8500    |000000;  
 	ldy.w #$7F80                         ;C4148B|A0807F  |      ;  
@@ -2584,8 +2490,7 @@ CODE_C41482:
 	plb                                  ;C414A0|AB      |      ;  
 	plx                                  ;C414A1|FA      |      ;  
 	jsl.l func_8085B1                    ;C414A2|22B18580|8085B1;  
-
-CODE_C414A6:
+.lbl_C414A6
 	phx                                  ;C414A6|DA      |      ;  
 	phb                                  ;C414A7|8B      |      ;  
 	jsl.l CODE_C45C6D                    ;C414A8|226D5CC4|C45C6D;  
@@ -2603,23 +2508,21 @@ CODE_C414A6:
 	jsl.l CODE_C43F40                    ;C414BD|22403FC4|C43F40;  
 	plb                                  ;C414C1|AB      |      ;  
 	plx                                  ;C414C2|FA      |      ;  
-	bcc CODE_C414C8                      ;C414C3|9003    |C414C8;  
+	bcc .lbl_C414C8                      ;C414C3|9003    |C414C8;  
 	.db $82,$55,$01                       ;C414C5|        |C4161D;  
-
-CODE_C414C8:
+.lbl_C414C8
 	inx                                  ;C414C8|E8      |      ;  
 	cpx.w #$0070                         ;C414C9|E07000  |      ;  
-	bne CODE_C41482                      ;C414CC|D0B4    |C41482;  
+	bne .lbl_C41482                      ;C414CC|D0B4    |C41482;  
 	lda.b #$03                           ;C414CE|A903    |      ;  
 	sta.b $00                            ;C414D0|8500    |000000;  
 	jsl.l func_808F85                    ;C414D2|22858F80|808F85;  
 	sep #$20                             ;C414D6|E220    |      ;  
 	ldx.w #$0000                         ;C414D8|A20000  |      ;  
-
-CODE_C414DB:
+.lbl_C414DB
 	txa                                  ;C414DB|8A      |      ;  
 	bit.b #$07                           ;C414DC|8907    |      ;  
-	bne CODE_C414FF                      ;C414DE|D01F    |C414FF;  
+	bne .lbl_C414FF                      ;C414DE|D01F    |C414FF;  
 	lda.b #$0A                           ;C414E0|A90A    |      ;  
 	sta.b $00                            ;C414E2|8500    |000000;  
 	ldy.w #$8080                         ;C414E4|A08080  |      ;  
@@ -2637,8 +2540,7 @@ CODE_C414DB:
 	plb                                  ;C414F9|AB      |      ;  
 	plx                                  ;C414FA|FA      |      ;  
 	jsl.l func_8085B1                    ;C414FB|22B18580|8085B1;  
-
-CODE_C414FF:
+.lbl_C414FF
 	phx                                  ;C414FF|DA      |      ;  
 	phb                                  ;C41500|8B      |      ;  
 	jsl.l CODE_C45C6D                    ;C41501|226D5CC4|C45C6D;  
@@ -2656,23 +2558,21 @@ CODE_C414FF:
 	jsl.l CODE_C43F40                    ;C41516|22403FC4|C43F40;  
 	plb                                  ;C4151A|AB      |      ;  
 	plx                                  ;C4151B|FA      |      ;  
-	bcc CODE_C41521                      ;C4151C|9003    |C41521;  
+	bcc .lbl_C41521                      ;C4151C|9003    |C41521;  
 	.db $82,$FC,$00                       ;C4151E|        |C4161D;  
-
-CODE_C41521:
+.lbl_C41521
 	inx                                  ;C41521|E8      |      ;  
 	cpx.w #$0070                         ;C41522|E07000  |      ;  
-	bne CODE_C414DB                      ;C41525|D0B4    |C414DB;  
+	bne .lbl_C414DB                      ;C41525|D0B4    |C414DB;  
 	rep #$20                             ;C41527|C220    |      ;  
 	stz.w $9CF0                          ;C41529|9CF09C  |7F9CF0;  
 	stz.w $9CFE                          ;C4152C|9CFE9C  |7F9CFE;  
-
-CODE_C4152F:
+.lbl_C4152F
 	inc.w $9CFE                          ;C4152F|EEFE9C  |7F9CFE;  
 	inc.w $9CF0                          ;C41532|EEF09C  |7F9CF0;  
 	lda.w $9CF0                          ;C41535|ADF09C  |7F9CF0;  
 	bit.w #$0003                         ;C41538|890300  |      ;  
-	bne CODE_C41571                      ;C4153B|D034    |C41571;  
+	bne .lbl_C41571                      ;C4153B|D034    |C41571;  
 	ldx.w $9CF4                          ;C4153D|AEF49C  |7F9CF4;  
 	dex                                  ;C41540|CA      |      ;  
 	stx.w $9CF4                          ;C41541|8EF49C  |7F9CF4;  
@@ -2693,8 +2593,7 @@ CODE_C4152F:
 	ldx.w #$0000                         ;C41568|A20000  |      ;  
 	stx.b $04                   ;C4156B|8604    |000004;  
 	jsl.l func_808ED0                    ;C4156D|22D08E80|808ED0;  
-
-CODE_C41571:
+.lbl_C41571
 	phb                                  ;C41571|8B      |      ;  
 	jsl.l CODE_C45C6D                    ;C41572|226D5CC4|C45C6D;  
 	plb                                  ;C41576|AB      |      ;  
@@ -2706,17 +2605,15 @@ CODE_C41571:
 	phb                                  ;C41582|8B      |      ;  
 	jsl.l CODE_C43F40                    ;C41583|22403FC4|C43F40;  
 	plb                                  ;C41587|AB      |      ;  
-	bcc CODE_C4158D                      ;C41588|9003    |C4158D;  
+	bcc .lbl_C4158D                      ;C41588|9003    |C4158D;  
 	.db $82,$90,$00                       ;C4158A|        |C4161D;  
-
-CODE_C4158D:
+.lbl_C4158D
 	lda.w $9CFE                          ;C4158D|ADFE9C  |7F9CFE;  
 	cmp.w #$0208                         ;C41590|C90802  |      ;  
-	bne CODE_C4152F                      ;C41593|D09A    |C4152F;  
+	bne .lbl_C4152F                      ;C41593|D09A    |C4152F;  
 	rep #$20                             ;C41595|C220    |      ;  
 	ldy.w #$0080                         ;C41597|A08000  |      ;  
-
-CODE_C4159A:
+.lbl_C4159A
 	phy                                  ;C4159A|5A      |      ;  
 	phb                                  ;C4159B|8B      |      ;  
 	jsl.l CODE_C45C6D                    ;C4159C|226D5CC4|C45C6D;  
@@ -2736,7 +2633,7 @@ CODE_C4159A:
 	ply                                  ;C415B6|7A      |      ;  
 	bcs UNREACH_C4161D                   ;C415B7|B064    |C4161D;  
 	dey                                  ;C415B9|88      |      ;  
-	bne CODE_C4159A                      ;C415BA|D0DE    |C4159A;  
+	bne .lbl_C4159A                      ;C415BA|D0DE    |C4159A;  
 	ldx.w #$011C                         ;C415BC|A21C01  |      ;  
 	stx.b $00                            ;C415BF|8600    |000000;  
 	phb                                  ;C415C1|8B      |      ;  
@@ -2744,11 +2641,10 @@ CODE_C4159A:
 	plb                                  ;C415C6|AB      |      ;  
 	sep #$20                             ;C415C7|E220    |      ;  
 	ldx.w #$0069                         ;C415C9|A26900  |      ;  
-
-CODE_C415CC:
+.lbl_C415CC
 	txa                                  ;C415CC|8A      |      ;  
 	bit.b #$07                           ;C415CD|8907    |      ;  
-	bne CODE_C415F5                      ;C415CF|D024    |C415F5;  
+	bne .lbl_C415F5                      ;C415CF|D024    |C415F5;  
 	lda.b #$0C                           ;C415D1|A90C    |      ;  
 	sta.b $00                            ;C415D3|8500    |000000;  
 	ldy.w #$FF80                         ;C415D5|A080FF  |      ;  
@@ -2768,8 +2664,7 @@ CODE_C415CC:
 	plb                                  ;C415EF|AB      |      ;  
 	plx                                  ;C415F0|FA      |      ;  
 	jsl.l func_8085B1                    ;C415F1|22B18580|8085B1;  
-
-CODE_C415F5:
+.lbl_C415F5
 	phx                                  ;C415F5|DA      |      ;  
 	phb                                  ;C415F6|8B      |      ;  
 	jsl.l CODE_C45C6D                    ;C415F7|226D5CC4|C45C6D;  
@@ -2787,12 +2682,11 @@ CODE_C415F5:
 	jsl.l CODE_C43F40                    ;C4160C|22403FC4|C43F40;  
 	plb                                  ;C41610|AB      |      ;  
 	plx                                  ;C41611|FA      |      ;  
-	bcc CODE_C41617                      ;C41612|9003    |C41617;  
+	bcc .lbl_C41617                      ;C41612|9003    |C41617;  
 	.db $82,$06,$00                       ;C41614|        |C4161D;  
-
-CODE_C41617:
+.lbl_C41617
 	dex                                  ;C41617|CA      |      ;  
-	bpl CODE_C415CC                      ;C41618|10B2    |C415CC;  
+	bpl .lbl_C415CC                      ;C41618|10B2    |C415CC;  
 	plp                                  ;C4161A|28      |      ;  
 	clc                                  ;C4161B|18      |      ;  
 	rtl                                  ;C4161C|6B      |      ;  
@@ -2895,8 +2789,7 @@ CODE_C41628:
 	jsl.l CODE_C43F67                    ;C416F7|22673FC4|C43F67;  
 	plb                                  ;C416FB|AB      |      ;  
 	ldx.w #$0000                         ;C416FC|A20000  |      ;  
-
-CODE_C416FF:
+.lbl_C416FF
 	lda.b #$0C                           ;C416FF|A90C    |      ;  
 	sta.b $00                            ;C41701|8500    |000000;  
 	ldy.w #$FFC0                         ;C41703|A0C0FF  |      ;  
@@ -2920,12 +2813,11 @@ CODE_C416FF:
 	bcs UNREACH_C41764                   ;C41728|B03A    |C41764;  
 	inx                                  ;C4172A|E8      |      ;  
 	cpx.w #$0010                         ;C4172B|E01000  |      ;  
-	bne CODE_C416FF                      ;C4172E|D0CF    |C416FF;  
+	bne .lbl_C416FF                      ;C4172E|D0CF    |C416FF;  
 	jsl.l func_808A00                    ;C41730|22008A80|808A00;  
 	jsl.l func_8085B1                    ;C41734|22B18580|8085B1;  
 	ldy.w #$0000                         ;C41738|A00000  |      ;  
-
-CODE_C4173B:
+.lbl_C4173B
 	ldx.w #$0001                         ;C4173B|A20100  |      ;  
 	stx.b $00                            ;C4173E|8600    |000000;  
 	phy                                  ;C41740|5A      |      ;  
@@ -2936,7 +2828,7 @@ CODE_C4173B:
 	bcs UNREACH_C41764                   ;C41748|B01A    |C41764;  
 	iny                                  ;C4174A|C8      |      ;  
 	cpy.w #$02B8                         ;C4174B|C0B802  |      ;  
-	bne CODE_C4173B                      ;C4174E|D0EB    |C4173B;  
+	bne .lbl_C4173B                      ;C4174E|D0EB    |C4173B;  
 	ldx.w #$00FF                         ;C41750|A2FF00  |      ;  
 	stx.b $00                            ;C41753|8600    |000000;  
 	jsl.l func_809664                    ;C41755|22649680|809664;  
@@ -3045,10 +2937,9 @@ CODE_C41767:
 	phb                                  ;C4182E|8B      |      ;  
 	jsl.l CODE_C43F67                    ;C4182F|22673FC4|C43F67;  
 	plb                                  ;C41833|AB      |      ;  
-	bcc CODE_C41839                      ;C41834|9003    |C41839;  
+	bcc .lbl_C41839                      ;C41834|9003    |C41839;  
 	.db $82,$D1,$00                       ;C41836|        |C4190A;  
-
-CODE_C41839:
+.lbl_C41839
 	jsl.l func_8089F6                    ;C41839|22F68980|8089F6;  
 	phb                                  ;C4183D|8B      |      ;  
 	jsl.l func_808D3D                    ;C4183E|223D8D80|808D3D;  
@@ -3059,10 +2950,9 @@ CODE_C41839:
 	phb                                  ;C4184C|8B      |      ;  
 	jsl.l CODE_C43F17                    ;C4184D|22173FC4|C43F17;  
 	plb                                  ;C41851|AB      |      ;  
-	bcc CODE_C41857                      ;C41852|9003    |C41857;  
+	bcc .lbl_C41857                      ;C41852|9003    |C41857;  
 	.db $82,$B3,$00                       ;C41854|        |C4190A;  
-
-CODE_C41857:
+.lbl_C41857
 	ldy.w #$0334                         ;C41857|A03403  |      ;  
 
 CODE_C4185A:
@@ -3075,7 +2965,7 @@ CODE_C4185A:
 	ply                                  ;C41866|7A      |      ;  
 	tya                                  ;C41867|98      |      ;  
 	bit.b #$03                           ;C41868|8903    |      ;  
-	bne CODE_C41886                      ;C4186A|D01A    |C41886;  
+	bne .lbl_C41886                      ;C4186A|D01A    |C41886;  
 	lda.b #$49                           ;C4186C|A949    |      ;  
 	sta.b $00                            ;C4186E|8500    |000000;  
 	lda.b #$06                           ;C41870|A906    |      ;  
@@ -3089,10 +2979,9 @@ CODE_C4185A:
 	plb                                  ;C41880|AB      |      ;  
 	ply                                  ;C41881|7A      |      ;  
 	jsl.l func_8085B1                    ;C41882|22B18580|8085B1;  
-
-CODE_C41886:
+.lbl_C41886
 	cpy.w #$00AA                         ;C41886|C0AA00  |      ;  
-	bne CODE_C41898                      ;C41889|D00D    |C41898;  
+	bne .lbl_C41898                      ;C41889|D00D    |C41898;  
 	ldx.w #$0001                         ;C4188B|A20100  |      ;  
 	stx.b $00                            ;C4188E|8600    |000000;  
 	phy                                  ;C41890|5A      |      ;  
@@ -3100,19 +2989,17 @@ CODE_C41886:
 	jsl.l func_818049                    ;C41892|22498081|818049;  
 	plb                                  ;C41896|AB      |      ;  
 	ply                                  ;C41897|7A      |      ;  
-
-CODE_C41898:
+.lbl_C41898
 	cpy.w #$0032                         ;C41898|C03200  |      ;  
-	bne CODE_C418A6                      ;C4189B|D009    |C418A6;  
+	bne .lbl_C418A6                      ;C4189B|D009    |C418A6;  
 	ldx.w #$0040                         ;C4189D|A24000  |      ;  
 	stx.b $00                            ;C418A0|8600    |000000;  
 	jsl.l func_809664                    ;C418A2|22649680|809664;  
-
-CODE_C418A6:
+.lbl_C418A6
 	cpy.w #$0304                         ;C418A6|C00403  |      ;  
-	bcs CODE_C418C5                      ;C418A9|B01A    |C418C5;  
+	bcs .lbl_C418C5                      ;C418A9|B01A    |C418C5;  
 	cpy.w #$02F5                         ;C418AB|C0F502  |      ;  
-	bcc CODE_C418C5                      ;C418AE|9015    |C418C5;  
+	bcc .lbl_C418C5                      ;C418AE|9015    |C418C5;  
 	rep #$20                             ;C418B0|C220    |      ;  
 	sty.b $00                            ;C418B2|8400    |000000;  
 	lda.w #$0304                         ;C418B4|A90403  |      ;  
@@ -3123,12 +3010,11 @@ CODE_C418A6:
 	ldx.w #$20A0                         ;C418BE|A2A020  |      ;  
 	stx.b $02                   ;C418C1|8602    |000002;  
 	bra CODE_C418E2                      ;C418C3|801D    |C418E2;  
-
-CODE_C418C5:
+.lbl_C418C5
 	cpy.w #$0261                         ;C418C5|C06102  |      ;  
-	bcs CODE_C418F2                      ;C418C8|B028    |C418F2;  
+	bcs .lbl_C418F2                      ;C418C8|B028    |C418F2;  
 	cpy.w #$0252                         ;C418CA|C05202  |      ;  
-	bcc CODE_C418F2                      ;C418CD|9023    |C418F2;  
+	bcc .lbl_C418F2                      ;C418CD|9023    |C418F2;  
 	rep #$20                             ;C418CF|C220    |      ;  
 	sty.b $00                            ;C418D1|8400    |000000;  
 	lda.w #$0261                         ;C418D3|A96102  |      ;  
@@ -3148,8 +3034,7 @@ CODE_C418E2:
 	plb                                  ;C418EC|AB      |      ;  
 	ply                                  ;C418ED|7A      |      ;  
 	jsl.l func_8085B1                    ;C418EE|22B18580|8085B1;  
-
-CODE_C418F2:
+.lbl_C418F2
 	ldx.w #$0002                         ;C418F2|A20200  |      ;  
 	stx.b $00                            ;C418F5|8600    |000000;  
 	phy                                  ;C418F7|5A      |      ;  
@@ -3159,10 +3044,9 @@ CODE_C418F2:
 	ply                                  ;C418FE|7A      |      ;  
 	bcs UNREACH_C4190A                   ;C418FF|B009    |C4190A;  
 	dey                                  ;C41901|88      |      ;  
-	beq CODE_C41907                      ;C41902|F003    |C41907;  
+	beq .lbl_C41907                      ;C41902|F003    |C41907;  
 	brl CODE_C4185A                      ;C41904|8253FF  |C4185A;  
-
-CODE_C41907:
+.lbl_C41907
 	plp                                  ;C41907|28      |      ;  
 	clc                                  ;C41908|18      |      ;  
 	rtl                                  ;C41909|6B      |      ;  
@@ -4737,10 +4621,9 @@ CODE_C43EFF:
 	sta.b $00                            ;C43F05|8500    |000000;  
 	jsl.l func_80DC69                    ;C43F07|2269DC80|80DC69;  
 	lda.b $00                            ;C43F0B|A500    |000000;  
-	beq CODE_C43F11                      ;C43F0D|F002    |C43F11;  
+	beq .lbl_C43F11                      ;C43F0D|F002    |C43F11;  
 	bra CODE_C43F14                      ;C43F0F|8003    |C43F14;  
-
-CODE_C43F11:
+.lbl_C43F11
 	plp                                  ;C43F11|28      |      ;  
 	clc                                  ;C43F12|18      |      ;  
 	rtl                                  ;C43F13|6B      |      ;  
@@ -4757,7 +4640,7 @@ CODE_C43F17:
 CODE_C43F1A:
 	jsl.l func_80969A                    ;C43F1A|229A9680|80969A;  
 	lda.b $00                            ;C43F1E|A500    |000000;  
-	beq CODE_C43F3A                      ;C43F20|F018    |C43F3A;  
+	beq .lbl_C43F3A                      ;C43F20|F018    |C43F3A;  
 	lda.w #$0000                         ;C43F22|A90000  |      ;  
 	sta.b $00                            ;C43F25|8500    |000000;  
 	jsl.l func_80DC69                    ;C43F27|2269DC80|80DC69;  
@@ -4767,8 +4650,7 @@ CODE_C43F1A:
 	sta.b $00                            ;C43F32|8500    |000000;  
 	jsl.l func_80854A                    ;C43F34|224A8580|80854A;  
 	bra CODE_C43F1A                      ;C43F38|80E0    |C43F1A;  
-
-CODE_C43F3A:
+.lbl_C43F3A
 	plp                                  ;C43F3A|28      |      ;  
 	clc                                  ;C43F3B|18      |      ;  
 	rtl                                  ;C43F3C|6B      |      ;  
@@ -4781,26 +4663,23 @@ CODE_C43F40:
 	sep #$20                             ;C43F41|E220    |      ;  
 	rep #$10                             ;C43F43|C210    |      ;  
 	ldx.b $00                            ;C43F45|A600    |000000;  
-
-CODE_C43F47:
+.lbl_C43F47
 	jsl.l func_80854A                    ;C43F47|224A8580|80854A;  
 	dex                                  ;C43F4B|CA      |      ;  
 	lda.l $7FA9BE                        ;C43F4C|AFBEA97F|7FA9BE;  
 	cmp.b #$03                           ;C43F50|C903    |      ;  
-	beq CODE_C43F5C                      ;C43F52|F008    |C43F5C;  
+	beq .lbl_C43F5C                      ;C43F52|F008    |C43F5C;  
 	phx                                  ;C43F54|DA      |      ;  
 	jsl.l CODE_C43EFF                    ;C43F55|22FF3EC4|C43EFF;  
 	plx                                  ;C43F59|FA      |      ;  
-	bcs CODE_C43F64                      ;C43F5A|B008    |C43F64;  
-
-CODE_C43F5C:
+	bcs .lbl_C43F64                      ;C43F5A|B008    |C43F64;  
+.lbl_C43F5C
 	cpx.w #$0000                         ;C43F5C|E00000  |      ;  
-	bne CODE_C43F47                      ;C43F5F|D0E6    |C43F47;  
+	bne .lbl_C43F47                      ;C43F5F|D0E6    |C43F47;  
 	plp                                  ;C43F61|28      |      ;  
 	clc                                  ;C43F62|18      |      ;  
 	rtl                                  ;C43F63|6B      |      ;  
-
-CODE_C43F64:
+.lbl_C43F64
 	plp                                  ;C43F64|28      |      ;  
 	sec                                  ;C43F65|38      |      ;  
 	rtl                                  ;C43F66|6B      |      ;  
@@ -4810,14 +4689,13 @@ CODE_C43F67:
 	sep #$20                             ;C43F68|E220    |      ;  
 	rep #$10                             ;C43F6A|C210    |      ;  
 	lda.l $7FA9BF                        ;C43F6C|AFBFA97F|7FA9BF;  
-	bne CODE_C43FA1                      ;C43F70|D02F    |C43FA1;  
+	bne .lbl_C43FA1                      ;C43F70|D02F    |C43FA1;  
 	ldy.b $00                            ;C43F72|A400    |000000;  
-
-CODE_C43F74:
+.lbl_C43F74
 	phy                                  ;C43F74|5A      |      ;  
 	jsl.l CODE_C0768A                    ;C43F75|228A76C0|C0768A;  
 	ply                                  ;C43F79|7A      |      ;  
-	bcs CODE_C43F99                      ;C43F7A|B01D    |C43F99;  
+	bcs .lbl_C43F99                      ;C43F7A|B01D    |C43F99;  
 	ldx.w #$0001                         ;C43F7C|A20100  |      ;  
 	stx.b $00                            ;C43F7F|8600    |000000;  
 	phy                                  ;C43F81|5A      |      ;  
@@ -4825,17 +4703,15 @@ CODE_C43F74:
 	ply                                  ;C43F86|7A      |      ;  
 	bcs UNREACH_C43FAA                   ;C43F87|B021    |C43FAA;  
 	dey                                  ;C43F89|88      |      ;  
-	bne CODE_C43F74                      ;C43F8A|D0E8    |C43F74;  
+	bne .lbl_C43F74                      ;C43F8A|D0E8    |C43F74;  
 	bra CODE_C43FA7                      ;C43F8C|8019    |C43FA7;  
 	.db $28,$90,$16,$A9,$01,$8F,$BF,$A9   ;C43F8E
 	.db $7F,$80,$0E                       ;C43F96|        |A90E80;  
-
-CODE_C43F99:
+.lbl_C43F99
 	lda.b #$01                           ;C43F99|A901    |      ;  
 	sta.l $7FA9BF                        ;C43F9B|8FBFA97F|7FA9BF;  
 	sty.b $00                            ;C43F9F|8400    |000000;  
-
-CODE_C43FA1:
+.lbl_C43FA1
 	jsl.l CODE_C43F40                    ;C43FA1|22403FC4|C43F40;  
 	bcs UNREACH_C43FAA                   ;C43FA5|B003    |C43FAA;  
 
@@ -4856,17 +4732,16 @@ CODE_C43FAD:
 	rep #$10                             ;C43FB4|C210    |      ;  
 	rep #$20                             ;C43FB6|C220    |      ;  
 	lda.w $9D0C                          ;C43FB8|AD0C9D  |7F9D0C;  
-	bne CODE_C43FC0                      ;C43FBB|D003    |C43FC0;  
-	brl CODE_C44042                      ;C43FBD|828200  |C44042;  
-
-CODE_C43FC0:
+	bne .lbl_C43FC0                      ;C43FBB|D003    |C43FC0;  
+	brl .lbl_C44042                      ;C43FBD|828200  |C44042;  
+.lbl_C43FC0
 	ldx.w #$0000                         ;C43FC0|A20000  |      ;  
 
 CODE_C43FC3:
 	sep #$20                             ;C43FC3|E220    |      ;  
 	lda.w $9D10,x                        ;C43FC5|BD109D  |7F9D10;  
 	and.b #$80                           ;C43FC8|2980    |      ;  
-	bne CODE_C43FE6                      ;C43FCA|D01A    |C43FE6;  
+	bne .lbl_C43FE6                      ;C43FCA|D01A    |C43FE6;  
 	rep #$20                             ;C43FCC|C220    |      ;  
 	inx                                  ;C43FCE|E8      |      ;  
 	lda.w $9D10,x                        ;C43FCF|BD109D  |7F9D10;  
@@ -4881,8 +4756,7 @@ CODE_C43FC3:
 	jsl.l func_808E40                    ;C43FDE|22408E80|808E40;  
 	plx                                  ;C43FE2|FA      |      ;  
 	brl CODE_C44034                      ;C43FE3|824E00  |C44034;  
-
-CODE_C43FE6:
+.lbl_C43FE6
 	sep #$20                             ;C43FE6|E220    |      ;  
 	lda.w $9D10,x                        ;C43FE8|BD109D  |7F9D10;  
 	and.b #$01                           ;C43FEB|2901    |      ;  
@@ -4928,10 +4802,9 @@ CODE_C44034:
 	lda.w $9D0C                          ;C44036|AD0C9D  |7F9D0C;  
 	dec a                                ;C44039|3A      |      ;  
 	sta.w $9D0C                          ;C4403A|8D0C9D  |7F9D0C;  
-	beq CODE_C44042                      ;C4403D|F003    |C44042;  
+	beq .lbl_C44042                      ;C4403D|F003    |C44042;  
 	brl CODE_C43FC3                      ;C4403F|8281FF  |C43FC3;  
-
-CODE_C44042:
+.lbl_C44042
 	lda.w #$0000                         ;C44042|A90000  |      ;  
 	sta.w $9D0E                          ;C44045|8D0E9D  |7F9D0E;  
 	plp                                  ;C44048|28      |      ;  
@@ -4964,8 +4837,7 @@ CODE_C44069:
 	rep #$20                             ;C4406A|C220    |      ;  
 	sep #$10                             ;C4406C|E210    |      ;  
 	ldx.b #$00                           ;C4406E|A200    |      ;  
-
-CODE_C44070:
+.lbl_C44070
 	lda.l DATA8_C44090,x                 ;C44070|BF9040C4|C44090;  
 	sta.b $00                            ;C44074|8500    |000000;  
 	ldy.b #$C4                           ;C44076|A0C4    |      ;  
@@ -4979,7 +4851,7 @@ CODE_C44070:
 	inx                                  ;C44088|E8      |      ;  
 	inx                                  ;C44089|E8      |      ;  
 	cpx.b #$10                           ;C4408A|E010    |      ;  
-	bne CODE_C44070                      ;C4408C|D0E2    |C44070;  
+	bne .lbl_C44070                      ;C4408C|D0E2    |C44070;  
 	plp                                  ;C4408E|28      |      ;  
 	rtl                                  ;C4408F|6B      |      ;  
 
@@ -5058,10 +4930,9 @@ CODE_C44154:
 	jsl.l func_8085EE                    ;C4416D|22EE8580|8085EE;  
 	sep #$20                             ;C44171|E220    |      ;  
 	lda.b $02                   ;C44173|A502    |000002;  
-	bne CODE_C4417B                      ;C44175|D004    |C4417B;  
+	bne .lbl_C4417B                      ;C44175|D004    |C4417B;  
 	jsl.l func_80854A                    ;C44177|224A8580|80854A;  
-
-CODE_C4417B:
+.lbl_C4417B
 	plp                                  ;C4417B|28      |      ;  
 	rtl                                  ;C4417C|6B      |      ;  
 
@@ -5105,10 +4976,9 @@ CODE_C4421C:
 	sep #$20                             ;C4421C|E220    |      ;  
 	ldx.b w0001                            ;C4421E|A601    |000001;  
 	lda.w $A123,x                        ;C44220|BD23A1  |7FA123;  
-	bpl CODE_C44228                      ;C44223|1003    |C44228;  
+	bpl .lbl_C44228                      ;C44223|1003    |C44228;  
 	brl CODE_C4431A                      ;C44225|82F200  |C4431A;  
-
-CODE_C44228:
+.lbl_C44228
 	rep #$20                             ;C44228|C220    |      ;  
 	and.w #$00FF                         ;C4422A|29FF00  |      ;  
 	sta.b $06                            ;C4422D|8506    |000006;  
@@ -5153,12 +5023,11 @@ CODE_C4425E:
 	pla                                  ;C44270|68      |      ;  
 	lda.w $A110                          ;C44271|AD10A1  |7FA110;  
 	and.w #$0001                         ;C44274|290100  |      ;  
-	beq CODE_C4427C                      ;C44277|F003    |C4427C;  
+	beq .lbl_C4427C                      ;C44277|F003    |C4427C;  
 	jsr.w CODE_C44320                    ;C44279|202043  |C44320;  
-
-CODE_C4427C:
+.lbl_C4427C
 	dex                                  ;C4427C|CA      |      ;  
-	beq CODE_C442A1                      ;C4427D|F022    |C442A1;  
+	beq .lbl_C442A1                      ;C4427D|F022    |C442A1;  
 	inc.b $00                            ;C4427F|E600    |000000;  
 	lda.b $02                   ;C44281|A502    |000002;  
 	clc                                  ;C44283|18      |      ;  
@@ -5167,22 +5036,20 @@ CODE_C4427C:
 	lda.b $06                            ;C44289|A506    |000006;  
 	and.w #$000F                         ;C4428B|290F00  |      ;  
 	cmp.w #$000F                         ;C4428E|C90F00  |      ;  
-	bne CODE_C4429D                      ;C44291|D00A    |C4429D;  
+	bne .lbl_C4429D                      ;C44291|D00A    |C4429D;  
 	lda.b $06                            ;C44293|A506    |000006;  
 	clc                                  ;C44295|18      |      ;  
 	adc.w #$0021                         ;C44296|692100  |      ;  
 	sta.b $06                            ;C44299|8506    |000006;  
 	bra CODE_C4429F                      ;C4429B|8002    |C4429F;  
-
-CODE_C4429D:
+.lbl_C4429D
 	inc.b $06                            ;C4429D|E606    |000006;  
 
 CODE_C4429F:
 	bra CODE_C4425E                      ;C4429F|80BD    |C4425E;  
-
-CODE_C442A1:
+.lbl_C442A1
 	dey                                  ;C442A1|88      |      ;  
-	beq CODE_C442D9                      ;C442A2|F035    |C442D9;  
+	beq .lbl_C442D9                      ;C442A2|F035    |C442D9;  
 	inc.b $00                            ;C442A4|E600    |000000;  
 	phx                                  ;C442A6|DA      |      ;  
 	ldx.b w0001                            ;C442A7|A601    |000001;  
@@ -5197,13 +5064,12 @@ CODE_C442A1:
 	lda.b $06                            ;C442BA|A506    |000006;  
 	and.w #$000F                         ;C442BC|290F00  |      ;  
 	cmp.w #$0002                         ;C442BF|C90200  |      ;  
-	bcs CODE_C442CC                      ;C442C2|B008    |C442CC;  
+	bcs .lbl_C442CC                      ;C442C2|B008    |C442CC;  
 	lda.b $06                            ;C442C4|A506    |000006;  
 	sec                                  ;C442C6|38      |      ;  
 	sbc.w #$0012                         ;C442C7|E91200  |      ;  
 	bra CODE_C442D2                      ;C442CA|8006    |C442D2;  
-
-CODE_C442CC:
+.lbl_C442CC
 	lda.b $06                            ;C442CC|A506    |000006;  
 	clc                                  ;C442CE|18      |      ;  
 	adc.w #$000E                         ;C442CF|690E00  |      ;  
@@ -5212,17 +5078,16 @@ CODE_C442D2:
 	and.w #$01FF                         ;C442D2|29FF01  |      ;  
 	sta.b $06                            ;C442D5|8506    |000006;  
 	bra CODE_C4425C                      ;C442D7|8083    |C4425C;  
-
-CODE_C442D9:
+.lbl_C442D9
 	inc.b $00                            ;C442D9|E600    |000000;  
 	inc.b w0001                            ;C442DB|E601    |000001;  
 	lda.b w0001                            ;C442DD|A501    |000001;  
 	and.w #$00FF                         ;C442DF|29FF00  |      ;  
 	cmp.w #$0007                         ;C442E2|C90700  |      ;  
-	bne CODE_C44317                      ;C442E5|D030    |C44317;  
+	bne .lbl_C44317                      ;C442E5|D030    |C44317;  
 	lda.w $A110                          ;C442E7|AD10A1  |7FA110;  
 	and.w #$0001                         ;C442EA|290100  |      ;  
-	beq CODE_C44317                      ;C442ED|F028    |C44317;  
+	beq .lbl_C44317                      ;C442ED|F028    |C44317;  
 	pha                                  ;C442EF|48      |      ;  
 	lda.b $00                            ;C442F0|A500    |000000;  
 	pha                                  ;C442F2|48      |      ;  
@@ -5249,8 +5114,7 @@ CODE_C442D9:
 	sta.b $00                            ;C44310|8500    |000000;  
 	pla                                  ;C44312|68      |      ;  
 	jsl.l func_8085CC                    ;C44313|22CC8580|8085CC;  
-
-CODE_C44317:
+.lbl_C44317
 	brl CODE_C4421C                      ;C44317|8202FF  |C4421C;  
 
 CODE_C4431A:
@@ -5341,7 +5205,7 @@ CODE_C443A5:
 	lda.b [$00],y                        ;C443A5|B700    |000000;  
 	sta.w $A123,x                        ;C443A7|9D23A1  |7FA123;  
 	cmp.b #$FF                           ;C443AA|C9FF    |      ;  
-	beq CODE_C443BE                      ;C443AC|F010    |C443BE;  
+	beq .lbl_C443BE                      ;C443AC|F010    |C443BE;  
 	iny                                  ;C443AE|C8      |      ;  
 	lda.b [$00],y                        ;C443AF|B700    |000000;  
 	sta.w $A139,x                        ;C443B1|9D39A1  |7FA139;  
@@ -5351,8 +5215,7 @@ CODE_C443A5:
 	iny                                  ;C443BA|C8      |      ;  
 	inx                                  ;C443BB|E8      |      ;  
 	bra CODE_C443A5                      ;C443BC|80E7    |C443A5;  
-
-CODE_C443BE:
+.lbl_C443BE
 	stx.w $A178                          ;C443BE|8E78A1  |7FA178;  
 	phb                                  ;C443C1|8B      |      ;  
 	jsl.l CODE_C44443                    ;C443C2|224344C4|C44443;  
@@ -5372,7 +5235,7 @@ CODE_C443C9:
 
 CODE_C443D6:
 	lda.w $A123,x                        ;C443D6|BD23A1  |7FA123;  
-	bmi CODE_C443E8                      ;C443D9|300D    |C443E8;  
+	bmi .lbl_C443E8                      ;C443D9|300D    |C443E8;  
 	lda.b $00                            ;C443DB|A500    |000000;  
 	sta.w $A163,x                        ;C443DD|9D63A1  |7FA163;  
 	clc                                  ;C443E0|18      |      ;  
@@ -5380,31 +5243,27 @@ CODE_C443D6:
 	sta.b $00                            ;C443E3|8500    |000000;  
 	inx                                  ;C443E5|E8      |      ;  
 	bra CODE_C443D6                      ;C443E6|80EE    |C443D6;  
-
-CODE_C443E8:
+.lbl_C443E8
 	ldx.b #$00                           ;C443E8|A200    |      ;  
 
 CODE_C443EA:
 	lda.w $A123,x                        ;C443EA|BD23A1  |7FA123;  
-	bmi CODE_C44409                      ;C443ED|301A    |C44409;  
+	bmi .lbl_C44409                      ;C443ED|301A    |C44409;  
 	lda.w $A163,x                        ;C443EF|BD63A1  |7FA163;  
-	beq CODE_C44406                      ;C443F2|F012    |C44406;  
+	beq .lbl_C44406                      ;C443F2|F012    |C44406;  
 	cmp.b #$19                           ;C443F4|C919    |      ;  
-	bcs CODE_C443FF                      ;C443F6|B007    |C443FF;  
+	bcs .lbl_C443FF                      ;C443F6|B007    |C443FF;  
 	lda.w $A14E,x                        ;C443F8|BD4EA1  |7FA14E;  
 	dec a                                ;C443FB|3A      |      ;  
 	sta.w $A14E,x                        ;C443FC|9D4EA1  |7FA14E;  
-
-CODE_C443FF:
+.lbl_C443FF
 	lda.w $A163,x                        ;C443FF|BD63A1  |7FA163;  
 	dec a                                ;C44402|3A      |      ;  
 	sta.w $A163,x                        ;C44403|9D63A1  |7FA163;  
-
-CODE_C44406:
+.lbl_C44406
 	inx                                  ;C44406|E8      |      ;  
 	bra CODE_C443EA                      ;C44407|80E1    |C443EA;  
-
-CODE_C44409:
+.lbl_C44409
 	stz.b $00                            ;C44409|6400    |000000;  
 	phx                                  ;C4440B|DA      |      ;  
 	phb                                  ;C4440C|8B      |      ;  
@@ -5419,32 +5278,28 @@ CODE_C44409:
 	jsl.l CODE_C43F40                    ;C4441B|22403FC4|C43F40;  
 	plb                                  ;C4441F|AB      |      ;  
 	plx                                  ;C44420|FA      |      ;  
-	bcs CODE_C44440                      ;C44421|B01D    |C44440;  
+	bcs .lbl_C44440                      ;C44421|B01D    |C44440;  
 	ldx.b #$00                           ;C44423|A200    |      ;  
 	stz.b $00                            ;C44425|6400    |000000;  
 
 CODE_C44427:
 	lda.w $A123,x                        ;C44427|BD23A1  |7FA123;  
-	bmi CODE_C44436                      ;C4442A|300A    |C44436;  
+	bmi .lbl_C44436                      ;C4442A|300A    |C44436;  
 	lda.w $A163,x                        ;C4442C|BD63A1  |7FA163;  
-	beq CODE_C44433                      ;C4442F|F002    |C44433;  
+	beq .lbl_C44433                      ;C4442F|F002    |C44433;  
 	inc.b $00                            ;C44431|E600    |000000;  
-
-CODE_C44433:
+.lbl_C44433
 	inx                                  ;C44433|E8      |      ;  
 	bra CODE_C44427                      ;C44434|80F1    |C44427;  
-
-CODE_C44436:
+.lbl_C44436
 	lda.b $00                            ;C44436|A500    |000000;  
-	beq CODE_C4443D                      ;C44438|F003    |C4443D;  
-	brl CODE_C443E8                      ;C4443A|82ABFF  |C443E8;  
-
-CODE_C4443D:
+	beq .lbl_C4443D                      ;C44438|F003    |C4443D;  
+	brl .lbl_C443E8                      ;C4443A|82ABFF  |C443E8;  
+.lbl_C4443D
 	plp                                  ;C4443D|28      |      ;  
 	clc                                  ;C4443E|18      |      ;  
 	rtl                                  ;C4443F|6B      |      ;  
-
-CODE_C44440:
+.lbl_C44440
 	plp                                  ;C44440|28      |      ;  
 	sec                                  ;C44441|38      |      ;  
 	rtl                                  ;C44442|6B      |      ;  
@@ -5459,34 +5314,30 @@ CODE_C44443:
 	sta.l $7EC1A1                        ;C4444C|8FA1C17E|7EC1A1;  
 	ldx.b #$00                           ;C44450|A200    |      ;  
 	stx.b $00                            ;C44452|8600    |000000;  
-
-CODE_C44454:
+.lbl_C44454
 	cpx.w $A14E                          ;C44454|EC4EA1  |7FA14E;  
-	bne CODE_C4445D                      ;C44457|D004    |C4445D;  
+	bne .lbl_C4445D                      ;C44457|D004    |C4445D;  
 	lda.b #$02                           ;C44459|A902    |      ;  
 	sta.b $00                            ;C4445B|8500    |000000;  
-
-CODE_C4445D:
+.lbl_C4445D
 	lda.b $00                            ;C4445D|A500    |000000;  
 	sta.l $7EC1A2,x                      ;C4445F|9FA2C17E|7EC1A2;  
 	inx                                  ;C44463|E8      |      ;  
 	cpx.b #$70                           ;C44464|E070    |      ;  
-	bne CODE_C44454                      ;C44466|D0EC    |C44454;  
+	bne .lbl_C44454                      ;C44466|D0EC    |C44454;  
 	lda.b #$F0                           ;C44468|A9F0    |      ;  
 	sta.l $7EC1A2,x                      ;C4446A|9FA2C17E|7EC1A2;  
-
-CODE_C4446E:
+.lbl_C4446E
 	cpx.w $A14E                          ;C4446E|EC4EA1  |7FA14E;  
-	bne CODE_C44477                      ;C44471|D004    |C44477;  
+	bne .lbl_C44477                      ;C44471|D004    |C44477;  
 	lda.b #$02                           ;C44473|A902    |      ;  
 	sta.b $00                            ;C44475|8500    |000000;  
-
-CODE_C44477:
+.lbl_C44477
 	lda.b $00                            ;C44477|A500    |000000;  
 	sta.l $7EC1A3,x                      ;C44479|9FA3C17E|7EC1A3;  
 	inx                                  ;C4447D|E8      |      ;  
 	cpx.b #$E0                           ;C4447E|E0E0    |      ;  
-	bne CODE_C4446E                      ;C44480|D0EC    |C4446E;  
+	bne .lbl_C4446E                      ;C44480|D0EC    |C4446E;  
 	lda.b #$00                           ;C44482|A900    |      ;  
 	sta.l $7EC1A3,x                      ;C44484|9FA3C17E|7EC1A3;  
 	plp                                  ;C44488|28      |      ;  
@@ -5532,70 +5383,63 @@ CODE_C444CC:
 	sec                                  ;C44507|38      |      ;  
 	sbc.b $04                   ;C44508|E504    |000004;  
 	bit.w #$8000                         ;C4450A|890080  |      ;  
-	beq CODE_C44512                      ;C4450D|F003    |C44512;  
+	beq .lbl_C44512                      ;C4450D|F003    |C44512;  
 	lda.w #$0000                         ;C4450F|A90000  |      ;  
-
-CODE_C44512:
+.lbl_C44512
 	sta.b $04                   ;C44512|8504    |000004;  
 	lda.l $7F9CF0                        ;C44514|AFF09C7F|7F9CF0;  
 	tay                                  ;C44518|A8      |      ;  
 	ldx.w #$0000                         ;C44519|A20000  |      ;  
-
-CODE_C4451C:
+.lbl_C4451C
 	lda.w #$0087                         ;C4451C|A98700  |      ;  
 	clc                                  ;C4451F|18      |      ;  
 	adc.b $04                   ;C44520|6504    |000004;  
 	sta.b $06                            ;C44522|8506    |000006;  
 	cpy.b $06                            ;C44524|C406    |000006;  
-	bcs CODE_C44547                      ;C44526|B01F    |C44547;  
+	bcs .lbl_C44547                      ;C44526|B01F    |C44547;  
 	cpy.w #$0087                         ;C44528|C08700  |      ;  
-	bcc CODE_C4453F                      ;C4452B|9012    |C4453F;  
+	bcc .lbl_C4453F                      ;C4452B|9012    |C4453F;  
 	.db $8A,$4A,$18,$69,$28,$00,$85,$06   ;C4452D
 	.db $A9,$FF,$FF,$38,$E5,$06,$85,$00   ;C44535
 	.db $80,$1B                           ;C4453D|        |C4455A;  
-
-CODE_C4453F:
+.lbl_C4453F
 	lda.l $7F9CEC                        ;C4453F|AFEC9C7F|7F9CEC;  
 	sta.b $00                            ;C44543|8500    |000000;  
 	bra CODE_C4455A                      ;C44545|8013    |C4455A;  
-
-CODE_C44547:
+.lbl_C44547
 	lda.l $7F9CEE                        ;C44547|AFEE9C7F|7F9CEE;  
 	cmp.w #$FEE0                         ;C4454B|C9E0FE  |      ;  
-	bcs CODE_C44558                      ;C4454E|B008    |C44558;  
+	bcs .lbl_C44558                      ;C4454E|B008    |C44558;  
 	cpx.w #$0080                         ;C44550|E08000  |      ;  
-	bcs CODE_C44558                      ;C44553|B003    |C44558;  
+	bcs .lbl_C44558                      ;C44553|B003    |C44558;  
 	lda.w #$FF28                         ;C44555|A928FF  |      ;  
-
-CODE_C44558:
+.lbl_C44558
 	sta.b $00                            ;C44558|8500    |000000;  
 
 CODE_C4455A:
 	lda.b $00                            ;C4455A|A500    |000000;  
 	sta.l $7EC1A2,x                      ;C4455C|9FA2C17E|7EC1A2;  
 	cpy.w #$0000                         ;C44560|C00000  |      ;  
-	beq CODE_C44566                      ;C44563|F001    |C44566;  
+	beq .lbl_C44566                      ;C44563|F001    |C44566;  
 	dey                                  ;C44565|88      |      ;  
-
-CODE_C44566:
+.lbl_C44566
 	inx                                  ;C44566|E8      |      ;  
 	inx                                  ;C44567|E8      |      ;  
 	cpx.w #$00E0                         ;C44568|E0E000  |      ;  
-	bne CODE_C4451C                      ;C4456B|D0AF    |C4451C;  
+	bne .lbl_C4451C                      ;C4456B|D0AF    |C4451C;  
 	sep #$20                             ;C4456D|E220    |      ;  
 	lda.b #$F0                           ;C4456F|A9F0    |      ;  
 	sta.l $7EC1A2,x                      ;C44571|9FA2C17E|7EC1A2;  
 	rep #$20                             ;C44575|C220    |      ;  
-
-CODE_C44577:
+.lbl_C44577
 	lda.w #$0087                         ;C44577|A98700  |      ;  
 	clc                                  ;C4457A|18      |      ;  
 	adc.b $04                   ;C4457B|6504    |000004;  
 	sta.b $06                            ;C4457D|8506    |000006;  
 	cpy.b $06                            ;C4457F|C406    |000006;  
-	bcs CODE_C445A2                      ;C44581|B01F    |C445A2;  
+	bcs .lbl_C445A2                      ;C44581|B01F    |C445A2;  
 	cpy.w #$0087                         ;C44583|C08700  |      ;  
-	bcc CODE_C4459A                      ;C44586|9012    |C4459A;  
+	bcc .lbl_C4459A                      ;C44586|9012    |C4459A;  
 	txa                                  ;C44588|8A      |      ;  
 	lsr a                                ;C44589|4A      |      ;  
 	clc                                  ;C4458A|18      |      ;  
@@ -5606,13 +5450,11 @@ CODE_C44577:
 	sbc.b $06                            ;C44594|E506    |000006;  
 	sta.b $00                            ;C44596|8500    |000000;  
 	bra CODE_C445A8                      ;C44598|800E    |C445A8;  
-
-CODE_C4459A:
+.lbl_C4459A
 	lda.l $7F9CEC                        ;C4459A|AFEC9C7F|7F9CEC;  
 	sta.b $00                            ;C4459E|8500    |000000;  
 	bra CODE_C445A8                      ;C445A0|8006    |C445A8;  
-
-CODE_C445A2:
+.lbl_C445A2
 	lda.l $7F9CEE                        ;C445A2|AFEE9C7F|7F9CEE;  
 	sta.b $00                            ;C445A6|8500    |000000;  
 
@@ -5620,14 +5462,13 @@ CODE_C445A8:
 	lda.b $00                            ;C445A8|A500    |000000;  
 	sta.l $7EC1A3,x                      ;C445AA|9FA3C17E|7EC1A3;  
 	cpy.w #$0000                         ;C445AE|C00000  |      ;  
-	beq CODE_C445B4                      ;C445B1|F001    |C445B4;  
+	beq .lbl_C445B4                      ;C445B1|F001    |C445B4;  
 	dey                                  ;C445B3|88      |      ;  
-
-CODE_C445B4:
+.lbl_C445B4
 	inx                                  ;C445B4|E8      |      ;  
 	inx                                  ;C445B5|E8      |      ;  
 	cpx.w #$01C0                         ;C445B6|E0C001  |      ;  
-	bne CODE_C44577                      ;C445B9|D0BC    |C44577;  
+	bne .lbl_C44577                      ;C445B9|D0BC    |C44577;  
 	sep #$20                             ;C445BB|E220    |      ;  
 	lda.b #$00                           ;C445BD|A900    |      ;  
 	sta.l $7EC1A3,x                      ;C445BF|9FA3C17E|7EC1A3;  
@@ -5674,24 +5515,22 @@ CODE_C445D1:
 	sec                                  ;C4460E|38      |      ;  
 	sbc.b $04                   ;C4460F|E504    |000004;  
 	bit.w #$8000                         ;C44611|890080  |      ;  
-	beq CODE_C44619                      ;C44614|F003    |C44619;  
+	beq .lbl_C44619                      ;C44614|F003    |C44619;  
 	lda.w #$0000                         ;C44616|A90000  |      ;  
-
-CODE_C44619:
+.lbl_C44619
 	sta.b $04                   ;C44619|8504    |000004;  
 	lda.l $7F9CFE                        ;C4461B|AFFE9C7F|7F9CFE;  
 	tay                                  ;C4461F|A8      |      ;  
 	ldx.w #$0000                         ;C44620|A20000  |      ;  
-
-CODE_C44623:
+.lbl_C44623
 	lda.w #$005F                         ;C44623|A95F00  |      ;  
 	clc                                  ;C44626|18      |      ;  
 	adc.b $04                   ;C44627|6504    |000004;  
 	sta.b $06                            ;C44629|8506    |000006;  
 	cpy.b $06                            ;C4462B|C406    |000006;  
-	bcs CODE_C4464E                      ;C4462D|B01F    |C4464E;  
+	bcs .lbl_C4464E                      ;C4462D|B01F    |C4464E;  
 	cpy.w #$005F                         ;C4462F|C05F00  |      ;  
-	bcc CODE_C44646                      ;C44632|9012    |C44646;  
+	bcc .lbl_C44646                      ;C44632|9012    |C44646;  
 	txa                                  ;C44634|8A      |      ;  
 	lsr a                                ;C44635|4A      |      ;  
 	clc                                  ;C44636|18      |      ;  
@@ -5702,13 +5541,11 @@ CODE_C44623:
 	sbc.b $06                            ;C44640|E506    |000006;  
 	sta.b $00                            ;C44642|8500    |000000;  
 	bra CODE_C44654                      ;C44644|800E    |C44654;  
-
-CODE_C44646:
+.lbl_C44646
 	lda.l $7F9CFA                        ;C44646|AFFA9C7F|7F9CFA;  
 	sta.b $00                            ;C4464A|8500    |000000;  
 	bra CODE_C44654                      ;C4464C|8006    |C44654;  
-
-CODE_C4464E:
+.lbl_C4464E
 	lda.l $7F9CFC                        ;C4464E|AFFC9C7F|7F9CFC;  
 	sta.b $00                            ;C44652|8500    |000000;  
 
@@ -5716,28 +5553,26 @@ CODE_C44654:
 	lda.b $00                            ;C44654|A500    |000000;  
 	sta.l $7EC396,x                      ;C44656|9F96C37E|7EC396;  
 	cpy.w #$0000                         ;C4465A|C00000  |      ;  
-	beq CODE_C44660                      ;C4465D|F001    |C44660;  
+	beq .lbl_C44660                      ;C4465D|F001    |C44660;  
 	dey                                  ;C4465F|88      |      ;  
-
-CODE_C44660:
+.lbl_C44660
 	inx                                  ;C44660|E8      |      ;  
 	inx                                  ;C44661|E8      |      ;  
 	cpx.w #$00E0                         ;C44662|E0E000  |      ;  
-	bne CODE_C44623                      ;C44665|D0BC    |C44623;  
+	bne .lbl_C44623                      ;C44665|D0BC    |C44623;  
 	sep #$20                             ;C44667|E220    |      ;  
 	lda.b #$F0                           ;C44669|A9F0    |      ;  
 	sta.l $7EC396,x                      ;C4466B|9F96C37E|7EC396;  
 	rep #$20                             ;C4466F|C220    |      ;  
-
-CODE_C44671:
+.lbl_C44671
 	lda.w #$005F                         ;C44671|A95F00  |      ;  
 	clc                                  ;C44674|18      |      ;  
 	adc.b $04                   ;C44675|6504    |000004;  
 	sta.b $06                            ;C44677|8506    |000006;  
 	cpy.b $06                            ;C44679|C406    |000006;  
-	bcs CODE_C4469C                      ;C4467B|B01F    |C4469C;  
+	bcs .lbl_C4469C                      ;C4467B|B01F    |C4469C;  
 	cpy.w #$005F                         ;C4467D|C05F00  |      ;  
-	bcc CODE_C44694                      ;C44680|9012    |C44694;  
+	bcc .lbl_C44694                      ;C44680|9012    |C44694;  
 	txa                                  ;C44682|8A      |      ;  
 	lsr a                                ;C44683|4A      |      ;  
 	clc                                  ;C44684|18      |      ;  
@@ -5748,13 +5583,11 @@ CODE_C44671:
 	sbc.b $06                            ;C4468E|E506    |000006;  
 	sta.b $00                            ;C44690|8500    |000000;  
 	bra CODE_C446A2                      ;C44692|800E    |C446A2;  
-
-CODE_C44694:
+.lbl_C44694
 	lda.l $7F9CFA                        ;C44694|AFFA9C7F|7F9CFA;  
 	sta.b $00                            ;C44698|8500    |000000;  
 	bra CODE_C446A2                      ;C4469A|8006    |C446A2;  
-
-CODE_C4469C:
+.lbl_C4469C
 	lda.l $7F9CFC                        ;C4469C|AFFC9C7F|7F9CFC;  
 	sta.b $00                            ;C446A0|8500    |000000;  
 
@@ -5762,14 +5595,13 @@ CODE_C446A2:
 	lda.b $00                            ;C446A2|A500    |000000;  
 	sta.l $7EC397,x                      ;C446A4|9F97C37E|7EC397;  
 	cpy.w #$0000                         ;C446A8|C00000  |      ;  
-	beq CODE_C446AE                      ;C446AB|F001    |C446AE;  
+	beq .lbl_C446AE                      ;C446AB|F001    |C446AE;  
 	dey                                  ;C446AD|88      |      ;  
-
-CODE_C446AE:
+.lbl_C446AE
 	inx                                  ;C446AE|E8      |      ;  
 	inx                                  ;C446AF|E8      |      ;  
 	cpx.w #$01C0                         ;C446B0|E0C001  |      ;  
-	bne CODE_C44671                      ;C446B3|D0BC    |C44671;  
+	bne .lbl_C44671                      ;C446B3|D0BC    |C44671;  
 	sep #$20                             ;C446B5|E220    |      ;  
 	lda.b #$00                           ;C446B7|A900    |      ;  
 	sta.l $7EC397,x                      ;C446B9|9F97C37E|7EC397;  
@@ -5830,70 +5662,63 @@ CODE_C4473F:
 	sec                                  ;C4477A|38      |      ;  
 	sbc.b $04                   ;C4477B|E504    |000004;  
 	bit.w #$8000                         ;C4477D|890080  |      ;  
-	beq CODE_C44785                      ;C44780|F003    |C44785;  
+	beq .lbl_C44785                      ;C44780|F003    |C44785;  
 	lda.w #$0000                         ;C44782|A90000  |      ;  
-
-CODE_C44785:
+.lbl_C44785
 	sta.b $04                   ;C44785|8504    |000004;  
 	lda.l $7F9CF0                        ;C44787|AFF09C7F|7F9CF0;  
 	tay                                  ;C4478B|A8      |      ;  
 	ldx.w #$0000                         ;C4478C|A20000  |      ;  
-
-CODE_C4478F:
+.lbl_C4478F
 	lda.w #$006F                         ;C4478F|A96F00  |      ;  
 	clc                                  ;C44792|18      |      ;  
 	adc.b $04                   ;C44793|6504    |000004;  
 	sta.b $06                            ;C44795|8506    |000006;  
 	cpy.b $06                            ;C44797|C406    |000006;  
-	bcs CODE_C447BA                      ;C44799|B01F    |C447BA;  
+	bcs .lbl_C447BA                      ;C44799|B01F    |C447BA;  
 	cpy.w #$006F                         ;C4479B|C06F00  |      ;  
-	bcc CODE_C447B2                      ;C4479E|9012    |C447B2;  
+	bcc .lbl_C447B2                      ;C4479E|9012    |C447B2;  
 	.db $8A,$4A,$18,$69,$28,$00,$85,$06   ;C447A0
 	.db $A9,$FF,$FF,$38,$E5,$06,$85,$00   ;C447A8
 	.db $80,$1B                           ;C447B0|        |C447CD;  
-
-CODE_C447B2:
+.lbl_C447B2
 	lda.l $7F9CEC                        ;C447B2|AFEC9C7F|7F9CEC;  
 	sta.b $00                            ;C447B6|8500    |000000;  
 	bra CODE_C447CD                      ;C447B8|8013    |C447CD;  
-
-CODE_C447BA:
+.lbl_C447BA
 	lda.l $7F9CEE                        ;C447BA|AFEE9C7F|7F9CEE;  
 	cmp.w #$FEFF                         ;C447BE|C9FFFE  |      ;  
-	bcs CODE_C447CB                      ;C447C1|B008    |C447CB;  
+	bcs .lbl_C447CB                      ;C447C1|B008    |C447CB;  
 	cpx.w #$0090                         ;C447C3|E09000  |      ;  
-	bcs CODE_C447CB                      ;C447C6|B003    |C447CB;  
+	bcs .lbl_C447CB                      ;C447C6|B003    |C447CB;  
 	lda.w #$FF28                         ;C447C8|A928FF  |      ;  
-
-CODE_C447CB:
+.lbl_C447CB
 	sta.b $00                            ;C447CB|8500    |000000;  
 
 CODE_C447CD:
 	lda.b $00                            ;C447CD|A500    |000000;  
 	sta.l $7EC1A2,x                      ;C447CF|9FA2C17E|7EC1A2;  
 	cpy.w #$0000                         ;C447D3|C00000  |      ;  
-	beq CODE_C447D9                      ;C447D6|F001    |C447D9;  
+	beq .lbl_C447D9                      ;C447D6|F001    |C447D9;  
 	dey                                  ;C447D8|88      |      ;  
-
-CODE_C447D9:
+.lbl_C447D9
 	inx                                  ;C447D9|E8      |      ;  
 	inx                                  ;C447DA|E8      |      ;  
 	cpx.w #$00E0                         ;C447DB|E0E000  |      ;  
-	bne CODE_C4478F                      ;C447DE|D0AF    |C4478F;  
+	bne .lbl_C4478F                      ;C447DE|D0AF    |C4478F;  
 	sep #$20                             ;C447E0|E220    |      ;  
 	lda.b #$F0                           ;C447E2|A9F0    |      ;  
 	sta.l $7EC1A2,x                      ;C447E4|9FA2C17E|7EC1A2;  
 	rep #$20                             ;C447E8|C220    |      ;  
-
-CODE_C447EA:
+.lbl_C447EA
 	lda.w #$006F                         ;C447EA|A96F00  |      ;  
 	clc                                  ;C447ED|18      |      ;  
 	adc.b $04                   ;C447EE|6504    |000004;  
 	sta.b $06                            ;C447F0|8506    |000006;  
 	cpy.b $06                            ;C447F2|C406    |000006;  
-	bcs CODE_C44815                      ;C447F4|B01F    |C44815;  
+	bcs .lbl_C44815                      ;C447F4|B01F    |C44815;  
 	cpy.w #$006F                         ;C447F6|C06F00  |      ;  
-	bcc CODE_C4480D                      ;C447F9|9012    |C4480D;  
+	bcc .lbl_C4480D                      ;C447F9|9012    |C4480D;  
 	txa                                  ;C447FB|8A      |      ;  
 	lsr a                                ;C447FC|4A      |      ;  
 	clc                                  ;C447FD|18      |      ;  
@@ -5904,13 +5729,11 @@ CODE_C447EA:
 	sbc.b $06                            ;C44807|E506    |000006;  
 	sta.b $00                            ;C44809|8500    |000000;  
 	bra CODE_C4481B                      ;C4480B|800E    |C4481B;  
-
-CODE_C4480D:
+.lbl_C4480D
 	lda.l $7F9CEC                        ;C4480D|AFEC9C7F|7F9CEC;  
 	sta.b $00                            ;C44811|8500    |000000;  
 	bra CODE_C4481B                      ;C44813|8006    |C4481B;  
-
-CODE_C44815:
+.lbl_C44815
 	lda.l $7F9CEE                        ;C44815|AFEE9C7F|7F9CEE;  
 	sta.b $00                            ;C44819|8500    |000000;  
 
@@ -5918,14 +5741,13 @@ CODE_C4481B:
 	lda.b $00                            ;C4481B|A500    |000000;  
 	sta.l $7EC1A3,x                      ;C4481D|9FA3C17E|7EC1A3;  
 	cpy.w #$0000                         ;C44821|C00000  |      ;  
-	beq CODE_C44827                      ;C44824|F001    |C44827;  
+	beq .lbl_C44827                      ;C44824|F001    |C44827;  
 	dey                                  ;C44826|88      |      ;  
-
-CODE_C44827:
+.lbl_C44827
 	inx                                  ;C44827|E8      |      ;  
 	inx                                  ;C44828|E8      |      ;  
 	cpx.w #$01C0                         ;C44829|E0C001  |      ;  
-	bne CODE_C447EA                      ;C4482C|D0BC    |C447EA;  
+	bne .lbl_C447EA                      ;C4482C|D0BC    |C447EA;  
 	sep #$20                             ;C4482E|E220    |      ;  
 	lda.b #$00                           ;C44830|A900    |      ;  
 	sta.l $7EC1A3,x                      ;C44832|9FA3C17E|7EC1A3;  
@@ -5972,24 +5794,22 @@ CODE_C44844:
 	sec                                  ;C44881|38      |      ;  
 	sbc.b $04                   ;C44882|E504    |000004;  
 	bit.w #$8000                         ;C44884|890080  |      ;  
-	beq CODE_C4488C                      ;C44887|F003    |C4488C;  
+	beq .lbl_C4488C                      ;C44887|F003    |C4488C;  
 	lda.w #$0000                         ;C44889|A90000  |      ;  
-
-CODE_C4488C:
+.lbl_C4488C
 	sta.b $04                   ;C4488C|8504    |000004;  
 	lda.l $7F9CFE                        ;C4488E|AFFE9C7F|7F9CFE;  
 	tay                                  ;C44892|A8      |      ;  
 	ldx.w #$0000                         ;C44893|A20000  |      ;  
-
-CODE_C44896:
+.lbl_C44896
 	lda.w #$0057                         ;C44896|A95700  |      ;  
 	clc                                  ;C44899|18      |      ;  
 	adc.b $04                   ;C4489A|6504    |000004;  
 	sta.b $06                            ;C4489C|8506    |000006;  
 	cpy.b $06                            ;C4489E|C406    |000006;  
-	bcs CODE_C448C1                      ;C448A0|B01F    |C448C1;  
+	bcs .lbl_C448C1                      ;C448A0|B01F    |C448C1;  
 	cpy.w #$0057                         ;C448A2|C05700  |      ;  
-	bcc CODE_C448B9                      ;C448A5|9012    |C448B9;  
+	bcc .lbl_C448B9                      ;C448A5|9012    |C448B9;  
 	txa                                  ;C448A7|8A      |      ;  
 	lsr a                                ;C448A8|4A      |      ;  
 	clc                                  ;C448A9|18      |      ;  
@@ -6000,13 +5820,11 @@ CODE_C44896:
 	sbc.b $06                            ;C448B3|E506    |000006;  
 	sta.b $00                            ;C448B5|8500    |000000;  
 	bra CODE_C448C7                      ;C448B7|800E    |C448C7;  
-
-CODE_C448B9:
+.lbl_C448B9
 	lda.l $7F9CFA                        ;C448B9|AFFA9C7F|7F9CFA;  
 	sta.b $00                            ;C448BD|8500    |000000;  
 	bra CODE_C448C7                      ;C448BF|8006    |C448C7;  
-
-CODE_C448C1:
+.lbl_C448C1
 	lda.l $7F9CFC                        ;C448C1|AFFC9C7F|7F9CFC;  
 	sta.b $00                            ;C448C5|8500    |000000;  
 
@@ -6014,28 +5832,26 @@ CODE_C448C7:
 	lda.b $00                            ;C448C7|A500    |000000;  
 	sta.l $7EC396,x                      ;C448C9|9F96C37E|7EC396;  
 	cpy.w #$0000                         ;C448CD|C00000  |      ;  
-	beq CODE_C448D3                      ;C448D0|F001    |C448D3;  
+	beq .lbl_C448D3                      ;C448D0|F001    |C448D3;  
 	dey                                  ;C448D2|88      |      ;  
-
-CODE_C448D3:
+.lbl_C448D3
 	inx                                  ;C448D3|E8      |      ;  
 	inx                                  ;C448D4|E8      |      ;  
 	cpx.w #$00E0                         ;C448D5|E0E000  |      ;  
-	bne CODE_C44896                      ;C448D8|D0BC    |C44896;  
+	bne .lbl_C44896                      ;C448D8|D0BC    |C44896;  
 	sep #$20                             ;C448DA|E220    |      ;  
 	lda.b #$F0                           ;C448DC|A9F0    |      ;  
 	sta.l $7EC396,x                      ;C448DE|9F96C37E|7EC396;  
 	rep #$20                             ;C448E2|C220    |      ;  
-
-CODE_C448E4:
+.lbl_C448E4
 	lda.w #$0057                         ;C448E4|A95700  |      ;  
 	clc                                  ;C448E7|18      |      ;  
 	adc.b $04                   ;C448E8|6504    |000004;  
 	sta.b $06                            ;C448EA|8506    |000006;  
 	cpy.b $06                            ;C448EC|C406    |000006;  
-	bcs CODE_C4490F                      ;C448EE|B01F    |C4490F;  
+	bcs .lbl_C4490F                      ;C448EE|B01F    |C4490F;  
 	cpy.w #$0057                         ;C448F0|C05700  |      ;  
-	bcc CODE_C44907                      ;C448F3|9012    |C44907;  
+	bcc .lbl_C44907                      ;C448F3|9012    |C44907;  
 	txa                                  ;C448F5|8A      |      ;  
 	lsr a                                ;C448F6|4A      |      ;  
 	clc                                  ;C448F7|18      |      ;  
@@ -6046,13 +5862,11 @@ CODE_C448E4:
 	sbc.b $06                            ;C44901|E506    |000006;  
 	sta.b $00                            ;C44903|8500    |000000;  
 	bra CODE_C44915                      ;C44905|800E    |C44915;  
-
-CODE_C44907:
+.lbl_C44907
 	lda.l $7F9CFA                        ;C44907|AFFA9C7F|7F9CFA;  
 	sta.b $00                            ;C4490B|8500    |000000;  
 	bra CODE_C44915                      ;C4490D|8006    |C44915;  
-
-CODE_C4490F:
+.lbl_C4490F
 	lda.l $7F9CFC                        ;C4490F|AFFC9C7F|7F9CFC;  
 	sta.b $00                            ;C44913|8500    |000000;  
 
@@ -6060,14 +5874,13 @@ CODE_C44915:
 	lda.b $00                            ;C44915|A500    |000000;  
 	sta.l $7EC397,x                      ;C44917|9F97C37E|7EC397;  
 	cpy.w #$0000                         ;C4491B|C00000  |      ;  
-	beq CODE_C44921                      ;C4491E|F001    |C44921;  
+	beq .lbl_C44921                      ;C4491E|F001    |C44921;  
 	dey                                  ;C44920|88      |      ;  
-
-CODE_C44921:
+.lbl_C44921
 	inx                                  ;C44921|E8      |      ;  
 	inx                                  ;C44922|E8      |      ;  
 	cpx.w #$01C0                         ;C44923|E0C001  |      ;  
-	bne CODE_C448E4                      ;C44926|D0BC    |C448E4;  
+	bne .lbl_C448E4                      ;C44926|D0BC    |C448E4;  
 	sep #$20                             ;C44928|E220    |      ;  
 	lda.b #$00                           ;C4492A|A900    |      ;  
 	sta.l $7EC397,x                      ;C4492C|9F97C37E|7EC397;  
@@ -6089,38 +5902,34 @@ CODE_C4493E:
 	lda.b #$F0                           ;C44943|A9F0    |      ;  
 	sta.l $7EC589                        ;C44945|8F89C57E|7EC589;  
 	ldx.w #$0000                         ;C44949|A20000  |      ;  
-
-CODE_C4494C:
+.lbl_C4494C
 	cpx.w #$0017                         ;C4494C|E01700  |      ;  
-	bcs CODE_C44955                      ;C4494F|B004    |C44955;  
+	bcs .lbl_C44955                      ;C4494F|B004    |C44955;  
 	lda.b #$00                           ;C44951|A900    |      ;  
 	bra CODE_C44957                      ;C44953|8002    |C44957;  
-
-CODE_C44955:
+.lbl_C44955
 	lda.b #$08                           ;C44955|A908    |      ;  
 
 CODE_C44957:
 	sta.l $7EC58A,x                      ;C44957|9F8AC57E|7EC58A;  
 	inx                                  ;C4495B|E8      |      ;  
 	cpx.w #$0070                         ;C4495C|E07000  |      ;  
-	bne CODE_C4494C                      ;C4495F|D0EB    |C4494C;  
+	bne .lbl_C4494C                      ;C4495F|D0EB    |C4494C;  
 	lda.b #$F0                           ;C44961|A9F0    |      ;  
 	sta.l $7EC58A,x                      ;C44963|9F8AC57E|7EC58A;  
-
-CODE_C44967:
+.lbl_C44967
 	cpx.w #$00B1                         ;C44967|E0B100  |      ;  
-	bcs CODE_C44970                      ;C4496A|B004    |C44970;  
+	bcs .lbl_C44970                      ;C4496A|B004    |C44970;  
 	lda.b #$08                           ;C4496C|A908    |      ;  
 	bra CODE_C44972                      ;C4496E|8002    |C44972;  
-
-CODE_C44970:
+.lbl_C44970
 	lda.b #$00                           ;C44970|A900    |      ;  
 
 CODE_C44972:
 	sta.l $7EC58B,x                      ;C44972|9F8BC57E|7EC58B;  
 	inx                                  ;C44976|E8      |      ;  
 	cpx.w #$00E0                         ;C44977|E0E000  |      ;  
-	bne CODE_C44967                      ;C4497A|D0EB    |C44967;  
+	bne .lbl_C44967                      ;C4497A|D0EB    |C44967;  
 	lda.b #$00                           ;C4497C|A900    |      ;  
 	sta.l $7EC58B,x                      ;C4497E|9F8BC57E|7EC58B;  
 	plp                                  ;C44982|28      |      ;  
@@ -6223,10 +6032,9 @@ CODE_C44A96:
 	phx                                  ;C44AC6|DA      |      ;  
 	jsl.l CODE_C43F17                    ;C44AC7|22173FC4|C43F17;  
 	plx                                  ;C44ACB|FA      |      ;  
-	bcc CODE_C44AD1                      ;C44ACC|9003    |C44AD1;  
+	bcc .lbl_C44AD1                      ;C44ACC|9003    |C44AD1;  
 	.db $82,$4B,$01                       ;C44ACE|        |C44C1C;  
-
-CODE_C44AD1:
+.lbl_C44AD1
 	ldx.w #$0000                         ;C44AD1|A20000  |      ;  
 
 CODE_C44AD4:
@@ -6258,12 +6066,11 @@ CODE_C44AD4:
 CODE_C44AFC:
 	lda.l DATA8_C46AE6,x                 ;C44AFC|BFE66AC4|C46AE6;  
 	cmp.b #$FE                           ;C44B00|C9FE    |      ;  
-	bne CODE_C44B07                      ;C44B02|D003    |C44B07;  
+	bne .lbl_C44B07                      ;C44B02|D003    |C44B07;  
 	brl CODE_C44C18                      ;C44B04|821101  |C44C18;  
-
-CODE_C44B07:
+.lbl_C44B07
 	cmp.b #$FF                           ;C44B07|C9FF    |      ;  
-	beq CODE_C44B5E                      ;C44B09|F053    |C44B5E;  
+	beq .lbl_C44B5E                      ;C44B09|F053    |C44B5E;  
 	sta.b $00                            ;C44B0B|8500    |000000;  
 	phx                                  ;C44B0D|DA      |      ;  
 	jsl.l CODE_C44386                    ;C44B0E|228643C4|C44386;  
@@ -6271,10 +6078,9 @@ CODE_C44B07:
 	phx                                  ;C44B13|DA      |      ;  
 	jsl.l CODE_C443C9                    ;C44B14|22C943C4|C443C9;  
 	plx                                  ;C44B18|FA      |      ;  
-	bcc CODE_C44B1E                      ;C44B19|9003    |C44B1E;  
-	brl CODE_C44C1C                      ;C44B1B|82FE00  |C44C1C;  
-
-CODE_C44B1E:
+	bcc .lbl_C44B1E                      ;C44B19|9003    |C44B1E;  
+	brl .lbl_C44C1C                      ;C44B1B|82FE00  |C44C1C;  
+.lbl_C44B1E
 	lda.b #$01                           ;C44B1E|A901    |      ;  
 	sta.b $00                            ;C44B20|8500    |000000;  
 	phx                                  ;C44B22|DA      |      ;  
@@ -6299,24 +6105,20 @@ CODE_C44B1E:
 	phx                                  ;C44B50|DA      |      ;  
 	jsl.l CODE_C43F40                    ;C44B51|22403FC4|C43F40;  
 	plx                                  ;C44B55|FA      |      ;  
-	bcc CODE_C44B5B                      ;C44B56|9003    |C44B5B;  
+	bcc .lbl_C44B5B                      ;C44B56|9003    |C44B5B;  
 	.db $82,$C1,$00                       ;C44B58|        |C44C1C;  
-
-CODE_C44B5B:
+.lbl_C44B5B
 	inx                                  ;C44B5B|E8      |      ;  
 	bra CODE_C44AFC                      ;C44B5C|809E    |C44AFC;  
-
-CODE_C44B5E:
+.lbl_C44B5E
 	cpx.w #$000B                         ;C44B5E|E00B00  |      ;  
-	bne CODE_C44B69                      ;C44B61|D006    |C44B69;  
+	bne .lbl_C44B69                      ;C44B61|D006    |C44B69;  
 	phx                                  ;C44B63|DA      |      ;  
 	jsl.l CODE_C44C3D                    ;C44B64|223D4CC4|C44C3D;  
 	plx                                  ;C44B68|FA      |      ;  
-
-CODE_C44B69:
+.lbl_C44B69
 	ldy.w #$00AA                         ;C44B69|A0AA00  |      ;  
-
-CODE_C44B6C:
+.lbl_C44B6C
 	stz.b w0001                            ;C44B6C|6401    |000001;  
 	lda.b #$01                           ;C44B6E|A901    |      ;  
 	sta.b $00                            ;C44B70|8500    |000000;  
@@ -6325,12 +6127,11 @@ CODE_C44B6C:
 	jsl.l CODE_C43F40                    ;C44B74|22403FC4|C43F40;  
 	ply                                  ;C44B78|7A      |      ;  
 	plx                                  ;C44B79|FA      |      ;  
-	bcc CODE_C44B7F                      ;C44B7A|9003    |C44B7F;  
-	brl CODE_C44C1C                      ;C44B7C|829D00  |C44C1C;  
-
-CODE_C44B7F:
+	bcc .lbl_C44B7F                      ;C44B7A|9003    |C44B7F;  
+	brl .lbl_C44C1C                      ;C44B7C|829D00  |C44C1C;  
+.lbl_C44B7F
 	dey                                  ;C44B7F|88      |      ;  
-	bne CODE_C44B6C                      ;C44B80|D0EA    |C44B6C;  
+	bne .lbl_C44B6C                      ;C44B80|D0EA    |C44B6C;  
 	phx                                  ;C44B82|DA      |      ;  
 	jsl.l func_808D3D                    ;C44B83|223D8D80|808D3D;  
 	plx                                  ;C44B87|FA      |      ;  
@@ -6362,8 +6163,7 @@ CODE_C44B7F:
 	plx                                  ;C44BBF|FA      |      ;  
 	phx                                  ;C44BC0|DA      |      ;  
 	ldx.w #$000F                         ;C44BC1|A20F00  |      ;  
-
-CODE_C44BC4:
+.lbl_C44BC4
 	lda.b #$08                           ;C44BC4|A908    |      ;  
 	sta.b $00                            ;C44BC6|8500    |000000;  
 	ldy.w #$0680                         ;C44BC8|A08006  |      ;  
@@ -6380,18 +6180,16 @@ CODE_C44BC4:
 	plx                                  ;C44BE3|FA      |      ;  
 	bcs UNREACH_C44C1B                   ;C44BE4|B035    |C44C1B;  
 	dex                                  ;C44BE6|CA      |      ;  
-	bpl CODE_C44BC4                      ;C44BE7|10DB    |C44BC4;  
+	bpl .lbl_C44BC4                      ;C44BE7|10DB    |C44BC4;  
 	plx                                  ;C44BE9|FA      |      ;  
 	ldy.w #$001E                         ;C44BEA|A01E00  |      ;  
-
-CODE_C44BED:
+.lbl_C44BED
 	cpx.w #$0008                         ;C44BED|E00800  |      ;  
-	beq CODE_C44BF9                      ;C44BF0|F007    |C44BF9;  
+	beq .lbl_C44BF9                      ;C44BF0|F007    |C44BF9;  
 	cpx.w #$000B                         ;C44BF2|E00B00  |      ;  
-	beq CODE_C44BF9                      ;C44BF5|F002    |C44BF9;  
-	bra CODE_C44BF9                      ;C44BF7|8000    |C44BF9;  
-
-CODE_C44BF9:
+	beq .lbl_C44BF9                      ;C44BF5|F002    |C44BF9;  
+	bra .lbl_C44BF9                      ;C44BF7|8000    |C44BF9;  
+.lbl_C44BF9
 	lda.b #$01                           ;C44BF9|A901    |      ;  
 	sta.b $00                            ;C44BFB|8500    |000000;  
 	stz.b w0001                            ;C44BFD|6401    |000001;  
@@ -6400,9 +6198,9 @@ CODE_C44BF9:
 	jsl.l CODE_C43F40                    ;C44C01|22403FC4|C43F40;  
 	ply                                  ;C44C05|7A      |      ;  
 	plx                                  ;C44C06|FA      |      ;  
-	bcs CODE_C44C1C                      ;C44C07|B013    |C44C1C;  
+	bcs .lbl_C44C1C                      ;C44C07|B013    |C44C1C;  
 	dey                                  ;C44C09|88      |      ;  
-	bne CODE_C44BED                      ;C44C0A|D0E1    |C44BED;  
+	bne .lbl_C44BED                      ;C44C0A|D0E1    |C44BED;  
 	jsl.l func_808A00                    ;C44C0C|22008A80|808A00;  
 	jsl.l func_8085B1                    ;C44C10|22B18580|8085B1;  
 	inx                                  ;C44C14|E8      |      ;  
@@ -6415,8 +6213,7 @@ CODE_C44C18:
 
 UNREACH_C44C1B:
 	.db $FA                               ;C44C1B
-
-CODE_C44C1C:
+.lbl_C44C1C
 	plp                                  ;C44C1C|28      |      ;  
 	sec                                  ;C44C1D|38      |      ;  
 	rtl                                  ;C44C1E|6B      |      ;  
@@ -6456,14 +6253,13 @@ CODE_C44C3D:
 	inx                                  ;C44C6F|E8      |      ;  
 	lda.w #$0980                         ;C44C70|A98009  |      ;  
 	ldy.w #$0009                         ;C44C73|A00900  |      ;  
-
-CODE_C44C76:
+.lbl_C44C76
 	sta.w $9D10,x                        ;C44C76|9D109D  |7F9D10;  
 	inc a                                ;C44C79|1A      |      ;  
 	inx                                  ;C44C7A|E8      |      ;  
 	inx                                  ;C44C7B|E8      |      ;  
 	dey                                  ;C44C7C|88      |      ;  
-	bne CODE_C44C76                      ;C44C7D|D0F7    |C44C76;  
+	bne .lbl_C44C76                      ;C44C7D|D0F7    |C44C76;  
 	lda.w $9D0E                          ;C44C7F|AD0E9D  |7F9D0E;  
 	clc                                  ;C44C82|18      |      ;  
 	adc.w #$0017                         ;C44C83|691700  |      ;  
@@ -6479,8 +6275,7 @@ CODE_C44C76:
 	plb                                  ;C44C9F|AB      |      ;  
 	tdc                                  ;C44CA0|7B      |      ;  
 	tax                                  ;C44CA1|AA      |      ;  
-
-CODE_C44CA2:
+.lbl_C44CA2
 	lda.w #$000A                         ;C44CA2|A90A00  |      ;  
 	sta.b $00                            ;C44CA5|8500    |000000;  
 	lda.w #$0480                         ;C44CA7|A98004  |      ;  
@@ -6500,7 +6295,7 @@ CODE_C44CA2:
 	inx                                  ;C44CC5|E8      |      ;  
 	inx                                  ;C44CC6|E8      |      ;  
 	cpx.w #$0010                         ;C44CC7|E01000  |      ;  
-	bne CODE_C44CA2                      ;C44CCA|D0D6    |C44CA2;  
+	bne .lbl_C44CA2                      ;C44CCA|D0D6    |C44CA2;  
 	jsl.l func_808A00                    ;C44CCC|22008A80|808A00;  
 	jsl.l func_8085B1                    ;C44CD0|22B18580|8085B1;  
 	plp                                  ;C44CD4|28      |      ;  
@@ -6826,11 +6621,10 @@ CODE_C45668:
 CODE_C45676:
 	sep #$20                             ;C45676|E220    |      ;  
 	lda.w $C9D1,x                        ;C45678|BDD1C9  |7EC9D1;  
-	beq CODE_C45681                      ;C4567B|F004    |C45681;  
+	beq .lbl_C45681                      ;C4567B|F004    |C45681;  
 	lda.b #$02                           ;C4567D|A902    |      ;  
 	bra CODE_C45683                      ;C4567F|8002    |C45683;  
-
-CODE_C45681:
+.lbl_C45681
 	lda.b #$01                           ;C45681|A901    |      ;  
 
 CODE_C45683:
@@ -6839,11 +6633,10 @@ CODE_C45683:
 	rep #$20                             ;C45688|C220    |      ;  
 	and.w #$00FF                         ;C4568A|29FF00  |      ;  
 	cpx.w #$000E                         ;C4568D|E00E00  |      ;  
-	bcs CODE_C45697                      ;C45690|B005    |C45697;  
+	bcs .lbl_C45697                      ;C45690|B005    |C45697;  
 	ora.w #$3000                         ;C45692|090030  |      ;  
 	bra CODE_C4569A                      ;C45695|8003    |C4569A;  
-
-CODE_C45697:
+.lbl_C45697
 	ora.w #$3200                         ;C45697|090032  |      ;  
 
 CODE_C4569A:
@@ -6869,10 +6662,9 @@ CODE_C4569A:
 	inc.b $00                            ;C456BC|E600    |000000;  
 	inx                                  ;C456BE|E8      |      ;  
 	cpx.w #$0051                         ;C456BF|E05100  |      ;  
-	beq CODE_C456C7                      ;C456C2|F003    |C456C7;  
+	beq .lbl_C456C7                      ;C456C2|F003    |C456C7;  
 	brl CODE_C45676                      ;C456C4|82AFFF  |C45676;  
-
-CODE_C456C7:
+.lbl_C456C7
 	jsl.l func_80859F                    ;C456C7|229F8580|80859F;  
 	plp                                  ;C456CB|28      |      ;  
 	rtl                                  ;C456CC|6B      |      ;  
@@ -6891,11 +6683,10 @@ CODE_C456CD:
 CODE_C456DD:
 	sep #$20                             ;C456DD|E220    |      ;  
 	lda.w $C9D1,x                        ;C456DF|BDD1C9  |7EC9D1;  
-	beq CODE_C456E8                      ;C456E2|F004    |C456E8;  
+	beq .lbl_C456E8                      ;C456E2|F004    |C456E8;  
 	lda.b #$02                           ;C456E4|A902    |      ;  
 	bra CODE_C456EA                      ;C456E6|8002    |C456EA;  
-
-CODE_C456E8:
+.lbl_C456E8
 	lda.b #$01                           ;C456E8|A901    |      ;  
 
 CODE_C456EA:
@@ -6927,10 +6718,9 @@ CODE_C456EA:
 	inc.b $00                            ;C4571C|E600    |000000;  
 	inx                                  ;C4571E|E8      |      ;  
 	cpx.w #$0065                         ;C4571F|E06500  |      ;  
-	beq CODE_C45727                      ;C45722|F003    |C45727;  
+	beq .lbl_C45727                      ;C45722|F003    |C45727;  
 	brl CODE_C456DD                      ;C45724|82B6FF  |C456DD;  
-
-CODE_C45727:
+.lbl_C45727
 	jsl.l func_80859F                    ;C45727|229F8580|80859F;  
 	plp                                  ;C4572B|28      |      ;  
 	rtl                                  ;C4572C|6B      |      ;  
@@ -6943,84 +6733,74 @@ CODE_C4572D:
 	pha                                  ;C45734|48      |      ;  
 	plb                                  ;C45735|AB      |      ;  
 	ldx.w #$0051                         ;C45736|A25100  |      ;  
-
-CODE_C45739:
+.lbl_C45739
 	lda.w $C7C1,x                        ;C45739|BDC1C7  |7EC7C1;  
-	beq CODE_C457B0                      ;C4573C|F072    |C457B0;  
+	beq .lbl_C457B0                      ;C4573C|F072    |C457B0;  
 	lda.l $7FA9CE                        ;C4573E|AFCEA97F|7FA9CE;  
 	bit.b #$07                           ;C45742|8907    |      ;  
-	bne CODE_C45762                      ;C45744|D01C    |C45762;  
+	bne .lbl_C45762                      ;C45744|D01C    |C45762;  
 	lda.w $C7C1,x                        ;C45746|BDC1C7  |7EC7C1;  
 	cpx.w #$0058                         ;C45749|E05800  |      ;  
-	bcs CODE_C45758                      ;C4574C|B00A    |C45758;  
+	bcs .lbl_C45758                      ;C4574C|B00A    |C45758;  
 	inc a                                ;C4574E|1A      |      ;  
 	inc a                                ;C4574F|1A      |      ;  
 	cmp.b #$DC                           ;C45750|C9DC    |      ;  
-	bne CODE_C45756                      ;C45752|D002    |C45756;  
+	bne .lbl_C45756                      ;C45752|D002    |C45756;  
 	lda.b #$D4                           ;C45754|A9D4    |      ;  
-
-CODE_C45756:
-	bra CODE_C4575F                      ;C45756|8007    |C4575F;  
-
-CODE_C45758:
+.lbl_C45756
+	bra .lbl_C4575F                      ;C45756|8007    |C4575F;  
+.lbl_C45758
 	inc a                                ;C45758|1A      |      ;  
 	cmp.b #$E0                           ;C45759|C9E0    |      ;  
-	bne CODE_C4575F                      ;C4575B|D002    |C4575F;  
+	bne .lbl_C4575F                      ;C4575B|D002    |C4575F;  
 	lda.b #$DC                           ;C4575D|A9DC    |      ;  
-
-CODE_C4575F:
+.lbl_C4575F
 	sta.w $C7C1,x                        ;C4575F|9DC1C7  |7EC7C1;  
-
-CODE_C45762:
+.lbl_C45762
 	cpx.w #$0058                         ;C45762|E05800  |      ;  
-	bcs CODE_C45769                      ;C45765|B002    |C45769;  
+	bcs .lbl_C45769                      ;C45765|B002    |C45769;  
 	bra CODE_C45771                      ;C45767|8008    |C45771;  
-
-CODE_C45769:
+.lbl_C45769
 	lda.l $7FA9CE                        ;C45769|AFCEA97F|7FA9CE;  
 	bit.b #$03                           ;C4576D|8903    |      ;  
-	beq CODE_C45781                      ;C4576F|F010    |C45781;  
+	beq .lbl_C45781                      ;C4576F|F010    |C45781;  
 
 CODE_C45771:
 	lda.w $C841,x                        ;C45771|BD41C8  |7EC841;  
 	dec a                                ;C45774|3A      |      ;  
 	sta.w $C841,x                        ;C45775|9D41C8  |7EC841;  
 	cmp.b #$FF                           ;C45778|C9FF    |      ;  
-	bne CODE_C45781                      ;C4577A|D005    |C45781;  
+	bne .lbl_C45781                      ;C4577A|D005    |C45781;  
 	lda.b #$FF                           ;C4577C|A9FF    |      ;  
 	sta.w $C8C9,x                        ;C4577E|9DC9C8  |7EC8C9;  
-
-CODE_C45781:
+.lbl_C45781
 	cpx.w #$0058                         ;C45781|E05800  |      ;  
-	bcs CODE_C45790                      ;C45784|B00A    |C45790;  
+	bcs .lbl_C45790                      ;C45784|B00A    |C45790;  
 	lda.l $7FA9CE                        ;C45786|AFCEA97F|7FA9CE;  
 	bit.b #$01                           ;C4578A|8901    |      ;  
-	bne CODE_C4579F                      ;C4578C|D011    |C4579F;  
+	bne .lbl_C4579F                      ;C4578C|D011    |C4579F;  
 	bra CODE_C45798                      ;C4578E|8008    |C45798;  
-
-CODE_C45790:
+.lbl_C45790
 	lda.l $7FA9CE                        ;C45790|AFCEA97F|7FA9CE;  
 	bit.b #$01                           ;C45794|8901    |      ;  
-	bne CODE_C4579F                      ;C45796|D007    |C4579F;  
+	bne .lbl_C4579F                      ;C45796|D007    |C4579F;  
 
 CODE_C45798:
 	lda.w $C949,x                        ;C45798|BD49C9  |7EC949;  
 	dec a                                ;C4579B|3A      |      ;  
 	sta.w $C949,x                        ;C4579C|9D49C9  |7EC949;  
-
-CODE_C4579F:
+.lbl_C4579F
 	lda.w $C8C9,x                        ;C4579F|BDC9C8  |7EC8C9;  
-	beq CODE_C457B0                      ;C457A2|F00C    |C457B0;  
+	beq .lbl_C457B0                      ;C457A2|F00C    |C457B0;  
 	lda.w $C841,x                        ;C457A4|BD41C8  |7EC841;  
 	cmp.b #$F0                           ;C457A7|C9F0    |      ;  
-	bne CODE_C457B0                      ;C457A9|D005    |C457B0;  
+	bne .lbl_C457B0                      ;C457A9|D005    |C457B0;  
 	lda.b #$00                           ;C457AB|A900    |      ;  
 	sta.w $C7C1,x                        ;C457AD|9DC1C7  |7EC7C1;  
-
-CODE_C457B0:
+.lbl_C457B0
 	inx                                  ;C457B0|E8      |      ;  
 	cpx.w #$0065                         ;C457B1|E06500  |      ;  
-	bne CODE_C45739                      ;C457B4|D083    |C45739;  
+	bne .lbl_C45739                      ;C457B4|D083    |C45739;  
 	lda.l $7FA9CE                        ;C457B6|AFCEA97F|7FA9CE;  
 	inc a                                ;C457BA|1A      |      ;  
 	sta.l $7FA9CE                        ;C457BB|8FCEA97F|7FA9CE;  
@@ -7040,7 +6820,7 @@ CODE_C457C1:
 CODE_C457D0:
 	lda.l DATA8_C46951,x                 ;C457D0|BF5169C4|C46951;  
 	cmp.b #$FF                           ;C457D4|C9FF    |      ;  
-	beq CODE_C457FC                      ;C457D6|F024    |C457FC;  
+	beq .lbl_C457FC                      ;C457D6|F024    |C457FC;  
 	sta.w $C7C1,y                        ;C457D8|99C1C7  |7EC7C1;  
 	lda.l DATA8_C46952,x                 ;C457DB|BF5269C4|C46952;  
 	sta.w $C841,y                        ;C457DF|9941C8  |7EC841;  
@@ -7056,8 +6836,7 @@ CODE_C457D0:
 	inx                                  ;C457F8|E8      |      ;  
 	inx                                  ;C457F9|E8      |      ;  
 	bra CODE_C457D0                      ;C457FA|80D4    |C457D0;  
-
-CODE_C457FC:
+.lbl_C457FC
 	plp                                  ;C457FC|28      |      ;  
 	rtl                                  ;C457FD|6B      |      ;  
 
@@ -7069,7 +6848,7 @@ CODE_C457FE:
 	pha                                  ;C45805|48      |      ;  
 	plb                                  ;C45806|AB      |      ;  
 	ldx.b $06                            ;C45807|A606    |000006;  
-	bne CODE_C45840                      ;C45809|D035    |C45840;  
+	bne .lbl_C45840                      ;C45809|D035    |C45840;  
 	lda.b #$03                           ;C4580B|A903    |      ;  
 	sta.b $00                            ;C4580D|8500    |000000;  
 	jsl.l func_808F59                    ;C4580F|22598F80|808F59;  
@@ -7091,10 +6870,9 @@ CODE_C457FE:
 	plb                                  ;C4583A|AB      |      ;  
 	plx                                  ;C4583B|FA      |      ;  
 	jsl.l func_8089F6                    ;C4583C|22F68980|8089F6;  
-
-CODE_C45840:
+.lbl_C45840
 	cpx.w #$0010                         ;C45840|E01000  |      ;  
-	bcs CODE_C4585F                      ;C45843|B01A    |C4585F;  
+	bcs .lbl_C4585F                      ;C45843|B01A    |C4585F;  
 	lda.b #$0A                           ;C45845|A90A    |      ;  
 	sta.b $00                            ;C45847|8500    |000000;  
 	ldy.w #$03A0                         ;C45849|A0A003  |      ;  
@@ -7107,10 +6885,9 @@ CODE_C45840:
 	plx                                  ;C45857|FA      |      ;  
 	jsl.l func_8085B1                    ;C45858|22B18580|8085B1;  
 	brl CODE_C4592C                      ;C4585C|82CD00  |C4592C;  
-
-CODE_C4585F:
+.lbl_C4585F
 	cpx.w #$0010                         ;C4585F|E01000  |      ;  
-	bne CODE_C458A6                      ;C45862|D042    |C458A6;  
+	bne .lbl_C458A6                      ;C45862|D042    |C458A6;  
 	phx                                  ;C45864|DA      |      ;  
 	phb                                  ;C45865|8B      |      ;  
 	jsl.l func_808D3D                    ;C45866|223D8D80|808D3D;  
@@ -7147,10 +6924,9 @@ CODE_C4585F:
 	jsl.l func_80886F                    ;C458A0|226F8880|80886F;  
 	plb                                  ;C458A4|AB      |      ;  
 	plx                                  ;C458A5|FA      |      ;  
-
-CODE_C458A6:
+.lbl_C458A6
 	cpx.w #$0020                         ;C458A6|E02000  |      ;  
-	bcs CODE_C458D6                      ;C458A9|B02B    |C458D6;  
+	bcs .lbl_C458D6                      ;C458A9|B02B    |C458D6;  
 	lda.b #$08                           ;C458AB|A908    |      ;  
 	sta.b $00                            ;C458AD|8500    |000000;  
 	ldy.w #$03A0                         ;C458AF|A0A003  |      ;  
@@ -7172,17 +6948,15 @@ CODE_C458A6:
 	plx                                  ;C458CE|FA      |      ;  
 	jsl.l func_8085B1                    ;C458CF|22B18580|8085B1;  
 	brl CODE_C4592C                      ;C458D3|825600  |C4592C;  
-
-CODE_C458D6:
+.lbl_C458D6
 	cpx.w #$0020                         ;C458D6|E02000  |      ;  
-	bne CODE_C458E3                      ;C458D9|D008    |C458E3;  
+	bne .lbl_C458E3                      ;C458D9|D008    |C458E3;  
 	lda.b #$10                           ;C458DB|A910    |      ;  
 	sta.b $00                            ;C458DD|8500    |000000;  
 	jsl.l func_808F59                    ;C458DF|22598F80|808F59;  
-
-CODE_C458E3:
+.lbl_C458E3
 	cpx.w #$002F                         ;C458E3|E02F00  |      ;  
-	bcs CODE_C4590B                      ;C458E6|B023    |C4590B;  
+	bcs .lbl_C4590B                      ;C458E6|B023    |C4590B;  
 	lda.b #$08                           ;C458E8|A908    |      ;  
 	sta.b $00                            ;C458EA|8500    |000000;  
 	ldy.w #$03A0                         ;C458EC|A0A003  |      ;  
@@ -7200,8 +6974,7 @@ CODE_C458E3:
 	plx                                  ;C45903|FA      |      ;  
 	jsl.l func_8085B1                    ;C45904|22B18580|8085B1;  
 	brl CODE_C4592C                      ;C45908|822100  |C4592C;  
-
-CODE_C4590B:
+.lbl_C4590B
 	lda.b #$02                           ;C4590B|A902    |      ;  
 	sta.b $00                            ;C4590D|8500    |000000;  
 	lda.b #$08                           ;C4590F|A908    |      ;  
@@ -7235,10 +7008,9 @@ CODE_C4594C:
 	inc.w $A57C                          ;C45953|EE7CA5  |7FA57C;  
 	lda.w $A57C                          ;C45956|AD7CA5  |7FA57C;  
 	cmp.b #$01                           ;C45959|C901    |      ;  
-	bcc CODE_C45960                      ;C4595B|9003    |C45960;  
+	bcc .lbl_C45960                      ;C4595B|9003    |C45960;  
 	stz.w $A57C                          ;C4595D|9C7CA5  |7FA57C;  
-
-CODE_C45960:
+.lbl_C45960
 	lda.w $A57C                          ;C45960|AD7CA5  |7FA57C;  
 	asl a                                ;C45963|0A      |      ;  
 	tax                                  ;C45964|AA      |      ;  
@@ -7254,21 +7026,19 @@ CODE_C45960:
 	rep #$30                             ;C4597A|C230    |      ;  
 	ldx.w #$0000                         ;C4597C|A20000  |      ;  
 	lda.w #$0000                         ;C4597F|A90000  |      ;  
-
-CODE_C45982:
+.lbl_C45982
 	sta.w $A179,x                        ;C45982|9D79A1  |7FA179;  
 	inx                                  ;C45985|E8      |      ;  
 	inx                                  ;C45986|E8      |      ;  
 	cpx.w #$0400                         ;C45987|E00004  |      ;  
-	bne CODE_C45982                      ;C4598A|D0F6    |C45982;  
+	bne .lbl_C45982                      ;C4598A|D0F6    |C45982;  
 	ldx.w #$0000                         ;C4598C|A20000  |      ;  
 	sep #$20                             ;C4598F|E220    |      ;  
 	lda.b $06                            ;C45991|A506    |000006;  
 	cmp.b #$10                           ;C45993|C910    |      ;  
-	bcs CODE_C4599A                      ;C45995|B003    |C4599A;  
-	brl CODE_C45BA1                      ;C45997|820702  |C45BA1;  
-
-CODE_C4599A:
+	bcs .lbl_C4599A                      ;C45995|B003    |C4599A;  
+	brl .lbl_C45BA1                      ;C45997|820702  |C45BA1;  
+.lbl_C4599A
 	sec                                  ;C4599A|38      |      ;  
 	sbc.b #$10                           ;C4599B|E910    |      ;  
 	rep #$20                             ;C4599D|C220    |      ;  
@@ -7279,7 +7049,7 @@ CODE_C4599A:
 
 CODE_C459A7:
 	cpx.w $A57D                          ;C459A7|EC7DA5  |7FA57D;  
-	beq CODE_C459BE                      ;C459AA|F012    |C459BE;  
+	beq .lbl_C459BE                      ;C459AA|F012    |C459BE;  
 	lda.l $D94546,x                 ;C459AC|BF4645D9|D94546;  
 	sta.w $A179,x                        ;C459B0|9D79A1  |7FA179;  
 	lda.l $D94746,x                 ;C459B3|BF4647D9|D94746;  
@@ -7287,8 +7057,7 @@ CODE_C459A7:
 	inx                                  ;C459BA|E8      |      ;  
 	inx                                  ;C459BB|E8      |      ;  
 	bra CODE_C459A7                      ;C459BC|80E9    |C459A7;  
-
-CODE_C459BE:
+.lbl_C459BE
 	sep #$30                             ;C459BE|E230    |      ;  
 	lda.b $06                            ;C459C0|A506    |000006;  
 	and.b #$07                           ;C459C2|2907    |      ;  
@@ -7310,15 +7079,14 @@ CODE_C459DD:
 	sep #$30                             ;C459DD|E230    |      ;  
 	lda.b $06                            ;C459DF|A506    |000006;  
 	cmp.b #$80                           ;C459E1|C980    |      ;  
-	bcs CODE_C45A60                      ;C459E3|B07B    |C45A60;  
+	bcs .lbl_C45A60                      ;C459E3|B07B    |C45A60;  
 	ldy.b $03                            ;C459E5|A403    |000003;  
 	lda.b [$00],y                        ;C459E7|B700    |000000;  
 	ldy.b $05                            ;C459E9|A405    |000005;  
-
-CODE_C459EB:
+.lbl_C459EB
 	asl a                                ;C459EB|0A      |      ;  
 	dey                                  ;C459EC|88      |      ;  
-	bne CODE_C459EB                      ;C459ED|D0FC    |C459EB;  
+	bne .lbl_C459EB                      ;C459ED|D0FC    |C459EB;  
 	sta.b $04                   ;C459EF|8504    |000004;  
 	rep #$10                             ;C459F1|C210    |      ;  
 	ldx.w $A57D                          ;C459F3|AE7DA5  |7FA57D;  
@@ -7341,11 +7109,10 @@ CODE_C459EB:
 	tay                                  ;C45A21|A8      |      ;  
 	lda.b [$00],y                        ;C45A22|B700    |000000;  
 	ldy.b $05                            ;C45A24|A405    |000005;  
-
-CODE_C45A26:
+.lbl_C45A26
 	asl a                                ;C45A26|0A      |      ;  
 	dey                                  ;C45A27|88      |      ;  
-	bne CODE_C45A26                      ;C45A28|D0FC    |C45A26;  
+	bne .lbl_C45A26                      ;C45A28|D0FC    |C45A26;  
 	sta.b $04                   ;C45A2A|8504    |000004;  
 	rep #$10                             ;C45A2C|C210    |      ;  
 	ldx.w $A57D                          ;C45A2E|AE7DA5  |7FA57D;  
@@ -7364,16 +7131,14 @@ CODE_C45A26:
 	sep #$10                             ;C45A55|E210    |      ;  
 	lda.b $06                            ;C45A57|A506    |000006;  
 	cmp.b #$08                           ;C45A59|C908    |      ;  
-	bcs CODE_C45A60                      ;C45A5B|B003    |C45A60;  
+	bcs .lbl_C45A60                      ;C45A5B|B003    |C45A60;  
 	.db $82,$2A,$01                       ;C45A5D|        |C45B8A;  
-
-CODE_C45A60:
+.lbl_C45A60
 	lda.b $06                            ;C45A60|A506    |000006;  
 	cmp.b #$88                           ;C45A62|C988    |      ;  
-	bcc CODE_C45A69                      ;C45A64|9003    |C45A69;  
-	brl CODE_C45AFA                      ;C45A66|829100  |C45AFA;  
-
-CODE_C45A69:
+	bcc .lbl_C45A69                      ;C45A64|9003    |C45A69;  
+	brl .lbl_C45AFA                      ;C45A66|829100  |C45AFA;  
+.lbl_C45A69
 	ldy.b $03                            ;C45A69|A403    |000003;  
 	lda.b $06                            ;C45A6B|A506    |000006;  
 	and.b #$07                           ;C45A6D|2907    |      ;  
@@ -7383,12 +7148,11 @@ CODE_C45A69:
 
 CODE_C45A74:
 	cpx.b #$00                           ;C45A74|E000    |      ;  
-	beq CODE_C45A7C                      ;C45A76|F004    |C45A7C;  
+	beq .lbl_C45A7C                      ;C45A76|F004    |C45A7C;  
 	lsr a                                ;C45A78|4A      |      ;  
 	dex                                  ;C45A79|CA      |      ;  
 	bra CODE_C45A74                      ;C45A7A|80F8    |C45A74;  
-
-CODE_C45A7C:
+.lbl_C45A7C
 	sep #$20                             ;C45A7C|E220    |      ;  
 	sta.b $04                   ;C45A7E|8504    |000004;  
 	rep #$10                             ;C45A80|C210    |      ;  
@@ -7418,12 +7182,11 @@ CODE_C45A7C:
 
 CODE_C45ABA:
 	cpx.b #$00                           ;C45ABA|E000    |      ;  
-	beq CODE_C45AC2                      ;C45ABC|F004    |C45AC2;  
+	beq .lbl_C45AC2                      ;C45ABC|F004    |C45AC2;  
 	lsr a                                ;C45ABE|4A      |      ;  
 	dex                                  ;C45ABF|CA      |      ;  
 	bra CODE_C45ABA                      ;C45AC0|80F8    |C45ABA;  
-
-CODE_C45AC2:
+.lbl_C45AC2
 	sep #$20                             ;C45AC2|E220    |      ;  
 	sta.b $04                   ;C45AC4|8504    |000004;  
 	rep #$10                             ;C45AC6|C210    |      ;  
@@ -7443,16 +7206,14 @@ CODE_C45AC2:
 	sep #$10                             ;C45AEF|E210    |      ;  
 	lda.b $06                            ;C45AF1|A506    |000006;  
 	cmp.b #$10                           ;C45AF3|C910    |      ;  
-	bcs CODE_C45AFA                      ;C45AF5|B003    |C45AFA;  
+	bcs .lbl_C45AFA                      ;C45AF5|B003    |C45AFA;  
 	.db $82,$90,$00                       ;C45AF7|        |C45B8A;  
-
-CODE_C45AFA:
+.lbl_C45AFA
 	lda.b $06                            ;C45AFA|A506    |000006;  
 	cmp.b #$90                           ;C45AFC|C990    |      ;  
-	bcc CODE_C45B03                      ;C45AFE|9003    |C45B03;  
+	bcc .lbl_C45B03                      ;C45AFE|9003    |C45B03;  
 	.db $82,$87,$00                       ;C45B00|        |C45B8A;  
-
-CODE_C45B03:
+.lbl_C45B03
 	ldy.b $03                            ;C45B03|A403    |000003;  
 	iny                                  ;C45B05|C8      |      ;  
 	lda.b $06                            ;C45B06|A506    |000006;  
@@ -7463,13 +7224,12 @@ CODE_C45B03:
 
 CODE_C45B0F:
 	cpx.b #$00                           ;C45B0F|E000    |      ;  
-	beq CODE_C45B18                      ;C45B11|F005    |C45B18;  
+	beq .lbl_C45B18                      ;C45B11|F005    |C45B18;  
 	sec                                  ;C45B13|38      |      ;  
 	ror a                                ;C45B14|6A      |      ;  
 	dex                                  ;C45B15|CA      |      ;  
 	bra CODE_C45B0F                      ;C45B16|80F7    |C45B0F;  
-
-CODE_C45B18:
+.lbl_C45B18
 	sta.b $04                   ;C45B18|8504    |000004;  
 	rep #$10                             ;C45B1A|C210    |      ;  
 	ldx.w $A57D                          ;C45B1C|AE7DA5  |7FA57D;  
@@ -7498,13 +7258,12 @@ CODE_C45B18:
 
 CODE_C45B54:
 	cpx.b #$00                           ;C45B54|E000    |      ;  
-	beq CODE_C45B5D                      ;C45B56|F005    |C45B5D;  
+	beq .lbl_C45B5D                      ;C45B56|F005    |C45B5D;  
 	sec                                  ;C45B58|38      |      ;  
 	ror a                                ;C45B59|6A      |      ;  
 	dex                                  ;C45B5A|CA      |      ;  
 	bra CODE_C45B54                      ;C45B5B|80F7    |C45B54;  
-
-CODE_C45B5D:
+.lbl_C45B5D
 	sta.b $04                   ;C45B5D|8504    |000004;  
 	rep #$10                             ;C45B5F|C210    |      ;  
 	ldx.w $A57D                          ;C45B61|AE7DA5  |7FA57D;  
@@ -7529,10 +7288,9 @@ CODE_C45B5D:
 	inc.b $03                            ;C45B96|E603    |000003;  
 	lda.b $03                            ;C45B98|A503    |000003;  
 	cmp.b #$10                           ;C45B9A|C910    |      ;  
-	beq CODE_C45BA1                      ;C45B9C|F003    |C45BA1;  
+	beq .lbl_C45BA1                      ;C45B9C|F003    |C45BA1;  
 	brl CODE_C459DD                      ;C45B9E|823CFE  |C459DD;  
-
-CODE_C45BA1:
+.lbl_C45BA1
 	phb                                  ;C45BA1|8B      |      ;  
 	jsl.l CODE_C45BA9                    ;C45BA2|22A95BC4|C45BA9;  
 	plb                                  ;C45BA6|AB      |      ;  
@@ -7574,10 +7332,9 @@ CODE_C45BCE:
 	lda.l $7FA57B                        ;C45BF2|AF7BA57F|7FA57B;  
 	inc a                                ;C45BF6|1A      |      ;  
 	cmp.b #$09                           ;C45BF7|C909    |      ;  
-	bcc CODE_C45BFD                      ;C45BF9|9002    |C45BFD;  
+	bcc .lbl_C45BFD                      ;C45BF9|9002    |C45BFD;  
 	lda.b #$03                           ;C45BFB|A903    |      ;  
-
-CODE_C45BFD:
+.lbl_C45BFD
 	sta.l $7FA57B                        ;C45BFD|8F7BA57F|7FA57B;  
 	sta.b $00                            ;C45C01|8500    |000000;  
 	phy                                  ;C45C03|5A      |      ;  
@@ -7600,12 +7357,11 @@ CODE_C45BFD:
 	pla                                  ;C45C2A|68      |      ;  
 	sta.b $02                   ;C45C2B|8502    |000002;  
 	lda.b $02                   ;C45C2D|A502    |000002;  
-	bne CODE_C45C34                      ;C45C2F|D003    |C45C34;  
+	bne .lbl_C45C34                      ;C45C2F|D003    |C45C34;  
 	plp                                  ;C45C31|28      |      ;  
 	clc                                  ;C45C32|18      |      ;  
 	rtl                                  ;C45C33|6B      |      ;  
-
-CODE_C45C34:
+.lbl_C45C34
 	plp                                  ;C45C34|28      |      ;  
 	sec                                  ;C45C35|38      |      ;  
 	rtl                                  ;C45C36|6B      |      ;  
@@ -7623,21 +7379,19 @@ CODE_C45C37:
 	sta.w $C1A1                          ;C45C46|8DA1C1  |7EC1A1;  
 	sta.w $C282                          ;C45C49|8D82C2  |7EC282;  
 	ldx.w #$0000                         ;C45C4C|A20000  |      ;  
-
-CODE_C45C4F:
+.lbl_C45C4F
 	lda.l $7FAE7A,x                      ;C45C4F|BF7AAE7F|7FAE7A;  
 	sta.w $C1A2,x                        ;C45C53|9DA2C1  |7EC1A2;  
 	inx                                  ;C45C56|E8      |      ;  
 	cpx.w #$00E0                         ;C45C57|E0E000  |      ;  
-	bne CODE_C45C4F                      ;C45C5A|D0F3    |C45C4F;  
-
-CODE_C45C5C:
+	bne .lbl_C45C4F                      ;C45C5A|D0F3    |C45C4F;  
+.lbl_C45C5C
 	sep #$20                             ;C45C5C|E220    |      ;  
 	lda.l $7FAE7A,x                      ;C45C5E|BF7AAE7F|7FAE7A;  
 	sta.w $C1A3,x                        ;C45C62|9DA3C1  |7EC1A3;  
 	inx                                  ;C45C65|E8      |      ;  
 	cpx.w #$01C0                         ;C45C66|E0C001  |      ;  
-	bne CODE_C45C5C                      ;C45C69|D0F1    |C45C5C;  
+	bne .lbl_C45C5C                      ;C45C69|D0F1    |C45C5C;  
 	plp                                  ;C45C6B|28      |      ;  
 	rtl                                  ;C45C6C|6B      |      ;  
 
@@ -7658,8 +7412,7 @@ CODE_C45C6D:
 	sta.l $7EC1A1                        ;C45C88|8FA1C17E|7EC1A1;  
 	sta.l $7EC282                        ;C45C8C|8F82C27E|7EC282;  
 	ldy.w #$0000                         ;C45C90|A00000  |      ;  
-
-CODE_C45C93:
+.lbl_C45C93
 	sep #$20                             ;C45C93|E220    |      ;  
 	dec.w $9CF2                          ;C45C95|CEF29C  |7F9CF2;  
 	dec.w $9CF2                          ;C45C98|CEF29C  |7F9CF2;  
@@ -7678,9 +7431,8 @@ CODE_C45C93:
 	iny                                  ;C45CB9|C8      |      ;  
 	iny                                  ;C45CBA|C8      |      ;  
 	cpy.w #$00E0                         ;C45CBB|C0E000  |      ;  
-	bne CODE_C45C93                      ;C45CBE|D0D3    |C45C93;  
-
-CODE_C45CC0:
+	bne .lbl_C45C93                      ;C45CBE|D0D3    |C45C93;  
+.lbl_C45CC0
 	sep #$20                             ;C45CC0|E220    |      ;  
 	dec.w $9CF2                          ;C45CC2|CEF29C  |7F9CF2;  
 	dec.w $9CF2                          ;C45CC5|CEF29C  |7F9CF2;  
@@ -7699,15 +7451,14 @@ CODE_C45CC0:
 	iny                                  ;C45CE6|C8      |      ;  
 	iny                                  ;C45CE7|C8      |      ;  
 	cpy.w #$01C0                         ;C45CE8|C0C001  |      ;  
-	bne CODE_C45CC0                      ;C45CEB|D0D3    |C45CC0;  
+	bne .lbl_C45CC0                      ;C45CEB|D0D3    |C45CC0;  
 	sep #$20                             ;C45CED|E220    |      ;  
 	lda.w $9CF3                          ;C45CEF|ADF39C  |7F9CF3;  
 	and.b #$01                           ;C45CF2|2901    |      ;  
-	beq CODE_C45CFC                      ;C45CF4|F006    |C45CFC;  
+	beq .lbl_C45CFC                      ;C45CF4|F006    |C45CFC;  
 	inc.w $9CF2                          ;C45CF6|EEF29C  |7F9CF2;  
 	inc.w $9CF2                          ;C45CF9|EEF29C  |7F9CF2;  
-
-CODE_C45CFC:
+.lbl_C45CFC
 	plp                                  ;C45CFC|28      |      ;  
 	rtl                                  ;C45CFD|6B      |      ;  
 
@@ -7742,8 +7493,7 @@ CODE_C45D5E:
 	sta.l $7EC395                        ;C45D79|8F95C37E|7EC395;  
 	sta.l $7EC476                        ;C45D7D|8F76C47E|7EC476;  
 	ldy.w #$0000                         ;C45D81|A00000  |      ;  
-
-CODE_C45D84:
+.lbl_C45D84
 	sep #$20                             ;C45D84|E220    |      ;  
 	dec.w $9D00                          ;C45D86|CE009D  |7F9D00;  
 	dec.w $9D00                          ;C45D89|CE009D  |7F9D00;  
@@ -7762,9 +7512,8 @@ CODE_C45D84:
 	iny                                  ;C45DAA|C8      |      ;  
 	iny                                  ;C45DAB|C8      |      ;  
 	cpy.w #$00E0                         ;C45DAC|C0E000  |      ;  
-	bne CODE_C45D84                      ;C45DAF|D0D3    |C45D84;  
-
-CODE_C45DB1:
+	bne .lbl_C45D84                      ;C45DAF|D0D3    |C45D84;  
+.lbl_C45DB1
 	sep #$20                             ;C45DB1|E220    |      ;  
 	dec.w $9D00                          ;C45DB3|CE009D  |7F9D00;  
 	dec.w $9D00                          ;C45DB6|CE009D  |7F9D00;  
@@ -7783,15 +7532,14 @@ CODE_C45DB1:
 	iny                                  ;C45DD7|C8      |      ;  
 	iny                                  ;C45DD8|C8      |      ;  
 	cpy.w #$01C0                         ;C45DD9|C0C001  |      ;  
-	bne CODE_C45DB1                      ;C45DDC|D0D3    |C45DB1;  
+	bne .lbl_C45DB1                      ;C45DDC|D0D3    |C45DB1;  
 	sep #$20                             ;C45DDE|E220    |      ;  
 	lda.w $9D01                          ;C45DE0|AD019D  |7F9D01;  
 	and.b #$01                           ;C45DE3|2901    |      ;  
-	beq CODE_C45DED                      ;C45DE5|F006    |C45DED;  
+	beq .lbl_C45DED                      ;C45DE5|F006    |C45DED;  
 	inc.w $9D00                          ;C45DE7|EE009D  |7F9D00;  
 	inc.w $9D00                          ;C45DEA|EE009D  |7F9D00;  
-
-CODE_C45DED:
+.lbl_C45DED
 	plp                                  ;C45DED|28      |      ;  
 	rtl                                  ;C45DEE|6B      |      ;  
 
@@ -7830,21 +7578,18 @@ CODE_C45EAD:
 	plb                                  ;C45EB5|AB      |      ;  
 	ldx.w #$0000                         ;C45EB6|A20000  |      ;  
 	lda.b #$00                           ;C45EB9|A900    |      ;  
-
-CODE_C45EBB:
+.lbl_C45EBB
 	sta.w $C683,x                        ;C45EBB|9D83C6  |7EC683;  
 	inx                                  ;C45EBE|E8      |      ;  
 	cpx.w #$0120                         ;C45EBF|E02001  |      ;  
-	bne CODE_C45EBB                      ;C45EC2|D0F7    |C45EBB;  
+	bne .lbl_C45EBB                      ;C45EC2|D0F7    |C45EBB;  
 	lda.b $06                            ;C45EC4|A506    |000006;  
 	cmp.b #$FF                           ;C45EC6|C9FF    |      ;  
-	bne CODE_C45ECD                      ;C45EC8|D003    |C45ECD;  
+	bne .lbl_C45ECD                      ;C45EC8|D003    |C45ECD;  
 	.db $82,$83,$00                       ;C45ECA|        |C45F50;  
-
-CODE_C45ECD:
+.lbl_C45ECD
 	ldx.w #$0000                         ;C45ECD|A20000  |      ;  
-
-CODE_C45ED0:
+.lbl_C45ED0
 	lda.l $D94946,x                 ;C45ED0|BF4649D9|D94946;  
 	sta.w $C683,x                        ;C45ED4|9D83C6  |7EC683;  
 	lda.l $D94B46,x                 ;C45ED7|BF464BD9|D94B46;  
@@ -7853,12 +7598,12 @@ CODE_C45ED0:
 	sta.w $C743,x                        ;C45EE2|9D43C7  |7EC743;  
 	inx                                  ;C45EE5|E8      |      ;  
 	cpx.w #$0060                         ;C45EE6|E06000  |      ;  
-	bne CODE_C45ED0                      ;C45EE9|D0E5    |C45ED0;  
+	bne .lbl_C45ED0                      ;C45EE9|D0E5    |C45ED0;  
 	sep #$10                             ;C45EEB|E210    |      ;  
 	ldx.b $06                            ;C45EED|A606    |000006;  
 	lda.l DATA8_C46C3C,x                 ;C45EEF|BF3C6CC4|C46C3C;  
 	cmp.b #$1A                           ;C45EF3|C91A    |      ;  
-	beq CODE_C45F50                      ;C45EF5|F059    |C45F50;  
+	beq .lbl_C45F50                      ;C45EF5|F059    |C45F50;  
 	asl a                                ;C45EF7|0A      |      ;  
 	tax                                  ;C45EF8|AA      |      ;  
 	rep #$20                             ;C45EF9|C220    |      ;  
@@ -7872,8 +7617,7 @@ CODE_C45ED0:
 	sta.b $04                   ;C45F0B|8504    |000004;  
 	ldx.w #$0000                         ;C45F0D|A20000  |      ;  
 	ldy.w #$0000                         ;C45F10|A00000  |      ;  
-
-CODE_C45F13:
+.lbl_C45F13
 	sep #$20                             ;C45F13|E220    |      ;  
 	lda.b [$00],y                        ;C45F15|B700    |000000;  
 	sta.b $03                            ;C45F17|8503    |000003;  
@@ -7895,16 +7639,15 @@ CODE_C45F13:
 	rep #$20                             ;C45F3C|C220    |      ;  
 	txa                                  ;C45F3E|8A      |      ;  
 	and.w #$000F                         ;C45F3F|290F00  |      ;  
-	bne CODE_C45F13                      ;C45F42|D0CF    |C45F13;  
+	bne .lbl_C45F13                      ;C45F42|D0CF    |C45F13;  
 	txa                                  ;C45F44|8A      |      ;  
 	clc                                  ;C45F45|18      |      ;  
 	adc.w #$0010                         ;C45F46|691000  |      ;  
 	tax                                  ;C45F49|AA      |      ;  
 	sep #$20                             ;C45F4A|E220    |      ;  
 	dec.b $04                   ;C45F4C|C604    |000004;  
-	bne CODE_C45F13                      ;C45F4E|D0C3    |C45F13;  
-
-CODE_C45F50:
+	bne .lbl_C45F13                      ;C45F4E|D0C3    |C45F13;  
+.lbl_C45F50
 	phb                                  ;C45F50|8B      |      ;  
 	jsl.l CODE_C45F58                    ;C45F51|22585FC4|C45F58;  
 	plb                                  ;C45F55|AB      |      ;  
@@ -7949,51 +7692,46 @@ CODE_C45FA5:
 	pha                                  ;C45FAC|48      |      ;  
 	plb                                  ;C45FAD|AB      |      ;  
 	lda.b $06                            ;C45FAE|A506    |000006;  
-	bne CODE_C45FCD                      ;C45FB0|D01B    |C45FCD;  
+	bne .lbl_C45FCD                      ;C45FB0|D01B    |C45FCD;  
 	.db $A9,$17,$85,$00,$22,$59,$8F,$80   ;C45FB2
 	.db $A9,$C4,$48,$AB,$A2,$C9,$60,$86   ;C45FBA
 	.db $00,$22,$E9,$87,$80,$22,$F7,$85   ;C45FC2
 	.db $80,$80,$46                       ;C45FCA|        |C45F4C;  
-
-CODE_C45FCD:
+.lbl_C45FCD
 	sep #$10                             ;C45FCD|E210    |      ;  
 	lda.b #$F0                           ;C45FCF|A9F0    |      ;  
 	sta.w $C589                          ;C45FD1|8D89C5  |7EC589;  
 	ldx.b #$00                           ;C45FD4|A200    |      ;  
 	lda.b #$10                           ;C45FD6|A910    |      ;  
 	sta.b $00                            ;C45FD8|8500    |000000;  
-
-CODE_C45FDA:
+.lbl_C45FDA
 	cpx.b $07                            ;C45FDA|E407    |000007;  
-	bne CODE_C45FE2                      ;C45FDC|D004    |C45FE2;  
+	bne .lbl_C45FE2                      ;C45FDC|D004    |C45FE2;  
 	lda.b #$17                           ;C45FDE|A917    |      ;  
 	sta.b $00                            ;C45FE0|8500    |000000;  
-
-CODE_C45FE2:
+.lbl_C45FE2
 	lda.b $00                            ;C45FE2|A500    |000000;  
 	sta.l $7EC58A,x                      ;C45FE4|9F8AC57E|7EC58A;  
 	inx                                  ;C45FE8|E8      |      ;  
 	cpx.b #$70                           ;C45FE9|E070    |      ;  
-	bne CODE_C45FDA                      ;C45FEB|D0ED    |C45FDA;  
+	bne .lbl_C45FDA                      ;C45FEB|D0ED    |C45FDA;  
 	lda.b #$F0                           ;C45FED|A9F0    |      ;  
 	sta.l $7EC58A,x                      ;C45FEF|9F8AC57E|7EC58A;  
 	lda.b #$E0                           ;C45FF3|A9E0    |      ;  
 	sec                                  ;C45FF5|38      |      ;  
 	sbc.b $06                            ;C45FF6|E506    |000006;  
 	sta.b $06                            ;C45FF8|8506    |000006;  
-
-CODE_C45FFA:
+.lbl_C45FFA
 	cpx.b $06                            ;C45FFA|E406    |000006;  
-	bne CODE_C46002                      ;C45FFC|D004    |C46002;  
+	bne .lbl_C46002                      ;C45FFC|D004    |C46002;  
 	lda.b #$10                           ;C45FFE|A910    |      ;  
 	sta.b $00                            ;C46000|8500    |000000;  
-
-CODE_C46002:
+.lbl_C46002
 	lda.b $00                            ;C46002|A500    |000000;  
 	sta.l $7EC58B,x                      ;C46004|9F8BC57E|7EC58B;  
 	inx                                  ;C46008|E8      |      ;  
 	cpx.b #$E0                           ;C46009|E0E0    |      ;  
-	bne CODE_C45FFA                      ;C4600B|D0ED    |C45FFA;  
+	bne .lbl_C45FFA                      ;C4600B|D0ED    |C45FFA;  
 	lda.b #$00                           ;C4600D|A900    |      ;  
 	sta.l $7EC58B,x                      ;C4600F|9F8BC57E|7EC58B;  
 	plp                                  ;C46013|28      |      ;  
@@ -8012,38 +7750,34 @@ CODE_C46015:
 	ldx.b #$00                           ;C46025|A200    |      ;  
 	lda.b $05                            ;C46027|A505    |000005;  
 	sta.b $00                            ;C46029|8500    |000000;  
-
-CODE_C4602B:
+.lbl_C4602B
 	cpx.b $07                            ;C4602B|E407    |000007;  
-	bne CODE_C46033                      ;C4602D|D004    |C46033;  
+	bne .lbl_C46033                      ;C4602D|D004    |C46033;  
 	lda.b $04                   ;C4602F|A504    |000004;  
 	sta.b $00                            ;C46031|8500    |000000;  
-
-CODE_C46033:
+.lbl_C46033
 	lda.b $00                            ;C46033|A500    |000000;  
 	sta.l $7EC58A,x                      ;C46035|9F8AC57E|7EC58A;  
 	inx                                  ;C46039|E8      |      ;  
 	cpx.b #$70                           ;C4603A|E070    |      ;  
-	bne CODE_C4602B                      ;C4603C|D0ED    |C4602B;  
+	bne .lbl_C4602B                      ;C4603C|D0ED    |C4602B;  
 	lda.b #$F0                           ;C4603E|A9F0    |      ;  
 	sta.l $7EC58A,x                      ;C46040|9F8AC57E|7EC58A;  
 	lda.b #$E0                           ;C46044|A9E0    |      ;  
 	sec                                  ;C46046|38      |      ;  
 	sbc.b $06                            ;C46047|E506    |000006;  
 	sta.b $06                            ;C46049|8506    |000006;  
-
-CODE_C4604B:
+.lbl_C4604B
 	cpx.b $06                            ;C4604B|E406    |000006;  
-	bne CODE_C46053                      ;C4604D|D004    |C46053;  
+	bne .lbl_C46053                      ;C4604D|D004    |C46053;  
 	lda.b $05                            ;C4604F|A505    |000005;  
 	sta.b $00                            ;C46051|8500    |000000;  
-
-CODE_C46053:
+.lbl_C46053
 	lda.b $00                            ;C46053|A500    |000000;  
 	sta.l $7EC58B,x                      ;C46055|9F8BC57E|7EC58B;  
 	inx                                  ;C46059|E8      |      ;  
 	cpx.b #$E0                           ;C4605A|E0E0    |      ;  
-	bne CODE_C4604B                      ;C4605C|D0ED    |C4604B;  
+	bne .lbl_C4604B                      ;C4605C|D0ED    |C4604B;  
 	lda.b #$00                           ;C4605E|A900    |      ;  
 	sta.l $7EC58B,x                      ;C46060|9F8BC57E|7EC58B;  
 	plp                                  ;C46064|28      |      ;  
@@ -8223,14 +7957,13 @@ CODE_C46178:
 	inx                                  ;C4622A|E8      |      ;  
 	lda.w #$0000                         ;C4622B|A90000  |      ;  
 	ldy.w #$0080                         ;C4622E|A08000  |      ;  
-
-CODE_C46231:
+.lbl_C46231
 	sta.w $9D10,x                        ;C46231|9D109D  |7F9D10;  
 	inc a                                ;C46234|1A      |      ;  
 	inx                                  ;C46235|E8      |      ;  
 	inx                                  ;C46236|E8      |      ;  
 	dey                                  ;C46237|88      |      ;  
-	bne CODE_C46231                      ;C46238|D0F7    |C46231;  
+	bne .lbl_C46231                      ;C46238|D0F7    |C46231;  
 	lda.w $9D0E                          ;C4623A|AD0E9D  |7F9D0E;  
 	clc                                  ;C4623D|18      |      ;  
 	adc.w #$0105                         ;C4623E|690501  |      ;  
@@ -8283,20 +8016,18 @@ CODE_C46269:
 	rep #$10                             ;C4626C|C210    |      ;  
 	ldx.w #$0000                         ;C4626E|A20000  |      ;  
 	lda.b #$00                           ;C46271|A900    |      ;  
-
-CODE_C46273:
+.lbl_C46273
 	sta.l $7FA59C,x                      ;C46273|9F9CA57F|7FA59C;  
 	inx                                  ;C46277|E8      |      ;  
 	cpx.w #$0400                         ;C46278|E00004  |      ;  
-	bne CODE_C46273                      ;C4627B|D0F6    |C46273;  
+	bne .lbl_C46273                      ;C4627B|D0F6    |C46273;  
 	ldx.w #$0000                         ;C4627D|A20000  |      ;  
 	lda.b #$00                           ;C46280|A900    |      ;  
-
-CODE_C46282:
+.lbl_C46282
 	sta.l $7FA99C,x                      ;C46282|9F9CA97F|7FA99C;  
 	inx                                  ;C46286|E8      |      ;  
 	cpx.w #$0020                         ;C46287|E02000  |      ;  
-	bne CODE_C46282                      ;C4628A|D0F6    |C46282;  
+	bne .lbl_C46282                      ;C4628A|D0F6    |C46282;  
 	plp                                  ;C4628C|28      |      ;  
 	rtl                                  ;C4628D|6B      |      ;  
 
@@ -8304,10 +8035,9 @@ CODE_C4628E:
 	php                                  ;C4628E|08      |      ;  
 	sep #$30                             ;C4628F|E230    |      ;  
 	lda.l $7FA57F                        ;C46291|AF7FA57F|7FA57F;  
-	beq CODE_C4629A                      ;C46295|F003    |C4629A;  
+	beq .lbl_C4629A                      ;C46295|F003    |C4629A;  
 	brl CODE_C4630C                      ;C46297|827200  |C4630C;  
-
-CODE_C4629A:
+.lbl_C4629A
 	lda.b #$01                           ;C4629A|A901    |      ;  
 	sta.l $7FA57F                        ;C4629C|8F7FA57F|7FA57F;  
 	lda.b #$00                           ;C462A0|A900    |      ;  
@@ -8370,7 +8100,7 @@ CODE_C4630C:
 	sta.l $7FA585                        ;C46327|8F85A57F|7FA585;  
 	lda.b $02                   ;C4632B|A502    |000002;  
 	cmp.w #$FFFF                         ;C4632D|C9FFFF  |      ;  
-	bne CODE_C46344                      ;C46330|D012    |C46344;  
+	bne .lbl_C46344                      ;C46330|D012    |C46344;  
 	sep #$20                             ;C46332|E220    |      ;  
 	lda.b #$00                           ;C46334|A900    |      ;  
 	sta.l $7FA57F                        ;C46336|8F7FA57F|7FA57F;  
@@ -8378,20 +8108,17 @@ CODE_C4630C:
 	sta.l $7FA580                        ;C4633C|8F80A57F|7FA580;  
 	rep #$20                             ;C46340|C220    |      ;  
 	bra CODE_C46359                      ;C46342|8015    |C46359;  
-
-CODE_C46344:
+.lbl_C46344
 	cmp.w #$FFFE                         ;C46344|C9FEFF  |      ;  
-	bne CODE_C4634F                      ;C46347|D006    |C4634F;  
+	bne .lbl_C4634F                      ;C46347|D006    |C4634F;  
 	sep #$20                             ;C46349|E220    |      ;  
 	rep #$20                             ;C4634B|C220    |      ;  
 	bra CODE_C46359                      ;C4634D|800A    |C46359;  
-
-CODE_C4634F:
+.lbl_C4634F
 	cmp.w #$FFFD                         ;C4634F|C9FDFF  |      ;  
-	bne CODE_C46356                      ;C46352|D002    |C46356;  
+	bne .lbl_C46356                      ;C46352|D002    |C46356;  
 	.db $80,$03                           ;C46354|        |C46359;  
-
-CODE_C46356:
+.lbl_C46356
 	brl CODE_C463B7                      ;C46356|825E00  |C463B7;  
 
 CODE_C46359:
@@ -8408,11 +8135,11 @@ CODE_C46359:
 	rep #$20                             ;C4636F|C220    |      ;  
 	lda.b $02                   ;C46371|A502    |000002;  
 	cmp.w #$FFFF                         ;C46373|C9FFFF  |      ;  
-	beq CODE_C463B4                      ;C46376|F03C    |C463B4;  
+	beq .lbl_C463B4                      ;C46376|F03C    |C463B4;  
 	cmp.w #$FFFD                         ;C46378|C9FDFF  |      ;  
-	beq CODE_C463B4                      ;C4637B|F037    |C463B4;  
+	beq .lbl_C463B4                      ;C4637B|F037    |C463B4;  
 	cmp.w #$FFFE                         ;C4637D|C9FEFF  |      ;  
-	bne CODE_C463B4                      ;C46380|D032    |C463B4;  
+	bne .lbl_C463B4                      ;C46380|D032    |C463B4;  
 	lda.l $7FA11D                        ;C46382|AF1DA17F|7FA11D;  
 	clc                                  ;C46386|18      |      ;  
 	adc.w #$0200                         ;C46387|690002  |      ;  
@@ -8442,9 +8169,8 @@ CODE_C46359:
 	pla                                  ;C463AE|68      |      ;  
 	sta.b $00                            ;C463AF|8500    |000000;  
 	pla                                  ;C463B1|68      |      ;  
-	bra CODE_C463B4                      ;C463B2|8000    |C463B4;  
-
-CODE_C463B4:
+	bra .lbl_C463B4                      ;C463B2|8000    |C463B4;  
+.lbl_C463B4
 	brl CODE_C46437                      ;C463B4|828000  |C46437;  
 
 CODE_C463B7:
@@ -8532,28 +8258,25 @@ CODE_C4643F:
 	pha                                  ;C4644C|48      |      ;  
 	plb                                  ;C4644D|AB      |      ;  
 	lda.l $7FA59B                        ;C4644E|AF9BA57F|7FA59B;  
-	beq CODE_C46462                      ;C46452|F00E    |C46462;  
+	beq .lbl_C46462                      ;C46452|F00E    |C46462;  
 	.db $C2,$20,$AF,$94,$A5,$7F,$38,$E9   ;C46454
 	.db $10,$00,$8F,$94,$A5,$7F           ;C4645C|        |C4645E;  
-
-CODE_C46462:
+.lbl_C46462
 	sep #$20                             ;C46462|E220    |      ;  
 	lda.b #$00                           ;C46464|A900    |      ;  
 	sta.l $7FA59B                        ;C46466|8F9BA57F|7FA59B;  
 	lda.b $04                   ;C4646A|A504    |000004;  
-	bne CODE_C46474                      ;C4646C|D006    |C46474;  
+	bne .lbl_C46474                      ;C4646C|D006    |C46474;  
 	.db $A9,$01,$8F,$9B,$A5,$7F           ;C4646E
-
-CODE_C46474:
+.lbl_C46474
 	rep #$20                             ;C46474|C220    |      ;  
 	lda.l $7FA58C                        ;C46476|AF8CA57F|7FA58C;  
 	sta.b $00                            ;C4647A|8500    |000000;  
 	sep #$20                             ;C4647C|E220    |      ;  
 	lda.b $04                   ;C4647E|A504    |000004;  
-	bne CODE_C46484                      ;C46480|D002    |C46484;  
+	bne .lbl_C46484                      ;C46480|D002    |C46484;  
 	.db $A9,$08                           ;C46482
-
-CODE_C46484:
+.lbl_C46484
 	sta.l $7FA592                        ;C46484|8F92A57F|7FA592;  
 	lda.b $05                            ;C46488|A505    |000005;  
 	sta.l $7FA593                        ;C4648A|8F93A57F|7FA593;  
@@ -8561,20 +8284,18 @@ CODE_C46484:
 	lda.l $7FA588                        ;C46490|AF88A57F|7FA588;  
 	sta.b $06                            ;C46494|8506    |000006;  
 	lda.l $7FA596                        ;C46496|AF96A57F|7FA596;  
-	bne CODE_C464A0                      ;C4649A|D004    |C464A0;  
+	bne .lbl_C464A0                      ;C4649A|D004    |C464A0;  
 	jml.l CODE_C46581                    ;C4649C|5C8165C4|C46581;  
-
-CODE_C464A0:
+.lbl_C464A0
 	lda.b #$08                           ;C464A0|A908    |      ;  
 	sec                                  ;C464A2|38      |      ;  
 	sbc.l $7FA596                        ;C464A3|EF96A57F|7FA596;  
 	sta.l $7FA598                        ;C464A7|8F98A57F|7FA598;  
 	cmp.l $7FA592                        ;C464AB|CF92A57F|7FA592;  
-	bcc CODE_C464B7                      ;C464AF|9006    |C464B7;  
+	bcc .lbl_C464B7                      ;C464AF|9006    |C464B7;  
 	lda.b #$01                           ;C464B1|A901    |      ;  
 	sta.l $7FA59A                        ;C464B3|8F9AA57F|7FA59A;  
-
-CODE_C464B7:
+.lbl_C464B7
 	lda.l $7FA593                        ;C464B7|AF93A57F|7FA593;  
 	asl a                                ;C464BB|0A      |      ;  
 	dec a                                ;C464BC|3A      |      ;  
@@ -8590,12 +8311,11 @@ CODE_C464BF:
 	stz.b $03                            ;C464CB|6403    |000003;  
 	sep #$20                             ;C464CD|E220    |      ;  
 	lda.b $07                            ;C464CF|A507    |000007;  
-	bne CODE_C464DA                      ;C464D1|D007    |C464DA;  
+	bne .lbl_C464DA                      ;C464D1|D007    |C464DA;  
 	rep #$20                             ;C464D3|C220    |      ;  
 	lda.w #$0200                         ;C464D5|A90002  |      ;  
 	bra CODE_C464DF                      ;C464D8|8005    |C464DF;  
-
-CODE_C464DA:
+.lbl_C464DA
 	rep #$20                             ;C464DA|C220    |      ;  
 	lda.w #$0000                         ;C464DC|A90000  |      ;  
 
@@ -8605,16 +8325,14 @@ CODE_C464DF:
 	adc.b $04                   ;C464E4|6504    |000004;  
 	sta.b $04                   ;C464E6|8504    |000004;  
 	sep #$20                             ;C464E8|E220    |      ;  
-
-CODE_C464EA:
+.lbl_C464EA
 	lda.b #$00                           ;C464EA|A900    |      ;  
 	sta.l $7FA599                        ;C464EC|8F99A57F|7FA599;  
 	lda.l $7FA598                        ;C464F0|AF98A57F|7FA598;  
 	sta.b $02                   ;C464F4|8502    |000002;  
 	phy                                  ;C464F6|5A      |      ;  
 	txy                                  ;C464F7|9B      |      ;  
-
-CODE_C464F8:
+.lbl_C464F8
 	rep #$20                             ;C464F8|C220    |      ;  
 	lda.b ($00),y                        ;C464FA|B100    |000000;  
 	asl a                                ;C464FC|0A      |      ;  
@@ -8624,41 +8342,37 @@ CODE_C464F8:
 	rol a                                ;C46505|2A      |      ;  
 	sta.l $7FA599                        ;C46506|8F99A57F|7FA599;  
 	dec.b $02                   ;C4650A|C602    |000002;  
-	bne CODE_C464F8                      ;C4650C|D0EA    |C464F8;  
+	bne .lbl_C464F8                      ;C4650C|D0EA    |C464F8;  
 	ply                                  ;C4650E|7A      |      ;  
 	lda.l $7FA591                        ;C4650F|AF91A57F|7FA591;  
 	and.b #$02                           ;C46513|2902    |      ;  
-	beq CODE_C4651F                      ;C46515|F008    |C4651F;  
+	beq .lbl_C4651F                      ;C46515|F008    |C4651F;  
 	lda.b [$04],y                        ;C46517|B704    |000004;  
 	ora.l $7FA599                        ;C46519|0F99A57F|7FA599;  
 	sta.b [$04],y                        ;C4651D|9704    |000004;  
-
-CODE_C4651F:
+.lbl_C4651F
 	dey                                  ;C4651F|88      |      ;  
 	lda.l $7FA591                        ;C46520|AF91A57F|7FA591;  
 	and.b #$01                           ;C46524|2901    |      ;  
-	beq CODE_C46530                      ;C46526|F008    |C46530;  
+	beq .lbl_C46530                      ;C46526|F008    |C46530;  
 	.db $B7,$04,$0F,$99,$A5,$7F,$97,$04   ;C46528|        |000004;  
-
-CODE_C46530:
+.lbl_C46530
 	dex                                  ;C46530|CA      |      ;  
 	dex                                  ;C46531|CA      |      ;  
-	bmi CODE_C46543                      ;C46532|300F    |C46543;  
+	bmi .lbl_C46543                      ;C46532|300F    |C46543;  
 	dey                                  ;C46534|88      |      ;  
 	inc.b $03                            ;C46535|E603    |000003;  
 	lda.b $03                            ;C46537|A503    |000003;  
 	cmp.b #$08                           ;C46539|C908    |      ;  
-	bne CODE_C464EA                      ;C4653B|D0AD    |C464EA;  
+	bne .lbl_C464EA                      ;C4653B|D0AD    |C464EA;  
 	inc.b $07                            ;C4653D|E607    |000007;  
 	jml.l CODE_C464BF                    ;C4653F|5CBF64C4|C464BF;  
-
-CODE_C46543:
+.lbl_C46543
 	lda.l $7FA59A                        ;C46543|AF9AA57F|7FA59A;  
-	beq CODE_C4654F                      ;C46547|F006    |C4654F;  
+	beq .lbl_C4654F                      ;C46547|F006    |C4654F;  
 	lda.l $7FA592                        ;C46549|AF92A57F|7FA592;  
 	bra CODE_C46553                      ;C4654D|8004    |C46553;  
-
-CODE_C4654F:
+.lbl_C4654F
 	lda.l $7FA598                        ;C4654F|AF98A57F|7FA598;  
 
 CODE_C46553:
@@ -8666,30 +8380,27 @@ CODE_C46553:
 	adc.l $7FA596                        ;C46554|6F96A57F|7FA596;  
 	and.b #$07                           ;C46558|2907    |      ;  
 	sta.l $7FA596                        ;C4655A|8F96A57F|7FA596;  
-	bne CODE_C4656E                      ;C4655E|D00E    |C4656E;  
+	bne .lbl_C4656E                      ;C4655E|D00E    |C4656E;  
 	rep #$20                             ;C46560|C220    |      ;  
 	lda.w #$0010                         ;C46562|A91000  |      ;  
 	clc                                  ;C46565|18      |      ;  
 	adc.l $7FA594                        ;C46566|6F94A57F|7FA594;  
 	sta.l $7FA594                        ;C4656A|8F94A57F|7FA594;  
-
-CODE_C4656E:
+.lbl_C4656E
 	sep #$20                             ;C4656E|E220    |      ;  
 	lda.l $7FA592                        ;C46570|AF92A57F|7FA592;  
 	sec                                  ;C46574|38      |      ;  
 	sbc.l $7FA598                        ;C46575|EF98A57F|7FA598;  
-	bpl CODE_C4657D                      ;C46579|1002    |C4657D;  
+	bpl .lbl_C4657D                      ;C46579|1002    |C4657D;  
 	lda.b #$00                           ;C4657B|A900    |      ;  
-
-CODE_C4657D:
+.lbl_C4657D
 	sta.l $7FA592                        ;C4657D|8F92A57F|7FA592;  
 
 CODE_C46581:
 	lda.l $7FA592                        ;C46581|AF92A57F|7FA592;  
-	bne CODE_C4658B                      ;C46585|D004    |C4658B;  
-	jml.l CODE_C46627                    ;C46587|5C2766C4|C46627;  
-
-CODE_C4658B:
+	bne .lbl_C4658B                      ;C46585|D004    |C4658B;  
+	jml.l .lbl_C46627                    ;C46587|5C2766C4|C46627;  
+.lbl_C4658B
 	stz.b $07                            ;C4658B|6407    |000007;  
 
 CODE_C4658D:
@@ -8698,12 +8409,11 @@ CODE_C4658D:
 	dec a                                ;C46592|3A      |      ;  
 	tax                                  ;C46593|AA      |      ;  
 	lda.b $07                            ;C46594|A507    |000007;  
-	beq CODE_C4659D                      ;C46596|F005    |C4659D;  
+	beq .lbl_C4659D                      ;C46596|F005    |C4659D;  
 	cmp.b #$01                           ;C46598|C901    |      ;  
-	beq CODE_C4659D                      ;C4659A|F001    |C4659D;  
+	beq .lbl_C4659D                      ;C4659A|F001    |C4659D;  
 	dex                                  ;C4659C|CA      |      ;  
-
-CODE_C4659D:
+.lbl_C4659D
 	rep #$20                             ;C4659D|C220    |      ;  
 	ldy.b #$0F                           ;C4659F|A00F    |      ;  
 	lda.l $7FA589                        ;C465A1|AF89A57F|7FA589;  
@@ -8711,26 +8421,23 @@ CODE_C4659D:
 	sep #$20                             ;C465A7|E220    |      ;  
 	stz.b $03                            ;C465A9|6403    |000003;  
 	lda.b $07                            ;C465AB|A507    |000007;  
-	beq CODE_C465BE                      ;C465AD|F00F    |C465BE;  
+	beq .lbl_C465BE                      ;C465AD|F00F    |C465BE;  
 	cmp.b #$01                           ;C465AF|C901    |      ;  
-	beq CODE_C465C5                      ;C465B1|F012    |C465C5;  
+	beq .lbl_C465C5                      ;C465B1|F012    |C465C5;  
 	cmp.b #$02                           ;C465B3|C902    |      ;  
-	beq CODE_C465CC                      ;C465B5|F015    |C465CC;  
+	beq .lbl_C465CC                      ;C465B5|F015    |C465CC;  
 	rep #$20                             ;C465B7|C220    |      ;  
 	lda.w #$0010                         ;C465B9|A91000  |      ;  
 	bra CODE_C465D1                      ;C465BC|8013    |C465D1;  
-
-CODE_C465BE:
+.lbl_C465BE
 	rep #$20                             ;C465BE|C220    |      ;  
 	lda.w #$0200                         ;C465C0|A90002  |      ;  
 	bra CODE_C465D1                      ;C465C3|800C    |C465D1;  
-
-CODE_C465C5:
+.lbl_C465C5
 	rep #$20                             ;C465C5|C220    |      ;  
 	lda.w #$0000                         ;C465C7|A90000  |      ;  
 	bra CODE_C465D1                      ;C465CA|8005    |C465D1;  
-
-CODE_C465CC:
+.lbl_C465CC
 	rep #$20                             ;C465CC|C220    |      ;  
 	lda.w #$0210                         ;C465CE|A91002  |      ;  
 
@@ -8740,8 +8447,7 @@ CODE_C465D1:
 	adc.b $04                   ;C465D6|6504    |000004;  
 	sta.b $04                   ;C465D8|8504    |000004;  
 	sep #$20                             ;C465DA|E220    |      ;  
-
-CODE_C465DC:
+.lbl_C465DC
 	phy                                  ;C465DC|5A      |      ;  
 	txy                                  ;C465DD|9B      |      ;  
 	lda.b ($00),y                        ;C465DE|B100    |000000;  
@@ -8749,42 +8455,38 @@ CODE_C465DC:
 	ply                                  ;C465E2|7A      |      ;  
 	lda.l $7FA591                        ;C465E3|AF91A57F|7FA591;  
 	and.b #$02                           ;C465E7|2902    |      ;  
-	beq CODE_C465F1                      ;C465E9|F006    |C465F1;  
+	beq .lbl_C465F1                      ;C465E9|F006    |C465F1;  
 	lda.b [$04],y                        ;C465EB|B704    |000004;  
 	ora.b $02                   ;C465ED|0502    |000002;  
 	sta.b [$04],y                        ;C465EF|9704    |000004;  
-
-CODE_C465F1:
+.lbl_C465F1
 	dey                                  ;C465F1|88      |      ;  
 	lda.l $7FA591                        ;C465F2|AF91A57F|7FA591;  
 	and.b #$01                           ;C465F6|2901    |      ;  
-	beq CODE_C46600                      ;C465F8|F006    |C46600;  
+	beq .lbl_C46600                      ;C465F8|F006    |C46600;  
 	.db $B7,$04,$05,$02,$97,$04           ;C465FA|        |000004;  
-
-CODE_C46600:
+.lbl_C46600
 	dex                                  ;C46600|CA      |      ;  
 	dex                                  ;C46601|CA      |      ;  
-	bmi CODE_C46611                      ;C46602|300D    |C46611;  
+	bmi .lbl_C46611                      ;C46602|300D    |C46611;  
 	dey                                  ;C46604|88      |      ;  
 	inc.b $03                            ;C46605|E603    |000003;  
 	lda.b $03                            ;C46607|A503    |000003;  
 	cmp.b #$08                           ;C46609|C908    |      ;  
-	bne CODE_C465DC                      ;C4660B|D0CF    |C465DC;  
+	bne .lbl_C465DC                      ;C4660B|D0CF    |C465DC;  
 	inc.b $07                            ;C4660D|E607    |000007;  
-	bra CODE_C4659D                      ;C4660F|808C    |C4659D;  
-
-CODE_C46611:
+	bra .lbl_C4659D                      ;C4660F|808C    |C4659D;  
+.lbl_C46611
 	lda.l $7FA592                        ;C46611|AF92A57F|7FA592;  
 	cmp.b #$09                           ;C46615|C909    |      ;  
-	bcc CODE_C46627                      ;C46617|900E    |C46627;  
+	bcc .lbl_C46627                      ;C46617|900E    |C46627;  
 	lda.b $07                            ;C46619|A507    |000007;  
 	cmp.b #$02                           ;C4661B|C902    |      ;  
-	bcs CODE_C46627                      ;C4661D|B008    |C46627;  
+	bcs .lbl_C46627                      ;C4661D|B008    |C46627;  
 	lda.b #$02                           ;C4661F|A902    |      ;  
 	sta.b $07                            ;C46621|8507    |000007;  
 	jml.l CODE_C4658D                    ;C46623|5C8D65C4|C4658D;  
-
-CODE_C46627:
+.lbl_C46627
 	lda.l $7FA592                        ;C46627|AF92A57F|7FA592;  
 	rep #$20                             ;C4662B|C220    |      ;  
 	and.w #$00F8                         ;C4662D|29F800  |      ;  
@@ -8794,12 +8496,11 @@ CODE_C46627:
 	sta.l $7FA594                        ;C46636|8F94A57F|7FA594;  
 	sep #$20                             ;C4663A|E220    |      ;  
 	lda.l $7FA59A                        ;C4663C|AF9AA57F|7FA59A;  
-	bne CODE_C4664C                      ;C46640|D00A    |C4664C;  
+	bne .lbl_C4664C                      ;C46640|D00A    |C4664C;  
 	lda.l $7FA592                        ;C46642|AF92A57F|7FA592;  
 	and.b #$07                           ;C46646|2907    |      ;  
 	sta.l $7FA596                        ;C46648|8F96A57F|7FA596;  
-
-CODE_C4664C:
+.lbl_C4664C
 	plp                                  ;C4664C|28      |      ;  
 	rtl                                  ;C4664D|6B      |      ;  
 	.db $00,$00,$00,$00,$00,$00,$00,$00   ;C4664E
@@ -8875,17 +8576,15 @@ CODE_C46730:
 	sep #$20                             ;C46731|E220    |      ;  
 	rep #$10                             ;C46733|C210    |      ;  
 	ldx.w #$0000                         ;C46735|A20000  |      ;  
-
-CODE_C46738:
+.lbl_C46738
 	lda.b $00                            ;C46738|A500    |000000;  
-	bne CODE_C46748                      ;C4673A|D00C    |C46748;  
+	bne .lbl_C46748                      ;C4673A|D00C    |C46748;  
 	cpx.w #$0140                         ;C4673C|E04001  |      ;  
-	bcc CODE_C46748                      ;C4673F|9007    |C46748;  
+	bcc .lbl_C46748                      ;C4673F|9007    |C46748;  
 	cpx.w #$0360                         ;C46741|E06003  |      ;  
-	bcs CODE_C46748                      ;C46744|B002    |C46748;  
+	bcs .lbl_C46748                      ;C46744|B002    |C46748;  
 	bra CODE_C46752                      ;C46746|800A    |C46752;  
-
-CODE_C46748:
+.lbl_C46748
 	lda.l $7F7DC1,x                      ;C46748|BFC17D7F|7F7DC1;  
 	ora.b #$20                           ;C4674C|0920    |      ;  
 	sta.l $7F7DC1,x                      ;C4674E|9FC17D7F|7F7DC1;  
@@ -8893,7 +8592,7 @@ CODE_C46748:
 CODE_C46752:
 	inx                                  ;C46752|E8      |      ;  
 	cpx.w #$0800                         ;C46753|E00008  |      ;  
-	bne CODE_C46738                      ;C46756|D0E0    |C46738;  
+	bne .lbl_C46738                      ;C46756|D0E0    |C46738;  
 	plp                                  ;C46758|28      |      ;  
 	rtl                                  ;C46759|6B      |      ;  
 	.db $08,$E2,$20,$C2,$10,$A9,$7F,$48   ;C4675A
@@ -8911,11 +8610,11 @@ CODE_C4677C:
 	plb                                  ;C46784|AB      |      ;  
 	ldy.w $A583                          ;C46785|AC83A5  |7FA583;  
 	cpx.b #$FF                           ;C46788|E0FF    |      ;  
-	beq CODE_C467F3                      ;C4678A|F067    |C467F3;  
+	beq .lbl_C467F3                      ;C4678A|F067    |C467F3;  
 	ldy.w $A580                          ;C4678C|AC80A5  |7FA580;  
-	beq CODE_C467AE                      ;C4678F|F01D    |C467AE;  
+	beq .lbl_C467AE                      ;C4678F|F01D    |C467AE;  
 	dec.w $A581                          ;C46791|CE81A5  |7FA581;  
-	bne CODE_C467F3                      ;C46794|D05D    |C467F3;  
+	bne .lbl_C467F3                      ;C46794|D05D    |C467F3;  
 	lda.b $00                            ;C46796|A500    |000000;  
 	pha                                  ;C46798|48      |      ;  
 	phb                                  ;C46799|8B      |      ;  
@@ -8930,10 +8629,9 @@ CODE_C4677C:
 	plb                                  ;C467AA|AB      |      ;  
 	pla                                  ;C467AB|68      |      ;  
 	sta.b $00                            ;C467AC|8500    |000000;  
-
-CODE_C467AE:
+.lbl_C467AE
 	ldy.w $A57F                          ;C467AE|AC7FA5  |7FA57F;  
-	bne CODE_C467ED                      ;C467B1|D03A    |C467ED;  
+	bne .lbl_C467ED                      ;C467B1|D03A    |C467ED;  
 	ldx.b $00                            ;C467B3|A600    |000000;  
 	sep #$20                             ;C467B5|E220    |      ;  
 	txa                                  ;C467B7|8A      |      ;  
@@ -8953,11 +8651,10 @@ CODE_C467AE:
 	rep #$20                             ;C467CF|C220    |      ;  
 	lda.b [$00],y                        ;C467D1|B700    |000000;  
 	cmp.w #$FFFF                         ;C467D3|C9FFFF  |      ;  
-	bne CODE_C467DD                      ;C467D6|D005    |C467DD;  
+	bne .lbl_C467DD                      ;C467D6|D005    |C467DD;  
 	sta.w $A583                          ;C467D8|8D83A5  |7FA583;  
-	bra CODE_C467F3                      ;C467DB|8016    |C467F3;  
-
-CODE_C467DD:
+	bra .lbl_C467F3                      ;C467DB|8016    |C467F3;  
+.lbl_C467DD
 	sta.b $06                            ;C467DD|8506    |000006;  
 	iny                                  ;C467DF|C8      |      ;  
 	iny                                  ;C467E0|C8      |      ;  
@@ -8966,13 +8663,11 @@ CODE_C467DD:
 	sep #$20                             ;C467E6|E220    |      ;  
 	inc.w $A583                          ;C467E8|EE83A5  |7FA583;  
 	rep #$20                             ;C467EB|C220    |      ;  
-
-CODE_C467ED:
+.lbl_C467ED
 	phb                                  ;C467ED|8B      |      ;  
 	jsl.l CODE_C4628E                    ;C467EE|228E62C4|C4628E;  
 	plb                                  ;C467F2|AB      |      ;  
-
-CODE_C467F3:
+.lbl_C467F3
 	plp                                  ;C467F3|28      |      ;  
 	rtl                                  ;C467F4|6B      |      ;  
 
@@ -9193,7 +8888,7 @@ CODE_C46CAC:
 	sta.b $02                   ;C46CD3|8502    |000002;  
 	ora.b $00                            ;C46CD5|0500    |000000;  
 	ora.b w0001                            ;C46CD7|0501    |000001;  
-	bne CODE_C46CEA                      ;C46CD9|D00F    |C46CEA;  
+	bne .lbl_C46CEA                      ;C46CD9|D00F    |C46CEA;  
 	plx                                  ;C46CDB|FA      |      ;  
 	stx.b w0001                            ;C46CDC|8601    |000001;  
 	pla                                  ;C46CDE|68      |      ;  
@@ -9201,8 +8896,7 @@ CODE_C46CAC:
 	jsl.l CODE_C47A84                    ;C46CE1|22847AC4|C47A84;  
 	ldy.w #$0001                         ;C46CE5|A00100  |      ;  
 	bra CODE_C46D03                      ;C46CE8|8019    |C46D03;  
-
-CODE_C46CEA:
+.lbl_C46CEA
 	lda.b $03                            ;C46CEA|A503    |000003;  
 	inc.b $03                            ;C46CEC|E603    |000003;  
 	pha                                  ;C46CEE|48      |      ;  
@@ -9292,13 +8986,12 @@ CODE_C46D94:
 	adc.w #$08C1                         ;C46DA2|69C108  |      ;  
 	sta.w $AA4A                          ;C46DA5|8D4AAA  |7FAA4A;  
 	ldy.w #$000F                         ;C46DA8|A00F00  |      ;  
-
-CODE_C46DAB:
+.lbl_C46DAB
 	stz.w $08C1,x                        ;C46DAB|9EC108  |7F08C1;  
 	inx                                  ;C46DAE|E8      |      ;  
 	inx                                  ;C46DAF|E8      |      ;  
 	dey                                  ;C46DB0|88      |      ;  
-	bpl CODE_C46DAB                      ;C46DB1|10F8    |C46DAB;  
+	bpl .lbl_C46DAB                      ;C46DB1|10F8    |C46DAB;  
 	stx.b $C5                            ;C46DB3|86C5    |0000C5;  
 	sep #$20                             ;C46DB5|E220    |      ;  
 	lda.b $02                   ;C46DB7|A502    |000002;  
@@ -9307,51 +9000,45 @@ CODE_C46DAB:
 	sty.b $C2                            ;C46DBD|84C2    |0000C2;  
 	tdc                                  ;C46DBF|7B      |      ;  
 	tax                                  ;C46DC0|AA      |      ;  
-
-CODE_C46DC1:
+.lbl_C46DC1
 	lda.b [$C2]                          ;C46DC1|A7C2    |0000C2;  
 	inc.b $C2                            ;C46DC3|E6C2    |0000C2;  
-	bne CODE_C46DCA                      ;C46DC5|D003    |C46DCA;  
+	bne .lbl_C46DCA                      ;C46DC5|D003    |C46DCA;  
 	jsr.w CODE_C47A4A                    ;C46DC7|204A7A  |C47A4A;  
-
-CODE_C46DCA:
+.lbl_C46DCA
 	sta.w $AA1B,x                        ;C46DCA|9D1BAA  |7FAA1B;  
 	inx                                  ;C46DCD|E8      |      ;  
 	cpx.w #$001B                         ;C46DCE|E01B00  |      ;  
-	bne CODE_C46DC1                      ;C46DD1|D0EE    |C46DC1;  
-	bra CODE_C46DF4                      ;C46DD3|801F    |C46DF4;  
-
-CODE_C46DD5:
+	bne .lbl_C46DC1                      ;C46DD1|D0EE    |C46DC1;  
+	bra .lbl_C46DF4                      ;C46DD3|801F    |C46DF4;  
+.lbl_C46DD5
 	dec.w $AA48                          ;C46DD5|CE48AA  |7FAA48;  
-	bpl CODE_C46DE9                      ;C46DD8|100F    |C46DE9;  
+	bpl .lbl_C46DE9                      ;C46DD8|100F    |C46DE9;  
 	jsr.w CODE_C47A52                    ;C46DDA|20527A  |C47A52;  
 	lda.b #$80                           ;C46DDD|A980    |      ;  
 	sta.w $AA48                          ;C46DDF|8D48AA  |7FAA48;  
-	bra CODE_C46DE9                      ;C46DE2|8005    |C46DE9;  
+	bra .lbl_C46DE9                      ;C46DE2|8005    |C46DE9;  
 
 CODE_C46DE4:
 	lda.w $AA49                          ;C46DE4|AD49AA  |7FAA49;  
-	beq CODE_C46DD5                      ;C46DE7|F0EC    |C46DD5;  
-
-CODE_C46DE9:
+	beq .lbl_C46DD5                      ;C46DE7|F0EC    |C46DD5;  
+.lbl_C46DE9
 	lda.b $C5                            ;C46DE9|A5C5    |0000C5;  
 	clc                                  ;C46DEB|18      |      ;  
 	adc.b #$20                           ;C46DEC|6920    |      ;  
 	sta.b $C5                            ;C46DEE|85C5    |0000C5;  
-	bcc CODE_C46DF4                      ;C46DF0|9002    |C46DF4;  
+	bcc .lbl_C46DF4                      ;C46DF0|9002    |C46DF4;  
 	inc.b $C6                            ;C46DF2|E6C6    |0000C6;  
-
-CODE_C46DF4:
+.lbl_C46DF4
 	lda.b [$C2]                          ;C46DF4|A7C2    |0000C2;  
 	inc.b $C2                            ;C46DF6|E6C2    |0000C2;  
-	bne CODE_C46DFD                      ;C46DF8|D003    |C46DFD;  
+	bne .lbl_C46DFD                      ;C46DF8|D003    |C46DFD;  
 	jsr.w CODE_C47A4A                    ;C46DFA|204A7A  |C47A4A;  
-
-CODE_C46DFD:
+.lbl_C46DFD
 	cmp.b #$00                           ;C46DFD|C900    |      ;  
-	bmi CODE_C46E6C                      ;C46DFF|306B    |C46E6C;  
+	bmi .lbl_C46E6C                      ;C46DFF|306B    |C46E6C;  
 	bit.b #$40                           ;C46E01|8940    |      ;  
-	bne CODE_C46E6F                      ;C46E03|D06A    |C46E6F;  
+	bne .lbl_C46E6F                      ;C46E03|D06A    |C46E6F;  
 	xba                                  ;C46E05|EB      |      ;  
 	lda.b #$00                           ;C46E06|A900    |      ;  
 	xba                                  ;C46E08|EB      |      ;  
@@ -9375,7 +9062,7 @@ DATA8_C46E12:
 DATA8_C46E2B:
 	.db $4E,$6E,$30,$70,$49,$70,$62,$70   ;C46E2B
 	bit.b #$08                           ;C46E33|8908    |      ;  
-	bne CODE_C46E8B                      ;C46E35|D054    |C46E8B;  
+	bne .lbl_C46E8B                      ;C46E35|D054    |C46E8B;  
 	lsr a                                ;C46E37|4A      |      ;  
 	lsr a                                ;C46E38|4A      |      ;  
 	lsr a                                ;C46E39|4A      |      ;  
@@ -9389,36 +9076,30 @@ DATA8_C46E2B:
 	sta.b $CB                            ;C46E49|85CB    |0000CB;  
 	jmp.w CODE_C473C5                    ;C46E4B|4CC573  |C473C5;  
 	cmp.b #$20                           ;C46E4E|C920    |      ;  
-	bne CODE_C46E72                      ;C46E50|D020    |C46E72;  
+	bne .lbl_C46E72                      ;C46E50|D020    |C46E72;  
 	ldy.b $C5                            ;C46E52|A4C5    |0000C5;  
 	ldx.w #$001F                         ;C46E54|A21F00  |      ;  
-
-CODE_C46E57:
+.lbl_C46E57
 	lda.b [$C2]                          ;C46E57|A7C2    |0000C2;  
 	inc.b $C2                            ;C46E59|E6C2    |0000C2;  
-	bne CODE_C46E60                      ;C46E5B|D003    |C46E60;  
+	bne .lbl_C46E60                      ;C46E5B|D003    |C46E60;  
 	jsr.w CODE_C47A4A                    ;C46E5D|204A7A  |C47A4A;  
-
-CODE_C46E60:
+.lbl_C46E60
 	sta.w $08C1,y                        ;C46E60|99C108  |7F08C1;  
 	iny                                  ;C46E63|C8      |      ;  
 	dex                                  ;C46E64|CA      |      ;  
-	bpl CODE_C46E57                      ;C46E65|10F0    |C46E57;  
+	bpl .lbl_C46E57                      ;C46E65|10F0    |C46E57;  
 	sty.b $C5                            ;C46E67|84C5    |0000C5;  
-	jmp.w CODE_C46DF4                    ;C46E69|4CF46D  |C46DF4;  
-
-CODE_C46E6C:
+	jmp.w .lbl_C46DF4                    ;C46E69|4CF46D  |C46DF4;  
+.lbl_C46E6C
 	jmp.w CODE_C47387                    ;C46E6C|4C8773  |C47387;  
-
-CODE_C46E6F:
+.lbl_C46E6F
 	jmp.w CODE_C46F0B                    ;C46E6F|4C0B6F  |C46F0B;  
-
-CODE_C46E72:
+.lbl_C46E72
 	lda.w $AA49                          ;C46E72|AD49AA  |7FAA49;  
-	bne CODE_C46E7A                      ;C46E75|D003    |C46E7A;  
+	bne .lbl_C46E7A                      ;C46E75|D003    |C46E7A;  
 	jsr.w CODE_C47A52                    ;C46E77|20527A  |C47A52;  
-
-CODE_C46E7A:
+.lbl_C46E7A
 	rep #$20                             ;C46E7A|C220    |      ;  
 	ldx.w $AA36                          ;C46E7C|AE36AA  |7FAA36;  
 	lda.b $C5                            ;C46E7F|A5C5    |0000C5;  
@@ -9428,18 +9109,16 @@ CODE_C46E7A:
 	plp                                  ;C46E87|28      |      ;  
 	rtl                                  ;C46E88|6B      |      ;  
 	.db $E2,$20                           ;C46E89
-
-CODE_C46E8B:
+.lbl_C46E8B
 	and.b #$30                           ;C46E8B|2930    |      ;  
 	asl a                                ;C46E8D|0A      |      ;  
 	sta.b $BF                            ;C46E8E|85BF    |0000BF;  
 	stz.b $BE                            ;C46E90|64BE    |0000BE;  
 	lda.b [$C2]                          ;C46E92|A7C2    |0000C2;  
 	inc.b $C2                            ;C46E94|E6C2    |0000C2;  
-	bne CODE_C46E9B                      ;C46E96|D003    |C46E9B;  
+	bne .lbl_C46E9B                      ;C46E96|D003    |C46E9B;  
 	.db $20,$4A,$7A                       ;C46E98|        |C47A4A;  
-
-CODE_C46E9B:
+.lbl_C46E9B
 	xba                                  ;C46E9B|EB      |      ;  
 	rep #$20                             ;C46E9C|C220    |      ;  
 	lsr a                                ;C46E9E|4A      |      ;  
@@ -9452,18 +9131,16 @@ CODE_C46E9B:
 	sep #$20                             ;C46EA7|E220    |      ;  
 	lda.b [$C2]                          ;C46EA9|A7C2    |0000C2;  
 	inc.b $C2                            ;C46EAB|E6C2    |0000C2;  
-	bne CODE_C46EB2                      ;C46EAD|D003    |C46EB2;  
+	bne .lbl_C46EB2                      ;C46EAD|D003    |C46EB2;  
 	jsr.w CODE_C47A4A                    ;C46EAF|204A7A  |C47A4A;  
-
-CODE_C46EB2:
+.lbl_C46EB2
 	sta.b $BE                            ;C46EB2|85BE    |0000BE;  
 	lda.b #$07                           ;C46EB4|A907    |      ;  
 	sta.b $BF                            ;C46EB6|85BF    |0000BF;  
 	ldy.b $C5                            ;C46EB8|A4C5    |0000C5;  
-
-CODE_C46EBA:
+.lbl_C46EBA
 	asl.b $BE                            ;C46EBA|06BE    |0000BE;  
-	bcs CODE_C46ED0                      ;C46EBC|B012    |C46ED0;  
+	bcs .lbl_C46ED0                      ;C46EBC|B012    |C46ED0;  
 	rep #$20                             ;C46EBE|C220    |      ;  
 	lda.w $08C1,x                        ;C46EC0|BDC108  |7F08C1;  
 	sta.w $08C1,y                        ;C46EC3|99C108  |7F08C1;  
@@ -9471,35 +9148,30 @@ CODE_C46EBA:
 	sta.w $08D1,y                        ;C46EC9|99D108  |7F08D1;  
 	sep #$20                             ;C46ECC|E220    |      ;  
 	bra CODE_C46F00                      ;C46ECE|8030    |C46F00;  
-
-CODE_C46ED0:
+.lbl_C46ED0
 	lda.b [$C2]                          ;C46ED0|A7C2    |0000C2;  
 	inc.b $C2                            ;C46ED2|E6C2    |0000C2;  
-	bne CODE_C46ED9                      ;C46ED4|D003    |C46ED9;  
+	bne .lbl_C46ED9                      ;C46ED4|D003    |C46ED9;  
 	.db $20,$4A,$7A                       ;C46ED6|        |C47A4A;  
-
-CODE_C46ED9:
+.lbl_C46ED9
 	sta.w $08C1,y                        ;C46ED9|99C108  |7F08C1;  
 	lda.b [$C2]                          ;C46EDC|A7C2    |0000C2;  
 	inc.b $C2                            ;C46EDE|E6C2    |0000C2;  
-	bne CODE_C46EE5                      ;C46EE0|D003    |C46EE5;  
+	bne .lbl_C46EE5                      ;C46EE0|D003    |C46EE5;  
 	.db $20,$4A,$7A                       ;C46EE2|        |C47A4A;  
-
-CODE_C46EE5:
+.lbl_C46EE5
 	sta.w $08C2,y                        ;C46EE5|99C208  |7F08C2;  
 	lda.b [$C2]                          ;C46EE8|A7C2    |0000C2;  
 	inc.b $C2                            ;C46EEA|E6C2    |0000C2;  
-	bne CODE_C46EF1                      ;C46EEC|D003    |C46EF1;  
+	bne .lbl_C46EF1                      ;C46EEC|D003    |C46EF1;  
 	.db $20,$4A,$7A                       ;C46EEE|        |C47A4A;  
-
-CODE_C46EF1:
+.lbl_C46EF1
 	sta.w $08D1,y                        ;C46EF1|99D108  |7F08D1;  
 	lda.b [$C2]                          ;C46EF4|A7C2    |0000C2;  
 	inc.b $C2                            ;C46EF6|E6C2    |0000C2;  
-	bne CODE_C46EFD                      ;C46EF8|D003    |C46EFD;  
+	bne .lbl_C46EFD                      ;C46EF8|D003    |C46EFD;  
 	jsr.w CODE_C47A4A                    ;C46EFA|204A7A  |C47A4A;  
-
-CODE_C46EFD:
+.lbl_C46EFD
 	sta.w $08D2,y                        ;C46EFD|99D208  |7F08D2;  
 
 CODE_C46F00:
@@ -9508,7 +9180,7 @@ CODE_C46F00:
 	iny                                  ;C46F02|C8      |      ;  
 	iny                                  ;C46F03|C8      |      ;  
 	dec.b $BF                            ;C46F04|C6BF    |0000BF;  
-	bpl CODE_C46EBA                      ;C46F06|10B2    |C46EBA;  
+	bpl .lbl_C46EBA                      ;C46F06|10B2    |C46EBA;  
 	jmp.w CODE_C46DE4                    ;C46F08|4CE46D  |C46DE4;  
 
 CODE_C46F0B:
@@ -9518,10 +9190,9 @@ CODE_C46F0B:
 	sta.b $BF                            ;C46F0F|85BF    |0000BF;  
 	lda.b [$C2]                          ;C46F11|A7C2    |0000C2;  
 	inc.b $C2                            ;C46F13|E6C2    |0000C2;  
-	bne CODE_C46F1A                      ;C46F15|D003    |C46F1A;  
+	bne .lbl_C46F1A                      ;C46F15|D003    |C46F1A;  
 	jsr.w CODE_C47A4A                    ;C46F17|204A7A  |C47A4A;  
-
-CODE_C46F1A:
+.lbl_C46F1A
 	xba                                  ;C46F1A|EB      |      ;  
 	lda.b $BE                            ;C46F1B|A5BE    |0000BE;  
 	and.b #$03                           ;C46F1D|2903    |      ;  
@@ -9572,135 +9243,114 @@ CODE_C46F1A:
 	stz.b $CB                            ;C46F8F|64CB    |0000CB;  
 	sep #$20                             ;C46F91|E220    |      ;  
 	asl.b $BF                            ;C46F93|06BF    |0000BF;  
-	bcc CODE_C46FA2                      ;C46F95|900B    |C46FA2;  
+	bcc .lbl_C46FA2                      ;C46F95|900B    |C46FA2;  
 	lda.b [$C2]                          ;C46F97|A7C2    |0000C2;  
 	inc.b $C2                            ;C46F99|E6C2    |0000C2;  
-	bne CODE_C46FA0                      ;C46F9B|D003    |C46FA0;  
+	bne .lbl_C46FA0                      ;C46F9B|D003    |C46FA0;  
 	jsr.w CODE_C47A4A                    ;C46F9D|204A7A  |C47A4A;  
-
-CODE_C46FA0:
+.lbl_C46FA0
 	sta.b $C9                            ;C46FA0|85C9    |0000C9;  
-
-CODE_C46FA2:
+.lbl_C46FA2
 	asl.b $BF                            ;C46FA2|06BF    |0000BF;  
-	bcc CODE_C46FB1                      ;C46FA4|900B    |C46FB1;  
+	bcc .lbl_C46FB1                      ;C46FA4|900B    |C46FB1;  
 	lda.b [$C2]                          ;C46FA6|A7C2    |0000C2;  
 	inc.b $C2                            ;C46FA8|E6C2    |0000C2;  
-	bne CODE_C46FAF                      ;C46FAA|D003    |C46FAF;  
+	bne .lbl_C46FAF                      ;C46FAA|D003    |C46FAF;  
 	jsr.w CODE_C47A4A                    ;C46FAC|204A7A  |C47A4A;  
-
-CODE_C46FAF:
+.lbl_C46FAF
 	sta.b $CA                            ;C46FAF|85CA    |0000CA;  
-
-CODE_C46FB1:
+.lbl_C46FB1
 	asl.b $BF                            ;C46FB1|06BF    |0000BF;  
-	bcc CODE_C46FC0                      ;C46FB3|900B    |C46FC0;  
+	bcc .lbl_C46FC0                      ;C46FB3|900B    |C46FC0;  
 	lda.b [$C2]                          ;C46FB5|A7C2    |0000C2;  
 	inc.b $C2                            ;C46FB7|E6C2    |0000C2;  
-	bne CODE_C46FBE                      ;C46FB9|D003    |C46FBE;  
+	bne .lbl_C46FBE                      ;C46FB9|D003    |C46FBE;  
 	jsr.w CODE_C47A4A                    ;C46FBB|204A7A  |C47A4A;  
-
-CODE_C46FBE:
+.lbl_C46FBE
 	sta.b $CB                            ;C46FBE|85CB    |0000CB;  
-
-CODE_C46FC0:
+.lbl_C46FC0
 	asl.b $BF                            ;C46FC0|06BF    |0000BF;  
-	bcc CODE_C46FCF                      ;C46FC2|900B    |C46FCF;  
+	bcc .lbl_C46FCF                      ;C46FC2|900B    |C46FCF;  
 	lda.b [$C2]                          ;C46FC4|A7C2    |0000C2;  
 	inc.b $C2                            ;C46FC6|E6C2    |0000C2;  
-	bne CODE_C46FCD                      ;C46FC8|D003    |C46FCD;  
+	bne .lbl_C46FCD                      ;C46FC8|D003    |C46FCD;  
 	jsr.w CODE_C47A4A                    ;C46FCA|204A7A  |C47A4A;  
-
-CODE_C46FCD:
+.lbl_C46FCD
 	sta.b $CC                            ;C46FCD|85CC    |0000CC;  
-
-CODE_C46FCF:
+.lbl_C46FCF
 	dey                                  ;C46FCF|88      |      ;  
 	dey                                  ;C46FD0|88      |      ;  
 	tyx                                  ;C46FD1|BB      |      ;  
-
-CODE_C46FD2:
+.lbl_C46FD2
 	iny                                  ;C46FD2|C8      |      ;  
 	iny                                  ;C46FD3|C8      |      ;  
 	asl.b $C9                            ;C46FD4|06C9    |0000C9;  
-	bcc CODE_C46FE6                      ;C46FD6|900E    |C46FE6;  
+	bcc .lbl_C46FE6                      ;C46FD6|900E    |C46FE6;  
 	lda.b [$C2]                          ;C46FD8|A7C2    |0000C2;  
 	inc.b $C2                            ;C46FDA|E6C2    |0000C2;  
-	bne CODE_C46FE1                      ;C46FDC|D003    |C46FE1;  
+	bne .lbl_C46FE1                      ;C46FDC|D003    |C46FE1;  
 	jsr.w CODE_C47A4A                    ;C46FDE|204A7A  |C47A4A;  
-
-CODE_C46FE1:
+.lbl_C46FE1
 	sta.w $08C1,y                        ;C46FE1|99C108  |7F08C1;  
-	bra CODE_C46FD2                      ;C46FE4|80EC    |C46FD2;  
-
-CODE_C46FE6:
-	bne CODE_C46FD2                      ;C46FE6|D0EA    |C46FD2;  
+	bra .lbl_C46FD2                      ;C46FE4|80EC    |C46FD2;  
+.lbl_C46FE6
+	bne .lbl_C46FD2                      ;C46FE6|D0EA    |C46FD2;  
 	txy                                  ;C46FE8|9B      |      ;  
-
-CODE_C46FE9:
+.lbl_C46FE9
 	iny                                  ;C46FE9|C8      |      ;  
 	iny                                  ;C46FEA|C8      |      ;  
 	asl.b $CA                            ;C46FEB|06CA    |0000CA;  
-	bcc CODE_C46FFD                      ;C46FED|900E    |C46FFD;  
+	bcc .lbl_C46FFD                      ;C46FED|900E    |C46FFD;  
 	lda.b [$C2]                          ;C46FEF|A7C2    |0000C2;  
 	inc.b $C2                            ;C46FF1|E6C2    |0000C2;  
-	bne CODE_C46FF8                      ;C46FF3|D003    |C46FF8;  
+	bne .lbl_C46FF8                      ;C46FF3|D003    |C46FF8;  
 	jsr.w CODE_C47A4A                    ;C46FF5|204A7A  |C47A4A;  
-
-CODE_C46FF8:
+.lbl_C46FF8
 	sta.w $08C2,y                        ;C46FF8|99C208  |7F08C2;  
-	bra CODE_C46FE9                      ;C46FFB|80EC    |C46FE9;  
-
-CODE_C46FFD:
-	bne CODE_C46FE9                      ;C46FFD|D0EA    |C46FE9;  
+	bra .lbl_C46FE9                      ;C46FFB|80EC    |C46FE9;  
+.lbl_C46FFD
+	bne .lbl_C46FE9                      ;C46FFD|D0EA    |C46FE9;  
 	txy                                  ;C46FFF|9B      |      ;  
-
-CODE_C47000:
+.lbl_C47000
 	iny                                  ;C47000|C8      |      ;  
 	iny                                  ;C47001|C8      |      ;  
 	asl.b $CB                            ;C47002|06CB    |0000CB;  
-	bcc CODE_C47014                      ;C47004|900E    |C47014;  
+	bcc .lbl_C47014                      ;C47004|900E    |C47014;  
 	lda.b [$C2]                          ;C47006|A7C2    |0000C2;  
 	inc.b $C2                            ;C47008|E6C2    |0000C2;  
-	bne CODE_C4700F                      ;C4700A|D003    |C4700F;  
+	bne .lbl_C4700F                      ;C4700A|D003    |C4700F;  
 	jsr.w CODE_C47A4A                    ;C4700C|204A7A  |C47A4A;  
-
-CODE_C4700F:
+.lbl_C4700F
 	sta.w $08D1,y                        ;C4700F|99D108  |7F08D1;  
-	bra CODE_C47000                      ;C47012|80EC    |C47000;  
-
-CODE_C47014:
-	bne CODE_C47000                      ;C47014|D0EA    |C47000;  
+	bra .lbl_C47000                      ;C47012|80EC    |C47000;  
+.lbl_C47014
+	bne .lbl_C47000                      ;C47014|D0EA    |C47000;  
 	txy                                  ;C47016|9B      |      ;  
-
-CODE_C47017:
+.lbl_C47017
 	iny                                  ;C47017|C8      |      ;  
 	iny                                  ;C47018|C8      |      ;  
 	asl.b $CC                            ;C47019|06CC    |0000CC;  
-	bcc CODE_C4702B                      ;C4701B|900E    |C4702B;  
+	bcc .lbl_C4702B                      ;C4701B|900E    |C4702B;  
 	lda.b [$C2]                          ;C4701D|A7C2    |0000C2;  
 	inc.b $C2                            ;C4701F|E6C2    |0000C2;  
-	bne CODE_C47026                      ;C47021|D003    |C47026;  
+	bne .lbl_C47026                      ;C47021|D003    |C47026;  
 	jsr.w CODE_C47A4A                    ;C47023|204A7A  |C47A4A;  
-
-CODE_C47026:
+.lbl_C47026
 	sta.w $08D2,y                        ;C47026|99D208  |7F08D2;  
-	bra CODE_C47017                      ;C47029|80EC    |C47017;  
-
-CODE_C4702B:
-	bne CODE_C47017                      ;C4702B|D0EA    |C47017;  
+	bra .lbl_C47017                      ;C47029|80EC    |C47017;  
+.lbl_C4702B
+	bne .lbl_C47017                      ;C4702B|D0EA    |C47017;  
 	jmp.w CODE_C46DE4                    ;C4702D|4CE46D  |C46DE4;  
 	sta.b $BE                            ;C47030|85BE    |0000BE;  
 	lda.b [$C2]                          ;C47032|A7C2    |0000C2;  
 	inc.b $C2                            ;C47034|E6C2    |0000C2;  
-	bne CODE_C4703B                      ;C47036|D003    |C4703B;  
+	bne .lbl_C4703B                      ;C47036|D003    |C4703B;  
 	jsr.w CODE_C47A4A                    ;C47038|204A7A  |C47A4A;  
-
-CODE_C4703B:
+.lbl_C4703B
 	pha                                  ;C4703B|48      |      ;  
 	lda.b $BE                            ;C4703C|A5BE    |0000BE;  
 	bit.b #$20                           ;C4703E|8920    |      ;  
-	beq CODE_C4707B                      ;C47040|F039    |C4707B;  
+	beq .lbl_C4707B                      ;C47040|F039    |C4707B;  
 	tdc                                  ;C47042|7B      |      ;  
 	tax                                  ;C47043|AA      |      ;  
 	jsr.w CODE_C47271                    ;C47044|207172  |C47271;  
@@ -9708,14 +9358,13 @@ CODE_C4703B:
 	sta.b $BE                            ;C47049|85BE    |0000BE;  
 	lda.b [$C2]                          ;C4704B|A7C2    |0000C2;  
 	inc.b $C2                            ;C4704D|E6C2    |0000C2;  
-	bne CODE_C47054                      ;C4704F|D003    |C47054;  
+	bne .lbl_C47054                      ;C4704F|D003    |C47054;  
 	.db $20,$4A,$7A                       ;C47051|        |C47A4A;  
-
-CODE_C47054:
+.lbl_C47054
 	pha                                  ;C47054|48      |      ;  
 	lda.b $BE                            ;C47055|A5BE    |0000BE;  
 	bit.b #$20                           ;C47057|8920    |      ;  
-	beq CODE_C4707B                      ;C47059|F020    |C4707B;  
+	beq .lbl_C4707B                      ;C47059|F020    |C4707B;  
 	tdc                                  ;C4705B|7B      |      ;  
 	tax                                  ;C4705C|AA      |      ;  
 	jsr.w CODE_C472A1                    ;C4705D|20A172  |C472A1;  
@@ -9723,20 +9372,18 @@ CODE_C47054:
 	sta.b $BE                            ;C47062|85BE    |0000BE;  
 	lda.b [$C2]                          ;C47064|A7C2    |0000C2;  
 	inc.b $C2                            ;C47066|E6C2    |0000C2;  
-	bne CODE_C4706D                      ;C47068|D003    |C4706D;  
+	bne .lbl_C4706D                      ;C47068|D003    |C4706D;  
 	.db $20,$4A,$7A                       ;C4706A|        |C47A4A;  
-
-CODE_C4706D:
+.lbl_C4706D
 	pha                                  ;C4706D|48      |      ;  
 	lda.b $BE                            ;C4706E|A5BE    |0000BE;  
 	bit.b #$20                           ;C47070|8920    |      ;  
-	beq CODE_C4707B                      ;C47072|F007    |C4707B;  
+	beq .lbl_C4707B                      ;C47072|F007    |C4707B;  
 	tdc                                  ;C47074|7B      |      ;  
 	tax                                  ;C47075|AA      |      ;  
 	jsr.w CODE_C472FA                    ;C47076|20FA72  |C472FA;  
 	bra CODE_C47080                      ;C47079|8005    |C47080;  
-
-CODE_C4707B:
+.lbl_C4707B
 	tdc                                  ;C4707B|7B      |      ;  
 	tax                                  ;C4707C|AA      |      ;  
 	jsr.w CODE_C47258                    ;C4707D|205872  |C47258;  
@@ -9747,63 +9394,54 @@ CODE_C47080:
 	ldx.b $C5                            ;C47083|A6C5    |0000C5;  
 	tdc                                  ;C47085|7B      |      ;  
 	tay                                  ;C47086|A8      |      ;  
-
-CODE_C47087:
+.lbl_C47087
 	lda.b $BE                            ;C47087|A5BE    |0000BE;  
 	sta.b $BF                            ;C47089|85BF    |0000BF;  
 	tdc                                  ;C4708B|7B      |      ;  
 	lsr.b $BF                            ;C4708C|46BF    |0000BF;  
-	bcc CODE_C47093                      ;C4708E|9003    |C47093;  
+	bcc .lbl_C47093                      ;C4708E|9003    |C47093;  
 	lda.w $A9D0,y                        ;C47090|B9D0A9  |7FA9D0;  
-
-CODE_C47093:
+.lbl_C47093
 	lsr.b $BF                            ;C47093|46BF    |0000BF;  
-	bcc CODE_C4709A                      ;C47095|9003    |C4709A;  
+	bcc .lbl_C4709A                      ;C47095|9003    |C4709A;  
 	ora.w $A9E8,y                        ;C47097|19E8A9  |7FA9E8;  
-
-CODE_C4709A:
+.lbl_C4709A
 	sta.w $08C1,x                        ;C4709A|9DC108  |7F08C1;  
 	tdc                                  ;C4709D|7B      |      ;  
 	lsr.b $BF                            ;C4709E|46BF    |0000BF;  
-	bcc CODE_C470A5                      ;C470A0|9003    |C470A5;  
+	bcc .lbl_C470A5                      ;C470A0|9003    |C470A5;  
 	lda.w $A9D0,y                        ;C470A2|B9D0A9  |7FA9D0;  
-
-CODE_C470A5:
+.lbl_C470A5
 	lsr.b $BF                            ;C470A5|46BF    |0000BF;  
-	bcc CODE_C470AC                      ;C470A7|9003    |C470AC;  
+	bcc .lbl_C470AC                      ;C470A7|9003    |C470AC;  
 	ora.w $A9E8,y                        ;C470A9|19E8A9  |7FA9E8;  
-
-CODE_C470AC:
+.lbl_C470AC
 	sta.w $08C2,x                        ;C470AC|9DC208  |7F08C2;  
 	tdc                                  ;C470AF|7B      |      ;  
 	lsr.b $BF                            ;C470B0|46BF    |0000BF;  
-	bcc CODE_C470B7                      ;C470B2|9003    |C470B7;  
+	bcc .lbl_C470B7                      ;C470B2|9003    |C470B7;  
 	lda.w $A9D0,y                        ;C470B4|B9D0A9  |7FA9D0;  
-
-CODE_C470B7:
+.lbl_C470B7
 	lsr.b $BF                            ;C470B7|46BF    |0000BF;  
-	bcc CODE_C470BE                      ;C470B9|9003    |C470BE;  
+	bcc .lbl_C470BE                      ;C470B9|9003    |C470BE;  
 	ora.w $A9E8,y                        ;C470BB|19E8A9  |7FA9E8;  
-
-CODE_C470BE:
+.lbl_C470BE
 	sta.w $08D1,x                        ;C470BE|9DD108  |7F08D1;  
 	tdc                                  ;C470C1|7B      |      ;  
 	lsr.b $BF                            ;C470C2|46BF    |0000BF;  
-	bcc CODE_C470C9                      ;C470C4|9003    |C470C9;  
+	bcc .lbl_C470C9                      ;C470C4|9003    |C470C9;  
 	lda.w $A9D0,y                        ;C470C6|B9D0A9  |7FA9D0;  
-
-CODE_C470C9:
+.lbl_C470C9
 	lsr.b $BF                            ;C470C9|46BF    |0000BF;  
-	bcc CODE_C470D0                      ;C470CB|9003    |C470D0;  
+	bcc .lbl_C470D0                      ;C470CB|9003    |C470D0;  
 	ora.w $A9E8,y                        ;C470CD|19E8A9  |7FA9E8;  
-
-CODE_C470D0:
+.lbl_C470D0
 	sta.w $08D2,x                        ;C470D0|9DD208  |7F08D2;  
 	inx                                  ;C470D3|E8      |      ;  
 	inx                                  ;C470D4|E8      |      ;  
 	iny                                  ;C470D5|C8      |      ;  
 	cpy.w #$0008                         ;C470D6|C00800  |      ;  
-	bne CODE_C47087                      ;C470D9|D0AC    |C47087;  
+	bne .lbl_C47087                      ;C470D9|D0AC    |C47087;  
 	jmp.w CODE_C46DE4                    ;C470DB|4CE46D  |C46DE4;  
 	ldy.w #$7270                         ;C470DE|A07072  |      ;  
 	bra CODE_C470EB                      ;C470E1|8008    |C470EB;  
@@ -9819,28 +9457,25 @@ CODE_C470EB:
 	tdc                                  ;C470F2|7B      |      ;  
 	lda.b [$C2]                          ;C470F3|A7C2    |0000C2;  
 	inc.b $C2                            ;C470F5|E6C2    |0000C2;  
-	bne CODE_C470FC                      ;C470F7|D003    |C470FC;  
+	bne .lbl_C470FC                      ;C470F7|D003    |C470FC;  
 	jsr.w CODE_C47A4A                    ;C470F9|204A7A  |C47A4A;  
-
-CODE_C470FC:
+.lbl_C470FC
 	sta.b $BF                            ;C470FC|85BF    |0000BF;  
 	lsr a                                ;C470FE|4A      |      ;  
 	lsr a                                ;C470FF|4A      |      ;  
 	lsr a                                ;C47100|4A      |      ;  
 	lsr a                                ;C47101|4A      |      ;  
-	beq CODE_C47108                      ;C47102|F004    |C47108;  
+	beq .lbl_C47108                      ;C47102|F004    |C47108;  
 	tax                                  ;C47104|AA      |      ;  
 	lda.w $AA26,x                        ;C47105|BD26AA  |7FAA26;  
-
-CODE_C47108:
+.lbl_C47108
 	sta.b $BE                            ;C47108|85BE    |0000BE;  
 	lda.b $BF                            ;C4710A|A5BF    |0000BF;  
 	and.b #$0F                           ;C4710C|290F    |      ;  
-	beq CODE_C47114                      ;C4710E|F004    |C47114;  
+	beq .lbl_C47114                      ;C4710E|F004    |C47114;  
 	tax                                  ;C47110|AA      |      ;  
 	lda.w $AA26,x                        ;C47111|BD26AA  |7FAA26;  
-
-CODE_C47114:
+.lbl_C47114
 	sta.b $BF                            ;C47114|85BF    |0000BF;  
 	bra CODE_C47142                      ;C47116|802A    |C47142;  
 	ldy.w #$7270                         ;C47118|A07072  |      ;  
@@ -9856,50 +9491,44 @@ CODE_C47125:
 	sta.b $C9                            ;C4712A|85C9    |0000C9;  
 	lda.b [$C2]                          ;C4712C|A7C2    |0000C2;  
 	inc.b $C2                            ;C4712E|E6C2    |0000C2;  
-	bne CODE_C47135                      ;C47130|D003    |C47135;  
+	bne .lbl_C47135                      ;C47130|D003    |C47135;  
 	jsr.w CODE_C47A4A                    ;C47132|204A7A  |C47A4A;  
-
-CODE_C47135:
+.lbl_C47135
 	sta.b $BE                            ;C47135|85BE    |0000BE;  
 	lda.b [$C2]                          ;C47137|A7C2    |0000C2;  
 	inc.b $C2                            ;C47139|E6C2    |0000C2;  
-	bne CODE_C47140                      ;C4713B|D003    |C47140;  
+	bne .lbl_C47140                      ;C4713B|D003    |C47140;  
 	jsr.w CODE_C47A4A                    ;C4713D|204A7A  |C47A4A;  
-
-CODE_C47140:
+.lbl_C47140
 	sta.b $BF                            ;C47140|85BF    |0000BF;  
 
 CODE_C47142:
 	rep #$20                             ;C47142|C220    |      ;  
 	ldy.w #$000F                         ;C47144|A00F00  |      ;  
 	ldx.b $C5                            ;C47147|A6C5    |0000C5;  
-
-CODE_C47149:
+.lbl_C47149
 	stz.w $08C1,x                        ;C47149|9EC108  |7F08C1;  
 	inx                                  ;C4714C|E8      |      ;  
 	inx                                  ;C4714D|E8      |      ;  
 	dey                                  ;C4714E|88      |      ;  
-	bpl CODE_C47149                      ;C4714F|10F8    |C47149;  
+	bpl .lbl_C47149                      ;C4714F|10F8    |C47149;  
 	tdc                                  ;C47151|7B      |      ;  
 	tax                                  ;C47152|AA      |      ;  
 
 CODE_C47153:
 	asl.b $BE                            ;C47153|06BE    |0000BE;  
-	beq CODE_C47160                      ;C47155|F009    |C47160;  
-	bcc CODE_C4715D                      ;C47157|9004    |C4715D;  
+	beq .lbl_C47160                      ;C47155|F009    |C47160;  
+	bcc .lbl_C4715D                      ;C47157|9004    |C4715D;  
 	sta.w $AA08,x                        ;C47159|9D08AA  |7FAA08;  
 	inx                                  ;C4715C|E8      |      ;  
-
-CODE_C4715D:
+.lbl_C4715D
 	inc a                                ;C4715D|1A      |      ;  
 	bra CODE_C47153                      ;C4715E|80F3    |C47153;  
-
-CODE_C47160:
-	bcc CODE_C47166                      ;C47160|9004    |C47166;  
+.lbl_C47160
+	bcc .lbl_C47166                      ;C47160|9004    |C47166;  
 	sta.w $AA08,x                        ;C47162|9D08AA  |7FAA08;  
 	inx                                  ;C47165|E8      |      ;  
-
-CODE_C47166:
+.lbl_C47166
 	sep #$20                             ;C47166|E220    |      ;  
 	lda.b #$FF                           ;C47168|A9FF    |      ;  
 	sta.w $AA08,x                        ;C4716A|9D08AA  |7FAA08;  
@@ -9908,26 +9537,23 @@ CODE_C47166:
 	stx.b $CB                            ;C47171|86CB    |0000CB;  
 	tdc                                  ;C47173|7B      |      ;  
 	tax                                  ;C47174|AA      |      ;  
-
-CODE_C47175:
+.lbl_C47175
 	asl.b $C9                            ;C47175|06C9    |0000C9;  
-	bcc CODE_C47181                      ;C47177|9008    |C47181;  
+	bcc .lbl_C47181                      ;C47177|9008    |C47181;  
 	pea.w $7183                          ;C47179|F48371  |7F7183;  
 	ldy.w $AA19                          ;C4717C|AC19AA  |7FAA19;  
 	phy                                  ;C4717F|5A      |      ;  
 	rts                                  ;C47180|60      |      ;  
-
-CODE_C47181:
+.lbl_C47181
 	jsr.w CODE_C47258                    ;C47181|205872  |C47258;  
 	dec.b $CA                            ;C47184|C6CA    |0000CA;  
-	bne CODE_C47190                      ;C47186|D008    |C47190;  
+	bne .lbl_C47190                      ;C47186|D008    |C47190;  
 	lda.b $CB                            ;C47188|A5CB    |0000CB;  
 	cmp.b #$05                           ;C4718A|C905    |      ;  
-	bcs CODE_C47175                      ;C4718C|B0E7    |C47175;  
+	bcs .lbl_C47175                      ;C4718C|B0E7    |C47175;  
 	bra CODE_C47194                      ;C4718E|8004    |C47194;  
-
-CODE_C47190:
-	bpl CODE_C47175                      ;C47190|10E3    |C47175;  
+.lbl_C47190
+	bpl .lbl_C47175                      ;C47190|10E3    |C47175;  
 	bra CODE_C471CF                      ;C47192|803B    |C471CF;  
 
 CODE_C47194:
@@ -9938,39 +9564,35 @@ CODE_C47196:
 	lda.b $BE                            ;C47197|A5BE    |0000BE;  
 	tax                                  ;C47199|AA      |      ;  
 	lda.w $AA08,x                        ;C4719A|BD08AA  |7FAA08;  
-	bmi CODE_C471CC                      ;C4719D|302D    |C471CC;  
+	bmi .lbl_C471CC                      ;C4719D|302D    |C471CC;  
 	sta.b $BF                            ;C4719F|85BF    |0000BF;  
 	ldx.w #$0007                         ;C471A1|A20700  |      ;  
-
-CODE_C471A4:
+.lbl_C471A4
 	lda.b $BE                            ;C471A4|A5BE    |0000BE;  
 	lsr a                                ;C471A6|4A      |      ;  
 	sta.b $C0                            ;C471A7|85C0    |0000C0;  
-	bcc CODE_C471B0                      ;C471A9|9005    |C471B0;  
+	bcc .lbl_C471B0                      ;C471A9|9005    |C471B0;  
 	lda.w $A9D0,x                        ;C471AB|BDD0A9  |7FA9D0;  
 	bra CODE_C471B3                      ;C471AE|8003    |C471B3;  
-
-CODE_C471B0:
+.lbl_C471B0
 	lda.w $A9E8,x                        ;C471B0|BDE8A9  |7FA9E8;  
 
 CODE_C471B3:
 	lsr.b $C0                            ;C471B3|46C0    |0000C0;  
-	bcc CODE_C471BC                      ;C471B5|9005    |C471BC;  
+	bcc .lbl_C471BC                      ;C471B5|9005    |C471BC;  
 	and.w $A9D8,x                        ;C471B7|3DD8A9  |7FA9D8;  
 	bra CODE_C471BF                      ;C471BA|8003    |C471BF;  
-
-CODE_C471BC:
+.lbl_C471BC
 	and.w $A9F0,x                        ;C471BC|3DF0A9  |7FA9F0;  
 
 CODE_C471BF:
 	sta.w $AA00,x                        ;C471BF|9D00AA  |7FAA00;  
 	dex                                  ;C471C2|CA      |      ;  
-	bpl CODE_C471A4                      ;C471C3|10DF    |C471A4;  
+	bpl .lbl_C471A4                      ;C471C3|10DF    |C471A4;  
 	jsr.w CODE_C47214                    ;C471C5|201472  |C47214;  
 	inc.b $BE                            ;C471C8|E6BE    |0000BE;  
 	bra CODE_C47196                      ;C471CA|80CA    |C47196;  
-
-CODE_C471CC:
+.lbl_C471CC
 	jmp.w CODE_C46DE4                    ;C471CC|4CE46D  |C46DE4;  
 
 CODE_C471CF:
@@ -9981,43 +9603,39 @@ CODE_C471D1:
 	lda.b $BE                            ;C471D2|A5BE    |0000BE;  
 	tax                                  ;C471D4|AA      |      ;  
 	lda.w $AA08,x                        ;C471D5|BD08AA  |7FAA08;  
-	bmi CODE_C471CC                      ;C471D8|30F2    |C471CC;  
+	bmi .lbl_C471CC                      ;C471D8|30F2    |C471CC;  
 	sta.b $BF                            ;C471DA|85BF    |0000BF;  
 	ldx.w #$0007                         ;C471DC|A20700  |      ;  
-
-CODE_C471DF:
+.lbl_C471DF
 	lda.b $BE                            ;C471DF|A5BE    |0000BE;  
 	lsr a                                ;C471E1|4A      |      ;  
 	sta.b $C0                            ;C471E2|85C0    |0000C0;  
-	bcc CODE_C471EB                      ;C471E4|9005    |C471EB;  
+	bcc .lbl_C471EB                      ;C471E4|9005    |C471EB;  
 	lda.w $A9D0,x                        ;C471E6|BDD0A9  |7FA9D0;  
 	bra CODE_C471EE                      ;C471E9|8003    |C471EE;  
-
-CODE_C471EB:
+.lbl_C471EB
 	lda.w $A9E8,x                        ;C471EB|BDE8A9  |7FA9E8;  
 
 CODE_C471EE:
 	lsr.b $C0                            ;C471EE|46C0    |0000C0;  
-	bcc CODE_C471F7                      ;C471F0|9005    |C471F7;  
+	bcc .lbl_C471F7                      ;C471F0|9005    |C471F7;  
 	and.w $A9D8,x                        ;C471F2|3DD8A9  |7FA9D8;  
 	bra CODE_C471FA                      ;C471F5|8003    |C471FA;  
-
-CODE_C471F7:
+.lbl_C471F7
 	and.w $A9F0,x                        ;C471F7|3DF0A9  |7FA9F0;  
 
 CODE_C471FA:
 	lsr.b $C0                            ;C471FA|46C0    |0000C0;  
-	bcc CODE_C47203                      ;C471FC|9005    |C47203;  
+	bcc .lbl_C47203                      ;C471FC|9005    |C47203;  
 	and.w $A9E0,x                        ;C471FE|3DE0A9  |7FA9E0;  
 	bra CODE_C47206                      ;C47201|8003    |C47206;  
-
-CODE_C47203:
+.lbl_C47203
 	and.w $A9F8,x                        ;C47203|3DF8A9  |7FA9F8;  
 
 CODE_C47206:
 	sta.w $AA00,x                        ;C47206|9D00AA  |7FAA00;  
 	dex                                  ;C47209|CA      |      ;  
-	bpl CODE_C471DF                      ;C4720A|10D3    |C471DF;  
+	bpl .lbl_C471DF                      ;C4720A|10D3    |C471DF;  
 	jsr.w CODE_C47214                    ;C4720C|201472  |C47214;  
 	inc.b $BE                            ;C4720F|E6BE    |0000BE;  
 	jmp.w CODE_C471D1                    ;C47211|4CD171  |C471D1;  
@@ -10026,139 +9644,122 @@ CODE_C47214:
 	tdc                                  ;C47214|7B      |      ;  
 	tax                                  ;C47215|AA      |      ;  
 	ldy.b $C5                            ;C47216|A4C5    |0000C5;  
-
-CODE_C47218:
+.lbl_C47218
 	lda.b $BF                            ;C47218|A5BF    |0000BF;  
 	lsr a                                ;C4721A|4A      |      ;  
 	sta.b $C0                            ;C4721B|85C0    |0000C0;  
-	bcc CODE_C47228                      ;C4721D|9009    |C47228;  
+	bcc .lbl_C47228                      ;C4721D|9009    |C47228;  
 	lda.w $AA00,x                        ;C4721F|BD00AA  |7FAA00;  
 	ora.w $08C1,y                        ;C47222|19C108  |7F08C1;  
 	sta.w $08C1,y                        ;C47225|99C108  |7F08C1;  
-
-CODE_C47228:
+.lbl_C47228
 	lsr.b $C0                            ;C47228|46C0    |0000C0;  
-	bcc CODE_C47235                      ;C4722A|9009    |C47235;  
+	bcc .lbl_C47235                      ;C4722A|9009    |C47235;  
 	lda.w $AA00,x                        ;C4722C|BD00AA  |7FAA00;  
 	ora.w $08C2,y                        ;C4722F|19C208  |7F08C2;  
 	sta.w $08C2,y                        ;C47232|99C208  |7F08C2;  
-
-CODE_C47235:
+.lbl_C47235
 	lsr.b $C0                            ;C47235|46C0    |0000C0;  
-	bcc CODE_C47242                      ;C47237|9009    |C47242;  
+	bcc .lbl_C47242                      ;C47237|9009    |C47242;  
 	lda.w $AA00,x                        ;C47239|BD00AA  |7FAA00;  
 	ora.w $08D1,y                        ;C4723C|19D108  |7F08D1;  
 	sta.w $08D1,y                        ;C4723F|99D108  |7F08D1;  
-
-CODE_C47242:
+.lbl_C47242
 	lsr.b $C0                            ;C47242|46C0    |0000C0;  
-	bcc CODE_C4724F                      ;C47244|9009    |C4724F;  
+	bcc .lbl_C4724F                      ;C47244|9009    |C4724F;  
 	lda.w $AA00,x                        ;C47246|BD00AA  |7FAA00;  
 	ora.w $08D2,y                        ;C47249|19D208  |7F08D2;  
 	sta.w $08D2,y                        ;C4724C|99D208  |7F08D2;  
-
-CODE_C4724F:
+.lbl_C4724F
 	iny                                  ;C4724F|C8      |      ;  
 	iny                                  ;C47250|C8      |      ;  
 	inx                                  ;C47251|E8      |      ;  
 	cpx.w #$0008                         ;C47252|E00800  |      ;  
-	bne CODE_C47218                      ;C47255|D0C1    |C47218;  
+	bne .lbl_C47218                      ;C47255|D0C1    |C47218;  
 	rts                                  ;C47257|60      |      ;  
 
 CODE_C47258:
 	ldy.w #$0007                         ;C47258|A00700  |      ;  
-
-CODE_C4725B:
+.lbl_C4725B
 	lda.b [$C2]                          ;C4725B|A7C2    |0000C2;  
 	inc.b $C2                            ;C4725D|E6C2    |0000C2;  
-	bne CODE_C47264                      ;C4725F|D003    |C47264;  
+	bne .lbl_C47264                      ;C4725F|D003    |C47264;  
 	jsr.w CODE_C47A4A                    ;C47261|204A7A  |C47A4A;  
-
-CODE_C47264:
+.lbl_C47264
 	sta.w $A9D0,x                        ;C47264|9DD0A9  |7FA9D0;  
 	eor.b #$FF                           ;C47267|49FF    |      ;  
 	sta.w $A9E8,x                        ;C47269|9DE8A9  |7FA9E8;  
 	inx                                  ;C4726C|E8      |      ;  
 	dey                                  ;C4726D|88      |      ;  
-	bpl CODE_C4725B                      ;C4726E|10EB    |C4725B;  
+	bpl .lbl_C4725B                      ;C4726E|10EB    |C4725B;  
 	rts                                  ;C47270|60      |      ;  
 
 CODE_C47271:
 	ldy.w #$0007                         ;C47271|A00700  |      ;  
 	lda.b [$C2]                          ;C47274|A7C2    |0000C2;  
 	inc.b $C2                            ;C47276|E6C2    |0000C2;  
-	bne CODE_C4727D                      ;C47278|D003    |C4727D;  
+	bne .lbl_C4727D                      ;C47278|D003    |C4727D;  
 	jsr.w CODE_C47A4A                    ;C4727A|204A7A  |C47A4A;  
-
-CODE_C4727D:
+.lbl_C4727D
 	asl a                                ;C4727D|0A      |      ;  
 	sta.b $BE                            ;C4727E|85BE    |0000BE;  
 	tdc                                  ;C47280|7B      |      ;  
-	bcc CODE_C4728C                      ;C47281|9009    |C4728C;  
-
-CODE_C47283:
+	bcc .lbl_C4728C                      ;C47281|9009    |C4728C;  
+.lbl_C47283
 	lda.b [$C2]                          ;C47283|A7C2    |0000C2;  
 	inc.b $C2                            ;C47285|E6C2    |0000C2;  
-	bne CODE_C4728C                      ;C47287|D003    |C4728C;  
+	bne .lbl_C4728C                      ;C47287|D003    |C4728C;  
 	jsr.w CODE_C47A4A                    ;C47289|204A7A  |C47A4A;  
-
-CODE_C4728C:
+.lbl_C4728C
 	sta.w $A9D0,x                        ;C4728C|9DD0A9  |7FA9D0;  
 	eor.b #$FF                           ;C4728F|49FF    |      ;  
 	sta.w $A9E8,x                        ;C47291|9DE8A9  |7FA9E8;  
 	eor.b #$FF                           ;C47294|49FF    |      ;  
 	inx                                  ;C47296|E8      |      ;  
 	dey                                  ;C47297|88      |      ;  
-	bmi CODE_C472A0                      ;C47298|3006    |C472A0;  
+	bmi .lbl_C472A0                      ;C47298|3006    |C472A0;  
 	asl.b $BE                            ;C4729A|06BE    |0000BE;  
-	bcs CODE_C47283                      ;C4729C|B0E5    |C47283;  
-	bra CODE_C4728C                      ;C4729E|80EC    |C4728C;  
-
-CODE_C472A0:
+	bcs .lbl_C47283                      ;C4729C|B0E5    |C47283;  
+	bra .lbl_C4728C                      ;C4729E|80EC    |C4728C;  
+.lbl_C472A0
 	rts                                  ;C472A0|60      |      ;  
 
 CODE_C472A1:
 	lda.b [$C2]                          ;C472A1|A7C2    |0000C2;  
 	inc.b $C2                            ;C472A3|E6C2    |0000C2;  
-	bne CODE_C472AA                      ;C472A5|D003    |C472AA;  
+	bne .lbl_C472AA                      ;C472A5|D003    |C472AA;  
 	.db $20,$4A,$7A                       ;C472A7|        |C47A4A;  
-
-CODE_C472AA:
+.lbl_C472AA
 	sta.b $BF                            ;C472AA|85BF    |0000BF;  
 	lda.b [$C2]                          ;C472AC|A7C2    |0000C2;  
 	inc.b $C2                            ;C472AE|E6C2    |0000C2;  
-	bne CODE_C472B5                      ;C472B0|D003    |C472B5;  
+	bne .lbl_C472B5                      ;C472B0|D003    |C472B5;  
 	jsr.w CODE_C47A4A                    ;C472B2|204A7A  |C47A4A;  
-
-CODE_C472B5:
+.lbl_C472B5
 	sta.b $BE                            ;C472B5|85BE    |0000BE;  
 	ldy.w #$0004                         ;C472B7|A00400  |      ;  
 	and.b #$03                           ;C472BA|2903    |      ;  
-	beq CODE_C472C2                      ;C472BC|F004    |C472C2;  
+	beq .lbl_C472C2                      ;C472BC|F004    |C472C2;  
 	dey                                  ;C472BE|88      |      ;  
 	tya                                  ;C472BF|98      |      ;  
 	trb.b $BE                            ;C472C0|14BE    |0000BE;  
-
-CODE_C472C2:
+.lbl_C472C2
 	sty.b $C0                            ;C472C2|84C0    |0000C0;  
 	tdc                                  ;C472C4|7B      |      ;  
 	tay                                  ;C472C5|A8      |      ;  
-
-CODE_C472C6:
+.lbl_C472C6
 	lda.b [$C2]                          ;C472C6|A7C2    |0000C2;  
 	inc.b $C2                            ;C472C8|E6C2    |0000C2;  
-	bne CODE_C472CF                      ;C472CA|D003    |C472CF;  
+	bne .lbl_C472CF                      ;C472CA|D003    |C472CF;  
 	.db $20,$4A,$7A                       ;C472CC|        |C47A4A;  
-
-CODE_C472CF:
+.lbl_C472CF
 	sta.w $AA11,y                        ;C472CF|9911AA  |7FAA11;  
 	iny                                  ;C472D2|C8      |      ;  
 	dec.b $C0                            ;C472D3|C6C0    |0000C0;  
-	bne CODE_C472C6                      ;C472D5|D0EF    |C472C6;  
+	bne .lbl_C472C6                      ;C472D5|D0EF    |C472C6;  
 	lda.b #$07                           ;C472D7|A907    |      ;  
 	sta.b $C0                            ;C472D9|85C0    |0000C0;  
-
-CODE_C472DB:
+.lbl_C472DB
 	tdc                                  ;C472DB|7B      |      ;  
 	lda.b $BE                            ;C472DC|A5BE    |0000BE;  
 	and.b #$03                           ;C472DE|2903    |      ;  
@@ -10173,28 +9774,25 @@ CODE_C472DB:
 	ror.b $BE                            ;C472F2|66BE    |0000BE;  
 	inx                                  ;C472F4|E8      |      ;  
 	dec.b $C0                            ;C472F5|C6C0    |0000C0;  
-	bpl CODE_C472DB                      ;C472F7|10E2    |C472DB;  
+	bpl .lbl_C472DB                      ;C472F7|10E2    |C472DB;  
 	rts                                  ;C472F9|60      |      ;  
 
 CODE_C472FA:
 	ldy.w #$0003                         ;C472FA|A00300  |      ;  
-
-CODE_C472FD:
+.lbl_C472FD
 	lda.b [$C2]                          ;C472FD|A7C2    |0000C2;  
 	inc.b $C2                            ;C472FF|E6C2    |0000C2;  
-	bne CODE_C47306                      ;C47301|D003    |C47306;  
+	bne .lbl_C47306                      ;C47301|D003    |C47306;  
 	jsr.w CODE_C47A4A                    ;C47303|204A7A  |C47A4A;  
-
-CODE_C47306:
+.lbl_C47306
 	sta.w $AA11,y                        ;C47306|9911AA  |7FAA11;  
 	dey                                  ;C47309|88      |      ;  
-	bpl CODE_C472FD                      ;C4730A|10F1    |C472FD;  
+	bpl .lbl_C472FD                      ;C4730A|10F1    |C472FD;  
 	lda.b [$C2]                          ;C4730C|A7C2    |0000C2;  
 	inc.b $C2                            ;C4730E|E6C2    |0000C2;  
-	bne CODE_C47315                      ;C47310|D003    |C47315;  
+	bne .lbl_C47315                      ;C47310|D003    |C47315;  
 	.db $20,$4A,$7A                       ;C47312|        |C47A4A;  
-
-CODE_C47315:
+.lbl_C47315
 	pha                                  ;C47315|48      |      ;  
 	and.b #$0F                           ;C47316|290F    |      ;  
 	sta.w $AA16                          ;C47318|8D16AA  |7FAA16;  
@@ -10206,10 +9804,9 @@ CODE_C47315:
 	sta.w $AA15                          ;C47320|8D15AA  |7FAA15;  
 	lda.b [$C2]                          ;C47323|A7C2    |0000C2;  
 	inc.b $C2                            ;C47325|E6C2    |0000C2;  
-	bne CODE_C4732C                      ;C47327|D003    |C4732C;  
+	bne .lbl_C4732C                      ;C47327|D003    |C4732C;  
 	.db $20,$4A,$7A                       ;C47329|        |C47A4A;  
-
-CODE_C4732C:
+.lbl_C4732C
 	pha                                  ;C4732C|48      |      ;  
 	and.b #$0F                           ;C4732D|290F    |      ;  
 	sta.w $AA18                          ;C4732F|8D18AA  |7FAA18;  
@@ -10256,38 +9853,34 @@ CODE_C47342:
 	sta.w $A9E8,x                        ;C47370|9DE8A9  |7FA9E8;  
 	inx                                  ;C47373|E8      |      ;  
 	dec.b $BE                            ;C47374|C6BE    |0000BE;  
-	bmi CODE_C47386                      ;C47376|300E    |C47386;  
+	bmi .lbl_C47386                      ;C47376|300E    |C47386;  
 	lda.b $C0                            ;C47378|A5C0    |0000C0;  
-	bne CODE_C47380                      ;C4737A|D004    |C47380;  
+	bne .lbl_C47380                      ;C4737A|D004    |C47380;  
 	inc.b $C0                            ;C4737C|E6C0    |0000C0;  
 	bra CODE_C47342                      ;C4737E|80C2    |C47342;  
-
-CODE_C47380:
+.lbl_C47380
 	stz.b $C0                            ;C47380|64C0    |0000C0;  
 	inc.b $BF                            ;C47382|E6BF    |0000BF;  
 	bra CODE_C47342                      ;C47384|80BC    |C47342;  
-
-CODE_C47386:
+.lbl_C47386
 	rts                                  ;C47386|60      |      ;  
 
 CODE_C47387:
 	bit.b #$40                           ;C47387|8940    |      ;  
-	beq CODE_C473AD                      ;C47389|F022    |C473AD;  
+	beq .lbl_C473AD                      ;C47389|F022    |C473AD;  
 	sta.b $C9                            ;C4738B|85C9    |0000C9;  
 	lda.b [$C2]                          ;C4738D|A7C2    |0000C2;  
 	inc.b $C2                            ;C4738F|E6C2    |0000C2;  
-	bne CODE_C47396                      ;C47391|D003    |C47396;  
+	bne .lbl_C47396                      ;C47391|D003    |C47396;  
 	jsr.w CODE_C47A4A                    ;C47393|204A7A  |C47A4A;  
-
-CODE_C47396:
+.lbl_C47396
 	sta.b $CA                            ;C47396|85CA    |0000CA;  
 	bit.b #$04                           ;C47398|8904    |      ;  
-	bne CODE_C473A1                      ;C4739A|D005    |C473A1;  
+	bne .lbl_C473A1                      ;C4739A|D005    |C473A1;  
 	xba                                  ;C4739C|EB      |      ;  
 	lda.b #$08                           ;C4739D|A908    |      ;  
 	bra CODE_C473A4                      ;C4739F|8003    |C473A4;  
-
-CODE_C473A1:
+.lbl_C473A1
 	xba                                  ;C473A1|EB      |      ;  
 	lda.b #$0A                           ;C473A2|A90A    |      ;  
 
@@ -10297,22 +9890,19 @@ CODE_C473A4:
 	xba                                  ;C473A8|EB      |      ;  
 	and.b #$03                           ;C473A9|2903    |      ;  
 	bra CODE_C473CD                      ;C473AB|8020    |C473CD;  
-
-CODE_C473AD:
+.lbl_C473AD
 	sta.b $C9                            ;C473AD|85C9    |0000C9;  
 	lda.b [$C2]                          ;C473AF|A7C2    |0000C2;  
 	inc.b $C2                            ;C473B1|E6C2    |0000C2;  
-	bne CODE_C473B8                      ;C473B3|D003    |C473B8;  
+	bne .lbl_C473B8                      ;C473B3|D003    |C473B8;  
 	jsr.w CODE_C47A4A                    ;C473B5|204A7A  |C47A4A;  
-
-CODE_C473B8:
+.lbl_C473B8
 	sta.b $CA                            ;C473B8|85CA    |0000CA;  
 	lda.b [$C2]                          ;C473BA|A7C2    |0000C2;  
 	inc.b $C2                            ;C473BC|E6C2    |0000C2;  
-	bne CODE_C473C3                      ;C473BE|D003    |C473C3;  
+	bne .lbl_C473C3                      ;C473BE|D003    |C473C3;  
 	jsr.w CODE_C47A4A                    ;C473C0|204A7A  |C47A4A;  
-
-CODE_C473C3:
+.lbl_C473C3
 	sta.b $CB                            ;C473C3|85CB    |0000CB;  
 
 CODE_C473C5:
@@ -10384,36 +9974,33 @@ DATA8_C4740D:
 	.db $A0,$79,$3A,$78,$D8,$79,$A5,$78   ;C47491
 	.db $F8,$79                           ;C47499
 	ldx.w #$0007                         ;C4749B|A20700  |      ;  
-
-CODE_C4749E:
+.lbl_C4749E
 	lda.b [$C2]                          ;C4749E|A7C2    |0000C2;  
 	inc.b $C2                            ;C474A0|E6C2    |0000C2;  
-	bne CODE_C474A7                      ;C474A2|D003    |C474A7;  
+	bne .lbl_C474A7                      ;C474A2|D003    |C474A7;  
 	jsr.w CODE_C47A4A                    ;C474A4|204A7A  |C47A4A;  
-
-CODE_C474A7:
+.lbl_C474A7
 	sta.w $08C1,y                        ;C474A7|99C108  |7F08C1;  
 	iny                                  ;C474AA|C8      |      ;  
 	iny                                  ;C474AB|C8      |      ;  
 	dex                                  ;C474AC|CA      |      ;  
-	bpl CODE_C4749E                      ;C474AD|10EF    |C4749E;  
+	bpl .lbl_C4749E                      ;C474AD|10EF    |C4749E;  
 	rts                                  ;C474AF|60      |      ;  
 
 CODE_C474B0:
 	tdc                                  ;C474B0|7B      |      ;  
-	bra CODE_C474C0                      ;C474B1|800D    |C474C0;  
+	bra .lbl_C474C0                      ;C474B1|800D    |C474C0;  
 
 CODE_C474B3:
 	lda.b #$FF                           ;C474B3|A9FF    |      ;  
-	bra CODE_C474C0                      ;C474B5|8009    |C474C0;  
+	bra .lbl_C474C0                      ;C474B5|8009    |C474C0;  
 
 CODE_C474B7:
 	lda.b [$C2]                          ;C474B7|A7C2    |0000C2;  
 	inc.b $C2                            ;C474B9|E6C2    |0000C2;  
-	bne CODE_C474C0                      ;C474BB|D003    |C474C0;  
+	bne .lbl_C474C0                      ;C474BB|D003    |C474C0;  
 	.db $20,$4A,$7A                       ;C474BD|        |C47A4A;  
-
-CODE_C474C0:
+.lbl_C474C0
 	sta.w $08C1,y                        ;C474C0|99C108  |7F08C1;  
 	sta.w $08C3,y                        ;C474C3|99C308  |7F08C3;  
 	sta.w $08C5,y                        ;C474C6|99C508  |7F08C5;  
@@ -10425,20 +10012,18 @@ CODE_C474C0:
 	rts                                  ;C474D8|60      |      ;  
 	lda.b [$C2]                          ;C474D9|A7C2    |0000C2;  
 	inc.b $C2                            ;C474DB|E6C2    |0000C2;  
-	bne CODE_C474E2                      ;C474DD|D003    |C474E2;  
+	bne .lbl_C474E2                      ;C474DD|D003    |C474E2;  
 	.db $20,$4A,$7A                       ;C474DF|        |C47A4A;  
-
-CODE_C474E2:
+.lbl_C474E2
 	sta.w $08C1,y                        ;C474E2|99C108  |7F08C1;  
 	sta.w $08C5,y                        ;C474E5|99C508  |7F08C5;  
 	sta.w $08C9,y                        ;C474E8|99C908  |7F08C9;  
 	sta.w $08CD,y                        ;C474EB|99CD08  |7F08CD;  
 	lda.b [$C2]                          ;C474EE|A7C2    |0000C2;  
 	inc.b $C2                            ;C474F0|E6C2    |0000C2;  
-	bne CODE_C474F7                      ;C474F2|D003    |C474F7;  
+	bne .lbl_C474F7                      ;C474F2|D003    |C474F7;  
 	.db $20,$4A,$7A                       ;C474F4|        |C47A4A;  
-
-CODE_C474F7:
+.lbl_C474F7
 	sta.w $08C3,y                        ;C474F7|99C308  |7F08C3;  
 	sta.w $08C7,y                        ;C474FA|99C708  |7F08C7;  
 	sta.w $08CB,y                        ;C474FD|99CB08  |7F08CB;  
@@ -10447,74 +10032,64 @@ CODE_C474F7:
 	ldx.w #$0007                         ;C47504|A20700  |      ;  
 	lda.b [$C2]                          ;C47507|A7C2    |0000C2;  
 	inc.b $C2                            ;C47509|E6C2    |0000C2;  
-	bne CODE_C47510                      ;C4750B|D003    |C47510;  
+	bne .lbl_C47510                      ;C4750B|D003    |C47510;  
 	jsr.w CODE_C47A4A                    ;C4750D|204A7A  |C47A4A;  
-
-CODE_C47510:
+.lbl_C47510
 	asl a                                ;C47510|0A      |      ;  
 	sta.b $BE                            ;C47511|85BE    |0000BE;  
 	tdc                                  ;C47513|7B      |      ;  
-	bcc CODE_C4751F                      ;C47514|9009    |C4751F;  
-
-CODE_C47516:
+	bcc .lbl_C4751F                      ;C47514|9009    |C4751F;  
+.lbl_C47516
 	lda.b [$C2]                          ;C47516|A7C2    |0000C2;  
 	inc.b $C2                            ;C47518|E6C2    |0000C2;  
-	bne CODE_C4751F                      ;C4751A|D003    |C4751F;  
+	bne .lbl_C4751F                      ;C4751A|D003    |C4751F;  
 	jsr.w CODE_C47A4A                    ;C4751C|204A7A  |C47A4A;  
-
-CODE_C4751F:
+.lbl_C4751F
 	sta.w $08C1,y                        ;C4751F|99C108  |7F08C1;  
 	iny                                  ;C47522|C8      |      ;  
 	iny                                  ;C47523|C8      |      ;  
 	dex                                  ;C47524|CA      |      ;  
-	bmi CODE_C4752D                      ;C47525|3006    |C4752D;  
+	bmi .lbl_C4752D                      ;C47525|3006    |C4752D;  
 	asl.b $BE                            ;C47527|06BE    |0000BE;  
-	bcs CODE_C47516                      ;C47529|B0EB    |C47516;  
-	bra CODE_C4751F                      ;C4752B|80F2    |C4751F;  
-
-CODE_C4752D:
+	bcs .lbl_C47516                      ;C47529|B0EB    |C47516;  
+	bra .lbl_C4751F                      ;C4752B|80F2    |C4751F;  
+.lbl_C4752D
 	rts                                  ;C4752D|60      |      ;  
 	lda.b [$C2]                          ;C4752E|A7C2    |0000C2;  
 	inc.b $C2                            ;C47530|E6C2    |0000C2;  
-	bne CODE_C47537                      ;C47532|D003    |C47537;  
+	bne .lbl_C47537                      ;C47532|D003    |C47537;  
 	.db $20,$4A,$7A                       ;C47534|        |C47A4A;  
-
-CODE_C47537:
+.lbl_C47537
 	sta.b $BF                            ;C47537|85BF    |0000BF;  
 	lda.b [$C2]                          ;C47539|A7C2    |0000C2;  
 	inc.b $C2                            ;C4753B|E6C2    |0000C2;  
-	bne CODE_C47542                      ;C4753D|D003    |C47542;  
+	bne .lbl_C47542                      ;C4753D|D003    |C47542;  
 	.db $20,$4A,$7A                       ;C4753F|        |C47A4A;  
-
-CODE_C47542:
+.lbl_C47542
 	sta.b $BE                            ;C47542|85BE    |0000BE;  
 	ldx.w #$0004                         ;C47544|A20400  |      ;  
 	and.b #$03                           ;C47547|2903    |      ;  
-	beq CODE_C4754F                      ;C47549|F004    |C4754F;  
+	beq .lbl_C4754F                      ;C47549|F004    |C4754F;  
 	dex                                  ;C4754B|CA      |      ;  
 	txa                                  ;C4754C|8A      |      ;  
 	trb.b $BE                            ;C4754D|14BE    |0000BE;  
-
-CODE_C4754F:
+.lbl_C4754F
 	stx.b $C0                            ;C4754F|86C0    |0000C0;  
 	tdc                                  ;C47551|7B      |      ;  
 	tax                                  ;C47552|AA      |      ;  
-
-CODE_C47553:
+.lbl_C47553
 	lda.b [$C2]                          ;C47553|A7C2    |0000C2;  
 	inc.b $C2                            ;C47555|E6C2    |0000C2;  
-	bne CODE_C4755C                      ;C47557|D003    |C4755C;  
+	bne .lbl_C4755C                      ;C47557|D003    |C4755C;  
 	jsr.w CODE_C47A4A                    ;C47559|204A7A  |C47A4A;  
-
-CODE_C4755C:
+.lbl_C4755C
 	sta.w $A9D0,x                        ;C4755C|9DD0A9  |7FA9D0;  
 	inx                                  ;C4755F|E8      |      ;  
 	dec.b $C0                            ;C47560|C6C0    |0000C0;  
-	bne CODE_C47553                      ;C47562|D0EF    |C47553;  
+	bne .lbl_C47553                      ;C47562|D0EF    |C47553;  
 	lda.b #$07                           ;C47564|A907    |      ;  
 	sta.b $C0                            ;C47566|85C0    |0000C0;  
-
-CODE_C47568:
+.lbl_C47568
 	tdc                                  ;C47568|7B      |      ;  
 	lda.b $BE                            ;C47569|A5BE    |0000BE;  
 	and.b #$03                           ;C4756B|2903    |      ;  
@@ -10528,26 +10103,23 @@ CODE_C47568:
 	iny                                  ;C4757C|C8      |      ;  
 	iny                                  ;C4757D|C8      |      ;  
 	dec.b $C0                            ;C4757E|C6C0    |0000C0;  
-	bpl CODE_C47568                      ;C47580|10E6    |C47568;  
+	bpl .lbl_C47568                      ;C47580|10E6    |C47568;  
 	rts                                  ;C47582|60      |      ;  
 	ldx.w #$0003                         ;C47583|A20300  |      ;  
-
-CODE_C47586:
+.lbl_C47586
 	lda.b [$C2]                          ;C47586|A7C2    |0000C2;  
 	inc.b $C2                            ;C47588|E6C2    |0000C2;  
-	bne CODE_C4758F                      ;C4758A|D003    |C4758F;  
+	bne .lbl_C4758F                      ;C4758A|D003    |C4758F;  
 	jsr.w CODE_C47A4A                    ;C4758C|204A7A  |C47A4A;  
-
-CODE_C4758F:
+.lbl_C4758F
 	sta.w $AA00,x                        ;C4758F|9D00AA  |7FAA00;  
 	dex                                  ;C47592|CA      |      ;  
-	bpl CODE_C47586                      ;C47593|10F1    |C47586;  
+	bpl .lbl_C47586                      ;C47593|10F1    |C47586;  
 	lda.b [$C2]                          ;C47595|A7C2    |0000C2;  
 	inc.b $C2                            ;C47597|E6C2    |0000C2;  
-	bne CODE_C4759E                      ;C47599|D003    |C4759E;  
+	bne .lbl_C4759E                      ;C47599|D003    |C4759E;  
 	.db $20,$4A,$7A                       ;C4759B|        |C47A4A;  
-
-CODE_C4759E:
+.lbl_C4759E
 	pha                                  ;C4759E|48      |      ;  
 	and.b #$0F                           ;C4759F|290F    |      ;  
 	sta.w $A9D1                          ;C475A1|8DD1A9  |7FA9D1;  
@@ -10559,10 +10131,9 @@ CODE_C4759E:
 	sta.w $A9D0                          ;C475A9|8DD0A9  |7FA9D0;  
 	lda.b [$C2]                          ;C475AC|A7C2    |0000C2;  
 	inc.b $C2                            ;C475AE|E6C2    |0000C2;  
-	bne CODE_C475B5                      ;C475B0|D003    |C475B5;  
+	bne .lbl_C475B5                      ;C475B0|D003    |C475B5;  
 	.db $20,$4A,$7A                       ;C475B2|        |C47A4A;  
-
-CODE_C475B5:
+.lbl_C475B5
 	pha                                  ;C475B5|48      |      ;  
 	and.b #$0F                           ;C475B6|290F    |      ;  
 	sta.w $A9D3                          ;C475B8|8DD3A9  |7FA9D3;  
@@ -10608,18 +10179,16 @@ CODE_C475CB:
 	iny                                  ;C475F7|C8      |      ;  
 	iny                                  ;C475F8|C8      |      ;  
 	dec.b $BE                            ;C475F9|C6BE    |0000BE;  
-	bmi CODE_C4760B                      ;C475FB|300E    |C4760B;  
+	bmi .lbl_C4760B                      ;C475FB|300E    |C4760B;  
 	lda.b $C0                            ;C475FD|A5C0    |0000C0;  
-	bne CODE_C47605                      ;C475FF|D004    |C47605;  
+	bne .lbl_C47605                      ;C475FF|D004    |C47605;  
 	inc.b $C0                            ;C47601|E6C0    |0000C0;  
 	bra CODE_C475CB                      ;C47603|80C6    |C475CB;  
-
-CODE_C47605:
+.lbl_C47605
 	stz.b $C0                            ;C47605|64C0    |0000C0;  
 	inc.b $BF                            ;C47607|E6BF    |0000BF;  
 	bra CODE_C475CB                      ;C47609|80C0    |C475CB;  
-
-CODE_C4760B:
+.lbl_C4760B
 	rts                                  ;C4760B|60      |      ;  
 	.db $A2,$03,$00,$A7,$C2,$E6,$C2,$D0   ;C4760C
 	.db $03,$20,$4A,$7A,$99,$C1,$08,$99   ;C47614|        |000020;  
@@ -10628,18 +10197,16 @@ CODE_C4760B:
 CODE_C47624:
 	lda.b [$C2]                          ;C47624|A7C2    |0000C2;  
 	inc.b $C2                            ;C47626|E6C2    |0000C2;  
-	bne CODE_C4762D                      ;C47628|D003    |C4762D;  
+	bne .lbl_C4762D                      ;C47628|D003    |C4762D;  
 	jsr.w CODE_C47A4A                    ;C4762A|204A7A  |C47A4A;  
-
-CODE_C4762D:
+.lbl_C4762D
 	sta.b $BE                            ;C4762D|85BE    |0000BE;  
 	sta.b $C0                            ;C4762F|85C0    |0000C0;  
 	lda.b [$C2]                          ;C47631|A7C2    |0000C2;  
 	inc.b $C2                            ;C47633|E6C2    |0000C2;  
-	bne CODE_C4763A                      ;C47635|D003    |C4763A;  
+	bne .lbl_C4763A                      ;C47635|D003    |C4763A;  
 	jsr.w CODE_C47A4A                    ;C47637|204A7A  |C47A4A;  
-
-CODE_C4763A:
+.lbl_C4763A
 	xba                                  ;C4763A|EB      |      ;  
 	lda.b #$00                           ;C4763B|A900    |      ;  
 	rep #$20                             ;C4763D|C220    |      ;  
@@ -10649,26 +10216,23 @@ CODE_C4763A:
 	ror a                                ;C47644|6A      |      ;  
 	lsr a                                ;C47645|4A      |      ;  
 	ror.b $BE                            ;C47646|66BE    |0000BE;  
-	bcc CODE_C4764B                      ;C47648|9001    |C4764B;  
+	bcc .lbl_C4764B                      ;C47648|9001    |C4764B;  
 	inc a                                ;C4764A|1A      |      ;  
-
-CODE_C4764B:
+.lbl_C4764B
 	ror.b $BE                            ;C4764B|66BE    |0000BE;  
-	bcc CODE_C47653                      ;C4764D|9004    |C47653;  
+	bcc .lbl_C47653                      ;C4764D|9004    |C47653;  
 	clc                                  ;C4764F|18      |      ;  
 	adc.w #$0010                         ;C47650|691000  |      ;  
-
-CODE_C47653:
+.lbl_C47653
 	clc                                  ;C47653|18      |      ;  
 	adc.b $C7                            ;C47654|65C7    |0000C7;  
 	tax                                  ;C47656|AA      |      ;  
 	sep #$20                             ;C47657|E220    |      ;  
 	lda.b $C0                            ;C47659|A5C0    |0000C0;  
-	bpl CODE_C47684                      ;C4765B|1027    |C47684;  
+	bpl .lbl_C47684                      ;C4765B|1027    |C47684;  
 	lda.b #$07                           ;C4765D|A907    |      ;  
 	sta.b $BE                            ;C4765F|85BE    |0000BE;  
-
-CODE_C47661:
+.lbl_C47661
 	lda.w $08C1,x                        ;C47661|BDC108  |7F08C1;  
 	sta.w $08CF,y                        ;C47664|99CF08  |7F08CF;  
 	inx                                  ;C47667|E8      |      ;  
@@ -10676,17 +10240,17 @@ CODE_C47661:
 	dey                                  ;C47669|88      |      ;  
 	dey                                  ;C4766A|88      |      ;  
 	dec.b $BE                            ;C4766B|C6BE    |0000BE;  
-	bpl CODE_C47661                      ;C4766D|10F2    |C47661;  
+	bpl .lbl_C47661                      ;C4766D|10F2    |C47661;  
 	rts                                  ;C4766F|60      |      ;  
 
 CODE_C47670:
 	ldx.b $C5                            ;C47670|A6C5    |0000C5;  
-	bra CODE_C47684                      ;C47672|8010    |C47684;  
+	bra .lbl_C47684                      ;C47672|8010    |C47684;  
 
 CODE_C47674:
 	ldx.b $C5                            ;C47674|A6C5    |0000C5;  
 	inx                                  ;C47676|E8      |      ;  
-	bra CODE_C47684                      ;C47677|800B    |C47684;  
+	bra .lbl_C47684                      ;C47677|800B    |C47684;  
 
 CODE_C47679:
 	rep #$20                             ;C47679|C220    |      ;  
@@ -10695,8 +10259,7 @@ CODE_C47679:
 	adc.w #$0010                         ;C4767E|691000  |      ;  
 	tax                                  ;C47681|AA      |      ;  
 	sep #$20                             ;C47682|E220    |      ;  
-
-CODE_C47684:
+.lbl_C47684
 	lda.w $08C1,x                        ;C47684|BDC108  |7F08C1;  
 	sta.w $08C1,y                        ;C47687|99C108  |7F08C1;  
 	lda.w $08C3,x                        ;C4768A|BDC308  |7F08C3;  
@@ -10735,8 +10298,7 @@ CODE_C476BE:
 CODE_C476C9:
 	lda.b #$07                           ;C476C9|A907    |      ;  
 	sta.b $BE                            ;C476CB|85BE    |0000BE;  
-
-CODE_C476CD:
+.lbl_C476CD
 	lda.w $08C1,x                        ;C476CD|BDC108  |7F08C1;  
 	eor.b #$FF                           ;C476D0|49FF    |      ;  
 	sta.w $08C1,y                        ;C476D2|99C108  |7F08C1;  
@@ -10745,15 +10307,14 @@ CODE_C476CD:
 	iny                                  ;C476D7|C8      |      ;  
 	iny                                  ;C476D8|C8      |      ;  
 	dec.b $BE                            ;C476D9|C6BE    |0000BE;  
-	bpl CODE_C476CD                      ;C476DB|10F0    |C476CD;  
+	bpl .lbl_C476CD                      ;C476DB|10F0    |C476CD;  
 	rts                                  ;C476DD|60      |      ;  
 
 CODE_C476DE:
 	ldx.b $C5                            ;C476DE|A6C5    |0000C5;  
 	lda.b #$07                           ;C476E0|A907    |      ;  
 	sta.b $BE                            ;C476E2|85BE    |0000BE;  
-
-CODE_C476E4:
+.lbl_C476E4
 	lda.w $08C1,x                        ;C476E4|BDC108  |7F08C1;  
 	ora.w $08C2,x                        ;C476E7|1DC208  |7F08C2;  
 	sta.w $08C1,y                        ;C476EA|99C108  |7F08C1;  
@@ -10762,15 +10323,14 @@ CODE_C476E4:
 	iny                                  ;C476EF|C8      |      ;  
 	iny                                  ;C476F0|C8      |      ;  
 	dec.b $BE                            ;C476F1|C6BE    |0000BE;  
-	bpl CODE_C476E4                      ;C476F3|10EF    |C476E4;  
+	bpl .lbl_C476E4                      ;C476F3|10EF    |C476E4;  
 	rts                                  ;C476F5|60      |      ;  
 
 CODE_C476F6:
 	ldx.b $C5                            ;C476F6|A6C5    |0000C5;  
 	lda.b #$07                           ;C476F8|A907    |      ;  
 	sta.b $BE                            ;C476FA|85BE    |0000BE;  
-
-CODE_C476FC:
+.lbl_C476FC
 	lda.w $08C1,x                        ;C476FC|BDC108  |7F08C1;  
 	ora.w $08D1,x                        ;C476FF|1DD108  |7F08D1;  
 	sta.w $08C1,y                        ;C47702|99C108  |7F08C1;  
@@ -10779,15 +10339,14 @@ CODE_C476FC:
 	iny                                  ;C47707|C8      |      ;  
 	iny                                  ;C47708|C8      |      ;  
 	dec.b $BE                            ;C47709|C6BE    |0000BE;  
-	bpl CODE_C476FC                      ;C4770B|10EF    |C476FC;  
+	bpl .lbl_C476FC                      ;C4770B|10EF    |C476FC;  
 	rts                                  ;C4770D|60      |      ;  
 
 CODE_C4770E:
 	ldx.b $C5                            ;C4770E|A6C5    |0000C5;  
 	lda.b #$07                           ;C47710|A907    |      ;  
 	sta.b $BE                            ;C47712|85BE    |0000BE;  
-
-CODE_C47714:
+.lbl_C47714
 	lda.w $08C2,x                        ;C47714|BDC208  |7F08C2;  
 	ora.w $08D1,x                        ;C47717|1DD108  |7F08D1;  
 	sta.w $08C1,y                        ;C4771A|99C108  |7F08C1;  
@@ -10796,15 +10355,14 @@ CODE_C47714:
 	iny                                  ;C4771F|C8      |      ;  
 	iny                                  ;C47720|C8      |      ;  
 	dec.b $BE                            ;C47721|C6BE    |0000BE;  
-	bpl CODE_C47714                      ;C47723|10EF    |C47714;  
+	bpl .lbl_C47714                      ;C47723|10EF    |C47714;  
 	rts                                  ;C47725|60      |      ;  
 
 CODE_C47726:
 	ldx.b $C5                            ;C47726|A6C5    |0000C5;  
 	lda.b #$07                           ;C47728|A907    |      ;  
 	sta.b $BE                            ;C4772A|85BE    |0000BE;  
-
-CODE_C4772C:
+.lbl_C4772C
 	lda.w $08C1,x                        ;C4772C|BDC108  |7F08C1;  
 	ora.w $08C2,x                        ;C4772F|1DC208  |7F08C2;  
 	ora.w $08D1,x                        ;C47732|1DD108  |7F08D1;  
@@ -10814,15 +10372,14 @@ CODE_C4772C:
 	iny                                  ;C4773A|C8      |      ;  
 	iny                                  ;C4773B|C8      |      ;  
 	dec.b $BE                            ;C4773C|C6BE    |0000BE;  
-	bpl CODE_C4772C                      ;C4773E|10EC    |C4772C;  
+	bpl .lbl_C4772C                      ;C4773E|10EC    |C4772C;  
 	rts                                  ;C47740|60      |      ;  
 
 CODE_C47741:
 	ldx.b $C5                            ;C47741|A6C5    |0000C5;  
 	lda.b #$07                           ;C47743|A907    |      ;  
 	sta.b $BE                            ;C47745|85BE    |0000BE;  
-
-CODE_C47747:
+.lbl_C47747
 	lda.w $08C1,x                        ;C47747|BDC108  |7F08C1;  
 	and.w $08C2,x                        ;C4774A|3DC208  |7F08C2;  
 	sta.w $08C1,y                        ;C4774D|99C108  |7F08C1;  
@@ -10831,15 +10388,14 @@ CODE_C47747:
 	iny                                  ;C47752|C8      |      ;  
 	iny                                  ;C47753|C8      |      ;  
 	dec.b $BE                            ;C47754|C6BE    |0000BE;  
-	bpl CODE_C47747                      ;C47756|10EF    |C47747;  
+	bpl .lbl_C47747                      ;C47756|10EF    |C47747;  
 	rts                                  ;C47758|60      |      ;  
 
 CODE_C47759:
 	ldx.b $C5                            ;C47759|A6C5    |0000C5;  
 	lda.b #$07                           ;C4775B|A907    |      ;  
 	sta.b $BE                            ;C4775D|85BE    |0000BE;  
-
-CODE_C4775F:
+.lbl_C4775F
 	lda.w $08C1,x                        ;C4775F|BDC108  |7F08C1;  
 	and.w $08D1,x                        ;C47762|3DD108  |7F08D1;  
 	sta.w $08C1,y                        ;C47765|99C108  |7F08C1;  
@@ -10848,15 +10404,14 @@ CODE_C4775F:
 	iny                                  ;C4776A|C8      |      ;  
 	iny                                  ;C4776B|C8      |      ;  
 	dec.b $BE                            ;C4776C|C6BE    |0000BE;  
-	bpl CODE_C4775F                      ;C4776E|10EF    |C4775F;  
+	bpl .lbl_C4775F                      ;C4776E|10EF    |C4775F;  
 	rts                                  ;C47770|60      |      ;  
 
 CODE_C47771:
 	ldx.b $C5                            ;C47771|A6C5    |0000C5;  
 	lda.b #$07                           ;C47773|A907    |      ;  
 	sta.b $BE                            ;C47775|85BE    |0000BE;  
-
-CODE_C47777:
+.lbl_C47777
 	lda.w $08C2,x                        ;C47777|BDC208  |7F08C2;  
 	and.w $08D1,x                        ;C4777A|3DD108  |7F08D1;  
 	sta.w $08C1,y                        ;C4777D|99C108  |7F08C1;  
@@ -10865,15 +10420,14 @@ CODE_C47777:
 	iny                                  ;C47782|C8      |      ;  
 	iny                                  ;C47783|C8      |      ;  
 	dec.b $BE                            ;C47784|C6BE    |0000BE;  
-	bpl CODE_C47777                      ;C47786|10EF    |C47777;  
+	bpl .lbl_C47777                      ;C47786|10EF    |C47777;  
 	rts                                  ;C47788|60      |      ;  
 
 CODE_C47789:
 	ldx.b $C5                            ;C47789|A6C5    |0000C5;  
 	lda.b #$07                           ;C4778B|A907    |      ;  
 	sta.b $BE                            ;C4778D|85BE    |0000BE;  
-
-CODE_C4778F:
+.lbl_C4778F
 	lda.w $08C1,x                        ;C4778F|BDC108  |7F08C1;  
 	and.w $08C2,x                        ;C47792|3DC208  |7F08C2;  
 	and.w $08D1,x                        ;C47795|3DD108  |7F08D1;  
@@ -10883,15 +10437,14 @@ CODE_C4778F:
 	iny                                  ;C4779D|C8      |      ;  
 	iny                                  ;C4779E|C8      |      ;  
 	dec.b $BE                            ;C4779F|C6BE    |0000BE;  
-	bpl CODE_C4778F                      ;C477A1|10EC    |C4778F;  
+	bpl .lbl_C4778F                      ;C477A1|10EC    |C4778F;  
 	rts                                  ;C477A3|60      |      ;  
 
 CODE_C477A4:
 	ldx.b $C5                            ;C477A4|A6C5    |0000C5;  
 	lda.b #$07                           ;C477A6|A907    |      ;  
 	sta.b $BE                            ;C477A8|85BE    |0000BE;  
-
-CODE_C477AA:
+.lbl_C477AA
 	lda.w $08C1,x                        ;C477AA|BDC108  |7F08C1;  
 	eor.w $08C2,x                        ;C477AD|5DC208  |7F08C2;  
 	sta.w $08C1,y                        ;C477B0|99C108  |7F08C1;  
@@ -10900,15 +10453,14 @@ CODE_C477AA:
 	iny                                  ;C477B5|C8      |      ;  
 	iny                                  ;C477B6|C8      |      ;  
 	dec.b $BE                            ;C477B7|C6BE    |0000BE;  
-	bpl CODE_C477AA                      ;C477B9|10EF    |C477AA;  
+	bpl .lbl_C477AA                      ;C477B9|10EF    |C477AA;  
 	rts                                  ;C477BB|60      |      ;  
 
 CODE_C477BC:
 	ldx.b $C5                            ;C477BC|A6C5    |0000C5;  
 	lda.b #$07                           ;C477BE|A907    |      ;  
 	sta.b $BE                            ;C477C0|85BE    |0000BE;  
-
-CODE_C477C2:
+.lbl_C477C2
 	lda.w $08C1,x                        ;C477C2|BDC108  |7F08C1;  
 	eor.w $08D1,x                        ;C477C5|5DD108  |7F08D1;  
 	sta.w $08C1,y                        ;C477C8|99C108  |7F08C1;  
@@ -10917,15 +10469,14 @@ CODE_C477C2:
 	iny                                  ;C477CD|C8      |      ;  
 	iny                                  ;C477CE|C8      |      ;  
 	dec.b $BE                            ;C477CF|C6BE    |0000BE;  
-	bpl CODE_C477C2                      ;C477D1|10EF    |C477C2;  
+	bpl .lbl_C477C2                      ;C477D1|10EF    |C477C2;  
 	rts                                  ;C477D3|60      |      ;  
 
 CODE_C477D4:
 	ldx.b $C5                            ;C477D4|A6C5    |0000C5;  
 	lda.b #$07                           ;C477D6|A907    |      ;  
 	sta.b $BE                            ;C477D8|85BE    |0000BE;  
-
-CODE_C477DA:
+.lbl_C477DA
 	lda.w $08C2,x                        ;C477DA|BDC208  |7F08C2;  
 	eor.w $08D1,x                        ;C477DD|5DD108  |7F08D1;  
 	sta.w $08C1,y                        ;C477E0|99C108  |7F08C1;  
@@ -10934,15 +10485,14 @@ CODE_C477DA:
 	iny                                  ;C477E5|C8      |      ;  
 	iny                                  ;C477E6|C8      |      ;  
 	dec.b $BE                            ;C477E7|C6BE    |0000BE;  
-	bpl CODE_C477DA                      ;C477E9|10EF    |C477DA;  
+	bpl .lbl_C477DA                      ;C477E9|10EF    |C477DA;  
 	rts                                  ;C477EB|60      |      ;  
 
 CODE_C477EC:
 	ldx.b $C5                            ;C477EC|A6C5    |0000C5;  
 	lda.b #$07                           ;C477EE|A907    |      ;  
 	sta.b $BE                            ;C477F0|85BE    |0000BE;  
-
-CODE_C477F2:
+.lbl_C477F2
 	lda.w $08C1,x                        ;C477F2|BDC108  |7F08C1;  
 	ora.w $08C2,x                        ;C477F5|1DC208  |7F08C2;  
 	eor.b #$FF                           ;C477F8|49FF    |      ;  
@@ -10952,15 +10502,14 @@ CODE_C477F2:
 	iny                                  ;C477FF|C8      |      ;  
 	iny                                  ;C47800|C8      |      ;  
 	dec.b $BE                            ;C47801|C6BE    |0000BE;  
-	bpl CODE_C477F2                      ;C47803|10ED    |C477F2;  
+	bpl .lbl_C477F2                      ;C47803|10ED    |C477F2;  
 	rts                                  ;C47805|60      |      ;  
 
 CODE_C47806:
 	ldx.b $C5                            ;C47806|A6C5    |0000C5;  
 	lda.b #$07                           ;C47808|A907    |      ;  
 	sta.b $BE                            ;C4780A|85BE    |0000BE;  
-
-CODE_C4780C:
+.lbl_C4780C
 	lda.w $08C1,x                        ;C4780C|BDC108  |7F08C1;  
 	ora.w $08D1,x                        ;C4780F|1DD108  |7F08D1;  
 	eor.b #$FF                           ;C47812|49FF    |      ;  
@@ -10970,15 +10519,14 @@ CODE_C4780C:
 	iny                                  ;C47819|C8      |      ;  
 	iny                                  ;C4781A|C8      |      ;  
 	dec.b $BE                            ;C4781B|C6BE    |0000BE;  
-	bpl CODE_C4780C                      ;C4781D|10ED    |C4780C;  
+	bpl .lbl_C4780C                      ;C4781D|10ED    |C4780C;  
 	rts                                  ;C4781F|60      |      ;  
 
 CODE_C47820:
 	ldx.b $C5                            ;C47820|A6C5    |0000C5;  
 	lda.b #$07                           ;C47822|A907    |      ;  
 	sta.b $BE                            ;C47824|85BE    |0000BE;  
-
-CODE_C47826:
+.lbl_C47826
 	lda.w $08C2,x                        ;C47826|BDC208  |7F08C2;  
 	ora.w $08D1,x                        ;C47829|1DD108  |7F08D1;  
 	eor.b #$FF                           ;C4782C|49FF    |      ;  
@@ -10988,15 +10536,14 @@ CODE_C47826:
 	iny                                  ;C47833|C8      |      ;  
 	iny                                  ;C47834|C8      |      ;  
 	dec.b $BE                            ;C47835|C6BE    |0000BE;  
-	bpl CODE_C47826                      ;C47837|10ED    |C47826;  
+	bpl .lbl_C47826                      ;C47837|10ED    |C47826;  
 	rts                                  ;C47839|60      |      ;  
 
 CODE_C4783A:
 	ldx.b $C5                            ;C4783A|A6C5    |0000C5;  
 	lda.b #$07                           ;C4783C|A907    |      ;  
 	sta.b $BE                            ;C4783E|85BE    |0000BE;  
-
-CODE_C47840:
+.lbl_C47840
 	lda.w $08C1,x                        ;C47840|BDC108  |7F08C1;  
 	ora.w $08C2,x                        ;C47843|1DC208  |7F08C2;  
 	ora.w $08D1,x                        ;C47846|1DD108  |7F08D1;  
@@ -11007,15 +10554,14 @@ CODE_C47840:
 	iny                                  ;C47850|C8      |      ;  
 	iny                                  ;C47851|C8      |      ;  
 	dec.b $BE                            ;C47852|C6BE    |0000BE;  
-	bpl CODE_C47840                      ;C47854|10EA    |C47840;  
+	bpl .lbl_C47840                      ;C47854|10EA    |C47840;  
 	rts                                  ;C47856|60      |      ;  
 
 CODE_C47857:
 	ldx.b $C5                            ;C47857|A6C5    |0000C5;  
 	lda.b #$07                           ;C47859|A907    |      ;  
 	sta.b $BE                            ;C4785B|85BE    |0000BE;  
-
-CODE_C4785D:
+.lbl_C4785D
 	lda.w $08C1,x                        ;C4785D|BDC108  |7F08C1;  
 	and.w $08C2,x                        ;C47860|3DC208  |7F08C2;  
 	eor.b #$FF                           ;C47863|49FF    |      ;  
@@ -11025,15 +10571,14 @@ CODE_C4785D:
 	iny                                  ;C4786A|C8      |      ;  
 	iny                                  ;C4786B|C8      |      ;  
 	dec.b $BE                            ;C4786C|C6BE    |0000BE;  
-	bpl CODE_C4785D                      ;C4786E|10ED    |C4785D;  
+	bpl .lbl_C4785D                      ;C4786E|10ED    |C4785D;  
 	rts                                  ;C47870|60      |      ;  
 
 CODE_C47871:
 	ldx.b $C5                            ;C47871|A6C5    |0000C5;  
 	lda.b #$07                           ;C47873|A907    |      ;  
 	sta.b $BE                            ;C47875|85BE    |0000BE;  
-
-CODE_C47877:
+.lbl_C47877
 	lda.w $08C1,x                        ;C47877|BDC108  |7F08C1;  
 	and.w $08D1,x                        ;C4787A|3DD108  |7F08D1;  
 	eor.b #$FF                           ;C4787D|49FF    |      ;  
@@ -11043,15 +10588,14 @@ CODE_C47877:
 	iny                                  ;C47884|C8      |      ;  
 	iny                                  ;C47885|C8      |      ;  
 	dec.b $BE                            ;C47886|C6BE    |0000BE;  
-	bpl CODE_C47877                      ;C47888|10ED    |C47877;  
+	bpl .lbl_C47877                      ;C47888|10ED    |C47877;  
 	rts                                  ;C4788A|60      |      ;  
 
 CODE_C4788B:
 	ldx.b $C5                            ;C4788B|A6C5    |0000C5;  
 	lda.b #$07                           ;C4788D|A907    |      ;  
 	sta.b $BE                            ;C4788F|85BE    |0000BE;  
-
-CODE_C47891:
+.lbl_C47891
 	lda.w $08C2,x                        ;C47891|BDC208  |7F08C2;  
 	and.w $08D1,x                        ;C47894|3DD108  |7F08D1;  
 	eor.b #$FF                           ;C47897|49FF    |      ;  
@@ -11061,15 +10605,14 @@ CODE_C47891:
 	iny                                  ;C4789E|C8      |      ;  
 	iny                                  ;C4789F|C8      |      ;  
 	dec.b $BE                            ;C478A0|C6BE    |0000BE;  
-	bpl CODE_C47891                      ;C478A2|10ED    |C47891;  
+	bpl .lbl_C47891                      ;C478A2|10ED    |C47891;  
 	rts                                  ;C478A4|60      |      ;  
 
 CODE_C478A5:
 	ldx.b $C5                            ;C478A5|A6C5    |0000C5;  
 	lda.b #$07                           ;C478A7|A907    |      ;  
 	sta.b $BE                            ;C478A9|85BE    |0000BE;  
-
-CODE_C478AB:
+.lbl_C478AB
 	lda.w $08C1,x                        ;C478AB|BDC108  |7F08C1;  
 	and.w $08C2,x                        ;C478AE|3DC208  |7F08C2;  
 	and.w $08D1,x                        ;C478B1|3DD108  |7F08D1;  
@@ -11080,15 +10623,14 @@ CODE_C478AB:
 	iny                                  ;C478BB|C8      |      ;  
 	iny                                  ;C478BC|C8      |      ;  
 	dec.b $BE                            ;C478BD|C6BE    |0000BE;  
-	bpl CODE_C478AB                      ;C478BF|10EA    |C478AB;  
+	bpl .lbl_C478AB                      ;C478BF|10EA    |C478AB;  
 	rts                                  ;C478C1|60      |      ;  
 
 CODE_C478C2:
 	ldx.b $C5                            ;C478C2|A6C5    |0000C5;  
 	lda.b #$07                           ;C478C4|A907    |      ;  
 	sta.b $BE                            ;C478C6|85BE    |0000BE;  
-
-CODE_C478C8:
+.lbl_C478C8
 	lda.w $08C1,x                        ;C478C8|BDC108  |7F08C1;  
 	eor.w $08C2,x                        ;C478CB|5DC208  |7F08C2;  
 	eor.b #$FF                           ;C478CE|49FF    |      ;  
@@ -11098,15 +10640,14 @@ CODE_C478C8:
 	iny                                  ;C478D5|C8      |      ;  
 	iny                                  ;C478D6|C8      |      ;  
 	dec.b $BE                            ;C478D7|C6BE    |0000BE;  
-	bpl CODE_C478C8                      ;C478D9|10ED    |C478C8;  
+	bpl .lbl_C478C8                      ;C478D9|10ED    |C478C8;  
 	rts                                  ;C478DB|60      |      ;  
 
 CODE_C478DC:
 	ldx.b $C5                            ;C478DC|A6C5    |0000C5;  
 	lda.b #$07                           ;C478DE|A907    |      ;  
 	sta.b $BE                            ;C478E0|85BE    |0000BE;  
-
-CODE_C478E2:
+.lbl_C478E2
 	lda.w $08C1,x                        ;C478E2|BDC108  |7F08C1;  
 	eor.w $08D1,x                        ;C478E5|5DD108  |7F08D1;  
 	eor.b #$FF                           ;C478E8|49FF    |      ;  
@@ -11116,15 +10657,14 @@ CODE_C478E2:
 	iny                                  ;C478EF|C8      |      ;  
 	iny                                  ;C478F0|C8      |      ;  
 	dec.b $BE                            ;C478F1|C6BE    |0000BE;  
-	bpl CODE_C478E2                      ;C478F3|10ED    |C478E2;  
+	bpl .lbl_C478E2                      ;C478F3|10ED    |C478E2;  
 	rts                                  ;C478F5|60      |      ;  
 
 CODE_C478F6:
 	ldx.b $C5                            ;C478F6|A6C5    |0000C5;  
 	lda.b #$07                           ;C478F8|A907    |      ;  
 	sta.b $BE                            ;C478FA|85BE    |0000BE;  
-
-CODE_C478FC:
+.lbl_C478FC
 	lda.w $08C2,x                        ;C478FC|BDC208  |7F08C2;  
 	eor.w $08D1,x                        ;C478FF|5DD108  |7F08D1;  
 	eor.b #$FF                           ;C47902|49FF    |      ;  
@@ -11134,7 +10674,7 @@ CODE_C478FC:
 	iny                                  ;C47909|C8      |      ;  
 	iny                                  ;C4790A|C8      |      ;  
 	dec.b $BE                            ;C4790B|C6BE    |0000BE;  
-	bpl CODE_C478FC                      ;C4790D|10ED    |C478FC;  
+	bpl .lbl_C478FC                      ;C4790D|10ED    |C478FC;  
 	rts                                  ;C4790F|60      |      ;  
 	phy                                  ;C47910|5A      |      ;  
 	jsr.w CODE_C474B0                    ;C47911|20B074  |C474B0;  
@@ -11269,46 +10809,40 @@ CODE_C478FC:
 CODE_C47A18:
 	lda.b [$C2]                          ;C47A18|A7C2    |0000C2;  
 	inc.b $C2                            ;C47A1A|E6C2    |0000C2;  
-	bne CODE_C47A21                      ;C47A1C|D003    |C47A21;  
+	bne .lbl_C47A21                      ;C47A1C|D003    |C47A21;  
 	jsr.w CODE_C47A4A                    ;C47A1E|204A7A  |C47A4A;  
-
-CODE_C47A21:
+.lbl_C47A21
 	sta.b $BE                            ;C47A21|85BE    |0000BE;  
 
 CODE_C47A23:
 	asl.b $BE                            ;C47A23|06BE    |0000BE;  
-	beq CODE_C47A39                      ;C47A25|F012    |C47A39;  
-	bcc CODE_C47A35                      ;C47A27|900C    |C47A35;  
+	beq .lbl_C47A39                      ;C47A25|F012    |C47A39;  
+	bcc .lbl_C47A35                      ;C47A27|900C    |C47A35;  
 	lda.b [$C2]                          ;C47A29|A7C2    |0000C2;  
 	inc.b $C2                            ;C47A2B|E6C2    |0000C2;  
-	bne CODE_C47A32                      ;C47A2D|D003    |C47A32;  
+	bne .lbl_C47A32                      ;C47A2D|D003    |C47A32;  
 	jsr.w CODE_C47A4A                    ;C47A2F|204A7A  |C47A4A;  
-
-CODE_C47A32:
+.lbl_C47A32
 	sta.w $08C1,y                        ;C47A32|99C108  |7F08C1;  
-
-CODE_C47A35:
+.lbl_C47A35
 	iny                                  ;C47A35|C8      |      ;  
 	iny                                  ;C47A36|C8      |      ;  
 	bra CODE_C47A23                      ;C47A37|80EA    |C47A23;  
-
-CODE_C47A39:
+.lbl_C47A39
 	lda.b [$C2]                          ;C47A39|A7C2    |0000C2;  
 	inc.b $C2                            ;C47A3B|E6C2    |0000C2;  
-	bne CODE_C47A42                      ;C47A3D|D003    |C47A42;  
+	bne .lbl_C47A42                      ;C47A3D|D003    |C47A42;  
 	jsr.w CODE_C47A4A                    ;C47A3F|204A7A  |C47A4A;  
-
-CODE_C47A42:
+.lbl_C47A42
 	sta.w $08C1,y                        ;C47A42|99C108  |7F08C1;  
 	rts                                  ;C47A45|60      |      ;  
 	.db $E2,$20,$C2,$10                   ;C47A46
 
 CODE_C47A4A:
 	inc.b $C3                            ;C47A4A|E6C3    |0000C3;  
-	beq CODE_C47A4F                      ;C47A4C|F001    |C47A4F;  
+	beq .lbl_C47A4F                      ;C47A4C|F001    |C47A4F;  
 	rts                                  ;C47A4E|60      |      ;  
-
-CODE_C47A4F:
+.lbl_C47A4F
 	inc.b $C4                            ;C47A4F|E6C4    |0000C4;  
 	rts                                  ;C47A51|60      |      ;  
 
@@ -11346,13 +10880,12 @@ CODE_C47A84:
 	tax                                  ;C47A8C|AA      |      ;  
 	phx                                  ;C47A8D|DA      |      ;  
 	tdc                                  ;C47A8E|7B      |      ;  
-
-CODE_C47A8F:
+.lbl_C47A8F
 	sta.b $C5                            ;C47A8F|85C5    |0000C5;  
 	clc                                  ;C47A91|18      |      ;  
 	adc.w #$0400                         ;C47A92|690004  |      ;  
 	dex                                  ;C47A95|CA      |      ;  
-	bpl CODE_C47A8F                      ;C47A96|10F7    |C47A8F;  
+	bpl .lbl_C47A8F                      ;C47A96|10F7    |C47A8F;  
 	sta.b $CA                            ;C47A98|85CA    |0000CA;  
 	sep #$20                             ;C47A9A|E220    |      ;  
 	lda.b $02                   ;C47A9C|A502    |000002;  
@@ -11366,104 +10899,90 @@ CODE_C47A8F:
 	ldx.w #$0000                         ;C47AAA|A20000  |      ;  
 	lda.b [$C2]                          ;C47AAD|A7C2    |0000C2;  
 	inc.b $C2                            ;C47AAF|E6C2    |0000C2;  
-	bne CODE_C47AB6                      ;C47AB1|D003    |C47AB6;  
+	bne .lbl_C47AB6                      ;C47AB1|D003    |C47AB6;  
 	.db $20,$4A,$7A                       ;C47AB3|        |C47A4A;  
-
-CODE_C47AB6:
+.lbl_C47AB6
 	bit.b #$10                           ;C47AB6|8910    |      ;  
-	beq CODE_C47ABB                      ;C47AB8|F001    |C47ABB;  
+	beq .lbl_C47ABB                      ;C47AB8|F001    |C47ABB;  
 	inx                                  ;C47ABA|E8      |      ;  
-
-CODE_C47ABB:
+.lbl_C47ABB
 	stx.w $AA40                          ;C47ABB|8E40AA  |7FAA40;  
 	lsr a                                ;C47ABE|4A      |      ;  
 	sta.b $C9                            ;C47ABF|85C9    |0000C9;  
-	bcs CODE_C47AD9                      ;C47AC1|B016    |C47AD9;  
+	bcs .lbl_C47AD9                      ;C47AC1|B016    |C47AD9;  
 	ldx.w #$03FF                         ;C47AC3|A2FF03  |      ;  
-
-CODE_C47AC6:
+.lbl_C47AC6
 	lda.b [$C2]                          ;C47AC6|A7C2    |0000C2;  
 	inc.b $C2                            ;C47AC8|E6C2    |0000C2;  
-	bne CODE_C47ACF                      ;C47ACA|D003    |C47ACF;  
+	bne .lbl_C47ACF                      ;C47ACA|D003    |C47ACF;  
 	jsr.w CODE_C47A4A                    ;C47ACC|204A7A  |C47A4A;  
-
-CODE_C47ACF:
+.lbl_C47ACF
 	sta.w $85C1,y                        ;C47ACF|99C185  |7F85C1;  
 	iny                                  ;C47AD2|C8      |      ;  
 	dex                                  ;C47AD3|CA      |      ;  
-	bpl CODE_C47AC6                      ;C47AD4|10F0    |C47AC6;  
+	bpl .lbl_C47AC6                      ;C47AD4|10F0    |C47AC6;  
 	jmp.w CODE_C47BBE                    ;C47AD6|4CBE7B  |C47BBE;  
-
-CODE_C47AD9:
+.lbl_C47AD9
 	lda.b #$01                           ;C47AD9|A901    |      ;  
 	sta.b $CC                            ;C47ADB|85CC    |0000CC;  
-	bra CODE_C47AE6                      ;C47ADD|8007    |C47AE6;  
+	bra .lbl_C47AE6                      ;C47ADD|8007    |C47AE6;  
 
 CODE_C47ADF:
 	cpy.b $CA                            ;C47ADF|C4CA    |0000CA;  
-	bcc CODE_C47AE6                      ;C47AE1|9003    |C47AE6;  
+	bcc .lbl_C47AE6                      ;C47AE1|9003    |C47AE6;  
 	jmp.w CODE_C47BBE                    ;C47AE3|4CBE7B  |C47BBE;  
-
-CODE_C47AE6:
+.lbl_C47AE6
 	lda.b [$C2]                          ;C47AE6|A7C2    |0000C2;  
 	inc.b $C2                            ;C47AE8|E6C2    |0000C2;  
-	bne CODE_C47AEF                      ;C47AEA|D003    |C47AEF;  
+	bne .lbl_C47AEF                      ;C47AEA|D003    |C47AEF;  
 	jsr.w CODE_C47A4A                    ;C47AEC|204A7A  |C47A4A;  
-
-CODE_C47AEF:
+.lbl_C47AEF
 	bit.b #$80                           ;C47AEF|8980    |      ;  
-	beq CODE_C47B04                      ;C47AF1|F011    |C47B04;  
+	beq .lbl_C47B04                      ;C47AF1|F011    |C47B04;  
 	bit.b #$40                           ;C47AF3|8940    |      ;  
-	bne CODE_C47AFD                      ;C47AF5|D006    |C47AFD;  
+	bne .lbl_C47AFD                      ;C47AF5|D006    |C47AFD;  
 	bit.b #$20                           ;C47AF7|8920    |      ;  
-	beq CODE_C47B4D                      ;C47AF9|F052    |C47B4D;  
+	beq .lbl_C47B4D                      ;C47AF9|F052    |C47B4D;  
 	bra CODE_C47B6A                      ;C47AFB|806D    |C47B6A;  
-
-CODE_C47AFD:
+.lbl_C47AFD
 	bit.b #$20                           ;C47AFD|8920    |      ;  
-	beq CODE_C47B7E                      ;C47AFF|F07D    |C47B7E;  
+	beq .lbl_C47B7E                      ;C47AFF|F07D    |C47B7E;  
 	jmp.w CODE_C47BA6                    ;C47B01|4CA67B  |C47BA6;  
-
-CODE_C47B04:
+.lbl_C47B04
 	ldx.w $AA40                          ;C47B04|AE40AA  |7FAA40;  
-	bne CODE_C47B3E                      ;C47B07|D035    |C47B3E;  
+	bne .lbl_C47B3E                      ;C47B07|D035    |C47B3E;  
 	bit.b #$40                           ;C47B09|8940    |      ;  
-	bne CODE_C47B1E                      ;C47B0B|D011    |C47B1E;  
+	bne .lbl_C47B1E                      ;C47B0B|D011    |C47B1E;  
 	inc a                                ;C47B0D|1A      |      ;  
 	sta.b $BE                            ;C47B0E|85BE    |0000BE;  
 	lda.b $CC                            ;C47B10|A5CC    |0000CC;  
-
-CODE_C47B12:
+.lbl_C47B12
 	sta.w $85C1,y                        ;C47B12|99C185  |7F85C1;  
 	iny                                  ;C47B15|C8      |      ;  
 	dec.b $BE                            ;C47B16|C6BE    |0000BE;  
-	bpl CODE_C47B12                      ;C47B18|10F8    |C47B12;  
+	bpl .lbl_C47B12                      ;C47B18|10F8    |C47B12;  
 	inc.b $CC                            ;C47B1A|E6CC    |0000CC;  
 	bra CODE_C47ADF                      ;C47B1C|80C1    |C47ADF;  
-
-CODE_C47B1E:
+.lbl_C47B1E
 	and.b #$3F                           ;C47B1E|293F    |      ;  
 	cmp.b #$3F                           ;C47B20|C93F    |      ;  
-	bne CODE_C47B2D                      ;C47B22|D009    |C47B2D;  
+	bne .lbl_C47B2D                      ;C47B22|D009    |C47B2D;  
 	lda.b [$C2]                          ;C47B24|A7C2    |0000C2;  
 	inc.b $C2                            ;C47B26|E6C2    |0000C2;  
-	bne CODE_C47B2D                      ;C47B28|D003    |C47B2D;  
+	bne .lbl_C47B2D                      ;C47B28|D003    |C47B2D;  
 	.db $20,$4A,$7A                       ;C47B2A|        |C47A4A;  
-
-CODE_C47B2D:
+.lbl_C47B2D
 	inc a                                ;C47B2D|1A      |      ;  
 	sta.b $BE                            ;C47B2E|85BE    |0000BE;  
-
-CODE_C47B30:
+.lbl_C47B30
 	lda.b $CC                            ;C47B30|A5CC    |0000CC;  
 	sta.w $85C1,y                        ;C47B32|99C185  |7F85C1;  
 	iny                                  ;C47B35|C8      |      ;  
 	inc.b $CC                            ;C47B36|E6CC    |0000CC;  
 	dec.b $BE                            ;C47B38|C6BE    |0000BE;  
-	bne CODE_C47B30                      ;C47B3A|D0F4    |C47B30;  
+	bne .lbl_C47B30                      ;C47B3A|D0F4    |C47B30;  
 	bra CODE_C47ADF                      ;C47B3C|80A1    |C47ADF;  
-
-CODE_C47B3E:
+.lbl_C47B3E
 	sta.b $BE                            ;C47B3E|85BE    |0000BE;  
 	stz.b $BF                            ;C47B40|64BF    |0000BF;  
 	rep #$20                             ;C47B42|C220    |      ;  
@@ -11473,8 +10992,7 @@ CODE_C47B3E:
 	tay                                  ;C47B48|A8      |      ;  
 	sep #$20                             ;C47B49|E220    |      ;  
 	bra CODE_C47ADF                      ;C47B4B|8092    |C47ADF;  
-
-CODE_C47B4D:
+.lbl_C47B4D
 	and.b #$1F                           ;C47B4D|291F    |      ;  
 	sta.b $BE                            ;C47B4F|85BE    |0000BE;  
 	rep #$20                             ;C47B51|C220    |      ;  
@@ -11483,14 +11001,13 @@ CODE_C47B4D:
 	sbc.w #$0020                         ;C47B55|E92000  |      ;  
 	tax                                  ;C47B58|AA      |      ;  
 	sep #$20                             ;C47B59|E220    |      ;  
-
-CODE_C47B5B:
+.lbl_C47B5B
 	lda.w $85C1,x                        ;C47B5B|BDC185  |7F85C1;  
 	sta.w $85C1,y                        ;C47B5E|99C185  |7F85C1;  
 	inx                                  ;C47B61|E8      |      ;  
 	iny                                  ;C47B62|C8      |      ;  
 	dec.b $BE                            ;C47B63|C6BE    |0000BE;  
-	bpl CODE_C47B5B                      ;C47B65|10F4    |C47B5B;  
+	bpl .lbl_C47B5B                      ;C47B65|10F4    |C47B5B;  
 	jmp.w CODE_C47ADF                    ;C47B67|4CDF7A  |C47ADF;  
 
 CODE_C47B6A:
@@ -11499,117 +11016,103 @@ CODE_C47B6A:
 	dey                                  ;C47B6E|88      |      ;  
 	lda.w $85C1,y                        ;C47B6F|B9C185  |7F85C1;  
 	iny                                  ;C47B72|C8      |      ;  
-
-CODE_C47B73:
+.lbl_C47B73
 	sta.w $85C1,y                        ;C47B73|99C185  |7F85C1;  
 	iny                                  ;C47B76|C8      |      ;  
 	dec.b $BE                            ;C47B77|C6BE    |0000BE;  
-	bpl CODE_C47B73                      ;C47B79|10F8    |C47B73;  
+	bpl .lbl_C47B73                      ;C47B79|10F8    |C47B73;  
 	jmp.w CODE_C47ADF                    ;C47B7B|4CDF7A  |C47ADF;  
-
-CODE_C47B7E:
+.lbl_C47B7E
 	and.b #$1F                           ;C47B7E|291F    |      ;  
 	cmp.b #$1F                           ;C47B80|C91F    |      ;  
-	bne CODE_C47B8E                      ;C47B82|D00A    |C47B8E;  
+	bne .lbl_C47B8E                      ;C47B82|D00A    |C47B8E;  
 	lda.b [$C2]                          ;C47B84|A7C2    |0000C2;  
 	inc.b $C2                            ;C47B86|E6C2    |0000C2;  
-	bne CODE_C47B8D                      ;C47B88|D003    |C47B8D;  
+	bne .lbl_C47B8D                      ;C47B88|D003    |C47B8D;  
 	jsr.w CODE_C47A4A                    ;C47B8A|204A7A  |C47A4A;  
-
-CODE_C47B8D:
+.lbl_C47B8D
 	dec a                                ;C47B8D|3A      |      ;  
-
-CODE_C47B8E:
+.lbl_C47B8E
 	inc a                                ;C47B8E|1A      |      ;  
 	inc a                                ;C47B8F|1A      |      ;  
 	sta.b $BE                            ;C47B90|85BE    |0000BE;  
 	lda.b [$C2]                          ;C47B92|A7C2    |0000C2;  
 	inc.b $C2                            ;C47B94|E6C2    |0000C2;  
-	bne CODE_C47B9B                      ;C47B96|D003    |C47B9B;  
+	bne .lbl_C47B9B                      ;C47B96|D003    |C47B9B;  
 	jsr.w CODE_C47A4A                    ;C47B98|204A7A  |C47A4A;  
-
-CODE_C47B9B:
+.lbl_C47B9B
 	sta.w $85C1,y                        ;C47B9B|99C185  |7F85C1;  
 	iny                                  ;C47B9E|C8      |      ;  
 	dec.b $BE                            ;C47B9F|C6BE    |0000BE;  
-	bne CODE_C47B9B                      ;C47BA1|D0F8    |C47B9B;  
+	bne .lbl_C47B9B                      ;C47BA1|D0F8    |C47B9B;  
 	jmp.w CODE_C47ADF                    ;C47BA3|4CDF7A  |C47ADF;  
 
 CODE_C47BA6:
 	and.b #$1F                           ;C47BA6|291F    |      ;  
 	sta.b $BE                            ;C47BA8|85BE    |0000BE;  
-
-CODE_C47BAA:
+.lbl_C47BAA
 	lda.b [$C2]                          ;C47BAA|A7C2    |0000C2;  
 	inc.b $C2                            ;C47BAC|E6C2    |0000C2;  
-	bne CODE_C47BB3                      ;C47BAE|D003    |C47BB3;  
+	bne .lbl_C47BB3                      ;C47BAE|D003    |C47BB3;  
 	jsr.w CODE_C47A4A                    ;C47BB0|204A7A  |C47A4A;  
-
-CODE_C47BB3:
+.lbl_C47BB3
 	sta.w $85C1,y                        ;C47BB3|99C185  |7F85C1;  
 	iny                                  ;C47BB6|C8      |      ;  
 	dec.b $BE                            ;C47BB7|C6BE    |0000BE;  
-	bpl CODE_C47BAA                      ;C47BB9|10EF    |C47BAA;  
+	bpl .lbl_C47BAA                      ;C47BB9|10EF    |C47BAA;  
 	jmp.w CODE_C47ADF                    ;C47BBB|4CDF7A  |C47ADF;  
 
 CODE_C47BBE:
 	ldy.b $C5                            ;C47BBE|A4C5    |0000C5;  
 	stz.b $CC                            ;C47BC0|64CC    |0000CC;  
 	lsr.b $C9                            ;C47BC2|46C9    |0000C9;  
-	bcs CODE_C47BE2                      ;C47BC4|B01C    |C47BE2;  
+	bcs .lbl_C47BE2                      ;C47BC4|B01C    |C47BE2;  
 	.db $A2,$FF,$03,$20,$D0,$7E,$2A,$2A   ;C47BC6
 	.db $2A,$29,$03,$99,$C1,$7D,$C8,$CA   ;C47BCE
 	.db $10,$F1,$4C,$8C,$7C               ;C47BD6|        |C47BC9;  
 
 CODE_C47BDB:
 	cpy.b $CA                            ;C47BDB|C4CA    |0000CA;  
-	bcc CODE_C47BE2                      ;C47BDD|9003    |C47BE2;  
+	bcc .lbl_C47BE2                      ;C47BDD|9003    |C47BE2;  
 	jmp.w CODE_C47C8C                    ;C47BDF|4C8C7C  |C47C8C;  
-
-CODE_C47BE2:
+.lbl_C47BE2
 	lda.b [$C2]                          ;C47BE2|A7C2    |0000C2;  
 	inc.b $C2                            ;C47BE4|E6C2    |0000C2;  
-	bne CODE_C47BEB                      ;C47BE6|D003    |C47BEB;  
+	bne .lbl_C47BEB                      ;C47BE6|D003    |C47BEB;  
 	jsr.w CODE_C47A4A                    ;C47BE8|204A7A  |C47A4A;  
-
-CODE_C47BEB:
+.lbl_C47BEB
 	sta.b $BE                            ;C47BEB|85BE    |0000BE;  
 	bit.b #$C0                           ;C47BED|89C0    |      ;  
-	beq CODE_C47C05                      ;C47BEF|F014    |C47C05;  
+	beq .lbl_C47C05                      ;C47BEF|F014    |C47C05;  
 	cmp.b #$C0                           ;C47BF1|C9C0    |      ;  
-	bcs CODE_C47C6F                      ;C47BF3|B07A    |C47C6F;  
+	bcs .lbl_C47C6F                      ;C47BF3|B07A    |C47C6F;  
 	bit.b #$80                           ;C47BF5|8980    |      ;  
-	bne CODE_C47BFF                      ;C47BF7|D006    |C47BFF;  
+	bne .lbl_C47BFF                      ;C47BF7|D006    |C47BFF;  
 	bit.b #$20                           ;C47BF9|8920    |      ;  
-	beq CODE_C47C20                      ;C47BFB|F023    |C47C20;  
+	beq .lbl_C47C20                      ;C47BFB|F023    |C47C20;  
 	bra CODE_C47C2B                      ;C47BFD|802C    |C47C2B;  
-
-CODE_C47BFF:
+.lbl_C47BFF
 	bit.b #$20                           ;C47BFF|8920    |      ;  
-	beq CODE_C47C49                      ;C47C01|F046    |C47C49;  
+	beq .lbl_C47C49                      ;C47C01|F046    |C47C49;  
 	bra CODE_C47C55                      ;C47C03|8050    |C47C55;  
-
-CODE_C47C05:
+.lbl_C47C05
 	cmp.b #$3F                           ;C47C05|C93F    |      ;  
-	bne CODE_C47C12                      ;C47C07|D009    |C47C12;  
+	bne .lbl_C47C12                      ;C47C07|D009    |C47C12;  
 	lda.b [$C2]                          ;C47C09|A7C2    |0000C2;  
 	inc.b $C2                            ;C47C0B|E6C2    |0000C2;  
-	bne CODE_C47C12                      ;C47C0D|D003    |C47C12;  
+	bne .lbl_C47C12                      ;C47C0D|D003    |C47C12;  
 	.db $20,$4A,$7A                       ;C47C0F|        |C47A4A;  
-
-CODE_C47C12:
+.lbl_C47C12
 	inc a                                ;C47C12|1A      |      ;  
 	sta.b $BE                            ;C47C13|85BE    |0000BE;  
 	tdc                                  ;C47C15|7B      |      ;  
-
-CODE_C47C16:
+.lbl_C47C16
 	sta.w $7DC1,y                        ;C47C16|99C17D  |7F7DC1;  
 	iny                                  ;C47C19|C8      |      ;  
 	dec.b $BE                            ;C47C1A|C6BE    |0000BE;  
-	bne CODE_C47C16                      ;C47C1C|D0F8    |C47C16;  
+	bne .lbl_C47C16                      ;C47C1C|D0F8    |C47C16;  
 	bra CODE_C47BDB                      ;C47C1E|80BB    |C47BDB;  
-
-CODE_C47C20:
+.lbl_C47C20
 	and.b #$07                           ;C47C20|2907    |      ;  
 	sta.b $BF                            ;C47C22|85BF    |0000BF;  
 	lda.b $BE                            ;C47C24|A5BE    |0000BE;  
@@ -11633,15 +11136,13 @@ CODE_C47C38:
 	sta.w $7DC1,y                        ;C47C3A|99C17D  |7F7DC1;  
 	iny                                  ;C47C3D|C8      |      ;  
 	tdc                                  ;C47C3E|7B      |      ;  
-
-CODE_C47C3F:
+.lbl_C47C3F
 	sta.w $7DC1,y                        ;C47C3F|99C17D  |7F7DC1;  
 	iny                                  ;C47C42|C8      |      ;  
 	dec.b $BF                            ;C47C43|C6BF    |0000BF;  
-	bpl CODE_C47C3F                      ;C47C45|10F8    |C47C3F;  
+	bpl .lbl_C47C3F                      ;C47C45|10F8    |C47C3F;  
 	bra CODE_C47BDB                      ;C47C47|8092    |C47BDB;  
-
-CODE_C47C49:
+.lbl_C47C49
 	and.b #$07                           ;C47C49|2907    |      ;  
 	inc a                                ;C47C4B|1A      |      ;  
 	sta.b $BF                            ;C47C4C|85BF    |0000BF;  
@@ -11663,23 +11164,20 @@ CODE_C47C55:
 
 CODE_C47C62:
 	and.b #$03                           ;C47C62|2903    |      ;  
-
-CODE_C47C64:
+.lbl_C47C64
 	sta.w $7DC1,y                        ;C47C64|99C17D  |7F7DC1;  
 	iny                                  ;C47C67|C8      |      ;  
 	dec.b $BF                            ;C47C68|C6BF    |0000BF;  
-	bpl CODE_C47C64                      ;C47C6A|10F8    |C47C64;  
+	bpl .lbl_C47C64                      ;C47C6A|10F8    |C47C64;  
 	jmp.w CODE_C47BDB                    ;C47C6C|4CDB7B  |C47BDB;  
-
-CODE_C47C6F:
+.lbl_C47C6F
 	and.b #$0F                           ;C47C6F|290F    |      ;  
 	sta.b $BF                            ;C47C71|85BF    |0000BF;  
 	lda.b $BE                            ;C47C73|A5BE    |0000BE;  
 	rol a                                ;C47C75|2A      |      ;  
 	rol a                                ;C47C76|2A      |      ;  
 	bra CODE_C47C7C                      ;C47C77|8003    |C47C7C;  
-
-CODE_C47C79:
+.lbl_C47C79
 	jsr.w CODE_C47ED0                    ;C47C79|20D07E  |C47ED0;  
 
 CODE_C47C7C:
@@ -11690,65 +11188,58 @@ CODE_C47C7C:
 	sta.w $7DC1,y                        ;C47C81|99C17D  |7F7DC1;  
 	iny                                  ;C47C84|C8      |      ;  
 	dec.b $BF                            ;C47C85|C6BF    |0000BF;  
-	bpl CODE_C47C79                      ;C47C87|10F0    |C47C79;  
+	bpl .lbl_C47C79                      ;C47C87|10F0    |C47C79;  
 	jmp.w CODE_C47BDB                    ;C47C89|4CDB7B  |C47BDB;  
 
 CODE_C47C8C:
 	ldy.b $C5                            ;C47C8C|A4C5    |0000C5;  
 	stz.b $CC                            ;C47C8E|64CC    |0000CC;  
 	lsr.b $C9                            ;C47C90|46C9    |0000C9;  
-	bcs CODE_C47CAE                      ;C47C92|B01A    |C47CAE;  
+	bcs .lbl_C47CAE                      ;C47C92|B01A    |C47CAE;  
 	.db $A2,$FF,$03,$20,$EB,$7E,$19,$C1   ;C47C94
 	.db $7D,$99,$C1,$7D,$C8,$CA,$10,$F3   ;C47C9C|        |00C199;  
 	.db $4C,$9A,$7D                       ;C47CA4|        |C47D9A;  
 
 CODE_C47CA7:
 	cpy.b $CA                            ;C47CA7|C4CA    |0000CA;  
-	bcc CODE_C47CAE                      ;C47CA9|9003    |C47CAE;  
+	bcc .lbl_C47CAE                      ;C47CA9|9003    |C47CAE;  
 	jmp.w CODE_C47D9A                    ;C47CAB|4C9A7D  |C47D9A;  
-
-CODE_C47CAE:
+.lbl_C47CAE
 	lda.b [$C2]                          ;C47CAE|A7C2    |0000C2;  
 	inc.b $C2                            ;C47CB0|E6C2    |0000C2;  
-	bne CODE_C47CB7                      ;C47CB2|D003    |C47CB7;  
+	bne .lbl_C47CB7                      ;C47CB2|D003    |C47CB7;  
 	jsr.w CODE_C47A4A                    ;C47CB4|204A7A  |C47A4A;  
-
-CODE_C47CB7:
+.lbl_C47CB7
 	sta.b $BE                            ;C47CB7|85BE    |0000BE;  
 	bit.b #$C0                           ;C47CB9|89C0    |      ;  
-	beq CODE_C47CE0                      ;C47CBB|F023    |C47CE0;  
+	beq .lbl_C47CE0                      ;C47CBB|F023    |C47CE0;  
 	cmp.b #$C0                           ;C47CBD|C9C0    |      ;  
-	bcs CODE_C47CDD                      ;C47CBF|B01C    |C47CDD;  
+	bcs .lbl_C47CDD                      ;C47CBF|B01C    |C47CDD;  
 	bit.b #$80                           ;C47CC1|8980    |      ;  
-	bne CODE_C47CCF                      ;C47CC3|D00A    |C47CCF;  
+	bne .lbl_C47CCF                      ;C47CC3|D00A    |C47CCF;  
 	bit.b #$20                           ;C47CC5|8920    |      ;  
-	bne CODE_C47D15                      ;C47CC7|D04C    |C47D15;  
+	bne .lbl_C47D15                      ;C47CC7|D04C    |C47D15;  
 	bit.b #$10                           ;C47CC9|8910    |      ;  
-	beq CODE_C47D00                      ;C47CCB|F033    |C47D00;  
+	beq .lbl_C47D00                      ;C47CCB|F033    |C47D00;  
 	bra CODE_C47D32                      ;C47CCD|8063    |C47D32;  
-
-CODE_C47CCF:
+.lbl_C47CCF
 	bit.b #$20                           ;C47CCF|8920    |      ;  
-	beq CODE_C47CDA                      ;C47CD1|F007    |C47CDA;  
+	beq .lbl_C47CDA                      ;C47CD1|F007    |C47CDA;  
 	bit.b #$10                           ;C47CD3|8910    |      ;  
-	beq CODE_C47D1F                      ;C47CD5|F048    |C47D1F;  
+	beq .lbl_C47D1F                      ;C47CD5|F048    |C47D1F;  
 	jmp.w CODE_C47D62                    ;C47CD7|4C627D  |C47D62;  
-
-CODE_C47CDA:
+.lbl_C47CDA
 	jmp.w CODE_C47D57                    ;C47CDA|4C577D  |C47D57;  
-
-CODE_C47CDD:
+.lbl_C47CDD
 	jmp.w CODE_C47D7E                    ;C47CDD|4C7E7D  |C47D7E;  
-
-CODE_C47CE0:
+.lbl_C47CE0
 	cmp.b #$3F                           ;C47CE0|C93F    |      ;  
-	bne CODE_C47CED                      ;C47CE2|D009    |C47CED;  
+	bne .lbl_C47CED                      ;C47CE2|D009    |C47CED;  
 	lda.b [$C2]                          ;C47CE4|A7C2    |0000C2;  
 	inc.b $C2                            ;C47CE6|E6C2    |0000C2;  
-	bne CODE_C47CED                      ;C47CE8|D003    |C47CED;  
+	bne .lbl_C47CED                      ;C47CE8|D003    |C47CED;  
 	jsr.w CODE_C47A4A                    ;C47CEA|204A7A  |C47A4A;  
-
-CODE_C47CED:
+.lbl_C47CED
 	sta.b $BF                            ;C47CED|85BF    |0000BF;  
 
 CODE_C47CEF:
@@ -11758,14 +11249,12 @@ CODE_C47CEF:
 	clc                                  ;C47CF3|18      |      ;  
 	adc.b $BF                            ;C47CF4|65BF    |0000BF;  
 	sta.b $C0                            ;C47CF6|85C0    |0000C0;  
-	bcc CODE_C47CFC                      ;C47CF8|9002    |C47CFC;  
+	bcc .lbl_C47CFC                      ;C47CF8|9002    |C47CFC;  
 	inc.b $C1                            ;C47CFA|E6C1    |0000C1;  
-
-CODE_C47CFC:
+.lbl_C47CFC
 	ldy.b $C0                            ;C47CFC|A4C0    |0000C0;  
 	bra CODE_C47CA7                      ;C47CFE|80A7    |C47CA7;  
-
-CODE_C47D00:
+.lbl_C47D00
 	and.b #$0F                           ;C47D00|290F    |      ;  
 	sta.b $BF                            ;C47D02|85BF    |0000BF;  
 	rep #$20                             ;C47D04|C220    |      ;  
@@ -11777,15 +11266,13 @@ CODE_C47D00:
 	lda.w $7DC1,x                        ;C47D0E|BDC17D  |7F7DC1;  
 	and.b #$1C                           ;C47D11|291C    |      ;  
 	bra CODE_C47D29                      ;C47D13|8014    |C47D29;  
-
-CODE_C47D15:
+.lbl_C47D15
 	and.b #$03                           ;C47D15|2903    |      ;  
 	sta.b $BF                            ;C47D17|85BF    |0000BF;  
 	lda.b $BE                            ;C47D19|A5BE    |0000BE;  
 	and.b #$1C                           ;C47D1B|291C    |      ;  
 	bra CODE_C47D29                      ;C47D1D|800A    |C47D29;  
-
-CODE_C47D1F:
+.lbl_C47D1F
 	and.b #$0F                           ;C47D1F|290F    |      ;  
 	clc                                  ;C47D21|18      |      ;  
 	adc.b #$04                           ;C47D22|6904    |      ;  
@@ -11810,14 +11297,13 @@ CODE_C47D32:
 	lda.w $7DC1,x                        ;C47D40|BDC17D  |7F7DC1;  
 	and.b #$1C                           ;C47D43|291C    |      ;  
 	sta.b $C0                            ;C47D45|85C0    |0000C0;  
-
-CODE_C47D47:
+.lbl_C47D47
 	lda.b $C0                            ;C47D47|A5C0    |0000C0;  
 	ora.w $7DC1,y                        ;C47D49|19C17D  |7F7DC1;  
 	sta.w $7DC1,y                        ;C47D4C|99C17D  |7F7DC1;  
 	iny                                  ;C47D4F|C8      |      ;  
 	dec.b $BF                            ;C47D50|C6BF    |0000BF;  
-	bpl CODE_C47D47                      ;C47D52|10F3    |C47D47;  
+	bpl .lbl_C47D47                      ;C47D52|10F3    |C47D47;  
 	jmp.w CODE_C47CA7                    ;C47D54|4CA77C  |C47CA7;  
 
 CODE_C47D57:
@@ -11837,14 +11323,13 @@ CODE_C47D62:
 
 CODE_C47D6C:
 	sta.b $C0                            ;C47D6C|85C0    |0000C0;  
-
-CODE_C47D6E:
+.lbl_C47D6E
 	lda.b $C0                            ;C47D6E|A5C0    |0000C0;  
 	ora.w $7DC1,y                        ;C47D70|19C17D  |7F7DC1;  
 	sta.w $7DC1,y                        ;C47D73|99C17D  |7F7DC1;  
 	iny                                  ;C47D76|C8      |      ;  
 	dec.b $BF                            ;C47D77|C6BF    |0000BF;  
-	bpl CODE_C47D6E                      ;C47D79|10F3    |C47D6E;  
+	bpl .lbl_C47D6E                      ;C47D79|10F3    |C47D6E;  
 	jmp.w CODE_C47CA7                    ;C47D7B|4CA77C  |C47CA7;  
 
 CODE_C47D7E:
@@ -11854,8 +11339,7 @@ CODE_C47D7E:
 	lsr a                                ;C47D84|4A      |      ;  
 	and.b #$1C                           ;C47D85|291C    |      ;  
 	bra CODE_C47D8C                      ;C47D87|8003    |C47D8C;  
-
-CODE_C47D89:
+.lbl_C47D89
 	jsr.w CODE_C47EEB                    ;C47D89|20EB7E  |C47EEB;  
 
 CODE_C47D8C:
@@ -11863,29 +11347,27 @@ CODE_C47D8C:
 	sta.w $7DC1,y                        ;C47D8F|99C17D  |7F7DC1;  
 	iny                                  ;C47D92|C8      |      ;  
 	dec.b $BF                            ;C47D93|C6BF    |0000BF;  
-	bpl CODE_C47D89                      ;C47D95|10F2    |C47D89;  
+	bpl .lbl_C47D89                      ;C47D95|10F2    |C47D89;  
 	jmp.w CODE_C47CA7                    ;C47D97|4CA77C  |C47CA7;  
 
 CODE_C47D9A:
 	ldx.b $C5                            ;C47D9A|A6C5    |0000C5;  
 	ldy.w #$03DF                         ;C47D9C|A0DF03  |      ;  
-
-CODE_C47D9F:
+.lbl_C47D9F
 	lda.w $7DC1,x                        ;C47D9F|BDC17D  |7F7DC1;  
 	eor.w $7DE1,x                        ;C47DA2|5DE17D  |7F7DE1;  
 	sta.w $7DE1,x                        ;C47DA5|9DE17D  |7F7DE1;  
 	inx                                  ;C47DA8|E8      |      ;  
 	dey                                  ;C47DA9|88      |      ;  
-	bpl CODE_C47D9F                      ;C47DAA|10F3    |C47D9F;  
+	bpl .lbl_C47D9F                      ;C47DAA|10F3    |C47D9F;  
 	ldy.b $C5                            ;C47DAC|A4C5    |0000C5;  
 	stz.b $CC                            ;C47DAE|64CC    |0000CC;  
 	lsr.b $C9                            ;C47DB0|46C9    |0000C9;  
-	bcs CODE_C47DDF                      ;C47DB2|B02B    |C47DDF;  
+	bcs .lbl_C47DDF                      ;C47DB2|B02B    |C47DDF;  
 	.db $A2,$FF,$03,$20,$D0,$7E,$29,$C0   ;C47DB4
 	.db $19,$C1,$7D,$99,$C1,$7D,$C8,$CA   ;C47DBC|        |007DC1;  
 	.db $10,$F1                           ;C47DC4|        |C47DB7;  
-
-CODE_C47DC6:
+.lbl_C47DC6
 	plx                                  ;C47DC6|FA      |      ;  
 	lda.b $C2                            ;C47DC7|A5C2    |0000C2;  
 	sta.l $7FAA42,x                      ;C47DC9|9F42AA7F|7FAA42;  
@@ -11898,50 +11380,43 @@ CODE_C47DC6:
 
 CODE_C47DDB:
 	cpy.b $CA                            ;C47DDB|C4CA    |0000CA;  
-	bcs CODE_C47DC6                      ;C47DDD|B0E7    |C47DC6;  
-
-CODE_C47DDF:
+	bcs .lbl_C47DC6                      ;C47DDD|B0E7    |C47DC6;  
+.lbl_C47DDF
 	lda.b [$C2]                          ;C47DDF|A7C2    |0000C2;  
 	inc.b $C2                            ;C47DE1|E6C2    |0000C2;  
-	bne CODE_C47DE8                      ;C47DE3|D003    |C47DE8;  
+	bne .lbl_C47DE8                      ;C47DE3|D003    |C47DE8;  
 	jsr.w CODE_C47A4A                    ;C47DE5|204A7A  |C47A4A;  
-
-CODE_C47DE8:
+.lbl_C47DE8
 	sta.b $BE                            ;C47DE8|85BE    |0000BE;  
 	bit.b #$C0                           ;C47DEA|89C0    |      ;  
-	beq CODE_C47E11                      ;C47DEC|F023    |C47E11;  
+	beq .lbl_C47E11                      ;C47DEC|F023    |C47E11;  
 	cmp.b #$C0                           ;C47DEE|C9C0    |      ;  
-	bcs CODE_C47E0E                      ;C47DF0|B01C    |C47E0E;  
+	bcs .lbl_C47E0E                      ;C47DF0|B01C    |C47E0E;  
 	bit.b #$80                           ;C47DF2|8980    |      ;  
-	bne CODE_C47E00                      ;C47DF4|D00A    |C47E00;  
+	bne .lbl_C47E00                      ;C47DF4|D00A    |C47E00;  
 	bit.b #$20                           ;C47DF6|8920    |      ;  
-	bne CODE_C47E44                      ;C47DF8|D04A    |C47E44;  
+	bne .lbl_C47E44                      ;C47DF8|D04A    |C47E44;  
 	bit.b #$10                           ;C47DFA|8910    |      ;  
-	beq CODE_C47E31                      ;C47DFC|F033    |C47E31;  
+	beq .lbl_C47E31                      ;C47DFC|F033    |C47E31;  
 	bra CODE_C47E64                      ;C47DFE|8064    |C47E64;  
-
-CODE_C47E00:
+.lbl_C47E00
 	bit.b #$20                           ;C47E00|8920    |      ;  
-	beq CODE_C47E0B                      ;C47E02|F007    |C47E0B;  
+	beq .lbl_C47E0B                      ;C47E02|F007    |C47E0B;  
 	bit.b #$10                           ;C47E04|8910    |      ;  
-	beq CODE_C47E4F                      ;C47E06|F047    |C47E4F;  
+	beq .lbl_C47E4F                      ;C47E06|F047    |C47E4F;  
 	jmp.w CODE_C47E95                    ;C47E08|4C957E  |C47E95;  
-
-CODE_C47E0B:
+.lbl_C47E0B
 	jmp.w CODE_C47E89                    ;C47E0B|4C897E  |C47E89;  
-
-CODE_C47E0E:
+.lbl_C47E0E
 	jmp.w CODE_C47EB3                    ;C47E0E|4CB37E  |C47EB3;  
-
-CODE_C47E11:
+.lbl_C47E11
 	cmp.b #$3F                           ;C47E11|C93F    |      ;  
-	bne CODE_C47E1E                      ;C47E13|D009    |C47E1E;  
+	bne .lbl_C47E1E                      ;C47E13|D009    |C47E1E;  
 	lda.b [$C2]                          ;C47E15|A7C2    |0000C2;  
 	inc.b $C2                            ;C47E17|E6C2    |0000C2;  
-	bne CODE_C47E1E                      ;C47E19|D003    |C47E1E;  
+	bne .lbl_C47E1E                      ;C47E19|D003    |C47E1E;  
 	.db $20,$4A,$7A                       ;C47E1B|        |C47A4A;  
-
-CODE_C47E1E:
+.lbl_C47E1E
 	sta.b $BF                            ;C47E1E|85BF    |0000BF;  
 
 CODE_C47E20:
@@ -11951,14 +11426,12 @@ CODE_C47E20:
 	clc                                  ;C47E24|18      |      ;  
 	adc.b $BF                            ;C47E25|65BF    |0000BF;  
 	sta.b $C0                            ;C47E27|85C0    |0000C0;  
-	bcc CODE_C47E2D                      ;C47E29|9002    |C47E2D;  
+	bcc .lbl_C47E2D                      ;C47E29|9002    |C47E2D;  
 	inc.b $C1                            ;C47E2B|E6C1    |0000C1;  
-
-CODE_C47E2D:
+.lbl_C47E2D
 	ldy.b $C0                            ;C47E2D|A4C0    |0000C0;  
 	bra CODE_C47DDB                      ;C47E2F|80AA    |C47DDB;  
-
-CODE_C47E31:
+.lbl_C47E31
 	and.b #$0F                           ;C47E31|290F    |      ;  
 	sta.b $BF                            ;C47E33|85BF    |0000BF;  
 	rep #$20                             ;C47E35|C220    |      ;  
@@ -11969,8 +11442,7 @@ CODE_C47E31:
 	sep #$20                             ;C47E3D|E220    |      ;  
 	lda.w $7DC1,x                        ;C47E3F|BDC17D  |7F7DC1;  
 	bra CODE_C47E59                      ;C47E42|8015    |C47E59;  
-
-CODE_C47E44:
+.lbl_C47E44
 	and.b #$07                           ;C47E44|2907    |      ;  
 	sta.b $BF                            ;C47E46|85BF    |0000BF;  
 	lda.b $BE                            ;C47E48|A5BE    |0000BE;  
@@ -11978,8 +11450,7 @@ CODE_C47E44:
 	asl a                                ;C47E4B|0A      |      ;  
 	asl a                                ;C47E4C|0A      |      ;  
 	bra CODE_C47E59                      ;C47E4D|800A    |C47E59;  
-
-CODE_C47E4F:
+.lbl_C47E4F
 	and.b #$0F                           ;C47E4F|290F    |      ;  
 	clc                                  ;C47E51|18      |      ;  
 	adc.b #$08                           ;C47E52|6908    |      ;  
@@ -12005,14 +11476,13 @@ CODE_C47E64:
 	lda.w $7DC1,x                        ;C47E72|BDC17D  |7F7DC1;  
 	and.b #$C0                           ;C47E75|29C0    |      ;  
 	sta.b $C0                            ;C47E77|85C0    |0000C0;  
-
-CODE_C47E79:
+.lbl_C47E79
 	lda.b $C0                            ;C47E79|A5C0    |0000C0;  
 	ora.w $7DC1,y                        ;C47E7B|19C17D  |7F7DC1;  
 	sta.w $7DC1,y                        ;C47E7E|99C17D  |7F7DC1;  
 	iny                                  ;C47E81|C8      |      ;  
 	dec.b $BF                            ;C47E82|C6BF    |0000BF;  
-	bpl CODE_C47E79                      ;C47E84|10F3    |C47E79;  
+	bpl .lbl_C47E79                      ;C47E84|10F3    |C47E79;  
 	jmp.w CODE_C47DDB                    ;C47E86|4CDB7D  |C47DDB;  
 
 CODE_C47E89:
@@ -12035,14 +11505,13 @@ CODE_C47E95:
 CODE_C47E9F:
 	and.b #$C0                           ;C47E9F|29C0    |      ;  
 	sta.b $C0                            ;C47EA1|85C0    |0000C0;  
-
-CODE_C47EA3:
+.lbl_C47EA3
 	lda.b $C0                            ;C47EA3|A5C0    |0000C0;  
 	ora.w $7DC1,y                        ;C47EA5|19C17D  |7F7DC1;  
 	sta.w $7DC1,y                        ;C47EA8|99C17D  |7F7DC1;  
 	iny                                  ;C47EAB|C8      |      ;  
 	dec.b $BF                            ;C47EAC|C6BF    |0000BF;  
-	bpl CODE_C47EA3                      ;C47EAE|10F3    |C47EA3;  
+	bpl .lbl_C47EA3                      ;C47EAE|10F3    |C47EA3;  
 	jmp.w CODE_C47DDB                    ;C47EB0|4CDB7D  |C47DDB;  
 
 CODE_C47EB3:
@@ -12052,8 +11521,7 @@ CODE_C47EB3:
 	asl a                                ;C47EB9|0A      |      ;  
 	asl a                                ;C47EBA|0A      |      ;  
 	bra CODE_C47EC0                      ;C47EBB|8003    |C47EC0;  
-
-CODE_C47EBD:
+.lbl_C47EBD
 	jsr.w CODE_C47ED0                    ;C47EBD|20D07E  |C47ED0;  
 
 CODE_C47EC0:
@@ -12062,24 +11530,22 @@ CODE_C47EC0:
 	sta.w $7DC1,y                        ;C47EC5|99C17D  |7F7DC1;  
 	iny                                  ;C47EC8|C8      |      ;  
 	dec.b $BF                            ;C47EC9|C6BF    |0000BF;  
-	bpl CODE_C47EBD                      ;C47ECB|10F0    |C47EBD;  
+	bpl .lbl_C47EBD                      ;C47ECB|10F0    |C47EBD;  
 	jmp.w CODE_C47DDB                    ;C47ECD|4CDB7D  |C47DDB;  
 
 CODE_C47ED0:
 	dec.b $CC                            ;C47ED0|C6CC    |0000CC;  
-	bpl CODE_C47EE4                      ;C47ED2|1010    |C47EE4;  
+	bpl .lbl_C47EE4                      ;C47ED2|1010    |C47EE4;  
 	lda.b #$03                           ;C47ED4|A903    |      ;  
 	sta.b $CC                            ;C47ED6|85CC    |0000CC;  
 	lda.b [$C2]                          ;C47ED8|A7C2    |0000C2;  
 	inc.b $C2                            ;C47EDA|E6C2    |0000C2;  
-	bne CODE_C47EE1                      ;C47EDC|D003    |C47EE1;  
+	bne .lbl_C47EE1                      ;C47EDC|D003    |C47EE1;  
 	.db $20,$4A,$7A                       ;C47EDE|        |C47A4A;  
-
-CODE_C47EE1:
+.lbl_C47EE1
 	sta.b $CD                            ;C47EE1|85CD    |0000CD;  
 	rts                                  ;C47EE3|60      |      ;  
-
-CODE_C47EE4:
+.lbl_C47EE4
 	lda.b $CD                            ;C47EE4|A5CD    |0000CD;  
 	asl a                                ;C47EE6|0A      |      ;  
 	asl a                                ;C47EE7|0A      |      ;  
@@ -12088,32 +11554,28 @@ CODE_C47EE4:
 
 CODE_C47EEB:
 	dec.b $CC                            ;C47EEB|C6CC    |0000CC;  
-	bpl CODE_C47F14                      ;C47EED|1025    |C47F14;  
+	bpl .lbl_C47F14                      ;C47EED|1025    |C47F14;  
 	lda.b #$07                           ;C47EEF|A907    |      ;  
 	sta.b $CC                            ;C47EF1|85CC    |0000CC;  
 	lda.b [$C2]                          ;C47EF3|A7C2    |0000C2;  
 	inc.b $C2                            ;C47EF5|E6C2    |0000C2;  
-	bne CODE_C47EFC                      ;C47EF7|D003    |C47EFC;  
+	bne .lbl_C47EFC                      ;C47EF7|D003    |C47EFC;  
 	.db $20,$4A,$7A                       ;C47EF9|        |C47A4A;  
-
-CODE_C47EFC:
+.lbl_C47EFC
 	sta.b $CD                            ;C47EFC|85CD    |0000CD;  
 	lda.b [$C2]                          ;C47EFE|A7C2    |0000C2;  
 	inc.b $C2                            ;C47F00|E6C2    |0000C2;  
-	bne CODE_C47F07                      ;C47F02|D003    |C47F07;  
+	bne .lbl_C47F07                      ;C47F02|D003    |C47F07;  
 	jsr.w CODE_C47A4A                    ;C47F04|204A7A  |C47A4A;  
-
-CODE_C47F07:
+.lbl_C47F07
 	sta.b $CE                            ;C47F07|85CE    |0000CE;  
 	lda.b [$C2]                          ;C47F09|A7C2    |0000C2;  
 	inc.b $C2                            ;C47F0B|E6C2    |0000C2;  
-	bne CODE_C47F12                      ;C47F0D|D003    |C47F12;  
+	bne .lbl_C47F12                      ;C47F0D|D003    |C47F12;  
 	.db $20,$4A,$7A                       ;C47F0F|        |C47A4A;  
-
-CODE_C47F12:
+.lbl_C47F12
 	sta.b $CF                            ;C47F12|85CF    |0000CF;  
-
-CODE_C47F14:
+.lbl_C47F14
 	tdc                                  ;C47F14|7B      |      ;  
 	asl.b $CF                            ;C47F15|06CF    |0000CF;  
 	rol a                                ;C47F17|2A      |      ;  
@@ -12132,13 +11594,12 @@ CODE_C47F21:
 	and.w #$00FF                         ;C47F26|29FF00  |      ;  
 	tax                                  ;C47F29|AA      |      ;  
 	tdc                                  ;C47F2A|7B      |      ;  
-
-CODE_C47F2B:
+.lbl_C47F2B
 	sta.b $C5                            ;C47F2B|85C5    |0000C5;  
 	clc                                  ;C47F2D|18      |      ;  
 	adc.w #$0400                         ;C47F2E|690004  |      ;  
 	dex                                  ;C47F31|CA      |      ;  
-	bpl CODE_C47F2B                      ;C47F32|10F7    |C47F2B;  
+	bpl .lbl_C47F2B                      ;C47F32|10F7    |C47F2B;  
 	sep #$20                             ;C47F34|E220    |      ;  
 	lda.b $02                   ;C47F36|A502    |000002;  
 	sta.b $C4                            ;C47F38|85C4    |0000C4;  
@@ -12149,18 +11610,16 @@ CODE_C47F2B:
 	stx.b $C2                            ;C47F40|86C2    |0000C2;  
 	lda.b [$C2]                          ;C47F42|A7C2    |0000C2;  
 	inc.b $C2                            ;C47F44|E6C2    |0000C2;  
-	bne CODE_C47F4B                      ;C47F46|D003    |C47F4B;  
+	bne .lbl_C47F4B                      ;C47F46|D003    |C47F4B;  
 	.db $20,$4A,$7A                       ;C47F48|        |C47A4A;  
-
-CODE_C47F4B:
+.lbl_C47F4B
 	sta.b $C9                            ;C47F4B|85C9    |0000C9;  
 	tdc                                  ;C47F4D|7B      |      ;  
 	lda.b [$C2]                          ;C47F4E|A7C2    |0000C2;  
 	inc.b $C2                            ;C47F50|E6C2    |0000C2;  
-	bne CODE_C47F57                      ;C47F52|D003    |C47F57;  
+	bne .lbl_C47F57                      ;C47F52|D003    |C47F57;  
 	.db $20,$4A,$7A                       ;C47F54|        |C47A4A;  
-
-CODE_C47F57:
+.lbl_C47F57
 	rep #$20                             ;C47F57|C220    |      ;  
 	asl a                                ;C47F59|0A      |      ;  
 	asl a                                ;C47F5A|0A      |      ;  
@@ -12173,77 +11632,67 @@ CODE_C47F57:
 	sep #$20                             ;C47F65|E220    |      ;  
 	ldy.b $C5                            ;C47F67|A4C5    |0000C5;  
 	lsr.b $C9                            ;C47F69|46C9    |0000C9;  
-	bcs CODE_C47F83                      ;C47F6B|B016    |C47F83;  
+	bcs .lbl_C47F83                      ;C47F6B|B016    |C47F83;  
 	.db $AE,$4E,$AA,$A7,$C2,$E6,$C2,$D0   ;C47F6D|        |00AA4E;  
 	.db $03,$20,$4A,$7A,$99,$5E,$CE,$C8   ;C47F75|        |000020;  
 	.db $CA,$D0,$F0,$4C,$53,$80           ;C47F7D
-
-CODE_C47F83:
+.lbl_C47F83
 	lda.b #$01                           ;C47F83|A901    |      ;  
 	sta.b $CC                            ;C47F85|85CC    |0000CC;  
-	bra CODE_C47F90                      ;C47F87|8007    |C47F90;  
+	bra .lbl_C47F90                      ;C47F87|8007    |C47F90;  
 
 CODE_C47F89:
 	cpy.b $CA                            ;C47F89|C4CA    |0000CA;  
-	bcc CODE_C47F90                      ;C47F8B|9003    |C47F90;  
+	bcc .lbl_C47F90                      ;C47F8B|9003    |C47F90;  
 	jmp.w CODE_C48053                    ;C47F8D|4C5380  |C48053;  
-
-CODE_C47F90:
+.lbl_C47F90
 	lda.b [$C2]                          ;C47F90|A7C2    |0000C2;  
 	inc.b $C2                            ;C47F92|E6C2    |0000C2;  
-	bne CODE_C47F99                      ;C47F94|D003    |C47F99;  
+	bne .lbl_C47F99                      ;C47F94|D003    |C47F99;  
 	.db $20,$4A,$7A                       ;C47F96|        |C47A4A;  
-
-CODE_C47F99:
+.lbl_C47F99
 	bit.b #$80                           ;C47F99|8980    |      ;  
-	beq CODE_C47FAE                      ;C47F9B|F011    |C47FAE;  
+	beq .lbl_C47FAE                      ;C47F9B|F011    |C47FAE;  
 	bit.b #$40                           ;C47F9D|8940    |      ;  
-	bne CODE_C47FA7                      ;C47F9F|D006    |C47FA7;  
+	bne .lbl_C47FA7                      ;C47F9F|D006    |C47FA7;  
 	bit.b #$20                           ;C47FA1|8920    |      ;  
-	beq CODE_C47FE3                      ;C47FA3|F03E    |C47FE3;  
+	beq .lbl_C47FE3                      ;C47FA3|F03E    |C47FE3;  
 	bra CODE_C47FFF                      ;C47FA5|8058    |C47FFF;  
-
-CODE_C47FA7:
+.lbl_C47FA7
 	bit.b #$20                           ;C47FA7|8920    |      ;  
-	beq CODE_C48013                      ;C47FA9|F068    |C48013;  
+	beq .lbl_C48013                      ;C47FA9|F068    |C48013;  
 	.db $4C,$3B,$80                       ;C47FAB|        |C4803B;  
-
-CODE_C47FAE:
+.lbl_C47FAE
 	bit.b #$40                           ;C47FAE|8940    |      ;  
-	bne CODE_C47FC3                      ;C47FB0|D011    |C47FC3;  
+	bne .lbl_C47FC3                      ;C47FB0|D011    |C47FC3;  
 	inc a                                ;C47FB2|1A      |      ;  
 	sta.b $BE                            ;C47FB3|85BE    |0000BE;  
 	lda.b $CC                            ;C47FB5|A5CC    |0000CC;  
-
-CODE_C47FB7:
+.lbl_C47FB7
 	sta.w $CE5E,y                        ;C47FB7|995ECE  |7FCE5E;  
 	iny                                  ;C47FBA|C8      |      ;  
 	dec.b $BE                            ;C47FBB|C6BE    |0000BE;  
-	bpl CODE_C47FB7                      ;C47FBD|10F8    |C47FB7;  
+	bpl .lbl_C47FB7                      ;C47FBD|10F8    |C47FB7;  
 	inc.b $CC                            ;C47FBF|E6CC    |0000CC;  
 	bra CODE_C47F89                      ;C47FC1|80C6    |C47F89;  
-
-CODE_C47FC3:
+.lbl_C47FC3
 	and.b #$3F                           ;C47FC3|293F    |      ;  
 	cmp.b #$3F                           ;C47FC5|C93F    |      ;  
-	bne CODE_C47FD2                      ;C47FC7|D009    |C47FD2;  
+	bne .lbl_C47FD2                      ;C47FC7|D009    |C47FD2;  
 	.db $A7,$C2,$E6,$C2,$D0,$03,$20,$4A   ;C47FC9|        |0000C2;  
 	.db $7A                               ;C47FD1
-
-CODE_C47FD2:
+.lbl_C47FD2
 	inc a                                ;C47FD2|1A      |      ;  
 	sta.b $BE                            ;C47FD3|85BE    |0000BE;  
-
-CODE_C47FD5:
+.lbl_C47FD5
 	lda.b $CC                            ;C47FD5|A5CC    |0000CC;  
 	sta.w $CE5E,y                        ;C47FD7|995ECE  |7FCE5E;  
 	iny                                  ;C47FDA|C8      |      ;  
 	inc.b $CC                            ;C47FDB|E6CC    |0000CC;  
 	dec.b $BE                            ;C47FDD|C6BE    |0000BE;  
-	bne CODE_C47FD5                      ;C47FDF|D0F4    |C47FD5;  
+	bne .lbl_C47FD5                      ;C47FDF|D0F4    |C47FD5;  
 	bra CODE_C47F89                      ;C47FE1|80A6    |C47F89;  
-
-CODE_C47FE3:
+.lbl_C47FE3
 	and.b #$1F                           ;C47FE3|291F    |      ;  
 	sta.b $BE                            ;C47FE5|85BE    |0000BE;  
 	rep #$20                             ;C47FE7|C220    |      ;  
@@ -12252,14 +11701,13 @@ CODE_C47FE3:
 	sbc.w #$0020                         ;C47FEB|E92000  |      ;  
 	tax                                  ;C47FEE|AA      |      ;  
 	sep #$20                             ;C47FEF|E220    |      ;  
-
-CODE_C47FF1:
+.lbl_C47FF1
 	lda.w $CE5E,x                        ;C47FF1|BD5ECE  |7FCE5E;  
 	sta.w $CE5E,y                        ;C47FF4|995ECE  |7FCE5E;  
 	inx                                  ;C47FF7|E8      |      ;  
 	iny                                  ;C47FF8|C8      |      ;  
 	dec.b $BE                            ;C47FF9|C6BE    |0000BE;  
-	bpl CODE_C47FF1                      ;C47FFB|10F4    |C47FF1;  
+	bpl .lbl_C47FF1                      ;C47FFB|10F4    |C47FF1;  
 	bra CODE_C47F89                      ;C47FFD|808A    |C47F89;  
 
 CODE_C47FFF:
@@ -12268,40 +11716,35 @@ CODE_C47FFF:
 	dey                                  ;C48003|88      |      ;  
 	lda.w $CE5E,y                        ;C48004|B95ECE  |7FCE5E;  
 	iny                                  ;C48007|C8      |      ;  
-
-CODE_C48008:
+.lbl_C48008
 	sta.w $CE5E,y                        ;C48008|995ECE  |7FCE5E;  
 	iny                                  ;C4800B|C8      |      ;  
 	dec.b $BE                            ;C4800C|C6BE    |0000BE;  
-	bpl CODE_C48008                      ;C4800E|10F8    |C48008;  
+	bpl .lbl_C48008                      ;C4800E|10F8    |C48008;  
 	jmp.w CODE_C47F89                    ;C48010|4C897F  |C47F89;  
-
-CODE_C48013:
+.lbl_C48013
 	and.b #$1F                           ;C48013|291F    |      ;  
 	cmp.b #$1F                           ;C48015|C91F    |      ;  
-	bne CODE_C48023                      ;C48017|D00A    |C48023;  
+	bne .lbl_C48023                      ;C48017|D00A    |C48023;  
 	lda.b [$C2]                          ;C48019|A7C2    |0000C2;  
 	inc.b $C2                            ;C4801B|E6C2    |0000C2;  
-	bne CODE_C48022                      ;C4801D|D003    |C48022;  
+	bne .lbl_C48022                      ;C4801D|D003    |C48022;  
 	.db $20,$4A,$7A                       ;C4801F|        |C47A4A;  
-
-CODE_C48022:
+.lbl_C48022
 	dec a                                ;C48022|3A      |      ;  
-
-CODE_C48023:
+.lbl_C48023
 	inc a                                ;C48023|1A      |      ;  
 	inc a                                ;C48024|1A      |      ;  
 	sta.b $BE                            ;C48025|85BE    |0000BE;  
 	lda.b [$C2]                          ;C48027|A7C2    |0000C2;  
 	inc.b $C2                            ;C48029|E6C2    |0000C2;  
-	bne CODE_C48030                      ;C4802B|D003    |C48030;  
+	bne .lbl_C48030                      ;C4802B|D003    |C48030;  
 	.db $20,$4A,$7A                       ;C4802D|        |C47A4A;  
-
-CODE_C48030:
+.lbl_C48030
 	sta.w $CE5E,y                        ;C48030|995ECE  |7FCE5E;  
 	iny                                  ;C48033|C8      |      ;  
 	dec.b $BE                            ;C48034|C6BE    |0000BE;  
-	bne CODE_C48030                      ;C48036|D0F8    |C48030;  
+	bne .lbl_C48030                      ;C48036|D0F8    |C48030;  
 	jmp.w CODE_C47F89                    ;C48038|4C897F  |C47F89;  
 	.db $29,$1F,$85,$BE,$A7,$C2,$E6,$C2   ;C4803B
 	.db $D0,$03,$20,$4A,$7A,$99,$5E,$CE   ;C48043|        |C48048;  
@@ -12312,49 +11755,44 @@ CODE_C48053:
 	ldy.b $C5                            ;C48055|A4C5    |0000C5;  
 	stz.b $CC                            ;C48057|64CC    |0000CC;  
 	lsr.b $C9                            ;C48059|46C9    |0000C9;  
-	bcs CODE_C48074                      ;C4805B|B017    |C48074;  
+	bcs .lbl_C48074                      ;C4805B|B017    |C48074;  
 	.db $AE,$4E,$AA,$20,$EB,$7E,$99,$5E   ;C4805D|        |00AA4E;  
 	.db $C4,$C8,$CA,$D0,$F6,$4C,$50,$81   ;C48065|        |0000C8;  
 
 CODE_C4806D:
 	cpy.b $CA                            ;C4806D|C4CA    |0000CA;  
-	bcc CODE_C48074                      ;C4806F|9003    |C48074;  
+	bcc .lbl_C48074                      ;C4806F|9003    |C48074;  
 	jmp.w CODE_C48150                    ;C48071|4C5081  |C48150;  
-
-CODE_C48074:
+.lbl_C48074
 	lda.b [$C2]                          ;C48074|A7C2    |0000C2;  
 	inc.b $C2                            ;C48076|E6C2    |0000C2;  
-	bne CODE_C4807D                      ;C48078|D003    |C4807D;  
+	bne .lbl_C4807D                      ;C48078|D003    |C4807D;  
 	.db $20,$4A,$7A                       ;C4807A|        |C47A4A;  
-
-CODE_C4807D:
+.lbl_C4807D
 	sta.b $BE                            ;C4807D|85BE    |0000BE;  
 	bit.b #$C0                           ;C4807F|89C0    |      ;  
-	beq CODE_C480A6                      ;C48081|F023    |C480A6;  
+	beq .lbl_C480A6                      ;C48081|F023    |C480A6;  
 	.db $C9,$C0,$B0,$1C,$89,$80,$D0,$0A   ;C48083
 	.db $89,$20,$D0,$48,$89,$10,$F0,$2F   ;C4808B
 	.db $80,$5C,$89,$20,$F0,$07,$89,$10   ;C48093|        |C480F1;  
 	.db $F0,$44,$4C,$1E,$81,$4C,$13,$81   ;C4809B|        |C480E1;  
 	.db $4C,$37,$81                       ;C480A3|        |C48137;  
-
-CODE_C480A6:
+.lbl_C480A6
 	cmp.b #$3F                           ;C480A6|C93F    |      ;  
-	bne CODE_C480B3                      ;C480A8|D009    |C480B3;  
+	bne .lbl_C480B3                      ;C480A8|D009    |C480B3;  
 	lda.b [$C2]                          ;C480AA|A7C2    |0000C2;  
 	inc.b $C2                            ;C480AC|E6C2    |0000C2;  
-	bne CODE_C480B3                      ;C480AE|D003    |C480B3;  
+	bne .lbl_C480B3                      ;C480AE|D003    |C480B3;  
 	.db $20,$4A,$7A                       ;C480B0|        |C47A4A;  
-
-CODE_C480B3:
+.lbl_C480B3
 	sta.b $BF                            ;C480B3|85BF    |0000BF;  
 	inc.b $BF                            ;C480B5|E6BF    |0000BF;  
 	tdc                                  ;C480B7|7B      |      ;  
-
-CODE_C480B8:
+.lbl_C480B8
 	sta.w $C45E,y                        ;C480B8|995EC4  |7FC45E;  
 	iny                                  ;C480BB|C8      |      ;  
 	dec.b $BF                            ;C480BC|C6BF    |0000BF;  
-	bne CODE_C480B8                      ;C480BE|D0F8    |C480B8;  
+	bne .lbl_C480B8                      ;C480BE|D0F8    |C480B8;  
 	bra CODE_C4806D                      ;C480C0|80AB    |C4806D;  
 	.db $29,$0F,$85,$BF,$C2,$20,$98,$38   ;C480C2
 	.db $E9,$20,$00,$AA,$E2,$20,$BD,$5E   ;C480CA
@@ -12378,14 +11816,13 @@ CODE_C480B8:
 CODE_C48150:
 	ldx.b $C5                            ;C48150|A6C5    |0000C5;  
 	ldy.w #$0020                         ;C48152|A02000  |      ;  
-
-CODE_C48155:
+.lbl_C48155
 	lda.w $C45E,x                        ;C48155|BD5EC4  |7FC45E;  
 	ora.b $05                            ;C48158|0505    |000005;  
 	sta.w $C45E,x                        ;C4815A|9D5EC4  |7FC45E;  
 	inx                                  ;C4815D|E8      |      ;  
 	dey                                  ;C4815E|88      |      ;  
-	bne CODE_C48155                      ;C4815F|D0F4    |C48155;  
+	bne .lbl_C48155                      ;C4815F|D0F4    |C48155;  
 	ldx.b $C5                            ;C48161|A6C5    |0000C5;  
 	rep #$20                             ;C48163|C220    |      ;  
 	lda.w $AA4E                          ;C48165|AD4EAA  |7FAA4E;  
@@ -12393,55 +11830,49 @@ CODE_C48155:
 	sbc.w #$0020                         ;C48169|E92000  |      ;  
 	tay                                  ;C4816C|A8      |      ;  
 	sep #$20                             ;C4816D|E220    |      ;  
-
-CODE_C4816F:
+.lbl_C4816F
 	lda.w $C45E,x                        ;C4816F|BD5EC4  |7FC45E;  
 	eor.w $C47E,x                        ;C48172|5D7EC4  |7FC47E;  
 	sta.w $C47E,x                        ;C48175|9D7EC4  |7FC47E;  
 	inx                                  ;C48178|E8      |      ;  
 	dey                                  ;C48179|88      |      ;  
-	bne CODE_C4816F                      ;C4817A|D0F3    |C4816F;  
+	bne .lbl_C4816F                      ;C4817A|D0F3    |C4816F;  
 	ldy.b $C5                            ;C4817C|A4C5    |0000C5;  
 	stz.b $CC                            ;C4817E|64CC    |0000CC;  
 	lsr.b $C9                            ;C48180|46C9    |0000C9;  
-	bcs CODE_C4819C                      ;C48182|B018    |C4819C;  
+	bcs .lbl_C4819C                      ;C48182|B018    |C4819C;  
 	.db $AE,$4E,$AA,$20,$D0,$7E,$29,$C0   ;C48184|        |00AA4E;  
 	.db $19,$5E,$C4,$99,$5E,$C4,$C8,$CA   ;C4818C|        |00C45E;  
 	.db $D0,$F1                           ;C48194|        |C48187;  
-
-CODE_C48196:
+.lbl_C48196
 	plp                                  ;C48196|28      |      ;  
 	rtl                                  ;C48197|6B      |      ;  
 
 CODE_C48198:
 	cpy.b $CA                            ;C48198|C4CA    |0000CA;  
-	bcs CODE_C48196                      ;C4819A|B0FA    |C48196;  
-
-CODE_C4819C:
+	bcs .lbl_C48196                      ;C4819A|B0FA    |C48196;  
+.lbl_C4819C
 	lda.b [$C2]                          ;C4819C|A7C2    |0000C2;  
 	inc.b $C2                            ;C4819E|E6C2    |0000C2;  
-	bne CODE_C481A5                      ;C481A0|D003    |C481A5;  
+	bne .lbl_C481A5                      ;C481A0|D003    |C481A5;  
 	.db $20,$4A,$7A                       ;C481A2|        |C47A4A;  
-
-CODE_C481A5:
+.lbl_C481A5
 	sta.b $BE                            ;C481A5|85BE    |0000BE;  
 	bit.b #$C0                           ;C481A7|89C0    |      ;  
-	beq CODE_C481CE                      ;C481A9|F023    |C481CE;  
+	beq .lbl_C481CE                      ;C481A9|F023    |C481CE;  
 	.db $C9,$C0,$B0,$1C,$89,$80,$D0,$0A   ;C481AB
 	.db $89,$20,$D0,$4A,$89,$10,$F0,$33   ;C481B3
 	.db $80,$64,$89,$20,$F0,$07,$89,$10   ;C481BB|        |C48221;  
 	.db $F0,$47,$4C,$52,$82,$4C,$46,$82   ;C481C3|        |C4820C;  
 	.db $4C,$70,$82                       ;C481CB|        |C48270;  
-
-CODE_C481CE:
+.lbl_C481CE
 	cmp.b #$3F                           ;C481CE|C93F    |      ;  
-	bne CODE_C481DB                      ;C481D0|D009    |C481DB;  
+	bne .lbl_C481DB                      ;C481D0|D009    |C481DB;  
 	lda.b [$C2]                          ;C481D2|A7C2    |0000C2;  
 	inc.b $C2                            ;C481D4|E6C2    |0000C2;  
-	bne CODE_C481DB                      ;C481D6|D003    |C481DB;  
+	bne .lbl_C481DB                      ;C481D6|D003    |C481DB;  
 	.db $20,$4A,$7A                       ;C481D8|        |C47A4A;  
-
-CODE_C481DB:
+.lbl_C481DB
 	sta.b $BF                            ;C481DB|85BF    |0000BF;  
 	iny                                  ;C481DD|C8      |      ;  
 	sty.b $C0                            ;C481DE|84C0    |0000C0;  
@@ -12449,10 +11880,9 @@ CODE_C481DB:
 	clc                                  ;C481E1|18      |      ;  
 	adc.b $BF                            ;C481E2|65BF    |0000BF;  
 	sta.b $C0                            ;C481E4|85C0    |0000C0;  
-	bcc CODE_C481EA                      ;C481E6|9002    |C481EA;  
+	bcc .lbl_C481EA                      ;C481E6|9002    |C481EA;  
 	inc.b $C1                            ;C481E8|E6C1    |0000C1;  
-
-CODE_C481EA:
+.lbl_C481EA
 	ldy.b $C0                            ;C481EA|A4C0    |0000C0;  
 	bra CODE_C48198                      ;C481EC|80AA    |C48198;  
 	.db $29,$0F,$85,$BF,$C2,$20,$98,$38   ;C481EE
@@ -12506,12 +11936,11 @@ CODE_C482AD:
 	lda.l DATA8_F40009,x                 ;C482B8|BF0900F4|F40009;  
 	sta.b $00                            ;C482BC|8500    |000000;  
 	ora.l DATA8_F4000A,x                 ;C482BE|1F0A00F4|F4000A;  
-	beq CODE_C482CE                      ;C482C2|F00A    |C482CE;  
+	beq .lbl_C482CE                      ;C482C2|F00A    |C482CE;  
 	lda.l DATA8_F4000A,x                 ;C482C4|BF0A00F4|F4000A;  
 	sta.b w0001                            ;C482C8|8501    |000001;  
 	jsl.l CODE_C47A84                    ;C482CA|22847AC4|C47A84;  
-
-CODE_C482CE:
+.lbl_C482CE
 	plp                                  ;C482CE|28      |      ;  
 	rtl                                  ;C482CF|6B      |      ;  
 
@@ -12538,22 +11967,20 @@ CODE_C482ED:
 	ldx.b $03                            ;C482F4|A603    |000003;  
 	rep #$30                             ;C482F6|C230    |      ;  
 	tdc                                  ;C482F8|7B      |      ;  
-
-CODE_C482F9:
+.lbl_C482F9
 	tay                                  ;C482F9|A8      |      ;  
 	clc                                  ;C482FA|18      |      ;  
 	adc.w #$0400                         ;C482FB|690004  |      ;  
 	dex                                  ;C482FE|CA      |      ;  
-	bpl CODE_C482F9                      ;C482FF|10F8    |C482F9;  
+	bpl .lbl_C482F9                      ;C482FF|10F8    |C482F9;  
 	ldx.w #$03FF                         ;C48301|A2FF03  |      ;  
-
-CODE_C48304:
+.lbl_C48304
 	lda.w $7DC1,y                        ;C48304|B9C17D  |7F7DC1;  
 	ora.w #$2000                         ;C48307|090020  |      ;  
 	sta.w $7DC1,y                        ;C4830A|99C17D  |7F7DC1;  
 	iny                                  ;C4830D|C8      |      ;  
 	dex                                  ;C4830E|CA      |      ;  
-	bpl CODE_C48304                      ;C4830F|10F3    |C48304;  
+	bpl .lbl_C48304                      ;C4830F|10F3    |C48304;  
 	plp                                  ;C48311|28      |      ;  
 	rtl                                  ;C48312|6B      |      ;  
 	.db $08,$E2,$30,$A9,$7F,$48,$AB,$A6   ;C48313
@@ -12581,25 +12008,22 @@ CODE_C48339:
 	plb                                  ;C48355|AB      |      ;  
 	lda.b [$C2]                          ;C48356|A7C2    |0000C2;  
 	inc.b $C2                            ;C48358|E6C2    |0000C2;  
-	bne CODE_C4835F                      ;C4835A|D003    |C4835F;  
+	bne .lbl_C4835F                      ;C4835A|D003    |C4835F;  
 	.db $20,$4A,$7A                       ;C4835C|        |C47A4A;  
-
-CODE_C4835F:
+.lbl_C4835F
 	sta.b $BE                            ;C4835F|85BE    |0000BE;  
 	sta.b $BF                            ;C48361|85BF    |0000BF;  
 	stz.b $03                            ;C48363|6403    |000003;  
 	ldy.b $02                   ;C48365|A402    |000002;  
-	beq CODE_C48397                      ;C48367|F02E    |C48397;  
+	beq .lbl_C48397                      ;C48367|F02E    |C48397;  
 	ldx.w #$0000                         ;C48369|A20000  |      ;  
-
-CODE_C4836C:
+.lbl_C4836C
 	asl a                                ;C4836C|0A      |      ;  
-	bcc CODE_C48372                      ;C4836D|9003    |C48372;  
+	bcc .lbl_C48372                      ;C4836D|9003    |C48372;  
 	inx                                  ;C4836F|E8      |      ;  
-	bra CODE_C4836C                      ;C48370|80FA    |C4836C;  
-
-CODE_C48372:
-	bne CODE_C4836C                      ;C48372|D0F8    |C4836C;  
+	bra .lbl_C4836C                      ;C48370|80FA    |C4836C;  
+.lbl_C48372
+	bne .lbl_C4836C                      ;C48372|D0F8    |C4836C;  
 	rep #$20                             ;C48374|C220    |      ;  
 	txa                                  ;C48376|8A      |      ;  
 	sta.b $C0                            ;C48377|85C0    |0000C0;  
@@ -12612,53 +12036,45 @@ CODE_C48372:
 	asl a                                ;C48380|0A      |      ;  
 	sta.b $C0                            ;C48381|85C0    |0000C0;  
 	lda.b $C2                            ;C48383|A5C2    |0000C2;  
-
-CODE_C48385:
+.lbl_C48385
 	clc                                  ;C48385|18      |      ;  
 	adc.b $C0                            ;C48386|65C0    |0000C0;  
-	bcc CODE_C48390                      ;C48388|9006    |C48390;  
+	bcc .lbl_C48390                      ;C48388|9006    |C48390;  
 	.db $E2,$20,$E6,$C4,$C2,$20           ;C4838A
-
-CODE_C48390:
+.lbl_C48390
 	dey                                  ;C48390|88      |      ;  
-	bne CODE_C48385                      ;C48391|D0F2    |C48385;  
+	bne .lbl_C48385                      ;C48391|D0F2    |C48385;  
 	sta.b $C2                            ;C48393|85C2    |0000C2;  
 	sep #$20                             ;C48395|E220    |      ;  
-
-CODE_C48397:
+.lbl_C48397
 	ldx.w #$0000                         ;C48397|A20000  |      ;  
-
-CODE_C4839A:
+.lbl_C4839A
 	asl.b $BF                            ;C4839A|06BF    |0000BF;  
-	bcc CODE_C483C8                      ;C4839C|902A    |C483C8;  
+	bcc .lbl_C483C8                      ;C4839C|902A    |C483C8;  
 	stz.w $06C1,x                        ;C4839E|9EC106  |7F06C1;  
 	inx                                  ;C483A1|E8      |      ;  
 	stz.w $06C1,x                        ;C483A2|9EC106  |7F06C1;  
 	inx                                  ;C483A5|E8      |      ;  
 	ldy.w #$000E                         ;C483A6|A00E00  |      ;  
-
-CODE_C483A9:
+.lbl_C483A9
 	lda.b [$C2]                          ;C483A9|A7C2    |0000C2;  
 	inc.b $C2                            ;C483AB|E6C2    |0000C2;  
-	bne CODE_C483B2                      ;C483AD|D003    |C483B2;  
+	bne .lbl_C483B2                      ;C483AD|D003    |C483B2;  
 	jsr.w CODE_C47A4A                    ;C483AF|204A7A  |C47A4A;  
-
-CODE_C483B2:
+.lbl_C483B2
 	sta.w $06C1,x                        ;C483B2|9DC106  |7F06C1;  
 	inx                                  ;C483B5|E8      |      ;  
 	lda.b [$C2]                          ;C483B6|A7C2    |0000C2;  
 	inc.b $C2                            ;C483B8|E6C2    |0000C2;  
-	bne CODE_C483BF                      ;C483BA|D003    |C483BF;  
+	bne .lbl_C483BF                      ;C483BA|D003    |C483BF;  
 	jsr.w CODE_C47A4A                    ;C483BC|204A7A  |C47A4A;  
-
-CODE_C483BF:
+.lbl_C483BF
 	sta.w $06C1,x                        ;C483BF|9DC106  |7F06C1;  
 	inx                                  ;C483C2|E8      |      ;  
 	dey                                  ;C483C3|88      |      ;  
-	bpl CODE_C483A9                      ;C483C4|10E3    |C483A9;  
+	bpl .lbl_C483A9                      ;C483C4|10E3    |C483A9;  
 	bra CODE_C483D2                      ;C483C6|800A    |C483D2;  
-
-CODE_C483C8:
+.lbl_C483C8
 	rep #$20                             ;C483C8|C220    |      ;  
 	txa                                  ;C483CA|8A      |      ;  
 	clc                                  ;C483CB|18      |      ;  
@@ -12668,7 +12084,7 @@ CODE_C483C8:
 
 CODE_C483D2:
 	lda.b $BF                            ;C483D2|A5BF    |0000BF;  
-	bne CODE_C4839A                      ;C483D4|D0C4    |C4839A;  
+	bne .lbl_C4839A                      ;C483D4|D0C4    |C4839A;  
 	lda.b $BE                            ;C483D6|A5BE    |0000BE;  
 	sta.b $00                            ;C483D8|8500    |000000;  
 	plp                                  ;C483DA|28      |      ;  
@@ -12689,14 +12105,13 @@ CODE_C483DC:
 
 CODE_C483F3:
 	asl.b $06                            ;C483F3|0606    |000006;  
-	bcc CODE_C48401                      ;C483F5|900A    |C48401;  
+	bcc .lbl_C48401                      ;C483F5|900A    |C48401;  
 	rep #$20                             ;C483F7|C220    |      ;  
 	jsl.l func_808811                    ;C483F9|22118880|808811;  
 	sep #$20                             ;C483FD|E220    |      ;  
 	lda.b $06                            ;C483FF|A506    |000006;  
-
-CODE_C48401:
-	beq CODE_C48418                      ;C48401|F015    |C48418;  
+.lbl_C48401
+	beq .lbl_C48418                      ;C48401|F015    |C48418;  
 	lda.b w0001                            ;C48403|A501    |000001;  
 	clc                                  ;C48405|18      |      ;  
 	adc.b #$10                           ;C48406|6910    |      ;  
@@ -12708,8 +12123,7 @@ CODE_C48401:
 	sta.b $02                   ;C48412|8502    |000002;  
 	sep #$20                             ;C48414|E220    |      ;  
 	bra CODE_C483F3                      ;C48416|80DB    |C483F3;  
-
-CODE_C48418:
+.lbl_C48418
 	plp                                  ;C48418|28      |      ;  
 	rtl                                  ;C48419|6B      |      ;  
 	.db $08,$E2,$30,$A5,$03,$0A,$AA,$C2   ;C4841A
@@ -12792,7 +12206,7 @@ CODE_C4854E:
 CODE_C48559:
 	tyx                                  ;C48559|BB      |      ;  
 	lda.l DATA8_C48572,x                 ;C4855A|BF7285C4|C48572;  
-	beq CODE_C4856C                      ;C4855E|F00C    |C4856C;  
+	beq .lbl_C4856C                      ;C4855E|F00C    |C4856C;  
 	tax                                  ;C48560|AA      |      ;  
 	sep #$20                             ;C48561|E220    |      ;  
 	stz.w $0000,x                        ;C48563|9E0000  |7F0000;  
@@ -12800,8 +12214,7 @@ CODE_C48559:
 	iny                                  ;C48568|C8      |      ;  
 	iny                                  ;C48569|C8      |      ;  
 	bra CODE_C48559                      ;C4856A|80ED    |C48559;  
-
-CODE_C4856C:
+.lbl_C4856C
 	jsl.l CODE_C5E258                    ;C4856C|2258E2C5|C5E258;  
 	plp                                  ;C48570|28      |      ;  
 	rtl                                  ;C48571|6B      |      ;  
@@ -12833,24 +12246,22 @@ CODE_C48595:
 	stz.b w0001                            ;C4859D|6401    |000001;  
 	lda.b $00                            ;C4859F|A500    |000000;  
 	cmp.b #$FF                           ;C485A1|C9FF    |      ;  
-	beq CODE_C485AF                      ;C485A3|F00A    |C485AF;  
+	beq .lbl_C485AF                      ;C485A3|F00A    |C485AF;  
 	sta.w $AC3B,x                        ;C485A5|9D3BAC  |7FAC3B;  
 	txa                                  ;C485A8|8A      |      ;  
 	sta.w $AC5A,x                        ;C485A9|9D5AAC  |7FAC5A;  
 	inx                                  ;C485AC|E8      |      ;  
 	bra CODE_C48595                      ;C485AD|80E6    |C48595;  
-
-CODE_C485AF:
+.lbl_C485AF
 	sta.w $AC3B,x                        ;C485AF|9D3BAC  |7FAC3B;  
 	stx.w $AC3A                          ;C485B2|8E3AAC  |7FAC3A;  
 	jsl.l CODE_C23B89                    ;C485B5|22893BC2|C23B89;  
 	ldx.b #$03                           ;C485B9|A203    |      ;  
-
-CODE_C485BB:
+.lbl_C485BB
 	lda.b $00,x                          ;C485BB|B500    |000000;  
 	sta.w $AC79,x                        ;C485BD|9D79AC  |7FAC79;  
 	dex                                  ;C485C0|CA      |      ;  
-	bpl CODE_C485BB                      ;C485C1|10F8    |C485BB;  
+	bpl .lbl_C485BB                      ;C485C1|10F8    |C485BB;  
 	stz.w $AC19                          ;C485C3|9C19AC  |7FAC19;  
 	lda.b #$13                           ;C485C6|A913    |      ;  
 	sta.b $00                            ;C485C8|8500    |000000;  
@@ -12859,17 +12270,15 @@ CODE_C485BB:
 	plb                                  ;C485CF|AB      |      ;  
 	jsl.l CODE_C359AF                    ;C485D0|22AF59C3|C359AF;  
 	lda.b w0001                            ;C485D4|A501    |000001;  
-	bmi CODE_C485FA                      ;C485D6|3022    |C485FA;  
+	bmi .lbl_C485FA                      ;C485D6|3022    |C485FA;  
 	ldx.w $AC3A                   		 ;C485D8|AE3AAC  |00AC3A;  
-	beq CODE_C485E7                      ;C485DB|F00A    |C485E7;  
+	beq .lbl_C485E7                      ;C485DB|F00A    |C485E7;  
 	cpx.b #$0B                           ;C485DD|E00B    |      ;  
-	bcc CODE_C485E5                      ;C485DF|9004    |C485E5;  
+	bcc .lbl_C485E5                      ;C485DF|9004    |C485E5;  
 	.db $A2,$14,$80,$02                   ;C485E1
-
-CODE_C485E5:
+.lbl_C485E5
 	ldx.b #$0A                           ;C485E5|A20A    |      ;  
-
-CODE_C485E7:
+.lbl_C485E7
 	sta.w $AC3B,x                  		 ;C485E7|9D3BAC  |00AC3B;  
 	lda.b #$1F                           ;C485EA|A91F    |      ;  
 	sta.w $AC5A,x                  		 ;C485EC|9D5AAC  |00AC5A;  
@@ -12878,8 +12287,7 @@ CODE_C485E7:
 	sta.w $AC3B,x                  		 ;C485F2|9D3BAC  |00AC3B;  
 	lda.b #$01                           ;C485F5|A901    |      ;  
 	sta.w $AC19                			 ;C485F7|8D19AC  |00AC19;  
-
-CODE_C485FA:
+.lbl_C485FA
 	plp                                  ;C485FA|28      |      ;  
 	rtl                                  ;C485FB|6B      |      ;  
 
@@ -12902,12 +12310,11 @@ CODE_C485FC:
 	cpx.b #$B4                           ;C48614|E0B4    |      ;  
 	beq UNREACH_C4861C                   ;C48616|F004    |C4861C;  
 	cpx.b #$BC                           ;C48618|E0BC    |      ;  
-	bne CODE_C4861E                      ;C4861A|D002    |C4861E;  
+	bne .lbl_C4861E                      ;C4861A|D002    |C4861E;  
 
 UNREACH_C4861C:
 	.db $A9,$00                           ;C4861C
-
-CODE_C4861E:
+.lbl_C4861E
 	sta.w $AC18                          ;C4861E|8D18AC  |7FAC18;  
 	stz.w $ABF4                          ;C48621|9CF4AB  |7FABF4;  
 	cpx.b #$B9                           ;C48624|E0B9    |      ;  
@@ -12915,12 +12322,11 @@ CODE_C4861E:
 	cpx.b #$C1                           ;C48628|E0C1    |      ;  
 	beq UNREACH_C48630                   ;C4862A|F004    |C48630;  
 	cpx.b #$BE                           ;C4862C|E0BE    |      ;  
-	bne CODE_C48635                      ;C4862E|D005    |C48635;  
+	bne .lbl_C48635                      ;C4862E|D005    |C48635;  
 
 UNREACH_C48630:
 	.db $A9,$01,$8D,$F4,$AB               ;C48630
-
-CODE_C48635:
+.lbl_C48635
 	ldx.b #$00                           ;C48635|A200    |      ;  
 	sty.b $00                            ;C48637|8400    |000000;  
 	phx                                  ;C48639|DA      |      ;  
@@ -12929,30 +12335,27 @@ CODE_C48635:
 	stz.b w0001                            ;C4863F|6401    |000001;  
 	lda.b $00                            ;C48641|A500    |000000;  
 	cmp.b #$FF                           ;C48643|C9FF    |      ;  
-	beq CODE_C48652                      ;C48645|F00B    |C48652;  
+	beq .lbl_C48652                      ;C48645|F00B    |C48652;  
 	.db $A8,$9D,$3B,$AC,$8A,$9D,$5A,$AC   ;C48647
 	.db $E8,$80,$E5                       ;C4864F
-
-CODE_C48652:
+.lbl_C48652
 	sta.w $AC3B,x                        ;C48652|9D3BAC  |7FAC3B;  
 	stx.w $AC3A                          ;C48655|8E3AAC  |7FAC3A;  
 	txa                                  ;C48658|8A      |      ;  
 	clc                                  ;C48659|18      |      ;  
 	adc.b w0001,s                          ;C4865A|6301    |000001;  
-	bne CODE_C48663                      ;C4865C|D005    |C48663;  
+	bne .lbl_C48663                      ;C4865C|D005    |C48663;  
 	.db $9C,$F4,$AB,$A9,$01               ;C4865E|        |00ABF4;  
-
-CODE_C48663:
+.lbl_C48663
 	asl a                                ;C48663|0A      |      ;  
 	sta.w $AC80                          ;C48664|8D80AC  |7FAC80;  
 	pla                                  ;C48667|68      |      ;  
 	ldx.b #$03                           ;C48668|A203    |      ;  
 	lda.b #$FF                           ;C4866A|A9FF    |      ;  
-
-CODE_C4866C:
+.lbl_C4866C
 	sta.w $AC79,x                        ;C4866C|9D79AC  |7FAC79;  
 	dex                                  ;C4866F|CA      |      ;  
-	bpl CODE_C4866C                      ;C48670|10FA    |C4866C;  
+	bpl .lbl_C4866C                      ;C48670|10FA    |C4866C;  
 	plp                                  ;C48672|28      |      ;  
 	rtl                                  ;C48673|6B      |      ;  
 
@@ -12977,11 +12380,10 @@ CODE_C48674:
 	sta.w $AC3A                          ;C48698|8D3AAC  |7FAC3A;  
 	ldx.b #$03                           ;C4869B|A203    |      ;  
 	lda.b #$FF                           ;C4869D|A9FF    |      ;  
-
-CODE_C4869F:
+.lbl_C4869F
 	sta.w $AC79,x                        ;C4869F|9D79AC  |7FAC79;  
 	dex                                  ;C486A2|CA      |      ;  
-	bpl CODE_C4869F                      ;C486A3|10FA    |C4869F;  
+	bpl .lbl_C4869F                      ;C486A3|10FA    |C4869F;  
 	plp                                  ;C486A5|28      |      ;  
 	rtl                                  ;C486A6|6B      |      ;  
 
@@ -12994,15 +12396,13 @@ CODE_C486A7:
 	tdc                                  ;C486AE|7B      |      ;  
 	ldx.b w0001                            ;C486AF|A601    |000001;  
 	stx.w $AA82                          ;C486B1|8E82AA  |7FAA82;  
-	beq CODE_C486BB                      ;C486B4|F005    |C486BB;  
+	beq .lbl_C486BB                      ;C486B4|F005    |C486BB;  
 	cpx.b #$07                           ;C486B6|E007    |      ;  
-	bne CODE_C486BC                      ;C486B8|D002    |C486BC;  
+	bne .lbl_C486BC                      ;C486B8|D002    |C486BC;  
 	.db $1A                               ;C486BA
-
-CODE_C486BB:
+.lbl_C486BB
 	inc a                                ;C486BB|1A      |      ;  
-
-CODE_C486BC:
+.lbl_C486BC
 	asl a                                ;C486BC|0A      |      ;  
 	sta.w $AA83                          ;C486BD|8D83AA  |7FAA83;  
 	asl a                                ;C486C0|0A      |      ;  
@@ -13010,17 +12410,15 @@ CODE_C486BC:
 	tax                                  ;C486C2|AA      |      ;  
 	ldy.b #$00                           ;C486C3|A000    |      ;  
 	lda.b $00                            ;C486C5|A500    |000000;  
-
-CODE_C486C7:
+.lbl_C486C7
 	cmp.l DATA8_C4882C,x                 ;C486C7|DF2C88C4|C4882C;  
-	beq CODE_C486D5                      ;C486CB|F008    |C486D5;  
+	beq .lbl_C486D5                      ;C486CB|F008    |C486D5;  
 	inx                                  ;C486CD|E8      |      ;  
 	iny                                  ;C486CE|C8      |      ;  
 	cpy.b #$08                           ;C486CF|C008    |      ;  
-	bne CODE_C486C7                      ;C486D1|D0F4    |C486C7;  
+	bne .lbl_C486C7                      ;C486D1|D0F4    |C486C7;  
 	ldy.b #$00                           ;C486D3|A000    |      ;  
-
-CODE_C486D5:
+.lbl_C486D5
 	sty.w $AA81                          ;C486D5|8C81AA  |7FAA81;  
 	lda.b #$C4                           ;C486D8|A9C4    |      ;  
 	sta.b $02                   ;C486DA|8502    |000002;  
@@ -13056,7 +12454,7 @@ CODE_C48714:
 	jsl.l CODE_C4A93A                    ;C4871D|223AA9C4|C4A93A;  
 	lda.b $02                   ;C48721|A502    |000002;  
 	dec a                                ;C48723|3A      |      ;  
-	beq CODE_C48745                      ;C48724|F01F    |C48745;  
+	beq .lbl_C48745                      ;C48724|F01F    |C48745;  
 	stz.b $02                   ;C48726|6402    |000002;  
 	lda.w $AA81                          ;C48728|AD81AA  |7FAA81;  
 	sta.b $04                   ;C4872B|8504    |000004;  
@@ -13069,8 +12467,7 @@ CODE_C48714:
 	lda.b $04                   ;C4873E|A504    |000004;  
 	sta.w $AA81                          ;C48740|8D81AA  |7FAA81;  
 	bra CODE_C48714                      ;C48743|80CF    |C48714;  
-
-CODE_C48745:
+.lbl_C48745
 	sep #$20                             ;C48745|E220    |      ;  
 	lda.b #$04                           ;C48747|A904    |      ;  
 	jsr.w CODE_C487D6                    ;C48749|20D687  |C487D6;  
@@ -13094,14 +12491,13 @@ DATA8_C48766:
 	phb                                  ;C48776|8B      |      ;  
 	jsl.l CODE_C48BF6                    ;C48777|22F68BC4|C48BF6;  
 	plb                                  ;C4877B|AB      |      ;  
-	bcs CODE_C48788                      ;C4877C|B00A    |C48788;  
+	bcs .lbl_C48788                      ;C4877C|B00A    |C48788;  
 	bra CODE_C487B0                      ;C4877E|8030    |C487B0;  
 	phb                                  ;C48780|8B      |      ;  
 	jsl.l CODE_C48D07                    ;C48781|22078DC4|C48D07;  
 	plb                                  ;C48785|AB      |      ;  
-	bcc CODE_C487BA                      ;C48786|9032    |C487BA;  
-
-CODE_C48788:
+	bcc .lbl_C487BA                      ;C48786|9032    |C487BA;  
+.lbl_C48788
 	jmp.w CODE_C486F9                    ;C48788|4CF986  |C486F9;  
 	stz.b $02                   ;C4878B|6402    |000002;  
 	lda.w $AA82                          ;C4878D|AD82AA  |7FAA82;  
@@ -13110,7 +12506,7 @@ CODE_C48788:
 	phb                                  ;C48794|8B      |      ;  
 	jsl.l CODE_C48844                    ;C48795|224488C4|C48844;  
 	plb                                  ;C48799|AB      |      ;  
-	bcs CODE_C48788                      ;C4879A|B0EC    |C48788;  
+	bcs .lbl_C48788                      ;C4879A|B0EC    |C48788;  
 	bra CODE_C487B0                      ;C4879C|8012    |C487B0;  
 	inc a                                ;C4879E|1A      |      ;  
 	inc a                                ;C4879F|1A      |      ;  
@@ -13121,15 +12517,14 @@ CODE_C48788:
 	phb                                  ;C487A8|8B      |      ;  
 	jsl.l CODE_C48942                    ;C487A9|224289C4|C48942;  
 	plb                                  ;C487AD|AB      |      ;  
-	bcs CODE_C48788                      ;C487AE|B0D8    |C48788;  
+	bcs .lbl_C48788                      ;C487AE|B0D8    |C48788;  
 
 CODE_C487B0:
 	lda.b $00                            ;C487B0|A500    |000000;  
 	sta.w $AA85                          ;C487B2|8D85AA  |7FAA85;  
 	lda.b $02                   ;C487B5|A502    |000002;  
 	sta.w $AA86                          ;C487B7|8D86AA  |7FAA86;  
-
-CODE_C487BA:
+.lbl_C487BA
 	lda.w $AA80                          ;C487BA|AD80AA  |7FAA80;  
 	sta.b $00                            ;C487BD|8500    |000000;  
 	phb                                  ;C487BF|8B      |      ;  
@@ -13200,17 +12595,15 @@ CODE_C48844:
 	sep #$30                             ;C48845|E230    |      ;  
 	tdc                                  ;C48847|7B      |      ;  
 	tax                                  ;C48848|AA      |      ;  
-
-CODE_C48849:
+.lbl_C48849
 	lsr.b $00                            ;C48849|4600    |000000;  
-	bcc CODE_C48852                      ;C4884B|9005    |C48852;  
+	bcc .lbl_C48852                      ;C4884B|9005    |C48852;  
 	sta.l $7FAA8A,x                      ;C4884D|9F8AAA7F|7FAA8A;  
 	inx                                  ;C48851|E8      |      ;  
-
-CODE_C48852:
+.lbl_C48852
 	inc a                                ;C48852|1A      |      ;  
 	cmp.b #$03                           ;C48853|C903    |      ;  
-	bne CODE_C48849                      ;C48855|D0F2    |C48849;  
+	bne .lbl_C48849                      ;C48855|D0F2    |C48849;  
 	txa                                  ;C48857|8A      |      ;  
 	sta.l $7FAA89                        ;C48858|8F89AA7F|7FAA89;  
 	lda.b #$7F                           ;C4885C|A97F    |      ;  
@@ -13223,7 +12616,7 @@ CODE_C48852:
 	lda.b #$C4                           ;C48868|A9C4    |      ;  
 	sta.b $02                   ;C4886A|8502    |000002;  
 	rep #$20                             ;C4886C|C220    |      ;  
-	lda.l CODE_C48934,x                  ;C4886E|BF3489C4|C48934;  
+	lda.l .lbl_C48934,x                  ;C4886E|BF3489C4|C48934;  
 	sta.b $00                            ;C48872|8500    |000000;  
 	lda.w #$0A0A                         ;C48874|A90A0A  |      ;  
 	sta.b $04                   ;C48877|8504    |000004;  
@@ -13252,7 +12645,7 @@ CODE_C48894:
 	jsl.l CODE_C4A93A                    ;C488AC|223AA9C4|C4A93A;  
 	lda.b $02                   ;C488B0|A502    |000002;  
 	dec a                                ;C488B2|3A      |      ;  
-	beq CODE_C488D3                      ;C488B3|F01E    |C488D3;  
+	beq .lbl_C488D3                      ;C488B3|F01E    |C488D3;  
 	dec a                                ;C488B5|3A      |      ;  
 	beq UNREACH_C488E9                   ;C488B6|F031    |C488E9;  
 	stz.b $02                   ;C488B8|6402    |000002;  
@@ -13266,8 +12659,7 @@ CODE_C48894:
 	lda.b $04                   ;C488CC|A504    |000004;  
 	sta.w $AA88                          ;C488CE|8D88AA  |7FAA88;  
 	bra CODE_C48894                      ;C488D1|80C1    |C48894;  
-
-CODE_C488D3:
+.lbl_C488D3
 	lda.w $AA87                          ;C488D3|AD87AA  |7FAA87;  
 	sta.b $00                            ;C488D6|8500    |000000;  
 	phb                                  ;C488D8|8B      |      ;  
@@ -13288,9 +12680,8 @@ UNREACH_C488E9:
 	lda.b #$0D                           ;C488F8|A90D    |      ;  
 	ldx.b #$00                           ;C488FA|A200    |      ;  
 	cmp.l $7FAA89                        ;C488FC|CF89AA7F|7FAA89;  
-	beq CODE_C48934                      ;C48900|F032    |C48934;  
-
-CODE_C48902:
+	beq .lbl_C48934                      ;C48900|F032    |C48934;  
+.lbl_C48902
 	sta.b $03                            ;C48902|8503    |000003;  
 	pha                                  ;C48904|48      |      ;  
 	lda.b #$02                           ;C48905|A902    |      ;  
@@ -13315,9 +12706,8 @@ CODE_C48902:
 	adc.b #$10                           ;C4892D|6910    |      ;  
 	inx                                  ;C4892F|E8      |      ;  
 	cpx.b $00                            ;C48930|E400    |000000;  
-	bne CODE_C48902                      ;C48932|D0CE    |C48902;  
-
-CODE_C48934:
+	bne .lbl_C48902                      ;C48932|D0CE    |C48902;  
+.lbl_C48934
 	plp                                  ;C48934|28      |      ;  
 	rtl                                  ;C48935|6B      |      ;  
 	.db $EE,$B6                           ;C48936|        |00F5B6;  
@@ -13334,17 +12724,15 @@ CODE_C48942:
 	sta.l $7FAA91                        ;C4894E|8F91AA7F|7FAA91;  
 	tdc                                  ;C48952|7B      |      ;  
 	tax                                  ;C48953|AA      |      ;  
-
-CODE_C48954:
+.lbl_C48954
 	lsr.b $00                            ;C48954|4600    |000000;  
-	bcc CODE_C4895D                      ;C48956|9005    |C4895D;  
+	bcc .lbl_C4895D                      ;C48956|9005    |C4895D;  
 	sta.l $7FAA93,x                      ;C48958|9F93AA7F|7FAA93;  
 	inx                                  ;C4895C|E8      |      ;  
-
-CODE_C4895D:
+.lbl_C4895D
 	inc a                                ;C4895D|1A      |      ;  
 	cmp.b #$03                           ;C4895E|C903    |      ;  
-	bne CODE_C48954                      ;C48960|D0F2    |C48954;  
+	bne .lbl_C48954                      ;C48960|D0F2    |C48954;  
 	txa                                  ;C48962|8A      |      ;  
 	sta.l $7FAA90                        ;C48963|8F90AA7F|7FAA90;  
 	lda.b #$7F                           ;C48967|A97F    |      ;  
@@ -13385,9 +12773,9 @@ CODE_C489AC:
 	jsl.l CODE_C4A93A                    ;C489B5|223AA9C4|C4A93A;  
 	lda.b $02                   ;C489B9|A502    |000002;  
 	dec a                                ;C489BB|3A      |      ;  
-	beq CODE_C489E8                      ;C489BC|F02A    |C489E8;  
+	beq .lbl_C489E8                      ;C489BC|F02A    |C489E8;  
 	dec a                                ;C489BE|3A      |      ;  
-	beq CODE_C489DC                      ;C489BF|F01B    |C489DC;  
+	beq .lbl_C489DC                      ;C489BF|F01B    |C489DC;  
 	stz.b $02                   ;C489C1|6402    |000002;  
 	lda.w $AA8F                          ;C489C3|AD8FAA  |7FAA8F;  
 	sta.b $04                   ;C489C6|8504    |000004;  
@@ -13399,16 +12787,14 @@ CODE_C489AC:
 	lda.b $04                   ;C489D5|A504    |000004;  
 	sta.w $AA8F                          ;C489D7|8D8FAA  |7FAA8F;  
 	bra CODE_C489AC                      ;C489DA|80D0    |C489AC;  
-
-CODE_C489DC:
+.lbl_C489DC
 	lda.w $AA8D                          ;C489DC|AD8DAA  |7FAA8D;  
 	sta.b $00                            ;C489DF|8500    |000000;  
 	jsl.l CODE_C5E52B                    ;C489E1|222BE5C5|C5E52B;  
 	plp                                  ;C489E5|28      |      ;  
 	sec                                  ;C489E6|38      |      ;  
 	rtl                                  ;C489E7|6B      |      ;  
-
-CODE_C489E8:
+.lbl_C489E8
 	lda.b #$04                           ;C489E8|A904    |      ;  
 	jsr.w CODE_C48A95                    ;C489EA|20958A  |C48A95;  
 	jsr.w CODE_C48AA9                    ;C489ED|20A98A  |C48AA9;  
@@ -13425,7 +12811,7 @@ DATA8_C489F6:
 	lda.b $00                            ;C48A0E|A500    |000000;  
 	stz.b $00                            ;C48A10|6400    |000000;  
 	cmp.b #$01                           ;C48A12|C901    |      ;  
-	bne CODE_C48A75                      ;C48A14|D05F    |C48A75;  
+	bne .lbl_C48A75                      ;C48A14|D05F    |C48A75;  
 	rep #$20                             ;C48A16|C220    |      ;  
 	lda.w #$8BEB                         ;C48A18|A9EB8B  |      ;  
 	sta.b $00                            ;C48A1B|8500    |000000;  
@@ -13471,12 +12857,11 @@ DATA8_C489F6:
 	phb                                  ;C48A6A|8B      |      ;  
 	jsl.l CODE_C48844                    ;C48A6B|224488C4|C48844;  
 	plb                                  ;C48A6F|AB      |      ;  
-	bcc CODE_C48A75                      ;C48A70|9003    |C48A75;  
+	bcc .lbl_C48A75                      ;C48A70|9003    |C48A75;  
 
 UNREACH_C48A72:
 	.db $4C,$91,$89                       ;C48A72|        |C48991;  
-
-CODE_C48A75:
+.lbl_C48A75
 	lda.b $00                            ;C48A75|A500    |000000;  
 
 CODE_C48A77:
@@ -13519,10 +12904,9 @@ CODE_C48AA9:
 	sep #$20                             ;C48AB8|E220    |      ;  
 	rep #$10                             ;C48ABA|C210    |      ;  
 	lda.l $7FAA90                        ;C48ABC|AF90AA7F|7FAA90;  
-	bne CODE_C48AC5                      ;C48AC0|D003    |C48AC5;  
+	bne .lbl_C48AC5                      ;C48AC0|D003    |C48AC5;  
 	.db $4C,$B2,$8B                       ;C48AC2|        |C48BB2;  
-
-CODE_C48AC5:
+.lbl_C48AC5
 	tdc                                  ;C48AC5|7B      |      ;  
 	tax                                  ;C48AC6|AA      |      ;  
 	lda.b #$0D                           ;C48AC7|A90D    |      ;  
@@ -13569,11 +12953,10 @@ CODE_C48AC9:
 	jsl.l CODE_C3E845                    ;C48B1F|2245E8C3|C3E845;  
 	lda.b $00                            ;C48B23|A500    |000000;  
 	and.b #$0F                           ;C48B25|290F    |      ;  
-	beq CODE_C48B39                      ;C48B27|F010    |C48B39;  
+	beq .lbl_C48B39                      ;C48B27|F010    |C48B39;  
 	.db $A0,$82,$01,$89,$08,$F0,$03,$A0   ;C48B29
 	.db $83,$01,$84,$00,$22,$A3,$E8,$C5   ;C48B31|        |000001;  
-
-CODE_C48B39:
+.lbl_C48B39
 	lda.b #$50                           ;C48B39|A950    |      ;  
 	sta.b $02                   ;C48B3B|8502    |000002;  
 	lda.b w0001,s                          ;C48B3D|A301    |000001;  
@@ -13581,11 +12964,11 @@ CODE_C48B39:
 	jsl.l CODE_C4A627                    ;C48B41|2227A6C4|C4A627;  
 	jsl.l CODE_C3E178                    ;C48B45|2278E1C3|C3E178;  
 	lda.b $00                            ;C48B49|A500    |000000;  
-	beq CODE_C48B87                      ;C48B4B|F03A    |C48B87;  
-	bmi CODE_C48B87                      ;C48B4D|3038    |C48B87;  
+	beq .lbl_C48B87                      ;C48B4B|F03A    |C48B87;  
+	bmi .lbl_C48B87                      ;C48B4D|3038    |C48B87;  
 	jsl.l CODE_C3E7C8                    ;C48B4F|22C8E7C3|C3E7C8;  
 	lda.b $00                            ;C48B53|A500    |000000;  
-	beq CODE_C48B87                      ;C48B55|F030    |C48B87;  
+	beq .lbl_C48B87                      ;C48B55|F030    |C48B87;  
 	pha                                  ;C48B57|48      |      ;  
 	jsl.l CODE_C3E814                    ;C48B58|2214E8C3|C3E814;  
 	stz.b w0001                            ;C48B5C|6401    |000001;  
@@ -13606,17 +12989,15 @@ CODE_C48B39:
 	pla                                  ;C48B7F|68      |      ;  
 	sta.b $02                   ;C48B80|8502    |000002;  
 	ldy.w #$0186                         ;C48B82|A08601  |      ;  
-	bra CODE_C48B97                      ;C48B85|8010    |C48B97;  
-
-CODE_C48B87:
+	bra .lbl_C48B97                      ;C48B85|8010    |C48B97;  
+.lbl_C48B87
 	jsl.l CODE_C3E7A4                    ;C48B87|22A4E7C3|C3E7A4;  
 	ldy.w #$0184                         ;C48B8B|A08401  |      ;  
 	lda.b $00                            ;C48B8E|A500    |000000;  
 	cmp.b #$00                           ;C48B90|C900    |      ;  
-	beq CODE_C48B97                      ;C48B92|F003    |C48B97;  
+	beq .lbl_C48B97                      ;C48B92|F003    |C48B97;  
 	ldy.w #$0185                         ;C48B94|A08501  |      ;  
-
-CODE_C48B97:
+.lbl_C48B97
 	sty.b $00                            ;C48B97|8400    |000000;  
 	jsl.l CODE_C5E8A3                    ;C48B99|22A3E8C5|C5E8A3;  
 	lda.l $7FAA90                        ;C48B9D|AF90AA7F|7FAA90;  
@@ -13628,10 +13009,9 @@ CODE_C48B97:
 	plx                                  ;C48BA9|FA      |      ;  
 	inx                                  ;C48BAA|E8      |      ;  
 	cpx.b $00                            ;C48BAB|E400    |000000;  
-	beq CODE_C48BB2                      ;C48BAD|F003    |C48BB2;  
+	beq .lbl_C48BB2                      ;C48BAD|F003    |C48BB2;  
 	jmp.w CODE_C48AC9                    ;C48BAF|4CC98A  |C48AC9;  
-
-CODE_C48BB2:
+.lbl_C48BB2
 	plp                                  ;C48BB2|28      |      ;  
 	rtl                                  ;C48BB3|6B      |      ;  
 	php                                  ;C48BB4|08      |      ;  
@@ -13676,23 +13056,20 @@ CODE_C48BF6:
 	sta.w $AA97                          ;C48C06|8D97AA  |7FAA97;  
 	tdc                                  ;C48C09|7B      |      ;  
 	tax                                  ;C48C0A|AA      |      ;  
-
-CODE_C48C0B:
+.lbl_C48C0B
 	lsr.b $00                            ;C48C0B|4600    |000000;  
-	bcc CODE_C48C13                      ;C48C0D|9004    |C48C13;  
+	bcc .lbl_C48C13                      ;C48C0D|9004    |C48C13;  
 	sta.w $AA99,x                        ;C48C0F|9D99AA  |7FAA99;  
 	inx                                  ;C48C12|E8      |      ;  
-
-CODE_C48C13:
+.lbl_C48C13
 	inc a                                ;C48C13|1A      |      ;  
 	cmp.b #$04                           ;C48C14|C904    |      ;  
-	bne CODE_C48C0B                      ;C48C16|D0F3    |C48C0B;  
+	bne .lbl_C48C0B                      ;C48C16|D0F3    |C48C0B;  
 	txa                                  ;C48C18|8A      |      ;  
 	sta.w $AA98                          ;C48C19|8D98AA  |7FAA98;  
-	bne CODE_C48C21                      ;C48C1C|D003    |C48C21;  
+	bne .lbl_C48C21                      ;C48C1C|D003    |C48C21;  
 	.db $28,$38,$6B                       ;C48C1E
-
-CODE_C48C21:
+.lbl_C48C21
 	cmp.b #$01                           ;C48C21|C901    |      ;  
 	bne UNREACH_C48C2A                   ;C48C23|D005    |C48C2A;  
 	stz.b $00                            ;C48C25|6400    |000000;  
@@ -13759,10 +13136,9 @@ CODE_C48D3C:
 	sta.b $00                            ;C48D41|8500    |000000;  
 	lda.b #$06                           ;C48D43|A906    |      ;  
 	ldx.w $AA9F                          ;C48D45|AE9FAA  |7FAA9F;  
-	beq CODE_C48D4C                      ;C48D48|F002    |C48D4C;  
+	beq .lbl_C48D4C                      ;C48D48|F002    |C48D4C;  
 	lda.b #$40                           ;C48D4A|A940    |      ;  
-
-CODE_C48D4C:
+.lbl_C48D4C
 	sta.b $02                   ;C48D4C|8502    |000002;  
 	lda.b #$0C                           ;C48D4E|A90C    |      ;  
 	sta.b $03                            ;C48D50|8503    |000003;  
@@ -13775,19 +13151,17 @@ CODE_C48D4C:
 	jsl.l CODE_C4A93A                    ;C48D60|223AA9C4|C4A93A;  
 	lda.b $02                   ;C48D64|A502    |000002;  
 	dec a                                ;C48D66|3A      |      ;  
-	bne CODE_C48D6C                      ;C48D67|D003    |C48D6C;  
+	bne .lbl_C48D6C                      ;C48D67|D003    |C48D6C;  
 	brl CODE_C48E15                      ;C48D69|82A900  |C48E15;  
-
-CODE_C48D6C:
+.lbl_C48D6C
 	dec a                                ;C48D6C|3A      |      ;  
-	bne CODE_C48D72                      ;C48D6D|D003    |C48D72;  
+	bne .lbl_C48D72                      ;C48D6D|D003    |C48D72;  
 	brl CODE_C48E22                      ;C48D6F|82B000  |C48E22;  
-
-CODE_C48D72:
+.lbl_C48D72
 	rep #$20                             ;C48D72|C220    |      ;  
 	lda.b $00                            ;C48D74|A500    |000000;  
 	bit.w #$0010                         ;C48D76|891000  |      ;  
-	beq CODE_C48DBC                      ;C48D79|F041    |C48DBC;  
+	beq .lbl_C48DBC                      ;C48D79|F041    |C48DBC;  
 	.db $AD,$9E,$AA,$85,$00,$A9,$04,$00   ;C48D7B|        |00AA9E;  
 	.db $85,$01,$8B,$22,$5B,$EC,$C5,$AB   ;C48D83|        |000001;  
 	.db $AD,$9E,$AA,$85,$00,$A9,$09,$00   ;C48D8B|        |00AA9E;  
@@ -13797,17 +13171,15 @@ CODE_C48D72:
 	.db $E5,$C5,$8B,$22,$DC,$ED,$C5,$AB   ;C48DAB|        |0000C5;  
 	.db $8B,$22,$0E,$EF,$C5,$AB,$4C,$3C   ;C48DB3
 	.db $8D                               ;C48DBB|        |002089;  
-
-CODE_C48DBC:
+.lbl_C48DBC
 	bit.w #$0020                         ;C48DBC|892000  |      ;  
-	beq CODE_C48DE8                      ;C48DBF|F027    |C48DE8;  
+	beq .lbl_C48DE8                      ;C48DBF|F027    |C48DE8;  
 	.db $48,$A5,$00,$48,$A5,$02,$48,$A5   ;C48DC1
 	.db $04,$48,$A5,$06,$48,$DA,$5A,$8B   ;C48DC9|        |000048;  
 	.db $22,$02,$AB,$C4,$AB,$7A,$FA,$68   ;C48DD1|        |C4AB02;  
 	.db $85,$06,$68,$85,$04,$68,$85,$02   ;C48DD9|        |000006;  
 	.db $68,$85,$00,$68,$4C,$3C,$8D       ;C48DE1
-
-CODE_C48DE8:
+.lbl_C48DE8
 	sep #$20                             ;C48DE8|E220    |      ;  
 	lda.w $AA9F                          ;C48DEA|AD9FAA  |7FAA9F;  
 	pha                                  ;C48DED|48      |      ;  
@@ -13822,12 +13194,11 @@ CODE_C48DE8:
 	sta.w $AA9F                          ;C48E00|8D9FAA  |7FAA9F;  
 	pla                                  ;C48E03|68      |      ;  
 	cmp.w $AA9F                          ;C48E04|CD9FAA  |7FAA9F;  
-	beq CODE_C48E12                      ;C48E07|F009    |C48E12;  
+	beq .lbl_C48E12                      ;C48E07|F009    |C48E12;  
 	lda.w $AA9F                          ;C48E09|AD9FAA  |7FAA9F;  
 	sta.b $00                            ;C48E0C|8500    |000000;  
 	jsl.l func_8180DD                    ;C48E0E|22DD8081|8180DD;  
-
-CODE_C48E12:
+.lbl_C48E12
 	brl CODE_C48D3C                      ;C48E12|8227FF  |C48D3C;  
 
 CODE_C48E15:
@@ -13957,9 +13328,9 @@ CODE_C48EC3:
 	jsl.l CODE_C4A93A                    ;C48EFA|223AA9C4|C4A93A;  
 	lda.b $02                   ;C48EFE|A502    |000002;  
 	dec a                                ;C48F00|3A      |      ;  
-	beq CODE_C48F28                      ;C48F01|F025    |C48F28;  
+	beq .lbl_C48F28                      ;C48F01|F025    |C48F28;  
 	dec a                                ;C48F03|3A      |      ;  
-	beq CODE_C48F24                      ;C48F04|F01E    |C48F24;  
+	beq .lbl_C48F24                      ;C48F04|F01E    |C48F24;  
 	lda.b w0001,s                          ;C48F06|A301    |000001;  
 	sta.b $02                   ;C48F08|8502    |000002;  
 	lda.b $02,s                          ;C48F0A|A302    |000002;  
@@ -13974,17 +13345,15 @@ CODE_C48EC3:
 	lda.b $04                   ;C48F1E|A504    |000004;  
 	sta.b $02,s                          ;C48F20|8302    |000002;  
 	bra CODE_C48EC3                      ;C48F22|809F    |C48EC3;  
-
-CODE_C48F24:
+.lbl_C48F24
 	lda.b #$80                           ;C48F24|A980    |      ;  
 	sta.b w0001,s                          ;C48F26|8301    |000001;  
-
-CODE_C48F28:
+.lbl_C48F28
 	lda.b $07,s                          ;C48F28|A307    |000007;  
 	sta.b $00                            ;C48F2A|8500    |000000;  
 	jsl.l CODE_C5E52B                    ;C48F2C|222BE5C5|C5E52B;  
 	lda.b w0001,s                          ;C48F30|A301    |000001;  
-	bmi CODE_C48F43                      ;C48F32|300F    |C48F43;  
+	bmi .lbl_C48F43                      ;C48F32|300F    |C48F43;  
 	sta.b $00                            ;C48F34|8500    |000000;  
 	lda.b $04,s                          ;C48F36|A304    |000004;  
 	sta.b w0001                            ;C48F38|8501    |000001;  
@@ -13992,8 +13361,7 @@ CODE_C48F28:
 	lda.b $00                            ;C48F3E|A500    |000000;  
 	clc                                  ;C48F40|18      |      ;  
 	adc.b $02,s                          ;C48F41|6302    |000002;  
-
-CODE_C48F43:
+.lbl_C48F43
 	sta.b $00                            ;C48F43|8500    |000000;  
 	pla                                  ;C48F45|68      |      ;  
 	pla                                  ;C48F46|68      |      ;  
@@ -14008,13 +13376,12 @@ CODE_C48F43:
 	php                                  ;C48F4F|08      |      ;  
 	rep #$30                             ;C48F50|C230    |      ;  
 	lda.l $7FAC86                        ;C48F52|AF86AC7F|7FAC86;  
-	bmi CODE_C48F60                      ;C48F56|3008    |C48F60;  
+	bmi .lbl_C48F60                      ;C48F56|3008    |C48F60;  
 	sta.b $00                            ;C48F58|8500    |000000;  
 	jsl.l CODE_C4A975                    ;C48F5A|2275A9C4|C4A975;  
 	plp                                  ;C48F5E|28      |      ;  
 	rtl                                  ;C48F5F|6B      |      ;  
-
-CODE_C48F60:
+.lbl_C48F60
 	and.w #$7FFF                         ;C48F60|29FF7F  |      ;  
 	tax                                  ;C48F63|AA      |      ;  
 	lda.l DATA8_C4B813,x                 ;C48F64|BF13B8C4|C4B813;  
@@ -14033,10 +13400,9 @@ CODE_C48F79:
 	sep #$20                             ;C48F7A|E220    |      ;  
 	rep #$10                             ;C48F7C|C210    |      ;  
 	lda.b $02                   ;C48F7E|A502    |000002;  
-	beq CODE_C48F84                      ;C48F80|F002    |C48F84;  
+	beq .lbl_C48F84                      ;C48F80|F002    |C48F84;  
 	lda.b #$01                           ;C48F82|A901    |      ;  
-
-CODE_C48F84:
+.lbl_C48F84
 	pha                                  ;C48F84|48      |      ;  
 	ldx.w #$1025                         ;C48F85|A22510  |      ;  
 	phx                                  ;C48F88|DA      |      ;  
@@ -14145,18 +13511,16 @@ CODE_C48FEC:
 	sta.w $AACC,x                        ;C49063|9DCCAA  |7FAACC;  
 	sep #$20                             ;C49066|E220    |      ;  
 	lda.w $AAC8                          ;C49068|ADC8AA  |7FAAC8;  
-	bne CODE_C4907B                      ;C4906B|D00E    |C4907B;  
+	bne .lbl_C4907B                      ;C4906B|D00E    |C4907B;  
 	rep #$20                             ;C4906D|C220    |      ;  
 	lda.w $ABDC                          ;C4906F|ADDCAB  |7FABDC;  
-
-CODE_C49072:
+.lbl_C49072
 	sta.w $AACA,x                        ;C49072|9DCAAA  |7FAACA;  
 	dex                                  ;C49075|CA      |      ;  
 	dex                                  ;C49076|CA      |      ;  
-	bpl CODE_C49072                      ;C49077|10F9    |C49072;  
-	bra CODE_C490D8                      ;C49079|805D    |C490D8;  
-
-CODE_C4907B:
+	bpl .lbl_C49072                      ;C49077|10F9    |C49072;  
+	bra .lbl_C490D8                      ;C49079|805D    |C490D8;  
+.lbl_C4907B
 	bpl UNREACH_C4908E                   ;C4907B|1011    |C4908E;  
 	rep #$20                             ;C4907D|C220    |      ;  
 	lda.w #$01C1                         ;C4907F|A9C101  |      ;  
@@ -14174,8 +13538,7 @@ UNREACH_C4908E:
 CODE_C4909B:
 	ldy.w $AAAC                          ;C4909B|ACACAA  |7FAAAC;  
 	dey                                  ;C4909E|88      |      ;  
-
-CODE_C4909F:
+.lbl_C4909F
 	tya                                  ;C4909F|98      |      ;  
 	asl a                                ;C490A0|0A      |      ;  
 	pha                                  ;C490A1|48      |      ;  
@@ -14183,21 +13546,19 @@ CODE_C4909F:
 	lda.b $00,x                          ;C490A3|B500    |000000;  
 	plx                                  ;C490A5|FA      |      ;  
 	cmp.b #$FF                           ;C490A6|C9FF    |      ;  
-	beq CODE_C490C1                      ;C490A8|F017    |C490C1;  
+	beq .lbl_C490C1                      ;C490A8|F017    |C490C1;  
 	sta.w $AACA,x                        ;C490AA|9DCAAA  |7FAACA;  
 	stz.w $AACB,x                        ;C490AD|9ECBAA  |7FAACB;  
 	lda.w $AABE                          ;C490B0|ADBEAA  |7FAABE;  
-	bne CODE_C490BF                      ;C490B3|D00A    |C490BF;  
+	bne .lbl_C490BF                      ;C490B3|D00A    |C490BF;  
 	tya                                  ;C490B5|98      |      ;  
 	inc a                                ;C490B6|1A      |      ;  
 	cmp.w $AAAC                          ;C490B7|CDACAA  |7FAAAC;  
-	bcs CODE_C490BF                      ;C490BA|B003    |C490BF;  
+	bcs .lbl_C490BF                      ;C490BA|B003    |C490BF;  
 	sta.w $AABE                          ;C490BC|8DBEAA  |7FAABE;  
-
-CODE_C490BF:
+.lbl_C490BF
 	bra CODE_C490CB                      ;C490BF|800A    |C490CB;  
-
-CODE_C490C1:
+.lbl_C490C1
 	rep #$20                             ;C490C1|C220    |      ;  
 	lda.w $ABDC                          ;C490C3|ADDCAB  |7FABDC;  
 	sta.w $AACA,x                        ;C490C6|9DCAAA  |7FAACA;  
@@ -14205,13 +13566,12 @@ CODE_C490C1:
 
 CODE_C490CB:
 	dey                                  ;C490CB|88      |      ;  
-	bpl CODE_C4909F                      ;C490CC|10D1    |C4909F;  
+	bpl .lbl_C4909F                      ;C490CC|10D1    |C4909F;  
 	sep #$20                             ;C490CE|E220    |      ;  
 	lda.w $AAC8                          ;C490D0|ADC8AA  |7FAAC8;  
-	bpl CODE_C490D8                      ;C490D3|1003    |C490D8;  
+	bpl .lbl_C490D8                      ;C490D3|1003    |C490D8;  
 	stz.w $AABE                          ;C490D5|9CBEAA  |7FAABE;  
-
-CODE_C490D8:
+.lbl_C490D8
 	rep #$30                             ;C490D8|C230    |      ;  
 	lda.w #$B746                         ;C490DA|A946B7  |      ;  
 	sta.b $00                            ;C490DD|8500    |000000;  
@@ -14285,43 +13645,36 @@ CODE_C4912C:
 	jsl.l func_80DD10                    ;C49164|2210DD80|80DD10;  
 	plb                                  ;C49168|AB      |      ;  
 	bit.w #$0080                         ;C49169|898000  |      ;  
-	beq CODE_C49171                      ;C4916C|F003    |C49171;  
+	beq .lbl_C49171                      ;C4916C|F003    |C49171;  
 	jmp.w CODE_C4923F                    ;C4916E|4C3F92  |C4923F;  
-
-CODE_C49171:
+.lbl_C49171
 	bit.w #$0040                         ;C49171|894000  |      ;  
-	beq CODE_C49179                      ;C49174|F003    |C49179;  
+	beq .lbl_C49179                      ;C49174|F003    |C49179;  
 	jmp.w CODE_C4933D                    ;C49176|4C3D93  |C4933D;  
-
-CODE_C49179:
+.lbl_C49179
 	bit.w #$1000                         ;C49179|890010  |      ;  
-	beq CODE_C49181                      ;C4917C|F003    |C49181;  
-	jmp.w CODE_C492DF                    ;C4917E|4CDF92  |C492DF;  
-
-CODE_C49181:
+	beq .lbl_C49181                      ;C4917C|F003    |C49181;  
+	jmp.w .lbl_C492DF                    ;C4917E|4CDF92  |C492DF;  
+.lbl_C49181
 	bit.w #$2000                         ;C49181|890020  |      ;  
-	beq CODE_C49189                      ;C49184|F003    |C49189;  
-	jmp.w CODE_C4931B                    ;C49186|4C1B93  |C4931B;  
-
-CODE_C49189:
+	beq .lbl_C49189                      ;C49184|F003    |C49189;  
+	jmp.w .lbl_C4931B                    ;C49186|4C1B93  |C4931B;  
+.lbl_C49189
 	bit.w #$C000                         ;C49189|8900C0  |      ;  
-	beq CODE_C4919A                      ;C4918C|F00C    |C4919A;  
+	beq .lbl_C4919A                      ;C4918C|F00C    |C4919A;  
 	ldx.w #$0009                         ;C4918E|A20900  |      ;  
 	bit.w #$8000                         ;C49191|890080  |      ;  
-	beq CODE_C49197                      ;C49194|F001    |C49197;  
+	beq .lbl_C49197                      ;C49194|F001    |C49197;  
 	.db $E8                               ;C49196
-
-CODE_C49197:
-	jmp.w CODE_C49285                    ;C49197|4C8592  |C49285;  
-
-CODE_C4919A:
+.lbl_C49197
+	jmp.w .lbl_C49285                    ;C49197|4C8592  |C49285;  
+.lbl_C4919A
 	lda.w $AABA                          ;C4919A|ADBAAA  |7FAABA;  
-	bne CODE_C491A6                      ;C4919D|D007    |C491A6;  
+	bne .lbl_C491A6                      ;C4919D|D007    |C491A6;  
 	lda.b $00                            ;C4919F|A500    |000000;  
 	bit.w #$000C                         ;C491A1|890C00  |      ;  
-	beq CODE_C4920B                      ;C491A4|F065    |C4920B;  
-
-CODE_C491A6:
+	beq .lbl_C4920B                      ;C491A4|F065    |C4920B;  
+.lbl_C491A6
 	lda.w $AAB8                          ;C491A6|ADB8AA  |7FAAB8;  
 	sta.b $02                   ;C491A9|8502    |000002;  
 	lda.w $AABA                          ;C491AB|ADBAAA  |7FAABA;  
@@ -14330,8 +13683,7 @@ CODE_C491A6:
 	sta.b $06                            ;C491B3|8506    |000006;  
 	jsl.l CODE_C4A191                    ;C491B5|2291A1C4|C4A191;  
 	bra CODE_C491CE                      ;C491B9|8013    |C491CE;  
-
-CODE_C491BB:
+.lbl_C491BB
 	lda.w $AAB8                          ;C491BB|ADB8AA  |7FAAB8;  
 	sta.b $02                   ;C491BE|8502    |000002;  
 	lda.w $AABA                          ;C491C0|ADBAAA  |7FAABA;  
@@ -14353,74 +13705,66 @@ CODE_C491CE:
 	asl a                                ;C491DE|0A      |      ;  
 	tax                                  ;C491DF|AA      |      ;  
 	lda.b $04                   ;C491E0|A504    |000004;  
-	beq CODE_C491F1                      ;C491E2|F00D    |C491F1;  
+	beq .lbl_C491F1                      ;C491E2|F00D    |C491F1;  
 	lda.w $AAB8                          ;C491E4|ADB8AA  |7FAAB8;  
 	cmp.w #$0005                         ;C491E7|C90500  |      ;  
-	beq CODE_C491BB                      ;C491EA|F0CF    |C491BB;  
+	beq .lbl_C491BB                      ;C491EA|F0CF    |C491BB;  
 	lda.w $AADC,x                        ;C491EC|BDDCAA  |7FAADC;  
-	bra CODE_C4923C                      ;C491EF|804B    |C4923C;  
-
-CODE_C491F1:
+	bra .lbl_C4923C                      ;C491EF|804B    |C4923C;  
+.lbl_C491F1
 	ldx.w $AAB8                          ;C491F1|AEB8AA  |7FAAB8;  
 	lda.l DATA8_C49200,x                 ;C491F4|BF0092C4|C49200;  
 	and.w #$00FF                         ;C491F8|29FF00  |      ;  
 	sta.w $AAB8                          ;C491FB|8DB8AA  |7FAAB8;  
-	bra CODE_C4923C                      ;C491FE|803C    |C4923C;  
+	bra .lbl_C4923C                      ;C491FE|803C    |C4923C;  
 
 DATA8_C49200:
 	.db $00,$00,$03,$03,$03,$06           ;C49200
 	.db $06,$06                           ;C49206|        |000006;  
 	.db $09,$09                           ;C49208
 	.db $09                               ;C4920A
-
-CODE_C4920B:
+.lbl_C4920B
 	bit.w #$0002                         ;C4920B|890200  |      ;  
-	beq CODE_C4921D                      ;C4920E|F00D    |C4921D;  
+	beq .lbl_C4921D                      ;C4920E|F00D    |C4921D;  
 	lda.w $AAB8                          ;C49210|ADB8AA  |7FAAB8;  
-	bne CODE_C49218                      ;C49213|D003    |C49218;  
+	bne .lbl_C49218                      ;C49213|D003    |C49218;  
 	lda.w #$000C                         ;C49215|A90C00  |      ;  
-
-CODE_C49218:
+.lbl_C49218
 	dec a                                ;C49218|3A      |      ;  
 	dec a                                ;C49219|3A      |      ;  
 	dec a                                ;C4921A|3A      |      ;  
-	bra CODE_C4922E                      ;C4921B|8011    |C4922E;  
-
-CODE_C4921D:
+	bra .lbl_C4922E                      ;C4921B|8011    |C4922E;  
+.lbl_C4921D
 	bit.w #$0001                         ;C4921D|890100  |      ;  
-	beq CODE_C4923C                      ;C49220|F01A    |C4923C;  
+	beq .lbl_C4923C                      ;C49220|F01A    |C4923C;  
 	lda.w $AAB8                          ;C49222|ADB8AA  |7FAAB8;  
 	inc a                                ;C49225|1A      |      ;  
 	inc a                                ;C49226|1A      |      ;  
 	inc a                                ;C49227|1A      |      ;  
 	cmp.w #$000C                         ;C49228|C90C00  |      ;  
-	bne CODE_C4922E                      ;C4922B|D001    |C4922E;  
+	bne .lbl_C4922E                      ;C4922B|D001    |C4922E;  
 	tdc                                  ;C4922D|7B      |      ;  
-
-CODE_C4922E:
+.lbl_C4922E
 	sta.w $AAB8                          ;C4922E|8DB8AA  |7FAAB8;  
 	lda.w #$0049                         ;C49231|A94900  |      ;  
 	sta.b $00                            ;C49234|8500    |000000;  
 	phb                                  ;C49236|8B      |      ;  
 	jsl.l func_818049                    ;C49237|22498081|818049;  
 	plb                                  ;C4923B|AB      |      ;  
-
-CODE_C4923C:
+.lbl_C4923C
 	jmp.w CODE_C4912C                    ;C4923C|4C2C91  |C4912C;  
 
 CODE_C4923F:
 	ldx.w $AAB8                          ;C4923F|AEB8AA  |7FAAB8;  
 	ldy.w $AABA                          ;C49242|ACBAAA  |7FAABA;  
-	bne CODE_C4924A                      ;C49245|D003    |C4924A;  
+	bne .lbl_C4924A                      ;C49245|D003    |C4924A;  
 	jmp.w CODE_C492ED                    ;C49247|4CED92  |C492ED;  
-
-CODE_C4924A:
+.lbl_C4924A
 	cpy.w #$0005                         ;C4924A|C00500  |      ;  
-	bne CODE_C49254                      ;C4924D|D005    |C49254;  
+	bne .lbl_C49254                      ;C4924D|D005    |C49254;  
 	cpx.w #$0009                         ;C4924F|E00900  |      ;  
-	bcs CODE_C49285                      ;C49252|B031    |C49285;  
-
-CODE_C49254:
+	bcs .lbl_C49285                      ;C49252|B031    |C49285;  
+.lbl_C49254
 	lda.w $AABE                          ;C49254|ADBEAA  |7FAABE;  
 	asl a                                ;C49257|0A      |      ;  
 	tay                                  ;C49258|A8      |      ;  
@@ -14439,7 +13783,7 @@ CODE_C49268:
 	lda.w $AABE                          ;C4926B|ADBEAA  |7FAABE;  
 	inc a                                ;C4926E|1A      |      ;  
 	cmp.w $AAAC                          ;C4926F|CDACAA  |7FAAAC;  
-	beq CODE_C492DF                      ;C49272|F06B    |C492DF;  
+	beq .lbl_C492DF                      ;C49272|F06B    |C492DF;  
 	sta.w $AABE                          ;C49274|8DBEAA  |7FAABE;  
 
 CODE_C49277:
@@ -14449,34 +13793,31 @@ CODE_C49277:
 	jsl.l func_818049                    ;C4927D|22498081|818049;  
 	plb                                  ;C49281|AB      |      ;  
 	jmp.w CODE_C4911A                    ;C49282|4C1A91  |C4911A;  
-
-CODE_C49285:
+.lbl_C49285
 	lda.w $AABE                          ;C49285|ADBEAA  |7FAABE;  
 	asl a                                ;C49288|0A      |      ;  
 	tay                                  ;C49289|A8      |      ;  
 	lda.w $AACA,y                        ;C4928A|B9CAAA  |7FAACA;  
 	cmp.w $ABDC                          ;C4928D|CDDCAB  |7FABDC;  
-	bne CODE_C49297                      ;C49290|D005    |C49297;  
+	bne .lbl_C49297                      ;C49290|D005    |C49297;  
 	tya                                  ;C49292|98      |      ;  
-	beq CODE_C492EA                      ;C49293|F055    |C492EA;  
+	beq .lbl_C492EA                      ;C49293|F055    |C492EA;  
 	dey                                  ;C49295|88      |      ;  
 	dey                                  ;C49296|88      |      ;  
-
-CODE_C49297:
+.lbl_C49297
 	lda.w $AACA,y                        ;C49297|B9CAAA  |7FAACA;  
 	phy                                  ;C4929A|5A      |      ;  
 	phb                                  ;C4929B|8B      |      ;  
 	sta.b $02                   ;C4929C|8502    |000002;  
 	cpx.w #$0009                         ;C4929E|E00900  |      ;  
-	bne CODE_C492B4                      ;C492A1|D011    |C492B4;  
+	bne .lbl_C492B4                      ;C492A1|D011    |C492B4;  
 	ldx.w #$0191                         ;C492A3|A29101  |      ;  
 	stx.b $00                            ;C492A6|8600    |000000;  
 	jsl.l CODE_C4C157                    ;C492A8|2257C1C4|C4C157;  
 	ldx.w #$0029                         ;C492AC|A22900  |      ;  
 	lda.w #$0001                         ;C492AF|A90100  |      ;  
 	bra CODE_C492C3                      ;C492B2|800F    |C492C3;  
-
-CODE_C492B4:
+.lbl_C492B4
 	ldx.w #$0192                         ;C492B4|A29201  |      ;  
 	stx.b $00                            ;C492B7|8600    |000000;  
 	jsl.l CODE_C4C157                    ;C492B9|2257C1C4|C4C157;  
@@ -14488,7 +13829,7 @@ CODE_C492C3:
 	plb                                  ;C492C5|AB      |      ;  
 	ply                                  ;C492C6|7A      |      ;  
 	lda.b $00                            ;C492C7|A500    |000000;  
-	beq CODE_C492EA                      ;C492C9|F01F    |C492EA;  
+	beq .lbl_C492EA                      ;C492C9|F01F    |C492EA;  
 	lda.b $02                   ;C492CB|A502    |000002;  
 	cpx.b $00                            ;C492CD|E400    |000000;  
 	bcs UNREACH_C492D8                   ;C492CF|B007    |C492D8;  
@@ -14498,51 +13839,44 @@ CODE_C492C3:
 
 UNREACH_C492D8:
 	.db $E5,$04,$99,$CA,$AA,$80,$98       ;C492D8|        |000004;  
-
-CODE_C492DF:
+.lbl_C492DF
 	lda.w #$0009                         ;C492DF|A90900  |      ;  
 	sta.w $AAB8                          ;C492E2|8DB8AA  |7FAAB8;  
 	stz.w $AABA                          ;C492E5|9CBAAA  |7FAABA;  
 	bra CODE_C49277                      ;C492E8|808D    |C49277;  
-
-CODE_C492EA:
+.lbl_C492EA
 	jmp.w CODE_C4912C                    ;C492EA|4C2C91  |C4912C;  
 
 CODE_C492ED:
 	lda.w $AAB8                          ;C492ED|ADB8AA  |7FAAB8;  
-	beq CODE_C49326                      ;C492F0|F034    |C49326;  
+	beq .lbl_C49326                      ;C492F0|F034    |C49326;  
 	cmp.w #$0003                         ;C492F2|C90300  |      ;  
-	beq CODE_C4930A                      ;C492F5|F013    |C4930A;  
+	beq .lbl_C4930A                      ;C492F5|F013    |C4930A;  
 	cmp.w #$0006                         ;C492F7|C90600  |      ;  
-	beq CODE_C4931B                      ;C492FA|F01F    |C4931B;  
+	beq .lbl_C4931B                      ;C492FA|F01F    |C4931B;  
 	lda.w $AACA                          ;C492FC|ADCAAA  |7FAACA;  
 	cmp.w $ABDC                          ;C492FF|CDDCAB  |7FABDC;  
-	bne CODE_C49307                      ;C49302|D003    |C49307;  
+	bne .lbl_C49307                      ;C49302|D003    |C49307;  
 	.db $4C,$76,$93                       ;C49304|        |C49376;  
-
-CODE_C49307:
+.lbl_C49307
 	jmp.w CODE_C49398                    ;C49307|4C9893  |C49398;  
-
-CODE_C4930A:
+.lbl_C4930A
 	lda.w $AABE                          ;C4930A|ADBEAA  |7FAABE;  
 	asl a                                ;C4930D|0A      |      ;  
 	tay                                  ;C4930E|A8      |      ;  
 	lda.w $AACA,y                        ;C4930F|B9CAAA  |7FAACA;  
 	cmp.w $ABDC                          ;C49312|CDDCAB  |7FABDC;  
-	bne CODE_C49318                      ;C49315|D001    |C49318;  
+	bne .lbl_C49318                      ;C49315|D001    |C49318;  
 	tdc                                  ;C49317|7B      |      ;  
-
-CODE_C49318:
+.lbl_C49318
 	jmp.w CODE_C49268                    ;C49318|4C6892  |C49268;  
-
-CODE_C4931B:
+.lbl_C4931B
 	lda.w $AABE                          ;C4931B|ADBEAA  |7FAABE;  
-	beq CODE_C492EA                      ;C4931E|F0CA    |C492EA;  
+	beq .lbl_C492EA                      ;C4931E|F0CA    |C492EA;  
 	dec a                                ;C49320|3A      |      ;  
 	sta.w $AABE                          ;C49321|8DBEAA  |7FAABE;  
 	bra CODE_C49368                      ;C49324|8042    |C49368;  
-
-CODE_C49326:
+.lbl_C49326
 	lda.w $AABC                          ;C49326|ADBCAA  |7FAABC;  
 	eor.w #$0001                         ;C49329|490100  |      ;  
 	sta.w $AABC                          ;C4932C|8DBCAA  |7FAABC;  
@@ -14560,29 +13894,27 @@ CODE_C4933D:
 	tax                                  ;C49342|AA      |      ;  
 	lda.w $AACA,x                        ;C49343|BDCAAA  |7FAACA;  
 	cmp.w $ABDC                          ;C49346|CDDCAB  |7FABDC;  
-	bne CODE_C49355                      ;C49349|D00A    |C49355;  
+	bne .lbl_C49355                      ;C49349|D00A    |C49355;  
 	pla                                  ;C4934B|68      |      ;  
-	beq CODE_C49376                      ;C4934C|F028    |C49376;  
+	beq .lbl_C49376                      ;C4934C|F028    |C49376;  
 	dec a                                ;C4934E|3A      |      ;  
 	sta.w $AABE                          ;C4934F|8DBEAA  |7FAABE;  
 	pha                                  ;C49352|48      |      ;  
 	asl a                                ;C49353|0A      |      ;  
 	tax                                  ;C49354|AA      |      ;  
-
-CODE_C49355:
+.lbl_C49355
 	lda.w $AAAC                          ;C49355|ADACAA  |7FAAAC;  
 	sec                                  ;C49358|38      |      ;  
 	sbc.b w0001,s                          ;C49359|E301    |000001;  
 	tay                                  ;C4935B|A8      |      ;  
 	pla                                  ;C4935C|68      |      ;  
 	lda.w $ABDC                          ;C4935D|ADDCAB  |7FABDC;  
-
-CODE_C49360:
+.lbl_C49360
 	sta.w $AACA,x                        ;C49360|9DCAAA  |7FAACA;  
 	inx                                  ;C49363|E8      |      ;  
 	inx                                  ;C49364|E8      |      ;  
 	dey                                  ;C49365|88      |      ;  
-	bne CODE_C49360                      ;C49366|D0F8    |C49360;  
+	bne .lbl_C49360                      ;C49366|D0F8    |C49360;  
 
 CODE_C49368:
 	lda.w #$0040                         ;C49368|A94000  |      ;  
@@ -14591,14 +13923,12 @@ CODE_C49368:
 	jsl.l func_818049                    ;C4936E|22498081|818049;  
 	plb                                  ;C49372|AB      |      ;  
 	jmp.w CODE_C4911A                    ;C49373|4C1A91  |C4911A;  
-
-CODE_C49376:
+.lbl_C49376
 	lda.w $ABDC                          ;C49376|ADDCAB  |7FABDC;  
 	cmp.w $AACA                          ;C49379|CDCAAA  |7FAACA;  
-	beq CODE_C49381                      ;C4937C|F003    |C49381;  
+	beq .lbl_C49381                      ;C4937C|F003    |C49381;  
 	.db $7B,$80,$D1                       ;C4937E
-
-CODE_C49381:
+.lbl_C49381
 	lda.w $AAB4                          ;C49381|ADB4AA  |7FAAB4;  
 	sta.b $00                            ;C49384|8500    |000000;  
 	phb                                  ;C49386|8B      |      ;  
@@ -14616,25 +13946,22 @@ CODE_C49398:
 	stz.b $00                            ;C4939B|6400    |000000;  
 	tdc                                  ;C4939D|7B      |      ;  
 	tay                                  ;C4939E|A8      |      ;  
-
-CODE_C4939F:
+.lbl_C4939F
 	lda.w $AACA,y                        ;C4939F|B9CAAA  |7FAACA;  
 	cmp.w $ABDC                          ;C493A2|CDDCAB  |7FABDC;  
-	beq CODE_C493B1                      ;C493A5|F00A    |C493B1;  
+	beq .lbl_C493B1                      ;C493A5|F00A    |C493B1;  
 	clc                                  ;C493A7|18      |      ;  
 	adc.b $00                            ;C493A8|6500    |000000;  
 	sta.b $00                            ;C493AA|8500    |000000;  
 	iny                                  ;C493AC|C8      |      ;  
 	iny                                  ;C493AD|C8      |      ;  
 	dex                                  ;C493AE|CA      |      ;  
-	bne CODE_C4939F                      ;C493AF|D0EE    |C4939F;  
-
-CODE_C493B1:
+	bne .lbl_C4939F                      ;C493AF|D0EE    |C4939F;  
+.lbl_C493B1
 	lda.b $00                            ;C493B1|A500    |000000;  
-	bne CODE_C493B8                      ;C493B3|D003    |C493B8;  
+	bne .lbl_C493B8                      ;C493B3|D003    |C493B8;  
 	.db $4C,$EA,$92                       ;C493B5|        |C492EA;  
-
-CODE_C493B8:
+.lbl_C493B8
 	lda.w $AAB4                          ;C493B8|ADB4AA  |7FAAB4;  
 	sta.b $00                            ;C493BB|8500    |000000;  
 	phb                                  ;C493BD|8B      |      ;  
@@ -14653,22 +13980,20 @@ CODE_C493B8:
 	pha                                  ;C493D9|48      |      ;  
 	lda.w $AAAC                          ;C493DA|ADACAA  |7FAAAC;  
 	plb                                  ;C493DD|AB      |      ;  
-
-CODE_C493DE:
+.lbl_C493DE
 	pha                                  ;C493DE|48      |      ;  
 	lda.l $7FAACA,x                      ;C493DF|BFCAAA7F|7FAACA;  
 	cmp.l $7FABDC                        ;C493E3|CFDCAB7F|7FABDC;  
-	bne CODE_C493EB                      ;C493E7|D002    |C493EB;  
+	bne .lbl_C493EB                      ;C493E7|D002    |C493EB;  
 	lda.b #$FF                           ;C493E9|A9FF    |      ;  
-
-CODE_C493EB:
+.lbl_C493EB
 	sta.w $0000,y                        ;C493EB|990000  |000000;  
 	inx                                  ;C493EE|E8      |      ;  
 	inx                                  ;C493EF|E8      |      ;  
 	iny                                  ;C493F0|C8      |      ;  
 	pla                                  ;C493F1|68      |      ;  
 	dec a                                ;C493F2|3A      |      ;  
-	bne CODE_C493DE                      ;C493F3|D0E9    |C493DE;  
+	bne .lbl_C493DE                      ;C493F3|D0E9    |C493DE;  
 	plp                                  ;C493F5|28      |      ;  
 	clc                                  ;C493F6|18      |      ;  
 	rtl                                  ;C493F7|6B      |      ;  
@@ -14722,7 +14047,7 @@ CODE_C49453:
 	lda.w #$AA60                         ;C49453|A960AA  |      ;  
 	sta.b $02                   ;C49456|8502    |000002;  
 	jsl.l CODE_C4BF88                    ;C49458|2288BFC4|C4BF88;  
-	bcs CODE_C49480                      ;C4945C|B022    |C49480;  
+	bcs .lbl_C49480                      ;C4945C|B022    |C49480;  
 	lda.b $00                            ;C4945E|A500    |000000;  
 	pha                                  ;C49460|48      |      ;  
 	ldx.w #$AA60                         ;C49461|A260AA  |      ;  
@@ -14739,8 +14064,7 @@ CODE_C49453:
 	pla                                  ;C4947B|68      |      ;  
 	sta.b $00                            ;C4947C|8500    |000000;  
 	bra CODE_C49453                      ;C4947E|80D3    |C49453;  
-
-CODE_C49480:
+.lbl_C49480
 	plp                                  ;C49480|28      |      ;  
 	rtl                                  ;C49481|6B      |      ;  
 	php                                  ;C49482|08      |      ;  
@@ -14766,14 +14090,13 @@ CODE_C494A5:
 	sta.w $AAC2                          ;C494A8|8DC2AA  |7FAAC2;  
 	lda.w #$000B                         ;C494AB|A90B00  |      ;  
 	sta.w $AAC6                          ;C494AE|8DC6AA  |7FAAC6;  
-
-CODE_C494B1:
+.lbl_C494B1
 	ldx.w #$AA60                         ;C494B1|A260AA  |      ;  
 	stx.b $02                   ;C494B4|8602    |000002;  
 	sty.b $00                            ;C494B6|8400    |000000;  
 	jsl.l CODE_C4BF88                    ;C494B8|2288BFC4|C4BF88;  
 	ldy.b $00                            ;C494BC|A400    |000000;  
-	bcs CODE_C49522                      ;C494BE|B062    |C49522;  
+	bcs .lbl_C49522                      ;C494BE|B062    |C49522;  
 	lda.b $02                   ;C494C0|A502    |000002;  
 	ldx.w $AAC0                          ;C494C2|AEC0AA  |7FAAC0;  
 	sta.w $AADC,x                        ;C494C5|9DDCAA  |7FAADC;  
@@ -14807,7 +14130,7 @@ CODE_C494B1:
 	adc.w #$0014                         ;C49501|691400  |      ;  
 	sta.w $AAC2                          ;C49504|8DC2AA  |7FAAC2;  
 	dec.w $AAC6                          ;C49507|CEC6AA  |7FAAC6;  
-	bne CODE_C494B1                      ;C4950A|D0A5    |C494B1;  
+	bne .lbl_C494B1                      ;C4950A|D0A5    |C494B1;  
 	lda.w $AAC0                          ;C4950C|ADC0AA  |7FAAC0;  
 	clc                                  ;C4950F|18      |      ;  
 	adc.w #$000A                         ;C49510|690A00  |      ;  
@@ -14817,8 +14140,7 @@ CODE_C494B1:
 	adc.w #$000F                         ;C4951A|690F00  |      ;  
 	sta.w $AAC4                          ;C4951D|8DC4AA  |7FAAC4;  
 	bra CODE_C494A5                      ;C49520|8083    |C494A5;  
-
-CODE_C49522:
+.lbl_C49522
 	lda.w #$0007                         ;C49522|A90700  |      ;  
 	sta.b $02                   ;C49525|8502    |000002;  
 	lda.w #$000D                         ;C49527|A90D00  |      ;  
@@ -14826,10 +14148,9 @@ CODE_C49522:
 	jsl.l CODE_C5EBBD                    ;C4952C|22BDEBC5|C5EBBD;  
 	ldx.w #$0017                         ;C49530|A21700  |      ;  
 	lda.l $7FAABC                        ;C49533|AFBCAA7F|7FAABC;  
-	beq CODE_C4953C                      ;C49537|F003    |C4953C;  
+	beq .lbl_C4953C                      ;C49537|F003    |C4953C;  
 	ldx.w #$0016                         ;C49539|A21600  |      ;  
-
-CODE_C4953C:
+.lbl_C4953C
 	stx.b $00                            ;C4953C|8600    |000000;  
 	jsl.l CODE_C4A6E9                    ;C4953E|22E9A6C4|C4A6E9;  
 	lda.w #$0043                         ;C49542|A94300  |      ;  
@@ -14864,7 +14185,7 @@ CODE_C49589:
 	sep #$20                             ;C4958A|E220    |      ;  
 	jsl.l CODE_C3E5F2                    ;C4958C|22F2E5C3|C3E5F2;  
 	lda.b $00                            ;C49590|A500    |000000;  
-	beq CODE_C495AF                      ;C49592|F01B    |C495AF;  
+	beq .lbl_C495AF                      ;C49592|F01B    |C495AF;  
 	lda.b #$04                           ;C49594|A904    |      ;  
 	sta.b $00                            ;C49596|8500    |000000;  
 	stz.b w0001                            ;C49598|6401    |000001;  
@@ -14873,13 +14194,12 @@ CODE_C49589:
 	stz.b $04                   ;C4959E|6404    |000004;  
 	stz.b $05                            ;C495A0|6405    |000005;  
 	jsl.l CODE_C48FEC                    ;C495A2|22EC8FC4|C48FEC;  
-	bcs CODE_C495AF                      ;C495A6|B007    |C495AF;  
+	bcs .lbl_C495AF                      ;C495A6|B007    |C495AF;  
 	jsl.l CODE_C3E77A                    ;C495A8|227AE7C3|C3E77A;  
 	plp                                  ;C495AC|28      |      ;  
 	clc                                  ;C495AD|18      |      ;  
 	rtl                                  ;C495AE|6B      |      ;  
-
-CODE_C495AF:
+.lbl_C495AF
 	plp                                  ;C495AF|28      |      ;  
 	sec                                  ;C495B0|38      |      ;  
 	rtl                                  ;C495B1|6B      |      ;  
@@ -14887,15 +14207,14 @@ CODE_C495AF:
 CODE_C495B2:
 	php                                  ;C495B2|08      |      ;  
 	rep #$20                             ;C495B3|C220    |      ;  
-
-CODE_C495B5:
+.lbl_C495B5
 	lda.w #$0004                         ;C495B5|A90400  |      ;  
 	sta.b $00                            ;C495B8|8500    |000000;  
 	stz.b $02                   ;C495BA|6402    |000002;  
 	lda.w #$FFFF                         ;C495BC|A9FFFF  |      ;  
 	sta.b $04                   ;C495BF|8504    |000004;  
 	jsl.l CODE_C48FEC                    ;C495C1|22EC8FC4|C48FEC;  
-	bcs CODE_C495B5                      ;C495C5|B0EE    |C495B5;  
+	bcs .lbl_C495B5                      ;C495C5|B0EE    |C495B5;  
 	jsl.l CODE_C3E77A                    ;C495C7|227AE7C3|C3E77A;  
 	plp                                  ;C495CB|28      |      ;  
 	rtl                                  ;C495CC|6B      |      ;  
@@ -14949,7 +14268,7 @@ CODE_C49602:
 	stz.w $AC1E                          ;C4961E|9C1EAC  |7FAC1E;  
 	jsl.l CODE_C62B42                    ;C49621|22422BC6|C62B42;  
 	lda.b $00                            ;C49625|A500    |000000;  
-	beq CODE_C49636                      ;C49627|F00D    |C49636;  
+	beq .lbl_C49636                      ;C49627|F00D    |C49636;  
 	lda.b #$03                           ;C49629|A903    |      ;  
 	pha                                  ;C4962B|48      |      ;  
 	lda.b #$02                           ;C4962C|A902    |      ;  
@@ -14958,8 +14277,7 @@ CODE_C49602:
 	ldx.w #$B758                         ;C49630|A258B7  |      ;  
 	phx                                  ;C49633|DA      |      ;  
 	bra CODE_C49643                      ;C49634|800D    |C49643;  
-
-CODE_C49636:
+.lbl_C49636
 	lda.b #$02                           ;C49636|A902    |      ;  
 	pha                                  ;C49638|48      |      ;  
 	lda.b #$03                           ;C49639|A903    |      ;  
@@ -14984,17 +14302,15 @@ CODE_C49643:
 	clc                                  ;C49657|18      |      ;  
 	adc.b $04                   ;C49658|6504    |000004;  
 	cmp.b w0001                            ;C4965A|C501    |000001;  
-	beq CODE_C49660                      ;C4965C|F002    |C49660;  
-	bcs CODE_C4966B                      ;C4965E|B00B    |C4966B;  
-
-CODE_C49660:
+	beq .lbl_C49660                      ;C4965C|F002    |C49660;  
+	bcs .lbl_C4966B                      ;C4965E|B00B    |C4966B;  
+.lbl_C49660
 	lda.w #$0002                         ;C49660|A90200  |      ;  
 	sta.b $00                            ;C49663|8500    |000000;  
 	phb                                  ;C49665|8B      |      ;  
 	jsl.l CODE_C5E3BD                    ;C49666|22BDE3C5|C5E3BD;  
 	plb                                  ;C4966A|AB      |      ;  
-
-CODE_C4966B:
+.lbl_C4966B
 	sep #$20                             ;C4966B|E220    |      ;  
 	phb                                  ;C4966D|8B      |      ;  
 	jsl.l CODE_C48589                    ;C4966E|228985C4|C48589;  
@@ -15036,11 +14352,10 @@ CODE_C496CE:
 	sta.b w0001                            ;C496D6|8501    |000001;  
 	jsl.l CODE_C5E5CE                    ;C496D8|22CEE5C5|C5E5CE;  
 	lda.w $AC1E                          ;C496DC|AD1EAC  |7FAC1E;  
-	beq CODE_C496EA                      ;C496DF|F009    |C496EA;  
+	beq .lbl_C496EA                      ;C496DF|F009    |C496EA;  
 	.db $AD,$1C,$AC,$85,$00,$22,$CE,$E5   ;C496E1|        |00AC1C;  
 	.db $C5                               ;C496E9|        |000022;  
-
-CODE_C496EA:
+.lbl_C496EA
 	jsl.l CODE_C5EDDC                    ;C496EA|22DCEDC5|C5EDDC;  
 	jsl.l CODE_C5EF0E                    ;C496EE|220EEFC5|C5EF0E;  
 	jsl.l CODE_C4A923                    ;C496F2|2223A9C4|C4A923;  
@@ -15062,9 +14377,9 @@ CODE_C496F7:
 	jsl.l CODE_C4A93A                    ;C49714|223AA9C4|C4A93A;  
 	lda.b $02                   ;C49718|A502    |000002;  
 	dec a                                ;C4971A|3A      |      ;  
-	beq CODE_C4974C                      ;C4971B|F02F    |C4974C;  
+	beq .lbl_C4974C                      ;C4971B|F02F    |C4974C;  
 	dec a                                ;C4971D|3A      |      ;  
-	beq CODE_C49742                      ;C4971E|F022    |C49742;  
+	beq .lbl_C49742                      ;C4971E|F022    |C49742;  
 	lda.w $ABE9                          ;C49720|ADE9AB  |7FABE9;  
 	sta.b $02                   ;C49723|8502    |000002;  
 	lda.w $ABEA                          ;C49725|ADEAAB  |7FABEA;  
@@ -15079,8 +14394,7 @@ CODE_C496F7:
 	lda.b $04                   ;C4973B|A504    |000004;  
 	sta.w $ABEA                          ;C4973D|8DEAAB  |7FABEA;  
 	bra CODE_C496F7                      ;C49740|80B5    |C496F7;  
-
-CODE_C49742:
+.lbl_C49742
 	jsl.l CODE_C5E5B5                    ;C49742|22B5E5C5|C5E5B5;  
 	plx                                  ;C49746|FA      |      ;  
 	plx                                  ;C49747|FA      |      ;  
@@ -15088,13 +14402,12 @@ CODE_C49742:
 	plp                                  ;C49749|28      |      ;  
 	sec                                  ;C4974A|38      |      ;  
 	rtl                                  ;C4974B|6B      |      ;  
-
-CODE_C4974C:
+.lbl_C4974C
 	lda.w $AC3A                          ;C4974C|AD3AAC  |7FAC3A;  
 	ora.w $ABE9                          ;C4974F|0DE9AB  |7FABE9;  
 	ora.w $ABEA                          ;C49752|0DEAAB  |7FABEA;  
 	ora.w $AC19                          ;C49755|0D19AC  |7FAC19;  
-	bne CODE_C49799                      ;C49758|D03F    |C49799;  
+	bne .lbl_C49799                      ;C49758|D03F    |C49799;  
 	phb                                  ;C4975A|8B      |      ;  
 	ldx.w #$B773                         ;C4975B|A273B7  |      ;  
 	stx.b $00                            ;C4975E|8600    |000000;  
@@ -15107,8 +14420,7 @@ CODE_C4974C:
 	jsl.l CODE_C5EF0E                    ;C4976F|220EEFC5|C5EF0E;  
 	jsl.l CODE_C4A923                    ;C49773|2223A9C4|C4A923;  
 	lda.b #$78                           ;C49777|A978    |      ;  
-
-CODE_C49779:
+.lbl_C49779
 	pha                                  ;C49779|48      |      ;  
 	jsl.l CODE_C07C89                    ;C4977A|22897CC0|C07C89;  
 	lda.b #$00                           ;C4977E|A900    |      ;  
@@ -15116,18 +14428,16 @@ CODE_C49779:
 	jsl.l func_80DC69                    ;C49782|2269DC80|80DC69;  
 	pla                                  ;C49786|68      |      ;  
 	ldy.b $00                            ;C49787|A400    |000000;  
-	bne CODE_C4978E                      ;C49789|D003    |C4978E;  
+	bne .lbl_C4978E                      ;C49789|D003    |C4978E;  
 	dec a                                ;C4978B|3A      |      ;  
-	bpl CODE_C49779                      ;C4978C|10EB    |C49779;  
-
-CODE_C4978E:
+	bpl .lbl_C49779                      ;C4978C|10EB    |C49779;  
+.lbl_C4978E
 	pla                                  ;C4978E|68      |      ;  
 	sta.b $00                            ;C4978F|8500    |000000;  
 	jsl.l CODE_C5E52B                    ;C49791|222BE5C5|C5E52B;  
 	plb                                  ;C49795|AB      |      ;  
 	jmp.w CODE_C496CE                    ;C49796|4CCE96  |C496CE;  
-
-CODE_C49799:
+.lbl_C49799
 	lda.w $ABE9                          ;C49799|ADE9AB  |7FABE9;  
 	asl a                                ;C4979C|0A      |      ;  
 	ora.w $ABEA                          ;C4979D|0DEAAB  |7FABEA;  
@@ -15135,41 +14445,38 @@ CODE_C49799:
 	stz.b w0001                            ;C497A2|6401    |000001;  
 	lda.b $00                            ;C497A4|A500    |000000;  
 	cmp.b $05,s                          ;C497A6|C305    |000005;  
-	bne CODE_C497D0                      ;C497A8|D026    |C497D0;  
+	bne .lbl_C497D0                      ;C497A8|D026    |C497D0;  
 	lda.w $ABE8                          ;C497AA|ADE8AB  |7FABE8;  
 	sta.b $00                            ;C497AD|8500    |000000;  
 	lda.b #$09                           ;C497AF|A909    |      ;  
 	sta.b w0001                            ;C497B1|8501    |000001;  
 	jsl.l CODE_C5E5CE                    ;C497B3|22CEE5C5|C5E5CE;  
 	lda.w $AC1E                          ;C497B7|AD1EAC  |7FAC1E;  
-	beq CODE_C497C5                      ;C497BA|F009    |C497C5;  
+	beq .lbl_C497C5                      ;C497BA|F009    |C497C5;  
 	.db $AD,$1C,$AC,$85,$00,$22,$CE,$E5   ;C497BC|        |00AC1C;  
 	.db $C5                               ;C497C4|        |00008B;  
-
-CODE_C497C5:
+.lbl_C497C5
 	phb                                  ;C497C5|8B      |      ;  
 	jsl.l CODE_C4A98D                    ;C497C6|228DA9C4|C4A98D;  
 	plb                                  ;C497CA|AB      |      ;  
-	bcc CODE_C4981C                      ;C497CB|904F    |C4981C;  
+	bcc .lbl_C4981C                      ;C497CB|904F    |C4981C;  
 	.db $82,$FE,$FE                       ;C497CD|        |C496CE;  
-
-CODE_C497D0:
+.lbl_C497D0
 	cmp.b #$01                           ;C497D0|C901    |      ;  
-	bne CODE_C4981C                      ;C497D2|D048    |C4981C;  
+	bne .lbl_C4981C                      ;C497D2|D048    |C4981C;  
 	lda.l $7FABEB                        ;C497D4|AFEBAB7F|7FABEB;  
 	cmp.b #$7F                           ;C497D8|C97F    |      ;  
-	bcc CODE_C4980C                      ;C497DA|9030    |C4980C;  
+	bcc .lbl_C4980C                      ;C497DA|9030    |C4980C;  
 	and.b #$C0                           ;C497DC|29C0    |      ;  
 	cmp.b #$C0                           ;C497DE|C9C0    |      ;  
-	bne CODE_C4981C                      ;C497E0|D03A    |C4981C;  
+	bne .lbl_C4981C                      ;C497E0|D03A    |C4981C;  
 	.db $AD,$E8,$AB,$85,$00,$A9,$09,$85   ;C497E2|        |00ABE8;  
 	.db $01,$22,$CE,$E5,$C5,$AD,$1E,$AC   ;C497EA|        |000022;  
 	.db $F0,$09,$AD,$1C,$AC,$85,$00,$22   ;C497F2|        |C497FD;  
 	.db $CE,$E5,$C5,$8B,$22,$C5,$8F,$C4   ;C497FA|        |00C5E5;  
 	.db $AB,$A9,$08,$85,$00,$90,$13,$82   ;C49802
 	.db $C2,$FE                           ;C4980A
-
-CODE_C4980C:
+.lbl_C4980C
 	jsl.l CODE_C5E5B5                    ;C4980C|22B5E5C5|C5E5B5;  
 	lda.b #$05                           ;C49810|A905    |      ;  
 	sta.b $00                            ;C49812|8500    |000000;  
@@ -15180,8 +14487,7 @@ CODE_C4980C:
 	plp                                  ;C49819|28      |      ;  
 	clc                                  ;C4981A|18      |      ;  
 	rtl                                  ;C4981B|6B      |      ;  
-
-CODE_C4981C:
+.lbl_C4981C
 	lda.b $00                            ;C4981C|A500    |000000;  
 	pha                                  ;C4981E|48      |      ;  
 	jsl.l CODE_C5E5B5                    ;C4981F|22B5E5C5|C5E5B5;  
@@ -15202,26 +14508,23 @@ CODE_C4981C:
 	lda.l $7FABEB                        ;C49844|AFEBAB7F|7FABEB;  
 	and.w #$00FF                         ;C49848|29FF00  |      ;  
 	cmp.w #$0083                         ;C4984B|C98300  |      ;  
-	bne CODE_C49866                      ;C4984E|D016    |C49866;  
+	bne .lbl_C49866                      ;C4984E|D016    |C49866;  
 	jsl.l CODE_C6277C                    ;C49850|227C27C6|C6277C;  
 	lda.b $00                            ;C49854|A500    |000000;  
 	and.w #$00FF                         ;C49856|29FF00  |      ;  
 	ldx.w #$001A                         ;C49859|A21A00  |      ;  
 	cmp.w #$0002                         ;C4985C|C90200  |      ;  
-	bne CODE_C49864                      ;C4985F|D003    |C49864;  
+	bne .lbl_C49864                      ;C4985F|D003    |C49864;  
 	ldx.w #$0026                         ;C49861|A22600  |      ;  
-
-CODE_C49864:
-	bra CODE_C49875                      ;C49864|800F    |C49875;  
-
-CODE_C49866:
+.lbl_C49864
+	bra .lbl_C49875                      ;C49864|800F    |C49875;  
+.lbl_C49866
 	lda.l $7FABEB                        ;C49866|AFEBAB7F|7FABEB;  
 	and.w #$00C0                         ;C4986A|29C000  |      ;  
 	cmp.w #$00C0                         ;C4986D|C9C000  |      ;  
-	bne CODE_C49875                      ;C49870|D003    |C49875;  
+	bne .lbl_C49875                      ;C49870|D003    |C49875;  
 	.db $A2,$20,$00                       ;C49872
-
-CODE_C49875:
+.lbl_C49875
 	stx.b $00                            ;C49875|8600    |000000;  
 	lda.w #$2002                         ;C49877|A90220  |      ;  
 	sta.b $02                   ;C4987A|8502    |000002;  
@@ -15236,19 +14539,17 @@ CODE_C49875:
 	lda.l $7FABEB                        ;C4988D|AFEBAB7F|7FABEB;  
 	and.w #$00FF                         ;C49891|29FF00  |      ;  
 	cmp.w #$0083                         ;C49894|C98300  |      ;  
-	bne CODE_C498AF                      ;C49897|D016    |C498AF;  
+	bne .lbl_C498AF                      ;C49897|D016    |C498AF;  
 	.db $22,$7C,$27,$C6,$A5,$00,$29,$FF   ;C49899|        |C6277C;  
 	.db $00,$A2,$30,$00,$C9,$02,$00,$D0   ;C498A1
 	.db $03,$A2,$38,$00,$80,$0F           ;C498A9|        |0000A2;  
-
-CODE_C498AF:
+.lbl_C498AF
 	lda.l $7FABEB                        ;C498AF|AFEBAB7F|7FABEB;  
 	and.w #$00C0                         ;C498B3|29C000  |      ;  
 	cmp.w #$00C0                         ;C498B6|C9C000  |      ;  
-	bne CODE_C498BE                      ;C498B9|D003    |C498BE;  
+	bne .lbl_C498BE                      ;C498B9|D003    |C498BE;  
 	.db $A2,$34,$00                       ;C498BB
-
-CODE_C498BE:
+.lbl_C498BE
 	stx.b $00                            ;C498BE|8600    |000000;  
 	lda.w #$2002                         ;C498C0|A90220  |      ;  
 	sta.b $02                   ;C498C3|8502    |000002;  
@@ -15347,10 +14648,9 @@ CODE_C49A97:
 	sta.l $7FABF0                        ;C49AD7|8FF0AB7F|7FABF0;  
 	pla                                  ;C49ADB|68      |      ;  
 	sta.l $7FABEF                        ;C49ADC|8FEFAB7F|7FABEF;  
-	bcs CODE_C49AE5                      ;C49AE0|B003    |C49AE5;  
+	bcs .lbl_C49AE5                      ;C49AE0|B003    |C49AE5;  
 	.db $28,$18,$6B                       ;C49AE2
-
-CODE_C49AE5:
+.lbl_C49AE5
 	plp                                  ;C49AE5|28      |      ;  
 	sec                                  ;C49AE6|38      |      ;  
 	rtl                                  ;C49AE7|6B      |      ;  
@@ -15425,13 +14725,12 @@ CODE_C49B5D:
 	ldx.w #$0000                         ;C49B97|A20000  |      ;  
 	lda.w $ABFA                          ;C49B9A|ADFAAB  |7FABFA;  
 	cmp.b #$02                           ;C49B9D|C902    |      ;  
-	bne CODE_C49BA4                      ;C49B9F|D003    |C49BA4;  
+	bne .lbl_C49BA4                      ;C49B9F|D003    |C49BA4;  
 	jmp.w CODE_C49BF7                    ;C49BA1|4CF79B  |C49BF7;  
-
-CODE_C49BA4:
+.lbl_C49BA4
 	lda.l $7FABFA                        ;C49BA4|AFFAAB7F|7FABFA;  
 	cmp.b #$02                           ;C49BA8|C902    |      ;  
-	beq CODE_C49BCD                      ;C49BAA|F021    |C49BCD;  
+	beq .lbl_C49BCD                      ;C49BAA|F021    |C49BCD;  
 
 CODE_C49BAC:
 	lda.w $ABED                          ;C49BAC|ADEDAB  |7FABED;  
@@ -15447,19 +14746,17 @@ CODE_C49BAC:
 	sta.w $ABEF                          ;C49BC3|8DEFAB  |7FABEF;  
 	lda.b $03                            ;C49BC6|A503    |000003;  
 	sta.w $ABF0                          ;C49BC8|8DF0AB  |7FABF0;  
-	bcc CODE_C49BD9                      ;C49BCB|900C    |C49BD9;  
-
-CODE_C49BCD:
+	bcc .lbl_C49BD9                      ;C49BCB|900C    |C49BD9;  
+.lbl_C49BCD
 	lda.w $ABED                          ;C49BCD|ADEDAB  |7FABED;  
 	sta.b $00                            ;C49BD0|8500    |000000;  
 	jsl.l CODE_C5E52B                    ;C49BD2|222BE5C5|C5E52B;  
 	plp                                  ;C49BD6|28      |      ;  
 	sec                                  ;C49BD7|38      |      ;  
 	rtl                                  ;C49BD8|6B      |      ;  
-
-CODE_C49BD9:
+.lbl_C49BD9
 	lda.b $04                   ;C49BD9|A504    |000004;  
-	beq CODE_C49BF3                      ;C49BDB|F016    |C49BF3;  
+	beq .lbl_C49BF3                      ;C49BDB|F016    |C49BF3;  
 	phb                                  ;C49BDD|8B      |      ;  
 	jsl.l CODE_C627FC                    ;C49BDE|22FC27C6|C627FC;  
 	jsl.l CODE_C48589                    ;C49BE2|228985C4|C48589;  
@@ -15468,8 +14765,7 @@ CODE_C49BD9:
 	jsl.l func_818049                    ;C49BEB|22498081|818049;  
 	plb                                  ;C49BEF|AB      |      ;  
 	jmp.w CODE_C49BAC                    ;C49BF0|4CAC9B  |C49BAC;  
-
-CODE_C49BF3:
+.lbl_C49BF3
 	jsr.w CODE_C49EEF                    ;C49BF3|20EF9E  |C49EEF;  
 	tax                                  ;C49BF6|AA      |      ;  
 
@@ -15491,50 +14787,45 @@ CODE_C49BF7:
 	lda.b w0001                            ;C49C17|A501    |000001;  
 	sta.w $ABF9                          ;C49C19|8DF9AB  |7FABF9;  
 	cmp.b #$E7                           ;C49C1C|C9E7    |      ;  
-	bne CODE_C49C25                      ;C49C1E|D005    |C49C25;  
+	bne .lbl_C49C25                      ;C49C1E|D005    |C49C25;  
 	.db $A9,$08,$8D,$F5,$AB               ;C49C20
-
-CODE_C49C25:
+.lbl_C49C25
 	stz.w $ABFD                          ;C49C25|9CFDAB  |7FABFD;  
 	stz.w $ABF8                          ;C49C28|9CF8AB  |7FABF8;  
 	lda.b $06                            ;C49C2B|A506    |000006;  
 	bit.b #$04                           ;C49C2D|8904    |      ;  
-	bne CODE_C49C42                      ;C49C2F|D011    |C49C42;  
+	bne .lbl_C49C42                      ;C49C2F|D011    |C49C42;  
 	lda.b w0001                            ;C49C31|A501    |000001;  
 	cmp.b #$68                           ;C49C33|C968    |      ;  
-	beq CODE_C49C42                      ;C49C35|F00B    |C49C42;  
+	beq .lbl_C49C42                      ;C49C35|F00B    |C49C42;  
 	jsl.l CODE_C301CE                    ;C49C37|22CE01C3|C301CE;  
 	lda.b $00                            ;C49C3B|A500    |000000;  
-	bpl CODE_C49C42                      ;C49C3D|1003    |C49C42;  
+	bpl .lbl_C49C42                      ;C49C3D|1003    |C49C42;  
 	.db $EE,$F8,$AB                       ;C49C3F|        |00ABF8;  
-
-CODE_C49C42:
+.lbl_C49C42
 	ply                                  ;C49C42|7A      |      ;  
 	stz.w $ABFC                          ;C49C43|9CFCAB  |7FABFC;  
 	lda.w $AC3B,y                        ;C49C46|B93BAC  |7FAC3B;  
 	cmp.w $AC79                          ;C49C49|CD79AC  |7FAC79;  
-	beq CODE_C49C5D                      ;C49C4C|F00F    |C49C5D;  
+	beq .lbl_C49C5D                      ;C49C4C|F00F    |C49C5D;  
 	cmp.w $AC7A                          ;C49C4E|CD7AAC  |7FAC7A;  
-	beq CODE_C49C5D                      ;C49C51|F00A    |C49C5D;  
+	beq .lbl_C49C5D                      ;C49C51|F00A    |C49C5D;  
 	cmp.w $AC7B                          ;C49C53|CD7BAC  |7FAC7B;  
-	beq CODE_C49C5D                      ;C49C56|F005    |C49C5D;  
+	beq .lbl_C49C5D                      ;C49C56|F005    |C49C5D;  
 	cmp.w $AC7C                          ;C49C58|CD7CAC  |7FAC7C;  
-	bne CODE_C49C62                      ;C49C5B|D005    |C49C62;  
-
-CODE_C49C5D:
+	bne .lbl_C49C62                      ;C49C5B|D005    |C49C62;  
+.lbl_C49C5D
 	lda.b #$01                           ;C49C5D|A901    |      ;  
 	sta.w $ABFC                          ;C49C5F|8DFCAB  |7FABFC;  
-
-CODE_C49C62:
+.lbl_C49C62
 	sep #$10                             ;C49C62|E210    |      ;  
 	ldx.b #$00                           ;C49C64|A200    |      ;  
-
-CODE_C49C66:
+.lbl_C49C66
 	lda.l DATA8_C49F4D,x                 ;C49C66|BF4D9FC4|C49F4D;  
 	sta.w $ABFE,x                        ;C49C6A|9DFEAB  |7FABFE;  
 	inx                                  ;C49C6D|E8      |      ;  
 	cpx.b #$08                           ;C49C6E|E008    |      ;  
-	bcc CODE_C49C66                      ;C49C70|90F4    |C49C66;  
+	bcc .lbl_C49C66                      ;C49C70|90F4    |C49C66;  
 	ldx.w $ABF5                          ;C49C72|AEF5AB  |7FABF5;  
 	lda.l DATA8_C49F5D,x                 ;C49C75|BF5D9FC4|C49F5D;  
 	sta.w $AC00                          ;C49C79|8D00AC  |7FAC00;  
@@ -15544,15 +14835,14 @@ CODE_C49C66:
 	cmp.b #$C1                           ;C49C83|C9C1    |      ;  
 	beq UNREACH_C49C8B                   ;C49C85|F004    |C49C8B;  
 	cmp.b #$BE                           ;C49C87|C9BE    |      ;  
-	bne CODE_C49C90                      ;C49C89|D005    |C49C90;  
+	bne .lbl_C49C90                      ;C49C89|D005    |C49C90;  
 
 UNREACH_C49C8B:
 	.db $A9,$1A,$8D,$00,$AC               ;C49C8B
-
-CODE_C49C90:
+.lbl_C49C90
 	lda.w $ABF9                          ;C49C90|ADF9AB  |7FABF9;  
 	cmp.b #$68                           ;C49C93|C968    |      ;  
-	bne CODE_C49CAD                      ;C49C95|D016    |C49CAD;  
+	bne .lbl_C49CAD                      ;C49C95|D016    |C49CAD;  
 	lda.w $ABF3                          ;C49C97|ADF3AB  |7FABF3;  
 	sta.b $00                            ;C49C9A|8500    |000000;  
 	phb                                  ;C49C9C|8B      |      ;  
@@ -15560,88 +14850,76 @@ CODE_C49C90:
 	plb                                  ;C49CA1|AB      |      ;  
 	lda.b $02                   ;C49CA2|A502    |000002;  
 	cmp.b #$FF                           ;C49CA4|C9FF    |      ;  
-	bne CODE_C49CAD                      ;C49CA6|D005    |C49CAD;  
+	bne .lbl_C49CAD                      ;C49CA6|D005    |C49CAD;  
 	lda.b #$1F                           ;C49CA8|A91F    |      ;  
 	sta.w $AC04                          ;C49CAA|8D04AC  |7FAC04;  
-
-CODE_C49CAD:
+.lbl_C49CAD
 	lda.w $ABFC                          ;C49CAD|ADFCAB  |7FABFC;  
-	beq CODE_C49CB7                      ;C49CB0|F005    |C49CB7;  
+	beq .lbl_C49CB7                      ;C49CB0|F005    |C49CB7;  
 	lda.b #$11                           ;C49CB2|A911    |      ;  
 	sta.w $AC00                          ;C49CB4|8D00AC  |7FAC00;  
-
-CODE_C49CB7:
+.lbl_C49CB7
 	lda.w $ABF5                          ;C49CB7|ADF5AB  |7FABF5;  
 	cmp.b #$04                           ;C49CBA|C904    |      ;  
-	bne CODE_C49CC3                      ;C49CBC|D005    |C49CC3;  
+	bne .lbl_C49CC3                      ;C49CBC|D005    |C49CC3;  
 	lda.b #$03                           ;C49CBE|A903    |      ;  
 	sta.w $AC01                          ;C49CC0|8D01AC  |7FAC01;  
-
-CODE_C49CC3:
+.lbl_C49CC3
 	lda.w $ABF5                          ;C49CC3|ADF5AB  |7FABF5;  
 	cmp.b #$0B                           ;C49CC6|C90B    |      ;  
-	bne CODE_C49CCF                      ;C49CC8|D005    |C49CCF;  
+	bne .lbl_C49CCF                      ;C49CC8|D005    |C49CCF;  
 	lda.b #$22                           ;C49CCA|A922    |      ;  
 	sta.w $ABFF                          ;C49CCC|8DFFAB  |7FABFF;  
-
-CODE_C49CCF:
+.lbl_C49CCF
 	lda.w $ABF6                          ;C49CCF|ADF6AB  |7FABF6;  
-	bne CODE_C49CD9                      ;C49CD2|D005    |C49CD9;  
+	bne .lbl_C49CD9                      ;C49CD2|D005    |C49CD9;  
 	lda.b #$00                           ;C49CD4|A900    |      ;  
 	sta.w $AC04                          ;C49CD6|8D04AC  |7FAC04;  
-
-CODE_C49CD9:
+.lbl_C49CD9
 	lda.w $ABEF                          ;C49CD9|ADEFAB  |7FABEF;  
 	cmp.w $AC16                          ;C49CDC|CD16AC  |7FAC16;  
-	beq CODE_C49CE6                      ;C49CDF|F005    |C49CE6;  
+	beq .lbl_C49CE6                      ;C49CDF|F005    |C49CE6;  
 	lda.w $ABFA                          ;C49CE1|ADFAAB  |7FABFA;  
-	beq CODE_C49CF2                      ;C49CE4|F00C    |C49CF2;  
-
-CODE_C49CE6:
+	beq .lbl_C49CF2                      ;C49CE4|F00C    |C49CF2;  
+.lbl_C49CE6
 	lda.w $AC00                          ;C49CE6|AD00AC  |7FAC00;  
 	cmp.b #$0D                           ;C49CE9|C90D    |      ;  
-	bne CODE_C49CF2                      ;C49CEB|D005    |C49CF2;  
+	bne .lbl_C49CF2                      ;C49CEB|D005    |C49CF2;  
 	lda.b #$FF                           ;C49CED|A9FF    |      ;  
 	sta.w $AC00                          ;C49CEF|8D00AC  |7FAC00;  
-
-CODE_C49CF2:
+.lbl_C49CF2
 	lda.w $ABFA                          ;C49CF2|ADFAAB  |7FABFA;  
 	cmp.b #$01                           ;C49CF5|C901    |      ;  
-	bne CODE_C49CFE                      ;C49CF7|D005    |C49CFE;  
+	bne .lbl_C49CFE                      ;C49CF7|D005    |C49CFE;  
 	.db $A9,$23,$8D,$02,$AC               ;C49CF9
-
-CODE_C49CFE:
+.lbl_C49CFE
 	lda.w $ABEF                          ;C49CFE|ADEFAB  |7FABEF;  
 	cmp.w $AC16                          ;C49D01|CD16AC  |7FAC16;  
-	beq CODE_C49D0D                      ;C49D04|F007    |C49D0D;  
+	beq .lbl_C49D0D                      ;C49D04|F007    |C49D0D;  
 	lda.w $ABFA                          ;C49D06|ADFAAB  |7FABFA;  
 	cmp.b #$02                           ;C49D09|C902    |      ;  
-	bne CODE_C49D23                      ;C49D0B|D016    |C49D23;  
-
-CODE_C49D0D:
+	bne .lbl_C49D23                      ;C49D0B|D016    |C49D23;  
+.lbl_C49D0D
 	lda.b #$05                           ;C49D0D|A905    |      ;  
 	sta.w $ABFE                          ;C49D0F|8DFEAB  |7FABFE;  
 	lda.b #$1C                           ;C49D12|A91C    |      ;  
 	sta.w $AC03                          ;C49D14|8D03AC  |7FAC03;  
 	lda.w $ABF5                          ;C49D17|ADF5AB  |7FABF5;  
 	cmp.b #$08                           ;C49D1A|C908    |      ;  
-	bne CODE_C49D23                      ;C49D1C|D005    |C49D23;  
+	bne .lbl_C49D23                      ;C49D1C|D005    |C49D23;  
 	.db $A9,$FF,$8D,$03,$AC               ;C49D1E
-
-CODE_C49D23:
+.lbl_C49D23
 	ldx.b #$00                           ;C49D23|A200    |      ;  
 	txy                                  ;C49D25|9B      |      ;  
-
-CODE_C49D26:
+.lbl_C49D26
 	lda.w $ABFE,x                        ;C49D26|BDFEAB  |7FABFE;  
-	bmi CODE_C49D2D                      ;C49D29|3002    |C49D2D;  
+	bmi .lbl_C49D2D                      ;C49D29|3002    |C49D2D;  
 	iny                                  ;C49D2B|C8      |      ;  
 	iny                                  ;C49D2C|C8      |      ;  
-
-CODE_C49D2D:
+.lbl_C49D2D
 	inx                                  ;C49D2D|E8      |      ;  
 	cpx.b #$08                           ;C49D2E|E008    |      ;  
-	bcc CODE_C49D26                      ;C49D30|90F4    |C49D26;  
+	bcc .lbl_C49D26                      ;C49D30|90F4    |C49D26;  
 	sty.w $AC80                          ;C49D32|8C80AC  |7FAC80;  
 	rep #$10                             ;C49D35|C210    |      ;  
 	ldx.w #$0019                         ;C49D37|A21900  |      ;  
@@ -15675,9 +14953,9 @@ CODE_C49D77:
 	jsl.l CODE_C4A93A                    ;C49D80|223AA9C4|C4A93A;  
 	lda.b $02                   ;C49D84|A502    |000002;  
 	dec a                                ;C49D86|3A      |      ;  
-	beq CODE_C49DB5                      ;C49D87|F02C    |C49DB5;  
+	beq .lbl_C49DB5                      ;C49D87|F02C    |C49DB5;  
 	dec a                                ;C49D89|3A      |      ;  
-	bne CODE_C49D9A                      ;C49D8A|D00E    |C49D9A;  
+	bne .lbl_C49D9A                      ;C49D8A|D00E    |C49D9A;  
 
 CODE_C49D8C:
 	lda.w $ABEE                          ;C49D8C|ADEEAB  |7FABEE;  
@@ -15685,9 +14963,8 @@ CODE_C49D8C:
 	phb                                  ;C49D91|8B      |      ;  
 	jsl.l CODE_C5E52B                    ;C49D92|222BE5C5|C5E52B;  
 	plb                                  ;C49D96|AB      |      ;  
-	jmp.w CODE_C49BA4                    ;C49D97|4CA49B  |C49BA4;  
-
-CODE_C49D9A:
+	jmp.w .lbl_C49BA4                    ;C49D97|4CA49B  |C49BA4;  
+.lbl_C49D9A
 	stz.b $02                   ;C49D9A|6402    |000002;  
 	lda.w $ABF1                          ;C49D9C|ADF1AB  |7FABF1;  
 	sta.b $04                   ;C49D9F|8504    |000004;  
@@ -15699,8 +14976,7 @@ CODE_C49D9A:
 	lda.b $04                   ;C49DAE|A504    |000004;  
 	sta.w $ABF1                          ;C49DB0|8DF1AB  |7FABF1;  
 	bra CODE_C49D77                      ;C49DB3|80C2    |C49D77;  
-
-CODE_C49DB5:
+.lbl_C49DB5
 	jsr.w CODE_C49EEF                    ;C49DB5|20EF9E  |C49EEF;  
 	tax                                  ;C49DB8|AA      |      ;  
 	lda.w $AC5A,x                        ;C49DB9|BD5AAC  |7FAC5A;  
@@ -15713,35 +14989,32 @@ CODE_C49DB5:
 	pha                                  ;C49DC7|48      |      ;  
 	lda.b w0001,s                          ;C49DC8|A301    |000001;  
 	cmp.b #$06                           ;C49DCA|C906    |      ;  
-	beq CODE_C49DE3                      ;C49DCC|F015    |C49DE3;  
+	beq .lbl_C49DE3                      ;C49DCC|F015    |C49DE3;  
 	cmp.b #$03                           ;C49DCE|C903    |      ;  
-	bne CODE_C49DE0                      ;C49DD0|D00E    |C49DE0;  
+	bne .lbl_C49DE0                      ;C49DD0|D00E    |C49DE0;  
 	lda.w $ABF8                          ;C49DD2|ADF8AB  |7FABF8;  
-	beq CODE_C49DE0                      ;C49DD5|F009    |C49DE0;  
+	beq .lbl_C49DE0                      ;C49DD5|F009    |C49DE0;  
 	.db $A2,$8E,$B7,$A9,$C4,$8B,$4C,$7C   ;C49DD7
 	.db $9E                               ;C49DDF|        |00BA4C;  
-
-CODE_C49DE0:
+.lbl_C49DE0
 	jmp.w CODE_C49EBA                    ;C49DE0|4CBA9E  |C49EBA;  
-
-CODE_C49DE3:
+.lbl_C49DE3
 	phb                                  ;C49DE3|8B      |      ;  
 	jsl.l CODE_C5E5DC                    ;C49DE4|22DCE5C5|C5E5DC;  
 	lda.l $7FABF5                        ;C49DE8|AFF5AB7F|7FABF5;  
 	cmp.b #$03                           ;C49DEC|C903    |      ;  
-	beq CODE_C49DF7                      ;C49DEE|F007    |C49DF7;  
+	beq .lbl_C49DF7                      ;C49DEE|F007    |C49DF7;  
 	cmp.b #$05                           ;C49DF0|C905    |      ;  
-	beq CODE_C49DF7                      ;C49DF2|F003    |C49DF7;  
+	beq .lbl_C49DF7                      ;C49DF2|F003    |C49DF7;  
 	jmp.w CODE_C49E77                    ;C49DF4|4C779E  |C49E77;  
-
-CODE_C49DF7:
+.lbl_C49DF7
 	lda.l $7FABF3                        ;C49DF7|AFF3AB7F|7FABF3;  
 	sta.b $00                            ;C49DFB|8500    |000000;  
 	jsl.l CODE_C32CCB                    ;C49DFD|22CB2CC3|C32CCB;  
 	rep #$20                             ;C49E01|C220    |      ;  
 	lda.b $00                            ;C49E03|A500    |000000;  
 	bit.w #$8000                         ;C49E05|890080  |      ;  
-	beq CODE_C49E75                      ;C49E08|F06B    |C49E75;  
+	beq .lbl_C49E75                      ;C49E08|F06B    |C49E75;  
 	.db $A0,$00,$00,$AF,$F5,$AB,$7F,$29   ;C49E0A
 	.db $FF,$00,$C9,$05,$00,$F0,$12,$A2   ;C49E12|        |05C900;  
 	.db $10,$00,$BF,$53,$A0,$C4,$24,$00   ;C49E1A|        |C49E1C;  
@@ -15756,8 +15029,7 @@ CODE_C49DF7:
 	.db $C5,$68,$1A,$0A,$85,$03,$A9,$1C   ;C49E62|        |000068;  
 	.db $85,$02,$A5,$00,$48,$22,$F3,$E5   ;C49E6A|        |000002;  
 	.db $C5,$80,$12                       ;C49E72|        |000080;  
-
-CODE_C49E75:
+.lbl_C49E75
 	sep #$20                             ;C49E75|E220    |      ;  
 
 CODE_C49E77:
@@ -15825,15 +15097,13 @@ CODE_C49EEF:
 	tax                                  ;C49EF6|AA      |      ;  
 	tdc                                  ;C49EF7|7B      |      ;  
 	txy                                  ;C49EF8|9B      |      ;  
-	beq CODE_C49F01                      ;C49EF9|F006    |C49F01;  
-
-CODE_C49EFB:
+	beq .lbl_C49F01                      ;C49EF9|F006    |C49F01;  
+.lbl_C49EFB
 	clc                                  ;C49EFB|18      |      ;  
 	adc.b #$0A                           ;C49EFC|690A    |      ;  
 	dex                                  ;C49EFE|CA      |      ;  
-	bne CODE_C49EFB                      ;C49EFF|D0FA    |C49EFB;  
-
-CODE_C49F01:
+	bne .lbl_C49EFB                      ;C49EFF|D0FA    |C49EFB;  
+.lbl_C49F01
 	clc                                  ;C49F01|18      |      ;  
 	adc.l $7FABF0                        ;C49F02|6FF0AB7F|7FABF0;  
 	plp                                  ;C49F06|28      |      ;  
@@ -15847,10 +15117,9 @@ CODE_C49F01:
 	pha                                  ;C49F11|48      |      ;  
 	ldx.b #$00                           ;C49F12|A200    |      ;  
 	txy                                  ;C49F14|9B      |      ;  
-
-CODE_C49F15:
+.lbl_C49F15
 	lda.w $ABFE,x                        ;C49F15|BDFEAB  |7FABFE;  
-	bmi CODE_C49F42                      ;C49F18|3028    |C49F42;  
+	bmi .lbl_C49F42                      ;C49F18|3028    |C49F42;  
 	lda.l DATA8_C49F55,x                 ;C49F1A|BF559FC4|C49F55;  
 	sta.w $AC06,y                        ;C49F1E|9906AC  |7FAC06;  
 	iny                                  ;C49F21|C8      |      ;  
@@ -15871,11 +15140,10 @@ CODE_C49F15:
 	plb                                  ;C49F3F|AB      |      ;  
 	ply                                  ;C49F40|7A      |      ;  
 	plx                                  ;C49F41|FA      |      ;  
-
-CODE_C49F42:
+.lbl_C49F42
 	inx                                  ;C49F42|E8      |      ;  
 	cpx.b #$08                           ;C49F43|E008    |      ;  
-	bcc CODE_C49F15                      ;C49F45|90CE    |C49F15;  
+	bcc .lbl_C49F15                      ;C49F45|90CE    |C49F15;  
 	sty.w $ABFD                          ;C49F47|8CFDAB  |7FABFD;  
 	pla                                  ;C49F4A|68      |      ;  
 	plp                                  ;C49F4B|28      |      ;  
@@ -15902,30 +15170,27 @@ DATA8_C49F5D:
 	sep #$20                             ;C49F6C|E220    |      ;  
 	rep #$10                             ;C49F6E|C210    |      ;  
 	lda.l $7FABF6                        ;C49F70|AFF6AB7F|7FABF6;  
-	bne CODE_C49F7B                      ;C49F74|D005    |C49F7B;  
+	bne .lbl_C49F7B                      ;C49F74|D005    |C49F7B;  
 	ldx.w #$0195                         ;C49F76|A29501  |      ;  
 	bra CODE_C49FA7                      ;C49F79|802C    |C49FA7;  
-
-CODE_C49F7B:
+.lbl_C49F7B
 	lda.l $7FABF5                        ;C49F7B|AFF5AB7F|7FABF5;  
 	cmp.b #$03                           ;C49F7F|C903    |      ;  
-	beq CODE_C49FAF                      ;C49F81|F02C    |C49FAF;  
+	beq .lbl_C49FAF                      ;C49F81|F02C    |C49FAF;  
 	cmp.b #$05                           ;C49F83|C905    |      ;  
-	beq CODE_C49FAF                      ;C49F85|F028    |C49FAF;  
-
-CODE_C49F87:
+	beq .lbl_C49FAF                      ;C49F85|F028    |C49FAF;  
+.lbl_C49F87
 	sep #$20                             ;C49F87|E220    |      ;  
 	lda.l $7FABF9                        ;C49F89|AFF9AB7F|7FABF9;  
 	sta.b $02                   ;C49F8D|8502    |000002;  
 	cmp.b #$68                           ;C49F8F|C968    |      ;  
-	beq CODE_C49FA2                      ;C49F91|F00F    |C49FA2;  
+	beq .lbl_C49FA2                      ;C49F91|F00F    |C49FA2;  
 	lda.l $7FABF7                        ;C49F93|AFF7AB7F|7FABF7;  
 	sta.b $02                   ;C49F97|8502    |000002;  
 	cmp.b #$E6                           ;C49F99|C9E6    |      ;  
-	bne CODE_C49FA2                      ;C49F9B|D005    |C49FA2;  
+	bne .lbl_C49FA2                      ;C49F9B|D005    |C49FA2;  
 	.db $A2,$96,$01,$80,$05               ;C49F9D
-
-CODE_C49FA2:
+.lbl_C49FA2
 	sta.b $03                            ;C49FA2|8503    |000003;  
 	ldx.w #$0194                         ;C49FA4|A29401  |      ;  
 
@@ -15934,15 +15199,14 @@ CODE_C49FA7:
 	jsl.l CODE_C4A975                    ;C49FA9|2275A9C4|C4A975;  
 	plp                                  ;C49FAD|28      |      ;  
 	rtl                                  ;C49FAE|6B      |      ;  
-
-CODE_C49FAF:
+.lbl_C49FAF
 	lda.l $7FABF3                        ;C49FAF|AFF3AB7F|7FABF3;  
 	sta.b $00                            ;C49FB3|8500    |000000;  
 	jsl.l CODE_C32CCB                    ;C49FB5|22CB2CC3|C32CCB;  
 	rep #$20                             ;C49FB9|C220    |      ;  
 	lda.b $00                            ;C49FBB|A500    |000000;  
 	bit.w #$8000                         ;C49FBD|890080  |      ;  
-	beq CODE_C49F87                      ;C49FC0|F0C5    |C49F87;  
+	beq .lbl_C49F87                      ;C49FC0|F0C5    |C49F87;  
 	.db $48,$A9,$02,$00,$85,$00,$22,$2E   ;C49FC2
 	.db $E6,$C5,$A2,$97,$01,$86,$00,$AF   ;C49FCA|        |0000C5;  
 	.db $F3,$AB,$7F,$85,$02,$22,$75,$A9   ;C49FD2|        |0000AB;  
@@ -15982,11 +15246,10 @@ CODE_C4A0B1:
 	jsl.l CODE_C48589                    ;C4A0B7|228985C4|C48589;  
 	pla                                  ;C4A0BB|68      |      ;  
 	cmp.b #$1F                           ;C4A0BC|C91F    |      ;  
-	bne CODE_C4A0C6                      ;C4A0BE|D006    |C4A0C6;  
+	bne .lbl_C4A0C6                      ;C4A0BE|D006    |C4A0C6;  
 	lda.b #$00                           ;C4A0C0|A900    |      ;  
 	sta.l $7FAC19                        ;C4A0C2|8F19AC7F|7FAC19;  
-
-CODE_C4A0C6:
+.lbl_C4A0C6
 	lda.b #$00                           ;C4A0C6|A900    |      ;  
 	sta.l $7FABFA                        ;C4A0C8|8FFAAB7F|7FABFA;  
 	sep #$20                             ;C4A0CC|E220    |      ;  
@@ -16027,7 +15290,7 @@ CODE_C4A0C6:
 	sta.w $AC10                          ;C4A119|8D10AC  |7FAC10;  
 	lda.b $03                            ;C4A11C|A503    |000003;  
 	sta.w $AC11                          ;C4A11E|8D11AC  |7FAC11;  
-	bcc CODE_C4A139                      ;C4A121|9016    |C4A139;  
+	bcc .lbl_C4A139                      ;C4A121|9016    |C4A139;  
 	lda.w $AC0E                          ;C4A123|AD0EAC  |7FAC0E;  
 	sta.b $00                            ;C4A126|8500    |000000;  
 	jsl.l CODE_C5E52B                    ;C4A128|222BE5C5|C5E52B;  
@@ -16037,8 +15300,7 @@ CODE_C4A0C6:
 	plp                                  ;C4A136|28      |      ;  
 	sec                                  ;C4A137|38      |      ;  
 	rtl                                  ;C4A138|6B      |      ;  
-
-CODE_C4A139:
+.lbl_C4A139
 	lda.w $AC0E                          ;C4A139|AD0EAC  |7FAC0E;  
 	sta.b $00                            ;C4A13C|8500    |000000;  
 	phb                                  ;C4A13E|8B      |      ;  
@@ -16052,10 +15314,9 @@ CODE_C4A139:
 	sep #$30                             ;C4A14F|E230    |      ;  
 	tdc                                  ;C4A151|7B      |      ;  
 	ldx.w $AC10                          ;C4A152|AE10AC  |7FAC10;  
-	beq CODE_C4A15D                      ;C4A155|F006    |C4A15D;  
+	beq .lbl_C4A15D                      ;C4A155|F006    |C4A15D;  
 	.db $18,$69,$0A,$CA,$D0,$FA           ;C4A157
-
-CODE_C4A15D:
+.lbl_C4A15D
 	clc                                  ;C4A15D|18      |      ;  
 	adc.w $AC11                          ;C4A15E|6D11AC  |7FAC11;  
 	tax                                  ;C4A161|AA      |      ;  
@@ -16075,10 +15336,9 @@ CODE_C4A15D:
 	sta.b $00                            ;C4A17B|8500    |000000;  
 	lda.l $7FAC14                        ;C4A17D|AF14AC7F|7FAC14;  
 	cmp.l $7FAC16                        ;C4A181|CF16AC7F|7FAC16;  
-	bne CODE_C4A18B                      ;C4A185|D004    |C4A18B;  
+	bne .lbl_C4A18B                      ;C4A185|D004    |C4A18B;  
 	.db $A9,$1D,$85,$00                   ;C4A187
-
-CODE_C4A18B:
+.lbl_C4A18B
 	jsl.l CODE_C4A6E9                    ;C4A18B|22E9A6C4|C4A6E9;  
 	plp                                  ;C4A18F|28      |      ;  
 	rtl                                  ;C4A190|6B      |      ;  
@@ -16092,70 +15352,62 @@ CODE_C4A191:
 	ldx.w #$0000                         ;C4A19A|A20000  |      ;  
 	lda.b $00                            ;C4A19D|A500    |000000;  
 	bit.w #$0002                         ;C4A19F|890200  |      ;  
-	beq CODE_C4A1B8                      ;C4A1A2|F014    |C4A1B8;  
+	beq .lbl_C4A1B8                      ;C4A1A2|F014    |C4A1B8;  
 	lda.b $02                   ;C4A1A4|A502    |000002;  
-	bne CODE_C4A1B2                      ;C4A1A6|D00A    |C4A1B2;  
+	bne .lbl_C4A1B2                      ;C4A1A6|D00A    |C4A1B2;  
 	lda.b $06                            ;C4A1A8|A506    |000006;  
 	and.w #$00FF                         ;C4A1AA|29FF00  |      ;  
 	cmp.w #$0001                         ;C4A1AD|C90100  |      ;  
-	beq CODE_C4A1B8                      ;C4A1B0|F006    |C4A1B8;  
-
-CODE_C4A1B2:
+	beq .lbl_C4A1B8                      ;C4A1B0|F006    |C4A1B8;  
+.lbl_C4A1B2
 	dec a                                ;C4A1B2|3A      |      ;  
 	sta.b $02                   ;C4A1B3|8502    |000002;  
 	ldx.w #$0049                         ;C4A1B5|A24900  |      ;  
-
-CODE_C4A1B8:
+.lbl_C4A1B8
 	lda.b $00                            ;C4A1B8|A500    |000000;  
 	bit.w #$0001                         ;C4A1BA|890100  |      ;  
-	beq CODE_C4A1D4                      ;C4A1BD|F015    |C4A1D4;  
+	beq .lbl_C4A1D4                      ;C4A1BD|F015    |C4A1D4;  
 	inc.b $02                   ;C4A1BF|E602    |000002;  
 	lda.b $06                            ;C4A1C1|A506    |000006;  
 	and.w #$00FF                         ;C4A1C3|29FF00  |      ;  
 	cmp.w #$0001                         ;C4A1C6|C90100  |      ;  
-	beq CODE_C4A1D2                      ;C4A1C9|F007    |C4A1D2;  
+	beq .lbl_C4A1D2                      ;C4A1C9|F007    |C4A1D2;  
 	ldx.w #$0049                         ;C4A1CB|A24900  |      ;  
 	cmp.b $02                   ;C4A1CE|C502    |000002;  
-	bne CODE_C4A1D4                      ;C4A1D0|D002    |C4A1D4;  
-
-CODE_C4A1D2:
+	bne .lbl_C4A1D4                      ;C4A1D0|D002    |C4A1D4;  
+.lbl_C4A1D2
 	stz.b $02                   ;C4A1D2|6402    |000002;  
-
-CODE_C4A1D4:
+.lbl_C4A1D4
 	lda.b $00                            ;C4A1D4|A500    |000000;  
 	bit.w #$0008                         ;C4A1D6|890800  |      ;  
-	beq CODE_C4A1EF                      ;C4A1D9|F014    |C4A1EF;  
+	beq .lbl_C4A1EF                      ;C4A1D9|F014    |C4A1EF;  
 	lda.b $04                   ;C4A1DB|A504    |000004;  
-	bne CODE_C4A1E9                      ;C4A1DD|D00A    |C4A1E9;  
+	bne .lbl_C4A1E9                      ;C4A1DD|D00A    |C4A1E9;  
 	lda.b $07                            ;C4A1DF|A507    |000007;  
 	and.w #$00FF                         ;C4A1E1|29FF00  |      ;  
 	cmp.w #$0001                         ;C4A1E4|C90100  |      ;  
-	beq CODE_C4A1EF                      ;C4A1E7|F006    |C4A1EF;  
-
-CODE_C4A1E9:
+	beq .lbl_C4A1EF                      ;C4A1E7|F006    |C4A1EF;  
+.lbl_C4A1E9
 	dec a                                ;C4A1E9|3A      |      ;  
 	sta.b $04                   ;C4A1EA|8504    |000004;  
 	ldx.w #$0049                         ;C4A1EC|A24900  |      ;  
-
-CODE_C4A1EF:
+.lbl_C4A1EF
 	lda.b $00                            ;C4A1EF|A500    |000000;  
 	bit.w #$0004                         ;C4A1F1|890400  |      ;  
-	beq CODE_C4A20B                      ;C4A1F4|F015    |C4A20B;  
+	beq .lbl_C4A20B                      ;C4A1F4|F015    |C4A20B;  
 	inc.b $04                   ;C4A1F6|E604    |000004;  
 	lda.b $07                            ;C4A1F8|A507    |000007;  
 	and.w #$00FF                         ;C4A1FA|29FF00  |      ;  
 	cmp.w #$0001                         ;C4A1FD|C90100  |      ;  
-	beq CODE_C4A209                      ;C4A200|F007    |C4A209;  
+	beq .lbl_C4A209                      ;C4A200|F007    |C4A209;  
 	ldx.w #$0049                         ;C4A202|A24900  |      ;  
 	cmp.b $04                   ;C4A205|C504    |000004;  
-	bne CODE_C4A20B                      ;C4A207|D002    |C4A20B;  
-
-CODE_C4A209:
+	bne .lbl_C4A20B                      ;C4A207|D002    |C4A20B;  
+.lbl_C4A209
 	stz.b $04                   ;C4A209|6404    |000004;  
-
-CODE_C4A20B:
+.lbl_C4A20B
 	txa                                  ;C4A20B|8A      |      ;  
-	beq CODE_C4A22E                      ;C4A20C|F020    |C4A22E;  
+	beq .lbl_C4A22E                      ;C4A20C|F020    |C4A22E;  
 	ldx.b $00                            ;C4A20E|A600    |000000;  
 	sta.b $00                            ;C4A210|8500    |000000;  
 	lda.b $02                   ;C4A212|A502    |000002;  
@@ -16176,8 +15428,7 @@ CODE_C4A20B:
 	pla                                  ;C4A229|68      |      ;  
 	sta.b $02                   ;C4A22A|8502    |000002;  
 	stx.b $00                            ;C4A22C|8600    |000000;  
-
-CODE_C4A22E:
+.lbl_C4A22E
 	plp                                  ;C4A22E|28      |      ;  
 	rtl                                  ;C4A22F|6B      |      ;  
 
@@ -16189,60 +15440,54 @@ CODE_C4A230:
 	rep #$30                             ;C4A237|C230    |      ;  
 	lda.b $00                            ;C4A239|A500    |000000;  
 	bit.w #$0002                         ;C4A23B|890200  |      ;  
-	beq CODE_C4A251                      ;C4A23E|F011    |C4A251;  
+	beq .lbl_C4A251                      ;C4A23E|F011    |C4A251;  
 	lda.b $02                   ;C4A240|A502    |000002;  
-	bne CODE_C4A24E                      ;C4A242|D00A    |C4A24E;  
+	bne .lbl_C4A24E                      ;C4A242|D00A    |C4A24E;  
 	.db $A5,$06,$29,$FF,$00,$C9,$01,$00   ;C4A244|        |000006;  
 	.db $F0,$03                           ;C4A24C|        |C4A251;  
-
-CODE_C4A24E:
+.lbl_C4A24E
 	dec a                                ;C4A24E|3A      |      ;  
 	sta.b $02                   ;C4A24F|8502    |000002;  
-
-CODE_C4A251:
+.lbl_C4A251
 	lda.b $00                            ;C4A251|A500    |000000;  
 	bit.w #$0001                         ;C4A253|890100  |      ;  
-	beq CODE_C4A26A                      ;C4A256|F012    |C4A26A;  
+	beq .lbl_C4A26A                      ;C4A256|F012    |C4A26A;  
 	inc.b $02                   ;C4A258|E602    |000002;  
 	lda.b $06                            ;C4A25A|A506    |000006;  
 	and.w #$00FF                         ;C4A25C|29FF00  |      ;  
 	cmp.w #$0001                         ;C4A25F|C90100  |      ;  
 	beq UNREACH_C4A268                   ;C4A262|F004    |C4A268;  
 	cmp.b $02                   ;C4A264|C502    |000002;  
-	bne CODE_C4A26A                      ;C4A266|D002    |C4A26A;  
+	bne .lbl_C4A26A                      ;C4A266|D002    |C4A26A;  
 
 UNREACH_C4A268:
 	.db $64,$02                           ;C4A268|        |000002;  
-
-CODE_C4A26A:
+.lbl_C4A26A
 	lda.b $00                            ;C4A26A|A500    |000000;  
 	bit.w #$0008                         ;C4A26C|890800  |      ;  
-	beq CODE_C4A282                      ;C4A26F|F011    |C4A282;  
+	beq .lbl_C4A282                      ;C4A26F|F011    |C4A282;  
 	lda.b $04                   ;C4A271|A504    |000004;  
-	bne CODE_C4A27F                      ;C4A273|D00A    |C4A27F;  
+	bne .lbl_C4A27F                      ;C4A273|D00A    |C4A27F;  
 	.db $A5,$07,$29,$FF,$00,$C9,$01,$00   ;C4A275|        |000007;  
 	.db $F0,$03                           ;C4A27D|        |C4A282;  
-
-CODE_C4A27F:
+.lbl_C4A27F
 	dec a                                ;C4A27F|3A      |      ;  
 	sta.b $04                   ;C4A280|8504    |000004;  
-
-CODE_C4A282:
+.lbl_C4A282
 	lda.b $00                            ;C4A282|A500    |000000;  
 	bit.w #$0004                         ;C4A284|890400  |      ;  
-	beq CODE_C4A29B                      ;C4A287|F012    |C4A29B;  
+	beq .lbl_C4A29B                      ;C4A287|F012    |C4A29B;  
 	inc.b $04                   ;C4A289|E604    |000004;  
 	lda.b $07                            ;C4A28B|A507    |000007;  
 	and.w #$00FF                         ;C4A28D|29FF00  |      ;  
 	cmp.w #$0001                         ;C4A290|C90100  |      ;  
 	beq UNREACH_C4A299                   ;C4A293|F004    |C4A299;  
 	cmp.b $04                   ;C4A295|C504    |000004;  
-	bne CODE_C4A29B                      ;C4A297|D002    |C4A29B;  
+	bne .lbl_C4A29B                      ;C4A297|D002    |C4A29B;  
 
 UNREACH_C4A299:
 	.db $64,$04                           ;C4A299|        |000004;  
-
-CODE_C4A29B:
+.lbl_C4A29B
 	plp                                  ;C4A29B|28      |      ;  
 	rtl                                  ;C4A29C|6B      |      ;  
 
@@ -16255,13 +15500,12 @@ CODE_C4A29D:
 	sta.b $02                   ;C4A2A8|8502    |000002;  
 	ldx.w #$A2C2                         ;C4A2AA|A2C2A2  |      ;  
 	lda.b $00                            ;C4A2AD|A500    |000000;  
-	beq CODE_C4A2BA                      ;C4A2AF|F009    |C4A2BA;  
+	beq .lbl_C4A2BA                      ;C4A2AF|F009    |C4A2BA;  
 	ldx.w #$A2CD                         ;C4A2B1|A2CDA2  |      ;  
 	dec a                                ;C4A2B4|3A      |      ;  
-	beq CODE_C4A2BA                      ;C4A2B5|F003    |C4A2BA;  
+	beq .lbl_C4A2BA                      ;C4A2B5|F003    |C4A2BA;  
 	ldx.w #$A2D8                         ;C4A2B7|A2D8A2  |      ;  
-
-CODE_C4A2BA:
+.lbl_C4A2BA
 	stx.b $00                            ;C4A2BA|8600    |000000;  
 	jsl.l CODE_C48E3D                    ;C4A2BC|223D8EC4|C48E3D;  
 	plp                                  ;C4A2C0|28      |      ;  
@@ -16286,21 +15530,19 @@ CODE_C4A2E3:
 	sta.w $AC15                          ;C4A2F6|8D15AC  |7FAC15;  
 	lda.w $AC3A                          ;C4A2F9|AD3AAC  |7FAC3A;  
 	ora.w $AC19                          ;C4A2FC|0D19AC  |7FAC19;  
-	bne CODE_C4A306                      ;C4A2FF|D005    |C4A306;  
+	bne .lbl_C4A306                      ;C4A2FF|D005    |C4A306;  
 	lda.b #$01                           ;C4A301|A901    |      ;  
 	sta.w $AC18                          ;C4A303|8D18AC  |7FAC18;  
-
-CODE_C4A306:
+.lbl_C4A306
 	lda.w $AC3A                          ;C4A306|AD3AAC  |7FAC3A;  
 	clc                                  ;C4A309|18      |      ;  
 	adc.b #$09                           ;C4A30A|6909    |      ;  
 	ldx.b #$FF                           ;C4A30C|A2FF    |      ;  
-
-CODE_C4A30E:
+.lbl_C4A30E
 	inx                                  ;C4A30E|E8      |      ;  
 	sec                                  ;C4A30F|38      |      ;  
 	sbc.b #$0A                           ;C4A310|E90A    |      ;  
-	bpl CODE_C4A30E                      ;C4A312|10FA    |C4A30E;  
+	bpl .lbl_C4A30E                      ;C4A312|10FA    |C4A30E;  
 	stx.w $AC16                          ;C4A314|8E16AC  |7FAC16;  
 	clc                                  ;C4A317|18      |      ;  
 	adc.b #$0B                           ;C4A318|690B    |      ;  
@@ -16309,14 +15551,13 @@ CODE_C4A30E:
 
 CODE_C4A320:
 	lda.w $AC19                          ;C4A320|AD19AC  |7FAC19;  
-	beq CODE_C4A34D                      ;C4A323|F028    |C4A34D;  
+	beq .lbl_C4A34D                      ;C4A323|F028    |C4A34D;  
 	.db $A9,$14,$85,$03,$AD,$14,$AC,$CD   ;C4A325
 	.db $16,$AC,$D0,$04,$A9,$02,$85,$03   ;C4A32D|        |0000AC;  
 	.db $A9,$14,$85,$02,$AD,$0F,$AC,$85   ;C4A335
 	.db $00,$8B,$22,$F3,$E5,$C5,$AB,$AD   ;C4A33D
 	.db $0E,$AC,$85,$00,$22,$C8,$ED,$C5   ;C4A345|        |0085AC;  
-
-CODE_C4A34D:
+.lbl_C4A34D
 	phb                                  ;C4A34D|8B      |      ;  
 	jsl.l CODE_C5EDDC                    ;C4A34E|22DCEDC5|C5EDDC;  
 	plb                                  ;C4A352|AB      |      ;  
@@ -16324,10 +15565,9 @@ CODE_C4A34D:
 	jsl.l CODE_C5EF0E                    ;C4A354|220EEFC5|C5EF0E;  
 	plb                                  ;C4A358|AB      |      ;  
 	lda.w $ABFB                          ;C4A359|ADFBAB  |7FABFB;  
-	beq CODE_C4A361                      ;C4A35C|F003    |C4A361;  
+	beq .lbl_C4A361                      ;C4A35C|F003    |C4A361;  
 	.db $4C,$F7,$A3                       ;C4A35E|        |C4A3F7;  
-
-CODE_C4A361:
+.lbl_C4A361
 	jsl.l CODE_C4A923                    ;C4A361|2223A9C4|C4A923;  
 
 CODE_C4A365:
@@ -16336,34 +15576,31 @@ CODE_C4A365:
 	jsl.l func_80854A                    ;C4A36A|224A8580|80854A;  
 	jsl.l CODE_C4A93A                    ;C4A36E|223AA9C4|C4A93A;  
 	lda.w $AC13                          ;C4A372|AD13AC  |7FAC13;  
-	beq CODE_C4A380                      ;C4A375|F009    |C4A380;  
+	beq .lbl_C4A380                      ;C4A375|F009    |C4A380;  
 	lda.b w0001                            ;C4A377|A501    |000001;  
 	bit.b #$40                           ;C4A379|8940    |      ;  
-	beq CODE_C4A380                      ;C4A37B|F003    |C4A380;  
+	beq .lbl_C4A380                      ;C4A37B|F003    |C4A380;  
 	brl CODE_C4A410                      ;C4A37D|829000  |C4A410;  
-
-CODE_C4A380:
+.lbl_C4A380
 	lda.b $02                   ;C4A380|A502    |000002;  
 	dec a                                ;C4A382|3A      |      ;  
-	beq CODE_C4A3EF                      ;C4A383|F06A    |C4A3EF;  
+	beq .lbl_C4A3EF                      ;C4A383|F06A    |C4A3EF;  
 	dec a                                ;C4A385|3A      |      ;  
-	beq CODE_C4A3DD                      ;C4A386|F055    |C4A3DD;  
+	beq .lbl_C4A3DD                      ;C4A386|F055    |C4A3DD;  
 	lda.w $AC15                          ;C4A388|AD15AC  |7FAC15;  
 	sta.b $04                   ;C4A38B|8504    |000004;  
 	lda.w $AC14                          ;C4A38D|AD14AC  |7FAC14;  
 	sta.b $02                   ;C4A390|8502    |000002;  
 	cmp.w $AC16                          ;C4A392|CD16AC  |7FAC16;  
-	bne CODE_C4A39B                      ;C4A395|D004    |C4A39B;  
+	bne .lbl_C4A39B                      ;C4A395|D004    |C4A39B;  
 	.db $A9,$01,$80,$0D                   ;C4A397
-
-CODE_C4A39B:
+.lbl_C4A39B
 	inc a                                ;C4A39B|1A      |      ;  
 	cmp.w $AC16                          ;C4A39C|CD16AC  |7FAC16;  
-	bne CODE_C4A3A6                      ;C4A39F|D005    |C4A3A6;  
+	bne .lbl_C4A3A6                      ;C4A39F|D005    |C4A3A6;  
 	lda.w $AC17                          ;C4A3A1|AD17AC  |7FAC17;  
 	bra CODE_C4A3A8                      ;C4A3A4|8002    |C4A3A8;  
-
-CODE_C4A3A6:
+.lbl_C4A3A6
 	lda.b #$0A                           ;C4A3A6|A90A    |      ;  
 
 CODE_C4A3A8:
@@ -16373,11 +15610,10 @@ CODE_C4A3A8:
 	adc.w $AC19                          ;C4A3AE|6D19AC  |7FAC19;  
 	sta.b $06                            ;C4A3B1|8506    |000006;  
 	lda.w $AC18                          ;C4A3B3|AD18AC  |7FAC18;  
-	beq CODE_C4A3BC                      ;C4A3B6|F004    |C4A3BC;  
+	beq .lbl_C4A3BC                      ;C4A3B6|F004    |C4A3BC;  
 	lda.b #$01                           ;C4A3B8|A901    |      ;  
 	sta.b $07                            ;C4A3BA|8507    |000007;  
-
-CODE_C4A3BC:
+.lbl_C4A3BC
 	jsl.l CODE_C4A191                    ;C4A3BC|2291A1C4|C4A191;  
 	lda.w $AC14                          ;C4A3C0|AD14AC  |7FAC14;  
 	pha                                  ;C4A3C3|48      |      ;  
@@ -16387,14 +15623,12 @@ CODE_C4A3BC:
 	sta.w $AC15                          ;C4A3CB|8D15AC  |7FAC15;  
 	pla                                  ;C4A3CE|68      |      ;  
 	cmp.w $AC14                          ;C4A3CF|CD14AC  |7FAC14;  
-	bne CODE_C4A3D7                      ;C4A3D2|D003    |C4A3D7;  
+	bne .lbl_C4A3D7                      ;C4A3D2|D003    |C4A3D7;  
 	jmp.w CODE_C4A365                    ;C4A3D4|4C65A3  |C4A365;  
-
-CODE_C4A3D7:
+.lbl_C4A3D7
 	jsr.w CODE_C4A440                    ;C4A3D7|2040A4  |C4A440;  
 	jmp.w CODE_C4A320                    ;C4A3DA|4C20A3  |C4A320;  
-
-CODE_C4A3DD:
+.lbl_C4A3DD
 	lda.b #$04                           ;C4A3DD|A904    |      ;  
 	jsr.w CODE_C4A426                    ;C4A3DF|2026A4  |C4A426;  
 	lda.w $AC14                          ;C4A3E2|AD14AC  |7FAC14;  
@@ -16404,14 +15638,12 @@ CODE_C4A3DD:
 	plp                                  ;C4A3EC|28      |      ;  
 	sec                                  ;C4A3ED|38      |      ;  
 	rtl                                  ;C4A3EE|6B      |      ;  
-
-CODE_C4A3EF:
+.lbl_C4A3EF
 	lda.w $AC18                          ;C4A3EF|AD18AC  |7FAC18;  
-	beq CODE_C4A3FC                      ;C4A3F2|F008    |C4A3FC;  
+	beq .lbl_C4A3FC                      ;C4A3F2|F008    |C4A3FC;  
 	brl CODE_C4A365                      ;C4A3F4|826EFF  |C4A365;  
 	.db $A9,$00,$8D,$FB,$AB               ;C4A3F7
-
-CODE_C4A3FC:
+.lbl_C4A3FC
 	lda.b #$04                           ;C4A3FC|A904    |      ;  
 	jsr.w CODE_C4A426                    ;C4A3FE|2026A4  |C4A426;  
 	lda.w $AC14                          ;C4A401|AD14AC  |7FAC14;  
@@ -16446,45 +15678,41 @@ CODE_C4A426:
 	pla                                  ;C4A433|68      |      ;  
 	sta.b $04                   ;C4A434|8504    |000004;  
 	lda.w $AC18                          ;C4A436|AD18AC  |7FAC18;  
-	bne CODE_C4A43F                      ;C4A439|D004    |C4A43F;  
+	bne .lbl_C4A43F                      ;C4A439|D004    |C4A43F;  
 	jsl.l CODE_C4A634                    ;C4A43B|2234A6C4|C4A634;  
-
-CODE_C4A43F:
+.lbl_C4A43F
 	rts                                  ;C4A43F|60      |      ;  
 
 CODE_C4A440:
 	lda.w $AC19                          ;C4A440|AD19AC  |7FAC19;  
-	beq CODE_C4A457                      ;C4A443|F012    |C4A457;  
+	beq .lbl_C4A457                      ;C4A443|F012    |C4A457;  
 	.db $AD,$14,$AC,$CD,$16,$AC,$90,$0A   ;C4A445|        |00AC14;  
 	.db $AD,$16,$AC,$8D,$14,$AC,$9C,$15   ;C4A44D|        |00AC16;  
 	.db $AC,$60                           ;C4A455|        |00AD60;  
-
-CODE_C4A457:
+.lbl_C4A457
 	lda.w $AC14                          ;C4A457|AD14AC  |7FAC14;  
 	inc a                                ;C4A45A|1A      |      ;  
 	cmp.w $AC16                          ;C4A45B|CD16AC  |7FAC16;  
-	bcc CODE_C4A479                      ;C4A45E|9019    |C4A479;  
-	bne CODE_C4A46B                      ;C4A460|D009    |C4A46B;  
+	bcc .lbl_C4A479                      ;C4A45E|9019    |C4A479;  
+	bne .lbl_C4A46B                      ;C4A460|D009    |C4A46B;  
 	lda.w $AC15                          ;C4A462|AD15AC  |7FAC15;  
 	inc a                                ;C4A465|1A      |      ;  
 	cmp.w $AC17                          ;C4A466|CD17AC  |7FAC17;  
-	bcc CODE_C4A479                      ;C4A469|900E    |C4A479;  
-
-CODE_C4A46B:
+	bcc .lbl_C4A479                      ;C4A469|900E    |C4A479;  
+.lbl_C4A46B
 	lda.w $AC17                          ;C4A46B|AD17AC  |7FAC17;  
 	dec a                                ;C4A46E|3A      |      ;  
 	sta.w $AC15                          ;C4A46F|8D15AC  |7FAC15;  
 	lda.w $AC16                          ;C4A472|AD16AC  |7FAC16;  
 	dec a                                ;C4A475|3A      |      ;  
 	sta.w $AC14                          ;C4A476|8D14AC  |7FAC14;  
-
-CODE_C4A479:
+.lbl_C4A479
 	rts                                  ;C4A479|60      |      ;  
 	php                                  ;C4A47A|08      |      ;  
 	sep #$30                             ;C4A47B|E230    |      ;  
 	lda.l $7FAC3A                        ;C4A47D|AF3AAC7F|7FAC3A;  
 	ora.l $7FAC19                        ;C4A481|0F19AC7F|7FAC19;  
-	bne CODE_C4A4D9                      ;C4A485|D052    |C4A4D9;  
+	bne .lbl_C4A4D9                      ;C4A485|D052    |C4A4D9;  
 	lda.l $7FABF4                        ;C4A487|AFF4AB7F|7FABF4;  
 	bne UNREACH_C4A4AF                   ;C4A48B|D022    |C4A4AF;  
 	lda.l $7FABFA                        ;C4A48D|AFFAAB7F|7FABFA;  
@@ -16508,8 +15736,7 @@ UNREACH_C4A4AF:
 	.db $01,$85,$01,$22,$E3,$E8,$C5,$68   ;C4A4C7|        |000085;  
 	.db $18,$69,$10,$A8,$68,$3A,$D0,$DF   ;C4A4CF
 	.db $28,$6B                           ;C4A4D7
-
-CODE_C4A4D9:
+.lbl_C4A4D9
 	lda.l $7FAC14                        ;C4A4D9|AF14AC7F|7FAC14;  
 	sta.b $00                            ;C4A4DD|8500    |000000;  
 	asl a                                ;C4A4DF|0A      |      ;  
@@ -16519,20 +15746,18 @@ CODE_C4A4D9:
 	tax                                  ;C4A4E4|AA      |      ;  
 	ldy.b #$0D                           ;C4A4E5|A00D    |      ;  
 	lda.b #$0A                           ;C4A4E7|A90A    |      ;  
-
-CODE_C4A4E9:
+.lbl_C4A4E9
 	pha                                  ;C4A4E9|48      |      ;  
 	lda.l $7FAC3B,x                      ;C4A4EA|BF3BAC7F|7FAC3B;  
-	bpl CODE_C4A51E                      ;C4A4EE|102E    |C4A51E;  
+	bpl .lbl_C4A51E                      ;C4A4EE|102E    |C4A51E;  
 	lda.l $7FABF4                        ;C4A4F0|AFF4AB7F|7FABF4;  
-	beq CODE_C4A53D                      ;C4A4F4|F047    |C4A53D;  
+	beq .lbl_C4A53D                      ;C4A4F4|F047    |C4A53D;  
 	.db $A9,$03,$85,$00,$DA,$22,$2E,$E6   ;C4A4F6
 	.db $C5,$FA,$84,$03,$A9,$02,$85,$02   ;C4A4FE|        |0000FA;  
 	.db $22,$27,$A6,$C4,$A9,$8C,$85,$00   ;C4A506|        |C4A627;  
 	.db $A9,$01,$85,$01,$DA,$5A,$8B,$22   ;C4A50E
 	.db $E3,$E8,$C5,$AB,$7A,$FA,$80,$15   ;C4A516|        |0000E8;  
-
-CODE_C4A51E:
+.lbl_C4A51E
 	pha                                  ;C4A51E|48      |      ;  
 	lda.b #$02                           ;C4A51F|A902    |      ;  
 	sta.b $02                   ;C4A521|8502    |000002;  
@@ -16553,10 +15778,9 @@ CODE_C4A51E:
 	tay                                  ;C4A537|A8      |      ;  
 	pla                                  ;C4A538|68      |      ;  
 	dec a                                ;C4A539|3A      |      ;  
-	bne CODE_C4A4E9                      ;C4A53A|D0AD    |C4A4E9;  
+	bne .lbl_C4A4E9                      ;C4A53A|D0AD    |C4A4E9;  
 	pha                                  ;C4A53C|48      |      ;  
-
-CODE_C4A53D:
+.lbl_C4A53D
 	pla                                  ;C4A53D|68      |      ;  
 	ldx.b #$00                           ;C4A53E|A200    |      ;  
 	lda.w $AC16                          ;C4A540|AD16AC  |7FAC16;  
@@ -16564,17 +15788,16 @@ CODE_C4A53D:
 	adc.w $AC19                          ;C4A544|6D19AC  |7FAC19;  
 	sta.b $00                            ;C4A547|8500    |000000;  
 	dec a                                ;C4A549|3A      |      ;  
-	beq CODE_C4A55D                      ;C4A54A|F011    |C4A55D;  
+	beq .lbl_C4A55D                      ;C4A54A|F011    |C4A55D;  
 	ldx.b #$02                           ;C4A54C|A202    |      ;  
 	lda.l $7FAC14                        ;C4A54E|AF14AC7F|7FAC14;  
-	beq CODE_C4A55D                      ;C4A552|F009    |C4A55D;  
+	beq .lbl_C4A55D                      ;C4A552|F009    |C4A55D;  
 	ldx.b #$04                           ;C4A554|A204    |      ;  
 	inc a                                ;C4A556|1A      |      ;  
 	cmp.b $00                            ;C4A557|C500    |000000;  
-	beq CODE_C4A55D                      ;C4A559|F002    |C4A55D;  
+	beq .lbl_C4A55D                      ;C4A559|F002    |C4A55D;  
 	.db $A2,$06                           ;C4A55B
-
-CODE_C4A55D:
+.lbl_C4A55D
 	stx.b $02                   ;C4A55D|8602    |000002;  
 	jsl.l CODE_C5ED0A                    ;C4A55F|220AEDC5|C5ED0A;  
 	plp                                  ;C4A563|28      |      ;  
@@ -16725,8 +15948,7 @@ CODE_C4A65A:
 	lda.b $04                   ;C4A67D|A504    |000004;  
 	and.w #$00FF                         ;C4A67F|29FF00  |      ;  
 	sta.w $AA5C                          ;C4A682|8D5CAA  |7FAA5C;  
-
-CODE_C4A685:
+.lbl_C4A685
 	lda.w $AA5A                          ;C4A685|AD5AAA  |7FAA5A;  
 	sta.w $AA5E                          ;C4A688|8D5EAA  |7FAA5E;  
 
@@ -16735,7 +15957,7 @@ CODE_C4A68B:
 	lda.l DATA8_C4B813,x                 ;C4A68D|BF13B8C4|C4B813;  
 	inx                                  ;C4A691|E8      |      ;  
 	and.w #$00FF                         ;C4A692|29FF00  |      ;  
-	beq CODE_C4A6D8                      ;C4A695|F041    |C4A6D8;  
+	beq .lbl_C4A6D8                      ;C4A695|F041    |C4A6D8;  
 	pha                                  ;C4A697|48      |      ;  
 	lda.w $AA5C                          ;C4A698|AD5CAA  |7FAA5C;  
 	sta.b $02                   ;C4A69B|8502    |000002;  
@@ -16746,7 +15968,7 @@ CODE_C4A68B:
 	plx                                  ;C4A6A7|FA      |      ;  
 	pla                                  ;C4A6A8|68      |      ;  
 	cmp.w #$0080                         ;C4A6A9|C98000  |      ;  
-	bcc CODE_C4A6C1                      ;C4A6AC|9013    |C4A6C1;  
+	bcc .lbl_C4A6C1                      ;C4A6AC|9013    |C4A6C1;  
 	and.w #$007F                         ;C4A6AE|297F00  |      ;  
 	clc                                  ;C4A6B1|18      |      ;  
 	adc.w #$0171                         ;C4A6B2|697101  |      ;  
@@ -16757,8 +15979,7 @@ CODE_C4A68B:
 	plb                                  ;C4A6BD|AB      |      ;  
 	plx                                  ;C4A6BE|FA      |      ;  
 	bra CODE_C4A6CC                      ;C4A6BF|800B    |C4A6CC;  
-
-CODE_C4A6C1:
+.lbl_C4A6C1
 	dec a                                ;C4A6C1|3A      |      ;  
 	sta.b $00                            ;C4A6C2|8500    |000000;  
 	phx                                  ;C4A6C4|DA      |      ;  
@@ -16773,14 +15994,13 @@ CODE_C4A6CC:
 	adc.w #$0010                         ;C4A6D0|691000  |      ;  
 	sta.w $AA5E                          ;C4A6D3|8D5EAA  |7FAA5E;  
 	bra CODE_C4A68B                      ;C4A6D6|80B3    |C4A68B;  
-
-CODE_C4A6D8:
+.lbl_C4A6D8
 	lda.w $AA5C                          ;C4A6D8|AD5CAA  |7FAA5C;  
 	clc                                  ;C4A6DB|18      |      ;  
 	adc.w $AA58                          ;C4A6DC|6D58AA  |7FAA58;  
 	sta.w $AA5C                          ;C4A6DF|8D5CAA  |7FAA5C;  
 	dec.w $AA56                          ;C4A6E2|CE56AA  |7FAA56;  
-	bne CODE_C4A685                      ;C4A6E5|D09E    |C4A685;  
+	bne .lbl_C4A685                      ;C4A6E5|D09E    |C4A685;  
 	plp                                  ;C4A6E7|28      |      ;  
 	rtl                                  ;C4A6E8|6B      |      ;  
 
@@ -16799,15 +16019,13 @@ CODE_C4A6E9:
 	tax                                  ;C4A6FB|AA      |      ;  
 	lda.l DATA8_FA8000,x                 ;C4A6FC|BF0080FA|FA8000;  
 	and.w #$00FF                         ;C4A700|29FF00  |      ;  
-
-CODE_C4A703:
+.lbl_C4A703
 	dec a                                ;C4A703|3A      |      ;  
-	beq CODE_C4A741                      ;C4A704|F03B    |C4A741;  
+	beq .lbl_C4A741                      ;C4A704|F03B    |C4A741;  
 	pha                                  ;C4A706|48      |      ;  
 	sep #$20                             ;C4A707|E220    |      ;  
 	ldy.w #$0000                         ;C4A709|A00000  |      ;  
-
-CODE_C4A70C:
+.lbl_C4A70C
 	lda.l DATA8_FA8001,x                 ;C4A70C|BF0180FA|FA8001;  
 	sta.w $AA61,y                        ;C4A710|9961AA  |7FAA61;  
 	lda.l DATA8_FA800E,x                 ;C4A713|BF0E80FA|FA800E;  
@@ -16816,7 +16034,7 @@ CODE_C4A70C:
 	iny                                  ;C4A71B|C8      |      ;  
 	iny                                  ;C4A71C|C8      |      ;  
 	cpy.w #$001A                         ;C4A71D|C01A00  |      ;  
-	bne CODE_C4A70C                      ;C4A720|D0EA    |C4A70C;  
+	bne .lbl_C4A70C                      ;C4A720|D0EA    |C4A70C;  
 	rep #$20                             ;C4A722|C220    |      ;  
 	txa                                  ;C4A724|8A      |      ;  
 	clc                                  ;C4A725|18      |      ;  
@@ -16832,14 +16050,12 @@ CODE_C4A70C:
 	plx                                  ;C4A73A|FA      |      ;  
 	pla                                  ;C4A73B|68      |      ;  
 	dec a                                ;C4A73C|3A      |      ;  
-	bne CODE_C4A703                      ;C4A73D|D0C4    |C4A703;  
+	bne .lbl_C4A703                      ;C4A73D|D0C4    |C4A703;  
 	plp                                  ;C4A73F|28      |      ;  
 	rtl                                  ;C4A740|6B      |      ;  
-
-CODE_C4A741:
+.lbl_C4A741
 	ldy.w #$0000                         ;C4A741|A00000  |      ;  
-
-CODE_C4A744:
+.lbl_C4A744
 	lda.l DATA8_FA8000,x                 ;C4A744|BF0080FA|FA8000;  
 	and.w #$FF00                         ;C4A748|2900FF  |      ;  
 	sta.w $AA60,y                        ;C4A74B|9960AA  |7FAA60;  
@@ -16847,7 +16063,7 @@ CODE_C4A744:
 	iny                                  ;C4A74F|C8      |      ;  
 	iny                                  ;C4A750|C8      |      ;  
 	cpy.w #$001A                         ;C4A751|C01A00  |      ;  
-	bne CODE_C4A744                      ;C4A754|D0EE    |C4A744;  
+	bne .lbl_C4A744                      ;C4A754|D0EE    |C4A744;  
 	lda.w #$AA60                         ;C4A756|A960AA  |      ;  
 	sta.b $02                   ;C4A759|8502    |000002;  
 	lda.w #$0D08                         ;C4A75B|A9080D  |      ;  
@@ -16894,54 +16110,48 @@ CODE_C4A7C2:
 	ldx.b #$01                           ;C4A7EF|A201    |      ;  
 	lda.b $06                            ;C4A7F1|A506    |000006;  
 	bit.w #$0004                         ;C4A7F3|890400  |      ;  
-	bne CODE_C4A7FE                      ;C4A7F6|D006    |C4A7FE;  
+	bne .lbl_C4A7FE                      ;C4A7F6|D006    |C4A7FE;  
 	bit.w #$0002                         ;C4A7F8|890200  |      ;  
-	beq CODE_C4A7FF                      ;C4A7FB|F002    |C4A7FF;  
+	beq .lbl_C4A7FF                      ;C4A7FB|F002    |C4A7FF;  
 	inx                                  ;C4A7FD|E8      |      ;  
-
-CODE_C4A7FE:
+.lbl_C4A7FE
 	inx                                  ;C4A7FE|E8      |      ;  
-
-CODE_C4A7FF:
+.lbl_C4A7FF
 	ldy.b $00                            ;C4A7FF|A400    |000000;  
 	cpy.b #$06                           ;C4A801|C006    |      ;  
-	bne CODE_C4A80E                      ;C4A803|D009    |C4A80E;  
+	bne .lbl_C4A80E                      ;C4A803|D009    |C4A80E;  
 	bit.w #$0005                         ;C4A805|890500  |      ;  
-	bne CODE_C4A827                      ;C4A808|D01D    |C4A827;  
+	bne .lbl_C4A827                      ;C4A808|D01D    |C4A827;  
 	ldx.b #$01                           ;C4A80A|A201    |      ;  
-	bra CODE_C4A827                      ;C4A80C|8019    |C4A827;  
-
-CODE_C4A80E:
+	bra .lbl_C4A827                      ;C4A80C|8019    |C4A827;  
+.lbl_C4A80E
 	cpy.b #$03                           ;C4A80E|C003    |      ;  
-	beq CODE_C4A816                      ;C4A810|F004    |C4A816;  
+	beq .lbl_C4A816                      ;C4A810|F004    |C4A816;  
 	cpy.b #$05                           ;C4A812|C005    |      ;  
-	bne CODE_C4A827                      ;C4A814|D011    |C4A827;  
-
-CODE_C4A816:
+	bne .lbl_C4A827                      ;C4A814|D011    |C4A827;  
+.lbl_C4A816
 	ldx.b #$01                           ;C4A816|A201    |      ;  
 	bit.w #$0001                         ;C4A818|890100  |      ;  
-	beq CODE_C4A827                      ;C4A81B|F00A    |C4A827;  
+	beq .lbl_C4A827                      ;C4A81B|F00A    |C4A827;  
 	ldx.b #$03                           ;C4A81D|A203    |      ;  
 	lda.b $D2                            ;C4A81F|A5D2    |0000D2;  
 	bit.w #$8000                         ;C4A821|890080  |      ;  
-	beq CODE_C4A827                      ;C4A824|F001    |C4A827;  
+	beq .lbl_C4A827                      ;C4A824|F001    |C4A827;  
 	.db $CA                               ;C4A826
-
-CODE_C4A827:
+.lbl_C4A827
 	phx                                  ;C4A827|DA      |      ;  
 	sep #$20                             ;C4A828|E220    |      ;  
 	rep #$10                             ;C4A82A|C210    |      ;  
 	lda.b $D0                            ;C4A82C|A5D0    |0000D0;  
 	cmp.l $7FAC79                        ;C4A82E|CF79AC7F|7FAC79;  
-	beq CODE_C4A846                      ;C4A832|F012    |C4A846;  
+	beq .lbl_C4A846                      ;C4A832|F012    |C4A846;  
 	cmp.l $7FAC7A                        ;C4A834|CF7AAC7F|7FAC7A;  
-	beq CODE_C4A846                      ;C4A838|F00C    |C4A846;  
+	beq .lbl_C4A846                      ;C4A838|F00C    |C4A846;  
 	cmp.l $7FAC7B                        ;C4A83A|CF7BAC7F|7FAC7B;  
-	beq CODE_C4A846                      ;C4A83E|F006    |C4A846;  
+	beq .lbl_C4A846                      ;C4A83E|F006    |C4A846;  
 	cmp.l $7FAC7C                        ;C4A840|CF7CAC7F|7FAC7C;  
-	bne CODE_C4A880                      ;C4A844|D03A    |C4A880;  
-
-CODE_C4A846:
+	bne .lbl_C4A880                      ;C4A844|D03A    |C4A880;  
+.lbl_C4A846
 	lda.b $07                            ;C4A846|A507    |000007;  
 	bne UNREACH_C4A85C                   ;C4A848|D012    |C4A85C;  
 	lda.b #$03                           ;C4A84A|A903    |      ;  
@@ -16958,13 +16168,11 @@ UNREACH_C4A85C:
 	.db $A7,$C4,$A9,$01,$85,$00,$22,$2E   ;C4A86C|        |0000C4;  
 	.db $E6,$C5,$A9,$28,$85,$00,$22,$E9   ;C4A874|        |0000C5;  
 	.db $A6,$C4,$80,$10                   ;C4A87C|        |0000C4;  
-
-CODE_C4A880:
+.lbl_C4A880
 	lda.b $07                            ;C4A880|A507    |000007;  
-	beq CODE_C4A888                      ;C4A882|F004    |C4A888;  
+	beq .lbl_C4A888                      ;C4A882|F004    |C4A888;  
 	.db $46,$06,$B0,$E6                   ;C4A884|        |000006;  
-
-CODE_C4A888:
+.lbl_C4A888
 	lda.b #$08                           ;C4A888|A908    |      ;  
 	sta.b $00                            ;C4A88A|8500    |000000;  
 	jsl.l CODE_C5EBFD                    ;C4A88C|22FDEBC5|C5EBFD;  
@@ -16981,42 +16189,38 @@ CODE_C4A890:
 	ldx.w #$75FF                         ;C4A8A4|A2FF75  |      ;  
 	lda.b $D1                            ;C4A8A7|A5D1    |0000D1;  
 	cmp.b #$03                           ;C4A8A9|C903    |      ;  
-	beq CODE_C4A8B4                      ;C4A8AB|F007    |C4A8B4;  
+	beq .lbl_C4A8B4                      ;C4A8AB|F007    |C4A8B4;  
 	cmp.b #$05                           ;C4A8AD|C905    |      ;  
-	bne CODE_C4A8E7                      ;C4A8AF|D036    |C4A8E7;  
+	bne .lbl_C4A8E7                      ;C4A8AF|D036    |C4A8E7;  
 	ldx.w #$76FD                         ;C4A8B1|A2FD76  |      ;  
-
-CODE_C4A8B4:
+.lbl_C4A8B4
 	phx                                  ;C4A8B4|DA      |      ;  
 	lda.b #$03                           ;C4A8B5|A903    |      ;  
 	sta.b $00                            ;C4A8B7|8500    |000000;  
 	jsl.l CODE_C5E62E                    ;C4A8B9|222EE6C5|C5E62E;  
 	lda.b $D3                            ;C4A8BD|A5D3    |0000D3;  
 	bit.b #$08                           ;C4A8BF|8908    |      ;  
-	beq CODE_C4A8CD                      ;C4A8C1|F00A    |C4A8CD;  
+	beq .lbl_C4A8CD                      ;C4A8C1|F00A    |C4A8CD;  
 	.db $A9,$2A,$85,$00,$64,$04,$22,$68   ;C4A8C3
 	.db $A7,$C4                           ;C4A8CB|        |0000C4;  
-
-CODE_C4A8CD:
+.lbl_C4A8CD
 	rep #$20                             ;C4A8CD|C220    |      ;  
 	pla                                  ;C4A8CF|68      |      ;  
 	and.b $D2                            ;C4A8D0|25D2    |0000D2;  
-	beq CODE_C4A8E5                      ;C4A8D2|F011    |C4A8E5;  
+	beq .lbl_C4A8E5                      ;C4A8D2|F011    |C4A8E5;  
 	.db $A2,$2A,$00,$4A,$90,$03,$E8,$80   ;C4A8D4
 	.db $FA,$D0,$F8,$86,$00,$22,$E9,$A6   ;C4A8DC
 	.db $C4                               ;C4A8E4|        |0000E2;  
-
-CODE_C4A8E5:
+.lbl_C4A8E5
 	sep #$20                             ;C4A8E5|E220    |      ;  
-
-CODE_C4A8E7:
+.lbl_C4A8E7
 	lda.b $D0                            ;C4A8E7|A5D0    |0000D0;  
 	sta.b $00                            ;C4A8E9|8500    |000000;  
 	jsl.l CODE_C33AD5                    ;C4A8EB|22D53AC3|C33AD5;  
 	plx                                  ;C4A8EF|FA      |      ;  
 	lda.b $00                            ;C4A8F0|A500    |000000;  
 	cmp.b #$00                           ;C4A8F2|C900    |      ;  
-	beq CODE_C4A921                      ;C4A8F4|F02B    |C4A921;  
+	beq .lbl_C4A921                      ;C4A8F4|F02B    |C4A921;  
 	stx.b $02                   ;C4A8F6|8602    |000002;  
 	jsl.l CODE_C4A627                    ;C4A8F8|2227A6C4|C4A627;  
 	lda.b #$02                           ;C4A8FC|A902    |      ;  
@@ -17035,8 +16239,7 @@ CODE_C4A8E7:
 	ldx.w #$806C                         ;C4A918|A26C80  |      ;  
 	stx.b $06                            ;C4A91B|8606    |000006;  
 	jsl.l CODE_C5E837                    ;C4A91D|2237E8C5|C5E837;  
-
-CODE_C4A921:
+.lbl_C4A921
 	plp                                  ;C4A921|28      |      ;  
 	rtl                                  ;C4A922|6B      |      ;  
 
@@ -17075,15 +16278,13 @@ CODE_C4A93A:
 	plx                                  ;C4A95F|FA      |      ;  
 	stz.b $02                   ;C4A960|6402    |000002;  
 	bit.w #$4040                         ;C4A962|894040  |      ;  
-	bne CODE_C4A96E                      ;C4A965|D007    |C4A96E;  
+	bne .lbl_C4A96E                      ;C4A965|D007    |C4A96E;  
 	bit.w #$A080                         ;C4A967|8980A0  |      ;  
-	bne CODE_C4A970                      ;C4A96A|D004    |C4A970;  
+	bne .lbl_C4A970                      ;C4A96A|D004    |C4A970;  
 	bra CODE_C4A972                      ;C4A96C|8004    |C4A972;  
-
-CODE_C4A96E:
+.lbl_C4A96E
 	inc.b $02                   ;C4A96E|E602    |000002;  
-
-CODE_C4A970:
+.lbl_C4A970
 	inc.b $02                   ;C4A970|E602    |000002;  
 
 CODE_C4A972:
@@ -17614,7 +16815,7 @@ CODE_C4B868:
 
 CODE_C4B882:
 	asl a                                ;C4B882|0A      |      ;  
-	beq CODE_C4B89F                      ;C4B883|F01A    |C4B89F;  
+	beq .lbl_C4B89F                      ;C4B883|F01A    |C4B89F;  
 	tax                                  ;C4B885|AA      |      ;  
 	lda.l DATA8_DC699A,x                 ;C4B886|BF9A69DC|DC699A;  
 	tay                                  ;C4B88A|A8      |      ;  
@@ -17629,8 +16830,7 @@ CODE_C4B882:
 	tyx                                  ;C4B89B|BB      |      ;  
 	ldy.b $02                   ;C4B89C|A402    |000002;  
 	rts                                  ;C4B89E|60      |      ;  
-
-CODE_C4B89F:
+.lbl_C4B89F
 	lda.w #$0109                         ;C4B89F|A90901  |      ;  
 	ldx.b $02                   ;C4B8A2|A602    |000002;  
 	stz.w $0000,x                        ;C4B8A4|9E0000  |7F0000;  
@@ -17698,24 +16898,24 @@ CODE_C4B94F:
 	phx                                  ;C4B968|DA      |      ;  
 	lda.b $00                            ;C4B969|A500    |000000;  
 	cmp.w #$067A                         ;C4B96B|C97A06  |      ;  
-	bcc CODE_C4B982                      ;C4B96E|9012    |C4B982;  
+	bcc .lbl_C4B982                      ;C4B96E|9012    |C4B982;  
 	cmp.w #$0900                         ;C4B970|C90009  |      ;  
-	bcs CODE_C4B982                      ;C4B973|B00D    |C4B982;  
+	bcs .lbl_C4B982                      ;C4B973|B00D    |C4B982;  
 	lda.w #$FFF6                         ;C4B975|A9F6FF  |      ;  
 	sta.w $CA66,x                        ;C4B978|9D66CA  |7ECA66;  
 	dex                                  ;C4B97B|CA      |      ;  
 	dex                                  ;C4B97C|CA      |      ;  
-	bpl CODE_C4B982                      ;C4B97D|1003    |C4B982;  
+	bpl .lbl_C4B982                      ;C4B97D|1003    |C4B982;  
 	ldx.w #$07FE                         ;C4B97F|A2FE07  |      ;  
-CODE_C4B982:
+.lbl_C4B982
 	jsr.w CODE_C4B999                    ;C4B982|2099B9  |C4B999;  
 	lda.w #$FFFF                         ;C4B985|A9FFFF  |      ;  
 	sta.w $CA66,x                        ;C4B988|9D66CA  |7ECA66;  
 	dex                                  ;C4B98B|CA      |      ;  
 	dex                                  ;C4B98C|CA      |      ;  
-	bpl CODE_C4B992                      ;C4B98D|1003    |C4B992;  
+	bpl .lbl_C4B992                      ;C4B98D|1003    |C4B992;  
 	ldx.w #$07FE                         ;C4B98F|A2FE07  |      ;  
-CODE_C4B992:
+.lbl_C4B992
 	stx.b $D4                            ;C4B992|86D4    |0000D4;  
 	plx                                  ;C4B994|FA      |      ;  
 	stx.b $00                            ;C4B995|8600    |000000;  
@@ -17734,49 +16934,45 @@ CODE_C4B999:
 
 CODE_C4B9AD:
 	cmp.l Text_FF1075,x                 ;C4B9AD|DF7510FF|FF1075;  
-	bcc CODE_C4B9B8                      ;C4B9B1|9005    |C4B9B8;  
+	bcc .lbl_C4B9B8                      ;C4B9B1|9005    |C4B9B8;  
 	inx                                  ;C4B9B3|E8      |      ;  
 	inx                                  ;C4B9B4|E8      |      ;  
 	iny                                  ;C4B9B5|C8      |      ;  
 	bra CODE_C4B9AD                      ;C4B9B6|80F5    |C4B9AD;  
-
-CODE_C4B9B8:
+.lbl_C4B9B8
 	sty.b $D8                            ;C4B9B8|84D8    |0000D8;  
 	ldy.w #$0000                         ;C4B9BA|A00000  |      ;  
 	ldx.b $02                   ;C4B9BD|A602    |000002;  
-	bra CODE_C4B9CD                      ;C4B9BF|800C    |C4B9CD;  
+	bra .lbl_C4B9CD                      ;C4B9BF|800C    |C4B9CD;  
 
 CODE_C4B9C1:
 	ldx.b $D4                            ;C4B9C1|A6D4    |0000D4;  
-
-CODE_C4B9C3:
+.lbl_C4B9C3
 	sta.w $CA66,x                        ;C4B9C3|9D66CA  |7ECA66;  
 	dex                                  ;C4B9C6|CA      |      ;  
 	dex                                  ;C4B9C7|CA      |      ;  
-	bpl CODE_C4B9CD                      ;C4B9C8|1003    |C4B9CD;  
+	bpl .lbl_C4B9CD                      ;C4B9C8|1003    |C4B9CD;  
 	ldx.w #$07FE                         ;C4B9CA|A2FE07  |      ;  
-
-CODE_C4B9CD:
+.lbl_C4B9CD
 	lda.b [$D6],y                        ;C4B9CD|B7D6    |0000D6;  
 	and.w #$00FF                         ;C4B9CF|29FF00  |      ;  
 	iny                                  ;C4B9D2|C8      |      ;  
 	cmp.w #$00F0                         ;C4B9D3|C9F000  |      ;  
-	bcc CODE_C4B9C3                      ;C4B9D6|90EB    |C4B9C3;  
+	bcc .lbl_C4B9C3                      ;C4B9D6|90EB    |C4B9C3;  
 	cmp.w #$00F4                         ;C4B9D8|C9F400  |      ;  
-	bcc CODE_C4B9E4                      ;C4B9DB|9007    |C4B9E4;  
+	bcc .lbl_C4B9E4                      ;C4B9DB|9007    |C4B9E4;  
 	stx.b $D4                            ;C4B9DD|86D4    |0000D4;  
 	asl a                                ;C4B9DF|0A      |      ;  
 	tax                                  ;C4B9E0|AA      |      ;  
 	jmp.w ($BC02,x)            		 ;C4B9E1|7C02BC  |C4BC02;  
-
-CODE_C4B9E4:
+.lbl_C4B9E4
 	dey                                  ;C4B9E4|88      |      ;  
 	lda.b [$D6],y                        ;C4B9E5|B7D6    |0000D6;  
 	iny                                  ;C4B9E7|C8      |      ;  
 	iny                                  ;C4B9E8|C8      |      ;  
 	xba                                  ;C4B9E9|EB      |      ;  
 	and.w #$03FF                         ;C4B9EA|29FF03  |      ;  
-	jmp.w CODE_C4B9C3                    ;C4B9ED|4CC3B9  |C4B9C3;  
+	jmp.w .lbl_C4B9C3                    ;C4B9ED|4CC3B9  |C4B9C3;  
 	lda.w #$FFFE                         ;C4B9F0|A9FEFF  |      ;  
 	jmp.w CODE_C4B9C1                    ;C4B9F3|4CC1B9  |C4B9C1;  
 
@@ -17795,7 +16991,7 @@ CODE_C4B9F6:
 	lda.b [$D6],y                        ;C4BA1C|B7D6    |0000D6;  
 	iny                                  ;C4BA1E|C8      |      ;  
 	iny                                  ;C4BA1F|C8      |      ;  
-	jmp.w CODE_C4B9C3                    ;C4BA20|4CC3B9  |C4B9C3;  
+	jmp.w .lbl_C4B9C3                    ;C4BA20|4CC3B9  |C4B9C3;  
 	lda.b [$D6],y                        ;C4BA23|B7D6    |0000D6;  
 	and.w #$00FF                         ;C4BA25|29FF00  |      ;  
 	iny                                  ;C4BA28|C8      |      ;  
@@ -17819,54 +17015,50 @@ UNREACH_C4BA3A:
 	jsr.w CODE_C4BF51                    ;C4BA53|2051BF  |C4BF51;  
 	ldx.b $D4                            ;C4BA56|A6D4    |0000D4;  
 	jsr.w CODE_C4BEA8                    ;C4BA58|20A8BE  |C4BEA8;  
-	jmp.w CODE_C4B9CD                    ;C4BA5B|4CCDB9  |C4B9CD;  
+	jmp.w .lbl_C4B9CD                    ;C4BA5B|4CCDB9  |C4B9CD;  
 	jsr.w CODE_C4BF5B                    ;C4BA5E|205BBF  |C4BF5B;  
 	ldx.b $D4                            ;C4BA61|A6D4    |0000D4;  
 	jsr.w CODE_C4BEB6                    ;C4BA63|20B6BE  |C4BEB6;  
-	jmp.w CODE_C4B9CD                    ;C4BA66|4CCDB9  |C4B9CD;  
+	jmp.w .lbl_C4B9CD                    ;C4BA66|4CCDB9  |C4B9CD;  
 	jsr.w CODE_C4BF66                    ;C4BA69|2066BF  |C4BF66;  
 	ldx.b $D4                            ;C4BA6C|A6D4    |0000D4;  
 	jsr.w CODE_C4BECC                    ;C4BA6E|20CCBE  |C4BECC;  
-	jmp.w CODE_C4B9CD                    ;C4BA71|4CCDB9  |C4B9CD;  
+	jmp.w .lbl_C4B9CD                    ;C4BA71|4CCDB9  |C4B9CD;  
 	.db $20,$76,$BF,$A6,$D4,$20,$DA,$BE   ;C4BA74|        |C4BF76;  
 	.db $4C,$CD,$B9                       ;C4BA7C|        |C4B9CD;  
 	jsr.w CODE_C4BF66                    ;C4BA7F|2066BF  |C4BF66;  
 	ldx.b $D4                            ;C4BA82|A6D4    |0000D4;  
 	phy                                  ;C4BA84|5A      |      ;  
 	ldy.w #$0000                         ;C4BA85|A00000  |      ;  
-
-CODE_C4BA88:
+.lbl_C4BA88
 	lda.b [$02],y                        ;C4BA88|B702    |000002;  
 	and.w #$00FF                         ;C4BA8A|29FF00  |      ;  
 	cmp.w #$00FF                         ;C4BA8D|C9FF00  |      ;  
-	beq CODE_C4BA9A                      ;C4BA90|F008    |C4BA9A;  
+	beq .lbl_C4BA9A                      ;C4BA90|F008    |C4BA9A;  
 	iny                                  ;C4BA92|C8      |      ;  
 	jsr.w CODE_C4BE02                    ;C4BA93|2002BE  |C4BE02;  
 	cpy.b $00                            ;C4BA96|C400    |000000;  
-	bne CODE_C4BA88                      ;C4BA98|D0EE    |C4BA88;  
-
-CODE_C4BA9A:
+	bne .lbl_C4BA88                      ;C4BA98|D0EE    |C4BA88;  
+.lbl_C4BA9A
 	ply                                  ;C4BA9A|7A      |      ;  
-	jmp.w CODE_C4B9CD                    ;C4BA9B|4CCDB9  |C4B9CD;  
+	jmp.w .lbl_C4B9CD                    ;C4BA9B|4CCDB9  |C4B9CD;  
 	jsr.w CODE_C4BF66                    ;C4BA9E|2066BF  |C4BF66;  
 	ldx.b $D4                            ;C4BAA1|A6D4    |0000D4;  
 	phy                                  ;C4BAA3|5A      |      ;  
 	asl.b $00                            ;C4BAA4|0600    |000000;  
 	ldy.w #$0000                         ;C4BAA6|A00000  |      ;  
-
-CODE_C4BAA9:
+.lbl_C4BAA9
 	lda.b [$02],y                        ;C4BAA9|B702    |000002;  
 	cmp.w #$FFFF                         ;C4BAAB|C9FFFF  |      ;  
-	beq CODE_C4BAB9                      ;C4BAAE|F009    |C4BAB9;  
+	beq .lbl_C4BAB9                      ;C4BAAE|F009    |C4BAB9;  
 	iny                                  ;C4BAB0|C8      |      ;  
 	iny                                  ;C4BAB1|C8      |      ;  
 	jsr.w CODE_C4BE02                    ;C4BAB2|2002BE  |C4BE02;  
 	cpy.b $00                            ;C4BAB5|C400    |000000;  
-	bne CODE_C4BAA9                      ;C4BAB7|D0F0    |C4BAA9;  
-
-CODE_C4BAB9:
+	bne .lbl_C4BAA9                      ;C4BAB7|D0F0    |C4BAA9;  
+.lbl_C4BAB9
 	ply                                  ;C4BAB9|7A      |      ;  
-	jmp.w CODE_C4B9CD                    ;C4BABA|4CCDB9  |C4B9CD;  
+	jmp.w .lbl_C4B9CD                    ;C4BABA|4CCDB9  |C4B9CD;  
 	.db $B7,$D6,$29,$FF,$00,$C8,$A6,$D4   ;C4BABD|        |0000D6;  
 	.db $20,$0D,$BE,$4C,$CD,$B9           ;C4BAC5|        |C4BE0D;  
 	lda.b [$D6],y                        ;C4BACB|B7D6    |0000D6;  
@@ -17874,7 +17066,7 @@ CODE_C4BAB9:
 	iny                                  ;C4BAD0|C8      |      ;  
 	asl a                                ;C4BAD1|0A      |      ;  
 	bit.w #$0100                         ;C4BAD2|890001  |      ;  
-	bne CODE_C4BAE9                      ;C4BAD5|D012    |C4BAE9;  
+	bne .lbl_C4BAE9                      ;C4BAD5|D012    |C4BAE9;  
 	pha                                  ;C4BAD7|48      |      ;  
 	jsr.w CODE_C4BF46                    ;C4BAD8|2046BF  |C4BF46;  
 	plx                                  ;C4BADB|FA      |      ;  
@@ -17882,9 +17074,8 @@ CODE_C4BAB9:
 	adc.l UNREACH_C4BAF0,x               ;C4BADD|7FF0BAC4|C4BAF0;  
 	ldx.b $D4                            ;C4BAE1|A6D4    |0000D4;  
 	jsr.w CODE_C4BE0D                    ;C4BAE3|200DBE  |C4BE0D;  
-	jmp.w CODE_C4B9CD                    ;C4BAE6|4CCDB9  |C4B9CD;  
-
-CODE_C4BAE9:
+	jmp.w .lbl_C4B9CD                    ;C4BAE6|4CCDB9  |C4B9CD;  
+.lbl_C4BAE9
 	tax                                  ;C4BAE9|AA      |      ;  
 	lda.b $D4                            ;C4BAEA|A5D4    |0000D4;  
 	pha                                  ;C4BAEC|48      |      ;  
@@ -17913,10 +17104,9 @@ CODE_C4BB2B:
 	lda.w $D26B                          ;C4BB34|AD6BD2  |7ED26B;  
 	and.w #$00FF                         ;C4BB37|29FF00  |      ;  
 	cmp.w #$00E7                         ;C4BB3A|C9E700  |      ;  
-	bne CODE_C4BB47                      ;C4BB3D|D008    |C4BB47;  
+	bne .lbl_C4BB47                      ;C4BB3D|D008    |C4BB47;  
 	.db $9C,$6C,$D2,$A9,$0A,$00,$80,$03   ;C4BB3F|        |00D26C;  
-
-CODE_C4BB47:
+.lbl_C4BB47
 	lda.w $D26A                          ;C4BB47|AD6AD2  |7ED26A;  
 	and.w #$00FF                         ;C4BB4A|29FF00  |      ;  
 	asl a                                ;C4BB4D|0A      |      ;  
@@ -17932,29 +17122,27 @@ DATA8_C4BB52:
 	.db $03,$BC,$03,$BC                   ;C4BB6A|        |0000BC;  
 	plx                                  ;C4BB6E|FA      |      ;  
 	lda.w $D266                          ;C4BB6F|AD66D2  |7ED266;  
-	beq CODE_C4BB8F                      ;C4BB72|F01B    |C4BB8F;  
+	beq .lbl_C4BB8F                      ;C4BB72|F01B    |C4BB8F;  
 	dec a                                ;C4BB74|3A      |      ;  
-	bne CODE_C4BB7F                      ;C4BB75|D008    |C4BB7F;  
+	bne .lbl_C4BB7F                      ;C4BB75|D008    |C4BB7F;  
 	lda.w $D26C                          ;C4BB77|AD6CD2  |7ED26C;  
 	and.w #$00FE                         ;C4BB7A|29FE00  |      ;  
-	beq CODE_C4BB8F                      ;C4BB7D|F010    |C4BB8F;  
-
-CODE_C4BB7F:
+	beq .lbl_C4BB8F                      ;C4BB7D|F010    |C4BB8F;  
+.lbl_C4BB7F
 	lda.w $D26C                          ;C4BB7F|AD6CD2  |7ED26C;  
 	sta.b $02                   ;C4BB82|8502    |000002;  
 	stz.b $00                            ;C4BB84|6400    |000000;  
 	jsr.w CODE_C4BEA8                    ;C4BB86|20A8BE  |C4BEA8;  
 	lda.w #$04A1                         ;C4BB89|A9A104  |      ;  
 	jsr.w CODE_C4BE0D                    ;C4BB8C|200DBE  |C4BE0D;  
-
-CODE_C4BB8F:
+.lbl_C4BB8F
 	jsr.w CODE_C4BC3E                    ;C4BB8F|203EBC  |C4BC3E;  
-	jmp.w CODE_C4B9CD                    ;C4BB92|4CCDB9  |C4B9CD;  
+	jmp.w .lbl_C4B9CD                    ;C4BB92|4CCDB9  |C4B9CD;  
 	plx                                  ;C4BB95|FA      |      ;  
 	jsr.w CODE_C4BC3E                    ;C4BB96|203EBC  |C4BC3E;  
 	lda.w $D270                          ;C4BB99|AD70D2  |7ED270;  
 	lsr a                                ;C4BB9C|4A      |      ;  
-	bcc CODE_C4BBB5                      ;C4BB9D|9016    |C4BBB5;  
+	bcc .lbl_C4BBB5                      ;C4BB9D|9016    |C4BBB5;  
 	lda.w #$049D                         ;C4BB9F|A99D04  |      ;  
 	jsr.w CODE_C4BE0D                    ;C4BBA2|200DBE  |C4BE0D;  
 	lda.w $D26C                          ;C4BBA5|AD6CD2  |7ED26C;  
@@ -17963,23 +17151,21 @@ CODE_C4BB8F:
 	jsr.w CODE_C4BEA8                    ;C4BBAC|20A8BE  |C4BEA8;  
 	lda.w #$049E                         ;C4BBAF|A99E04  |      ;  
 	jsr.w CODE_C4BE0D                    ;C4BBB2|200DBE  |C4BE0D;  
-
-CODE_C4BBB5:
-	jmp.w CODE_C4B9CD                    ;C4BBB5|4CCDB9  |C4B9CD;  
+.lbl_C4BBB5
+	jmp.w .lbl_C4B9CD                    ;C4BBB5|4CCDB9  |C4B9CD;  
 	plx                                  ;C4BBB8|FA      |      ;  
 	stz.b $00                            ;C4BBB9|6400    |000000;  
 	lda.w $D26C                          ;C4BBBB|AD6CD2  |7ED26C;  
 	sta.b $02                   ;C4BBBE|8502    |000002;  
 	jsr.w CODE_C4BEB6                    ;C4BBC0|20B6BE  |C4BEB6;  
 	jsr.w CODE_C4BC3E                    ;C4BBC3|203EBC  |C4BC3E;  
-	jmp.w CODE_C4B9CD                    ;C4BBC6|4CCDB9  |C4B9CD;  
+	jmp.w .lbl_C4B9CD                    ;C4BBC6|4CCDB9  |C4B9CD;  
 	lda.w $D26D                          ;C4BBC9|AD6DD2  |7ED26D;  
 	and.w #$00FF                         ;C4BBCC|29FF00  |      ;  
 	cmp.w #$0004                         ;C4BBCF|C90400  |      ;  
-	bcc CODE_C4BBD7                      ;C4BBD2|9003    |C4BBD7;  
+	bcc .lbl_C4BBD7                      ;C4BBD2|9003    |C4BBD7;  
 	.db $A9,$00,$00                       ;C4BBD4
-
-CODE_C4BBD7:
+.lbl_C4BBD7
 	asl a                                ;C4BBD7|0A      |      ;  
 	tax                                  ;C4BBD8|AA      |      ;  
 	lda.w $D26C                          ;C4BBD9|AD6CD2  |7ED26C;  
@@ -17991,27 +17177,25 @@ CODE_C4BBD7:
 	lda.w $D26D                          ;C4BBE8|AD6DD2  |7ED26D;  
 	and.w #$00FF                         ;C4BBEB|29FF00  |      ;  
 	cmp.w #$0004                         ;C4BBEE|C90400  |      ;  
-	bcc CODE_C4BBFA                      ;C4BBF1|9007    |C4BBFA;  
+	bcc .lbl_C4BBFA                      ;C4BBF1|9007    |C4BBFA;  
 	.db $85,$02,$64,$00,$20,$A8,$BE       ;C4BBF3|        |000002;  
-
-CODE_C4BBFA:
+.lbl_C4BBFA
 	lda.w #$04A2                         ;C4BBFA|A9A204  |      ;  
 	jsr.w CODE_C4BE0D                    ;C4BBFD|200DBE  |C4BE0D;  
-	jmp.w CODE_C4B9CD                    ;C4BC00|4CCDB9  |C4B9CD;  
+	jmp.w .lbl_C4B9CD                    ;C4BC00|4CCDB9  |C4B9CD;  
 	plx                                  ;C4BC03|FA      |      ;  
 	jsr.w CODE_C4BC3E                    ;C4BC04|203EBC  |C4BC3E;  
 	lda.w $D270                          ;C4BC07|AD70D2  |7ED270;  
 	lsr a                                ;C4BC0A|4A      |      ;  
-	bcc CODE_C4BC1C                      ;C4BC0B|900F    |C4BC1C;  
+	bcc .lbl_C4BC1C                      ;C4BC0B|900F    |C4BC1C;  
 	lda.w $D26C                          ;C4BC0D|AD6CD2  |7ED26C;  
 	and.w #$00FF                         ;C4BC10|29FF00  |      ;  
-	beq CODE_C4BC1C                      ;C4BC13|F007    |C4BC1C;  
+	beq .lbl_C4BC1C                      ;C4BC13|F007    |C4BC1C;  
 	sta.b $02                   ;C4BC15|8502    |000002;  
 	stz.b $00                            ;C4BC17|6400    |000000;  
 	jsr.w CODE_C4BE29                    ;C4BC19|2029BE  |C4BE29;  
-
-CODE_C4BC1C:
-	jmp.w CODE_C4B9CD                    ;C4BC1C|4CCDB9  |C4B9CD;  
+.lbl_C4BC1C
+	jmp.w .lbl_C4B9CD                    ;C4BC1C|4CCDB9  |C4B9CD;  
 
 CODE_C4BC1F:
 	phx                                  ;C4BC1F|DA      |      ;  
@@ -18024,13 +17208,12 @@ CODE_C4BC1F:
 	plb                                  ;C4BC2E|AB      |      ;  
 	ply                                  ;C4BC2F|7A      |      ;  
 	ldx.w #$0006                         ;C4BC30|A20600  |      ;  
-
-CODE_C4BC33:
+.lbl_C4BC33
 	lda.b $00,x                          ;C4BC33|B500    |000000;  
 	sta.w $D26A,x                        ;C4BC35|9D6AD2  |7ED26A;  
 	dex                                  ;C4BC38|CA      |      ;  
 	dex                                  ;C4BC39|CA      |      ;  
-	bpl CODE_C4BC33                      ;C4BC3A|10F7    |C4BC33;  
+	bpl .lbl_C4BC33                      ;C4BC3A|10F7    |C4BC33;  
 	plx                                  ;C4BC3C|FA      |      ;  
 	rts                                  ;C4BC3D|60      |      ;  
 
@@ -18044,11 +17227,10 @@ CODE_C4BC3E:
 	lsr a                                ;C4BC4D|4A      |      ;  
 	lda.w $D26F                          ;C4BC4E|AD6FD2  |7ED26F;  
 	and.w #$00FF                         ;C4BC51|29FF00  |      ;  
-	bcs CODE_C4BC5B                      ;C4BC54|B005    |C4BC5B;  
+	bcs .lbl_C4BC5B                      ;C4BC54|B005    |C4BC5B;  
 	adc.w #$03E4                         ;C4BC56|69E403  |      ;  
 	bra CODE_C4BC5F                      ;C4BC59|8004    |C4BC5F;  
-
-CODE_C4BC5B:
+.lbl_C4BC5B
 	clc                                  ;C4BC5B|18      |      ;  
 	adc.w #$02FC                         ;C4BC5C|69FC02  |      ;  
 
@@ -18075,10 +17257,9 @@ UNREACH_C4BC63:
 	lda.b w0001                            ;C4BCB7|A501    |000001;  
 	and.w #$00FF                         ;C4BCB9|29FF00  |      ;  
 	cmp.w #$0004                         ;C4BCBC|C90400  |      ;  
-	bcc CODE_C4bcc4                      ;C4BCBF|9003    |C4bcc4;  
+	bcc .lbl_C4bcc4                      ;C4BCBF|9003    |C4bcc4;  
 	lda.w #$0000                         ;C4BCC1|A90000  |      ;  
-
-CODE_C4bcc4:
+.lbl_C4bcc4
 	asl a                                ;C4BCC4|0A      |      ;  
 	tax                                  ;C4BCC5|AA      |      ;  
 	lda.l DATA8_C4BD14,x                 ;C4BCC6|BF14BDC4|C4BD14;  
@@ -18087,9 +17268,9 @@ CODE_C4bcc4:
 	lda.b $00                            ;C4BCCD|A500    |000000;  
 	and.w #$00FF                         ;C4BCCF|29FF00  |      ;  
 	cmp.w #$0000                         ;C4BCD2|C90000  |      ;  
-	beq CODE_C4BCFD                      ;C4BCD5|F026    |C4BCFD;  
+	beq .lbl_C4BCFD                      ;C4BCD5|F026    |C4BCFD;  
 	cmp.w #$00C0                         ;C4BCD7|C9C000  |      ;  
-	beq CODE_C4BD0F                      ;C4BCDA|F033    |C4BD0F;  
+	beq .lbl_C4BD0F                      ;C4BCDA|F033    |C4BD0F;  
 	clc                                  ;C4BCDC|18      |      ;  
 	adc.b $02                   ;C4BCDD|6502    |000002;  
 	plx                                  ;C4BCDF|FA      |      ;  
@@ -18102,26 +17283,22 @@ CODE_C4bcc4:
 	pla                                  ;C4BCEA|68      |      ;  
 	and.w #$00FF                         ;C4BCEB|29FF00  |      ;  
 	cmp.w #$0004                         ;C4BCEE|C90400  |      ;  
-	bcc CODE_C4BCFA                      ;C4BCF1|9007    |C4BCFA;  
+	bcc .lbl_C4BCFA                      ;C4BCF1|9007    |C4BCFA;  
 	.db $85,$02,$64,$00,$20,$A8,$BE       ;C4BCF3|        |000002;  
-
-CODE_C4BCFA:
-	jmp.w CODE_C4B9CD                    ;C4BCFA|4CCDB9  |C4B9CD;  
-
-CODE_C4BCFD:
+.lbl_C4BCFA
+	jmp.w .lbl_C4B9CD                    ;C4BCFA|4CCDB9  |C4B9CD;  
+.lbl_C4BCFD
 	lda.w #$01C3                         ;C4BCFD|A9C301  |      ;  
 	cpx.w #$0013                         ;C4BD00|E01300  |      ;  
-	beq CODE_C4BD08                      ;C4BD03|F003    |C4BD08;  
+	beq .lbl_C4BD08                      ;C4BD03|F003    |C4BD08;  
 	lda.w #$01C2                         ;C4BD05|A9C201  |      ;  
-
-CODE_C4BD08:
+.lbl_C4BD08
 	plx                                  ;C4BD08|FA      |      ;  
 	jsr.w CODE_C4BE0D                    ;C4BD09|200DBE  |C4BE0D;  
-	jmp.w CODE_C4B9CD                    ;C4BD0C|4CCDB9  |C4B9CD;  
-
-CODE_C4BD0F:
+	jmp.w .lbl_C4B9CD                    ;C4BD0C|4CCDB9  |C4B9CD;  
+.lbl_C4BD0F
 	lda.w #$0283                         ;C4BD0F|A98302  |      ;  
-	bra CODE_C4BD08                      ;C4BD12|80F4    |C4BD08;  
+	bra .lbl_C4BD08                      ;C4BD12|80F4    |C4BD08;  
 
 DATA8_C4BD14:
 	.db $C3,$01,$C3,$01,$84,$02,$C0,$02   ;C4BD14
@@ -18132,37 +17309,34 @@ DATA8_C4BD14:
 	lda.l $0000B0                        ;C4BD2A|AFB00000|0000B0;  
 	and.w #$00FF                         ;C4BD2E|29FF00  |      ;  
 	cmp.w #$00DB                         ;C4BD31|C9DB00  |      ;  
-	beq CODE_C4BD59                      ;C4BD34|F023    |C4BD59;  
+	beq .lbl_C4BD59                      ;C4BD34|F023    |C4BD59;  
 	jsl.l CODE_C3E768                    ;C4BD36|2268E7C3|C3E768;  
 	ldy.w #$0000                         ;C4BD3A|A00000  |      ;  
-
-CODE_C4BD3D:
+.lbl_C4BD3D
 	lda.b [$DA],y                        ;C4BD3D|B7DA    |0000DA;  
 	and.w #$00FF                         ;C4BD3F|29FF00  |      ;  
 	cmp.w #$00FF                         ;C4BD42|C9FF00  |      ;  
-	beq CODE_C4BD50                      ;C4BD45|F009    |C4BD50;  
+	beq .lbl_C4BD50                      ;C4BD45|F009    |C4BD50;  
 	jsr.w CODE_C4BE02                    ;C4BD47|2002BE  |C4BE02;  
 	iny                                  ;C4BD4A|C8      |      ;  
 	cpy.w #$0004                         ;C4BD4B|C00400  |      ;  
-	bne CODE_C4BD3D                      ;C4BD4E|D0ED    |C4BD3D;  
-
-CODE_C4BD50:
+	bne .lbl_C4BD3D                      ;C4BD4E|D0ED    |C4BD3D;  
+.lbl_C4BD50
 	cpy.w #$0000                         ;C4BD50|C00000  |      ;  
-	beq CODE_C4BD59                      ;C4BD53|F004    |C4BD59;  
+	beq .lbl_C4BD59                      ;C4BD53|F004    |C4BD59;  
 	ply                                  ;C4BD55|7A      |      ;  
-	jmp.w CODE_C4B9CD                    ;C4BD56|4CCDB9  |C4B9CD;  
-
-CODE_C4BD59:
+	jmp.w .lbl_C4B9CD                    ;C4BD56|4CCDB9  |C4B9CD;  
+.lbl_C4BD59
 	ply                                  ;C4BD59|7A      |      ;  
 	lda.w #$01C1                         ;C4BD5A|A9C101  |      ;  
 	jsr.w CODE_C4BE0D                    ;C4BD5D|200DBE  |C4BE0D;  
-	jmp.w CODE_C4B9CD                    ;C4BD60|4CCDB9  |C4B9CD;  
+	jmp.w .lbl_C4B9CD                    ;C4BD60|4CCDB9  |C4B9CD;  
 	jsr.w CODE_C4BF66                    ;C4BD63|2066BF  |C4BF66;  
 	plx                                  ;C4BD66|FA      |      ;  
 	lda.b $02                   ;C4BD67|A502    |000002;  
 	and.w #$00FF                         ;C4BD69|29FF00  |      ;  
 	cmp.w #$00C0                         ;C4BD6C|C9C000  |      ;  
-	bcs CODE_C4BD8F                      ;C4BD6F|B01E    |C4BD8F;  
+	bcs .lbl_C4BD8F                      ;C4BD6F|B01E    |C4BD8F;  
 	phx                                  ;C4BD71|DA      |      ;  
 	lda.b $04                   ;C4BD72|A504    |000004;  
 	and.w #$0003                         ;C4BD74|290300  |      ;  
@@ -18177,22 +17351,21 @@ CODE_C4BD59:
 	lda.w #$047D                         ;C4BD87|A97D04  |      ;  
 	jsr.w CODE_C4BE0D                    ;C4BD8A|200DBE  |C4BE0D;  
 	bra CODE_C4BD96                      ;C4BD8D|8007    |C4BD96;  
-
-CODE_C4BD8F:
+.lbl_C4BD8F
 	clc                                  ;C4BD8F|18      |      ;  
 	adc.w #$03BE                         ;C4BD90|69BE03  |      ;  
 	jsr.w CODE_C4BE0D                    ;C4BD93|200DBE  |C4BE0D;  
 
 CODE_C4BD96:
-	jmp.w CODE_C4B9CD                    ;C4BD96|4CCDB9  |C4B9CD;  
+	jmp.w .lbl_C4B9CD                    ;C4BD96|4CCDB9  |C4B9CD;  
 	lda.b [$D6],y                        ;C4BD99|B7D6    |0000D6;  
 	and.w #$00FF                         ;C4BD9B|29FF00  |      ;  
 	iny                                  ;C4BD9E|C8      |      ;  
 	cmp.w #$007F                         ;C4BD9F|C97F00  |      ;  
-	beq CODE_C4BDD4                      ;C4BDA2|F030    |C4BDD4;  
-	bcs CODE_C4BDCB                      ;C4BDA4|B025    |C4BDCB;  
+	beq .lbl_C4BDD4                      ;C4BDA2|F030    |C4BDD4;  
+	bcs .lbl_C4BDCB                      ;C4BDA4|B025    |C4BDCB;  
 	asl a                                ;C4BDA6|0A      |      ;  
-	beq CODE_C4BDBF                      ;C4BDA7|F016    |C4BDBF;  
+	beq .lbl_C4BDBF                      ;C4BDA7|F016    |C4BDBF;  
 	tax                                  ;C4BDA9|AA      |      ;  
 	lda.l UnknownTable_C4BDB1-2,x      ;C4BDAA|BFAFBDC4|C4BDAF;  
 	jmp.w CODE_C4B9C1                    ;C4BDAE|4CC1B9  |C4B9C1;
@@ -18206,20 +17379,17 @@ UnknownTable_C4BDB1:
 	.db $F8,$FF
 	.db $F7,$FF
 	.db $F6,$FF
-
-CODE_C4BDBF:
+.lbl_C4BDBF
 	lda.b [$D6],y                        ;C4BDBF|B7D6    |0000D6;  
 	and.w #$00FF                         ;C4BDC1|29FF00  |      ;  
 	iny                                  ;C4BDC4|C8      |      ;  
 	ora.w #$FE00                         ;C4BDC5|0900FE  |      ;  
 	jmp.w CODE_C4B9C1                    ;C4BDC8|4CC1B9  |C4B9C1;  
-
-CODE_C4BDCB:
+.lbl_C4BDCB
 	and.w #$007F                         ;C4BDCB|297F00  |      ;  
 	ora.w #$FD00                         ;C4BDCE|0900FD  |      ;  
 	jmp.w CODE_C4B9C1                    ;C4BDD1|4CC1B9  |C4B9C1;  
-
-CODE_C4BDD4:
+.lbl_C4BDD4
 	lda.b [$D6],y                        ;C4BDD4|B7D6    |0000D6;  
 	and.w #$00FF                         ;C4BDD6|29FF00  |      ;  
 	iny                                  ;C4BDD9|C8      |      ;  
@@ -18239,10 +17409,9 @@ CODE_C4BE02:
 	sta.w $CA66,x                        ;C4BE02|9D66CA  |7ECA66;  
 	dex                                  ;C4BE05|CA      |      ;  
 	dex                                  ;C4BE06|CA      |      ;  
-	bpl CODE_C4BE0C                      ;C4BE07|1003    |C4BE0C;  
+	bpl .lbl_C4BE0C                      ;C4BE07|1003    |C4BE0C;  
 	ldx.w #$07FE                         ;C4BE09|A2FE07  |      ;  
-
-CODE_C4BE0C:
+.lbl_C4BE0C
 	rts                                  ;C4BE0C|60      |      ;  
 
 CODE_C4BE0D:
@@ -18252,10 +17421,9 @@ CODE_C4BE0D:
 	adc.b $D6                            ;C4BE11|65D6    |0000D6;  
 	pha                                  ;C4BE13|48      |      ;  
 	lda.b $D8                            ;C4BE14|A5D8    |0000D8;  
-	bcc CODE_C4BE19                      ;C4BE16|9001    |C4BE19;  
+	bcc .lbl_C4BE19                      ;C4BE16|9001    |C4BE19;  
 	.db $1A                               ;C4BE18
-
-CODE_C4BE19:
+.lbl_C4BE19
 	pha                                  ;C4BE19|48      |      ;  
 	jsr.w CODE_C4B999                    ;C4BE1A|2099B9  |C4B999;  
 	pla                                  ;C4BE1D|68      |      ;  
@@ -18272,17 +17440,15 @@ CODE_C4BE29:
 	sep #$20                             ;C4BE2B|E220    |      ;  
 	lda.b $00                            ;C4BE2D|A500    |000000;  
 	sta.b $06                            ;C4BE2F|8506    |000006;  
-	bne CODE_C4BE37                      ;C4BE31|D004    |C4BE37;  
+	bne .lbl_C4BE37                      ;C4BE31|D004    |C4BE37;  
 	lda.b #$03                           ;C4BE33|A903    |      ;  
 	sta.b $00                            ;C4BE35|8500    |000000;  
-
-CODE_C4BE37:
+.lbl_C4BE37
 	lda.b $02                   ;C4BE37|A502    |000002;  
 	pha                                  ;C4BE39|48      |      ;  
-	bpl CODE_C4BE42                      ;C4BE3A|1006    |C4BE42;  
+	bpl .lbl_C4BE42                      ;C4BE3A|1006    |C4BE42;  
 	.db $7B,$38,$E5,$02,$85,$02           ;C4BE3C
-
-CODE_C4BE42:
+.lbl_C4BE42
 	stz.b $03                            ;C4BE42|6403    |000003;  
 	phb                                  ;C4BE44|8B      |      ;  
 	jsl.l CODE_C4C1E9                    ;C4BE45|22E9C1C4|C4C1E9;  
@@ -18291,7 +17457,7 @@ CODE_C4BE42:
 	sta.b $02                   ;C4BE4B|8502    |000002;  
 	tdc                                  ;C4BE4D|7B      |      ;  
 	lda.b $06                            ;C4BE4E|A506    |000006;  
-	beq CODE_C4BE89                      ;C4BE50|F037    |C4BE89;  
+	beq .lbl_C4BE89                      ;C4BE50|F037    |C4BE89;  
 	.db $3A,$0A,$A8,$7B,$A6,$02,$F0,$01   ;C4BE52
 	.db $1A,$BB,$F0,$0C,$BE,$52,$CA,$D0   ;C4BE5A
 	.db $07,$18,$69,$09,$88,$88,$D0,$F1   ;C4BE62|        |000018;  
@@ -18299,38 +17465,34 @@ CODE_C4BE42:
 	.db $03,$18,$69,$02,$88,$88,$10,$F1   ;C4BE72|        |000018;  
 	.db $EB,$A9,$FE,$EB,$7A,$FA,$C2,$20   ;C4BE7A
 	.db $20,$02,$BE,$80,$13,$E2,$20       ;C4BE82|        |C4BE02;  
-
-CODE_C4BE89:
+.lbl_C4BE89
 	lda.b $00                            ;C4BE89|A500    |000000;  
 	dec a                                ;C4BE8B|3A      |      ;  
 	asl a                                ;C4BE8C|0A      |      ;  
 	tay                                  ;C4BE8D|A8      |      ;  
-
-CODE_C4BE8E:
+.lbl_C4BE8E
 	ldx.w $CA52,y                        ;C4BE8E|BE52CA  |7ECA52;  
-	bne CODE_C4BE97                      ;C4BE91|D004    |C4BE97;  
+	bne .lbl_C4BE97                      ;C4BE91|D004    |C4BE97;  
 	dey                                  ;C4BE93|88      |      ;  
 	dey                                  ;C4BE94|88      |      ;  
-	bne CODE_C4BE8E                      ;C4BE95|D0F7    |C4BE8E;  
-
-CODE_C4BE97:
+	bne .lbl_C4BE8E                      ;C4BE95|D0F7    |C4BE8E;  
+.lbl_C4BE97
 	plx                                  ;C4BE97|FA      |      ;  
 	rep #$20                             ;C4BE98|C220    |      ;  
 	lda.w #$000B                         ;C4BE9A|A90B00  |      ;  
 	asl.b w0001                            ;C4BE9D|0601    |000001;  
-	bcc CODE_C4BEA2                      ;C4BE9F|9001    |C4BEA2;  
+	bcc .lbl_C4BEA2                      ;C4BE9F|9001    |C4BEA2;  
 	.db $1A                               ;C4BEA1
-
-CODE_C4BEA2:
+.lbl_C4BEA2
 	jsr.w CODE_C4BE02                    ;C4BEA2|2002BE  |C4BE02;  
-	jmp.w CODE_C4BF36                    ;C4BEA5|4C36BF  |C4BF36;  
+	jmp.w .lbl_C4BF36                    ;C4BEA5|4C36BF  |C4BF36;  
 
 CODE_C4BEA8:
 	sep #$20                             ;C4BEA8|E220    |      ;  
 	stz.b $03                            ;C4BEAA|6403    |000003;  
 	lda.b $00                            ;C4BEAC|A500    |000000;  
 	sta.b $06                            ;C4BEAE|8506    |000006;  
-	bne CODE_C4BEC2                      ;C4BEB0|D010    |C4BEC2;  
+	bne .lbl_C4BEC2                      ;C4BEB0|D010    |C4BEC2;  
 	lda.b #$03                           ;C4BEB2|A903    |      ;  
 	bra CODE_C4BEC0                      ;C4BEB4|800A    |C4BEC0;  
 
@@ -18338,13 +17500,12 @@ CODE_C4BEB6:
 	sep #$20                             ;C4BEB6|E220    |      ;  
 	lda.b $00                            ;C4BEB8|A500    |000000;  
 	sta.b $06                            ;C4BEBA|8506    |000006;  
-	bne CODE_C4BEC2                      ;C4BEBC|D004    |C4BEC2;  
+	bne .lbl_C4BEC2                      ;C4BEBC|D004    |C4BEC2;  
 	lda.b #$05                           ;C4BEBE|A905    |      ;  
 
 CODE_C4BEC0:
 	sta.b $00                            ;C4BEC0|8500    |000000;  
-
-CODE_C4BEC2:
+.lbl_C4BEC2
 	phy                                  ;C4BEC2|5A      |      ;  
 	phx                                  ;C4BEC3|DA      |      ;  
 	phb                                  ;C4BEC4|8B      |      ;  
@@ -18357,7 +17518,7 @@ CODE_C4BECC:
 	stz.b $05                            ;C4BECE|6405    |000005;  
 	lda.b $00                            ;C4BED0|A500    |000000;  
 	sta.b $06                            ;C4BED2|8506    |000006;  
-	bne CODE_C4BEE6                      ;C4BED4|D010    |C4BEE6;  
+	bne .lbl_C4BEE6                      ;C4BED4|D010    |C4BEE6;  
 	lda.b #$08                           ;C4BED6|A908    |      ;  
 	bra CODE_C4BEE4                      ;C4BED8|800A    |C4BEE4;  
 	.db $E2,$20,$A5,$00,$85,$06,$D0,$04   ;C4BEDA
@@ -18365,8 +17526,7 @@ CODE_C4BECC:
 
 CODE_C4BEE4:
 	sta.b $00                            ;C4BEE4|8500    |000000;  
-
-CODE_C4BEE6:
+.lbl_C4BEE6
 	phy                                  ;C4BEE6|5A      |      ;  
 	phx                                  ;C4BEE7|DA      |      ;  
 	phb                                  ;C4BEE8|8B      |      ;  
@@ -18376,37 +17536,33 @@ CODE_C4BEE6:
 CODE_C4BEEE:
 	tdc                                  ;C4BEEE|7B      |      ;  
 	lda.b $06                            ;C4BEEF|A506    |000006;  
-	beq CODE_C4BF25                      ;C4BEF1|F032    |C4BF25;  
+	beq .lbl_C4BF25                      ;C4BEF1|F032    |C4BF25;  
 	dec a                                ;C4BEF3|3A      |      ;  
 	asl a                                ;C4BEF4|0A      |      ;  
 	tay                                  ;C4BEF5|A8      |      ;  
 	tdc                                  ;C4BEF6|7B      |      ;  
 	tyx                                  ;C4BEF7|BB      |      ;  
-	beq CODE_C4BF06                      ;C4BEF8|F00C    |C4BF06;  
-
-CODE_C4BEFA:
+	beq .lbl_C4BF06                      ;C4BEF8|F00C    |C4BF06;  
+.lbl_C4BEFA
 	ldx.w $CA52,y                        ;C4BEFA|BE52CA  |7ECA52;  
-	bne CODE_C4BF06                      ;C4BEFD|D007    |C4BF06;  
+	bne .lbl_C4BF06                      ;C4BEFD|D007    |C4BF06;  
 	clc                                  ;C4BEFF|18      |      ;  
 	adc.b #$09                           ;C4BF00|6909    |      ;  
 	dey                                  ;C4BF02|88      |      ;  
 	dey                                  ;C4BF03|88      |      ;  
-	bne CODE_C4BEFA                      ;C4BF04|D0F4    |C4BEFA;  
-
-CODE_C4BF06:
+	bne .lbl_C4BEFA                      ;C4BF04|D0F4    |C4BEFA;  
+.lbl_C4BF06
 	phy                                  ;C4BF06|5A      |      ;  
-
-CODE_C4BF07:
+.lbl_C4BF07
 	ldx.w $CA52,y                        ;C4BF07|BE52CA  |7ECA52;  
 	cpx.w #$0001                         ;C4BF0A|E00100  |      ;  
-	bne CODE_C4BF12                      ;C4BF0D|D003    |C4BF12;  
+	bne .lbl_C4BF12                      ;C4BF0D|D003    |C4BF12;  
 	clc                                  ;C4BF0F|18      |      ;  
 	adc.b #$02                           ;C4BF10|6902    |      ;  
-
-CODE_C4BF12:
+.lbl_C4BF12
 	dey                                  ;C4BF12|88      |      ;  
 	dey                                  ;C4BF13|88      |      ;  
-	bpl CODE_C4BF07                      ;C4BF14|10F1    |C4BF07;  
+	bpl .lbl_C4BF07                      ;C4BF14|10F1    |C4BF07;  
 	xba                                  ;C4BF16|EB      |      ;  
 	lda.b #$FE                           ;C4BF17|A9FE    |      ;  
 	xba                                  ;C4BF19|EB      |      ;  
@@ -18414,34 +17570,30 @@ CODE_C4BF12:
 	plx                                  ;C4BF1B|FA      |      ;  
 	rep #$20                             ;C4BF1C|C220    |      ;  
 	jsr.w CODE_C4BE02                    ;C4BF1E|2002BE  |C4BE02;  
-	bra CODE_C4BF36                      ;C4BF21|8013    |C4BF36;  
+	bra .lbl_C4BF36                      ;C4BF21|8013    |C4BF36;  
 	.db $E2,$20                           ;C4BF23
-
-CODE_C4BF25:
+.lbl_C4BF25
 	lda.b $00                            ;C4BF25|A500    |000000;  
 	dec a                                ;C4BF27|3A      |      ;  
 	asl a                                ;C4BF28|0A      |      ;  
 	tay                                  ;C4BF29|A8      |      ;  
-
-CODE_C4BF2A:
+.lbl_C4BF2A
 	ldx.w $CA52,y                        ;C4BF2A|BE52CA  |7ECA52;  
-	bne CODE_C4BF33                      ;C4BF2D|D004    |C4BF33;  
+	bne .lbl_C4BF33                      ;C4BF2D|D004    |C4BF33;  
 	dey                                  ;C4BF2F|88      |      ;  
 	dey                                  ;C4BF30|88      |      ;  
-	bne CODE_C4BF2A                      ;C4BF31|D0F7    |C4BF2A;  
-
-CODE_C4BF33:
+	bne .lbl_C4BF2A                      ;C4BF31|D0F7    |C4BF2A;  
+.lbl_C4BF33
 	plx                                  ;C4BF33|FA      |      ;  
 	rep #$20                             ;C4BF34|C220    |      ;  
-
-CODE_C4BF36:
+.lbl_C4BF36
 	lda.w $CA52,y                        ;C4BF36|B952CA  |7ECA52;  
 	clc                                  ;C4BF39|18      |      ;  
 	adc.w #$0001                         ;C4BF3A|690100  |      ;  
 	jsr.w CODE_C4BE02                    ;C4BF3D|2002BE  |C4BE02;  
 	dey                                  ;C4BF40|88      |      ;  
 	dey                                  ;C4BF41|88      |      ;  
-	bpl CODE_C4BF36                      ;C4BF42|10F2    |C4BF36;  
+	bpl .lbl_C4BF36                      ;C4BF42|10F2    |C4BF36;  
 	ply                                  ;C4BF44|7A      |      ;  
 	rts                                  ;C4BF45|60      |      ;  
 
@@ -18492,14 +17644,13 @@ CODE_C4BF88:
 	lda.l $7ECA66,x                      ;C4BF8D|BF66CA7E|7ECA66;  
 	dex                                  ;C4BF91|CA      |      ;  
 	dex                                  ;C4BF92|CA      |      ;  
-	bpl CODE_C4BF98                      ;C4BF93|1003    |C4BF98;  
+	bpl .lbl_C4BF98                      ;C4BF93|1003    |C4BF98;  
 	ldx.w #$07FE                         ;C4BF95|A2FE07  |      ;  
-
-CODE_C4BF98:
+.lbl_C4BF98
 	phx                                  ;C4BF98|DA      |      ;  
 	pha                                  ;C4BF99|48      |      ;  
 	tay                                  ;C4BF9A|A8      |      ;  
-	bmi CODE_C4BFAB                      ;C4BF9B|300E    |C4BFAB;  
+	bmi .lbl_C4BFAB                      ;C4BF9B|300E    |C4BFAB;  
 	jsr.w CODE_C4B882                    ;C4BF9D|2082B8  |C4B882;  
 	sta.b $04                   ;C4BFA0|8504    |000004;  
 	pla                                  ;C4BFA2|68      |      ;  
@@ -18509,19 +17660,17 @@ CODE_C4BF98:
 	plp                                  ;C4BFA8|28      |      ;  
 	clc                                  ;C4BFA9|18      |      ;  
 	rtl                                  ;C4BFAA|6B      |      ;  
-
-CODE_C4BFAB:
+.lbl_C4BFAB
 	cmp.w #$FFFD                         ;C4BFAB|C9FDFF  |      ;  
-	beq CODE_C4BFF0                      ;C4BFAE|F040    |C4BFF0;  
+	beq .lbl_C4BFF0                      ;C4BFAE|F040    |C4BFF0;  
 	cmp.w #$FF00                         ;C4BFB0|C900FF  |      ;  
-	bcs CODE_C4C002                      ;C4BFB3|B04D    |C4C002;  
+	bcs .lbl_C4C002                      ;C4BFB3|B04D    |C4C002;  
 	cmp.w #$FE00                         ;C4BFB5|C900FE  |      ;  
-	bcs CODE_C4BFC1                      ;C4BFB8|B007    |C4BFC1;  
+	bcs .lbl_C4BFC1                      ;C4BFB8|B007    |C4BFC1;  
 	cmp.w #$FD00                         ;C4BFBA|C900FD  |      ;  
-	bcs CODE_C4BFDF                      ;C4BFBD|B020    |C4BFDF;  
+	bcs .lbl_C4BFDF                      ;C4BFBD|B020    |C4BFDF;  
 	bra CODE_C4BFDA                      ;C4BFBF|8019    |C4BFDA;  
-
-CODE_C4BFC1:
+.lbl_C4BFC1
 	ldx.b $02                   ;C4BFC1|A602    |000002;  
 	stz.w $0000,x                        ;C4BFC3|9E0000  |7F0000;  
 	and.w #$00FF                         ;C4BFC6|29FF00  |      ;  
@@ -18539,8 +17688,7 @@ CODE_C4BFC1:
 CODE_C4BFDA:
 	ldx.w #$FC00                         ;C4BFDA|A200FC  |      ;  
 	bra CODE_C4BFE2                      ;C4BFDD|8003    |C4BFE2;  
-
-CODE_C4BFDF:
+.lbl_C4BFDF
 	ldx.w #$FD00                         ;C4BFDF|A200FD  |      ;  
 
 CODE_C4BFE2:
@@ -18553,21 +17701,18 @@ CODE_C4BFE2:
 	plp                                  ;C4BFED|28      |      ;  
 	sec                                  ;C4BFEE|38      |      ;  
 	rtl                                  ;C4BFEF|6B      |      ;  
-
-CODE_C4BFF0:
+.lbl_C4BFF0
 	lda.l $7ECA66,x                      ;C4BFF0|BF66CA7E|7ECA66;  
 	dex                                  ;C4BFF4|CA      |      ;  
 	dex                                  ;C4BFF5|CA      |      ;  
-	bpl CODE_C4BFFB                      ;C4BFF6|1003    |C4BFFB;  
+	bpl .lbl_C4BFFB                      ;C4BFF6|1003    |C4BFFB;  
 	.db $A2,$FE,$07                       ;C4BFF8
-
-CODE_C4BFFB:
+.lbl_C4BFFB
 	sta.b $04                   ;C4BFFB|8504    |000004;  
 	txa                                  ;C4BFFD|8A      |      ;  
 	sta.b $03,s                          ;C4BFFE|8303    |000003;  
-	bra CODE_C4C002                      ;C4C000|8000    |C4C002;  
-
-CODE_C4C002:
+	bra .lbl_C4C002                      ;C4C000|8000    |C4C002;  
+.lbl_C4C002
 	pla                                  ;C4C002|68      |      ;  
 	sta.b $02                   ;C4C003|8502    |000002;  
 	plx                                  ;C4C005|FA      |      ;  
@@ -18599,41 +17744,38 @@ CODE_C4C02E:
 	sta.b $DD                            ;C4C039|85DD    |0000DD;  
 	ldx.b $00                            ;C4C03B|A600    |000000;  
 	ldy.b $02                   ;C4C03D|A402    |000002;  
-
-CODE_C4C03F:
+.lbl_C4C03F
 	lda.l $7ECA66,x                      ;C4C03F|BF66CA7E|7ECA66;  
 	xba                                  ;C4C043|EB      |      ;  
 	lda.l $7ECA67,x                      ;C4C044|BF67CA7E|7ECA67;  
 	dex                                  ;C4C048|CA      |      ;  
 	dex                                  ;C4C049|CA      |      ;  
-	bpl CODE_C4C04F                      ;C4C04A|1003    |C4C04F;  
+	bpl .lbl_C4C04F                      ;C4C04A|1003    |C4C04F;  
 	.db $A2,$FE,$07                       ;C4C04C
-
-CODE_C4C04F:
+.lbl_C4C04F
 	cmp.b #$FF                           ;C4C04F|C9FF    |      ;  
-	beq CODE_C4C06E                      ;C4C051|F01B    |C4C06E;  
+	beq .lbl_C4C06E                      ;C4C051|F01B    |C4C06E;  
 	cmp.b #$FE                           ;C4C053|C9FE    |      ;  
-	beq CODE_C4C03F                      ;C4C055|F0E8    |C4C03F;  
+	beq .lbl_C4C03F                      ;C4C055|F0E8    |C4C03F;  
 	cmp.b #$FD                           ;C4C057|C9FD    |      ;  
-	beq CODE_C4C03F                      ;C4C059|F0E4    |C4C03F;  
+	beq .lbl_C4C03F                      ;C4C059|F0E4    |C4C03F;  
 	cmp.b #$FC                           ;C4C05B|C9FC    |      ;  
-	beq CODE_C4C03F                      ;C4C05D|F0E0    |C4C03F;  
+	beq .lbl_C4C03F                      ;C4C05D|F0E0    |C4C03F;  
 	xba                                  ;C4C05F|EB      |      ;  
 	cmp.b #$FF                           ;C4C060|C9FF    |      ;  
-	beq CODE_C4C03F                      ;C4C062|F0DB    |C4C03F;  
+	beq .lbl_C4C03F                      ;C4C062|F0DB    |C4C03F;  
 	sta.w $0000,y                        ;C4C064|990000  |000000;  
 	iny                                  ;C4C067|C8      |      ;  
 	dec.b $DD                            ;C4C068|C6DD    |0000DD;  
-	bne CODE_C4C03F                      ;C4C06A|D0D3    |C4C03F;  
+	bne .lbl_C4C03F                      ;C4C06A|D0D3    |C4C03F;  
 	.db $28,$6B                           ;C4C06C
-
-CODE_C4C06E:
+.lbl_C4C06E
 	xba                                  ;C4C06E|EB      |      ;  
 	cmp.b #$FD                           ;C4C06F|C9FD    |      ;  
 	beq UNREACH_C4C07B                   ;C4C071|F008    |C4C07B;  
 	sta.w $0000,y                        ;C4C073|990000  |000000;  
 	inc a                                ;C4C076|1A      |      ;  
-	bne CODE_C4C03F                      ;C4C077|D0C6    |C4C03F;  
+	bne .lbl_C4C03F                      ;C4C077|D0C6    |C4C03F;  
 	plp                                  ;C4C079|28      |      ;  
 	rtl                                  ;C4C07A|6B      |      ;  
 
@@ -18653,32 +17795,29 @@ CODE_C4C084:
 	sta.b $DD                            ;C4C090|85DD    |0000DD;  
 	ldx.b $00                            ;C4C092|A600    |000000;  
 	ldy.b $02                   ;C4C094|A402    |000002;  
-
-CODE_C4C096:
+.lbl_C4C096
 	lda.l $7ECA66,x                      ;C4C096|BF66CA7E|7ECA66;  
 	dex                                  ;C4C09A|CA      |      ;  
 	dex                                  ;C4C09B|CA      |      ;  
-	bpl CODE_C4C0A1                      ;C4C09C|1003    |C4C0A1;  
+	bpl .lbl_C4C0A1                      ;C4C09C|1003    |C4C0A1;  
 	.db $A2,$FE,$07                       ;C4C09E
-
-CODE_C4C0A1:
+.lbl_C4C0A1
 	cmp.w #$FFFD                         ;C4C0A1|C9FDFF  |      ;  
 	beq UNREACH_C4C0C3                   ;C4C0A4|F01D    |C4C0C3;  
 	cmp.w #$FF00                         ;C4C0A6|C900FF  |      ;  
-	bcs CODE_C4C0BB                      ;C4C0A9|B010    |C4C0BB;  
+	bcs .lbl_C4C0BB                      ;C4C0A9|B010    |C4C0BB;  
 	cmp.w #$FC00                         ;C4C0AB|C900FC  |      ;  
-	bcs CODE_C4C096                      ;C4C0AE|B0E6    |C4C096;  
+	bcs .lbl_C4C096                      ;C4C0AE|B0E6    |C4C096;  
 	sta.w $0000,y                        ;C4C0B0|990000  |7F0000;  
 	iny                                  ;C4C0B3|C8      |      ;  
 	iny                                  ;C4C0B4|C8      |      ;  
 	dec.b $DD                            ;C4C0B5|C6DD    |0000DD;  
-	bne CODE_C4C096                      ;C4C0B7|D0DD    |C4C096;  
+	bne .lbl_C4C096                      ;C4C0B7|D0DD    |C4C096;  
 	.db $28,$6B                           ;C4C0B9
-
-CODE_C4C0BB:
+.lbl_C4C0BB
 	sta.w $0000,y                        ;C4C0BB|990000  |7F0000;  
 	inc a                                ;C4C0BE|1A      |      ;  
-	bne CODE_C4C096                      ;C4C0BF|D0D5    |C4C096;  
+	bne .lbl_C4C096                      ;C4C0BF|D0D5    |C4C096;  
 	plp                                  ;C4C0C1|28      |      ;  
 	rtl                                  ;C4C0C2|6B      |      ;  
 
@@ -18713,10 +17852,9 @@ CODE_C4C0E0:
 	ldx.w #$0000                         ;C4C0F5|A20000  |      ;  
 	ldy.w #$00FE                         ;C4C0F8|A0FE00  |      ;  
 	cmp.l Text_FF1075,x                 ;C4C0FB|DF7510FF|FF1075;  
-	bcc CODE_C4C106                      ;C4C0FF|9005    |C4C106;  
+	bcc .lbl_C4C106                      ;C4C0FF|9005    |C4C106;  
 	.db $E8,$E8,$C8,$80,$F5               ;C4C101
-
-CODE_C4C106:
+.lbl_C4C106
 	sty.b $D8                            ;C4C106|84D8    |0000D8;  
 	ldy.w #$0000                         ;C4C108|A00000  |      ;  
 	ldx.b $02                   ;C4C10B|A602    |000002;  
@@ -18724,32 +17862,29 @@ CODE_C4C106:
 	lda.w $0000,x                        ;C4C10F|BD0000  |7E0000;  
 	beq UNREACH_C4C143                   ;C4C112|F02F    |C4C143;  
 	cmp.b #$14                           ;C4C114|C914    |      ;  
-	bcc CODE_C4C124                      ;C4C116|900C    |C4C124;  
+	bcc .lbl_C4C124                      ;C4C116|900C    |C4C124;  
 	cmp.b #$65                           ;C4C118|C965    |      ;  
-	bcs CODE_C4C124                      ;C4C11A|B008    |C4C124;  
+	bcs .lbl_C4C124                      ;C4C11A|B008    |C4C124;  
 	.db $C9,$17,$90,$01,$1A,$18,$69,$51   ;C4C11C
-
-CODE_C4C124:
+.lbl_C4C124
 	sta.b $DD                            ;C4C124|85DD    |0000DD;  
 	lda.b [$D6],y                        ;C4C126|B7D6    |0000D6;  
 	beq UNREACH_C4C146                   ;C4C128|F01C    |C4C146;  
 	cmp.b #$F0                           ;C4C12A|C9F0    |      ;  
 	bcs UNREACH_C4C149                   ;C4C12C|B01B    |C4C149;  
 	cmp.b #$14                           ;C4C12E|C914    |      ;  
-	bcc CODE_C4C13E                      ;C4C130|900C    |C4C13E;  
+	bcc .lbl_C4C13E                      ;C4C130|900C    |C4C13E;  
 	cmp.b #$65                           ;C4C132|C965    |      ;  
-	bcs CODE_C4C13E                      ;C4C134|B008    |C4C13E;  
+	bcs .lbl_C4C13E                      ;C4C134|B008    |C4C13E;  
 	cmp.b #$17                           ;C4C136|C917    |      ;  
-	bcc CODE_C4C13B                      ;C4C138|9001    |C4C13B;  
+	bcc .lbl_C4C13B                      ;C4C138|9001    |C4C13B;  
 	inc a                                ;C4C13A|1A      |      ;  
-
-CODE_C4C13B:
+.lbl_C4C13B
 	clc                                  ;C4C13B|18      |      ;  
 	adc.b #$51                           ;C4C13C|6951    |      ;  
-
-CODE_C4C13E:
+.lbl_C4C13E
 	cmp.b $DD                            ;C4C13E|C5DD    |0000DD;  
-	bne CODE_C4C154                      ;C4C140|D012    |C4C154;  
+	bne .lbl_C4C154                      ;C4C140|D012    |C4C154;  
 	.db $C8                               ;C4C142
 
 UNREACH_C4C143:
@@ -18761,8 +17896,7 @@ UNREACH_C4C146:
 UNREACH_C4C149:
 	.db $C9,$FF,$D0,$07,$C5,$DD,$D0,$03   ;C4C149
 	.db $28,$18,$6B                       ;C4C151
-
-CODE_C4C154:
+.lbl_C4C154
 	plp                                  ;C4C154|28      |      ;  
 	sec                                  ;C4C155|38      |      ;  
 	rtl                                  ;C4C156|6B      |      ;  
@@ -18779,21 +17913,19 @@ CODE_C4C157:
 	ldx.w #$0000                         ;C4C166|A20000  |      ;  
 	ldy.w #$00FE                         ;C4C169|A0FE00  |      ;  
 	cmp.l Text_FF1075,x                 ;C4C16C|DF7510FF|FF1075;  
-	bcc CODE_C4C177                      ;C4C170|9005    |C4C177;  
+	bcc .lbl_C4C177                      ;C4C170|9005    |C4C177;  
 	.db $E8,$E8,$C8,$80,$F5               ;C4C172
-
-CODE_C4C177:
+.lbl_C4C177
 	sty.b $D8                            ;C4C177|84D8    |0000D8;  
 	ldx.w #$FFFF                         ;C4C179|A2FFFF  |      ;  
 	txy                                  ;C4C17C|9B      |      ;  
-
-CODE_C4C17D:
+.lbl_C4C17D
 	inx                                  ;C4C17D|E8      |      ;  
 	iny                                  ;C4C17E|C8      |      ;  
 	lda.b [$D6],y                        ;C4C17F|B7D6    |0000D6;  
 	and.w #$00FF                         ;C4C181|29FF00  |      ;  
 	cmp.w #$00F0                         ;C4C184|C9F000  |      ;  
-	bcc CODE_C4C1A1                      ;C4C187|9018    |C4C1A1;  
+	bcc .lbl_C4C1A1                      ;C4C187|9018    |C4C1A1;  
 	cmp.w #$00F4                         ;C4C189|C9F400  |      ;  
 	bcc UNREACH_C4C19A                   ;C4C18C|900C    |C4C19A;  
 	beq UNREACH_C4C194                   ;C4C18E|F004    |C4C194;  
@@ -18806,10 +17938,9 @@ UNREACH_C4C194:
 
 UNREACH_C4C19A:
 	.db $B7,$D6,$C8,$EB,$29,$FF,$03       ;C4C19A|        |0000D6;  
-
-CODE_C4C1A1:
+.lbl_C4C1A1
 	cmp.b $02                   ;C4C1A1|C502    |000002;  
-	bne CODE_C4C17D                      ;C4C1A3|D0D8    |C4C17D;  
+	bne .lbl_C4C17D                      ;C4C1A3|D0D8    |C4C17D;  
 	inx                                  ;C4C1A5|E8      |      ;  
 	stx.b $00                            ;C4C1A6|8600    |000000;  
 	plp                                  ;C4C1A8|28      |      ;  
@@ -18823,11 +17954,10 @@ CODE_C4C1AA:
 	lda.b $00                            ;C4C1AF|A500    |000000;  
 	and.w #$00FF                         ;C4C1B1|29FF00  |      ;  
 	dec a                                ;C4C1B4|3A      |      ;  
-	beq CODE_C4C1E1                      ;C4C1B5|F02A    |C4C1E1;  
+	beq .lbl_C4C1E1                      ;C4C1B5|F02A    |C4C1E1;  
 	asl a                                ;C4C1B7|0A      |      ;  
 	tax                                  ;C4C1B8|AA      |      ;  
-
-CODE_C4C1B9:
+.lbl_C4C1B9
 	ldy.w #$0000                         ;C4C1B9|A00000  |      ;  
 
 CODE_C4C1BC:
@@ -18837,12 +17967,11 @@ CODE_C4C1BC:
 	sta.b $02                   ;C4C1C2|8502    |000002;  
 	lda.b $04                   ;C4C1C4|A504    |000004;  
 	sbc.w UNREACH_C4C22B,x               ;C4C1C6|FD2BC2  |C4C22B;  
-	bcc CODE_C4C1D0                      ;C4C1C9|9005    |C4C1D0;  
+	bcc .lbl_C4C1D0                      ;C4C1C9|9005    |C4C1D0;  
 	sta.b $04                   ;C4C1CB|8504    |000004;  
 	iny                                  ;C4C1CD|C8      |      ;  
 	bra CODE_C4C1BC                      ;C4C1CE|80EC    |C4C1BC;  
-
-CODE_C4C1D0:
+.lbl_C4C1D0
 	clc                                  ;C4C1D0|18      |      ;  
 	lda.b $02                   ;C4C1D1|A502    |000002;  
 	adc.w CODE_C4C217,x                  ;C4C1D3|7D17C2  |C4C217;  
@@ -18851,9 +17980,8 @@ CODE_C4C1D0:
 	sta.l $7ECA52,x                      ;C4C1D9|9F52CA7E|7ECA52;  
 	dex                                  ;C4C1DD|CA      |      ;  
 	dex                                  ;C4C1DE|CA      |      ;  
-	bne CODE_C4C1B9                      ;C4C1DF|D0D8    |C4C1B9;  
-
-CODE_C4C1E1:
+	bne .lbl_C4C1B9                      ;C4C1DF|D0D8    |C4C1B9;  
+.lbl_C4C1E1
 	lda.b $02                   ;C4C1E1|A502    |000002;  
 	sta.l $7ECA52                        ;C4C1E3|8F52CA7E|7ECA52;  
 	plp                                  ;C4C1E7|28      |      ;  
@@ -18867,30 +17995,27 @@ CODE_C4C1E9:
 	lda.b $00                            ;C4C1EE|A500    |000000;  
 	and.w #$00FF                         ;C4C1F0|29FF00  |      ;  
 	dec a                                ;C4C1F3|3A      |      ;  
-	beq CODE_C4C211                      ;C4C1F4|F01B    |C4C211;  
+	beq .lbl_C4C211                      ;C4C1F4|F01B    |C4C211;  
 	asl a                                ;C4C1F6|0A      |      ;  
 	tax                                  ;C4C1F7|AA      |      ;  
-
-CODE_C4C1F8:
+.lbl_C4C1F8
 	ldy.w #$0000                         ;C4C1F8|A00000  |      ;  
 	lda.b $02                   ;C4C1FB|A502    |000002;  
 
 CODE_C4C1FD:
 	sec                                  ;C4C1FD|38      |      ;  
 	sbc.w CODE_C4C217,x                  ;C4C1FE|FD17C2  |C4C217;  
-	bcc CODE_C4C208                      ;C4C201|9005    |C4C208;  
+	bcc .lbl_C4C208                      ;C4C201|9005    |C4C208;  
 	sta.b $02                   ;C4C203|8502    |000002;  
 	iny                                  ;C4C205|C8      |      ;  
 	bra CODE_C4C1FD                      ;C4C206|80F5    |C4C1FD;  
-
-CODE_C4C208:
+.lbl_C4C208
 	tya                                  ;C4C208|98      |      ;  
 	sta.l $7ECA52,x                      ;C4C209|9F52CA7E|7ECA52;  
 	dex                                  ;C4C20D|CA      |      ;  
 	dex                                  ;C4C20E|CA      |      ;  
-	bne CODE_C4C1F8                      ;C4C20F|D0E7    |C4C1F8;  
-
-CODE_C4C211:
+	bne .lbl_C4C1F8                      ;C4C20F|D0E7    |C4C1F8;  
+.lbl_C4C211
 	lda.b $02                   ;C4C211|A502    |000002;  
 	sta.l $7ECA52                        ;C4C213|8F52CA7E|7ECA52;  
 
@@ -19008,16 +18133,15 @@ DATA8_C4C431:
 	jsl.l func_80DD40                    ;C4C438|2240DD80|80DD40;  
 	plx                                  ;C4C43C|FA      |      ;  
 	ldy.w #$0000                         ;C4C43D|A00000  |      ;  
-
-CODE_C4C440:
+.lbl_C4C440
 	sep #$20                             ;C4C440|E220    |      ;  
 	jsr.w CODE_C4C472                    ;C4C442|2072C4  |C4C472;  
-	beq CODE_C4C46E                      ;C4C445|F027    |C4C46E;  
+	beq .lbl_C4C46E                      ;C4C445|F027    |C4C46E;  
 	rep #$20                             ;C4C447|C220    |      ;  
 	lda.b $02                   ;C4C449|A502    |000002;  
 	bne UNREACH_C4C463                   ;C4C44B|D016    |C4C463;  
 	lda.b $00                            ;C4C44D|A500    |000000;  
-	beq CODE_C4C440                      ;C4C44F|F0EF    |C4C440;  
+	beq .lbl_C4C440                      ;C4C44F|F0EF    |C4C440;  
 	.db $D9,$9C,$C4,$D0,$E7,$C8,$C8,$B9   ;C4C451|        |00C49C;  
 	.db $9C,$C4,$1A,$D0,$E2,$A9,$00,$00   ;C4C459|        |001AC4;  
 	.db $80,$03                           ;C4C461|        |C4C466;  
@@ -19031,8 +18155,7 @@ CODE_C4C466:
 	stx.b $06                            ;C4C46A|8606    |000006;  
 	plp                                  ;C4C46C|28      |      ;  
 	rtl                                  ;C4C46D|6B      |      ;  
-
-CODE_C4C46E:
+.lbl_C4C46E
 	lda.b #$01                           ;C4C46E|A901    |      ;  
 	bra CODE_C4C466                      ;C4C470|80F4    |C4C466;  
 
@@ -19050,7 +18173,7 @@ CODE_C4C472:
 	plx                                  ;C4C484|FA      |      ;  
 	ldy.b $00                            ;C4C485|A400    |000000;  
 	sty.b $02                   ;C4C487|8402    |000002;  
-	bne CODE_C4C499                      ;C4C489|D00E    |C4C499;  
+	bne .lbl_C4C499                      ;C4C489|D00E    |C4C499;  
 	lda.b #$02                           ;C4C48B|A902    |      ;  
 	sta.b $00                            ;C4C48D|8500    |000000;  
 	phx                                  ;C4C48F|DA      |      ;  
@@ -19060,8 +18183,7 @@ CODE_C4C472:
 	plb                                  ;C4C496|AB      |      ;  
 	ply                                  ;C4C497|7A      |      ;  
 	plx                                  ;C4C498|FA      |      ;  
-
-CODE_C4C499:
+.lbl_C4C499
 	ply                                  ;C4C499|7A      |      ;  
 	dex                                  ;C4C49A|CA      |      ;  
 	rts                                  ;C4C49B|60      |      ;  
