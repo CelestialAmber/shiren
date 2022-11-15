@@ -2,24 +2,24 @@
 .org $0000 ;$C10000
 .base $c0
 
-CODE_C10000:
+func_C10000:
 	php                                  ;C10000|08      |      ;  
 	rep #$20                             ;C10001|C220    |      ;  
 	sep #$10                             ;C10003|E210    |      ;  
 	tsc                                  ;C10005|3B      |      ;  
 	sta.l $7E859F                        ;C10006|8F9F857E|7E859F;  
-	lda.b $00                            ;C1000A|A500    |000000;  
+	lda.b w0000                           ;C1000A|A500    |000000;  
 	pha                                  ;C1000C|48      |      ;  
-	jsl.l CODE_C210AC                    ;C1000D|22AC10C2|C210AC;  
-	ldy.b $04                   ;C10011|A404    |000004;  
-	cpy.b $03                            ;C10013|C403    |000003;  
-	beq .lbl_C10029                      ;C10015|F012    |C10029;  
+	jsl.l func_C210AC                    ;C1000D|22AC10C2|C210AC;  
+	ldy.b w0004                   ;C10011|A404    |000004;  
+	cpy.b w0003                            ;C10013|C403    |000003;  
+	beq @lbl_C10029                      ;C10015|F012    |C10029;  
 	.db $68,$85,$02,$A9,$EB,$08,$85,$00   ;C10017
 	.db $22,$25,$25,$C6,$22,$37,$24,$C6   ;C1001F|        |C62525;  
 	.db $28,$6B                           ;C10027
-.lbl_C10029
+@lbl_C10029:
 	pla                                  ;C10029|68      |      ;  
-	sta.b $00                            ;C1002A|8500    |000000;  
+	sta.b w0000                           ;C1002A|8500    |000000;  
 	sep #$30                             ;C1002C|E230    |      ;  
 	lda.b w0001                            ;C1002E|A501    |000001;  
 	sec                                  ;C10030|38      |      ;  
@@ -32,10 +32,10 @@ CODE_C10000:
 	sep #$10                             ;C1003E|E210    |      ;  
 	pea.w $0046                          ;C10040|F44600  |7E0046;  
 	pha                                  ;C10043|48      |      ;  
-	ldx.b $00                            ;C10044|A600    |000000;  
+	ldx.b w0000                            ;C10044|A600    |000000;  
 	rts                                  ;C10046|60      |      ;  
 	sep #$30                             ;C10047|E230    |      ;  
-	jsl.l CODE_C62437                    ;C10049|223724C6|C62437;  
+	jsl.l func_C62437                    ;C10049|223724C6|C62437;  
 	plp                                  ;C1004D|28      |      ;  
 	rtl                                  ;C1004E|6B      |      ;  
 
@@ -95,33 +95,32 @@ DATA8_C1004F:
 	.db $34,$4A,$42,$4A,$50,$4A,$5E,$4A   ;C1014B|        |00004A;  
 	.db $8C,$4A,$8D,$4A                   ;C10153|        |008D4A;  
 
-CODE_C10157:
+func_C10157:
 	php                                  ;C10157|08      |      ;  
 	sep #$30                             ;C10158|E230    |      ;  
 	ldx.b #$FF                           ;C1015A|A2FF    |      ;  
-.lbl_C1015C
+@lbl_C1015C:
 	inx                                  ;C1015C|E8      |      ;  
 	lda.l $7E894F,x                      ;C1015D|BF4F897E|7E894F;  
-	bpl .lbl_C1015C                      ;C10161|10F9    |C1015C;  
+	bpl @lbl_C1015C                      ;C10161|10F9    |C1015C;  
 	cpx.b #$14                           ;C10163|E014    |      ;  
-	bcs UNREACH_C1016F                   ;C10165|B008    |C1016F;  
-	lda.b $00                            ;C10167|A500    |000000;  
+	bcs @lbl_C1016F                   ;C10165|B008    |C1016F;  
+	lda.b w0000                           ;C10167|A500    |000000;  
 	sta.l $7E894F,x                      ;C10169|9F4F897E|7E894F;  
 	plp                                  ;C1016D|28      |      ;  
 	rtl                                  ;C1016E|6B      |      ;  
-
-UNREACH_C1016F:
+@lbl_C1016F:
 	.db $A6,$00,$A9,$13,$85,$00,$DA,$22   ;C1016F|        |000000;  
 	.db $AC,$10,$C2,$FA,$C2,$20,$A5,$00   ;C10177|        |00C210;  
 	.db $85,$02,$86,$00,$22,$D1,$30,$C3   ;C1017F|        |000002;  
 	.db $28,$6B                           ;C10187
 
-CODE_C10189:
+func_C10189:
 	php                                  ;C10189|08      |      ;  
 	sep #$30                             ;C1018A|E230    |      ;  
-	jsl.l CODE_C28A92                    ;C1018C|22928AC2|C28A92;  
-	jsl.l CODE_C3001F                    ;C10190|221F00C3|C3001F;  
-	jsl.l CODE_C300D2                    ;C10194|22D200C3|C300D2;  
+	jsl.l func_C28A92                    ;C1018C|22928AC2|C28A92;  
+	jsl.l func_C3001F                    ;C10190|221F00C3|C3001F;  
+	jsl.l func_C300D2                    ;C10194|22D200C3|C300D2;  
 	plp                                  ;C10198|28      |      ;  
 	rts                                  ;C10199|60      |      ;  
 	.db $08,$E2,$30,$22,$CE,$8A,$C2,$22   ;C1019A
@@ -130,39 +129,28 @@ CODE_C10189:
 	.db $04,$C6,$68,$1A,$D0,$F3,$28,$60   ;C101B2|        |0000C6;  
 	rep #$20                             ;C101BA|C220    |      ;  
 	lda.w #$0689                         ;C101BC|A98906  |      ;  
-	sta.b $00                            ;C101BF|8500    |000000;  
+	sta.b w0000                           ;C101BF|8500    |000000;  
 	jsl.l DisplayMessage                    ;C101C1|222525C6|C62525;  
 	rts                                  ;C101C5|60      |      ;  
 	sep #$20                             ;C101C6|E220    |      ;  
 	rep #$10                             ;C101C8|C210    |      ;  
 	phx                                  ;C101CA|DA      |      ;  
-	lda.b #$17                           ;C101CB|A917    |      ;  
-	sta.b $00                            ;C101CD|8500    |000000;  
-	jsl.l CODE_C60512                    ;C101CF|221205C6|C60512;  
-	lda.b $00                            ;C101D3|A500    |000000;  
+	GetEvent Event17
 	plx                                  ;C101D5|FA      |      ;  
 	bit.b #$01                           ;C101D6|8901    |      ;  
-	beq .lbl_C101E4                      ;C101D8|F00A    |C101E4;  
+	beq @lbl_C101E4                      ;C101D8|F00A    |C101E4;  
 	.db $A0,$E0,$08,$84,$00,$22,$25,$25   ;C101DA
 	.db $C6,$60                           ;C101E2|        |000060;  
-.lbl_C101E4
-	lda.b #$1B                           ;C101E4|A91B    |      ;  
-	sta.b $00                            ;C101E6|8500    |000000;  
-	jsl.l CODE_C60512                    ;C101E8|221205C6|C60512;  
-	lda.b $00                            ;C101EC|A500    |000000;  
+@lbl_C101E4:
+	GetEvent Event1B
 	cmp.b #$02                           ;C101EE|C902    |      ;  
-	bcs UNREACH_C10208                   ;C101F0|B016    |C10208;  
+	bcs @lbl_C10208                   ;C101F0|B016    |C10208;  
 	ldy.w #$0693                         ;C101F2|A09306  |      ;  
-	sty.b $00                            ;C101F5|8400    |000000;  
+	sty.b w0000                            ;C101F5|8400    |000000;  
 	jsl.l DisplayMessage                    ;C101F7|222525C6|C62525;  
-	lda.b #$1B                           ;C101FB|A91B    |      ;  
-	sta.b $00                            ;C101FD|8500    |000000;  
-	lda.b #$01                           ;C101FF|A901    |      ;  
-	sta.b $02                   ;C10201|8502    |000002;  
-	jsl.l CODE_C60479                    ;C10203|227904C6|C60479;  
+	SetEvent Event1B $01                    ;C10203|227904C6|C60479;  
 	rts                                  ;C10207|60      |      ;  
-
-UNREACH_C10208:
+@lbl_C10208:
 	.db $A0,$C4,$08,$84,$00,$22,$25,$25   ;C10208
 	.db $C6,$60,$E2,$30,$BF,$71,$88,$7E   ;C10210|        |000060;  
 	.db $D0,$18,$C2,$20,$A9,$94,$06,$85   ;C10218|        |C10232;  
@@ -250,34 +238,33 @@ UNREACH_C10208:
 	rep #$10                             ;C104A2|C210    |      ;  
 	txa                                  ;C104A4|8A      |      ;  
 	pha                                  ;C104A5|48      |      ;  
-	jsr.w CODE_C104AB                    ;C104A6|20AB04  |C104AB;  
+	jsr.w func_C104AB                    ;C104A6|20AB04  |C104AB;  
 	pla                                  ;C104A9|68      |      ;  
 	rts                                  ;C104AA|60      |      ;  
 
-CODE_C104AB:
+func_C104AB:
 	sep #$20                             ;C104AB|E220    |      ;  
 	rep #$10                             ;C104AD|C210    |      ;  
 	lda.l $7E8871,x                      ;C104AF|BF71887E|7E8871;  
-	bne UNREACH_C104E0                   ;C104B3|D02B    |C104E0;  
+	bne @lbl_C104E0                   ;C104B3|D02B    |C104E0;  
 	ldy.w #$07EB                         ;C104B5|A0EB07  |      ;  
-	sty.b $00                            ;C104B8|8400    |000000;  
-	jsl.l CODE_C62B7E                    ;C104BA|227E2BC6|C62B7E;  
-	lda.b $00                            ;C104BE|A500    |000000;  
-	beq .lbl_C104CC                      ;C104C0|F00A    |C104CC;  
+	sty.b w0000                            ;C104B8|8400    |000000;  
+	jsl.l func_C62B7E                    ;C104BA|227E2BC6|C62B7E;  
+	lda.b w0000                           ;C104BE|A500    |000000;  
+	beq @lbl_C104CC                      ;C104C0|F00A    |C104CC;  
 	.db $A0,$EC,$07,$84,$00,$22,$25,$25   ;C104C2
 	.db $C6,$60                           ;C104CA|        |000060;  
-.lbl_C104CC
+@lbl_C104CC:
 	tdc                                  ;C104CC|7B      |      ;  
-	lda.b $03,s                          ;C104CD|A303    |000003;  
+	lda.b w0003,s                          ;C104CD|A303    |000003;  
 	tax                                  ;C104CF|AA      |      ;  
 	lda.b #$01                           ;C104D0|A901    |      ;  
 	sta.l $7E8871,x                      ;C104D2|9F71887E|7E8871;  
 	ldy.w #$07F0                         ;C104D6|A0F007  |      ;  
-	sty.b $00                            ;C104D9|8400    |000000;  
+	sty.b w0000                            ;C104D9|8400    |000000;  
 	jsl.l DisplayMessage                    ;C104DB|222525C6|C62525;  
 	rts                                  ;C104DF|60      |      ;  
-
-UNREACH_C104E0:
+@lbl_C104E0:
 	.db $C9,$02,$B0,$0A,$A0,$F0,$07,$84   ;C104E0
 	.db $00,$22,$25,$25,$C6,$60,$C9,$03   ;C104E8
 	.db $90,$03,$4C,$7F,$05,$A9,$89,$85   ;C104F0|        |C104F5;  
@@ -317,41 +304,40 @@ UNREACH_C104E0:
 	sep #$20                             ;C105FD|E220    |      ;  
 	rep #$10                             ;C105FF|C210    |      ;  
 	lda.l $7E8871,x                      ;C10601|BF71887E|7E8871;  
-	bne UNREACH_C10661                   ;C10605|D05A    |C10661;  
+	bne @lbl_C10661                   ;C10605|D05A    |C10661;  
 	ldy.w #$06CA                         ;C10607|A0CA06  |      ;  
-	sty.b $00                            ;C1060A|8400    |000000;  
+	sty.b w0000                            ;C1060A|8400    |000000;  
 	phx                                  ;C1060C|DA      |      ;  
-	jsl.l CODE_C62B7E                    ;C1060D|227E2BC6|C62B7E;  
+	jsl.l func_C62B7E                    ;C1060D|227E2BC6|C62B7E;  
 	plx                                  ;C10611|FA      |      ;  
-	lda.b $00                            ;C10612|A500    |000000;  
-	beq .lbl_C10635                      ;C10614|F01F    |C10635;  
+	lda.b w0000                           ;C10612|A500    |000000;  
+	beq @lbl_C10635                      ;C10614|F01F    |C10635;  
 	.db $A0,$CB,$06,$84,$00,$DA,$22,$7E   ;C10616
 	.db $2B,$C6,$FA,$A5,$00,$F0,$10,$A9   ;C1061E
 	.db $01,$9F,$71,$88,$7E,$A0,$CC,$06   ;C10626|        |00009F;  
 	.db $84,$00,$22,$25,$25,$C6,$60       ;C1062E|        |000000;  
-.lbl_C10635
+@lbl_C10635:
 	lda.b #$03                           ;C10635|A903    |      ;  
-	sta.b $00                            ;C10637|8500    |000000;  
+	sta.b w0000                           ;C10637|8500    |000000;  
 	lda.b #$01                           ;C10639|A901    |      ;  
-	sta.b $02                   ;C1063B|8502    |000002;  
+	sta.b w0002                   ;C1063B|8502    |000002;  
 	phx                                  ;C1063D|DA      |      ;  
-	jsl.l CODE_C60479                    ;C1063E|227904C6|C60479;  
+	jsl.l _SetEvent                    ;C1063E|227904C6|C60479;  
 	plx                                  ;C10642|FA      |      ;  
 	ldy.w #$06CE                         ;C10643|A0CE06  |      ;  
-	sty.b $00                            ;C10646|8400    |000000;  
+	sty.b w0000                            ;C10646|8400    |000000;  
 	phx                                  ;C10648|DA      |      ;  
 	jsl.l DisplayMessage                    ;C10649|222525C6|C62525;  
 	plx                                  ;C1064D|FA      |      ;  
-	stx.b $00                            ;C1064E|8600    |000000;  
-	jsl.l CODE_C20F35                    ;C10650|22350FC2|C20F35;  
+	stx.b w0000                            ;C1064E|8600    |000000;  
+	jsl.l func_C20F35                    ;C10650|22350FC2|C20F35;  
 	lda.b #$13                           ;C10654|A913    |      ;  
-	sta.b $00                            ;C10656|8500    |000000;  
+	sta.b w0000                           ;C10656|8500    |000000;  
 	lda.b #$32                           ;C10658|A932    |      ;  
 	sta.b w0001                            ;C1065A|8501    |000001;  
-	jsl.l CODE_C240A7                    ;C1065C|22A740C2|C240A7;  
+	jsl.l func_C240A7                    ;C1065C|22A740C2|C240A7;  
 	rts                                  ;C10660|60      |      ;  
-
-UNREACH_C10661:
+@lbl_C10661:
 	.db $3A,$D0,$0A,$A0,$CD,$06,$84,$00   ;C10661
 	.db $22,$25,$25,$C6,$60,$3A,$D0,$13   ;C10669|        |C62525;  
 	.db $A9,$03,$85,$00,$A9,$03,$85,$02   ;C10671
@@ -383,37 +369,29 @@ UNREACH_C10661:
 	sep #$20                             ;C1073D|E220    |      ;  
 	rep #$10                             ;C1073F|C210    |      ;  
 	phx                                  ;C10741|DA      |      ;  
-	lda.b #$09                           ;C10742|A909    |      ;  
-	sta.b $00                            ;C10744|8500    |000000;  
-	jsl.l CODE_C60512                    ;C10746|221205C6|C60512;  
-	lda.b $00                            ;C1074A|A500    |000000;  
+	GetEvent Event09
 	plx                                  ;C1074C|FA      |      ;  
 	cmp.b #$08                           ;C1074D|C908    |      ;  
-	bne .lbl_C10754                      ;C1074F|D003    |C10754;  
+	bne @lbl_C10754                      ;C1074F|D003    |C10754;  
 	.db $4C,$A9,$07                       ;C10751|        |C107A9;  
-.lbl_C10754
+@lbl_C10754:
 	lda.l $7E8871,x                      ;C10754|BF71887E|7E8871;  
 	dec a                                ;C10758|3A      |      ;  
-	bpl .lbl_C10765                      ;C10759|100A    |C10765;  
+	bpl @lbl_C10765                      ;C10759|100A    |C10765;  
 	ldy.w #$06B1                         ;C1075B|A0B106  |      ;  
-	sty.b $00                            ;C1075E|8400    |000000;  
+	sty.b w0000                            ;C1075E|8400    |000000;  
 	jsl.l DisplayMessage                    ;C10760|222525C6|C62525;  
 	rts                                  ;C10764|60      |      ;  
-.lbl_C10765
+@lbl_C10765:
 	dec a                                ;C10765|3A      |      ;  
 	dec a                                ;C10766|3A      |      ;  
-	bpl UNREACH_C1077F                   ;C10767|1016    |C1077F;  
+	bpl @lbl_C1077F                   ;C10767|1016    |C1077F;  
 	ldy.w #$06CF                         ;C10769|A0CF06  |      ;  
-	sty.b $00                            ;C1076C|8400    |000000;  
+	sty.b w0000                            ;C1076C|8400    |000000;  
 	jsl.l DisplayMessage                    ;C1076E|222525C6|C62525;  
-	lda.b #$03                           ;C10772|A903    |      ;  
-	sta.b $00                            ;C10774|8500    |000000;  
-	lda.b #$02                           ;C10776|A902    |      ;  
-	sta.b $02                   ;C10778|8502    |000002;  
-	jsl.l CODE_C60479                    ;C1077A|227904C6|C60479;  
+	SetEvent Event_Oryu 2                    ;C1077A|227904C6|C60479;  
 	rts                                  ;C1077E|60      |      ;  
-
-UNREACH_C1077F:
+@lbl_C1077F:
 	.db $3A,$10,$03,$4C,$29,$08,$DA,$A9   ;C1077F
 	.db $17,$85,$00,$22,$12,$05,$C6,$A5   ;C10787|        |000085;  
 	.db $00,$FA,$89,$01,$F0,$0A,$A0,$EF   ;C1078F
@@ -424,37 +402,29 @@ UNREACH_C1077F:
 	sep #$20                             ;C107B3|E220    |      ;  
 	rep #$10                             ;C107B5|C210    |      ;  
 	phx                                  ;C107B7|DA      |      ;  
-	lda.b #$09                           ;C107B8|A909    |      ;  
-	sta.b $00                            ;C107BA|8500    |000000;  
-	jsl.l CODE_C60512                    ;C107BC|221205C6|C60512;  
-	lda.b $00                            ;C107C0|A500    |000000;  
+	GetEvent Event09
 	plx                                  ;C107C2|FA      |      ;  
 	cmp.b #$08                           ;C107C3|C908    |      ;  
-	bne .lbl_C107CA                      ;C107C5|D003    |C107CA;  
+	bne @lbl_C107CA                      ;C107C5|D003    |C107CA;  
 	.db $4C,$1F,$08                       ;C107C7|        |C1081F;  
-.lbl_C107CA
+@lbl_C107CA:
 	lda.l $7E8871,x                      ;C107CA|BF71887E|7E8871;  
 	dec a                                ;C107CE|3A      |      ;  
-	bpl .lbl_C107DB                      ;C107CF|100A    |C107DB;  
+	bpl @lbl_C107DB                      ;C107CF|100A    |C107DB;  
 	ldy.w #$06B2                         ;C107D1|A0B206  |      ;  
-	sty.b $00                            ;C107D4|8400    |000000;  
+	sty.b w0000                            ;C107D4|8400    |000000;  
 	jsl.l DisplayMessage                    ;C107D6|222525C6|C62525;  
 	rts                                  ;C107DA|60      |      ;  
-.lbl_C107DB
+@lbl_C107DB:
 	dec a                                ;C107DB|3A      |      ;  
 	dec a                                ;C107DC|3A      |      ;  
-	bpl UNREACH_C107F5                   ;C107DD|1016    |C107F5;  
+	bpl @lbl_C107F5                   ;C107DD|1016    |C107F5;  
 	ldy.w #$06D0                         ;C107DF|A0D006  |      ;  
-	sty.b $00                            ;C107E2|8400    |000000;  
+	sty.b w0000                            ;C107E2|8400    |000000;  
 	jsl.l DisplayMessage                    ;C107E4|222525C6|C62525;  
-	lda.b #$03                           ;C107E8|A903    |      ;  
-	sta.b $00                            ;C107EA|8500    |000000;  
-	lda.b #$02                           ;C107EC|A902    |      ;  
-	sta.b $02                   ;C107EE|8502    |000002;  
-	jsl.l CODE_C60479                    ;C107F0|227904C6|C60479;  
+	SetEvent Event_Oryu 2                    ;C107F0|227904C6|C60479;  
 	rts                                  ;C107F4|60      |      ;  
-
-UNREACH_C107F5:
+@lbl_C107F5:
 	.db $3A,$10,$03,$4C,$68,$08,$DA,$A9   ;C107F5
 	.db $17,$85,$00,$22,$12,$05,$C6,$A5   ;C107FD|        |000085;  
 	.db $00,$FA,$89,$01,$F0,$0A,$A0,$F0   ;C10805
@@ -482,81 +452,78 @@ UNREACH_C107F5:
 	rep #$10                             ;C108A8|C210    |      ;  
 	txa                                  ;C108AA|8A      |      ;  
 	pha                                  ;C108AB|48      |      ;  
-	jsr.w CODE_C108B1                    ;C108AC|20B108  |C108B1;  
+	jsr.w func_C108B1                    ;C108AC|20B108  |C108B1;  
 	pla                                  ;C108AF|68      |      ;  
 	rts                                  ;C108B0|60      |      ;  
 
-CODE_C108B1:
-	jsl.l CODE_C627E6                    ;C108B1|22E627C6|C627E6;  
-	lda.b $00                            ;C108B5|A500    |000000;  
+func_C108B1:
+	jsl.l GetCurrentDungeon                    ;C108B1|22E627C6|C627E6;  
+	lda.b w0000                           ;C108B5|A500    |000000;  
 	cmp.b #$03                           ;C108B7|C903    |      ;  
-	bne .lbl_C108BE                      ;C108B9|D003    |C108BE;  
+	bne @lbl_C108BE                      ;C108B9|D003    |C108BE;  
 	.db $4C,$D0,$0E                       ;C108BB|        |C10ED0;  
-.lbl_C108BE
+@lbl_C108BE:
 	phx                                  ;C108BE|DA      |      ;  
 	txa                                  ;C108BF|8A      |      ;  
-	sta.b $00                            ;C108C0|8500    |000000;  
-	sta.b $02                   ;C108C2|8502    |000002;  
+	sta.b w0000                           ;C108C0|8500    |000000;  
+	sta.b w0002                   ;C108C2|8502    |000002;  
 	lda.b #$02                           ;C108C4|A902    |      ;  
 	sta.b w0001                            ;C108C6|8501    |000001;  
-	jsr.w CODE_C1681A                    ;C108C8|201A68  |C1681A;  
+	jsr.w func_C1681A                    ;C108C8|201A68  |C1681A;  
 	plx                                  ;C108CB|FA      |      ;  
 	lda.l $7E8871,x                      ;C108CC|BF71887E|7E8871;  
-	beq .lbl_C108D5                      ;C108D0|F003    |C108D5;  
+	beq @lbl_C108D5                      ;C108D0|F003    |C108D5;  
 	.db $4C,$6D,$0A                       ;C108D2|        |C10A6D;  
-.lbl_C108D5
-	lda.b #$84                           ;C108D5|A984    |      ;  
-	sta.b $00                            ;C108D7|8500    |000000;  
-	jsl.l CODE_C60512                    ;C108D9|221205C6|C60512;  
-	lda.b $00                            ;C108DD|A500    |000000;  
-	beq .lbl_C108E4                      ;C108DF|F003    |C108E4;  
+@lbl_C108D5:
+	GetEvent Event84
+	beq @lbl_C108E4                      ;C108DF|F003    |C108E4;  
 	.db $4C,$63,$0A                       ;C108E1|        |C10A63;  
-.lbl_C108E4
-	lda.b $03,s                          ;C108E4|A303    |000003;  
+@lbl_C108E4:
+	lda.b w0003,s                          ;C108E4|A303    |000003;  
 	inc a                                ;C108E6|1A      |      ;  
-	sta.b $00                            ;C108E7|8500    |000000;  
+	sta.b w0000                           ;C108E7|8500    |000000;  
 	ldy.w #$0FE1                         ;C108E9|A0E10F  |      ;  
-	sty.b $02                   ;C108EC|8402    |000002;  
+	sty.b w0002                   ;C108EC|8402    |000002;  
 	lda.b #$C1                           ;C108EE|A9C1    |      ;  
-	sta.b $04                   ;C108F0|8504    |000004;  
-	jsl.l CODE_C2938C                    ;C108F2|228C93C2|C2938C;  
+	sta.b w0004                   ;C108F0|8504    |000004;  
+	jsl.l func_C2938C                    ;C108F2|228C93C2|C2938C;  
 	ldy.w #$06E1                         ;C108F6|A0E106  |      ;  
-	sty.b $00                            ;C108F9|8400    |000000;  
+	sty.b w0000                            ;C108F9|8400    |000000;  
 	jsl.l DisplayMessage                    ;C108FB|222525C6|C62525;  
-	jsl.l CODE_C62405                    ;C108FF|220524C6|C62405;  
-	lda.b $03,s                          ;C10903|A303    |000003;  
-	sta.b $00                            ;C10905|8500    |000000;  
+	jsl.l func_C62405                    ;C108FF|220524C6|C62405;  
+	lda.b w0003,s                          ;C10903|A303    |000003;  
+	sta.b w0000                           ;C10905|8500    |000000;  
 	ldy.w #$0FE8                         ;C10907|A0E80F  |      ;  
-	sty.b $02                   ;C1090A|8402    |000002;  
+	sty.b w0002                   ;C1090A|8402    |000002;  
 	lda.b #$C1                           ;C1090C|A9C1    |      ;  
-	sta.b $04                   ;C1090E|8504    |000004;  
-	jsl.l CODE_C2938C                    ;C10910|228C93C2|C2938C;  
-	lda.b $03,s                          ;C10914|A303    |000003;  
-	sta.b $00                            ;C10916|8500    |000000;  
-	jsl.l CODE_C21591                    ;C10918|229115C2|C21591;  
-	lda.b $03,s                          ;C1091C|A303    |000003;  
-	sta.b $00                            ;C1091E|8500    |000000;  
+	sta.b w0004                   ;C1090E|8504    |000004;  
+	jsl.l func_C2938C                    ;C10910|228C93C2|C2938C;  
+	lda.b w0003,s                          ;C10914|A303    |000003;  
+	sta.b w0000                           ;C10916|8500    |000000;  
+	jsl.l func_C21591                    ;C10918|229115C2|C21591;  
+	lda.b w0003,s                          ;C1091C|A303    |000003;  
+	sta.b w0000                           ;C1091E|8500    |000000;  
 	lda.b #$C2                           ;C10920|A9C2    |      ;  
 	sta.b w0001                            ;C10922|8501    |000001;  
 	lda.b #$05                           ;C10924|A905    |      ;  
-	sta.b $02                   ;C10926|8502    |000002;  
-	jsl.l CODE_C2942A                    ;C10928|222A94C2|C2942A;  
-	jsl.l CODE_C62405                    ;C1092C|220524C6|C62405;  
+	sta.b w0002                   ;C10926|8502    |000002;  
+	jsl.l func_C2942A                    ;C10928|222A94C2|C2942A;  
+	jsl.l func_C62405                    ;C1092C|220524C6|C62405;  
 	ldy.w #$06E2                         ;C10930|A0E206  |      ;  
-	sty.b $00                            ;C10933|8400    |000000;  
+	sty.b w0000                            ;C10933|8400    |000000;  
 	jsl.l DisplayMessage                    ;C10935|222525C6|C62525;  
-	jsl.l CODE_C62405                    ;C10939|220524C6|C62405;  
-	lda.b $03,s                          ;C1093D|A303    |000003;  
+	jsl.l func_C62405                    ;C10939|220524C6|C62405;  
+	lda.b w0003,s                          ;C1093D|A303    |000003;  
 	inc a                                ;C1093F|1A      |      ;  
-	sta.b $00                            ;C10940|8500    |000000;  
+	sta.b w0000                           ;C10940|8500    |000000;  
 	ldy.w #$0FED                         ;C10942|A0ED0F  |      ;  
-	sty.b $02                   ;C10945|8402    |000002;  
+	sty.b w0002                   ;C10945|8402    |000002;  
 	lda.b #$C1                           ;C10947|A9C1    |      ;  
-	sta.b $04                   ;C10949|8504    |000004;  
-	jsl.l CODE_C2938C                    ;C1094B|228C93C2|C2938C;  
+	sta.b w0004                   ;C10949|8504    |000004;  
+	jsl.l func_C2938C                    ;C1094B|228C93C2|C2938C;  
 	lda.b #$00                           ;C1094F|A900    |      ;  
 	xba                                  ;C10951|EB      |      ;  
-	lda.b $03,s                          ;C10952|A303    |000003;  
+	lda.b w0003,s                          ;C10952|A303    |000003;  
 	inc a                                ;C10954|1A      |      ;  
 	tax                                  ;C10955|AA      |      ;  
 	lda.l $7E8871,x                      ;C10956|BF71887E|7E8871;  
@@ -564,41 +531,41 @@ CODE_C108B1:
 	sta.l $7E8871,x                      ;C1095B|9F71887E|7E8871;  
 	clc                                  ;C1095F|18      |      ;  
 	adc.b #$62                           ;C10960|6962    |      ;  
-	sta.b $02                   ;C10962|8502    |000002;  
+	sta.b w0002                   ;C10962|8502    |000002;  
 	ldy.w #$06E3                         ;C10964|A0E306  |      ;  
-	sty.b $00                            ;C10967|8400    |000000;  
+	sty.b w0000                            ;C10967|8400    |000000;  
 	jsl.l DisplayMessage                    ;C10969|222525C6|C62525;  
-	jsl.l CODE_C62405                    ;C1096D|220524C6|C62405;  
-	lda.b $03,s                          ;C10971|A303    |000003;  
+	jsl.l func_C62405                    ;C1096D|220524C6|C62405;  
+	lda.b w0003,s                          ;C10971|A303    |000003;  
 	inc a                                ;C10973|1A      |      ;  
-	sta.b $00                            ;C10974|8500    |000000;  
+	sta.b w0000                           ;C10974|8500    |000000;  
 	ldy.w #$0FF0                         ;C10976|A0F00F  |      ;  
-	sty.b $02                   ;C10979|8402    |000002;  
+	sty.b w0002                   ;C10979|8402    |000002;  
 	lda.b #$C1                           ;C1097B|A9C1    |      ;  
-	sta.b $04                   ;C1097D|8504    |000004;  
-	jsl.l CODE_C2938C                    ;C1097F|228C93C2|C2938C;  
-	lda.b $03,s                          ;C10983|A303    |000003;  
-	sta.b $00                            ;C10985|8500    |000000;  
+	sta.b w0004                   ;C1097D|8504    |000004;  
+	jsl.l func_C2938C                    ;C1097F|228C93C2|C2938C;  
+	lda.b w0003,s                          ;C10983|A303    |000003;  
+	sta.b w0000                           ;C10985|8500    |000000;  
 	ldy.w #$0FF3                         ;C10987|A0F30F  |      ;  
-	sty.b $02                   ;C1098A|8402    |000002;  
+	sty.b w0002                   ;C1098A|8402    |000002;  
 	lda.b #$C1                           ;C1098C|A9C1    |      ;  
-	sta.b $04                   ;C1098E|8504    |000004;  
-	jsl.l CODE_C2938C                    ;C10990|228C93C2|C2938C;  
+	sta.b w0004                   ;C1098E|8504    |000004;  
+	jsl.l func_C2938C                    ;C10990|228C93C2|C2938C;  
 	ldy.w #$06E4                         ;C10994|A0E406  |      ;  
-	sty.b $00                            ;C10997|8400    |000000;  
+	sty.b w0000                            ;C10997|8400    |000000;  
 	jsl.l DisplayMessage                    ;C10999|222525C6|C62525;  
-	jsr.w CODE_C10E35                    ;C1099D|20350E  |C10E35;  
+	jsr.w func_C10E35                    ;C1099D|20350E  |C10E35;  
 	cpx.w #$0000                         ;C109A0|E00000  |      ;  
-	bmi .lbl_C109BF                      ;C109A3|301A    |C109BF;  
+	bmi @lbl_C109BF                      ;C109A3|301A    |C109BF;  
 	.db $DA,$A0,$E6,$06,$84,$00,$22,$7E   ;C109A5
 	.db $2B,$C6,$A5,$00,$F0,$19,$FA,$A0   ;C109AD
 	.db $E7,$06,$84,$00,$22,$25,$25,$C6   ;C109B5|        |000006;  
 	.db $80,$09                           ;C109BD|        |C109C8;  
-.lbl_C109BF
+@lbl_C109BF:
 	ldy.w #$06E5                         ;C109BF|A0E506  |      ;  
-	sty.b $00                            ;C109C2|8400    |000000;  
+	sty.b w0000                            ;C109C2|8400    |000000;  
 	jsl.l DisplayMessage                    ;C109C4|222525C6|C62525;  
-	jsr.w CODE_C10E5D                    ;C109C8|205D0E  |C10E5D;  
+	jsr.w func_C10E5D                    ;C109C8|205D0E  |C10E5D;  
 	rts                                  ;C109CB|60      |      ;  
 	.db $A3,$05,$85,$00,$A0,$F5,$0F,$84   ;C109CC|        |000005;  
 	.db $02,$A9,$C1,$85,$04,$22,$8C,$93   ;C109D4
@@ -743,66 +710,65 @@ CODE_C108B1:
 	.db $00,$22,$7E,$2B,$C6,$A5,$00,$80   ;C10E2C
 	.db $DD                               ;C10E34|        |0000A2;  
 
-CODE_C10E35:
+func_C10E35:
 	ldx.w #$0000                         ;C10E35|A20000  |      ;  
-	bra CODE_C10E53                      ;C10E38|8019    |C10E53;  
-.lbl_C10E3A
-	sta.b $00                            ;C10E3A|8500    |000000;  
+	bra @lbl_C10E53                      ;C10E38|8019    |C10E53;  
+@lbl_C10E3A:
+	sta.b w0000                           ;C10E3A|8500    |000000;  
 	phx                                  ;C10E3C|DA      |      ;  
-	jsl.l CODE_C30710                    ;C10E3D|221007C3|C30710;  
+	jsl.l func_C30710                    ;C10E3D|221007C3|C30710;  
 	plx                                  ;C10E41|FA      |      ;  
-	lda.b $00                            ;C10E42|A500    |000000;  
+	lda.b w0000                           ;C10E42|A500    |000000;  
 	cmp.b #$0B                           ;C10E44|C90B    |      ;  
-	bne .lbl_C10E52                      ;C10E46|D00A    |C10E52;  
+	bne @lbl_C10E52                      ;C10E46|D00A    |C10E52;  
 	.db $A5,$01,$C9,$BE,$F0,$04,$C9,$C1   ;C10E48|        |000001;  
 	.db $D0,$0A                           ;C10E50|        |C10E5C;  
-.lbl_C10E52
+@lbl_C10E52:
 	inx                                  ;C10E52|E8      |      ;  
-
-CODE_C10E53:
+@lbl_C10E53:
 	lda.l $7E894F,x                      ;C10E53|BF4F897E|7E894F;  
-	bpl .lbl_C10E3A                      ;C10E57|10E1    |C10E3A;  
+	bpl @lbl_C10E3A                      ;C10E57|10E1    |C10E3A;  
 	ldx.w #$FFFF                         ;C10E59|A2FFFF  |      ;  
 	rts                                  ;C10E5C|60      |      ;  
 
-CODE_C10E5D:
+func_C10E5D:
 	lda.b #$47                           ;C10E5D|A947    |      ;  
-	sta.b $00                            ;C10E5F|8500    |000000;  
-	jsl.l CODE_C23BA6                    ;C10E61|22A63BC2|C23BA6;  
-	jsl.l CODE_C62405                    ;C10E65|220524C6|C62405;  
-	lda.b $05,s                          ;C10E69|A305    |000005;  
+	sta.b w0000                           ;C10E5F|8500    |000000;  
+	jsl.l func_C23BA6                    ;C10E61|22A63BC2|C23BA6;  
+	jsl.l func_C62405                    ;C10E65|220524C6|C62405;  
+	lda.b w0005,s                          ;C10E69|A305    |000005;  
 	inc a                                ;C10E6B|1A      |      ;  
-	sta.b $00                            ;C10E6C|8500    |000000;  
+	sta.b w0000                           ;C10E6C|8500    |000000;  
 	ldy.w #$1005                         ;C10E6E|A00510  |      ;  
-	sty.b $02                   ;C10E71|8402    |000002;  
+	sty.b w0002                   ;C10E71|8402    |000002;  
 	lda.b #$C1                           ;C10E73|A9C1    |      ;  
-	sta.b $04                   ;C10E75|8504    |000004;  
-	jsl.l CODE_C2938C                    ;C10E77|228C93C2|C2938C;  
-	lda.b $05,s                          ;C10E7B|A305    |000005;  
+	sta.b w0004                   ;C10E75|8504    |000004;  
+	jsl.l func_C2938C                    ;C10E77|228C93C2|C2938C;  
+	lda.b w0005,s                          ;C10E7B|A305    |000005;  
 	inc a                                ;C10E7D|1A      |      ;  
-	sta.b $00                            ;C10E7E|8500    |000000;  
-	jsl.l CODE_C21591                    ;C10E80|229115C2|C21591;  
+	sta.b w0000                           ;C10E7E|8500    |000000;  
+	jsl.l func_C21591                    ;C10E80|229115C2|C21591;  
 	lda.b #$13                           ;C10E84|A913    |      ;  
-	sta.b $00                            ;C10E86|8500    |000000;  
-	lda.b $05,s                          ;C10E88|A305    |000005;  
+	sta.b w0000                           ;C10E86|8500    |000000;  
+	lda.b w0005,s                          ;C10E88|A305    |000005;  
 	inc a                                ;C10E8A|1A      |      ;  
 	sta.b w0001                            ;C10E8B|8501    |000001;  
-	jsl.l CODE_C2444B                    ;C10E8D|224B44C2|C2444B;  
-	jsl.l CODE_C62405                    ;C10E91|220524C6|C62405;  
-	lda.b $05,s                          ;C10E95|A305    |000005;  
+	jsl.l func_C2444B                    ;C10E8D|224B44C2|C2444B;  
+	jsl.l func_C62405                    ;C10E91|220524C6|C62405;  
+	lda.b w0005,s                          ;C10E95|A305    |000005;  
 	inc a                                ;C10E97|1A      |      ;  
-	sta.b $00                            ;C10E98|8500    |000000;  
+	sta.b w0000                           ;C10E98|8500    |000000;  
 	ldy.w #$1008                         ;C10E9A|A00810  |      ;  
-	sty.b $02                   ;C10E9D|8402    |000002;  
+	sty.b w0002                   ;C10E9D|8402    |000002;  
 	lda.b #$C1                           ;C10E9F|A9C1    |      ;  
-	sta.b $04                   ;C10EA1|8504    |000004;  
-	jsl.l CODE_C2938C                    ;C10EA3|228C93C2|C2938C;  
+	sta.b w0004                   ;C10EA1|8504    |000004;  
+	jsl.l func_C2938C                    ;C10EA3|228C93C2|C2938C;  
 	ldy.w #$2528                         ;C10EA7|A02825  |      ;  
-	sty.b $02                   ;C10EAA|8402    |000002;  
+	sty.b w0002                   ;C10EAA|8402    |000002;  
 	lda.b #$13                           ;C10EAC|A913    |      ;  
-	sta.b $00                            ;C10EAE|8500    |000000;  
-	jsl.l CODE_C27951                    ;C10EB0|225179C2|C27951;  
-	jsl.l CODE_C6080E                    ;C10EB4|220E08C6|C6080E;  
+	sta.b w0000                           ;C10EAE|8500    |000000;  
+	jsl.l func_C27951                    ;C10EB0|225179C2|C27951;  
+	jsl.l func_C6080E                    ;C10EB4|220E08C6|C6080E;  
 	rts                                  ;C10EB8|60      |      ;  
 	.db $22,$05,$24,$C6,$A9,$13,$85,$00   ;C10EB9|        |C62405;  
 	.db $A0,$0B,$10,$84,$02,$A9,$C1,$85   ;C10EC1
@@ -895,19 +861,15 @@ CODE_C10E5D:
 	sep #$20                             ;C11172|E220    |      ;  
 	rep #$10                             ;C11174|C210    |      ;  
 	phx                                  ;C11176|DA      |      ;  
-	lda.b #$04                           ;C11177|A904    |      ;  
-	sta.b $00                            ;C11179|8500    |000000;  
-	jsl.l CODE_C60512                    ;C1117B|221205C6|C60512;  
-	lda.b $00                            ;C1117F|A500    |000000;  
+	GetEvent Event_Gaibara
 	plx                                  ;C11181|FA      |      ;  
 	cmp.b #$06                           ;C11182|C906    |      ;  
-	bcs UNREACH_C11190                   ;C11184|B00A    |C11190;  
+	bcs @lbl_C11190                   ;C11184|B00A    |C11190;  
 	ldy.w #$06B8                         ;C11186|A0B806  |      ;  
-	sty.b $00                            ;C11189|8400    |000000;  
+	sty.b w0000                            ;C11189|8400    |000000;  
 	jsl.l DisplayMessage                    ;C1118B|222525C6|C62525;  
 	rts                                  ;C1118F|60      |      ;  
-
-UNREACH_C11190:
+@lbl_C11190:
 	.db $BF,$71,$88,$7E,$D0,$0F,$1A,$9F   ;C11190|        |7E8871;  
 	.db $71,$88,$7E,$A0,$6D,$08,$84,$00   ;C11198|        |000088;  
 	.db $22,$25,$25,$C6,$60,$A0,$6E,$08   ;C111A0|        |C62525;  
@@ -922,83 +884,75 @@ UNREACH_C11190:
 	rep #$10                             ;C111E1|C210    |      ;  
 	txa                                  ;C111E3|8A      |      ;  
 	pha                                  ;C111E4|48      |      ;  
-	jsr.w CODE_C111EA                    ;C111E5|20EA11  |C111EA;  
+	jsr.w func_C111EA                    ;C111E5|20EA11  |C111EA;  
 	pla                                  ;C111E8|68      |      ;  
 	rts                                  ;C111E9|60      |      ;  
 
-CODE_C111EA:
+func_C111EA:
 	sep #$20                             ;C111EA|E220    |      ;  
 	rep #$10                             ;C111EC|C210    |      ;  
 	lda.l $7E8871,x                      ;C111EE|BF71887E|7E8871;  
-	beq .lbl_C111F7                      ;C111F2|F003    |C111F7;  
+	beq @lbl_C111F7                      ;C111F2|F003    |C111F7;  
 	.db $4C,$EA,$12                       ;C111F4|        |C112EA;  
-.lbl_C111F7
-	lda.b #$85                           ;C111F7|A985    |      ;  
-	sta.b $00                            ;C111F9|8500    |000000;  
-	jsl.l CODE_C60512                    ;C111FB|221205C6|C60512;  
-	lda.b $00                            ;C111FF|A500    |000000;  
+@lbl_C111F7:
+	GetEvent Event85
 	cmp.b #$02                           ;C11201|C902    |      ;  
-	bcc .lbl_C11212                      ;C11203|900D    |C11212;  
+	bcc @lbl_C11212                      ;C11203|900D    |C11212;  
 	.db $A0,$04,$07,$84,$00,$22,$7E,$2B   ;C11205
 	.db $C6,$A5,$00,$80,$17               ;C1120D|        |0000A5;  
-.lbl_C11212
-	lda.b #$85                           ;C11212|A985    |      ;  
-	sta.b $00                            ;C11214|8500    |000000;  
-	lda.b #$02                           ;C11216|A902    |      ;  
-	sta.b $02                   ;C11218|8502    |000002;  
-	jsl.l CODE_C60479                    ;C1121A|227904C6|C60479;  
+@lbl_C11212:
+	SetEvent Event85 $02                    ;C1121A|227904C6|C60479;  
 	ldy.w #$0703                         ;C1121E|A00307  |      ;  
-	sty.b $00                            ;C11221|8400    |000000;  
-	jsl.l CODE_C62B7E                    ;C11223|227E2BC6|C62B7E;  
-	lda.b $00                            ;C11227|A500    |000000;  
-	beq .lbl_C1123F                      ;C11229|F014    |C1123F;  
+	sty.b w0000                            ;C11221|8400    |000000;  
+	jsl.l func_C62B7E                    ;C11223|227E2BC6|C62B7E;  
+	lda.b w0000                           ;C11227|A500    |000000;  
+	beq @lbl_C1123F                      ;C11229|F014    |C1123F;  
 	.db $A0,$05,$07,$84,$00,$22,$25,$25   ;C1122B
 	.db $C6,$60                           ;C11233|        |000060;  
-
-UNREACH_C11235:
+@lbl_C11235:
 	.db $A0,$06,$07,$84,$00,$22,$25,$25   ;C11235
 	.db $C6,$60                           ;C1123D|        |000060;  
-.lbl_C1123F
+@lbl_C1123F:
 	ldy.w #$00C8                         ;C1123F|A0C800  |      ;  
-	sty.b $00                            ;C11242|8400    |000000;  
+	sty.b w0000                            ;C11242|8400    |000000;  
 	ldy.w #$0000                         ;C11244|A00000  |      ;  
-	sty.b $02                   ;C11247|8402    |000002;  
-	jsl.l CODE_C25BB7                    ;C11249|22B75BC2|C25BB7;  
-	lda.b $00                            ;C1124D|A500    |000000;  
-	bne UNREACH_C11235                   ;C1124F|D0E4    |C11235;  
+	sty.b w0002                   ;C11247|8402    |000002;  
+	jsl.l func_C25BB7                    ;C11249|22B75BC2|C25BB7;  
+	lda.b w0000                           ;C1124D|A500    |000000;  
+	bne @lbl_C11235                   ;C1124F|D0E4    |C11235;  
 	ldy.w #$090B                         ;C11251|A00B09  |      ;  
-	sty.b $00                            ;C11254|8400    |000000;  
+	sty.b w0000                            ;C11254|8400    |000000;  
 	jsl.l DisplayMessage                    ;C11256|222525C6|C62525;  
 	ldy.w #$0707                         ;C1125A|A00707  |      ;  
-	sty.b $00                            ;C1125D|8400    |000000;  
+	sty.b w0000                            ;C1125D|8400    |000000;  
 	jsl.l DisplayMessage                    ;C1125F|222525C6|C62525;  
 	ldy.w #$012F                         ;C11263|A02F01  |      ;  
-	sty.b $00                            ;C11266|8400    |000000;  
+	sty.b w0000                            ;C11266|8400    |000000;  
 	jsl.l DisplayMessage                    ;C11268|222525C6|C62525;  
-	jsl.l CODE_C62405                    ;C1126C|220524C6|C62405;  
+	jsl.l func_C62405                    ;C1126C|220524C6|C62405;  
 	lda.b #$13                           ;C11270|A913    |      ;  
-	sta.b $00                            ;C11272|8500    |000000;  
-	jsl.l CODE_C210AC                    ;C11274|22AC10C2|C210AC;  
-	lda.b $02                   ;C11278|A502    |000002;  
+	sta.b w0000                           ;C11272|8500    |000000;  
+	jsl.l func_C210AC                    ;C11274|22AC10C2|C210AC;  
+	lda.b w0002                   ;C11278|A502    |000002;  
 	eor.b #$04                           ;C1127A|4904    |      ;  
 	sta.b w0001                            ;C1127C|8501    |000001;  
 	lda.b #$13                           ;C1127E|A913    |      ;  
-	sta.b $00                            ;C11280|8500    |000000;  
-	jsl.l CODE_C27238                    ;C11282|223872C2|C27238;  
-	lda.b $03,s                          ;C11286|A303    |000003;  
-	sta.b $00                            ;C11288|8500    |000000;  
-	jsl.l CODE_C2721B                    ;C1128A|221B72C2|C2721B;  
-	lda.b $03,s                          ;C1128E|A303    |000003;  
-	sta.b $00                            ;C11290|8500    |000000;  
-	jsl.l CODE_C21591                    ;C11292|229115C2|C21591;  
+	sta.b w0000                           ;C11280|8500    |000000;  
+	jsl.l func_C27238                    ;C11282|223872C2|C27238;  
+	lda.b w0003,s                          ;C11286|A303    |000003;  
+	sta.b w0000                           ;C11288|8500    |000000;  
+	jsl.l func_C2721B                    ;C1128A|221B72C2|C2721B;  
+	lda.b w0003,s                          ;C1128E|A303    |000003;  
+	sta.b w0000                           ;C11290|8500    |000000;  
+	jsl.l func_C21591                    ;C11292|229115C2|C21591;  
 	ldy.w #$0708                         ;C11296|A00807  |      ;  
-	sty.b $00                            ;C11299|8400    |000000;  
+	sty.b w0000                            ;C11299|8400    |000000;  
 	jsl.l DisplayMessage                    ;C1129B|222525C6|C62525;  
-	lda.b $03,s                          ;C1129F|A303    |000003;  
-	sta.b $00                            ;C112A1|8500    |000000;  
-	jsl.l CODE_C21591                    ;C112A3|229115C2|C21591;  
-	jsr.w CODE_C1173F                    ;C112A7|203F17  |C1173F;  
-	bcs .lbl_C112DD                      ;C112AA|B031    |C112DD;  
+	lda.b w0003,s                          ;C1129F|A303    |000003;  
+	sta.b w0000                           ;C112A1|8500    |000000;  
+	jsl.l func_C21591                    ;C112A3|229115C2|C21591;  
+	jsr.w func_C1173F                    ;C112A7|203F17  |C1173F;  
+	bcs @lbl_C112DD                      ;C112AA|B031    |C112DD;  
 	.db $A0,$0B,$07,$84,$00,$22,$7E,$2B   ;C112AC
 	.db $C6,$A5,$00,$F0,$03,$4C,$2B,$12   ;C112B4|        |0000A5;  
 	.db $A0,$C8,$00,$84,$00,$A0,$00,$00   ;C112BC
@@ -1006,12 +960,8 @@ UNREACH_C11235:
 	.db $F0,$03,$4C,$35,$12,$A0,$0B,$09   ;C112CC|        |C112D1;  
 	.db $84,$00,$22,$25,$25,$C6,$4C,$A7   ;C112D4|        |000000;  
 	.db $12                               ;C112DC|        |0000A9;  
-.lbl_C112DD
-	lda.b #$05                           ;C112DD|A905    |      ;  
-	sta.b $00                            ;C112DF|8500    |000000;  
-	lda.b #$01                           ;C112E1|A901    |      ;  
-	sta.b $02                   ;C112E3|8502    |000002;  
-	jsl.l CODE_C60479                    ;C112E5|227904C6|C60479;  
+@lbl_C112DD:
+	SetEvent Event05 $01                    ;C112E5|227904C6|C60479;  
 	rts                                  ;C112E9|60      |      ;  
 	.db $3A,$F0,$03,$4C,$ED,$14,$A9,$85   ;C112EA
 	.db $85,$00,$22,$12,$05,$C6,$A5,$00   ;C112F2|        |000000;  
@@ -1153,38 +1103,38 @@ UNREACH_C11235:
 	.db $25,$C6,$60,$A0,$23,$07,$84,$00   ;C11732|        |0000C6;  
 	.db $22,$25,$25,$C6,$60               ;C1173A|        |C62525;  
 
-CODE_C1173F:
+func_C1173F:
 	ldy.w #$0709                         ;C1173F|A00907  |      ;  
-	sty.b $00                            ;C11742|8400    |000000;  
+	sty.b w0000                            ;C11742|8400    |000000;  
 	jsl.l DisplayMessage                    ;C11744|222525C6|C62525;  
-	lda.b $05,s                          ;C11748|A305    |000005;  
-	sta.b $00                            ;C1174A|8500    |000000;  
-	jsl.l CODE_C21591                    ;C1174C|229115C2|C21591;  
+	lda.b w0005,s                          ;C11748|A305    |000005;  
+	sta.b w0000                           ;C1174A|8500    |000000;  
+	jsl.l func_C21591                    ;C1174C|229115C2|C21591;  
 	ldy.w #$090C                         ;C11750|A00C09  |      ;  
-	sty.b $00                            ;C11753|8400    |000000;  
+	sty.b w0000                            ;C11753|8400    |000000;  
 	jsl.l DisplayMessage                    ;C11755|222525C6|C62525;  
 	lda.b #$13                           ;C11759|A913    |      ;  
-	sta.b $00                            ;C1175B|8500    |000000;  
+	sta.b w0000                           ;C1175B|8500    |000000;  
 	lda.b #$87                           ;C1175D|A987    |      ;  
-	sta.b $02                   ;C1175F|8502    |000002;  
-	jsl.l CODE_C626F6                    ;C11761|22F626C6|C626F6;  
+	sta.b w0002                   ;C1175F|8502    |000002;  
+	jsl.l func_C626F6                    ;C11761|22F626C6|C626F6;  
 	ldy.w #$012F                         ;C11765|A02F01  |      ;  
-	sty.b $00                            ;C11768|8400    |000000;  
+	sty.b w0000                            ;C11768|8400    |000000;  
 	jsl.l DisplayMessage                    ;C1176A|222525C6|C62525;  
-	jsl.l CODE_C62405                    ;C1176E|220524C6|C62405;  
+	jsl.l func_C62405                    ;C1176E|220524C6|C62405;  
 	lda.b #$13                           ;C11772|A913    |      ;  
-	sta.b $00                            ;C11774|8500    |000000;  
-	jsl.l CODE_C21128                    ;C11776|222811C2|C21128;  
-	lda.b $00                            ;C1177A|A500    |000000;  
+	sta.b w0000                           ;C11774|8500    |000000;  
+	jsl.l func_C21128                    ;C11776|222811C2|C21128;  
+	lda.b w0000                           ;C1177A|A500    |000000;  
 	cmp.b w0001                            ;C1177C|C501    |000001;  
-	bne .lbl_C1178A                      ;C1177E|D00A    |C1178A;  
+	bne @lbl_C1178A                      ;C1177E|D00A    |C1178A;  
 	.db $22,$67,$11,$C2,$A5,$00,$C5,$01   ;C11780|        |C21167;  
 	.db $F0,$0A                           ;C11788|        |C11794;  
-.lbl_C1178A
-	jsl.l CODE_C3F65F                    ;C1178A|225FF6C3|C3F65F;  
-	lda.b $00                            ;C1178E|A500    |000000;  
+@lbl_C1178A:
+	jsl.l func_C3F65F                    ;C1178A|225FF6C3|C3F65F;  
+	lda.b w0000                           ;C1178E|A500    |000000;  
 	cmp.b #$55                           ;C11790|C955    |      ;  
-	bcs .lbl_C117DB                      ;C11792|B047    |C117DB;  
+	bcs @lbl_C117DB                      ;C11792|B047    |C117DB;  
 	.db $A0,$0A,$07,$84,$00,$22,$25,$25   ;C11794
 	.db $C6,$A0,$0D,$09,$84,$00,$22,$25   ;C1179C|        |0000A0;  
 	.db $25,$C6,$A9,$DE,$85,$00,$22,$A6   ;C117A4|        |0000C6;  
@@ -1194,8 +1144,8 @@ CODE_C1173F:
 	.db $D4,$FE,$84,$00,$22,$BE,$33,$C2   ;C117C4|        |0000FE;  
 	.db $A0,$2F,$01,$84,$00,$22,$25,$25   ;C117CC
 	.db $C6,$22,$05,$24,$C6,$18,$60       ;C117D4|        |000022;  
-.lbl_C117DB
-	jsl.l CODE_C312FF                    ;C117DB|22FF12C3|C312FF;  
+@lbl_C117DB:
+	jsl.l func_C312FF                    ;C117DB|22FF12C3|C312FF;  
 	sec                                  ;C117DF|38      |      ;  
 	rts                                  ;C117E0|60      |      ;  
 	.db $14,$FF,$15,$FF,$16,$FF,$17,$FF   ;C117E1|        |0000FF;  
@@ -1246,105 +1196,97 @@ CODE_C1173F:
 	rep #$10                             ;C1193D|C210    |      ;  
 	txa                                  ;C1193F|8A      |      ;  
 	pha                                  ;C11940|48      |      ;  
-	jsr.w CODE_C11946                    ;C11941|204619  |C11946;  
+	jsr.w func_C11946                    ;C11941|204619  |C11946;  
 	pla                                  ;C11944|68      |      ;  
 	rts                                  ;C11945|60      |      ;  
 
-CODE_C11946:
+func_C11946:
 	sep #$20                             ;C11946|E220    |      ;  
 	rep #$10                             ;C11948|C210    |      ;  
 	lda.l $7E8871,x                      ;C1194A|BF71887E|7E8871;  
-	beq .lbl_C11953                      ;C1194E|F003    |C11953;  
+	beq @lbl_C11953                      ;C1194E|F003    |C11953;  
 	.db $4C,$4C,$1B                       ;C11950|        |C11B4C;  
-.lbl_C11953
-	lda.b #$86                           ;C11953|A986    |      ;  
-	sta.b $00                            ;C11955|8500    |000000;  
-	jsl.l CODE_C60512                    ;C11957|221205C6|C60512;  
-	lda.b $00                            ;C1195B|A500    |000000;  
+@lbl_C11953:
+	GetEvent Event86
 	cmp.b #$02                           ;C1195D|C902    |      ;  
-	bcc .lbl_C11964                      ;C1195F|9003    |C11964;  
-	jmp.w CODE_C11A07                    ;C11961|4C071A  |C11A07;  
-.lbl_C11964
-	lda.b $03,s                          ;C11964|A303    |000003;  
-	sta.b $00                            ;C11966|8500    |000000;  
-	sta.b $02                   ;C11968|8502    |000002;  
+	bcc @lbl_C11964                      ;C1195F|9003    |C11964;  
+	jmp.w func_C11A07                    ;C11961|4C071A  |C11A07;  
+@lbl_C11964:
+	lda.b w0003,s                          ;C11964|A303    |000003;  
+	sta.b w0000                           ;C11966|8500    |000000;  
+	sta.b w0002                   ;C11968|8502    |000002;  
 	lda.b #$01                           ;C1196A|A901    |      ;  
 	sta.b w0001                            ;C1196C|8501    |000001;  
-	jsr.w CODE_C1681A                    ;C1196E|201A68  |C1681A;  
-	lda.b $03,s                          ;C11971|A303    |000003;  
-	sta.b $00                            ;C11973|8500    |000000;  
+	jsr.w func_C1681A                    ;C1196E|201A68  |C1681A;  
+	lda.b w0003,s                          ;C11971|A303    |000003;  
+	sta.b w0000                           ;C11973|8500    |000000;  
 	ldy.w #$230F                         ;C11975|A00F23  |      ;  
-	sty.b $02                   ;C11978|8402    |000002;  
+	sty.b w0002                   ;C11978|8402    |000002;  
 	lda.b #$C1                           ;C1197A|A9C1    |      ;  
-	sta.b $04                   ;C1197C|8504    |000004;  
-	jsl.l CODE_C2938C                    ;C1197E|228C93C2|C2938C;  
-	jsr.w CODE_C12244                    ;C11982|204422  |C12244;  
-	jsl.l CODE_C62405                    ;C11985|220524C6|C62405;  
-	lda.b $03,s                          ;C11989|A303    |000003;  
+	sta.b w0004                   ;C1197C|8504    |000004;  
+	jsl.l func_C2938C                    ;C1197E|228C93C2|C2938C;  
+	jsr.w func_C12244                    ;C11982|204422  |C12244;  
+	jsl.l func_C62405                    ;C11985|220524C6|C62405;  
+	lda.b w0003,s                          ;C11989|A303    |000003;  
 	inc a                                ;C1198B|1A      |      ;  
-	sta.b $00                            ;C1198C|8500    |000000;  
+	sta.b w0000                           ;C1198C|8500    |000000;  
 	ldy.w #$2316                         ;C1198E|A01623  |      ;  
-	sty.b $02                   ;C11991|8402    |000002;  
+	sty.b w0002                   ;C11991|8402    |000002;  
 	lda.b #$C1                           ;C11993|A9C1    |      ;  
-	sta.b $04                   ;C11995|8504    |000004;  
-	jsl.l CODE_C2938C                    ;C11997|228C93C2|C2938C;  
-	lda.b $03,s                          ;C1199B|A303    |000003;  
+	sta.b w0004                   ;C11995|8504    |000004;  
+	jsl.l func_C2938C                    ;C11997|228C93C2|C2938C;  
+	lda.b w0003,s                          ;C1199B|A303    |000003;  
 	inc a                                ;C1199D|1A      |      ;  
-	sta.b $00                            ;C1199E|8500    |000000;  
-	jsl.l CODE_C21584                    ;C119A0|228415C2|C21584;  
-	lda.b $03,s                          ;C119A4|A303    |000003;  
-	sta.b $00                            ;C119A6|8500    |000000;  
-	jsl.l CODE_C2159E                    ;C119A8|229E15C2|C2159E;  
-	lda.b $03,s                          ;C119AC|A303    |000003;  
-	sta.b $00                            ;C119AE|8500    |000000;  
+	sta.b w0000                           ;C1199E|8500    |000000;  
+	jsl.l func_C21584                    ;C119A0|228415C2|C21584;  
+	lda.b w0003,s                          ;C119A4|A303    |000003;  
+	sta.b w0000                           ;C119A6|8500    |000000;  
+	jsl.l func_C2159E                    ;C119A8|229E15C2|C2159E;  
+	lda.b w0003,s                          ;C119AC|A303    |000003;  
+	sta.b w0000                           ;C119AE|8500    |000000;  
 	lda.b #$04                           ;C119B0|A904    |      ;  
 	sta.b w0001                            ;C119B2|8501    |000001;  
-	jsl.l CODE_C27238                    ;C119B4|223872C2|C27238;  
+	jsl.l func_C27238                    ;C119B4|223872C2|C27238;  
 	ldy.w #$0725                         ;C119B8|A02507  |      ;  
-	sty.b $00                            ;C119BB|8400    |000000;  
+	sty.b w0000                            ;C119BB|8400    |000000;  
 	jsl.l DisplayMessage                    ;C119BD|222525C6|C62525;  
 	ldy.w #$012F                         ;C119C1|A02F01  |      ;  
-	sty.b $00                            ;C119C4|8400    |000000;  
+	sty.b w0000                            ;C119C4|8400    |000000;  
 	jsl.l DisplayMessage                    ;C119C6|222525C6|C62525;  
-	jsl.l CODE_C62405                    ;C119CA|220524C6|C62405;  
-	lda.b $03,s                          ;C119CE|A303    |000003;  
+	jsl.l func_C62405                    ;C119CA|220524C6|C62405;  
+	lda.b w0003,s                          ;C119CE|A303    |000003;  
 	inc a                                ;C119D0|1A      |      ;  
-	sta.b $00                            ;C119D1|8500    |000000;  
+	sta.b w0000                           ;C119D1|8500    |000000;  
 	lda.b #$06                           ;C119D3|A906    |      ;  
 	sta.b w0001                            ;C119D5|8501    |000001;  
-	jsl.l CODE_C27238                    ;C119D7|223872C2|C27238;  
+	jsl.l func_C27238                    ;C119D7|223872C2|C27238;  
 	ldy.w #$0726                         ;C119DB|A02607  |      ;  
-	sty.b $00                            ;C119DE|8400    |000000;  
+	sty.b w0000                            ;C119DE|8400    |000000;  
 	jsl.l DisplayMessage                    ;C119E0|222525C6|C62525;  
-	jsl.l CODE_C62405                    ;C119E4|220524C6|C62405;  
-	lda.b $03,s                          ;C119E8|A303    |000003;  
+	jsl.l func_C62405                    ;C119E4|220524C6|C62405;  
+	lda.b w0003,s                          ;C119E8|A303    |000003;  
 	inc a                                ;C119EA|1A      |      ;  
-	sta.b $00                            ;C119EB|8500    |000000;  
+	sta.b w0000                           ;C119EB|8500    |000000;  
 	ldy.w #$231A                         ;C119ED|A01A23  |      ;  
-	sty.b $02                   ;C119F0|8402    |000002;  
+	sty.b w0002                   ;C119F0|8402    |000002;  
 	lda.b #$C1                           ;C119F2|A9C1    |      ;  
-	sta.b $04                   ;C119F4|8504    |000004;  
-	jsl.l CODE_C2938C                    ;C119F6|228C93C2|C2938C;  
-	lda.b #$86                           ;C119FA|A986    |      ;  
-	sta.b $00                            ;C119FC|8500    |000000;  
-	lda.b #$05                           ;C119FE|A905    |      ;  
-	sta.b $02                   ;C11A00|8502    |000002;  
-	jsl.l CODE_C60479                    ;C11A02|227904C6|C60479;  
+	sta.b w0004                   ;C119F4|8504    |000004;  
+	jsl.l func_C2938C                    ;C119F6|228C93C2|C2938C;  
+	SetEvent Event86 $05                    ;C11A02|227904C6|C60479;  
 	rts                                  ;C11A06|60      |      ;  
 
-CODE_C11A07:
+func_C11A07:
 	cmp.b #$03                           ;C11A07|C903    |      ;  
-	bcs .lbl_C11A15                      ;C11A09|B00A    |C11A15;  
+	bcs @lbl_C11A15                      ;C11A09|B00A    |C11A15;  
 	ldy.w #$072A                         ;C11A0B|A02A07  |      ;  
-	sty.b $00                            ;C11A0E|8400    |000000;  
+	sty.b w0000                            ;C11A0E|8400    |000000;  
 	jsl.l DisplayMessage                    ;C11A10|222525C6|C62525;  
 	rts                                  ;C11A14|60      |      ;  
-.lbl_C11A15
+@lbl_C11A15:
 	cmp.b #$04                           ;C11A15|C904    |      ;  
-	bcc UNREACH_C11A1C                   ;C11A17|9003    |C11A1C;  
-	jmp.w CODE_C11B11                    ;C11A19|4C111B  |C11B11;  
-
-UNREACH_C11A1C:
+	bcc @lbl_C11A1C                   ;C11A17|9003    |C11A1C;  
+	jmp.w func_C11B11                    ;C11A19|4C111B  |C11B11;  
+@lbl_C11A1C:
 	.db $A9,$13,$85,$00,$A9,$02,$85,$01   ;C11A1C
 	.db $22,$38,$72,$C2,$A3,$03,$85,$00   ;C11A24|        |C27238;  
 	.db $A0,$34,$23,$84,$02,$22,$51,$79   ;C11A2C
@@ -1377,28 +1319,24 @@ UNREACH_C11A1C:
 	.db $A9,$06,$85,$00,$A9,$01,$85,$02   ;C11B04
 	.db $22,$79,$04,$C6,$60               ;C11B0C|        |C60479;  
 
-CODE_C11B11:
+func_C11B11:
 	cmp.b #$05                           ;C11B11|C905    |      ;  
-	bcs .lbl_C11B1F                      ;C11B13|B00A    |C11B1F;  
+	bcs @lbl_C11B1F                      ;C11B13|B00A    |C11B1F;  
 	.db $A0,$35,$07,$84,$00,$22,$25,$25   ;C11B15
 	.db $C6,$60                           ;C11B1D|        |000060;  
-.lbl_C11B1F
+@lbl_C11B1F:
 	ldy.w #$0727                         ;C11B1F|A02707  |      ;  
-	sty.b $00                            ;C11B22|8400    |000000;  
-	jsl.l CODE_C62B7E                    ;C11B24|227E2BC6|C62B7E;  
-	lda.b $00                            ;C11B28|A500    |000000;  
-	beq .lbl_C11B36                      ;C11B2A|F00A    |C11B36;  
+	sty.b w0000                            ;C11B22|8400    |000000;  
+	jsl.l func_C62B7E                    ;C11B24|227E2BC6|C62B7E;  
+	lda.b w0000                           ;C11B28|A500    |000000;  
+	beq @lbl_C11B36                      ;C11B2A|F00A    |C11B36;  
 	.db $A0,$28,$07,$84,$00,$22,$25,$25   ;C11B2C
 	.db $C6,$60                           ;C11B34|        |000060;  
-.lbl_C11B36
+@lbl_C11B36:
 	ldy.w #$0729                         ;C11B36|A02907  |      ;  
-	sty.b $00                            ;C11B39|8400    |000000;  
+	sty.b w0000                            ;C11B39|8400    |000000;  
 	jsl.l DisplayMessage                    ;C11B3B|222525C6|C62525;  
-	lda.b #$86                           ;C11B3F|A986    |      ;  
-	sta.b $00                            ;C11B41|8500    |000000;  
-	lda.b #$02                           ;C11B43|A902    |      ;  
-	sta.b $02                   ;C11B45|8502    |000002;  
-	jsl.l CODE_C60479                    ;C11B47|227904C6|C60479;  
+	SetEvent Event86 $02                    ;C11B47|227904C6|C60479;  
 	rts                                  ;C11B4B|60      |      ;  
 	.db $3A,$F0,$03,$4C,$1C,$1D,$A9,$86   ;C11B4C
 	.db $85,$00,$22,$12,$05,$C6,$A5,$00   ;C11B54|        |000000;  
@@ -1624,91 +1562,90 @@ CODE_C11B11:
 	.db $04,$84,$02,$A3,$05,$85,$00,$22   ;C12234|        |000084;  
 	.db $51,$79,$C2,$22,$28,$24,$C6,$60   ;C1223C|        |000079;  
 
-CODE_C12244:
+func_C12244:
 	php                                  ;C12244|08      |      ;  
 	rep #$20                             ;C12245|C220    |      ;  
 	sep #$10                             ;C12247|E210    |      ;  
-	lda.b $06,s                          ;C12249|A306    |000006;  
-	sta.b $00                            ;C1224B|8500    |000000;  
+	lda.b w0006,s                          ;C12249|A306    |000006;  
+	sta.b w0000                           ;C1224B|8500    |000000;  
 	ldy.b #$15                           ;C1224D|A015    |      ;  
-	sty.b $02                   ;C1224F|8402    |000002;  
-	jsl.l CODE_C62550                    ;C12251|225025C6|C62550;  
+	sty.b w0002                   ;C1224F|8402    |000002;  
+	jsl.l func_C62550                    ;C12251|225025C6|C62550;  
 	lda.w #$0004                         ;C12255|A90400  |      ;  
-.lbl_C12258
+@lbl_C12258:
 	pha                                  ;C12258|48      |      ;  
-	lda.b $08,s                          ;C12259|A308    |000008;  
-	sta.b $00                            ;C1225B|8500    |000000;  
-	jsl.l CODE_C210AC                    ;C1225D|22AC10C2|C210AC;  
-	lda.b $00                            ;C12261|A500    |000000;  
+	lda.b w0008,s                          ;C12259|A308    |000008;  
+	sta.b w0000                           ;C1225B|8500    |000000;  
+	jsl.l func_C210AC                    ;C1225D|22AC10C2|C210AC;  
+	lda.b w0000                           ;C12261|A500    |000000;  
 	pha                                  ;C12263|48      |      ;  
-	jsl.l CODE_C36410                    ;C12264|221064C3|C36410;  
-	lda.b $00                            ;C12268|A500    |000000;  
+	jsl.l func_C36410                    ;C12264|221064C3|C36410;  
+	lda.b w0000                           ;C12268|A500    |000000;  
 	pha                                  ;C1226A|48      |      ;  
-	bpl .lbl_C1227B                      ;C1226B|100E    |C1227B;  
-
-UNREACH_C1226D:
+	bpl @lbl_C1227B                      ;C1226B|100E    |C1227B;  
+@lbl_C1226D:
 	.db $68,$68,$68,$48,$22,$CE,$25,$C6   ;C1226D
 	.db $68,$3A,$10,$F7,$28,$60           ;C12275
-.lbl_C1227B
-	lda.b $05,s                          ;C1227B|A305    |000005;  
-	sta.b $00                            ;C1227D|8500    |000000;  
-	jsr.w CODE_C122CA                    ;C1227F|20CA22  |C122CA;  
-	ldx.b $00                            ;C12282|A600    |000000;  
-	bmi UNREACH_C1226D                   ;C12284|30E7    |C1226D;  
+@lbl_C1227B:
+	lda.b w0005,s                          ;C1227B|A305    |000005;  
+	sta.b w0000                           ;C1227D|8500    |000000;  
+	jsr.w func_C122CA                    ;C1227F|20CA22  |C122CA;  
+	ldx.b w0000                            ;C12282|A600    |000000;  
+	bmi @lbl_C1226D                   ;C12284|30E7    |C1226D;  
 	ldy.b #$42                           ;C12286|A042    |      ;  
-	jsr.w CODE_C122A5                    ;C12288|20A522  |C122A5;  
-	jsl.l CODE_C6253A                    ;C1228B|223A25C6|C6253A;  
+	jsr.w func_C122A5                    ;C12288|20A522  |C122A5;  
+	jsl.l func_C6253A                    ;C1228B|223A25C6|C6253A;  
 	lda.b w0001,s                          ;C1228F|A301    |000001;  
-	sta.b $02                   ;C12291|8502    |000002;  
-	stx.b $00                            ;C12293|8600    |000000;  
-	jsl.l CODE_C330DA                    ;C12295|22DA30C3|C330DA;  
-	jsl.l CODE_C62545                    ;C12299|224525C6|C62545;  
+	sta.b w0002                   ;C12291|8502    |000002;  
+	stx.b w0000                            ;C12293|8600    |000000;  
+	jsl.l func_C330DA                    ;C12295|22DA30C3|C330DA;  
+	jsl.l func_C62545                    ;C12299|224525C6|C62545;  
 	pla                                  ;C1229D|68      |      ;  
 	pla                                  ;C1229E|68      |      ;  
 	pla                                  ;C1229F|68      |      ;  
 	dec a                                ;C122A0|3A      |      ;  
-	bpl .lbl_C12258                      ;C122A1|10B5    |C12258;  
+	bpl @lbl_C12258                      ;C122A1|10B5    |C12258;  
 	plp                                  ;C122A3|28      |      ;  
 	rts                                  ;C122A4|60      |      ;  
 
-CODE_C122A5:
+func_C122A5:
 	phy                                  ;C122A5|5A      |      ;  
-	stx.b $00                            ;C122A6|8600    |000000;  
+	stx.b w0000                            ;C122A6|8600    |000000;  
 	phx                                  ;C122A8|DA      |      ;  
-	jsl.l CODE_C30710                    ;C122A9|221007C3|C30710;  
+	jsl.l func_C30710                    ;C122A9|221007C3|C30710;  
 	plx                                  ;C122AD|FA      |      ;  
-	ldy.b $00                            ;C122AE|A400    |000000;  
-	stx.b $00                            ;C122B0|8600    |000000;  
+	ldy.b w0000                            ;C122AE|A400    |000000;  
+	stx.b w0000                            ;C122B0|8600    |000000;  
 	sty.b w0001                            ;C122B2|8401    |000001;  
 	ply                                  ;C122B4|7A      |      ;  
-	sty.b $02                   ;C122B5|8402    |000002;  
+	sty.b w0002                   ;C122B5|8402    |000002;  
 	ldy.b #$02                           ;C122B7|A002    |      ;  
-	sty.b $03                            ;C122B9|8403    |000003;  
-	lda.b $05,s                          ;C122BB|A305    |000005;  
-	sta.b $04                   ;C122BD|8504    |000004;  
-	lda.b $03,s                          ;C122BF|A303    |000003;  
-	sta.b $06                            ;C122C1|8506    |000006;  
+	sty.b w0003                            ;C122B9|8403    |000003;  
+	lda.b w0005,s                          ;C122BB|A305    |000005;  
+	sta.b w0004                   ;C122BD|8504    |000004;  
+	lda.b w0003,s                          ;C122BF|A303    |000003;  
+	sta.b w0006                            ;C122C1|8506    |000006;  
 	phx                                  ;C122C3|DA      |      ;  
-	jsl.l CODE_C626CA                    ;C122C4|22CA26C6|C626CA;  
+	jsl.l func_C626CA                    ;C122C4|22CA26C6|C626CA;  
 	plx                                  ;C122C8|FA      |      ;  
 	rts                                  ;C122C9|60      |      ;  
 
-CODE_C122CA:
+func_C122CA:
 	php                                  ;C122CA|08      |      ;  
 	sep #$30                             ;C122CB|E230    |      ;  
-	ldx.b $00                            ;C122CD|A600    |000000;  
+	ldx.b w0000                            ;C122CD|A600    |000000;  
 	lda.l DATA8_C122EB,x                 ;C122CF|BFEB22C1|C122EB;  
-	sta.b $00                            ;C122D3|8500    |000000;  
-	jsl.l CODE_C3035D                    ;C122D5|225D03C3|C3035D;  
-	ldx.b $00                            ;C122D9|A600    |000000;  
-	bmi .lbl_C122E7                      ;C122DB|300A    |C122E7;  
+	sta.b w0000                           ;C122D3|8500    |000000;  
+	jsl.l func_C3035D                    ;C122D5|225D03C3|C3035D;  
+	ldx.b w0000                            ;C122D9|A600    |000000;  
+	bmi @lbl_C122E7                      ;C122DB|300A    |C122E7;  
 	lda.b #$01                           ;C122DD|A901    |      ;  
 	sta.b w0001                            ;C122DF|8501    |000001;  
 	phx                                  ;C122E1|DA      |      ;  
-	jsl.l CODE_C33A92                    ;C122E2|22923AC3|C33A92;  
+	jsl.l func_C33A92                    ;C122E2|22923AC3|C33A92;  
 	plx                                  ;C122E6|FA      |      ;  
-.lbl_C122E7
-	stx.b $00                            ;C122E7|8600    |000000;  
+@lbl_C122E7:
+	stx.b w0000                            ;C122E7|8600    |000000;  
 	plp                                  ;C122E9|28      |      ;  
 	rts                                  ;C122EA|60      |      ;  
 
@@ -1748,18 +1685,14 @@ DATA8_C122EB:
 	.db $08,$84,$00,$22,$25,$25,$C6,$60   ;C123E6
 	sep #$20                             ;C123EE|E220    |      ;  
 	rep #$10                             ;C123F0|C210    |      ;  
-	lda.b #$04                           ;C123F2|A904    |      ;  
-	sta.b $00                            ;C123F4|8500    |000000;  
-	jsl.l CODE_C60512                    ;C123F6|221205C6|C60512;  
-	lda.b $00                            ;C123FA|A500    |000000;  
+	GetEvent Event_Gaibara
 	cmp.b #$03                           ;C123FC|C903    |      ;  
-	bcs UNREACH_C1240A                   ;C123FE|B00A    |C1240A;  
+	bcs @lbl_C1240A                   ;C123FE|B00A    |C1240A;  
 	ldy.w #$06B7                         ;C12400|A0B706  |      ;  
-	sty.b $00                            ;C12403|8400    |000000;  
+	sty.b w0000                            ;C12403|8400    |000000;  
 	jsl.l DisplayMessage                    ;C12405|222525C6|C62525;  
 	rts                                  ;C12409|60      |      ;  
-
-UNREACH_C1240A:
+@lbl_C1240A:
 	.db $A9,$87,$85,$00,$22,$12,$05,$C6   ;C1240A
 	.db $A5,$00,$C9,$02,$B0,$2F,$A9,$08   ;C12412|        |000000;  
 	.db $85,$00,$22,$12,$05,$C6,$A5,$00   ;C1241A|        |000000;  
@@ -1785,110 +1718,94 @@ UNREACH_C1240A:
 	rep #$10                             ;C124B2|C210    |      ;  
 	txa                                  ;C124B4|8A      |      ;  
 	pha                                  ;C124B5|48      |      ;  
-	jsr.w CODE_C124BB                    ;C124B6|20BB24  |C124BB;  
+	jsr.w func_C124BB                    ;C124B6|20BB24  |C124BB;  
 	pla                                  ;C124B9|68      |      ;  
 	rts                                  ;C124BA|60      |      ;  
 
-CODE_C124BB:
+func_C124BB:
 	sep #$20                             ;C124BB|E220    |      ;  
 	rep #$10                             ;C124BD|C210    |      ;  
 	lda.l $7E8871,x                      ;C124BF|BF71887E|7E8871;  
 	cmp.b #$02                           ;C124C3|C902    |      ;  
-	bcc .lbl_C124CA                      ;C124C5|9003    |C124CA;  
+	bcc @lbl_C124CA                      ;C124C5|9003    |C124CA;  
 	.db $4C,$B4,$25                       ;C124C7|        |C125B4;  
-.lbl_C124CA
+@lbl_C124CA:
 	phx                                  ;C124CA|DA      |      ;  
-	lda.b #$88                           ;C124CB|A988    |      ;  
-	sta.b $00                            ;C124CD|8500    |000000;  
-	jsl.l CODE_C60512                    ;C124CF|221205C6|C60512;  
-	lda.b $00                            ;C124D3|A500    |000000;  
+	GetEvent Event88
 	cmp.b #$02                           ;C124D5|C902    |      ;  
-	bcs .lbl_C1251A                      ;C124D7|B041    |C1251A;  
+	bcs @lbl_C1251A                      ;C124D7|B041    |C1251A;  
 	plx                                  ;C124D9|FA      |      ;  
 	lda.b #$82                           ;C124DA|A982    |      ;  
-	sta.b $00                            ;C124DC|8500    |000000;  
+	sta.b w0000                           ;C124DC|8500    |000000;  
 	stz.b w0001                            ;C124DE|6401    |000001;  
-	stz.b $02                   ;C124E0|6402    |000002;  
-	jsl.l CODE_C30295                    ;C124E2|229502C3|C30295;  
-	lda.b $00                            ;C124E6|A500    |000000;  
-	bmi UNREACH_C12510                   ;C124E8|3026    |C12510;  
+	stz.b w0002                   ;C124E0|6402    |000002;  
+	jsl.l func_C30295                    ;C124E2|229502C3|C30295;  
+	lda.b w0000                           ;C124E6|A500    |000000;  
+	bmi @lbl_C12510                   ;C124E8|3026    |C12510;  
 	pha                                  ;C124EA|48      |      ;  
 	ldy.w #$0768                         ;C124EB|A06807  |      ;  
-	sty.b $00                            ;C124EE|8400    |000000;  
+	sty.b w0000                            ;C124EE|8400    |000000;  
 	jsl.l DisplayMessage                    ;C124F0|222525C6|C62525;  
 	pla                                  ;C124F4|68      |      ;  
-	sta.b $00                            ;C124F5|8500    |000000;  
+	sta.b w0000                           ;C124F5|8500    |000000;  
 	pha                                  ;C124F7|48      |      ;  
-	jsl.l CODE_C30192                    ;C124F8|229201C3|C30192;  
+	jsl.l func_C30192                    ;C124F8|229201C3|C30192;  
 	pla                                  ;C124FC|68      |      ;  
-	sta.b $00                            ;C124FD|8500    |000000;  
-	jsl.l CODE_C10157                    ;C124FF|225701C1|C10157;  
-	lda.b #$88                           ;C12503|A988    |      ;  
-	sta.b $00                            ;C12505|8500    |000000;  
-	lda.b #$02                           ;C12507|A902    |      ;  
-	sta.b $02                   ;C12509|8502    |000002;  
-	jsl.l CODE_C60479                    ;C1250B|227904C6|C60479;  
+	sta.b w0000                           ;C124FD|8500    |000000;  
+	jsl.l func_C10157                    ;C124FF|225701C1|C10157;  
+	SetEvent Event88 $02                    ;C1250B|227904C6|C60479;  
 	rts                                  ;C1250F|60      |      ;  
-
-UNREACH_C12510:
+@lbl_C12510:
 	.db $A0,$5C,$00,$84,$00,$22,$25,$25   ;C12510
 	.db $C6,$60                           ;C12518|        |000060;  
-.lbl_C1251A
+@lbl_C1251A:
 	cmp.b #$03                           ;C1251A|C903    |      ;  
-	bcc .lbl_C12521                      ;C1251C|9003    |C12521;  
+	bcc @lbl_C12521                      ;C1251C|9003    |C12521;  
 	.db $4C,$A9,$25                       ;C1251E|        |C125A9;  
-.lbl_C12521
-	jsr.w CODE_C12ABD                    ;C12521|20BD2A  |C12ABD;  
-	bcs .lbl_C12531                      ;C12524|B00B    |C12531;  
+@lbl_C12521:
+	jsr.w func_C12ABD                    ;C12521|20BD2A  |C12ABD;  
+	bcs @lbl_C12531                      ;C12524|B00B    |C12531;  
 	plx                                  ;C12526|FA      |      ;  
 	ldy.w #$0769                         ;C12527|A06907  |      ;  
-	sty.b $00                            ;C1252A|8400    |000000;  
+	sty.b w0000                            ;C1252A|8400    |000000;  
 	jsl.l DisplayMessage                    ;C1252C|222525C6|C62525;  
 	rts                                  ;C12530|60      |      ;  
-.lbl_C12531
+@lbl_C12531:
 	ldy.w #$076A                         ;C12531|A06A07  |      ;  
-	sty.b $00                            ;C12534|8400    |000000;  
+	sty.b w0000                            ;C12534|8400    |000000;  
 	jsl.l DisplayMessage                    ;C12536|222525C6|C62525;  
 	plx                                  ;C1253A|FA      |      ;  
-	stx.b $00                            ;C1253B|8600    |000000;  
+	stx.b w0000                            ;C1253B|8600    |000000;  
 	lda.b #$81                           ;C1253D|A981    |      ;  
-	sta.b $02                   ;C1253F|8502    |000002;  
-	jsl.l CODE_C62550                    ;C12541|225025C6|C62550;  
-	lda.b #$88                           ;C12545|A988    |      ;  
-	sta.b $00                            ;C12547|8500    |000000;  
-	lda.b #$03                           ;C12549|A903    |      ;  
-	sta.b $02                   ;C1254B|8502    |000002;  
-	jsl.l CODE_C60479                    ;C1254D|227904C6|C60479;  
-	lda.b #$09                           ;C12551|A909    |      ;  
-	sta.b $00                            ;C12553|8500    |000000;  
-	lda.b #$01                           ;C12555|A901    |      ;  
-	sta.b $02                   ;C12557|8502    |000002;  
-	jsl.l CODE_C60479                    ;C12559|227904C6|C60479;  
+	sta.b w0002                   ;C1253F|8502    |000002;  
+	jsl.l func_C62550                    ;C12541|225025C6|C62550;  
+	SetEvent Event88 $03                    ;C1254D|227904C6|C60479;  
+	SetEvent Event09 $01                    ;C12559|227904C6|C60479;  
 	ldy.w #$076B                         ;C1255D|A06B07  |      ;  
-	sty.b $00                            ;C12560|8400    |000000;  
-	jsl.l CODE_C62B7E                    ;C12562|227E2BC6|C62B7E;  
-	lda.b $00                            ;C12566|A500    |000000;  
-	beq .lbl_C12574                      ;C12568|F00A    |C12574;  
+	sty.b w0000                            ;C12560|8400    |000000;  
+	jsl.l func_C62B7E                    ;C12562|227E2BC6|C62B7E;  
+	lda.b w0000                           ;C12566|A500    |000000;  
+	beq @lbl_C12574                      ;C12568|F00A    |C12574;  
 	.db $A0,$6D,$07,$84,$00,$22,$25,$25   ;C1256A
 	.db $C6,$60                           ;C12572|        |000060;  
-.lbl_C12574
+@lbl_C12574:
 	lda.b #$03                           ;C12574|A903    |      ;  
-	sta.b $00                            ;C12576|8500    |000000;  
-	jsl.l CODE_C232BF                    ;C12578|22BF32C2|C232BF;  
+	sta.b w0000                           ;C12576|8500    |000000;  
+	jsl.l func_C232BF                    ;C12578|22BF32C2|C232BF;  
 	lda.b #$13                           ;C1257C|A913    |      ;  
-	sta.b $00                            ;C1257E|8500    |000000;  
+	sta.b w0000                           ;C1257E|8500    |000000;  
 	ldy.w #$0005                         ;C12580|A00500  |      ;  
-	sty.b $02                   ;C12583|8402    |000002;  
-	jsl.l CODE_C2323C                    ;C12585|223C32C2|C2323C;  
+	sty.b w0002                   ;C12583|8402    |000002;  
+	jsl.l func_C2323C                    ;C12585|223C32C2|C2323C;  
 	ldy.w #$2710                         ;C12589|A01027  |      ;  
-	sty.b $00                            ;C1258C|8400    |000000;  
-	jsl.l CODE_C233BE                    ;C1258E|22BE33C2|C233BE;  
+	sty.b w0000                            ;C1258C|8400    |000000;  
+	jsl.l func_C233BE                    ;C1258E|22BE33C2|C233BE;  
 	ldy.w #$076E                         ;C12592|A06E07  |      ;  
-	sty.b $00                            ;C12595|8400    |000000;  
+	sty.b w0000                            ;C12595|8400    |000000;  
 	jsl.l DisplayMessage                    ;C12597|222525C6|C62525;  
-	jsl.l CODE_C62405                    ;C1259B|220524C6|C62405;  
+	jsl.l func_C62405                    ;C1259B|220524C6|C62405;  
 	ldy.w #$076F                         ;C1259F|A06F07  |      ;  
-	sty.b $00                            ;C125A2|8400    |000000;  
+	sty.b w0000                            ;C125A2|8400    |000000;  
 	jsl.l DisplayMessage                    ;C125A4|222525C6|C62525;  
 	rts                                  ;C125A8|60      |      ;  
 	.db $FA,$A0,$70,$07,$84,$00,$22,$25   ;C125A9
@@ -2055,36 +1972,35 @@ UNREACH_C12510:
 	.db $02,$02,$16,$FF,$07,$00,$01,$02   ;C12AB1
 	.db $02,$02,$10,$FF                   ;C12AB9
 
-CODE_C12ABD:
+func_C12ABD:
 	ldx.w #$0000                         ;C12ABD|A20000  |      ;  
-	bra CODE_C12AD7                      ;C12AC0|8015    |C12AD7;  
-.lbl_C12AC2
-	sta.b $00                            ;C12AC2|8500    |000000;  
+	bra @lbl_C12AD7                      ;C12AC0|8015    |C12AD7;  
+@lbl_C12AC2:
+	sta.b w0000                           ;C12AC2|8500    |000000;  
 	phx                                  ;C12AC4|DA      |      ;  
-	jsl.l CODE_C30710                    ;C12AC5|221007C3|C30710;  
+	jsl.l func_C30710                    ;C12AC5|221007C3|C30710;  
 	plx                                  ;C12AC9|FA      |      ;  
 	lda.b w0001                            ;C12ACA|A501    |000001;  
 	cmp.b #$E0                           ;C12ACC|C9E0    |      ;  
-	bne .lbl_C12AD6                      ;C12ACE|D006    |C12AD6;  
-	lda.b $02                   ;C12AD0|A502    |000002;  
+	bne @lbl_C12AD6                      ;C12ACE|D006    |C12AD6;  
+	lda.b w0002                   ;C12AD0|A502    |000002;  
 	cmp.b #$01                           ;C12AD2|C901    |      ;  
-	beq .lbl_C12ADF                      ;C12AD4|F009    |C12ADF;  
-.lbl_C12AD6
+	beq @lbl_C12ADF                      ;C12AD4|F009    |C12ADF;  
+@lbl_C12AD6:
 	inx                                  ;C12AD6|E8      |      ;  
-
-CODE_C12AD7:
+@lbl_C12AD7:
 	lda.l $7E894F,x                      ;C12AD7|BF4F897E|7E894F;  
-	bpl .lbl_C12AC2                      ;C12ADB|10E5    |C12AC2;  
+	bpl @lbl_C12AC2                      ;C12ADB|10E5    |C12AC2;  
 	clc                                  ;C12ADD|18      |      ;  
 	rts                                  ;C12ADE|60      |      ;  
-.lbl_C12ADF
+@lbl_C12ADF:
 	lda.l $7E894F,x                      ;C12ADF|BF4F897E|7E894F;  
-	stx.b $00                            ;C12AE3|8600    |000000;  
+	stx.b w0000                            ;C12AE3|8600    |000000;  
 	pha                                  ;C12AE5|48      |      ;  
-	jsl.l CODE_C23C4D                    ;C12AE6|224D3CC2|C23C4D;  
+	jsl.l func_C23C4D                    ;C12AE6|224D3CC2|C23C4D;  
 	pla                                  ;C12AEA|68      |      ;  
-	sta.b $00                            ;C12AEB|8500    |000000;  
-	jsl.l CODE_C306F4                    ;C12AED|22F406C3|C306F4;  
+	sta.b w0000                           ;C12AEB|8500    |000000;  
+	jsl.l func_C306F4                    ;C12AED|22F406C3|C306F4;  
 	sec                                  ;C12AF1|38      |      ;  
 	rts                                  ;C12AF2|60      |      ;  
 	.db $E2,$20,$C2,$10,$8A,$48,$20,$FE   ;C12AF3
@@ -2315,156 +2231,155 @@ CODE_C12AD7:
 	.db $06,$06,$06,$FF,$04,$10,$FF       ;C131FB|        |000006;  
 	sep #$20                             ;C13202|E220    |      ;  
 	rep #$10                             ;C13204|C210    |      ;  
-	stx.b $00                            ;C13206|8600    |000000;  
+	stx.b w0000                            ;C13206|8600    |000000;  
 	stz.b w0001                            ;C13208|6401    |000001;  
-	stx.b $02                   ;C1320A|8602    |000002;  
-	jsr.w CODE_C1681A                    ;C1320C|201A68  |C1681A;  
+	stx.b w0002                   ;C1320A|8602    |000002;  
+	jsr.w func_C1681A                    ;C1320C|201A68  |C1681A;  
 	ldy.w #$01F4                         ;C1320F|A0F401  |      ;  
 	jsr.w NPCScriptFunction_C15BB6                    ;C13212|20B65B  |C15BB6;  
-	bcs .lbl_C13222                      ;C13215|B00B    |C13222;  
+	bcs @lbl_C13222                      ;C13215|B00B    |C13222;  
 	.db $A0,$E8,$03,$20,$D3,$5B,$B0,$03   ;C13217
 	.db $A0,$D0,$07                       ;C1321F
-.lbl_C13222
+@lbl_C13222:
 	phy                                  ;C13222|5A      |      ;  
-	jsr.w CODE_C13228                    ;C13223|202832  |C13228;  
+	jsr.w func_C13228                    ;C13223|202832  |C13228;  
 	ply                                  ;C13226|7A      |      ;  
 	rts                                  ;C13227|60      |      ;  
 
-CODE_C13228:
+func_C13228:
 	sep #$20                             ;C13228|E220    |      ;  
 	rep #$10                             ;C1322A|C210    |      ;  
 	rep #$20                             ;C1322C|C220    |      ;  
-	lda.b $03,s                          ;C1322E|A303    |000003;  
-	sta.b $02                   ;C13230|8502    |000002;  
+	lda.b w0003,s                          ;C1322E|A303    |000003;  
+	sta.b w0002                   ;C13230|8502    |000002;  
 	sep #$20                             ;C13232|E220    |      ;  
 	ldy.w #$07CB                         ;C13234|A0CB07  |      ;  
-	sty.b $00                            ;C13237|8400    |000000;  
-	jsl.l CODE_C62B7E                    ;C13239|227E2BC6|C62B7E;  
-	lda.b $00                            ;C1323D|A500    |000000;  
-	beq .lbl_C1324B                      ;C1323F|F00A    |C1324B;  
+	sty.b w0000                            ;C13237|8400    |000000;  
+	jsl.l func_C62B7E                    ;C13239|227E2BC6|C62B7E;  
+	lda.b w0000                           ;C1323D|A500    |000000;  
+	beq @lbl_C1324B                      ;C1323F|F00A    |C1324B;  
 	.db $A0,$CD,$07,$84,$00,$22,$25,$25   ;C13241
 	.db $C6,$60                           ;C13249|        |000060;  
-.lbl_C1324B
+@lbl_C1324B:
 	rep #$20                             ;C1324B|C220    |      ;  
-	lda.b $03,s                          ;C1324D|A303    |000003;  
-	sta.b $00                            ;C1324F|8500    |000000;  
+	lda.b w0003,s                          ;C1324D|A303    |000003;  
+	sta.b w0000                           ;C1324F|8500    |000000;  
 	sep #$20                             ;C13251|E220    |      ;  
 	ldy.w #$0000                         ;C13253|A00000  |      ;  
-	sty.b $02                   ;C13256|8402    |000002;  
-	jsl.l CODE_C25BB7                    ;C13258|22B75BC2|C25BB7;  
-	lda.b $00                            ;C1325C|A500    |000000;  
-	beq .lbl_C1326A                      ;C1325E|F00A    |C1326A;  
+	sty.b w0002                   ;C13256|8402    |000002;  
+	jsl.l func_C25BB7                    ;C13258|22B75BC2|C25BB7;  
+	lda.b w0000                           ;C1325C|A500    |000000;  
+	beq @lbl_C1326A                      ;C1325E|F00A    |C1326A;  
 	.db $A0,$CE,$07,$84,$00,$22,$25,$25   ;C13260
 	.db $C6,$60                           ;C13268|        |000060;  
-.lbl_C1326A
-	jsl.l CODE_C62405                    ;C1326A|220524C6|C62405;  
+@lbl_C1326A:
+	jsl.l func_C62405                    ;C1326A|220524C6|C62405;  
 	ldy.w #$0050                         ;C1326E|A05000  |      ;  
-	sty.b $00                            ;C13271|8400    |000000;  
-	jsl.l CODE_C62B19                    ;C13273|22192BC6|C62B19;  
+	sty.b w0000                            ;C13271|8400    |000000;  
+	jsl.l func_C62B19                    ;C13273|22192BC6|C62B19;  
 	ldy.w #$2710                         ;C13277|A01027  |      ;  
-	sty.b $00                            ;C1327A|8400    |000000;  
-	jsl.l CODE_C233BE                    ;C1327C|22BE33C2|C233BE;  
+	sty.b w0000                            ;C1327A|8400    |000000;  
+	jsl.l func_C233BE                    ;C1327C|22BE33C2|C233BE;  
 	lda.b #$63                           ;C13280|A963    |      ;  
-	sta.b $00                            ;C13282|8500    |000000;  
-	jsl.l CODE_C23271                    ;C13284|227132C2|C23271;  
+	sta.b w0000                           ;C13282|8500    |000000;  
+	jsl.l func_C23271                    ;C13284|227132C2|C23271;  
 	lda.b #$13                           ;C13288|A913    |      ;  
 	pha                                  ;C1328A|48      |      ;  
-	bra CODE_C132A6                      ;C1328B|8019    |C132A6;  
-.lbl_C1328D
+	bra @lbl_C132A6                      ;C1328B|8019    |C132A6;  
+@lbl_C1328D:
 	pha                                  ;C1328D|48      |      ;  
 	lda.b w0001,s                          ;C1328E|A301    |000001;  
-	sta.b $00                            ;C13290|8500    |000000;  
-	jsl.l CODE_C21128                    ;C13292|222811C2|C21128;  
-	lda.b $00                            ;C13296|A500    |000000;  
-	beq .lbl_C132DB                      ;C13298|F041    |C132DB;  
+	sta.b w0000                           ;C13290|8500    |000000;  
+	jsl.l func_C21128                    ;C13292|222811C2|C21128;  
+	lda.b w0000                           ;C13296|A500    |000000;  
+	beq @lbl_C132DB                      ;C13298|F041    |C132DB;  
 	lda.b w0001,s                          ;C1329A|A301    |000001;  
-	sta.b $00                            ;C1329C|8500    |000000;  
-	jsl.l CODE_C24373                    ;C1329E|227343C2|C24373;  
-	lda.b $00                            ;C132A2|A500    |000000;  
-	bpl .lbl_C132DB                      ;C132A4|1035    |C132DB;  
-
-CODE_C132A6:
+	sta.b w0000                           ;C1329C|8500    |000000;  
+	jsl.l func_C24373                    ;C1329E|227343C2|C24373;  
+	lda.b w0000                           ;C132A2|A500    |000000;  
+	bpl @lbl_C132DB                      ;C132A4|1035    |C132DB;  
+@lbl_C132A6:
 	lda.b w0001,s                          ;C132A6|A301    |000001;  
-	sta.b $00                            ;C132A8|8500    |000000;  
+	sta.b w0000                           ;C132A8|8500    |000000;  
 	ldy.w #$00FA                         ;C132AA|A0FA00  |      ;  
-	sty.b $02                   ;C132AD|8402    |000002;  
-	jsl.l CODE_C23209                    ;C132AF|220932C2|C23209;  
+	sty.b w0002                   ;C132AD|8402    |000002;  
+	jsl.l func_C23209                    ;C132AF|220932C2|C23209;  
 	lda.b w0001,s                          ;C132B3|A301    |000001;  
-	sta.b $00                            ;C132B5|8500    |000000;  
+	sta.b w0000                           ;C132B5|8500    |000000;  
 	stz.b w0001                            ;C132B7|6401    |000001;  
-	jsl.l CODE_C23FFF                    ;C132B9|22FF3FC2|C23FFF;  
+	jsl.l func_C23FFF                    ;C132B9|22FF3FC2|C23FFF;  
 	lda.b w0001,s                          ;C132BD|A301    |000001;  
-	sta.b $00                            ;C132BF|8500    |000000;  
+	sta.b w0000                           ;C132BF|8500    |000000;  
 	stz.b w0001                            ;C132C1|6401    |000001;  
-	jsl.l CODE_C240A7                    ;C132C3|22A740C2|C240A7;  
+	jsl.l func_C240A7                    ;C132C3|22A740C2|C240A7;  
 	lda.b w0001,s                          ;C132C7|A301    |000001;  
-	sta.b $00                            ;C132C9|8500    |000000;  
+	sta.b w0000                           ;C132C9|8500    |000000;  
 	stz.b w0001                            ;C132CB|6401    |000001;  
-	jsl.l CODE_C24073                    ;C132CD|227340C2|C24073;  
+	jsl.l func_C24073                    ;C132CD|227340C2|C24073;  
 	lda.b w0001,s                          ;C132D1|A301    |000001;  
-	sta.b $00                            ;C132D3|8500    |000000;  
+	sta.b w0000                           ;C132D3|8500    |000000;  
 	stz.b w0001                            ;C132D5|6401    |000001;  
-	jsl.l CODE_C24080                    ;C132D7|228040C2|C24080;  
-.lbl_C132DB
+	jsl.l func_C24080                    ;C132D7|228040C2|C24080;  
+@lbl_C132DB:
 	pla                                  ;C132DB|68      |      ;  
 	dec a                                ;C132DC|3A      |      ;  
-	bpl .lbl_C1328D                      ;C132DD|10AE    |C1328D;  
+	bpl @lbl_C1328D                      ;C132DD|10AE    |C1328D;  
 	lda.b #$13                           ;C132DF|A913    |      ;  
-	sta.b $00                            ;C132E1|8500    |000000;  
+	sta.b w0000                           ;C132E1|8500    |000000;  
 	lda.b #$19                           ;C132E3|A919    |      ;  
-	sta.b $02                   ;C132E5|8502    |000002;  
-	jsl.l CODE_C626F6                    ;C132E7|22F626C6|C626F6;  
-	jsl.l CODE_C62405                    ;C132EB|220524C6|C62405;  
+	sta.b w0002                   ;C132E5|8502    |000002;  
+	jsl.l func_C626F6                    ;C132E7|22F626C6|C626F6;  
+	jsl.l func_C62405                    ;C132EB|220524C6|C62405;  
 	ldy.w #$07CF                         ;C132EF|A0CF07  |      ;  
-	sty.b $00                            ;C132F2|8400    |000000;  
+	sty.b w0000                            ;C132F2|8400    |000000;  
 	jsl.l DisplayMessage                    ;C132F4|222525C6|C62525;  
 	rts                                  ;C132F8|60      |      ;  
 	sep #$20                             ;C132F9|E220    |      ;  
 	rep #$10                             ;C132FB|C210    |      ;  
 	txa                                  ;C132FD|8A      |      ;  
 	pha                                  ;C132FE|48      |      ;  
-	jsr.w CODE_C13304                    ;C132FF|200433  |C13304;  
+	jsr.w func_C13304                    ;C132FF|200433  |C13304;  
 	pla                                  ;C13302|68      |      ;  
 	rts                                  ;C13303|60      |      ;  
 
-CODE_C13304:
+func_C13304:
 	sep #$20                             ;C13304|E220    |      ;  
 	rep #$10                             ;C13306|C210    |      ;  
 	phx                                  ;C13308|DA      |      ;  
-	stx.b $00                            ;C13309|8600    |000000;  
+	stx.b w0000                            ;C13309|8600    |000000;  
 	stz.b w0001                            ;C1330B|6401    |000001;  
-	stx.b $02                   ;C1330D|8602    |000002;  
-	jsr.w CODE_C1681A                    ;C1330F|201A68  |C1681A;  
+	stx.b w0002                   ;C1330D|8602    |000002;  
+	jsr.w func_C1681A                    ;C1330F|201A68  |C1681A;  
 	plx                                  ;C13312|FA      |      ;  
-	stx.b $00                            ;C13313|8600    |000000;  
-	jsl.l CODE_C277F8                    ;C13315|22F877C2|C277F8;  
+	stx.b w0000                            ;C13313|8600    |000000;  
+	jsl.l func_C277F8                    ;C13315|22F877C2|C277F8;  
 	lda.b w0001                            ;C13319|A501    |000001;  
 	dec a                                ;C1331B|3A      |      ;  
 	cmp.b #$03                           ;C1331C|C903    |      ;  
-	bcs .lbl_C1332A                      ;C1331E|B00A    |C1332A;  
+	bcs @lbl_C1332A                      ;C1331E|B00A    |C1332A;  
 	.db $A0,$DC,$07,$84,$00,$22,$25,$25   ;C13320
 	.db $C6,$60                           ;C13328|        |000060;  
-.lbl_C1332A
+@lbl_C1332A:
 	tdc                                  ;C1332A|7B      |      ;  
-	lda.b $03,s                          ;C1332B|A303    |000003;  
+	lda.b w0003,s                          ;C1332B|A303    |000003;  
 	tax                                  ;C1332D|AA      |      ;  
 	lda.l $7E8871,x                      ;C1332E|BF71887E|7E8871;  
-	beq .lbl_C1333E                      ;C13332|F00A    |C1333E;  
+	beq @lbl_C1333E                      ;C13332|F00A    |C1333E;  
 	ldy.w #$07EA                         ;C13334|A0EA07  |      ;  
-	sty.b $00                            ;C13337|8400    |000000;  
+	sty.b w0000                            ;C13337|8400    |000000;  
 	jsl.l DisplayMessage                    ;C13339|222525C6|C62525;  
 	rts                                  ;C1333D|60      |      ;  
-.lbl_C1333E
+@lbl_C1333E:
 	jsr.w NPCScriptFunction_C15B99                    ;C1333E|20995B  |C15B99;  
 	lda.b #$5A                           ;C13341|A95A    |      ;  
-	bcs .lbl_C13347                      ;C13343|B002    |C13347;  
+	bcs @lbl_C13347                      ;C13343|B002    |C13347;  
 	lda.b #$5B                           ;C13345|A95B    |      ;  
-.lbl_C13347
-	sta.b $06                            ;C13347|8506    |000006;  
-	jsl.l CODE_C6051F                    ;C13349|221F05C6|C6051F;  
-	lda.b $00                            ;C1334D|A500    |000000;  
+@lbl_C13347:
+	sta.b w0006                            ;C13347|8506    |000006;  
+	jsl.l func_C6051F                    ;C13349|221F05C6|C6051F;  
+	lda.b w0000                           ;C1334D|A500    |000000;  
 	cmp.b #$FF                           ;C1334F|C9FF    |      ;  
-	beq .lbl_C1339B                      ;C13351|F048    |C1339B;  
+	beq @lbl_C1339B                      ;C13351|F048    |C1339B;  
 	.db $22,$71,$06,$C3,$A5,$00,$30,$40   ;C13353|        |C30671;  
 	.db $48,$85,$00,$22,$92,$01,$C3,$A3   ;C1335B
 	.db $01,$85,$02,$85,$03,$A0,$E9,$07   ;C13363|        |000085;  
@@ -2474,174 +2389,169 @@ CODE_C13304:
 	.db $99,$5B,$A9,$5A,$B0,$02,$A9,$5B   ;C13383|        |00A95B;  
 	.db $85,$06,$A0,$FF,$FF,$84,$00,$84   ;C1338B|        |000006;  
 	.db $02,$84,$04,$22,$4A,$05,$C6,$60   ;C13393
-.lbl_C1339B
+@lbl_C1339B:
 	ldy.w #$07D0                         ;C1339B|A0D007  |      ;  
-	sty.b $00                            ;C1339E|8400    |000000;  
-	jsl.l CODE_C62B7E                    ;C133A0|227E2BC6|C62B7E;  
-	lda.b $00                            ;C133A4|A500    |000000;  
-	beq .lbl_C133B2                      ;C133A6|F00A    |C133B2;  
+	sty.b w0000                            ;C1339E|8400    |000000;  
+	jsl.l func_C62B7E                    ;C133A0|227E2BC6|C62B7E;  
+	lda.b w0000                           ;C133A4|A500    |000000;  
+	beq @lbl_C133B2                      ;C133A6|F00A    |C133B2;  
 	.db $A0,$D2,$07,$84,$00,$22,$25,$25   ;C133A8
 	.db $C6,$60                           ;C133B0|        |000060;  
-.lbl_C133B2
+@lbl_C133B2:
 	ldy.w #$03E8                         ;C133B2|A0E803  |      ;  
-	sty.b $00                            ;C133B5|8400    |000000;  
+	sty.b w0000                            ;C133B5|8400    |000000;  
 	ldy.w #$0000                         ;C133B7|A00000  |      ;  
-	sty.b $02                   ;C133BA|8402    |000002;  
-	jsl.l CODE_C25BB7                    ;C133BC|22B75BC2|C25BB7;  
-	lda.b $00                            ;C133C0|A500    |000000;  
-	beq .lbl_C133CE                      ;C133C2|F00A    |C133CE;  
+	sty.b w0002                   ;C133BA|8402    |000002;  
+	jsl.l func_C25BB7                    ;C133BC|22B75BC2|C25BB7;  
+	lda.b w0000                           ;C133C0|A500    |000000;  
+	beq @lbl_C133CE                      ;C133C2|F00A    |C133CE;  
 	.db $A0,$D3,$07,$84,$00,$22,$25,$25   ;C133C4
 	.db $C6,$60                           ;C133CC|        |000060;  
-.lbl_C133CE
-	jsl.l CODE_C62405                    ;C133CE|220524C6|C62405;  
+@lbl_C133CE:
+	jsl.l func_C62405                    ;C133CE|220524C6|C62405;  
 	ldy.w #$0050                         ;C133D2|A05000  |      ;  
-	sty.b $00                            ;C133D5|8400    |000000;  
-	jsl.l CODE_C62B19                    ;C133D7|22192BC6|C62B19;  
-
-CODE_C133DB:
+	sty.b w0000                            ;C133D5|8400    |000000;  
+	jsl.l func_C62B19                    ;C133D7|22192BC6|C62B19;  
+@lbl_C133DB:
 	ldy.w #$07D4                         ;C133DB|A0D407  |      ;  
-	sty.b $00                            ;C133DE|8400    |000000;  
-	jsl.l CODE_C62B7E                    ;C133E0|227E2BC6|C62B7E;  
-	lda.b $00                            ;C133E4|A500    |000000;  
-	bpl .lbl_C13404                      ;C133E6|101C    |C13404;  
+	sty.b w0000                            ;C133DE|8400    |000000;  
+	jsl.l func_C62B7E                    ;C133E0|227E2BC6|C62B7E;  
+	lda.b w0000                           ;C133E4|A500    |000000;  
+	bpl @lbl_C13404                      ;C133E6|101C    |C13404;  
 	ldy.w #$03E8                         ;C133E8|A0E803  |      ;  
-	sty.b $00                            ;C133EB|8400    |000000;  
+	sty.b w0000                            ;C133EB|8400    |000000;  
 	ldy.w #$0000                         ;C133ED|A00000  |      ;  
-	sty.b $02                   ;C133F0|8402    |000002;  
-	jsl.l CODE_C25BE0                    ;C133F2|22E05BC2|C25BE0;  
-	jsl.l CODE_C62405                    ;C133F6|220524C6|C62405;  
+	sty.b w0002                   ;C133F0|8402    |000002;  
+	jsl.l func_C25BE0                    ;C133F2|22E05BC2|C25BE0;  
+	jsl.l func_C62405                    ;C133F6|220524C6|C62405;  
 	ldy.w #$07D7                         ;C133FA|A0D707  |      ;  
-	sty.b $00                            ;C133FD|8400    |000000;  
+	sty.b w0000                            ;C133FD|8400    |000000;  
 	jsl.l DisplayMessage                    ;C133FF|222525C6|C62525;  
 	rts                                  ;C13403|60      |      ;  
-.lbl_C13404
+@lbl_C13404:
 	tdc                                  ;C13404|7B      |      ;  
-	lda.b $00                            ;C13405|A500    |000000;  
+	lda.b w0000                           ;C13405|A500    |000000;  
 	tax                                  ;C13407|AA      |      ;  
 	lda.l $7E894F,x                      ;C13408|BF4F897E|7E894F;  
 	phx                                  ;C1340C|DA      |      ;  
-	sta.b $00                            ;C1340D|8500    |000000;  
-	jsl.l CODE_C30710                    ;C1340F|221007C3|C30710;  
-	lda.b $02                   ;C13413|A502    |000002;  
+	sta.b w0000                           ;C1340D|8500    |000000;  
+	jsl.l func_C30710                    ;C1340F|221007C3|C30710;  
+	lda.b w0002                   ;C13413|A502    |000002;  
 	cmp.b #$63                           ;C13415|C963    |      ;  
-	bne .lbl_C1341F                      ;C13417|D006    |C1341F;  
+	bne @lbl_C1341F                      ;C13417|D006    |C1341F;  
 	.db $A5,$01,$C9,$1C,$F0,$18           ;C13419|        |000001;  
-.lbl_C1341F
-	lda.b $00                            ;C1341F|A500    |000000;  
+@lbl_C1341F:
+	lda.b w0000                           ;C1341F|A500    |000000;  
 	cmp.b #$03                           ;C13421|C903    |      ;  
-	beq .lbl_C13437                      ;C13423|F012    |C13437;  
+	beq @lbl_C13437                      ;C13423|F012    |C13437;  
 	plx                                  ;C13425|FA      |      ;  
 	lda.l $7E894F,x                      ;C13426|BF4F897E|7E894F;  
-	sta.b $02                   ;C1342A|8502    |000002;  
+	sta.b w0002                   ;C1342A|8502    |000002;  
 	ldy.w #$07D5                         ;C1342C|A0D507  |      ;  
-	sty.b $00                            ;C1342F|8400    |000000;  
+	sty.b w0000                            ;C1342F|8400    |000000;  
 	jsl.l DisplayMessage                    ;C13431|222525C6|C62525;  
-	bra CODE_C133DB                      ;C13435|80A4    |C133DB;  
-.lbl_C13437
+	bra @lbl_C133DB                      ;C13435|80A4    |C133DB;  
+@lbl_C13437:
 	lda.b w0001                            ;C13437|A501    |000001;  
 	cmp.b #$00                           ;C13439|C900    |      ;  
-	beq .lbl_C1344D                      ;C1343B|F010    |C1344D;  
+	beq @lbl_C1344D                      ;C1343B|F010    |C1344D;  
 	cmp.b #$16                           ;C1343D|C916    |      ;  
-	beq .lbl_C1344D                      ;C1343F|F00C    |C1344D;  
+	beq @lbl_C1344D                      ;C1343F|F00C    |C1344D;  
 	cmp.b #$19                           ;C13441|C919    |      ;  
-	beq .lbl_C1344D                      ;C13443|F008    |C1344D;  
+	beq @lbl_C1344D                      ;C13443|F008    |C1344D;  
 	cmp.b #$24                           ;C13445|C924    |      ;  
-	beq .lbl_C1344D                      ;C13447|F004    |C1344D;  
+	beq @lbl_C1344D                      ;C13447|F004    |C1344D;  
 	cmp.b #$1B                           ;C13449|C91B    |      ;  
-	bne .lbl_C13460                      ;C1344B|D013    |C13460;  
-.lbl_C1344D
+	bne @lbl_C13460                      ;C1344B|D013    |C13460;  
+@lbl_C1344D:
 	plx                                  ;C1344D|FA      |      ;  
 	lda.l $7E894F,x                      ;C1344E|BF4F897E|7E894F;  
-	sta.b $02                   ;C13452|8502    |000002;  
+	sta.b w0002                   ;C13452|8502    |000002;  
 	ldy.w #$07D6                         ;C13454|A0D607  |      ;  
-	sty.b $00                            ;C13457|8400    |000000;  
+	sty.b w0000                            ;C13457|8400    |000000;  
 	jsl.l DisplayMessage                    ;C13459|222525C6|C62525;  
-	jmp.w CODE_C133DB                    ;C1345D|4CDB33  |C133DB;  
-.lbl_C13460
+	jmp.w @lbl_C133DB                    ;C1345D|4CDB33  |C133DB;  
+@lbl_C13460:
 	plx                                  ;C13460|FA      |      ;  
-	stx.b $00                            ;C13461|8600    |000000;  
+	stx.b w0000                            ;C13461|8600    |000000;  
 	lda.l $7E894F,x                      ;C13463|BF4F897E|7E894F;  
 	pha                                  ;C13467|48      |      ;  
-	jsl.l CODE_C23C4D                    ;C13468|224D3CC2|C23C4D;  
-	lda.b $00                            ;C1346C|A500    |000000;  
-	bne .lbl_C13474                      ;C1346E|D004    |C13474;  
+	jsl.l func_C23C4D                    ;C13468|224D3CC2|C23C4D;  
+	lda.b w0000                           ;C1346C|A500    |000000;  
+	bne @lbl_C13474                      ;C1346E|D004    |C13474;  
 	.db $68,$4C,$DB,$33                   ;C13470
-.lbl_C13474
+@lbl_C13474:
 	tdc                                  ;C13474|7B      |      ;  
-	lda.b $04,s                          ;C13475|A304    |000004;  
+	lda.b w0004,s                          ;C13475|A304    |000004;  
 	tax                                  ;C13477|AA      |      ;  
 	lda.b #$01                           ;C13478|A901    |      ;  
 	sta.l $7E8871,x                      ;C1347A|9F71887E|7E8871;  
-	lda.b #$17                           ;C1347E|A917    |      ;  
-	sta.b $00                            ;C13480|8500    |000000;  
-	jsl.l CODE_C60512                    ;C13482|221205C6|C60512;  
-	lda.b $00                            ;C13486|A500    |000000;  
+	GetEvent Event17
 	bit.b #$01                           ;C13488|8901    |      ;  
-	beq .lbl_C1349D                      ;C1348A|F011    |C1349D;  
+	beq @lbl_C1349D                      ;C1348A|F011    |C1349D;  
 	.db $A3,$01,$85,$00,$22,$10,$07,$C3   ;C1348C|        |000001;  
 	.db $A5,$01,$C9,$08,$D0,$03,$4C,$19   ;C13494|        |000001;  
 	.db $37                               ;C1349C|        |0000A3;  
-.lbl_C1349D
+@lbl_C1349D:
 	lda.b w0001,s                          ;C1349D|A301    |000001;  
-	sta.b $00                            ;C1349F|8500    |000000;  
-	jsl.l CODE_C30710                    ;C134A1|221007C3|C30710;  
-	lda.b $02                   ;C134A5|A502    |000002;  
+	sta.b w0000                           ;C1349F|8500    |000000;  
+	jsl.l func_C30710                    ;C134A1|221007C3|C30710;  
+	lda.b w0002                   ;C134A5|A502    |000002;  
 	cmp.b #$63                           ;C134A7|C963    |      ;  
-	bne .lbl_C134C2                      ;C134A9|D017    |C134C2;  
+	bne @lbl_C134C2                      ;C134A9|D017    |C134C2;  
 	.db $A5,$01,$C9,$03,$D0,$03,$4C,$62   ;C134AB|        |000001;  
 	.db $35,$C9,$06,$D0,$03,$4C,$E1,$35   ;C134B3|        |0000C9;  
 	.db $C9,$1C,$D0,$03,$4C,$9A,$36       ;C134BB
-.lbl_C134C2
+@lbl_C134C2:
 	lda.b w0001,s                          ;C134C2|A301    |000001;  
-	sta.b $02                   ;C134C4|8502    |000002;  
+	sta.b w0002                   ;C134C4|8502    |000002;  
 	ldy.w #$07D8                         ;C134C6|A0D807  |      ;  
-	sty.b $00                            ;C134C9|8400    |000000;  
+	sty.b w0000                            ;C134C9|8400    |000000;  
 	jsl.l DisplayMessage                    ;C134CB|222525C6|C62525;  
-	jsl.l CODE_C62405                    ;C134CF|220524C6|C62405;  
-	lda.b $04,s                          ;C134D3|A304    |000004;  
-	sta.b $00                            ;C134D5|8500    |000000;  
+	jsl.l func_C62405                    ;C134CF|220524C6|C62405;  
+	lda.b w0004,s                          ;C134D3|A304    |000004;  
+	sta.b w0000                           ;C134D5|8500    |000000;  
 	ldy.w #$37C2                         ;C134D7|A0C237  |      ;  
-	sty.b $02                   ;C134DA|8402    |000002;  
+	sty.b w0002                   ;C134DA|8402    |000002;  
 	lda.b #$C1                           ;C134DC|A9C1    |      ;  
-	sta.b $04                   ;C134DE|8504    |000004;  
-	jsl.l CODE_C2938C                    ;C134E0|228C93C2|C2938C;  
+	sta.b w0004                   ;C134DE|8504    |000004;  
+	jsl.l func_C2938C                    ;C134E0|228C93C2|C2938C;  
 	ldy.w #$00C4                         ;C134E4|A0C400  |      ;  
-	sty.b $00                            ;C134E7|8400    |000000;  
-	jsl.l CODE_C62B19                    ;C134E9|22192BC6|C62B19;  
+	sty.b w0000                            ;C134E7|8400    |000000;  
+	jsl.l func_C62B19                    ;C134E9|22192BC6|C62B19;  
 	ldy.w #$0032                         ;C134ED|A03200  |      ;  
-	sty.b $00                            ;C134F0|8400    |000000;  
-	jsl.l CODE_C600C7                    ;C134F2|22C700C6|C600C7;  
-	lda.b $04,s                          ;C134F6|A304    |000004;  
-	sta.b $00                            ;C134F8|8500    |000000;  
+	sty.b w0000                            ;C134F0|8400    |000000;  
+	jsl.l func_C600C7                    ;C134F2|22C700C6|C600C7;  
+	lda.b w0004,s                          ;C134F6|A304    |000004;  
+	sta.b w0000                           ;C134F8|8500    |000000;  
 	ldy.w #$37C9                         ;C134FA|A0C937  |      ;  
-	sty.b $02                   ;C134FD|8402    |000002;  
+	sty.b w0002                   ;C134FD|8402    |000002;  
 	lda.b #$C1                           ;C134FF|A9C1    |      ;  
-	sta.b $04                   ;C13501|8504    |000004;  
-	jsl.l CODE_C2938C                    ;C13503|228C93C2|C2938C;  
-	lda.b $04,s                          ;C13507|A304    |000004;  
-	sta.b $00                            ;C13509|8500    |000000;  
-	jsl.l CODE_C2721B                    ;C1350B|221B72C2|C2721B;  
-	jsl.l CODE_C3F65F                    ;C1350F|225FF6C3|C3F65F;  
-	lda.b $00                            ;C13513|A500    |000000;  
+	sta.b w0004                   ;C13501|8504    |000004;  
+	jsl.l func_C2938C                    ;C13503|228C93C2|C2938C;  
+	lda.b w0004,s                          ;C13507|A304    |000004;  
+	sta.b w0000                           ;C13509|8500    |000000;  
+	jsl.l func_C2721B                    ;C1350B|221B72C2|C2721B;  
+	jsl.l func_C3F65F                    ;C1350F|225FF6C3|C3F65F;  
+	lda.b w0000                           ;C13513|A500    |000000;  
 	cmp.b #$10                           ;C13515|C910    |      ;  
-	bcc UNREACH_C1353F                   ;C13517|9026    |C1353F;  
+	bcc @lbl_C1353F                   ;C13517|9026    |C1353F;  
 	lda.b w0001,s                          ;C13519|A301    |000001;  
-	sta.b $00                            ;C1351B|8500    |000000;  
-	jsl.l CODE_C30659                    ;C1351D|225906C3|C30659;  
+	sta.b w0000                           ;C1351B|8500    |000000;  
+	jsl.l func_C30659                    ;C1351D|225906C3|C30659;  
 	ldy.w #$07D9                         ;C13521|A0D907  |      ;  
-	sty.b $00                            ;C13524|8400    |000000;  
+	sty.b w0000                            ;C13524|8400    |000000;  
 	jsl.l DisplayMessage                    ;C13526|222525C6|C62525;  
 	lda.b w0001,s                          ;C1352A|A301    |000001;  
-	sta.b $00                            ;C1352C|8500    |000000;  
-	jsl.l CODE_C10157                    ;C1352E|225701C1|C10157;  
+	sta.b w0000                           ;C1352C|8500    |000000;  
+	jsl.l func_C10157                    ;C1352E|225701C1|C10157;  
 	pla                                  ;C13532|68      |      ;  
-	sta.b $02                   ;C13533|8502    |000002;  
+	sta.b w0002                   ;C13533|8502    |000002;  
 	ldy.w #$07DA                         ;C13535|A0DA07  |      ;  
-	sty.b $00                            ;C13538|8400    |000000;  
+	sty.b w0000                            ;C13538|8400    |000000;  
 	jsl.l DisplayMessage                    ;C1353A|222525C6|C62525;  
 	rts                                  ;C1353E|60      |      ;  
-
-UNREACH_C1353F:
+@lbl_C1353F:
 	.db $A3,$01,$85,$00,$22,$59,$06,$C3   ;C1353F|        |000001;  
 	.db $A3,$01,$85,$00,$22,$59,$06,$C3   ;C13547|        |000001;  
 	.db $A3,$01,$85,$00,$22,$59,$06,$C3   ;C1354F|        |000001;  
@@ -2794,125 +2704,109 @@ UNREACH_C1353F:
 	sep #$20                             ;C139DC|E220    |      ;  
 	rep #$10                             ;C139DE|C210    |      ;  
 	phx                                  ;C139E0|DA      |      ;  
-	lda.b #$17                           ;C139E1|A917    |      ;  
-	sta.b $00                            ;C139E3|8500    |000000;  
-	jsl.l CODE_C60512                    ;C139E5|221205C6|C60512;  
-	lda.b $00                            ;C139E9|A500    |000000;  
+	GetEvent Event17
 	plx                                  ;C139EB|FA      |      ;  
 	bit.b #$01                           ;C139EC|8901    |      ;  
-	beq .lbl_C139FA                      ;C139EE|F00A    |C139FA;  
+	beq @lbl_C139FA                      ;C139EE|F00A    |C139FA;  
 	.db $A0,$F3,$08,$84,$00,$22,$25,$25   ;C139F0
 	.db $C6,$60                           ;C139F8|        |000060;  
-.lbl_C139FA
+@lbl_C139FA:
 	ldy.w #$0808                         ;C139FA|A00808  |      ;  
-	sty.b $00                            ;C139FD|8400    |000000;  
+	sty.b w0000                            ;C139FD|8400    |000000;  
 	jsl.l DisplayMessage                    ;C139FF|222525C6|C62525;  
 	rts                                  ;C13A03|60      |      ;  
 	sep #$20                             ;C13A04|E220    |      ;  
 	rep #$10                             ;C13A06|C210    |      ;  
 	txa                                  ;C13A08|8A      |      ;  
-	sta.b $00                            ;C13A09|8500    |000000;  
-	jsl.l CODE_C2721B                    ;C13A0B|221B72C2|C2721B;  
+	sta.b w0000                           ;C13A09|8500    |000000;  
+	jsl.l func_C2721B                    ;C13A0B|221B72C2|C2721B;  
 	phx                                  ;C13A0F|DA      |      ;  
-	lda.b #$17                           ;C13A10|A917    |      ;  
-	sta.b $00                            ;C13A12|8500    |000000;  
-	jsl.l CODE_C60512                    ;C13A14|221205C6|C60512;  
-	lda.b $00                            ;C13A18|A500    |000000;  
+	GetEvent Event17
 	plx                                  ;C13A1A|FA      |      ;  
 	bit.b #$01                           ;C13A1B|8901    |      ;  
-	beq .lbl_C13A29                      ;C13A1D|F00A    |C13A29;  
+	beq @lbl_C13A29                      ;C13A1D|F00A    |C13A29;  
 	.db $A0,$F4,$08,$84,$00,$22,$25,$25   ;C13A1F
 	.db $C6,$60                           ;C13A27|        |000060;  
-.lbl_C13A29
+@lbl_C13A29:
 	ldy.w #$0809                         ;C13A29|A00908  |      ;  
-	sty.b $00                            ;C13A2C|8400    |000000;  
+	sty.b w0000                            ;C13A2C|8400    |000000;  
 	jsl.l DisplayMessage                    ;C13A2E|222525C6|C62525;  
 	rts                                  ;C13A32|60      |      ;  
 	sep #$20                             ;C13A33|E220    |      ;  
 	rep #$10                             ;C13A35|C210    |      ;  
-	lda.b #$09                           ;C13A37|A909    |      ;  
-	sta.b $00                            ;C13A39|8500    |000000;  
-	jsl.l CODE_C60512                    ;C13A3B|221205C6|C60512;  
-	lda.b $00                            ;C13A3F|A500    |000000;  
+	GetEvent Event09
 	cmp.b #$08                           ;C13A41|C908    |      ;  
-	beq UNREACH_C13A69                   ;C13A43|F024    |C13A69;  
+	beq @lbl_C13A69                   ;C13A43|F024    |C13A69;  
 	phx                                  ;C13A45|DA      |      ;  
-	lda.b #$17                           ;C13A46|A917    |      ;  
-	sta.b $00                            ;C13A48|8500    |000000;  
-	jsl.l CODE_C60512                    ;C13A4A|221205C6|C60512;  
-	lda.b $00                            ;C13A4E|A500    |000000;  
+	GetEvent Event17
 	plx                                  ;C13A50|FA      |      ;  
 	bit.b #$01                           ;C13A51|8901    |      ;  
-	beq .lbl_C13A5F                      ;C13A53|F00A    |C13A5F;  
+	beq @lbl_C13A5F                      ;C13A53|F00A    |C13A5F;  
 	.db $A0,$F5,$08,$84,$00,$22,$25,$25   ;C13A55
 	.db $C6,$60                           ;C13A5D|        |000060;  
-.lbl_C13A5F
+@lbl_C13A5F:
 	ldy.w #$080A                         ;C13A5F|A00A08  |      ;  
-	sty.b $00                            ;C13A62|8400    |000000;  
+	sty.b w0000                            ;C13A62|8400    |000000;  
 	jsl.l DisplayMessage                    ;C13A64|222525C6|C62525;  
 	rts                                  ;C13A68|60      |      ;  
-
-UNREACH_C13A69:
+@lbl_C13A69:
 	.db $A0,$7D,$08,$84,$00,$22,$25,$25   ;C13A69
 	.db $C6,$60                           ;C13A71|        |000060;  
 	sep #$20                             ;C13A73|E220    |      ;  
 	rep #$10                             ;C13A75|C210    |      ;  
 	phx                                  ;C13A77|DA      |      ;  
-	lda.b #$17                           ;C13A78|A917    |      ;  
-	sta.b $00                            ;C13A7A|8500    |000000;  
-	jsl.l CODE_C60512                    ;C13A7C|221205C6|C60512;  
-	lda.b $00                            ;C13A80|A500    |000000;  
+	GetEvent Event17
 	plx                                  ;C13A82|FA      |      ;  
 	bit.b #$01                           ;C13A83|8901    |      ;  
-	beq .lbl_C13A91                      ;C13A85|F00A    |C13A91;  
+	beq @lbl_C13A91                      ;C13A85|F00A    |C13A91;  
 	.db $A0,$F7,$08,$84,$00,$22,$25,$25   ;C13A87
 	.db $C6,$60                           ;C13A8F|        |000060;  
-.lbl_C13A91
+@lbl_C13A91:
 	lda.l $7E8871,x                      ;C13A91|BF71887E|7E8871;  
-	beq .lbl_C13AA1                      ;C13A95|F00A    |C13AA1;  
+	beq @lbl_C13AA1                      ;C13A95|F00A    |C13AA1;  
 	.db $A0,$12,$08,$84,$00,$22,$25,$25   ;C13A97
 	.db $C6,$60                           ;C13A9F|        |000060;  
-.lbl_C13AA1
+@lbl_C13AA1:
 	inc a                                ;C13AA1|1A      |      ;  
 	sta.l $7E8871,x                      ;C13AA2|9F71887E|7E8871;  
 	ldy.w #$080C                         ;C13AA6|A00C08  |      ;  
-	sty.b $00                            ;C13AA9|8400    |000000;  
-	jsl.l CODE_C62B7E                    ;C13AAB|227E2BC6|C62B7E;  
-	lda.b $00                            ;C13AAF|A500    |000000;  
-	beq .lbl_C13ABD                      ;C13AB1|F00A    |C13ABD;  
+	sty.b w0000                            ;C13AA9|8400    |000000;  
+	jsl.l func_C62B7E                    ;C13AAB|227E2BC6|C62B7E;  
+	lda.b w0000                           ;C13AAF|A500    |000000;  
+	beq @lbl_C13ABD                      ;C13AB1|F00A    |C13ABD;  
 	.db $A0,$0E,$08,$84,$00,$22,$25,$25   ;C13AB3
 	.db $C6,$60                           ;C13ABB|        |000060;  
-.lbl_C13ABD
+@lbl_C13ABD:
 	ldy.w #$080F                         ;C13ABD|A00F08  |      ;  
-	sty.b $00                            ;C13AC0|8400    |000000;  
+	sty.b w0000                            ;C13AC0|8400    |000000;  
 	jsl.l DisplayMessage                    ;C13AC2|222525C6|C62525;  
-	jsl.l CODE_C3F65F                    ;C13AC6|225FF6C3|C3F65F;  
+	jsl.l func_C3F65F                    ;C13AC6|225FF6C3|C3F65F;  
 	tdc                                  ;C13ACA|7B      |      ;  
-	lda.b $00                            ;C13ACB|A500    |000000;  
+	lda.b w0000                           ;C13ACB|A500    |000000;  
 	and.b #$07                           ;C13ACD|2907    |      ;  
 	asl a                                ;C13ACF|0A      |      ;  
 	tax                                  ;C13AD0|AA      |      ;  
 	rep #$20                             ;C13AD1|C220    |      ;  
 	lda.l UNREACH_C13B0B,x               ;C13AD3|BF0B3BC1|C13B0B;  
-	sta.b $00                            ;C13AD7|8500    |000000;  
+	sta.b w0000                           ;C13AD7|8500    |000000;  
 	sep #$20                             ;C13AD9|E220    |      ;  
 	jsl.l DisplayMessage                    ;C13ADB|222525C6|C62525;  
 	ldy.w #$0810                         ;C13ADF|A01008  |      ;  
-	sty.b $00                            ;C13AE2|8400    |000000;  
+	sty.b w0000                            ;C13AE2|8400    |000000;  
 	jsl.l DisplayMessage                    ;C13AE4|222525C6|C62525;  
-	jsl.l CODE_C3F65F                    ;C13AE8|225FF6C3|C3F65F;  
+	jsl.l func_C3F65F                    ;C13AE8|225FF6C3|C3F65F;  
 	tdc                                  ;C13AEC|7B      |      ;  
-	lda.b $00                            ;C13AED|A500    |000000;  
+	lda.b w0000                           ;C13AED|A500    |000000;  
 	and.b #$03                           ;C13AEF|2903    |      ;  
 	asl a                                ;C13AF1|0A      |      ;  
 	tax                                  ;C13AF2|AA      |      ;  
 	rep #$20                             ;C13AF3|C220    |      ;  
 	lda.l DATA8_C13B1B,x                 ;C13AF5|BF1B3BC1|C13B1B;  
-	sta.b $00                            ;C13AF9|8500    |000000;  
+	sta.b w0000                           ;C13AF9|8500    |000000;  
 	sep #$20                             ;C13AFB|E220    |      ;  
 	jsl.l DisplayMessage                    ;C13AFD|222525C6|C62525;  
 	ldy.w #$0811                         ;C13B01|A01108  |      ;  
-	sty.b $00                            ;C13B04|8400    |000000;  
+	sty.b w0000                            ;C13B04|8400    |000000;  
 	jsl.l DisplayMessage                    ;C13B06|222525C6|C62525;  
 	rts                                  ;C13B0A|60      |      ;  
 
@@ -2932,18 +2826,15 @@ DATA8_C13B1B:
 	sep #$20                             ;C13B4B|E220    |      ;  
 	rep #$10                             ;C13B4D|C210    |      ;  
 	phx                                  ;C13B4F|DA      |      ;  
-	lda.b #$17                           ;C13B50|A917    |      ;  
-	sta.b $00                            ;C13B52|8500    |000000;  
-	jsl.l CODE_C60512                    ;C13B54|221205C6|C60512;  
-	lda.b $00                            ;C13B58|A500    |000000;  
+	GetEvent Event17
 	plx                                  ;C13B5A|FA      |      ;  
 	bit.b #$01                           ;C13B5B|8901    |      ;  
-	beq .lbl_C13B69                      ;C13B5D|F00A    |C13B69;  
+	beq @lbl_C13B69                      ;C13B5D|F00A    |C13B69;  
 	.db $A0,$FE,$08,$84,$00,$22,$25,$25   ;C13B5F
 	.db $C6,$60                           ;C13B67|        |000060;  
-.lbl_C13B69
+@lbl_C13B69:
 	ldy.w #$0821                         ;C13B69|A02108  |      ;  
-	sty.b $00                            ;C13B6C|8400    |000000;  
+	sty.b w0000                            ;C13B6C|8400    |000000;  
 	jsl.l DisplayMessage                    ;C13B6E|222525C6|C62525;  
 	rts                                  ;C13B72|60      |      ;  
 	.db $E2,$20,$C2,$10,$DA,$A9,$17,$85   ;C13B73
@@ -2954,18 +2845,15 @@ DATA8_C13B1B:
 	sep #$20                             ;C13B9B|E220    |      ;  
 	rep #$10                             ;C13B9D|C210    |      ;  
 	phx                                  ;C13B9F|DA      |      ;  
-	lda.b #$17                           ;C13BA0|A917    |      ;  
-	sta.b $00                            ;C13BA2|8500    |000000;  
-	jsl.l CODE_C60512                    ;C13BA4|221205C6|C60512;  
-	lda.b $00                            ;C13BA8|A500    |000000;  
+	GetEvent Event17
 	plx                                  ;C13BAA|FA      |      ;  
 	bit.b #$01                           ;C13BAB|8901    |      ;  
-	beq .lbl_C13BB9                      ;C13BAD|F00A    |C13BB9;  
+	beq @lbl_C13BB9                      ;C13BAD|F00A    |C13BB9;  
 	.db $A0,$FC,$08,$84,$00,$22,$25,$25   ;C13BAF
 	.db $C6,$60                           ;C13BB7|        |000060;  
-.lbl_C13BB9
+@lbl_C13BB9:
 	ldy.w #$0823                         ;C13BB9|A02308  |      ;  
-	sty.b $00                            ;C13BBC|8400    |000000;  
+	sty.b w0000                            ;C13BBC|8400    |000000;  
 	jsl.l DisplayMessage                    ;C13BBE|222525C6|C62525;  
 	rts                                  ;C13BC2|60      |      ;  
 	.db $E2,$20,$C2,$10,$DA,$A9,$17,$85   ;C13BC3
@@ -2981,58 +2869,51 @@ DATA8_C13B1B:
 	sep #$20                             ;C13C13|E220    |      ;  
 	rep #$10                             ;C13C15|C210    |      ;  
 	lda.l $7E8871,x                      ;C13C17|BF71887E|7E8871;  
-	bne .lbl_C13C2C                      ;C13C1B|D00F    |C13C2C;  
+	bne @lbl_C13C2C                      ;C13C1B|D00F    |C13C2C;  
 	inc a                                ;C13C1D|1A      |      ;  
 	sta.l $7E8871,x                      ;C13C1E|9F71887E|7E8871;  
 	ldy.w #$082A                         ;C13C22|A02A08  |      ;  
-	sty.b $00                            ;C13C25|8400    |000000;  
+	sty.b w0000                            ;C13C25|8400    |000000;  
 	jsl.l DisplayMessage                    ;C13C27|222525C6|C62525;  
 	rts                                  ;C13C2B|60      |      ;  
-.lbl_C13C2C
+@lbl_C13C2C:
 	ldy.w #$082B                         ;C13C2C|A02B08  |      ;  
-	sty.b $00                            ;C13C2F|8400    |000000;  
+	sty.b w0000                            ;C13C2F|8400    |000000;  
 	jsl.l DisplayMessage                    ;C13C31|222525C6|C62525;  
 	rts                                  ;C13C35|60      |      ;  
 	sep #$20                             ;C13C36|E220    |      ;  
 	rep #$10                             ;C13C38|C210    |      ;  
 	phx                                  ;C13C3A|DA      |      ;  
-	lda.b #$17                           ;C13C3B|A917    |      ;  
-	sta.b $00                            ;C13C3D|8500    |000000;  
-	jsl.l CODE_C60512                    ;C13C3F|221205C6|C60512;  
-	lda.b $00                            ;C13C43|A500    |000000;  
+	GetEvent Event17
 	plx                                  ;C13C45|FA      |      ;  
 	bit.b #$01                           ;C13C46|8901    |      ;  
-	beq .lbl_C13C54                      ;C13C48|F00A    |C13C54;  
+	beq @lbl_C13C54                      ;C13C48|F00A    |C13C54;  
 	.db $A0,$D0,$08,$84,$00,$22,$25,$25   ;C13C4A
 	.db $C6,$60                           ;C13C52|        |000060;  
-.lbl_C13C54
+@lbl_C13C54:
 	lda.l $7E8871,x                      ;C13C54|BF71887E|7E8871;  
-	beq .lbl_C13C64                      ;C13C58|F00A    |C13C64;  
+	beq @lbl_C13C64                      ;C13C58|F00A    |C13C64;  
 	.db $A0,$88,$06,$84,$00,$22,$25,$25   ;C13C5A
 	.db $C6,$60                           ;C13C62|        |000060;  
-.lbl_C13C64
+@lbl_C13C64:
 	inc a                                ;C13C64|1A      |      ;  
 	sta.l $7E8871,x                      ;C13C65|9F71887E|7E8871;  
 	jsr.w NPCScriptFunction_C163C9                    ;C13C69|20C963  |C163C9;  
-	bcc UNREACH_C13C78                   ;C13C6C|900A    |C13C78;  
+	bcc @lbl_C13C78                   ;C13C6C|900A    |C13C78;  
 	ldy.w #$0687                         ;C13C6E|A08706  |      ;  
-	sty.b $00                            ;C13C71|8400    |000000;  
+	sty.b w0000                            ;C13C71|8400    |000000;  
 	jsl.l DisplayMessage                    ;C13C73|222525C6|C62525;  
 	rts                                  ;C13C77|60      |      ;  
-
-UNREACH_C13C78:
+@lbl_C13C78:
 	.db $A0,$2C,$08,$84,$00,$22,$25,$25   ;C13C78
 	.db $C6,$60                           ;C13C80|        |000060;  
 	sep #$20                             ;C13C82|E220    |      ;  
 	rep #$10                             ;C13C84|C210    |      ;  
 	phx                                  ;C13C86|DA      |      ;  
-	lda.b #$17                           ;C13C87|A917    |      ;  
-	sta.b $00                            ;C13C89|8500    |000000;  
-	jsl.l CODE_C60512                    ;C13C8B|221205C6|C60512;  
-	lda.b $00                            ;C13C8F|A500    |000000;  
+	GetEvent Event17
 	plx                                  ;C13C91|FA      |      ;  
 	bit.b #$01                           ;C13C92|8901    |      ;  
-	beq .lbl_C13CD9                      ;C13C94|F043    |C13CD9;  
+	beq @lbl_C13CD9                      ;C13C94|F043    |C13CD9;  
 	.db $A9,$95,$85,$00,$22,$12,$05,$C6   ;C13C96
 	.db $A5,$00,$D0,$2D,$A9,$95,$85,$00   ;C13C9E|        |000000;  
 	.db $A9,$01,$85,$02,$22,$79,$04,$C6   ;C13CA6
@@ -3042,71 +2923,51 @@ UNREACH_C13C78:
 	.db $A0,$32,$08,$84,$00,$22,$25,$25   ;C13CC6
 	.db $C6,$A0,$D2,$08,$84,$00,$22,$25   ;C13CCE|        |0000A0;  
 	.db $25,$C6,$60                       ;C13CD6|        |0000C6;  
-.lbl_C13CD9
+@lbl_C13CD9:
 	lda.l $7E8871,x                      ;C13CD9|BF71887E|7E8871;  
-	bne .lbl_C13D17                      ;C13CDD|D038    |C13D17;  
-	lda.b #$95                           ;C13CDF|A995    |      ;  
-	sta.b $00                            ;C13CE1|8500    |000000;  
-	jsl.l CODE_C60512                    ;C13CE3|221205C6|C60512;  
-	lda.b $00                            ;C13CE7|A500    |000000;  
-	bne UNREACH_C13D0D                   ;C13CE9|D022    |C13D0D;  
-	lda.b #$20                           ;C13CEB|A920    |      ;  
-	sta.b $00                            ;C13CED|8500    |000000;  
-	lda.b #$01                           ;C13CEF|A901    |      ;  
-	sta.b $02                   ;C13CF1|8502    |000002;  
-	jsl.l CODE_C60479                    ;C13CF3|227904C6|C60479;  
-	lda.b #$95                           ;C13CF7|A995    |      ;  
-	sta.b $00                            ;C13CF9|8500    |000000;  
-	lda.b #$01                           ;C13CFB|A901    |      ;  
-	sta.b $02                   ;C13CFD|8502    |000002;  
-	jsl.l CODE_C60479                    ;C13CFF|227904C6|C60479;  
+	bne @lbl_C13D17                      ;C13CDD|D038    |C13D17;  
+	GetEvent Event95
+	bne @lbl_C13D0D                   ;C13CE9|D022    |C13D0D;  
+	SetEvent Event20 $01                    ;C13CF3|227904C6|C60479;  
+	SetEvent Event95 $01                    ;C13CFF|227904C6|C60479;  
 	ldy.w #$082D                         ;C13D03|A02D08  |      ;  
-	sty.b $00                            ;C13D06|8400    |000000;  
+	sty.b w0000                            ;C13D06|8400    |000000;  
 	jsl.l DisplayMessage                    ;C13D08|222525C6|C62525;  
 	rts                                  ;C13D0C|60      |      ;  
-
-UNREACH_C13D0D:
+@lbl_C13D0D:
 	.db $A0,$2E,$08,$84,$00,$22,$25,$25   ;C13D0D
 	.db $C6,$60                           ;C13D15|        |000060;  
-.lbl_C13D17
-	lda.b #$95                           ;C13D17|A995    |      ;  
-	sta.b $00                            ;C13D19|8500    |000000;  
-	jsl.l CODE_C60512                    ;C13D1B|221205C6|C60512;  
-	lda.b $00                            ;C13D1F|A500    |000000;  
-	beq .lbl_C13D2D                      ;C13D21|F00A    |C13D2D;  
+@lbl_C13D17:
+	GetEvent Event95
+	beq @lbl_C13D2D                      ;C13D21|F00A    |C13D2D;  
 	.db $A0,$2E,$08,$84,$00,$22,$25,$25   ;C13D23
 	.db $C6,$60                           ;C13D2B|        |000060;  
-.lbl_C13D2D
-	lda.b #$95                           ;C13D2D|A995    |      ;  
-	sta.b $00                            ;C13D2F|8500    |000000;  
-	lda.b #$01                           ;C13D31|A901    |      ;  
-	sta.b $02                   ;C13D33|8502    |000002;  
-	jsl.l CODE_C60479                    ;C13D35|227904C6|C60479;  
+@lbl_C13D2D:
+	SetEvent Event95 $01                    ;C13D35|227904C6|C60479;  
 	ldy.w #$082F                         ;C13D39|A02F08  |      ;  
-	sty.b $00                            ;C13D3C|8400    |000000;  
+	sty.b w0000                            ;C13D3C|8400    |000000;  
 	jsl.l DisplayMessage                    ;C13D3E|222525C6|C62525;  
-	jsl.l CODE_C3F65F                    ;C13D42|225FF6C3|C3F65F;  
+	jsl.l func_C3F65F                    ;C13D42|225FF6C3|C3F65F;  
 	tdc                                  ;C13D46|7B      |      ;  
-	lda.b $00                            ;C13D47|A500    |000000;  
+	lda.b w0000                           ;C13D47|A500    |000000;  
 	and.b #$07                           ;C13D49|2907    |      ;  
 	asl a                                ;C13D4B|0A      |      ;  
 	tax                                  ;C13D4C|AA      |      ;  
 	rep #$20                             ;C13D4D|C220    |      ;  
 	lda.l UNREACH_C13D7C,x               ;C13D4F|BF7C3DC1|C13D7C;  
-	sta.b $00                            ;C13D53|8500    |000000;  
+	sta.b w0000                           ;C13D53|8500    |000000;  
 	sep #$20                             ;C13D55|E220    |      ;  
 	jsl.l DisplayMessage                    ;C13D57|222525C6|C62525;  
 	ldy.w #$0830                         ;C13D5B|A03008  |      ;  
-	sty.b $00                            ;C13D5E|8400    |000000;  
-	jsl.l CODE_C62B7E                    ;C13D60|227E2BC6|C62B7E;  
-	lda.b $00                            ;C13D64|A500    |000000;  
-	bne UNREACH_C13D72                   ;C13D66|D00A    |C13D72;  
+	sty.b w0000                            ;C13D5E|8400    |000000;  
+	jsl.l func_C62B7E                    ;C13D60|227E2BC6|C62B7E;  
+	lda.b w0000                           ;C13D64|A500    |000000;  
+	bne @lbl_C13D72                   ;C13D66|D00A    |C13D72;  
 	ldy.w #$0831                         ;C13D68|A03108  |      ;  
-	sty.b $00                            ;C13D6B|8400    |000000;  
+	sty.b w0000                            ;C13D6B|8400    |000000;  
 	jsl.l DisplayMessage                    ;C13D6D|222525C6|C62525;  
 	rts                                  ;C13D71|60      |      ;  
-
-UNREACH_C13D72:
+@lbl_C13D72:
 	.db $A0,$32,$08,$84,$00,$22,$25,$25   ;C13D72
 	.db $C6,$60                           ;C13D7A|        |000060;  
 
@@ -3116,424 +2977,323 @@ UNREACH_C13D7C:
 	sep #$20                             ;C13D8C|E220    |      ;  
 	rep #$10                             ;C13D8E|C210    |      ;  
 	phx                                  ;C13D90|DA      |      ;  
-	lda.b #$17                           ;C13D91|A917    |      ;  
-	sta.b $00                            ;C13D93|8500    |000000;  
-	jsl.l CODE_C60512                    ;C13D95|221205C6|C60512;  
-	lda.b $00                            ;C13D99|A500    |000000;  
+	GetEvent Event17
 	plx                                  ;C13D9B|FA      |      ;  
 	bit.b #$01                           ;C13D9C|8901    |      ;  
-	beq .lbl_C13DAA                      ;C13D9E|F00A    |C13DAA;  
+	beq @lbl_C13DAA                      ;C13D9E|F00A    |C13DAA;  
 	.db $A0,$D5,$08,$84,$00,$22,$25,$25   ;C13DA0
 	.db $C6,$60                           ;C13DA8|        |000060;  
-.lbl_C13DAA
+@lbl_C13DAA:
 	lda.l $7E8871,x                      ;C13DAA|BF71887E|7E8871;  
-	bne .lbl_C13E1E                      ;C13DAE|D06E    |C13E1E;  
-	lda.b #$82                           ;C13DB0|A982    |      ;  
-	sta.b $00                            ;C13DB2|8500    |000000;  
-	jsl.l CODE_C60512                    ;C13DB4|221205C6|C60512;  
-	lda.b $00                            ;C13DB8|A500    |000000;  
-	beq .lbl_C13DC6                      ;C13DBA|F00A    |C13DC6;  
+	bne @lbl_C13E1E                      ;C13DAE|D06E    |C13E1E;  
+	GetEvent Event82
+	beq @lbl_C13DC6                      ;C13DBA|F00A    |C13DC6;  
 	.db $A0,$90,$06,$84,$00,$22,$25,$25   ;C13DBC
 	.db $C6,$60                           ;C13DC4|        |000060;  
-.lbl_C13DC6
+@lbl_C13DC6:
 	ldy.w #$068D                         ;C13DC6|A08D06  |      ;  
-	sty.b $00                            ;C13DC9|8400    |000000;  
-	jsl.l CODE_C62B7E                    ;C13DCB|227E2BC6|C62B7E;  
-	lda.b $00                            ;C13DCF|A500    |000000;  
-	beq .lbl_C13DDD                      ;C13DD1|F00A    |C13DDD;  
+	sty.b w0000                            ;C13DC9|8400    |000000;  
+	jsl.l func_C62B7E                    ;C13DCB|227E2BC6|C62B7E;  
+	lda.b w0000                           ;C13DCF|A500    |000000;  
+	beq @lbl_C13DDD                      ;C13DD1|F00A    |C13DDD;  
 	.db $A0,$8E,$06,$84,$00,$22,$25,$25   ;C13DD3
 	.db $C6,$60                           ;C13DDB|        |000060;  
-.lbl_C13DDD
-	lda.b #$1F                           ;C13DDD|A91F    |      ;  
-	sta.b $00                            ;C13DDF|8500    |000000;  
-	lda.b #$01                           ;C13DE1|A901    |      ;  
-	sta.b $02                   ;C13DE3|8502    |000002;  
-	jsl.l CODE_C60479                    ;C13DE5|227904C6|C60479;  
+@lbl_C13DDD:
+	SetEvent Event1F $01                    ;C13DE5|227904C6|C60479;  
 	ldy.w #$068F                         ;C13DE9|A08F06  |      ;  
-	sty.b $00                            ;C13DEC|8400    |000000;  
+	sty.b w0000                            ;C13DEC|8400    |000000;  
 	jsl.l DisplayMessage                    ;C13DEE|222525C6|C62525;  
 	lda.b #$AF                           ;C13DF2|A9AF    |      ;  
-	sta.b $00                            ;C13DF4|8500    |000000;  
-	jsl.l CODE_C3035D                    ;C13DF6|225D03C3|C3035D;  
-	lda.b $00                            ;C13DFA|A500    |000000;  
-	bmi .lbl_C13E1D                      ;C13DFC|301F    |C13E1D;  
-	sta.b $02                   ;C13DFE|8502    |000002;  
+	sta.b w0000                           ;C13DF4|8500    |000000;  
+	jsl.l func_C3035D                    ;C13DF6|225D03C3|C3035D;  
+	lda.b w0000                           ;C13DFA|A500    |000000;  
+	bmi @lbl_C13E1D                      ;C13DFC|301F    |C13E1D;  
+	sta.b w0002                   ;C13DFE|8502    |000002;  
 	pha                                  ;C13E00|48      |      ;  
 	ldy.w #$0679                         ;C13E01|A07906  |      ;  
-	sty.b $00                            ;C13E04|8400    |000000;  
+	sty.b w0000                            ;C13E04|8400    |000000;  
 	jsl.l DisplayMessage                    ;C13E06|222525C6|C62525;  
 	pla                                  ;C13E0A|68      |      ;  
-	sta.b $00                            ;C13E0B|8500    |000000;  
-	jsl.l CODE_C10157                    ;C13E0D|225701C1|C10157;  
-	lda.b #$82                           ;C13E11|A982    |      ;  
-	sta.b $00                            ;C13E13|8500    |000000;  
-	lda.b #$01                           ;C13E15|A901    |      ;  
-	sta.b $02                   ;C13E17|8502    |000002;  
-	jsl.l CODE_C60479                    ;C13E19|227904C6|C60479;  
-.lbl_C13E1D
+	sta.b w0000                           ;C13E0B|8500    |000000;  
+	jsl.l func_C10157                    ;C13E0D|225701C1|C10157;  
+	SetEvent Event82 $01                    ;C13E19|227904C6|C60479;  
+@lbl_C13E1D:
 	rts                                  ;C13E1D|60      |      ;  
-.lbl_C13E1E
-	lda.b #$82                           ;C13E1E|A982    |      ;  
-	sta.b $00                            ;C13E20|8500    |000000;  
-	jsl.l CODE_C60512                    ;C13E22|221205C6|C60512;  
-	lda.b $00                            ;C13E26|A500    |000000;  
-	bne .lbl_C13E78                      ;C13E28|D04E    |C13E78;  
+@lbl_C13E1E:
+	GetEvent Event82
+	bne @lbl_C13E78                      ;C13E28|D04E    |C13E78;  
 	ldy.w #$083F                         ;C13E2A|A03F08  |      ;  
-	sty.b $00                            ;C13E2D|8400    |000000;  
+	sty.b w0000                            ;C13E2D|8400    |000000;  
 	jsl.l DisplayMessage                    ;C13E2F|222525C6|C62525;  
 	lda.b #$AF                           ;C13E33|A9AF    |      ;  
-	sta.b $00                            ;C13E35|8500    |000000;  
-	jsl.l CODE_C3035D                    ;C13E37|225D03C3|C3035D;  
-	lda.b $00                            ;C13E3B|A500    |000000;  
-	bmi .lbl_C13E5E                      ;C13E3D|301F    |C13E5E;  
-	sta.b $02                   ;C13E3F|8502    |000002;  
+	sta.b w0000                           ;C13E35|8500    |000000;  
+	jsl.l func_C3035D                    ;C13E37|225D03C3|C3035D;  
+	lda.b w0000                           ;C13E3B|A500    |000000;  
+	bmi @lbl_C13E5E                      ;C13E3D|301F    |C13E5E;  
+	sta.b w0002                   ;C13E3F|8502    |000002;  
 	pha                                  ;C13E41|48      |      ;  
 	ldy.w #$0679                         ;C13E42|A07906  |      ;  
-	sty.b $00                            ;C13E45|8400    |000000;  
+	sty.b w0000                            ;C13E45|8400    |000000;  
 	jsl.l DisplayMessage                    ;C13E47|222525C6|C62525;  
 	pla                                  ;C13E4B|68      |      ;  
-	sta.b $00                            ;C13E4C|8500    |000000;  
-	jsl.l CODE_C10157                    ;C13E4E|225701C1|C10157;  
-	lda.b #$82                           ;C13E52|A982    |      ;  
-	sta.b $00                            ;C13E54|8500    |000000;  
-	lda.b #$01                           ;C13E56|A901    |      ;  
-	sta.b $02                   ;C13E58|8502    |000002;  
-	jsl.l CODE_C60479                    ;C13E5A|227904C6|C60479;  
-.lbl_C13E5E
-	lda.b #$1F                           ;C13E5E|A91F    |      ;  
-	sta.b $00                            ;C13E60|8500    |000000;  
-	jsl.l CODE_C60512                    ;C13E62|221205C6|C60512;  
-	lda.b $00                            ;C13E66|A500    |000000;  
+	sta.b w0000                           ;C13E4C|8500    |000000;  
+	jsl.l func_C10157                    ;C13E4E|225701C1|C10157;  
+	SetEvent Event82 $01                    ;C13E5A|227904C6|C60479;  
+@lbl_C13E5E:
+	GetEvent Event1F
 	cmp.b #$02                           ;C13E68|C902    |      ;  
-	bcs .lbl_C13E81                      ;C13E6A|B015    |C13E81;  
-	lda.b #$1F                           ;C13E6C|A91F    |      ;  
-	sta.b $00                            ;C13E6E|8500    |000000;  
-	lda.b #$02                           ;C13E70|A902    |      ;  
-	sta.b $02                   ;C13E72|8502    |000002;  
-	jsl.l CODE_C60479                    ;C13E74|227904C6|C60479;  
-.lbl_C13E78
+	bcs @lbl_C13E81                      ;C13E6A|B015    |C13E81;  
+	SetEvent Event1F $02                    ;C13E74|227904C6|C60479;  
+@lbl_C13E78:
 	ldy.w #$0840                         ;C13E78|A04008  |      ;  
-	sty.b $00                            ;C13E7B|8400    |000000;  
+	sty.b w0000                            ;C13E7B|8400    |000000;  
 	jsl.l DisplayMessage                    ;C13E7D|222525C6|C62525;  
-.lbl_C13E81
+@lbl_C13E81:
 	rts                                  ;C13E81|60      |      ;  
 	sep #$20                             ;C13E82|E220    |      ;  
 	rep #$10                             ;C13E84|C210    |      ;  
 	ldy.w #$0692                         ;C13E86|A09206  |      ;  
-	sty.b $00                            ;C13E89|8400    |000000;  
+	sty.b w0000                            ;C13E89|8400    |000000;  
 	jsl.l DisplayMessage                    ;C13E8B|222525C6|C62525;  
-	lda.b #$0F                           ;C13E8F|A90F    |      ;  
-	sta.b $00                            ;C13E91|8500    |000000;  
-	lda.b #$01                           ;C13E93|A901    |      ;  
-	sta.b $02                   ;C13E95|8502    |000002;  
-	jsl.l CODE_C60479                    ;C13E97|227904C6|C60479;  
+	SetEvent Event0F $01                    ;C13E97|227904C6|C60479;  
 	rts                                  ;C13E9B|60      |      ;  
 	sep #$20                             ;C13E9C|E220    |      ;  
 	rep #$10                             ;C13E9E|C210    |      ;  
 	ldy.w #$068B                         ;C13EA0|A08B06  |      ;  
-	sty.b $00                            ;C13EA3|8400    |000000;  
+	sty.b w0000                            ;C13EA3|8400    |000000;  
 	jsl.l DisplayMessage                    ;C13EA5|222525C6|C62525;  
-	lda.b #$0F                           ;C13EA9|A90F    |      ;  
-	sta.b $00                            ;C13EAB|8500    |000000;  
-	lda.b #$01                           ;C13EAD|A901    |      ;  
-	sta.b $02                   ;C13EAF|8502    |000002;  
-	jsl.l CODE_C60479                    ;C13EB1|227904C6|C60479;  
+	SetEvent Event0F $01                    ;C13EB1|227904C6|C60479;  
 	rts                                  ;C13EB5|60      |      ;  
 	sep #$20                             ;C13EB6|E220    |      ;  
 	rep #$10                             ;C13EB8|C210    |      ;  
 	ldy.w #$083B                         ;C13EBA|A03B08  |      ;  
-	sty.b $00                            ;C13EBD|8400    |000000;  
+	sty.b w0000                            ;C13EBD|8400    |000000;  
 	jsl.l DisplayMessage                    ;C13EBF|222525C6|C62525;  
-	lda.b #$10                           ;C13EC3|A910    |      ;  
-	sta.b $00                            ;C13EC5|8500    |000000;  
-	lda.b #$01                           ;C13EC7|A901    |      ;  
-	sta.b $02                   ;C13EC9|8502    |000002;  
-	jsl.l CODE_C60479                    ;C13ECB|227904C6|C60479;  
+	SetEvent Event10 $01                    ;C13ECB|227904C6|C60479;  
 	rts                                  ;C13ECF|60      |      ;  
 	sep #$20                             ;C13ED0|E220    |      ;  
 	rep #$10                             ;C13ED2|C210    |      ;  
 	ldy.w #$083C                         ;C13ED4|A03C08  |      ;  
-	sty.b $00                            ;C13ED7|8400    |000000;  
+	sty.b w0000                            ;C13ED7|8400    |000000;  
 	jsl.l DisplayMessage                    ;C13ED9|222525C6|C62525;  
-	lda.b #$11                           ;C13EDD|A911    |      ;  
-	sta.b $00                            ;C13EDF|8500    |000000;  
-	lda.b #$01                           ;C13EE1|A901    |      ;  
-	sta.b $02                   ;C13EE3|8502    |000002;  
-	jsl.l CODE_C60479                    ;C13EE5|227904C6|C60479;  
+	SetEvent Event11 $01                    ;C13EE5|227904C6|C60479;  
 	rts                                  ;C13EE9|60      |      ;  
 	sep #$20                             ;C13EEA|E220    |      ;  
 	rep #$10                             ;C13EEC|C210    |      ;  
 	phx                                  ;C13EEE|DA      |      ;  
-	lda.b #$17                           ;C13EEF|A917    |      ;  
-	sta.b $00                            ;C13EF1|8500    |000000;  
-	jsl.l CODE_C60512                    ;C13EF3|221205C6|C60512;  
-	lda.b $00                            ;C13EF7|A500    |000000;  
+	GetEvent Event17
 	plx                                  ;C13EF9|FA      |      ;  
 	bit.b #$01                           ;C13EFA|8901    |      ;  
-	beq .lbl_C13F08                      ;C13EFC|F00A    |C13F08;  
+	beq @lbl_C13F08                      ;C13EFC|F00A    |C13F08;  
 	.db $A0,$D3,$08,$84,$00,$22,$25,$25   ;C13EFE
 	.db $C6,$60                           ;C13F06|        |000060;  
-.lbl_C13F08
+@lbl_C13F08:
 	ldy.w #$083D                         ;C13F08|A03D08  |      ;  
-	sty.b $00                            ;C13F0B|8400    |000000;  
+	sty.b w0000                            ;C13F0B|8400    |000000;  
 	jsl.l DisplayMessage                    ;C13F0D|222525C6|C62525;  
-	lda.b #$12                           ;C13F11|A912    |      ;  
-	sta.b $00                            ;C13F13|8500    |000000;  
-	lda.b #$01                           ;C13F15|A901    |      ;  
-	sta.b $02                   ;C13F17|8502    |000002;  
-	jsl.l CODE_C60479                    ;C13F19|227904C6|C60479;  
+	SetEvent Event12 $01                    ;C13F19|227904C6|C60479;  
 	rts                                  ;C13F1D|60      |      ;  
 	sep #$20                             ;C13F1E|E220    |      ;  
 	rep #$10                             ;C13F20|C210    |      ;  
 	phx                                  ;C13F22|DA      |      ;  
-	lda.b #$17                           ;C13F23|A917    |      ;  
-	sta.b $00                            ;C13F25|8500    |000000;  
-	jsl.l CODE_C60512                    ;C13F27|221205C6|C60512;  
-	lda.b $00                            ;C13F2B|A500    |000000;  
+	GetEvent Event17
 	plx                                  ;C13F2D|FA      |      ;  
 	bit.b #$01                           ;C13F2E|8901    |      ;  
-	beq .lbl_C13F3C                      ;C13F30|F00A    |C13F3C;  
+	beq @lbl_C13F3C                      ;C13F30|F00A    |C13F3C;  
 	.db $A0,$D4,$08,$84,$00,$22,$25,$25   ;C13F32
 	.db $C6,$60                           ;C13F3A|        |000060;  
-.lbl_C13F3C
+@lbl_C13F3C:
 	ldy.w #$083E                         ;C13F3C|A03E08  |      ;  
-	sty.b $00                            ;C13F3F|8400    |000000;  
+	sty.b w0000                            ;C13F3F|8400    |000000;  
 	jsl.l DisplayMessage                    ;C13F41|222525C6|C62525;  
-	lda.b #$13                           ;C13F45|A913    |      ;  
-	sta.b $00                            ;C13F47|8500    |000000;  
-	lda.b #$01                           ;C13F49|A901    |      ;  
-	sta.b $02                   ;C13F4B|8502    |000002;  
-	jsl.l CODE_C60479                    ;C13F4D|227904C6|C60479;  
+	SetEvent Event13 $01                    ;C13F4D|227904C6|C60479;  
 	rts                                  ;C13F51|60      |      ;  
 	sep #$20                             ;C13F52|E220    |      ;  
 	rep #$10                             ;C13F54|C210    |      ;  
 	phx                                  ;C13F56|DA      |      ;  
-	lda.b #$17                           ;C13F57|A917    |      ;  
-	sta.b $00                            ;C13F59|8500    |000000;  
-	jsl.l CODE_C60512                    ;C13F5B|221205C6|C60512;  
-	lda.b $00                            ;C13F5F|A500    |000000;  
+	GetEvent Event17
 	plx                                  ;C13F61|FA      |      ;  
 	bit.b #$01                           ;C13F62|8901    |      ;  
-	beq .lbl_C13F70                      ;C13F64|F00A    |C13F70;  
+	beq @lbl_C13F70                      ;C13F64|F00A    |C13F70;  
 	.db $A0,$E5,$08,$84,$00,$22,$25,$25   ;C13F66
 	.db $C6,$60                           ;C13F6E|        |000060;  
-.lbl_C13F70
+@lbl_C13F70:
 	ldy.w #$0841                         ;C13F70|A04108  |      ;  
-	sty.b $00                            ;C13F73|8400    |000000;  
+	sty.b w0000                            ;C13F73|8400    |000000;  
 	jsl.l DisplayMessage                    ;C13F75|222525C6|C62525;  
 	rts                                  ;C13F79|60      |      ;  
 	sep #$20                             ;C13F7A|E220    |      ;  
 	rep #$10                             ;C13F7C|C210    |      ;  
 	phx                                  ;C13F7E|DA      |      ;  
-	lda.b #$17                           ;C13F7F|A917    |      ;  
-	sta.b $00                            ;C13F81|8500    |000000;  
-	jsl.l CODE_C60512                    ;C13F83|221205C6|C60512;  
-	lda.b $00                            ;C13F87|A500    |000000;  
+	GetEvent Event17
 	plx                                  ;C13F89|FA      |      ;  
 	bit.b #$01                           ;C13F8A|8901    |      ;  
-	beq .lbl_C13F98                      ;C13F8C|F00A    |C13F98;  
+	beq @lbl_C13F98                      ;C13F8C|F00A    |C13F98;  
 	.db $A0,$E6,$08,$84,$00,$22,$25,$25   ;C13F8E
 	.db $C6,$60                           ;C13F96|        |000060;  
-.lbl_C13F98
+@lbl_C13F98:
 	ldy.w #$0842                         ;C13F98|A04208  |      ;  
-	sty.b $00                            ;C13F9B|8400    |000000;  
-	jsl.l CODE_C62B7E                    ;C13F9D|227E2BC6|C62B7E;  
-	lda.b $00                            ;C13FA1|A500    |000000;  
-	bne .lbl_C13FAF                      ;C13FA3|D00A    |C13FAF;  
+	sty.b w0000                            ;C13F9B|8400    |000000;  
+	jsl.l func_C62B7E                    ;C13F9D|227E2BC6|C62B7E;  
+	lda.b w0000                           ;C13FA1|A500    |000000;  
+	bne @lbl_C13FAF                      ;C13FA3|D00A    |C13FAF;  
 	ldy.w #$0844                         ;C13FA5|A04408  |      ;  
-	sty.b $00                            ;C13FA8|8400    |000000;  
+	sty.b w0000                            ;C13FA8|8400    |000000;  
 	jsl.l DisplayMessage                    ;C13FAA|222525C6|C62525;  
 	rts                                  ;C13FAE|60      |      ;  
-.lbl_C13FAF
+@lbl_C13FAF:
 	dec a                                ;C13FAF|3A      |      ;  
-	bne .lbl_C13FBC                      ;C13FB0|D00A    |C13FBC;  
+	bne @lbl_C13FBC                      ;C13FB0|D00A    |C13FBC;  
 	.db $A0,$45,$08,$84,$00,$22,$25,$25   ;C13FB2
 	.db $C6,$60                           ;C13FBA|        |000060;  
-.lbl_C13FBC
+@lbl_C13FBC:
 	dec a                                ;C13FBC|3A      |      ;  
-	bne .lbl_C13FC9                      ;C13FBD|D00A    |C13FC9;  
+	bne @lbl_C13FC9                      ;C13FBD|D00A    |C13FC9;  
 	.db $A0,$46,$08,$84,$00,$22,$25,$25   ;C13FBF
 	.db $C6,$60                           ;C13FC7|        |000060;  
-.lbl_C13FC9
+@lbl_C13FC9:
 	ldy.w #$0847                         ;C13FC9|A04708  |      ;  
-	sty.b $00                            ;C13FCC|8400    |000000;  
+	sty.b w0000                            ;C13FCC|8400    |000000;  
 	jsl.l DisplayMessage                    ;C13FCE|222525C6|C62525;  
 	rts                                  ;C13FD2|60      |      ;  
 	sep #$20                             ;C13FD3|E220    |      ;  
 	rep #$10                             ;C13FD5|C210    |      ;  
 	phx                                  ;C13FD7|DA      |      ;  
-	lda.b #$17                           ;C13FD8|A917    |      ;  
-	sta.b $00                            ;C13FDA|8500    |000000;  
-	jsl.l CODE_C60512                    ;C13FDC|221205C6|C60512;  
-	lda.b $00                            ;C13FE0|A500    |000000;  
+	GetEvent Event17
 	plx                                  ;C13FE2|FA      |      ;  
 	bit.b #$01                           ;C13FE3|8901    |      ;  
-	beq .lbl_C13FF1                      ;C13FE5|F00A    |C13FF1;  
+	beq @lbl_C13FF1                      ;C13FE5|F00A    |C13FF1;  
 	.db $A0,$D6,$08,$84,$00,$22,$25,$25   ;C13FE7
 	.db $C6,$60                           ;C13FEF|        |000060;  
-.lbl_C13FF1
+@lbl_C13FF1:
 	ldy.w #$0691                         ;C13FF1|A09106  |      ;  
-	sty.b $00                            ;C13FF4|8400    |000000;  
+	sty.b w0000                            ;C13FF4|8400    |000000;  
 	jsl.l DisplayMessage                    ;C13FF6|222525C6|C62525;  
 	rts                                  ;C13FFA|60      |      ;  
 	sep #$20                             ;C13FFB|E220    |      ;  
 	rep #$10                             ;C13FFD|C210    |      ;  
 	phx                                  ;C13FFF|DA      |      ;  
-	lda.b #$17                           ;C14000|A917    |      ;  
-	sta.b $00                            ;C14002|8500    |000000;  
-	jsl.l CODE_C60512                    ;C14004|221205C6|C60512;  
-	lda.b $00                            ;C14008|A500    |000000;  
+	GetEvent Event17
 	plx                                  ;C1400A|FA      |      ;  
 	bit.b #$01                           ;C1400B|8901    |      ;  
-	beq .lbl_C14019                      ;C1400D|F00A    |C14019;  
+	beq @lbl_C14019                      ;C1400D|F00A    |C14019;  
 	.db $A0,$E4,$08,$84,$00,$22,$25,$25   ;C1400F
 	.db $C6,$60                           ;C14017|        |000060;  
-.lbl_C14019
+@lbl_C14019:
 	ldy.w #$0848                         ;C14019|A04808  |      ;  
-	sty.b $00                            ;C1401C|8400    |000000;  
-	jsl.l CODE_C62B7E                    ;C1401E|227E2BC6|C62B7E;  
-	lda.b $00                            ;C14022|A500    |000000;  
-	beq .lbl_C14030                      ;C14024|F00A    |C14030;  
+	sty.b w0000                            ;C1401C|8400    |000000;  
+	jsl.l func_C62B7E                    ;C1401E|227E2BC6|C62B7E;  
+	lda.b w0000                           ;C14022|A500    |000000;  
+	beq @lbl_C14030                      ;C14024|F00A    |C14030;  
 	.db $A0,$4A,$08,$84,$00,$22,$25,$25   ;C14026
 	.db $C6,$60                           ;C1402E|        |000060;  
-.lbl_C14030
+@lbl_C14030:
 	ldy.w #$084B                         ;C14030|A04B08  |      ;  
-	sty.b $00                            ;C14033|8400    |000000;  
+	sty.b w0000                            ;C14033|8400    |000000;  
 	jsl.l DisplayMessage                    ;C14035|222525C6|C62525;  
 	rts                                  ;C14039|60      |      ;  
 	sep #$20                             ;C1403A|E220    |      ;  
 	rep #$10                             ;C1403C|C210    |      ;  
-	stx.b $00                            ;C1403E|8600    |000000;  
+	stx.b w0000                            ;C1403E|8600    |000000;  
 	stz.b w0001                            ;C14040|6401    |000001;  
-	stx.b $02                   ;C14042|8602    |000002;  
-	jsr.w CODE_C1681A                    ;C14044|201A68  |C1681A;  
-	lda.b #$8E                           ;C14047|A98E    |      ;  
-	sta.b $00                            ;C14049|8500    |000000;  
-	jsl.l CODE_C60512                    ;C1404B|221205C6|C60512;  
-	lda.b $00                            ;C1404F|A500    |000000;  
-	beq .lbl_C14056                      ;C14051|F003    |C14056;  
+	stx.b w0002                   ;C14042|8602    |000002;  
+	jsr.w func_C1681A                    ;C14044|201A68  |C1681A;  
+	GetEvent Event8E
+	beq @lbl_C14056                      ;C14051|F003    |C14056;  
 	.db $4C,$FC,$41                       ;C14053|        |C141FC;  
-.lbl_C14056
-	lda.b #$8A                           ;C14056|A98A    |      ;  
-	sta.b $00                            ;C14058|8500    |000000;  
-	jsl.l CODE_C60512                    ;C1405A|221205C6|C60512;  
-	lda.b $00                            ;C1405E|A500    |000000;  
-	beq .lbl_C14065                      ;C14060|F003    |C14065;  
-	jmp.w CODE_C140E5                    ;C14062|4CE540  |C140E5;  
-.lbl_C14065
-	lda.b #$17                           ;C14065|A917    |      ;  
-	sta.b $00                            ;C14067|8500    |000000;  
-	jsl.l CODE_C60512                    ;C14069|221205C6|C60512;  
-	lda.b $00                            ;C1406D|A500    |000000;  
+@lbl_C14056:
+	GetEvent Event8A
+	beq @lbl_C14065                      ;C14060|F003    |C14065;  
+	jmp.w func_C140E5                    ;C14062|4CE540  |C140E5;  
+@lbl_C14065:
+	GetEvent Event17
 	and.b #$17                           ;C1406F|2917    |      ;  
 	cmp.b #$17                           ;C14071|C917    |      ;  
-	bne .lbl_C14078                      ;C14073|D003    |C14078;  
+	bne @lbl_C14078                      ;C14073|D003    |C14078;  
 	.db $4C,$88,$41                       ;C14075|        |C14188;  
-.lbl_C14078
-	lda.b #$14                           ;C14078|A914    |      ;  
-	sta.b $00                            ;C1407A|8500    |000000;  
-	jsl.l CODE_C60512                    ;C1407C|221205C6|C60512;  
-	lda.b $00                            ;C14080|A500    |000000;  
-	beq .lbl_C14091                      ;C14082|F00D    |C14091;  
+@lbl_C14078:
+	GetEvent Event14
+	beq @lbl_C14091                      ;C14082|F00D    |C14091;  
 	ldy.w #$084E                         ;C14084|A04E08  |      ;  
-	sty.b $00                            ;C14087|8400    |000000;  
-	jsl.l CODE_C62B7E                    ;C14089|227E2BC6|C62B7E;  
-	lda.b $00                            ;C1408D|A500    |000000;  
-	bra CODE_C140A8                      ;C1408F|8017    |C140A8;  
-.lbl_C14091
-	lda.b #$14                           ;C14091|A914    |      ;  
-	sta.b $00                            ;C14093|8500    |000000;  
-	lda.b #$01                           ;C14095|A901    |      ;  
-	sta.b $02                   ;C14097|8502    |000002;  
-	jsl.l CODE_C60479                    ;C14099|227904C6|C60479;  
+	sty.b w0000                            ;C14087|8400    |000000;  
+	jsl.l func_C62B7E                    ;C14089|227E2BC6|C62B7E;  
+	lda.b w0000                           ;C1408D|A500    |000000;  
+	bra @lbl_C140A8                      ;C1408F|8017    |C140A8;  
+@lbl_C14091:
+	SetEvent Event14 $01                    ;C14099|227904C6|C60479;  
 	ldy.w #$084C                         ;C1409D|A04C08  |      ;  
-	sty.b $00                            ;C140A0|8400    |000000;  
-	jsl.l CODE_C62B7E                    ;C140A2|227E2BC6|C62B7E;  
-	lda.b $00                            ;C140A6|A500    |000000;  
-
-CODE_C140A8:
-	beq .lbl_C140B4                      ;C140A8|F00A    |C140B4;  
+	sty.b w0000                            ;C140A0|8400    |000000;  
+	jsl.l func_C62B7E                    ;C140A2|227E2BC6|C62B7E;  
+	lda.b w0000                           ;C140A6|A500    |000000;  
+@lbl_C140A8:
+	beq @lbl_C140B4                      ;C140A8|F00A    |C140B4;  
 	.db $A0,$4D,$08,$84,$00,$22,$25,$25   ;C140AA
 	.db $C6,$60                           ;C140B2|        |000060;  
-.lbl_C140B4
+@lbl_C140B4:
 	ldy.w #$084F                         ;C140B4|A04F08  |      ;  
-	sty.b $00                            ;C140B7|8400    |000000;  
+	sty.b w0000                            ;C140B7|8400    |000000;  
 	jsl.l DisplayMessage                    ;C140B9|222525C6|C62525;  
-	jsl.l CODE_C62405                    ;C140BD|220524C6|C62405;  
-	jsr.w CODE_C14214                    ;C140C1|201442  |C14214;  
-	lda.b #$8A                           ;C140C4|A98A    |      ;  
-	sta.b $00                            ;C140C6|8500    |000000;  
-	lda.b #$01                           ;C140C8|A901    |      ;  
-	sta.b $02                   ;C140CA|8502    |000002;  
-	jsl.l CODE_C60479                    ;C140CC|227904C6|C60479;  
-	lda.b #$16                           ;C140D0|A916    |      ;  
-	sta.b $00                            ;C140D2|8500    |000000;  
-	jsl.l CODE_C60512                    ;C140D4|221205C6|C60512;  
-	lda.b $00                            ;C140D8|A500    |000000;  
+	jsl.l func_C62405                    ;C140BD|220524C6|C62405;  
+	jsr.w func_C14214                    ;C140C1|201442  |C14214;  
+	SetEvent Event8A $01                    ;C140CC|227904C6|C60479;  
+	GetEvent Event16
 	inc a                                ;C140DA|1A      |      ;  
 	sta.b w0001                            ;C140DB|8501    |000001;  
 	lda.b #$08                           ;C140DD|A908    |      ;  
-	sta.b $00                            ;C140DF|8500    |000000;  
-	jsl.l CODE_C62A23                    ;C140E1|22232AC6|C62A23;  
+	sta.b w0000                           ;C140DF|8500    |000000;  
+	jsl.l func_C62A23                    ;C140E1|22232AC6|C62A23;  
 
-CODE_C140E5:
+func_C140E5:
 	cmp.b #$02                           ;C140E5|C902    |      ;  
-	bcs .lbl_C14103                      ;C140E7|B01A    |C14103;  
+	bcs @lbl_C14103                      ;C140E7|B01A    |C14103;  
 	.db $A9,$8A,$85,$00,$A9,$00,$85,$02   ;C140E9
 	.db $22,$79,$04,$C6,$A0,$50,$08,$84   ;C140F1|        |C60479;  
 	.db $00,$22,$7E,$2B,$C6,$A5,$00,$4C   ;C140F9
 	.db $A8,$40                           ;C14101
-.lbl_C14103
+@lbl_C14103:
 	cmp.b #$03                           ;C14103|C903    |      ;  
-	bcs .lbl_C1417E                      ;C14105|B077    |C1417E;  
-	lda.b #$8A                           ;C14107|A98A    |      ;  
-	sta.b $00                            ;C14109|8500    |000000;  
-	lda.b #$03                           ;C1410B|A903    |      ;  
-	sta.b $02                   ;C1410D|8502    |000002;  
-	jsl.l CODE_C60479                    ;C1410F|227904C6|C60479;  
-	lda.b #$16                           ;C14113|A916    |      ;  
-	sta.b $00                            ;C14115|8500    |000000;  
-	jsl.l CODE_C60512                    ;C14117|221205C6|C60512;  
-	lda.b $00                            ;C1411B|A500    |000000;  
+	bcs @lbl_C1417E                      ;C14105|B077    |C1417E;  
+	SetEvent Event8A $03                    ;C1410F|227904C6|C60479;  
+	GetEvent Event16
 	pha                                  ;C1411D|48      |      ;  
 	inc a                                ;C1411E|1A      |      ;  
 	cmp.b #$32                           ;C1411F|C932    |      ;  
-	bne .lbl_C1413B                      ;C14121|D018    |C1413B;  
+	bne @lbl_C1413B                      ;C14121|D018    |C1413B;  
 	.db $A9,$17,$85,$00,$22,$12,$05,$C6   ;C14123
 	.db $A5,$00,$09,$10,$85,$02,$A9,$17   ;C1412B|        |000000;  
 	.db $85,$00,$22,$79,$04,$C6,$A9,$00   ;C14133|        |000000;  
-.lbl_C1413B
-	sta.b $02                   ;C1413B|8502    |000002;  
-	lda.b #$16                           ;C1413D|A916    |      ;  
-	sta.b $00                            ;C1413F|8500    |000000;  
-	jsl.l CODE_C60479                    ;C14141|227904C6|C60479;  
+@lbl_C1413B:
+	sta.b w0002                   ;C1413B|8502    |000002;  
+	lda.b #Event16                           ;C1413D|A916    |      ;  
+	sta.b w0000                           ;C1413F|8500    |000000;  
+	jsl.l _SetEvent                    ;C14141|227904C6|C60479;  
 	ldy.w #$0851                         ;C14145|A05108  |      ;  
-	sty.b $00                            ;C14148|8400    |000000;  
+	sty.b w0000                            ;C14148|8400    |000000;  
 	jsl.l DisplayMessage                    ;C1414A|222525C6|C62525;  
 	pla                                  ;C1414E|68      |      ;  
 	ldy.w #$0002                         ;C1414F|A00200  |      ;  
 	cmp.b #$18                           ;C14152|C918    |      ;  
-	bcc .lbl_C14160                      ;C14154|900A    |C14160;  
+	bcc @lbl_C14160                      ;C14154|900A    |C14160;  
 	.db $A0,$00,$00,$C9,$29,$90,$03,$A0   ;C14156
 	.db $01,$00                           ;C1415E|        |000000;  
-.lbl_C14160
-	sty.b $00                            ;C14160|8400    |000000;  
-	jsl.l CODE_C303E9                    ;C14162|22E903C3|C303E9;  
-	lda.b $00                            ;C14166|A500    |000000;  
-	bmi .lbl_C1417D                      ;C14168|3013    |C1417D;  
-	sta.b $02                   ;C1416A|8502    |000002;  
+@lbl_C14160:
+	sty.b w0000                            ;C14160|8400    |000000;  
+	jsl.l func_C303E9                    ;C14162|22E903C3|C303E9;  
+	lda.b w0000                           ;C14166|A500    |000000;  
+	bmi @lbl_C1417D                      ;C14168|3013    |C1417D;  
+	sta.b w0002                   ;C1416A|8502    |000002;  
 	pha                                  ;C1416C|48      |      ;  
 	ldy.w #$0852                         ;C1416D|A05208  |      ;  
-	sty.b $00                            ;C14170|8400    |000000;  
+	sty.b w0000                            ;C14170|8400    |000000;  
 	jsl.l DisplayMessage                    ;C14172|222525C6|C62525;  
 	pla                                  ;C14176|68      |      ;  
-	sta.b $00                            ;C14177|8500    |000000;  
-	jsl.l CODE_C10157                    ;C14179|225701C1|C10157;  
-.lbl_C1417D
+	sta.b w0000                           ;C14177|8500    |000000;  
+	jsl.l func_C10157                    ;C14179|225701C1|C10157;  
+@lbl_C1417D:
 	rts                                  ;C1417D|60      |      ;  
-.lbl_C1417E
+@lbl_C1417E:
 	ldy.w #$0853                         ;C1417E|A05308  |      ;  
-	sty.b $00                            ;C14181|8400    |000000;  
+	sty.b w0000                            ;C14181|8400    |000000;  
 	jsl.l DisplayMessage                    ;C14183|222525C6|C62525;  
 	rts                                  ;C14187|60      |      ;  
 	.db $A9,$14,$85,$00,$22,$12,$05,$C6   ;C14188
@@ -3555,24 +3315,24 @@ CODE_C140E5:
 	.db $A0,$AA,$08,$84,$00,$22,$7E,$2B   ;C14208
 	.db $C6,$A5,$00,$60                   ;C14210|        |0000A5;  
 
-CODE_C14214:
+func_C14214:
 	lda.b #$13                           ;C14214|A913    |      ;  
-	sta.b $00                            ;C14216|8500    |000000;  
-	jsl.l CODE_C210AC                    ;C14218|22AC10C2|C210AC;  
+	sta.b w0000                           ;C14216|8500    |000000;  
+	jsl.l func_C210AC                    ;C14218|22AC10C2|C210AC;  
 	tdc                                  ;C1421C|7B      |      ;  
-	lda.b $02                   ;C1421D|A502    |000002;  
+	lda.b w0002                   ;C1421D|A502    |000002;  
 	asl a                                ;C1421F|0A      |      ;  
 	tax                                  ;C14220|AA      |      ;  
 	rep #$20                             ;C14221|C220    |      ;  
 	lda.l UNREACH_C1423B,x               ;C14223|BF3B42C1|C1423B;  
-	sta.b $02                   ;C14227|8502    |000002;  
+	sta.b w0002                   ;C14227|8502    |000002;  
 	sep #$20                             ;C14229|E220    |      ;  
 	lda.b #$C1                           ;C1422B|A9C1    |      ;  
-	sta.b $04                   ;C1422D|8504    |000004;  
+	sta.b w0004                   ;C1422D|8504    |000004;  
 	lda.b #$13                           ;C1422F|A913    |      ;  
-	sta.b $00                            ;C14231|8500    |000000;  
-	jsl.l CODE_C2938C                    ;C14233|228C93C2|C2938C;  
-	jsr.w CODE_C10189                    ;C14237|208901  |C10189;  
+	sta.b w0000                           ;C14231|8500    |000000;  
+	jsl.l func_C2938C                    ;C14233|228C93C2|C2938C;  
+	jsr.w func_C10189                    ;C14237|208901  |C10189;  
 	rts                                  ;C1423A|60      |      ;  
 
 UNREACH_C1423B:
@@ -3634,18 +3394,14 @@ UNREACH_C1423B:
 	.db $C6,$A5,$00,$80,$9C               ;C143E2|        |0000A5;  
 	sep #$20                             ;C143E7|E220    |      ;  
 	rep #$10                             ;C143E9|C210    |      ;  
-	lda.b #$15                           ;C143EB|A915    |      ;  
-	sta.b $00                            ;C143ED|8500    |000000;  
-	jsl.l CODE_C60512                    ;C143EF|221205C6|C60512;  
-	lda.b $00                            ;C143F3|A500    |000000;  
+	GetEvent Event15
 	cmp.b #$06                           ;C143F5|C906    |      ;  
-	bcs UNREACH_C14403                   ;C143F7|B00A    |C14403;  
+	bcs @lbl_C14403                   ;C143F7|B00A    |C14403;  
 	ldy.w #$080B                         ;C143F9|A00B08  |      ;  
-	sty.b $00                            ;C143FC|8400    |000000;  
+	sty.b w0000                            ;C143FC|8400    |000000;  
 	jsl.l DisplayMessage                    ;C143FE|222525C6|C62525;  
 	rts                                  ;C14402|60      |      ;  
-
-UNREACH_C14403:
+@lbl_C14403:
 	.db $C9,$07,$B0,$48,$A9,$15,$85,$00   ;C14403
 	.db $A9,$07,$85,$02,$22,$79,$04,$C6   ;C1440B
 	.db $A0,$68,$08,$84,$00,$22,$7E,$2B   ;C14413
@@ -3670,23 +3426,16 @@ NPCScriptFunction_C1445C:
 NPCScriptFunction_C14479:
 	php                                  ;C14479|08      |      ;  
 	sep #$20                             ;C1447A|E220    |      ;  
-	lda.b #$15                           ;C1447C|A915    |      ;  
-	sta.b $00                            ;C1447E|8500    |000000;  
-	jsl.l CODE_C60512                    ;C14480|221205C6|C60512;  
-	lda.b $00                            ;C14484|A500    |000000;  
+	GetEvent Event15
 	cmp.b #$05                           ;C14486|C905    |      ;  
-	bcs .lbl_C14496                      ;C14488|B00C    |C14496;  
-	lda.b #$15                           ;C1448A|A915    |      ;  
-	sta.b $00                            ;C1448C|8500    |000000;  
-	lda.b #$05                           ;C1448E|A905    |      ;  
-	sta.b $02                   ;C14490|8502    |000002;  
-	jsl.l CODE_C60479                    ;C14492|227904C6|C60479;  
-.lbl_C14496
+	bcs @lbl_C14496                      ;C14488|B00C    |C14496;  
+	SetEvent Event15 $05                    ;C14492|227904C6|C60479;  
+@lbl_C14496:
 	plp                                  ;C14496|28      |      ;  
 	rts                                  ;C14497|60      |      ;  
 	rep #$20                             ;C14498|C220    |      ;  
 	lda.w #$06B6                         ;C1449A|A9B606  |      ;  
-	sta.b $00                            ;C1449D|8500    |000000;  
+	sta.b w0000                           ;C1449D|8500    |000000;  
 	jsl.l DisplayMessage                    ;C1449F|222525C6|C62525;  
 	rts                                  ;C144A3|60      |      ;  
 	.db $E2,$20,$C2,$10,$DA,$A9,$17,$85   ;C144A4
@@ -3754,16 +3503,15 @@ NPCScriptFunction_C14479:
 	sep #$20                             ;C1468E|E220    |      ;  
 	rep #$10                             ;C14690|C210    |      ;  
 	ldy.w #$08AB                         ;C14692|A0AB08  |      ;  
-	sty.b $00                            ;C14695|8400    |000000;  
-	jsl.l CODE_C62B7E                    ;C14697|227E2BC6|C62B7E;  
-	lda.b $00                            ;C1469B|A500    |000000;  
-	bne UNREACH_C146A9                   ;C1469D|D00A    |C146A9;  
+	sty.b w0000                            ;C14695|8400    |000000;  
+	jsl.l func_C62B7E                    ;C14697|227E2BC6|C62B7E;  
+	lda.b w0000                           ;C1469B|A500    |000000;  
+	bne @lbl_C146A9                   ;C1469D|D00A    |C146A9;  
 	ldy.w #$08AC                         ;C1469F|A0AC08  |      ;  
-	sty.b $00                            ;C146A2|8400    |000000;  
+	sty.b w0000                            ;C146A2|8400    |000000;  
 	jsl.l DisplayMessage                    ;C146A4|222525C6|C62525;  
 	rts                                  ;C146A8|60      |      ;  
-
-UNREACH_C146A9:
+@lbl_C146A9:
 	.db $A0,$AD,$08,$84,$00,$22,$25,$25   ;C146A9
 	.db $C6,$60,$E2,$20,$C2,$10,$8A,$48   ;C146B1|        |000060;  
 	.db $85,$00,$22,$AC,$10,$C2,$A5,$02   ;C146B9|        |000000;  
@@ -3784,45 +3532,39 @@ UNREACH_C146A9:
 	sep #$20                             ;C1472C|E220    |      ;  
 	rep #$10                             ;C1472E|C210    |      ;  
 	phx                                  ;C14730|DA      |      ;  
-	lda.b #$17                           ;C14731|A917    |      ;  
-	sta.b $00                            ;C14733|8500    |000000;  
-	jsl.l CODE_C60512                    ;C14735|221205C6|C60512;  
-	lda.b $00                            ;C14739|A500    |000000;  
+	GetEvent Event17
 	plx                                  ;C1473B|FA      |      ;  
 	bit.b #$01                           ;C1473C|8901    |      ;  
-	beq .lbl_C1474A                      ;C1473E|F00A    |C1474A;  
+	beq @lbl_C1474A                      ;C1473E|F00A    |C1474A;  
 	.db $A0,$E9,$08,$84,$00,$22,$25,$25   ;C14740
 	.db $C6,$60                           ;C14748|        |000060;  
-.lbl_C1474A
+@lbl_C1474A:
 	ldy.w #$08B0                         ;C1474A|A0B008  |      ;  
-	sty.b $00                            ;C1474D|8400    |000000;  
+	sty.b w0000                            ;C1474D|8400    |000000;  
 	jsl.l DisplayMessage                    ;C1474F|222525C6|C62525;  
 	rts                                  ;C14753|60      |      ;  
 	sep #$20                             ;C14754|E220    |      ;  
 	rep #$10                             ;C14756|C210    |      ;  
 	phx                                  ;C14758|DA      |      ;  
-	lda.b #$17                           ;C14759|A917    |      ;  
-	sta.b $00                            ;C1475B|8500    |000000;  
-	jsl.l CODE_C60512                    ;C1475D|221205C6|C60512;  
-	lda.b $00                            ;C14761|A500    |000000;  
+	GetEvent Event17
 	plx                                  ;C14763|FA      |      ;  
 	bit.b #$01                           ;C14764|8901    |      ;  
-	beq .lbl_C14772                      ;C14766|F00A    |C14772;  
+	beq @lbl_C14772                      ;C14766|F00A    |C14772;  
 	.db $A0,$EA,$08,$84,$00,$22,$25,$25   ;C14768
 	.db $C6,$60                           ;C14770|        |000060;  
-.lbl_C14772
+@lbl_C14772:
 	ldy.w #$08B1                         ;C14772|A0B108  |      ;  
-	sty.b $00                            ;C14775|8400    |000000;  
-	jsl.l CODE_C62B7E                    ;C14777|227E2BC6|C62B7E;  
-	lda.b $00                            ;C1477B|A500    |000000;  
-	beq .lbl_C14789                      ;C1477D|F00A    |C14789;  
+	sty.b w0000                            ;C14775|8400    |000000;  
+	jsl.l func_C62B7E                    ;C14777|227E2BC6|C62B7E;  
+	lda.b w0000                           ;C1477B|A500    |000000;  
+	beq @lbl_C14789                      ;C1477D|F00A    |C14789;  
 	ldy.w #$08B2                         ;C1477F|A0B208  |      ;  
-	sty.b $00                            ;C14782|8400    |000000;  
+	sty.b w0000                            ;C14782|8400    |000000;  
 	jsl.l DisplayMessage                    ;C14784|222525C6|C62525;  
 	rts                                  ;C14788|60      |      ;  
-.lbl_C14789
+@lbl_C14789:
 	ldy.w #$08B3                         ;C14789|A0B308  |      ;  
-	sty.b $00                            ;C1478C|8400    |000000;  
+	sty.b w0000                            ;C1478C|8400    |000000;  
 	jsl.l DisplayMessage                    ;C1478E|222525C6|C62525;  
 	rts                                  ;C14792|60      |      ;  
 	.db $E2,$20,$C2,$10,$BF,$71,$88,$7E   ;C14793
@@ -3834,18 +3576,15 @@ UNREACH_C146A9:
 	sep #$20                             ;C147C1|E220    |      ;  
 	rep #$10                             ;C147C3|C210    |      ;  
 	phx                                  ;C147C5|DA      |      ;  
-	lda.b #$17                           ;C147C6|A917    |      ;  
-	sta.b $00                            ;C147C8|8500    |000000;  
-	jsl.l CODE_C60512                    ;C147CA|221205C6|C60512;  
-	lda.b $00                            ;C147CE|A500    |000000;  
+	GetEvent Event17
 	plx                                  ;C147D0|FA      |      ;  
 	bit.b #$01                           ;C147D1|8901    |      ;  
-	beq .lbl_C147DF                      ;C147D3|F00A    |C147DF;  
+	beq @lbl_C147DF                      ;C147D3|F00A    |C147DF;  
 	.db $A0,$D7,$08,$84,$00,$22,$25,$25   ;C147D5
 	.db $C6,$60                           ;C147DD|        |000060;  
-.lbl_C147DF
+@lbl_C147DF:
 	ldy.w #$08B6                         ;C147DF|A0B608  |      ;  
-	sty.b $00                            ;C147E2|8400    |000000;  
+	sty.b w0000                            ;C147E2|8400    |000000;  
 	jsl.l DisplayMessage                    ;C147E4|222525C6|C62525;  
 	rts                                  ;C147E8|60      |      ;  
 	.db $E2,$20,$C2,$10,$BF,$71,$88,$7E   ;C147E9
@@ -3857,43 +3596,42 @@ UNREACH_C146A9:
 	sep #$20                             ;C14817|E220    |      ;  
 	rep #$10                             ;C14819|C210    |      ;  
 	lda.l $7E8871,x                      ;C1481B|BF71887E|7E8871;  
-	bne .lbl_C1482E                      ;C1481F|D00D    |C1482E;  
-	jsl.l CODE_C3F65F                    ;C14821|225FF6C3|C3F65F;  
-	lda.b $00                            ;C14825|A500    |000000;  
+	bne @lbl_C1482E                      ;C1481F|D00D    |C1482E;  
+	jsl.l func_C3F65F                    ;C14821|225FF6C3|C3F65F;  
+	lda.b w0000                           ;C14825|A500    |000000;  
 	and.b #$01                           ;C14827|2901    |      ;  
 	inc a                                ;C14829|1A      |      ;  
 	sta.l $7E8871,x                      ;C1482A|9F71887E|7E8871;  
-.lbl_C1482E
+@lbl_C1482E:
 	dec a                                ;C1482E|3A      |      ;  
-	bne .lbl_C1483B                      ;C1482F|D00A    |C1483B;  
+	bne @lbl_C1483B                      ;C1482F|D00A    |C1483B;  
 	.db $A0,$B9,$08,$84,$00,$22,$25,$25   ;C14831
 	.db $C6,$60                           ;C14839|        |000060;  
-.lbl_C1483B
+@lbl_C1483B:
 	ldy.w #$08BA                         ;C1483B|A0BA08  |      ;  
-	sty.b $00                            ;C1483E|8400    |000000;  
+	sty.b w0000                            ;C1483E|8400    |000000;  
 	jsl.l DisplayMessage                    ;C14840|222525C6|C62525;  
 	rts                                  ;C14844|60      |      ;  
 	sep #$20                             ;C14845|E220    |      ;  
 	rep #$10                             ;C14847|C210    |      ;  
 	lda.l $7E8871,x                      ;C14849|BF71887E|7E8871;  
-	bne .lbl_C14860                      ;C1484D|D011    |C14860;  
-.lbl_C1484F
-	jsl.l CODE_C3F65F                    ;C1484F|225FF6C3|C3F65F;  
-	lda.b $00                            ;C14853|A500    |000000;  
+	bne @lbl_C14860                      ;C1484D|D011    |C14860;  
+@lbl_C1484F:
+	jsl.l func_C3F65F                    ;C1484F|225FF6C3|C3F65F;  
+	lda.b w0000                           ;C14853|A500    |000000;  
 	and.b #$03                           ;C14855|2903    |      ;  
 	cmp.b #$03                           ;C14857|C903    |      ;  
-	bcs .lbl_C1484F                      ;C14859|B0F4    |C1484F;  
+	bcs @lbl_C1484F                      ;C14859|B0F4    |C1484F;  
 	inc a                                ;C1485B|1A      |      ;  
 	sta.l $7E8871,x                      ;C1485C|9F71887E|7E8871;  
-.lbl_C14860
+@lbl_C14860:
 	dec a                                ;C14860|3A      |      ;  
-	bne UNREACH_C1486D                   ;C14861|D00A    |C1486D;  
+	bne @lbl_C1486D                   ;C14861|D00A    |C1486D;  
 	ldy.w #$08BB                         ;C14863|A0BB08  |      ;  
-	sty.b $00                            ;C14866|8400    |000000;  
+	sty.b w0000                            ;C14866|8400    |000000;  
 	jsl.l DisplayMessage                    ;C14868|222525C6|C62525;  
 	rts                                  ;C1486C|60      |      ;  
-
-UNREACH_C1486D:
+@lbl_C1486D:
 	.db $3A,$D0,$0A,$A0,$BC,$08,$84,$00   ;C1486D
 	.db $22,$25,$25,$C6,$60,$A0,$BD,$08   ;C14875|        |C62525;  
 	.db $84,$00,$22,$25,$25,$C6,$60,$E2   ;C1487D|        |000000;  
@@ -3922,37 +3660,27 @@ UNREACH_C1486D:
 	sep #$20                             ;C14933|E220    |      ;  
 	rep #$10                             ;C14935|C210    |      ;  
 	phx                                  ;C14937|DA      |      ;  
-	lda.b #$17                           ;C14938|A917    |      ;  
-	sta.b $00                            ;C1493A|8500    |000000;  
-	jsl.l CODE_C60512                    ;C1493C|221205C6|C60512;  
-	lda.b $00                            ;C14940|A500    |000000;  
+	GetEvent Event17
 	plx                                  ;C14942|FA      |      ;  
 	bit.b #$01                           ;C14943|8901    |      ;  
-	beq .lbl_C14951                      ;C14945|F00A    |C14951;  
+	beq @lbl_C14951                      ;C14945|F00A    |C14951;  
 	.db $A0,$DA,$08,$84,$00,$22,$25,$25   ;C14947
 	.db $C6,$60                           ;C1494F|        |000060;  
-.lbl_C14951
-	lda.b #$1A                           ;C14951|A91A    |      ;  
-	sta.b $00                            ;C14953|8500    |000000;  
-	jsl.l CODE_C60512                    ;C14955|221205C6|C60512;  
-	lda.b $00                            ;C14959|A500    |000000;  
+@lbl_C14951:
+	GetEvent Event1A
 	cmp.b #$08                           ;C1495B|C908    |      ;  
-	bcs UNREACH_C1497F                   ;C1495D|B020    |C1497F;  
+	bcs @lbl_C1497F                   ;C1495D|B020    |C1497F;  
 	ldy.w #$08C5                         ;C1495F|A0C508  |      ;  
-	sty.b $00                            ;C14962|8400    |000000;  
+	sty.b w0000                            ;C14962|8400    |000000;  
 	jsl.l DisplayMessage                    ;C14964|222525C6|C62525;  
-	lda.b #$1A                           ;C14968|A91A    |      ;  
-	sta.b $00                            ;C1496A|8500    |000000;  
-	jsl.l CODE_C60512                    ;C1496C|221205C6|C60512;  
-	lda.b $00                            ;C14970|A500    |000000;  
+	GetEvent Event1A
 	ora.b #$04                           ;C14972|0904    |      ;  
-	sta.b $02                   ;C14974|8502    |000002;  
-	lda.b #$1A                           ;C14976|A91A    |      ;  
-	sta.b $00                            ;C14978|8500    |000000;  
-	jsl.l CODE_C60479                    ;C1497A|227904C6|C60479;  
+	sta.b w0002                   ;C14974|8502    |000002;  
+	lda.b #Event1A                           ;C14976|A91A    |      ;  
+	sta.b w0000                           ;C14978|8500    |000000;  
+	jsl.l _SetEvent                    ;C1497A|227904C6|C60479;  
 	rts                                  ;C1497E|60      |      ;  
-
-UNREACH_C1497F:
+@lbl_C1497F:
 	.db $A0,$C8,$08,$84,$00,$22,$25,$25   ;C1497F
 	.db $C6,$60,$E2,$20,$C2,$10,$DA,$A9   ;C14987|        |000060;  
 	.db $17,$85,$00,$22,$12,$05,$C6,$A5   ;C1498F|        |000085;  
@@ -3974,18 +3702,15 @@ UNREACH_C1497F:
 	sep #$20                             ;C14A0D|E220    |      ;  
 	rep #$10                             ;C14A0F|C210    |      ;  
 	phx                                  ;C14A11|DA      |      ;  
-	lda.b #$17                           ;C14A12|A917    |      ;  
-	sta.b $00                            ;C14A14|8500    |000000;  
-	jsl.l CODE_C60512                    ;C14A16|221205C6|C60512;  
-	lda.b $00                            ;C14A1A|A500    |000000;  
+	GetEvent Event17
 	plx                                  ;C14A1C|FA      |      ;  
 	bit.b #$01                           ;C14A1D|8901    |      ;  
-	beq .lbl_C14A2B                      ;C14A1F|F00A    |C14A2B;  
+	beq @lbl_C14A2B                      ;C14A1F|F00A    |C14A2B;  
 	.db $A0,$F6,$08,$84,$00,$22,$25,$25   ;C14A21
 	.db $C6,$60                           ;C14A29|        |000060;  
-.lbl_C14A2B
+@lbl_C14A2B:
 	ldy.w #$08CE                         ;C14A2B|A0CE08  |      ;  
-	sty.b $00                            ;C14A2E|8400    |000000;  
+	sty.b w0000                            ;C14A2E|8400    |000000;  
 	jsl.l DisplayMessage                    ;C14A30|222525C6|C62525;  
 	rts                                  ;C14A34|60      |      ;  
 	.db $E2,$20,$C2,$10,$A0,$B3,$07,$84   ;C14A35
@@ -4014,103 +3739,75 @@ UNREACH_C1497F:
 	sep #$20                             ;C14AE9|E220    |      ;  
 	rep #$10                             ;C14AEB|C210    |      ;  
 	phx                                  ;C14AED|DA      |      ;  
-	lda.b #$09                           ;C14AEE|A909    |      ;  
-	sta.b $00                            ;C14AF0|8500    |000000;  
-	jsl.l CODE_C60512                    ;C14AF2|221205C6|C60512;  
-	lda.b $00                            ;C14AF6|A500    |000000;  
+	GetEvent Event09
 	plx                                  ;C14AF8|FA      |      ;  
 	cmp.b #$08                           ;C14AF9|C908    |      ;  
-	beq UNREACH_C14B60                   ;C14AFB|F063    |C14B60;  
+	beq @lbl_C14B60                   ;C14AFB|F063    |C14B60;  
 	phx                                  ;C14AFD|DA      |      ;  
-	lda.b #$17                           ;C14AFE|A917    |      ;  
-	sta.b $00                            ;C14B00|8500    |000000;  
-	jsl.l CODE_C60512                    ;C14B02|221205C6|C60512;  
-	lda.b $00                            ;C14B06|A500    |000000;  
+	GetEvent Event17
 	plx                                  ;C14B08|FA      |      ;  
 	bit.b #$01                           ;C14B09|8901    |      ;  
-	beq .lbl_C14B1E                      ;C14B0B|F011    |C14B1E;  
+	beq @lbl_C14B1E                      ;C14B0B|F011    |C14B1E;  
 	.db $8A,$85,$00,$22,$1B,$72,$C2,$A0   ;C14B0D
 	.db $D9,$08,$84,$00,$22,$25,$25,$C6   ;C14B15|        |008408;  
 	.db $60                               ;C14B1D
-.lbl_C14B1E
+@lbl_C14B1E:
 	phx                                  ;C14B1E|DA      |      ;  
-	lda.b #$1A                           ;C14B1F|A91A    |      ;  
-	sta.b $00                            ;C14B21|8500    |000000;  
-	jsl.l CODE_C60512                    ;C14B23|221205C6|C60512;  
-	lda.b $00                            ;C14B27|A500    |000000;  
+	GetEvent Event1A
 	cmp.b #$08                           ;C14B29|C908    |      ;  
-	bcs UNREACH_C14B4E                   ;C14B2B|B021    |C14B4E;  
+	bcs @lbl_C14B4E                   ;C14B2B|B021    |C14B4E;  
 	plx                                  ;C14B2D|FA      |      ;  
 	ldy.w #$06AF                         ;C14B2E|A0AF06  |      ;  
-	sty.b $00                            ;C14B31|8400    |000000;  
+	sty.b w0000                            ;C14B31|8400    |000000;  
 	jsl.l DisplayMessage                    ;C14B33|222525C6|C62525;  
-	lda.b #$1A                           ;C14B37|A91A    |      ;  
-	sta.b $00                            ;C14B39|8500    |000000;  
-	jsl.l CODE_C60512                    ;C14B3B|221205C6|C60512;  
-	lda.b $00                            ;C14B3F|A500    |000000;  
+	GetEvent Event1A
 	ora.b #$01                           ;C14B41|0901    |      ;  
-	sta.b $02                   ;C14B43|8502    |000002;  
-	lda.b #$1A                           ;C14B45|A91A    |      ;  
-	sta.b $00                            ;C14B47|8500    |000000;  
-	jsl.l CODE_C60479                    ;C14B49|227904C6|C60479;  
+	sta.b w0002                   ;C14B43|8502    |000002;  
+	lda.b #Event1A                           ;C14B45|A91A    |      ;  
+	sta.b w0000                           ;C14B47|8500    |000000;  
+	jsl.l _SetEvent                    ;C14B49|227904C6|C60479;  
 	rts                                  ;C14B4D|60      |      ;  
-
-UNREACH_C14B4E:
+@lbl_C14B4E:
 	.db $FA,$8A,$85,$00,$22,$1B,$72,$C2   ;C14B4E
 	.db $A0,$C7,$08,$84,$00,$22,$25,$25   ;C14B56
 	.db $C6,$60                           ;C14B5E|        |000060;  
-
-UNREACH_C14B60:
+@lbl_C14B60:
 	.db $8A,$85,$00,$22,$1B,$72,$C2,$A0   ;C14B60
 	.db $81,$08,$84,$00,$22,$25,$25,$C6   ;C14B68|        |000008;  
 	.db $60                               ;C14B70
 	sep #$20                             ;C14B71|E220    |      ;  
 	rep #$10                             ;C14B73|C210    |      ;  
 	phx                                  ;C14B75|DA      |      ;  
-	lda.b #$09                           ;C14B76|A909    |      ;  
-	sta.b $00                            ;C14B78|8500    |000000;  
-	jsl.l CODE_C60512                    ;C14B7A|221205C6|C60512;  
-	lda.b $00                            ;C14B7E|A500    |000000;  
+	GetEvent Event09
 	plx                                  ;C14B80|FA      |      ;  
 	cmp.b #$08                           ;C14B81|C908    |      ;  
-	beq UNREACH_C14BDE                   ;C14B83|F059    |C14BDE;  
+	beq @lbl_C14BDE                   ;C14B83|F059    |C14BDE;  
 	phx                                  ;C14B85|DA      |      ;  
-	lda.b #$17                           ;C14B86|A917    |      ;  
-	sta.b $00                            ;C14B88|8500    |000000;  
-	jsl.l CODE_C60512                    ;C14B8A|221205C6|C60512;  
-	lda.b $00                            ;C14B8E|A500    |000000;  
+	GetEvent Event17
 	plx                                  ;C14B90|FA      |      ;  
 	bit.b #$01                           ;C14B91|8901    |      ;  
-	beq .lbl_C14BA6                      ;C14B93|F011    |C14BA6;  
+	beq @lbl_C14BA6                      ;C14B93|F011    |C14BA6;  
 	.db $8A,$85,$00,$22,$1B,$72,$C2,$A0   ;C14B95
 	.db $D8,$08,$84,$00,$22,$25,$25,$C6   ;C14B9D
 	.db $60                               ;C14BA5
-.lbl_C14BA6
-	lda.b #$1A                           ;C14BA6|A91A    |      ;  
-	sta.b $00                            ;C14BA8|8500    |000000;  
-	jsl.l CODE_C60512                    ;C14BAA|221205C6|C60512;  
-	lda.b $00                            ;C14BAE|A500    |000000;  
+@lbl_C14BA6:
+	GetEvent Event1A
 	cmp.b #$08                           ;C14BB0|C908    |      ;  
-	bcs UNREACH_C14BD4                   ;C14BB2|B020    |C14BD4;  
+	bcs @lbl_C14BD4                   ;C14BB2|B020    |C14BD4;  
 	ldy.w #$06B0                         ;C14BB4|A0B006  |      ;  
-	sty.b $00                            ;C14BB7|8400    |000000;  
+	sty.b w0000                            ;C14BB7|8400    |000000;  
 	jsl.l DisplayMessage                    ;C14BB9|222525C6|C62525;  
-	lda.b #$1A                           ;C14BBD|A91A    |      ;  
-	sta.b $00                            ;C14BBF|8500    |000000;  
-	jsl.l CODE_C60512                    ;C14BC1|221205C6|C60512;  
-	lda.b $00                            ;C14BC5|A500    |000000;  
+	GetEvent Event1A
 	ora.b #$02                           ;C14BC7|0902    |      ;  
-	sta.b $02                   ;C14BC9|8502    |000002;  
-	lda.b #$1A                           ;C14BCB|A91A    |      ;  
-	sta.b $00                            ;C14BCD|8500    |000000;  
-	jsl.l CODE_C60479                    ;C14BCF|227904C6|C60479;  
+	sta.b w0002                   ;C14BC9|8502    |000002;  
+	lda.b #Event1A                           ;C14BCB|A91A    |      ;  
+	sta.b w0000                           ;C14BCD|8500    |000000;  
+	jsl.l _SetEvent                    ;C14BCF|227904C6|C60479;  
 	rts                                  ;C14BD3|60      |      ;  
-
-UNREACH_C14BD4:
+@lbl_C14BD4:
 	.db $A0,$C6,$08,$84,$00,$22,$25,$25   ;C14BD4
 	.db $C6,$60                           ;C14BDC|        |000060;  
-
-UNREACH_C14BDE:
+@lbl_C14BDE:
 	.db $8A,$85,$00,$22,$1B,$72,$C2,$A0   ;C14BDE
 	.db $80,$08,$84,$00,$22,$25,$25,$C6   ;C14BE6|        |C14BF0;  
 	.db $60,$C2,$20,$E2,$10,$DA,$A9,$C1   ;C14BEE
@@ -4161,78 +3858,73 @@ UNREACH_C14BDE:
 	.db $C2,$FA,$A3,$0F,$85,$00,$DA,$22   ;C14D56
 	.db $25,$25,$C6,$FA,$80,$AC           ;C14D5E|        |000025;  
 
-CODE_C14D64:
+func_C14D64:
 	php                                  ;C14D64|08      |      ;  
 	sep #$30                             ;C14D65|E230    |      ;  
-	lda.b $00                            ;C14D67|A500    |000000;  
+	lda.b w0000                           ;C14D67|A500    |000000;  
 	asl a                                ;C14D69|0A      |      ;  
 	tay                                  ;C14D6A|A8      |      ;  
-	jsl.l CODE_C627DB                    ;C14D6B|22DB27C6|C627DB;  
-	lda.b $00                            ;C14D6F|A500    |000000;  
+	jsl.l func_C627DB                    ;C14D6B|22DB27C6|C627DB;  
+	lda.b w0000                           ;C14D6F|A500    |000000;  
 	cmp.b #$0A                           ;C14D71|C90A    |      ;  
-	bne .lbl_C14DBF                      ;C14D73|D04A    |C14DBF;  
-	jsl.l CODE_C62766                    ;C14D75|226627C6|C62766;  
-	lda.b $00                            ;C14D79|A500    |000000;  
+	bne @lbl_C14DBF                      ;C14D73|D04A    |C14DBF;  
+	jsl.l func_C62766                    ;C14D75|226627C6|C62766;  
+	lda.b w0000                           ;C14D79|A500    |000000;  
 	dec a                                ;C14D7B|3A      |      ;  
 	asl a                                ;C14D7C|0A      |      ;  
 	tax                                  ;C14D7D|AA      |      ;  
 	rep #$20                             ;C14D7E|C220    |      ;  
 	lda.w #$004B                         ;C14D80|A94B00  |      ;  
-	sta.b $00                            ;C14D83|8500    |000000;  
+	sta.b w0000                           ;C14D83|8500    |000000;  
 	phx                                  ;C14D85|DA      |      ;  
 	phy                                  ;C14D86|5A      |      ;  
-	jsl.l CODE_C62B19                    ;C14D87|22192BC6|C62B19;  
+	jsl.l func_C62B19                    ;C14D87|22192BC6|C62B19;  
 	ply                                  ;C14D8B|7A      |      ;  
 	plx                                  ;C14D8C|FA      |      ;  
 	lda.l DATA8_C14E92,x                 ;C14D8D|BF924EC1|C14E92;  
-	sta.b $00                            ;C14D91|8500    |000000;  
+	sta.b w0000                           ;C14D91|8500    |000000;  
 	phk                                  ;C14D93|4B      |      ;  
 	plb                                  ;C14D94|AB      |      ;  
 	lda.b ($00),y                        ;C14D95|B100    |000000;  
 	cmp.w #$8000                         ;C14D97|C90080  |      ;  
-	beq .lbl_C14DC1                      ;C14D9A|F025    |C14DC1;  
+	beq @lbl_C14DC1                      ;C14D9A|F025    |C14DC1;  
 	cmp.w #$8001                         ;C14D9C|C90180  |      ;  
-	beq UNREACH_C14DCD                   ;C14D9F|F02C    |C14DCD;  
+	beq @lbl_C14DCD                   ;C14D9F|F02C    |C14DCD;  
 	cmp.w #$8002                         ;C14DA1|C90280  |      ;  
-	beq UNREACH_C14DD9                   ;C14DA4|F033    |C14DD9;  
+	beq @lbl_C14DD9                   ;C14DA4|F033    |C14DD9;  
 	cmp.w #$8003                         ;C14DA6|C90380  |      ;  
-	beq UNREACH_C14DE5                   ;C14DA9|F03A    |C14DE5;  
+	beq @lbl_C14DE5                   ;C14DA9|F03A    |C14DE5;  
 	cmp.w #$0825                         ;C14DAB|C92508  |      ;  
-	beq UNREACH_C14E08                   ;C14DAE|F058    |C14E08;  
+	beq @lbl_C14E08                   ;C14DAE|F058    |C14E08;  
 	cmp.w #$092C                         ;C14DB0|C92C09  |      ;  
-	beq UNREACH_C14DF1                   ;C14DB3|F03C    |C14DF1;  
-	sta.b $00                            ;C14DB5|8500    |000000;  
+	beq @lbl_C14DF1                   ;C14DB3|F03C    |C14DF1;  
+	sta.b w0000                           ;C14DB5|8500    |000000;  
 	jsl.l DisplayMessage                    ;C14DB7|222525C6|C62525;  
-	jsl.l CODE_C62437                    ;C14DBB|223724C6|C62437;  
-.lbl_C14DBF
+	jsl.l func_C62437                    ;C14DBB|223724C6|C62437;  
+@lbl_C14DBF:
 	plp                                  ;C14DBF|28      |      ;  
 	rtl                                  ;C14DC0|6B      |      ;  
-.lbl_C14DC1
+@lbl_C14DC1:
 	sep #$30                             ;C14DC1|E230    |      ;  
 	lda.b #$00                           ;C14DC3|A900    |      ;  
-	sta.b $00                            ;C14DC5|8500    |000000;  
-	jsl.l CODE_C62BF2                    ;C14DC7|22F22BC6|C62BF2;  
+	sta.b w0000                           ;C14DC5|8500    |000000;  
+	jsl.l func_C62BF2                    ;C14DC7|22F22BC6|C62BF2;  
 	plp                                  ;C14DCB|28      |      ;  
 	rtl                                  ;C14DCC|6B      |      ;  
-
-UNREACH_C14DCD:
+@lbl_C14DCD:
 	.db $E2,$30,$A9,$05,$85,$00,$22,$F2   ;C14DCD
 	.db $2B,$C6,$28,$6B                   ;C14DD5
-
-UNREACH_C14DD9:
+@lbl_C14DD9:
 	.db $E2,$30,$A9,$06,$85,$00,$22,$F2   ;C14DD9
 	.db $2B,$C6,$28,$6B                   ;C14DE1
-
-UNREACH_C14DE5:
+@lbl_C14DE5:
 	.db $E2,$30,$A9,$07,$85,$00,$22,$F2   ;C14DE5
 	.db $2B,$C6,$28,$6B                   ;C14DED
-
-UNREACH_C14DF1:
+@lbl_C14DF1:
 	.db $C2,$20,$85,$00,$22,$25,$25,$C6   ;C14DF1
 	.db $22,$37,$24,$C6,$A9,$01,$00,$85   ;C14DF9|        |C62437;  
 	.db $00,$22,$F2,$2B,$C6,$28,$6B       ;C14E01
-
-UNREACH_C14E08:
+@lbl_C14E08:
 	.db $E2,$20,$C2,$10,$A0,$25,$08,$84   ;C14E08
 	.db $00,$22,$25,$25,$C6,$A0,$2F,$01   ;C14E10
 	.db $84,$00,$22,$25,$25,$C6,$22,$05   ;C14E18|        |000000;  
@@ -4300,47 +3992,47 @@ DATA8_C14E92:
 	.db $96,$08,$97,$08,$3A,$09,$3B,$09   ;C14FC4|        |000008;  
 	.db $3C,$09,$3D,$09                   ;C14FCC|        |003D09;  
 
-CODE_C14FD0:
+func_C14FD0:
 	php                                  ;C14FD0|08      |      ;  
 	rep #$20                             ;C14FD1|C220    |      ;  
 	sep #$10                             ;C14FD3|E210    |      ;  
-	lda.b $00                            ;C14FD5|A500    |000000;  
+	lda.b w0000                           ;C14FD5|A500    |000000;  
 	pha                                  ;C14FD7|48      |      ;  
-	jsl.l CODE_C627E6                    ;C14FD8|22E627C6|C627E6;  
-	ldx.b $00                            ;C14FDC|A600    |000000;  
+	jsl.l GetCurrentDungeon                    ;C14FD8|22E627C6|C627E6;  
+	ldx.b w0000                            ;C14FDC|A600    |000000;  
 	cpx.b #$01                           ;C14FDE|E001    |      ;  
-	bne .lbl_C14FF0                      ;C14FE0|D00E    |C14FF0;  
-	jsl.l CODE_C62771                    ;C14FE2|227127C6|C62771;  
-	ldx.b $00                            ;C14FE6|A600    |000000;  
+	bne @lbl_C14FF0                      ;C14FE0|D00E    |C14FF0;  
+	jsl.l GetCurrentFloor                    ;C14FE2|227127C6|C62771;  
+	ldx.b w0000                            ;C14FE6|A600    |000000;  
 	cpx.b #$02                           ;C14FE8|E002    |      ;  
-	bcc .lbl_C14FF0                      ;C14FEA|9004    |C14FF0;  
+	bcc @lbl_C14FF0                      ;C14FEA|9004    |C14FF0;  
 	cpx.b #$11                           ;C14FEC|E011    |      ;  
-	bcc .lbl_C14FF7                      ;C14FEE|9007    |C14FF7;  
-.lbl_C14FF0
+	bcc @lbl_C14FF7                      ;C14FEE|9007    |C14FF7;  
+@lbl_C14FF0:
 	pla                                  ;C14FF0|68      |      ;  
-	sta.b $00                            ;C14FF1|8500    |000000;  
-	stz.b $02                   ;C14FF3|6402    |000002;  
+	sta.b w0000                           ;C14FF1|8500    |000000;  
+	stz.b w0002                   ;C14FF3|6402    |000002;  
 	plp                                  ;C14FF5|28      |      ;  
 	rtl                                  ;C14FF6|6B      |      ;  
-.lbl_C14FF7
+@lbl_C14FF7:
 	pla                                  ;C14FF7|68      |      ;  
-	sta.b $00                            ;C14FF8|8500    |000000;  
+	sta.b w0000                           ;C14FF8|8500    |000000;  
 	plp                                  ;C14FFA|28      |      ;  
 	php                                  ;C14FFB|08      |      ;  
 	rep #$20                             ;C14FFC|C220    |      ;  
-	lda.b $00                            ;C14FFE|A500    |000000;  
+	lda.b w0000                           ;C14FFE|A500    |000000;  
 	pha                                  ;C15000|48      |      ;  
 	sep #$30                             ;C15001|E230    |      ;  
-	ldx.b $00                            ;C15003|A600    |000000;  
+	ldx.b w0000                            ;C15003|A600    |000000;  
 	lda.l $7E894F,x                      ;C15005|BF4F897E|7E894F;  
-	sta.b $00                            ;C15009|8500    |000000;  
-	jsl.l CODE_C30710                    ;C1500B|221007C3|C30710;  
-	lda.b $00                            ;C1500F|A500    |000000;  
+	sta.b w0000                           ;C15009|8500    |000000;  
+	jsl.l func_C30710                    ;C1500B|221007C3|C30710;  
+	lda.b w0000                           ;C1500F|A500    |000000;  
 	cmp.b #$02                           ;C15011|C902    |      ;  
-	bne .lbl_C1508F                      ;C15013|D07A    |C1508F;  
-	jsr.w CODE_C1509A                    ;C15015|209A50  |C1509A;  
+	bne @lbl_C1508F                      ;C15013|D07A    |C1508F;  
+	jsr.w func_C1509A                    ;C15015|209A50  |C1509A;  
 	cmp.b #$00                           ;C15018|C900    |      ;  
-	beq .lbl_C1508F                      ;C1501A|F073    |C1508F;  
+	beq @lbl_C1508F                      ;C1501A|F073    |C1508F;  
 	.db $A9,$80,$85,$00,$22,$12,$05,$C6   ;C1501C
 	.db $A5,$00,$D0,$67,$A9,$13,$85,$00   ;C15024|        |000000;  
 	.db $22,$AC,$10,$C2,$22,$1A,$63,$C3   ;C1502C|        |C210AC;  
@@ -4356,27 +4048,26 @@ CODE_C14FD0:
 	.db $AC,$02,$22,$37,$24,$C6,$C2,$20   ;C1507C|        |002202;  
 	.db $68,$85,$00,$E2,$30,$A9,$01,$85   ;C15084
 	.db $02,$28,$6B                       ;C1508C
-.lbl_C1508F
+@lbl_C1508F:
 	rep #$20                             ;C1508F|C220    |      ;  
 	pla                                  ;C15091|68      |      ;  
-	sta.b $00                            ;C15092|8500    |000000;  
+	sta.b w0000                           ;C15092|8500    |000000;  
 	sep #$30                             ;C15094|E230    |      ;  
-	stz.b $02                   ;C15096|6402    |000002;  
+	stz.b w0002                   ;C15096|6402    |000002;  
 	plp                                  ;C15098|28      |      ;  
 	rtl                                  ;C15099|6B      |      ;  
 
-CODE_C1509A:
+func_C1509A:
 	php                                  ;C1509A|08      |      ;  
 	sep #$30                             ;C1509B|E230    |      ;  
-	jsl.l CODE_C3F65F                    ;C1509D|225FF6C3|C3F65F;  
-	lda.b $00                            ;C150A1|A500    |000000;  
+	jsl.l func_C3F65F                    ;C1509D|225FF6C3|C3F65F;  
+	lda.b w0000                           ;C150A1|A500    |000000;  
 	cmp.b #$10                           ;C150A3|C910    |      ;  
-	bcc UNREACH_C150AB                   ;C150A5|9004    |C150AB;  
+	bcc @lbl_C150AB                   ;C150A5|9004    |C150AB;  
 	lda.b #$00                           ;C150A7|A900    |      ;  
 	plp                                  ;C150A9|28      |      ;  
 	rts                                  ;C150AA|60      |      ;  
-
-UNREACH_C150AB:
+@lbl_C150AB:
 	.db $A2,$00,$DA,$80,$14,$85,$00,$DA   ;C150AB
 	.db $22,$10,$07,$C3,$FA,$A5,$00,$C9   ;C150B3|        |C30710;  
 	.db $02,$D0,$05,$A3,$01,$1A,$83,$01   ;C150BB

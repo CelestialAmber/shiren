@@ -3,7 +3,7 @@
 ;Command 0
 ;calls an asm function and jumps to the given script address if carry is clear
 ;1: function address (16 bit), 2: script address (16 bit)
-.macro exec_bcc
+.macro call_jumpcarry
     .db $00
     .dw \1
     .dw \2 - NPCScript
@@ -12,7 +12,7 @@
 ;Command 1
 ;calls an asm function and jumps to the given script address if carry is set
 ;1: function address (16 bit), 2: script address (16 bit)
-.macro exec_bcs
+.macro call_jumpnocarry
     .db $01
     .dw \1
     .dw \2 - NPCScript
@@ -30,7 +30,7 @@
 ;calls an asm function, spawns the character corresponding to the returned value,
 ;and makes them follow shiren
 ;1: function address (16 bit)
-.macro exec_and_spawn_following_npc
+.macro call_spawn_follower
     .db $03
     .dw \1
 .endm
@@ -38,7 +38,7 @@
 ;Command 4
 ;spawns the specified character, and makes them follow shiren
 ;1: character
-.macro spawn_following_npc
+.macro spawn_follower
     .db $04
     .db \1
 .endm
@@ -46,7 +46,7 @@
 ;Command 5
 ;calls an asm function, and spawns the character corresponding to the returned value
 ;1: function address (16 bit)
-.macro exec_and_spawn_npc
+.macro call_spawn_npc
     .db $05
     .dw \1
 .endm
@@ -78,7 +78,7 @@
 ;Command 9
 ;calls an asm function
 ;1: function address (16 bit)
-.macro exec
+.macro call
     .db $09
     .dw \1
 .endm

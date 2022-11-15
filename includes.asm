@@ -5,3 +5,5 @@
 
 .include "constants/text.asm"
 .include "constants/npc.asm"
+.include "constants/events.asm"
+.include "constants/locations.asm"
