@@ -71,3 +71,7 @@
         .db $FC, \1, \2
     .endif
 .endm
+
+.macro endtext
+	.db $FF
+.endm

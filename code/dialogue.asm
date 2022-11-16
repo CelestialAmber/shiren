@@ -30,7 +30,7 @@ func_C10000:
 	tax                                  ;C10039|AA      |      ;  
 	lda.l DATA8_C1004F,x                 ;C1003A|BF4F00C1|C1004F;  
 	sep #$10                             ;C1003E|E210    |      ;  
-	pea.w $0046                          ;C10040|F44600  |7E0046;  
+	pea.w w0046                          ;C10040|F44600  |7E0046;  
 	pha                                  ;C10043|48      |      ;  
 	ldx.b w0000                            ;C10044|A600    |000000;  
 	rts                                  ;C10046|60      |      ;  
@@ -249,7 +249,7 @@ func_C104AB:
 	bne @lbl_C104E0                   ;C104B3|D02B    |C104E0;  
 	ldy.w #$07EB                         ;C104B5|A0EB07  |      ;  
 	sty.b w0000                            ;C104B8|8400    |000000;  
-	jsl.l func_C62B7E                    ;C104BA|227E2BC6|C62B7E;  
+	jsl.l DisplayMessage1                    ;C104BA|227E2BC6|C62B7E;  
 	lda.b w0000                           ;C104BE|A500    |000000;  
 	beq @lbl_C104CC                      ;C104C0|F00A    |C104CC;  
 	.db $A0,$EC,$07,$84,$00,$22,$25,$25   ;C104C2
@@ -308,7 +308,7 @@ func_C104AB:
 	ldy.w #$06CA                         ;C10607|A0CA06  |      ;  
 	sty.b w0000                            ;C1060A|8400    |000000;  
 	phx                                  ;C1060C|DA      |      ;  
-	jsl.l func_C62B7E                    ;C1060D|227E2BC6|C62B7E;  
+	jsl.l DisplayMessage1                    ;C1060D|227E2BC6|C62B7E;  
 	plx                                  ;C10611|FA      |      ;  
 	lda.b w0000                           ;C10612|A500    |000000;  
 	beq @lbl_C10635                      ;C10614|F01F    |C10635;  
@@ -904,7 +904,7 @@ func_C111EA:
 	SetEvent Event85 $02                    ;C1121A|227904C6|C60479;  
 	ldy.w #$0703                         ;C1121E|A00307  |      ;  
 	sty.b w0000                            ;C11221|8400    |000000;  
-	jsl.l func_C62B7E                    ;C11223|227E2BC6|C62B7E;  
+	jsl.l DisplayMessage1                    ;C11223|227E2BC6|C62B7E;  
 	lda.b w0000                           ;C11227|A500    |000000;  
 	beq @lbl_C1123F                      ;C11229|F014    |C1123F;  
 	.db $A0,$05,$07,$84,$00,$22,$25,$25   ;C1122B
@@ -1131,7 +1131,7 @@ func_C1173F:
 	.db $22,$67,$11,$C2,$A5,$00,$C5,$01   ;C11780|        |C21167;  
 	.db $F0,$0A                           ;C11788|        |C11794;  
 @lbl_C1178A:
-	jsl.l func_C3F65F                    ;C1178A|225FF6C3|C3F65F;  
+	jsl.l Random                    ;C1178A|225FF6C3|C3F65F;  
 	lda.b w0000                           ;C1178E|A500    |000000;  
 	cmp.b #$55                           ;C11790|C955    |      ;  
 	bcs @lbl_C117DB                      ;C11792|B047    |C117DB;  
@@ -1327,7 +1327,7 @@ func_C11B11:
 @lbl_C11B1F:
 	ldy.w #$0727                         ;C11B1F|A02707  |      ;  
 	sty.b w0000                            ;C11B22|8400    |000000;  
-	jsl.l func_C62B7E                    ;C11B24|227E2BC6|C62B7E;  
+	jsl.l DisplayMessage1                    ;C11B24|227E2BC6|C62B7E;  
 	lda.b w0000                           ;C11B28|A500    |000000;  
 	beq @lbl_C11B36                      ;C11B2A|F00A    |C11B36;  
 	.db $A0,$28,$07,$84,$00,$22,$25,$25   ;C11B2C
@@ -1683,6 +1683,8 @@ DATA8_C122EB:
 	.db $84,$00,$22,$25,$25,$C6,$60,$8A   ;C123D6|        |000000;  
 	.db $85,$00,$22,$1B,$72,$C2,$A0,$83   ;C123DE|        |000000;  
 	.db $08,$84,$00,$22,$25,$25,$C6,$60   ;C123E6
+
+
 	sep #$20                             ;C123EE|E220    |      ;  
 	rep #$10                             ;C123F0|C210    |      ;  
 	GetEvent Event_Gaibara
@@ -1714,6 +1716,8 @@ DATA8_C122EB:
 	.db $F0,$0A,$A0,$23,$09,$84,$00,$22   ;C1249A|        |C124A6;  
 	.db $25,$25,$C6,$60,$A0,$5C,$00,$84   ;C124A2|        |000025;  
 	.db $00,$22,$25,$25,$C6,$60           ;C124AA
+
+
 	sep #$20                             ;C124B0|E220    |      ;  
 	rep #$10                             ;C124B2|C210    |      ;  
 	txa                                  ;C124B4|8A      |      ;  
@@ -1783,7 +1787,7 @@ func_C124BB:
 	SetEvent Event09 $01                    ;C12559|227904C6|C60479;  
 	ldy.w #$076B                         ;C1255D|A06B07  |      ;  
 	sty.b w0000                            ;C12560|8400    |000000;  
-	jsl.l func_C62B7E                    ;C12562|227E2BC6|C62B7E;  
+	jsl.l DisplayMessage1                    ;C12562|227E2BC6|C62B7E;  
 	lda.b w0000                           ;C12566|A500    |000000;  
 	beq @lbl_C12574                      ;C12568|F00A    |C12574;  
 	.db $A0,$6D,$07,$84,$00,$22,$25,$25   ;C1256A
@@ -1807,7 +1811,9 @@ func_C124BB:
 	ldy.w #$076F                         ;C1259F|A06F07  |      ;  
 	sty.b w0000                            ;C125A2|8400    |000000;  
 	jsl.l DisplayMessage                    ;C125A4|222525C6|C62525;  
-	rts                                  ;C125A8|60      |      ;  
+	rts                                  ;C125A8|60      |      ;
+
+
 	.db $FA,$A0,$70,$07,$84,$00,$22,$25   ;C125A9
 	.db $25,$C6,$60,$C9,$03,$B0,$5E,$A9   ;C125B1|        |0000C6;  
 	.db $88,$85,$00,$22,$12,$05,$C6,$A5   ;C125B9
@@ -2002,7 +2008,9 @@ func_C12ABD:
 	sta.b w0000                           ;C12AEB|8500    |000000;  
 	jsl.l func_C306F4                    ;C12AED|22F406C3|C306F4;  
 	sec                                  ;C12AF1|38      |      ;  
-	rts                                  ;C12AF2|60      |      ;  
+	rts                                  ;C12AF2|60      |      ;
+
+
 	.db $E2,$20,$C2,$10,$8A,$48,$20,$FE   ;C12AF3
 	.db $2A,$68,$60,$E2,$20,$C2,$10,$A3   ;C12AFB
 	.db $03,$85,$00,$DA,$22,$AC,$10,$C2   ;C12B03|        |000085;  
@@ -2228,7 +2236,9 @@ func_C12ABD:
 	.db $06,$07,$10,$FF,$03,$02,$02,$02   ;C131E3|        |000007;  
 	.db $FF,$04,$16,$FF,$07,$06,$06,$06   ;C131EB|        |FF1604;  
 	.db $FF,$05,$06,$06,$17,$FF,$06,$06   ;C131F3|        |060605;  
-	.db $06,$06,$06,$FF,$04,$10,$FF       ;C131FB|        |000006;  
+	.db $06,$06,$06,$FF,$04,$10,$FF       ;C131FB|        |000006;
+
+
 	sep #$20                             ;C13202|E220    |      ;  
 	rep #$10                             ;C13204|C210    |      ;  
 	stx.b w0000                            ;C13206|8600    |000000;  
@@ -2255,7 +2265,7 @@ func_C13228:
 	sep #$20                             ;C13232|E220    |      ;  
 	ldy.w #$07CB                         ;C13234|A0CB07  |      ;  
 	sty.b w0000                            ;C13237|8400    |000000;  
-	jsl.l func_C62B7E                    ;C13239|227E2BC6|C62B7E;  
+	jsl.l DisplayMessage1                    ;C13239|227E2BC6|C62B7E;  
 	lda.b w0000                           ;C1323D|A500    |000000;  
 	beq @lbl_C1324B                      ;C1323F|F00A    |C1324B;  
 	.db $A0,$CD,$07,$84,$00,$22,$25,$25   ;C13241
@@ -2392,7 +2402,7 @@ func_C13304:
 @lbl_C1339B:
 	ldy.w #$07D0                         ;C1339B|A0D007  |      ;  
 	sty.b w0000                            ;C1339E|8400    |000000;  
-	jsl.l func_C62B7E                    ;C133A0|227E2BC6|C62B7E;  
+	jsl.l DisplayMessage1                    ;C133A0|227E2BC6|C62B7E;  
 	lda.b w0000                           ;C133A4|A500    |000000;  
 	beq @lbl_C133B2                      ;C133A6|F00A    |C133B2;  
 	.db $A0,$D2,$07,$84,$00,$22,$25,$25   ;C133A8
@@ -2415,7 +2425,7 @@ func_C13304:
 @lbl_C133DB:
 	ldy.w #$07D4                         ;C133DB|A0D407  |      ;  
 	sty.b w0000                            ;C133DE|8400    |000000;  
-	jsl.l func_C62B7E                    ;C133E0|227E2BC6|C62B7E;  
+	jsl.l DisplayMessage1                    ;C133E0|227E2BC6|C62B7E;  
 	lda.b w0000                           ;C133E4|A500    |000000;  
 	bpl @lbl_C13404                      ;C133E6|101C    |C13404;  
 	ldy.w #$03E8                         ;C133E8|A0E803  |      ;  
@@ -2532,7 +2542,7 @@ func_C13304:
 	lda.b w0004,s                          ;C13507|A304    |000004;  
 	sta.b w0000                           ;C13509|8500    |000000;  
 	jsl.l func_C2721B                    ;C1350B|221B72C2|C2721B;  
-	jsl.l func_C3F65F                    ;C1350F|225FF6C3|C3F65F;  
+	jsl.l Random                    ;C1350F|225FF6C3|C3F65F;  
 	lda.b w0000                           ;C13513|A500    |000000;  
 	cmp.b #$10                           ;C13515|C910    |      ;  
 	bcc @lbl_C1353F                   ;C13517|9026    |C1353F;  
@@ -2700,7 +2710,9 @@ func_C13304:
 	.db $08,$84,$00,$22,$25,$25,$C6,$60   ;C139C0
 	.db $A0,$07,$08,$84,$00,$22,$25,$25   ;C139C8
 	.db $C6,$60,$A0,$82,$08,$84,$00,$22   ;C139D0|        |000060;  
-	.db $25,$25,$C6,$60                   ;C139D8|        |000025;  
+	.db $25,$25,$C6,$60                   ;C139D8|        |000025;
+
+
 	sep #$20                             ;C139DC|E220    |      ;  
 	rep #$10                             ;C139DE|C210    |      ;  
 	phx                                  ;C139E0|DA      |      ;  
@@ -2767,62 +2779,76 @@ func_C13304:
 	.db $A0,$12,$08,$84,$00,$22,$25,$25   ;C13A97
 	.db $C6,$60                           ;C13A9F|        |000060;  
 @lbl_C13AA1:
+	;fortune teller dialogue
+	;Both the fortune you get and the tip he gives are completely random. It doesn't
+	;seem like it saves the result for later/influences your luck at all.
 	inc a                                ;C13AA1|1A      |      ;  
 	sta.l $7E8871,x                      ;C13AA2|9F71887E|7E8871;  
 	ldy.w #$080C                         ;C13AA6|A00C08  |      ;  
 	sty.b w0000                            ;C13AA9|8400    |000000;  
-	jsl.l func_C62B7E                    ;C13AAB|227E2BC6|C62B7E;  
+	jsl.l DisplayMessage1                    ;C13AAB|227E2BC6|C62B7E;  
 	lda.b w0000                           ;C13AAF|A500    |000000;  
 	beq @lbl_C13ABD                      ;C13AB1|F00A    |C13ABD;  
 	.db $A0,$0E,$08,$84,$00,$22,$25,$25   ;C13AB3
 	.db $C6,$60                           ;C13ABB|        |000060;  
 @lbl_C13ABD:
-	ldy.w #$080F                         ;C13ABD|A00F08  |      ;  
-	sty.b w0000                            ;C13AC0|8400    |000000;  
-	jsl.l DisplayMessage                    ;C13AC2|222525C6|C62525;  
-	jsl.l func_C3F65F                    ;C13AC6|225FF6C3|C3F65F;  
-	tdc                                  ;C13ACA|7B      |      ;  
-	lda.b w0000                           ;C13ACB|A500    |000000;  
-	and.b #$07                           ;C13ACD|2907    |      ;  
-	asl a                                ;C13ACF|0A      |      ;  
-	tax                                  ;C13AD0|AA      |      ;  
-	rep #$20                             ;C13AD1|C220    |      ;  
-	lda.l UNREACH_C13B0B,x               ;C13AD3|BF0B3BC1|C13B0B;  
-	sta.b w0000                           ;C13AD7|8500    |000000;  
-	sep #$20                             ;C13AD9|E220    |      ;  
-	jsl.l DisplayMessage                    ;C13ADB|222525C6|C62525;  
-	ldy.w #$0810                         ;C13ADF|A01008  |      ;  
-	sty.b w0000                            ;C13AE2|8400    |000000;  
-	jsl.l DisplayMessage                    ;C13AE4|222525C6|C62525;  
-	jsl.l func_C3F65F                    ;C13AE8|225FF6C3|C3F65F;  
-	tdc                                  ;C13AEC|7B      |      ;  
-	lda.b w0000                           ;C13AED|A500    |000000;  
-	and.b #$03                           ;C13AEF|2903    |      ;  
-	asl a                                ;C13AF1|0A      |      ;  
-	tax                                  ;C13AF2|AA      |      ;  
-	rep #$20                             ;C13AF3|C220    |      ;  
-	lda.l DATA8_C13B1B,x                 ;C13AF5|BF1B3BC1|C13B1B;  
-	sta.b w0000                           ;C13AF9|8500    |000000;  
-	sep #$20                             ;C13AFB|E220    |      ;  
-	jsl.l DisplayMessage                    ;C13AFD|222525C6|C62525;  
-	ldy.w #$0811                         ;C13B01|A01108  |      ;  
-	sty.b w0000                            ;C13B04|8400    |000000;  
-	jsl.l DisplayMessage                    ;C13B06|222525C6|C62525;  
-	rts                                  ;C13B0A|60      |      ;  
+	ldy.w #$080F                
+	sty.b w0000                 
+	jsl.l DisplayMessage         
+	jsl.l Random ;choose a random result message.
+	tdc                         
+	lda.b w0000                 
+	and.b #$07 ;8 possible result messages
+	asl a                       
+	tax                         
+	rep #$20                    
+	lda.l FortuneTellerResultsText,x
+	sta.b w0000                 
+	sep #$20                    
+	jsl.l DisplayMessage         
+	ldy.w #$0810                
+	sty.b w0000                 
+	jsl.l DisplayMessage         
+	jsl.l Random ;choose a random tip for the fortune teller to say
+	tdc                         
+	lda.b w0000                 
+	and.b #$03 ;4 possible tip messages
+	asl a                       
+	tax                         
+	rep #$20                    
+	lda.l FortuneTellerTipsText,x
+	sta.b w0000          
+	sep #$20             
+	jsl.l DisplayMessage 
+	ldy.w #$0811         
+	sty.b w0000          
+	jsl.l DisplayMessage 
+	rts                  
 
-UNREACH_C13B0B:
-	.db $13,$08,$14,$08,$15,$08,$16,$08   ;C13B0B|        |000008;  
-	.db $17,$08                           ;C13B13
-	.db $18,$08,$19,$08,$1A,$08           ;C13B15
+FortuneTellerResultsText:
+	.dw $813
+	.dw $814
+	.dw $815
+	.dw $816
+	.dw $817
+	.dw $818
+	.dw $819
+	.dw $81A
 
-DATA8_C13B1B:
-	.db $1B,$08,$1C,$08                   ;C13B1B
-	.db $1D,$08,$1E,$08,$E2,$20,$C2,$10   ;C13B1F|        |001E08;  
+FortuneTellerTipsText:
+	.dw $81B
+	.dw $81C
+	.dw $81D
+	.dw $81E
+	
+;c13b23
+	.db $E2,$20,$C2,$10   ;C13B1F|        |001E08;  
 	.db $DA,$A9,$17,$85,$00,$22,$12,$05   ;C13B27
 	.db $C6,$A5,$00,$FA,$89,$01,$F0,$0A   ;C13B2F|        |0000A5;  
 	.db $A0,$FD,$08,$84,$00,$22,$25,$25   ;C13B37
 	.db $C6,$60,$A0,$20,$08,$84,$00,$22   ;C13B3F|        |000060;  
 	.db $25,$25,$C6,$60                   ;C13B47|        |000025;  
+
 	sep #$20                             ;C13B4B|E220    |      ;  
 	rep #$10                             ;C13B4D|C210    |      ;  
 	phx                                  ;C13B4F|DA      |      ;  
@@ -2947,7 +2973,7 @@ DATA8_C13B1B:
 	ldy.w #$082F                         ;C13D39|A02F08  |      ;  
 	sty.b w0000                            ;C13D3C|8400    |000000;  
 	jsl.l DisplayMessage                    ;C13D3E|222525C6|C62525;  
-	jsl.l func_C3F65F                    ;C13D42|225FF6C3|C3F65F;  
+	jsl.l Random                    ;C13D42|225FF6C3|C3F65F;  
 	tdc                                  ;C13D46|7B      |      ;  
 	lda.b w0000                           ;C13D47|A500    |000000;  
 	and.b #$07                           ;C13D49|2907    |      ;  
@@ -2960,7 +2986,7 @@ DATA8_C13B1B:
 	jsl.l DisplayMessage                    ;C13D57|222525C6|C62525;  
 	ldy.w #$0830                         ;C13D5B|A03008  |      ;  
 	sty.b w0000                            ;C13D5E|8400    |000000;  
-	jsl.l func_C62B7E                    ;C13D60|227E2BC6|C62B7E;  
+	jsl.l DisplayMessage1                    ;C13D60|227E2BC6|C62B7E;  
 	lda.b w0000                           ;C13D64|A500    |000000;  
 	bne @lbl_C13D72                   ;C13D66|D00A    |C13D72;  
 	ldy.w #$0831                         ;C13D68|A03108  |      ;  
@@ -2993,7 +3019,7 @@ UNREACH_C13D7C:
 @lbl_C13DC6:
 	ldy.w #$068D                         ;C13DC6|A08D06  |      ;  
 	sty.b w0000                            ;C13DC9|8400    |000000;  
-	jsl.l func_C62B7E                    ;C13DCB|227E2BC6|C62B7E;  
+	jsl.l DisplayMessage1                    ;C13DCB|227E2BC6|C62B7E;  
 	lda.b w0000                           ;C13DCF|A500    |000000;  
 	beq @lbl_C13DDD                      ;C13DD1|F00A    |C13DDD;  
 	.db $A0,$8E,$06,$84,$00,$22,$25,$25   ;C13DD3
@@ -3134,7 +3160,7 @@ UNREACH_C13D7C:
 @lbl_C13F98:
 	ldy.w #$0842                         ;C13F98|A04208  |      ;  
 	sty.b w0000                            ;C13F9B|8400    |000000;  
-	jsl.l func_C62B7E                    ;C13F9D|227E2BC6|C62B7E;  
+	jsl.l DisplayMessage1                    ;C13F9D|227E2BC6|C62B7E;  
 	lda.b w0000                           ;C13FA1|A500    |000000;  
 	bne @lbl_C13FAF                      ;C13FA3|D00A    |C13FAF;  
 	ldy.w #$0844                         ;C13FA5|A04408  |      ;  
@@ -3182,7 +3208,7 @@ UNREACH_C13D7C:
 @lbl_C14019:
 	ldy.w #$0848                         ;C14019|A04808  |      ;  
 	sty.b w0000                            ;C1401C|8400    |000000;  
-	jsl.l func_C62B7E                    ;C1401E|227E2BC6|C62B7E;  
+	jsl.l DisplayMessage1                    ;C1401E|227E2BC6|C62B7E;  
 	lda.b w0000                           ;C14022|A500    |000000;  
 	beq @lbl_C14030                      ;C14024|F00A    |C14030;  
 	.db $A0,$4A,$08,$84,$00,$22,$25,$25   ;C14026
@@ -3216,14 +3242,14 @@ UNREACH_C13D7C:
 	beq @lbl_C14091                      ;C14082|F00D    |C14091;  
 	ldy.w #$084E                         ;C14084|A04E08  |      ;  
 	sty.b w0000                            ;C14087|8400    |000000;  
-	jsl.l func_C62B7E                    ;C14089|227E2BC6|C62B7E;  
+	jsl.l DisplayMessage1                    ;C14089|227E2BC6|C62B7E;  
 	lda.b w0000                           ;C1408D|A500    |000000;  
 	bra @lbl_C140A8                      ;C1408F|8017    |C140A8;  
 @lbl_C14091:
 	SetEvent Event14 $01                    ;C14099|227904C6|C60479;  
 	ldy.w #$084C                         ;C1409D|A04C08  |      ;  
 	sty.b w0000                            ;C140A0|8400    |000000;  
-	jsl.l func_C62B7E                    ;C140A2|227E2BC6|C62B7E;  
+	jsl.l DisplayMessage1                    ;C140A2|227E2BC6|C62B7E;  
 	lda.b w0000                           ;C140A6|A500    |000000;  
 @lbl_C140A8:
 	beq @lbl_C140B4                      ;C140A8|F00A    |C140B4;  
@@ -3504,7 +3530,7 @@ NPCScriptFunction_C14479:
 	rep #$10                             ;C14690|C210    |      ;  
 	ldy.w #$08AB                         ;C14692|A0AB08  |      ;  
 	sty.b w0000                            ;C14695|8400    |000000;  
-	jsl.l func_C62B7E                    ;C14697|227E2BC6|C62B7E;  
+	jsl.l DisplayMessage1                    ;C14697|227E2BC6|C62B7E;  
 	lda.b w0000                           ;C1469B|A500    |000000;  
 	bne @lbl_C146A9                   ;C1469D|D00A    |C146A9;  
 	ldy.w #$08AC                         ;C1469F|A0AC08  |      ;  
@@ -3555,7 +3581,7 @@ NPCScriptFunction_C14479:
 @lbl_C14772:
 	ldy.w #$08B1                         ;C14772|A0B108  |      ;  
 	sty.b w0000                            ;C14775|8400    |000000;  
-	jsl.l func_C62B7E                    ;C14777|227E2BC6|C62B7E;  
+	jsl.l DisplayMessage1                    ;C14777|227E2BC6|C62B7E;  
 	lda.b w0000                           ;C1477B|A500    |000000;  
 	beq @lbl_C14789                      ;C1477D|F00A    |C14789;  
 	ldy.w #$08B2                         ;C1477F|A0B208  |      ;  
@@ -3597,7 +3623,7 @@ NPCScriptFunction_C14479:
 	rep #$10                             ;C14819|C210    |      ;  
 	lda.l $7E8871,x                      ;C1481B|BF71887E|7E8871;  
 	bne @lbl_C1482E                      ;C1481F|D00D    |C1482E;  
-	jsl.l func_C3F65F                    ;C14821|225FF6C3|C3F65F;  
+	jsl.l Random                    ;C14821|225FF6C3|C3F65F;  
 	lda.b w0000                           ;C14825|A500    |000000;  
 	and.b #$01                           ;C14827|2901    |      ;  
 	inc a                                ;C14829|1A      |      ;  
@@ -3617,7 +3643,7 @@ NPCScriptFunction_C14479:
 	lda.l $7E8871,x                      ;C14849|BF71887E|7E8871;  
 	bne @lbl_C14860                      ;C1484D|D011    |C14860;  
 @lbl_C1484F:
-	jsl.l func_C3F65F                    ;C1484F|225FF6C3|C3F65F;  
+	jsl.l Random                    ;C1484F|225FF6C3|C3F65F;  
 	lda.b w0000                           ;C14853|A500    |000000;  
 	and.b #$03                           ;C14855|2903    |      ;  
 	cmp.b #$03                           ;C14857|C903    |      ;  
@@ -4060,7 +4086,7 @@ func_C14FD0:
 func_C1509A:
 	php                                  ;C1509A|08      |      ;  
 	sep #$30                             ;C1509B|E230    |      ;  
-	jsl.l func_C3F65F                    ;C1509D|225FF6C3|C3F65F;  
+	jsl.l Random                    ;C1509D|225FF6C3|C3F65F;  
 	lda.b w0000                           ;C150A1|A500    |000000;  
 	cmp.b #$10                           ;C150A3|C910    |      ;  
 	bcc @lbl_C150AB                   ;C150A5|9004    |C150AB;  

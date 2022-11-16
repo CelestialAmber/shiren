@@ -15,7 +15,7 @@ NPCScript_6:
 	call NPCScriptFunction_C166CD                                     ;旅仲間を全員外す
 	call NPCScriptFunction_C169A6                                     ;ナオキイベントの進行度を9に
 	call_jumpcarry NPCScriptFunction_C162E8 NPCScript_1E                ;25階未満なら飛ぶ
-	spawn_npc Char_NAOKI   ;Spawn Naoki
+	spawn_npc Char_Naoki   ;Spawn Naoki
 NPCScript_1E:
 	call_jumpcarry NPCScript_InTrapMasterDungeon NPCScript_33 ;jump if not in trap master dungeon
 	;trap master dungeon
@@ -23,7 +23,7 @@ NPCScript_1E:
 	call NPCScript_SetMusic                                     ;BGMを決定
 	call NPCScriptFunction_C166CD                                     ;旅仲間を全員外す
 	call_jumpcarry NPCScriptFunction_C15F3F NPCScript_33                ;フロアが16階未満なら飛ぶ
-	spawn_npc Char_GAIBARA_1  ;Spawn Gaibara
+	spawn_npc Char_Gaibara1  ;Spawn Gaibara
 NPCScript_33:
 	call_jumpcarry NPCScript_InFeisFinalProblemDungeon NPCScript_75 ;jump if not in fei's final problem
 	;fei's final problem
@@ -35,10 +35,10 @@ NPCScript_33:
 	spawn_npc_at Char_98 DirDown 43 19
 	spawn_npc_at Char_99 DirRight 42 19
 	spawn_npc_at Char_9A DirDown 41 19
-	spawn_npc_at Char_9B DirUp 43 21
-	spawn_npc_at Char_9C DirDown 40 18
-	spawn_npc_at Char_9D DirDown 45 16
-	spawn_npc_at Char_9E DirDown 46 18
+	spawn_npc_at Char_Mamel1 DirUp 43 21
+	spawn_npc_at Char_Mamel2 DirDown 40 18
+	spawn_npc_at Char_Mamel3 DirDown 45 16
+	spawn_npc_at Char_Mamel4 DirDown 46 18
 	spawn_item $A0 45 19
 	call NPCScriptFunction_C15E10                                       ;イベント進行度[0x8E]を設定
 NPCScript_75:
@@ -50,11 +50,11 @@ NPCScript_85:
 	call_jumpnocarry NPCScriptFunction_C15D7F NPCScript_A8                       ;太陽の大地なら飛ぶ
 	call_jumpcarry NPCScriptFunction_C15B65 NPCScript_94                         ;お竜のイベント進行度が5でないなら飛ぶ
 	call NPCScriptFunction_C166C6                                       ;キャラ番号を確保
-	spawn_follower Char_ORYU                	 ;Spawn Oryu
+	spawn_follower Char_Oryu                	 ;Spawn Oryu
 NPCScript_94:
 	call_jumpcarry NPCScriptFunction_C16076 NPCScript_9E                  ;ケチのイベント進行度が4でないなら飛ぶ
 	call NPCScriptFunction_C166C6                                       ;キャラ番号を確保
-	spawn_follower Char_KECHI                   ;Spawn Kechi
+	spawn_follower Char_Kechi                   ;Spawn Kechi
 NPCScript_9E:
 	call_jumpcarry NPCScriptFunction_C1612D NPCScript_A8                  ;ペケジのイベント進行度が6でないなら飛ぶ
 	call NPCScriptFunction_C166C6                                       ;キャラ番号を確保
@@ -63,12 +63,12 @@ NPCScript_A8:
 	call_jumpnocarry NPCScriptFunction_C15BB6 NPCScript_B7                ;山頂の町なら飛ぶ
 	call_jumpcarry NPCScriptFunction_C16222 NPCScript_B7                ;ナオキイベントの進行度が3でないなら飛ぶ
 	call NPCScriptFunction_C166C6                                     ;キャラ番号を確保
-	spawn_follower Char_NAOKI                 ;Spawn Naoki
+	spawn_follower Char_Naoki                 ;Spawn Naoki
 NPCScript_B7:
 	call_jumpnocarry NPCScriptFunction_C15BD3 NPCScript_C6                ;奇岩谷なら飛ぶ
 	call_jumpcarry NPCScriptFunction_C1639B NPCScript_C6                ;スラライベントの進行度が1でないなら飛ぶ
 	call NPCScriptFunction_C166C6                                     ;キャラ番号を確保
-	spawn_follower Char_SURALA                ;Spawn Surala
+	spawn_follower Char_Surala                ;Spawn Surala
 NPCScript_C6:
 	call_jumpcarry NPCScriptFunction_C15B7C NPCScript_23A               ;渓谷の宿場でないなら飛ぶ
 	call_jumpcarry NPCScriptFunction_C15C3F NPCScript_D6                ;イベント進行度[0x8B] が1でないなら飛ぶ
@@ -107,12 +107,12 @@ NPCScript_127:
 	spawn_npc_at Char_86 DirDown 6 33
 NPCScript_12C:
 	spawn_npc_at Char_OldWoman DirDown 56 14
-	spawn_npc_at Char_BARTENDER_1 DirDown 55 29
+	spawn_npc_at Char_Bartender1 DirDown 55 29
 	spawn_npc_at Char_7F DirDown 56 32
 	spawn_npc_at Char_84 DirDown 53 29
 	spawn_npc_at Char_85 DirRight 53 32
-	spawn_npc_at Char_FOREIGN_WANDERER DirLeft 7 35
-	spawn_npc_at Char_WAREHOUSE_GUARD DirDown 21 17
+	spawn_npc_at Char_ForeignWanderer DirLeft 7 35
+	spawn_npc_at Char_WarehouseGuard DirDown 21 17
 	call_jumpcarry NPCScriptFunction_C15E21 NPCScript_15E                      ;TMを打開したことがあるなら飛ぶ
 	call_jumpcarry NPCScriptFunction_C165A5 NPCScript_15E                      ;イベント進行度[0x1B] が0でないなら飛ぶ
 	spawn_npc_at Char_5A DirDown 35 17
@@ -129,11 +129,11 @@ NPCScript_173:
 	spawn_npc_at Char_4F DirDown 57 8
 NPCScript_182:
 	call_jumpcarry NPCScriptFunction_C163EC NPCScript_18C                      ;到達度が2以上なら飛ぶ
-	spawn_npc_at Char_9F DirLeft 36 18
+	spawn_npc_at Char_Mugla DirLeft 36 18
 NPCScript_18C:
 	call_jumpcarry NPCScriptFunction_C15EFC NPCScript_199                      ;「TMを打開していてガイバライベントの値が5 6」でないなら飛ぶ
 	call NPCScriptFunction_C15F1E                                     ;ガイバライベントの進行度を6に設定
-	spawn_npc_at Char_STUDENT_4 DirLeft 35 19
+	spawn_npc_at Char_Student4 DirLeft 35 19
 NPCScript_199:
 	call_jumpcarry NPCScriptFunction_C16403 NPCScript_1A8                      ;イベント進行度[0xF] が0でないなら飛ぶ
 	spawn_npc_at Char_59 DirRight 58 33
@@ -153,11 +153,11 @@ NPCScript_1C6:
 NPCScript_1D0:
 	spawn_npc_at Char_83 DirLeft 58 29
 NPCScript_1D5:
-	spawn_npc_at Char_TAGE DirDown 11 18
-	spawn_npc_at Char_A0 DirLeft 22 23
-	spawn_npc_at Char_A1 DirRight 21 23
-	spawn_npc Char_A2
-	spawn_npc_at Char_A3 DirUpLeft 29 20
+	spawn_npc_at Char_Tage DirDown 11 18
+	spawn_npc_at Char_Senzo DirLeft 22 23
+	spawn_npc_at Char_Jirokichi DirRight 21 23
+	spawn_npc Char_Bie
+	spawn_npc_at Char_Heji2 DirUpLeft 29 20
 	spawn_item $A0 26 35
 	spawn_item $A1 26 17
 	spawn_item $A2 14 17
@@ -186,31 +186,31 @@ NPCScript_23A:
 	call_jumpcarry NPCScriptFunction_C15B99 NPCScript_3A5                      ;竹林の村でないなら飛ぶ
 	call_jumpcarry NPCScriptFunction_C16297 NPCScript_272                      ;「TMを打開していてナオキイベント進行度が7 8」でないなら飛ぶ
 	call NPCScriptFunction_C162D7                                     ;ナオキイベント進行度を8に設定
-	spawn_npc_at Char_CHUBBY_MAN DirUpRight 18 8
-	spawn_npc_at Char_STRONG_MAN DirUpRight 17 7
-	spawn_npc_at Char_GIRL_1 DirRight 17 6
+	spawn_npc_at Char_ChubbyMan DirUpRight 18 8
+	spawn_npc_at Char_StrongMan DirUpRight 17 7
+	spawn_npc_at Char_Girl1 DirRight 17 6
 	spawn_npc_at Char_3C DirDownRight 17 5
-	spawn_npc_at Char_BARTENDER_2 DirDownRight 18 4
-	spawn_npc_at Char_TRAVELLER DirDown 19 4
+	spawn_npc_at Char_Bartender2 DirDownRight 18 4
+	spawn_npc_at Char_Traveller DirDown 19 4
 	spawn_npc_at Char_75 DirRight 16 20
 	spawn_npc_at Char_B3 DirDown 5 10
 	jump NPCScript_307                                    ;else
 NPCScript_272:
 	call_jumpcarry NPCScriptFunction_C15E53 NPCScript_281                        ;「お竜イベント進行度が0 4以上」でないなら飛ぶ
-	spawn_npc_at Char_STRONG_MAN DirRight 33 30
-	spawn_npc_at Char_CHUBBY_MAN DirLeft 34 30
+	spawn_npc_at Char_StrongMan DirRight 33 30
+	spawn_npc_at Char_ChubbyMan DirLeft 34 30
 NPCScript_281:
 	call_jumpcarry NPCScriptFunction_C15E6C NPCScript_290                        ;お竜イベント進行度が1 2でないなら飛ぶ
-	spawn_npc_at Char_STRONG_MAN DirRight 7 20
-	spawn_npc_at Char_CHUBBY_MAN DirLeft 8 20
+	spawn_npc_at Char_StrongMan DirRight 7 20
+	spawn_npc_at Char_ChubbyMan DirLeft 8 20
 NPCScript_290:
 	call_jumpcarry NPCScriptFunction_C15E80 NPCScript_2A4                        ;お竜イベント進行度が3でないなら飛ぶ
-	spawn_npc_at Char_STRONG_MAN DirUp 31 16
-	spawn_npc_at Char_CHUBBY_MAN DirUp 31 17
-	spawn_npc_at Char_ORYU DirDown 31 15
+	spawn_npc_at Char_StrongMan DirUp 31 16
+	spawn_npc_at Char_ChubbyMan DirUp 31 17
+	spawn_npc_at Char_Oryu DirDown 31 15
 NPCScript_2A4:
-	spawn_npc_at Char_BARTENDER_2 DirDown 53 29
-	spawn_npc_at Char_TRAVELLER DirDownRight 46 5
+	spawn_npc_at Char_Bartender2 DirDown 53 29
+	spawn_npc_at Char_Traveller DirDownRight 46 5
 	call_jumpcarry NPCScriptFunction_C1608D NPCScript_2B8                        ;ペケジイベントに関する判定
 	spawn_npc_at Char_Pekeji DirDownLeft 51 4
 NPCScript_2B8:
@@ -221,18 +221,18 @@ NPCScript_2C2:
 	call_jumpcarry NPCScriptFunction_C1657D NPCScript_2E1                          ;イベント進行度[0x1A] が7以上でないなら飛ぶ
 	call NPCScriptFunction_C16594
 	spawn_npc_at Char_3C DirUpLeft 58 6
-	spawn_npc_at Char_GIRL_1 DirUp 57 5
+	spawn_npc_at Char_Girl1 DirUp 57 5
 	spawn_npc_at Char_B3 DirUpRight 56 5
 	jump NPCScript_2F0                                        ;else
 NPCScript_2E1:
 	spawn_npc_at Char_3C DirDown 56 5
-	spawn_npc_at Char_GIRL_1 DirRight 55 6
+	spawn_npc_at Char_Girl1 DirRight 55 6
 	spawn_npc_at Char_B3 DirUp 19 7
 NPCScript_2F0:
 	jump NPCScript_302                                      ;else
 NPCScript_2F3:
 	spawn_npc_at Char_3C DirUpLeft 58 6
-	spawn_npc_at Char_GIRL_1 DirRight 57 5
+	spawn_npc_at Char_Girl1 DirRight 57 5
 	spawn_npc_at Char_B3 DirDown 5 10
 NPCScript_302:
 	spawn_npc_at Char_75 DirDown 37 6
@@ -243,19 +243,19 @@ NPCScript_307:
 	spawn_item $83 19 6                            ;食神の祠への入り口に階段を設置
 	set_tile $0 19 6                          ;食神の祠への入り口に部屋を設定
 NPCScript_31C:
-	spawn_npc_at Char_SHOPKEEPER_1 DirDown 48 7
+	spawn_npc_at Char_Shopkeeper1 DirDown 48 7
 	call_jumpcarry NPCScriptFunction_C16048 NPCScript_33F                      ;ケチイベント進行度が1でないなら飛ぶ
 	spawn_npc_at Char_68 DirUpRight 17 27
 	spawn_npc_at Char_68 DirUp 18 28
 	spawn_npc_at Char_68 DirUp 19 28
 	spawn_npc_at Char_68 DirUpLeft 20 28
-	spawn_npc_at Char_KECHI DirDown 18 26
+	spawn_npc_at Char_Kechi DirDown 18 26
 NPCScript_33F:
 	spawn_npc_at Char_6E DirDown 7 11
-	spawn_npc_at Char_GORO DirDown 6 34
+	spawn_npc_at Char_Goro DirDown 6 34
 	spawn_npc_at Char_77 DirDown 37 18
-	spawn_npc_at Char_KAMPACHI DirRight 54 33
-	spawn_npc_at Char_SHIBUTARE DirLeft 56 33
+	spawn_npc_at Char_Kampachi DirRight 54 33
+	spawn_npc_at Char_Shibutare DirLeft 56 33
 	call_jumpcarry NPCScriptFunction_C15E21 NPCScript_367                      ;TMを打開したことがあるなら飛ぶ
 	call_jumpcarry NPCScriptFunction_C165D1 NPCScript_367                      ;イベント進行度[0x1B] が2でないなら飛ぶ
 	spawn_npc_at Char_5A DirUp 51 31
@@ -287,54 +287,54 @@ NPCScript_3A5:
 	spawn_item $A8 59 11
 	call NPCScriptFunction_C16876                                   ;イベント進行度[0x93]を8に設定
 	call_jumpcarry NPCScriptFunction_C15F2F NPCScript_3DA                      ;ガイバライベント進行度が6以上でないなら飛ぶ
-	spawn_npc_at Char_SARUYAMA_1 DirUpLeft 40 35
+	spawn_npc_at Char_Saruyama1 DirUpLeft 40 35
 	set_tile $30 38 33
 	set_tile $30 38 32
 	spawn_item $83 38 32
 	jump NPCScript_424                                    ;else
 NPCScript_3DA:
-	spawn_npc_at Char_STUDENT_2 DirLeft 22 36
+	spawn_npc_at Char_Student2 DirLeft 22 36
 	call_jumpcarry NPCScriptFunction_C15EC7 NPCScript_3EE                        ;ガイバライベント進行度が0でないなら飛ぶ
-	spawn_npc_at Char_STUDENT_3 DirDown 26 36
-	spawn_npc_at Char_STUDENT_4 DirUp 25 35
+	spawn_npc_at Char_Student3 DirDown 26 36
+	spawn_npc_at Char_Student4 DirUp 25 35
 NPCScript_3EE:
 	call_jumpcarry NPCScriptFunction_C16250 NPCScript_400                        ;ナオキイベント進行度が6でないなら飛ぶ
 	spawn_npc_at Char_AF DirDown 30 12
 	spawn_npc_at Char_AE DirUp 30 14
 	jump NPCScript_424                                      ;else
 NPCScript_400:
-	spawn_npc_at Char_STUDENT_5 DirLeft 32 37
+	spawn_npc_at Char_Student5 DirLeft 32 37
 	call_jumpcarry NPCScriptFunction_C15EDC NPCScript_412        ;ガイバライベント進行度が3以下でなければ飛ぶ
-	spawn_npc_at Char_SARUYAMA_1 DirLeft 41 35
+	spawn_npc_at Char_Saruyama1 DirLeft 41 35
 	jump NPCScript_417                                        ;else
 NPCScript_412:
-	spawn_npc_at Char_SARUYAMA_1 DirLeft 29 34
+	spawn_npc_at Char_Saruyama1 DirLeft 29 34
 NPCScript_417:
-	spawn_npc_at Char_GAIBARA_1 DirDown 40 34
+	spawn_npc_at Char_Gaibara1 DirDown 40 34
 	call_jumpcarry NPCScriptFunction_C15EEC NPCScript_424            ;ガイバライベント進行度が4でなければ飛ぶ
 	call NPCScriptFunction_C15F52                                       ;合成の壺を配置
 NPCScript_424:
 	call_jumpnocarry NPCScriptFunction_C15EDC NPCScript_431                        ;ガイバライベントが3以下なら飛ぶ
-	spawn_npc_at Char_SHOPKEEPER_1 DirDown 44 6
+	spawn_npc_at Char_Shopkeeper1 DirDown 44 6
 	call NPCScriptFunction_C16AC7                                   ;店の商品を配置
 NPCScript_431:
 	call_jumpcarry NPCScriptFunction_C1605F NPCScript_44F                      ;ケチイベント進行度が2でないなら飛ぶ
 	spawn_npc_at Char_69 DirDown 35 21
 	spawn_npc_at Char_6A DirDownRight 34 21
-	spawn_npc_at Char_SHOPKEEPER_2 DirRight 34 22
+	spawn_npc_at Char_Shopkeeper2 DirRight 34 22
 	spawn_npc_at Char_6C DirUpRight 34 23
-	spawn_npc_at Char_KECHI DirLeft 35 22
+	spawn_npc_at Char_Kechi DirLeft 35 22
 NPCScript_44F:
 	call_jumpcarry NPCScriptFunction_C16181 NPCScript_45D                      ;ナオキイベント1以上共通判定(崖っぷち出現判定?)
 	spawn_item $A0 12 20
-	spawn_npc_at Char_TOSHIO DirDown 14 9
+	spawn_npc_at Char_Toshio DirDown 14 9
 NPCScript_45D:
 	call_jumpcarry NPCScriptFunction_C161BC NPCScript_48D                      ;ナオキイベント進行度が1でないなら飛ぶ(他にも判定あり)
 	spawn_item $A1 12 20
 	spawn_item $A2 55 5
-	spawn_npc_at Char_TOME DirDown 24 7
-	spawn_npc_at Char_SUZUKO DirDown 25 7
-	spawn_npc_at Char_TOSHIO DirDown 24 6
+	spawn_npc_at Char_Tome DirDown 24 7
+	spawn_npc_at Char_Suzuko DirDown 25 7
+	spawn_npc_at Char_Toshio DirDown 24 6
 	spawn_npc_at Char_58 DirDown 16 6
 	spawn_npc_at Char_62 DirUpLeft 14 21
 	spawn_npc_at Char_40 DirLeft 15 21
@@ -343,9 +343,9 @@ NPCScript_48D:
 	call_jumpcarry NPCScriptFunction_C16336 NPCScript_4B8                      ;ナオキイベント進行度が2でないなら飛ぶ
 	spawn_item $A1 12 20
 	spawn_item $A2 55 5
-	spawn_npc_at Char_TOME DirDownLeft 25 8
-	spawn_npc_at Char_SUZUKO DirDownRight 24 8
-	spawn_npc_at Char_TOSHIO DirUpRight 24 9
+	spawn_npc_at Char_Tome DirDownLeft 25 8
+	spawn_npc_at Char_Suzuko DirDownRight 24 8
+	spawn_npc_at Char_Toshio DirUpRight 24 9
 	spawn_npc_at Char_62 DirUp 16 10
 	spawn_npc_at Char_40 DirDown 16 8
 	spawn_npc_at Char_A5 DirDown 17 8
@@ -355,10 +355,10 @@ NPCScript_4B8:
 	call NPCScriptFunction_C16887                                     ;イベント進行度[0x93] を9に設定
 	spawn_item $A1 12 20
 	spawn_item $A2 55 5
-	spawn_npc_at Char_TOME DirDown 56 3
-	spawn_npc_at Char_SUZUKO DirDown 56 3
-	spawn_npc_at Char_TOSHIO DirDown 56 3
-	spawn_npc_at Char_NAOKI DirLeft 7 22
+	spawn_npc_at Char_Tome DirDown 56 3
+	spawn_npc_at Char_Suzuko DirDown 56 3
+	spawn_npc_at Char_Toshio DirDown 56 3
+	spawn_npc_at Char_Naoki DirLeft 7 22
 	spawn_npc_at Char_63 DirLeft 17 5
 	spawn_npc_at Char_58 DirRight 16 5
 	spawn_npc_at Char_62 DirUp 16 10
@@ -371,10 +371,10 @@ NPCScript_4FB:
 	spawn_item $A1 12 20
 	spawn_item $A2 55 5
 	spawn_npc_at Char_58 DirDown 16 6
-	spawn_npc_at Char_TOME DirRight 25 6
-	spawn_npc_at Char_SUZUKO DirDownRight 24 10
-	spawn_npc_at Char_TOSHIO DirDown 28 7
-	spawn_npc_at Char_NAOKI DirDown 30 7
+	spawn_npc_at Char_Tome DirRight 25 6
+	spawn_npc_at Char_Suzuko DirDownRight 24 10
+	spawn_npc_at Char_Toshio DirDown 28 7
+	spawn_npc_at Char_Naoki DirDown 30 7
 	spawn_npc_at Char_BA DirDown 29 12
 	spawn_npc_at Char_BB DirUp 29 14
 	spawn_npc_at Char_62 DirUp 16 10
@@ -386,9 +386,9 @@ NPCScript_53D:
 	spawn_item $A2 55 5
 	call NPCScriptFunction_C16321                                     ;峠屋の入り口を壁に設定
 	call NPCScriptFunction_C16898                                     ;イベント進行度[0x93]を0xAに設定
-	spawn_npc_at Char_TOME DirDown 25 6
-	spawn_npc_at Char_SUZUKO DirDown 28 7
-	spawn_npc_at Char_TOSHIO DirDown 29 7
+	spawn_npc_at Char_Tome DirDown 25 6
+	spawn_npc_at Char_Suzuko DirDown 28 7
+	spawn_npc_at Char_Toshio DirDown 29 7
 	spawn_npc_at Char_B0 DirRight 29 10
 	spawn_npc_at Char_B1 DirRight 29 11
 	spawn_npc_at Char_B2 DirLeft 31 11
@@ -400,9 +400,9 @@ NPCScript_57D:
 	spawn_item $A3 12 20
 	spawn_item $A2 55 5
 	call NPCScriptFunction_C16321                                     ;峠屋の入り口を壁に設定
-	spawn_npc_at Char_TOME DirRight 25 6
-	spawn_npc_at Char_SUZUKO DirDownRight 24 10
-	spawn_npc_at Char_TOSHIO DirDown 29 7
+	spawn_npc_at Char_Tome DirRight 25 6
+	spawn_npc_at Char_Suzuko DirDownRight 24 10
+	spawn_npc_at Char_Toshio DirDown 29 7
 	spawn_npc_at Char_62 DirRight 29 10
 	spawn_npc_at Char_40 DirRight 29 11
 	spawn_npc_at Char_A5 DirLeft 31 10
@@ -412,19 +412,19 @@ NPCScript_5AB:
 	call_jumpcarry NPCScriptFunction_C15E21 NPCScript_5BF                      ;TMを打開したことがあるなら飛ぶ
 	call_jumpcarry NPCScriptFunction_C165F9 NPCScript_5C4                      ;イベント進行度[0x1C] が0でないなら飛ぶ
 NPCScript_5BF:
-	spawn_npc_at Char_WANDERER_1 DirRight 58 13
+	spawn_npc_at Char_Wanderer1 DirRight 58 13
 NPCScript_5C4:
 	spawn_npc_at Char_7B DirDown 47 33
 	call_jumpcarry NPCScriptFunction_C16623 NPCScript_5F0                      ;1/8の確率で飛ぶ
 	call_jumpcarry NPCScriptFunction_C16649 NPCScript_5DB                        ;2/3の確率で飛ぶ
-	spawn_npc_at Char_TSUMULI DirRight 54 28
+	spawn_npc_at Char_Tsumuli DirRight 54 28
 	jump NPCScript_5ED
 NPCScript_5DB:
 	call_jumpcarry NPCScriptFunction_C1665C NPCScript_5E8                        ;1/2の確率で飛ぶ
-	spawn_npc_at Char_OBITO DirRight 54 28
+	spawn_npc_at Char_Obito DirRight 54 28
 	jump NPCScript_5ED                                      ;else
 NPCScript_5E8:
-	spawn_npc_at Char_KAZULA DirRight 54 28
+	spawn_npc_at Char_Kazula DirRight 54 28
 NPCScript_5ED:
 	jump NPCScript_5F9                                     ;else
 NPCScript_5F0:
@@ -437,19 +437,19 @@ NPCScript_5F9:
 NPCScript_603:
 	call_jumpcarry NPCScriptFunction_C15BD3 NPCScript_6B5              ;奇岩谷でないなら飛ぶ
 	call_jumpcarry NPCScriptFunction_C16386 NPCScript_617              ;スラライベント進行度が0でないなら飛ぶ
-	spawn_npc_at Char_LARA DirDown 19 25
-	spawn_npc_at Char_BOBOLO DirDown 20 25
+	spawn_npc_at Char_Lara DirDown 19 25
+	spawn_npc_at Char_Bobolo DirDown 20 25
 NPCScript_617:
 	call_jumpcarry NPCScriptFunction_C1639B NPCScript_62E              ;スラライベント進行度が1でないなら飛ぶ
 	call NPCScriptFunction_C16498                                    ;スラライベント進行度を2に設定しシレンの行動をストップ
-	spawn_npc_at Char_SURALA DirRight 5 24
-	spawn_npc_at Char_LARA DirDown 18 25
-	spawn_npc_at Char_BOBOLO DirDown 19 25
+	spawn_npc_at Char_Surala DirRight 5 24
+	spawn_npc_at Char_Lara DirDown 18 25
+	spawn_npc_at Char_Bobolo DirDown 19 25
 NPCScript_62E:
 	call_jumpcarry NPCScriptFunction_C163B2 NPCScript_642             ;スラライベント進行度が3でないなら飛ぶ
-	spawn_npc_at Char_SURALA DirDown 17 25
-	spawn_npc_at Char_LARA DirDown 18 25
-	spawn_npc_at Char_BOBOLO DirDown 19 25
+	spawn_npc_at Char_Surala DirDown 17 25
+	spawn_npc_at Char_Lara DirDown 18 25
+	spawn_npc_at Char_Bobolo DirDown 19 25
 NPCScript_642:
 	call_jumpcarry NPCScriptFunction_C1666F NPCScript_654             ;「冒険回数が32以上かつ1/4の確率」でないなら飛ぶ
 	spawn_npc_at Char_71 DirDown 47 11
@@ -472,7 +472,7 @@ NPCScript_684:
 	spawn_npc_at Char_95 DirDown 26 10
 	spawn_npc_at Char_96 DirRight 28 30
 	call_jumpcarry NPCScriptFunction_C15E21 NPCScript_69B                      ;TMを打開したことがあるなら飛ぶ
-	spawn_npc_at Char_90 DirDown 57 35
+	spawn_npc_at Char_Heji1 DirDown 57 35
 	jump NPCScript_6A0                                    ;else
 NPCScript_69B:
 	spawn_npc_at Char_5A DirDown 57 35
@@ -490,7 +490,7 @@ NPCScript_6B5:
 ; 17Fでない
 NPCScript_6BD:
 	call_jumpcarry NPCScriptFunction_C15D62 NPCScript_714             ;地下水脈の村でないなら飛ぶ
-	spawn_npc_at Char_SHOPKEEPER_1 DirLeft 56 7
+	spawn_npc_at Char_Shopkeeper1 DirLeft 56 7
 	spawn_npc_at Char_6D DirRight 51 34
 	call NPCScriptFunction_C16B2B                                   ;店の商品を設定
 	call NPCScriptFunction_C14479                                   ;イベント進行度[0x15]が4以下なら5に設定
@@ -565,25 +565,25 @@ NPCScript_7A6:
 	exit
 NPCScript_7AC:
 	call_jumpcarry NPCScriptFunction_C15B07 NPCScript_7B3                      ;お竜出現判定
-	spawn_npc Char_ORYU
+	spawn_npc Char_Oryu
 NPCScript_7B3:
 	call_jumpcarry NPCScriptFunction_C15FE0 NPCScript_7BA
-	spawn_npc Char_KECHI
+	spawn_npc Char_Kechi
 NPCScript_7BA:
 	call_jumpcarry NPCScriptFunction_C160F6 NPCScript_7C1
 	spawn_npc Char_Pekeji
 NPCScript_7C1:
 	call_jumpcarry NPCScriptFunction_C15E90 NPCScript_7C8
-	spawn_npc Char_STUDENT_3
+	spawn_npc Char_Student3
 NPCScript_7C8:
 	call_jumpcarry NPCScriptFunction_C16144 NPCScript_7CF
-	spawn_npc Char_NAOKI
+	spawn_npc Char_Naoki
 NPCScript_7CF:
 	call_jumpcarry NPCScriptFunction_C161EB NPCScript_7D6
-	spawn_npc Char_NAOKI
+	spawn_npc Char_Naoki
 NPCScript_7D6:
 	call_jumpcarry NPCScriptFunction_C1634D NPCScript_7DD
-	spawn_npc Char_SURALA
+	spawn_npc Char_Surala
 NPCScript_7DD:
 	call_jumpcarry NPCScriptFunction_C166A1 NPCScript_7E5                 ;「14階まで・町でない・1/8」でないなら飛ぶ
 	call_spawn_npc NPCScriptFunction_C168C7                         ;徘徊NPCを配置(犬・ソダテのカンジなど)
@@ -592,10 +592,10 @@ NPCScript_7E5:
 	call_spawn_npc NPCScriptFunction_C164CA                         ;飛脚を配置
 NPCScript_7ED:
 	call_jumpcarry NPCScriptFunction_C1651A NPCScript_7F4
-	spawn_npc Char_KAMAHIGE
+	spawn_npc Char_Kamahige
 NPCScript_7F4:
 	call_jumpcarry NPCScriptFunction_C1653B NPCScript_7FB
-	spawn_npc Char_GIRL_2
+	spawn_npc Char_Girl2
 NPCScript_7FB:
 	call_jumpcarry NPCScriptFunction_C1655C .end
 	spawn_npc Char_5D

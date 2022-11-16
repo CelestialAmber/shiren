@@ -131,13 +131,13 @@ func_C200E1:
 	sta.w $8745,y                        ;C20163|994587  |7E8745;  
 	sta.w $8781,y                        ;C20166|998187  |7E8781;  
 	sta.w $8795,y                        ;C20169|999587  |7E8795;  
-	jsl.l func_C3F65F                    ;C2016C|225FF6C3|C3F65F;  
+	jsl.l Random                    ;C2016C|225FF6C3|C3F65F;  
 	lda.b w0000                           ;C20170|A500    |000000;  
 	and.b #$01                           ;C20172|2901    |      ;  
 	sta.w $8731,y                        ;C20174|993187  |7E8731;  
 	lda.b #$FF                           ;C20177|A9FF    |      ;  
 	sta.w $8759,y                        ;C20179|995987  |7E8759;  
-	jsl.l func_C3F65F                    ;C2017C|225FF6C3|C3F65F;  
+	jsl.l Random                    ;C2017C|225FF6C3|C3F65F;  
 	lda.b w0000                           ;C20180|A500    |000000;  
 	and.b #$3F                           ;C20182|293F    |      ;  
 	cmp.l Level1EnemyItemDropRateStatTable,x                 ;C20184|DFE296C2|C296E2;  
@@ -496,7 +496,7 @@ DATA8_C20277:
 	sep #$20                             ;C20567|E220    |      ;  
 	lda.b #$01                           ;C20569|A901    |      ;  
 	sta.w $8781,y                        ;C2056B|998187  |7E8781;  
-	jsl.l func_C3F65F                    ;C2056E|225FF6C3|C3F65F;  
+	jsl.l Random                    ;C2056E|225FF6C3|C3F65F;  
 	lda.b w0000                           ;C20572|A500    |000000;  
 	and.b #$3F                           ;C20574|293F    |      ;  
 	cmp.b #$08                           ;C20576|C908    |      ;  
@@ -524,7 +524,7 @@ DATA8_C20277:
 	lda.w $8619,y                        ;C205CC|B91986  |7E8619;  
 	cmp.b #$03                           ;C205CF|C903    |      ;  
 	bcs @lbl_C20603                      ;C205D1|B030    |C20603;  
-	jsl.l func_C3F65F                    ;C205D3|225FF6C3|C3F65F;  
+	jsl.l Random                    ;C205D3|225FF6C3|C3F65F;  
 	lda.b w0000                           ;C205D7|A500    |000000;  
 	lsr a                                ;C205D9|4A      |      ;  
 	lda.w $8619,y                        ;C205DA|B91986  |7E8619;  
@@ -975,7 +975,7 @@ func_C20B4B:
 	bne @lbl_C20B74                      ;C20B79|D0F9    |C20B74;  
 	dey                                  ;C20B7B|88      |      ;  
 	bne @lbl_C20B74                      ;C20B7C|D0F6    |C20B74;  
-	jsl.l func_C3F65F                    ;C20B7E|225FF6C3|C3F65F;  
+	jsl.l Random                    ;C20B7E|225FF6C3|C3F65F;  
 	lda.b w0000                           ;C20B82|A500    |000000;  
 @lbl_C20B84:
 	dex                                  ;C20B84|CA      |      ;  
@@ -1020,7 +1020,7 @@ func_C20BE7:
 	pha                                  ;C20BF9|48      |      ;  
 	lda.b w0001                            ;C20BFA|A501    |000001;  
 	pha                                  ;C20BFC|48      |      ;  
-	jsl.l func_C3F65F                    ;C20BFD|225FF6C3|C3F65F;  
+	jsl.l Random                    ;C20BFD|225FF6C3|C3F65F;  
 	lda.b w0000                           ;C20C01|A500    |000000;  
 	and.b #$07                           ;C20C03|2907    |      ;  
 	sta.b w0002                   ;C20C05|8502    |000002;  
@@ -2122,7 +2122,7 @@ func_C2159E:
 	lda.l $7E899B                        ;C219D2|AF9B897E|7E899B;  
 	bne @lbl_C219E4                      ;C219D6|D00C    |C219E4;  
 	ldx.b w0000                            ;C219D8|A600    |000000;  
-	jsl.l func_C3F65F                    ;C219DA|225FF6C3|C3F65F;  
+	jsl.l Random                    ;C219DA|225FF6C3|C3F65F;  
 	lda.b w0000                           ;C219DE|A500    |000000;  
 	and.b #$01                           ;C219E0|2901    |      ;  
 	beq @lbl_C219EA                   ;C219E2|F006    |C219EA;  
@@ -2155,7 +2155,7 @@ func_C2159E:
 	php                                  ;C21A84|08      |      ;  
 	sep #$30                             ;C21A85|E230    |      ;  
 	ldx.b w0000                            ;C21A87|A600    |000000;  
-	jsl.l func_C3F65F                    ;C21A89|225FF6C3|C3F65F;  
+	jsl.l Random                    ;C21A89|225FF6C3|C3F65F;  
 	lda.b w0000                           ;C21A8D|A500    |000000;  
 	and.b #$01                           ;C21A8F|2901    |      ;  
 	beq @lbl_C21A99                      ;C21A91|F006    |C21A99;  
@@ -2193,7 +2193,7 @@ func_C2159E:
 	lda.b w0000                           ;C21AD8|A500    |000000;  
 	sta.b w0001,s                          ;C21ADA|8301    |000001;  
 @lbl_C21ADC:
-	jsl.l func_C3F65F                    ;C21ADC|225FF6C3|C3F65F;  
+	jsl.l Random                    ;C21ADC|225FF6C3|C3F65F;  
 	sep #$20                             ;C21AE0|E220    |      ;  
 	lda.b w0003,s                          ;C21AE2|A303    |000003;  
 	tax                                  ;C21AE4|AA      |      ;  
@@ -2380,7 +2380,7 @@ DATA8_C21B97:
 	lda.l $7E894F                        ;C21D06|AF4F897E|7E894F;  
 	bmi @lbl_C21D16                      ;C21D0A|300A    |C21D16;  
 	ldx.b w0000                            ;C21D0C|A600    |000000;  
-	jsl.l func_C3F65F                    ;C21D0E|225FF6C3|C3F65F;  
+	jsl.l Random                    ;C21D0E|225FF6C3|C3F65F;  
 	lda.b w0000                           ;C21D12|A500    |000000;  
 	bpl @lbl_C21D1C                      ;C21D14|1006    |C21D1C;  
 @lbl_C21D16:
@@ -2732,7 +2732,7 @@ DATA8_C21B97:
 	sep #$30                             ;C22402|E230    |      ;  
 	ldx.b w0000                            ;C22404|A600    |000000;  
 	ldy.b w0001                            ;C22406|A401    |000001;  
-	jsl.l func_C3F65F                    ;C22408|225FF6C3|C3F65F;  
+	jsl.l Random                    ;C22408|225FF6C3|C3F65F;  
 	lda.b w0000                           ;C2240C|A500    |000000;  
 	cmp.b #$80                           ;C2240E|C980    |      ;  
 	bcc @lbl_C22418                      ;C22410|9006    |C22418;  
@@ -2960,7 +2960,7 @@ func_C2287C:
 @lbl_C228AE:
 	lda.b w0002                   ;C228AE|A502    |000002;  
 	pha                                  ;C228B0|48      |      ;  
-	jsl.l func_C3F65F                    ;C228B1|225FF6C3|C3F65F;  
+	jsl.l Random                    ;C228B1|225FF6C3|C3F65F;  
 	pla                                  ;C228B5|68      |      ;  
 	sta.b w0001                            ;C228B6|8501    |000001;  
 	lda.b w0000                           ;C228B8|A500    |000000;  
@@ -3003,7 +3003,7 @@ func_C228EF:
 	ldx.b w0001                            ;C228F8|A601    |000001;  
 	lda.b w0002                   ;C228FA|A502    |000002;  
 	pha                                  ;C228FC|48      |      ;  
-	jsl.l func_C3F65F                    ;C228FD|225FF6C3|C3F65F;  
+	jsl.l Random                    ;C228FD|225FF6C3|C3F65F;  
 	lda.b w0000                           ;C22901|A500    |000000;  
 	and.b #$1F                           ;C22903|291F    |      ;  
 	clc                                  ;C22905|18      |      ;  
@@ -6592,7 +6592,7 @@ func_C2498C:
 @lbl_C24B0B:
 	ldx.w $86CC                          ;C24B0B|AECC86  |7E86CC;  
 	beq @lbl_C24B18                      ;C24B0E|F008    |C24B18;  
-	jsl.l func_C3F65F                    ;C24B10|225FF6C3|C3F65F;  
+	jsl.l Random                    ;C24B10|225FF6C3|C3F65F;  
 	lda.b w0000                           ;C24B14|A500    |000000;  
 	and.b #$07                           ;C24B16|2907    |      ;  
 @lbl_C24B18:
@@ -8376,7 +8376,7 @@ func_C26087:
 	lda.l $7E85DD,x                      ;C260F3|BFDD857E|7E85DD;  
 	and.b #$FE                           ;C260F7|29FE    |      ;  
 	sta.l $7E85DD,x                      ;C260F9|9FDD857E|7E85DD;  
-	jsl.l func_C3F65F                    ;C260FD|225FF6C3|C3F65F;  
+	jsl.l Random                    ;C260FD|225FF6C3|C3F65F;  
 	lda.b w0000                           ;C26101|A500    |000000;  
 	cmp.b #$10                           ;C26103|C910    |      ;  
 	bcc @lbl_C26145                      ;C26105|903E    |C26145;  
@@ -8413,7 +8413,7 @@ func_C26087:
 	rtl                                  ;C26144|6B      |      ;  
 @lbl_C26145:
 	sep #$30                             ;C26145|E230    |      ;  
-	jsl.l func_C3F65F                    ;C26147|225FF6C3|C3F65F;  
+	jsl.l Random                    ;C26147|225FF6C3|C3F65F;  
 	lda.b w0000                           ;C2614B|A500    |000000;  
 	and.b #$04                           ;C2614D|2904    |      ;  
 	eor.l $7E85DD,x                      ;C2614F|5FDD857E|7E85DD;  
@@ -8529,7 +8529,7 @@ func_C2628F:
 	php                                  ;C2628F|08      |      ;  
 	sep #$30                             ;C26290|E230    |      ;  
 	ldx.b w0000                            ;C26292|A600    |000000;  
-	jsl.l func_C3F65F                    ;C26294|225FF6C3|C3F65F;  
+	jsl.l Random                    ;C26294|225FF6C3|C3F65F;  
 	lda.b w0000                           ;C26298|A500    |000000;  
 	and.b #$07                           ;C2629A|2907    |      ;  
 	sta.l $7E85DD,x                      ;C2629C|9FDD857E|7E85DD;  
@@ -8562,7 +8562,7 @@ func_C262D5:
 	php                                  ;C262D5|08      |      ;  
 	sep #$30                             ;C262D6|E230    |      ;  
 	ldx.b w0000                            ;C262D8|A600    |000000;  
-	jsl.l func_C3F65F                    ;C262DA|225FF6C3|C3F65F;  
+	jsl.l Random                    ;C262DA|225FF6C3|C3F65F;  
 	lda.b w0000                           ;C262DE|A500    |000000;  
 	bmi @lbl_C262E8                      ;C262E0|3006    |C262E8;  
 	lda.b #$01                           ;C262E2|A901    |      ;  
@@ -8570,7 +8570,7 @@ func_C262D5:
 	plp                                  ;C262E6|28      |      ;  
 	rtl                                  ;C262E7|6B      |      ;  
 @lbl_C262E8:
-	jsl.l func_C3F65F                    ;C262E8|225FF6C3|C3F65F;  
+	jsl.l Random                    ;C262E8|225FF6C3|C3F65F;  
 	lda.b w0000                           ;C262EC|A500    |000000;  
 	and.b #$07                           ;C262EE|2907    |      ;  
 	sta.l $7E85DD,x                      ;C262F0|9FDD857E|7E85DD;  
@@ -8603,7 +8603,7 @@ func_C262D5:
 	php                                  ;C26337|08      |      ;  
 	sep #$30                             ;C26338|E230    |      ;  
 	ldx.b w0000                            ;C2633A|A600    |000000;  
-	jsl.l func_C3F65F                    ;C2633C|225FF6C3|C3F65F;  
+	jsl.l Random                    ;C2633C|225FF6C3|C3F65F;  
 	lda.b w0000                           ;C26340|A500    |000000;  
 	and.b #$07                           ;C26342|2907    |      ;  
 	beq @lbl_C2634C                      ;C26344|F006    |C2634C;  
@@ -8650,10 +8650,10 @@ func_C262D5:
 	.db $01,$9F,$DD,$85,$7E,$20,$98,$64   ;C26417|        |00009F;  
 	.db $B0,$24                           ;C2641F|        |C26445;  
 @lbl_C26421:
-	jsl.l func_C3F65F                    ;C26421|225FF6C3|C3F65F;  
+	jsl.l Random                    ;C26421|225FF6C3|C3F65F;  
 	lda.b w0000                           ;C26425|A500    |000000;  
 	bpl @lbl_C26437                      ;C26427|100E    |C26437;  
-	jsl.l func_C3F65F                    ;C26429|225FF6C3|C3F65F;  
+	jsl.l Random                    ;C26429|225FF6C3|C3F65F;  
 	lda.b w0000                           ;C2642D|A500    |000000;  
 	and.b #$07                           ;C2642F|2907    |      ;  
 	sta.l $7E85DD,x                      ;C26431|9FDD857E|7E85DD;  
@@ -9104,7 +9104,7 @@ func_C2687B:
 	.db $D0,$08                           ;C269EC|        |C269F6;  
 
 func_C269EE:
-	jsl.l func_C3F65F                    ;C269EE|225FF6C3|C3F65F;  
+	jsl.l Random                    ;C269EE|225FF6C3|C3F65F;  
 	lda.b #$7F                           ;C269F2|A97F    |      ;  
 	bra @lbl_C26A47                      ;C269F4|8051    |C26A47;  
 	.db $3A,$D0,$09,$22,$5F,$F6,$C3,$A9   ;C269F6
@@ -9122,7 +9122,7 @@ func_C269EE:
 	php                                  ;C26A3C|08      |      ;  
 	sep #$30                             ;C26A3D|E230    |      ;  
 	ldx.b w0000                            ;C26A3F|A600    |000000;  
-	jsl.l func_C3F65F                    ;C26A41|225FF6C3|C3F65F;  
+	jsl.l Random                    ;C26A41|225FF6C3|C3F65F;  
 	lda.b #$3F                           ;C26A45|A93F    |      ;  
 @lbl_C26A47:
 	cmp.b w0000                            ;C26A47|C500    |000000;  
@@ -9250,7 +9250,7 @@ func_C26A49:
 @lbl_C26BC7:
 	.db $80,$14                           ;C26BC7|        |C26BDD;  
 @lbl_C26BC9:
-	jsl.l func_C3F65F                    ;C26BC9|225FF6C3|C3F65F;  
+	jsl.l Random                    ;C26BC9|225FF6C3|C3F65F;  
 	lda.b w0000                           ;C26BCD|A500    |000000;  
 	cmp.b #$80                           ;C26BCF|C980    |      ;  
 	bcs @lbl_C26BDD                      ;C26BD1|B00A    |C26BDD;  
@@ -9343,7 +9343,7 @@ func_C26A49:
 	php                                  ;C26D42|08      |      ;  
 	sep #$30                             ;C26D43|E230    |      ;  
 	ldx.b w0000                            ;C26D45|A600    |000000;  
-	jsl.l func_C3F65F                    ;C26D47|225FF6C3|C3F65F;  
+	jsl.l Random                    ;C26D47|225FF6C3|C3F65F;  
 	lda.b w0000                           ;C26D4B|A500    |000000;  
 	bit.b #$07                           ;C26D4D|8907    |      ;  
 	bne @lbl_C26D8E                      ;C26D4F|D03D    |C26D8E;  
@@ -10775,7 +10775,7 @@ func_C27CA8:
 	lda.b #$FF                           ;C27D02|A9FF    |      ;  
 	sta.l $7E87D1,x                      ;C27D04|9FD1877E|7E87D1;  
 	sta.l $7E87E5,x                      ;C27D08|9FE5877E|7E87E5;  
-	jsl.l func_C3F65F                    ;C27D0C|225FF6C3|C3F65F;  
+	jsl.l Random                    ;C27D0C|225FF6C3|C3F65F;  
 	lda.b w0000                           ;C27D10|A500    |000000;  
 	and.b #$07                           ;C27D12|2907    |      ;  
 	sta.l $7E85DD,x                      ;C27D14|9FDD857E|7E85DD;  
@@ -10839,7 +10839,7 @@ func_C27DE4:
 	beq @lbl_C27E26                      ;C27E05|F01F    |C27E26;  
 	dec a                                ;C27E07|3A      |      ;  
 	bne @lbl_C27E12                      ;C27E08|D008    |C27E12;  
-	jsl.l func_C3F65F                    ;C27E0A|225FF6C3|C3F65F;  
+	jsl.l Random                    ;C27E0A|225FF6C3|C3F65F;  
 	lda.b w0000                           ;C27E0E|A500    |000000;  
 	bpl @lbl_C27E1C                      ;C27E10|100A    |C27E1C;  
 @lbl_C27E12:
@@ -12324,7 +12324,7 @@ func_C290BC:
 	beq @lbl_C291D7                      ;C29173|F062    |C291D7;  
 	lda.w #$067D                         ;C29175|A97D06  |      ;  
 	sta.b w0000                           ;C29178|8500    |000000;  
-	jsl.l func_C62B7E                    ;C2917A|227E2BC6|C62B7E;  
+	jsl.l DisplayMessage1                    ;C2917A|227E2BC6|C62B7E;  
 	ldx.b w0000                            ;C2917E|A600    |000000;  
 	bne @lbl_C291A9                   ;C29180|D027    |C291A9;  
 	lda.b w0001,s                          ;C29182|A301    |000001;  
@@ -12384,7 +12384,7 @@ func_C290BC:
 	sta.b w0002                   ;C291EF|8502    |000002;  
 	ora.b w0004                   ;C291F1|0504    |000004;  
 	beq @lbl_C291E6                      ;C291F3|F0F1    |C291E6;  
-	jsl.l func_C62B7E                    ;C291F5|227E2BC6|C62B7E;  
+	jsl.l DisplayMessage1                    ;C291F5|227E2BC6|C62B7E;  
 	ldx.b w0000                            ;C291F9|A600    |000000;  
 	bne @lbl_C29234                   ;C291FB|D037    |C29234;  
 	lda.l $7E8991                        ;C291FD|AF91897E|7E8991;  
@@ -14020,10 +14020,10 @@ UNREACH_C2CBDA:
 @lbl_C2CC76:
 	.db $A2,$00                           ;C2CC76
 @lbl_C2CC78:
-	jsl.l func_C3F65F                    ;C2CC78|225FF6C3|C3F65F;  
+	jsl.l Random                    ;C2CC78|225FF6C3|C3F65F;  
 	cpx.b w0000                            ;C2CC7C|E400    |000000;  
 	bcc @lbl_C2CCA3                      ;C2CC7E|9023    |C2CCA3;  
-	jsl.l func_C3F65F                    ;C2CC80|225FF6C3|C3F65F;  
+	jsl.l Random                    ;C2CC80|225FF6C3|C3F65F;  
 	lda.b w0000                           ;C2CC84|A500    |000000;  
 	and.b #$03                           ;C2CC86|2903    |      ;  
 	asl a                                ;C2CC88|0A      |      ;  
@@ -14195,7 +14195,7 @@ func_C2CE2C:
 	cmp.b #$0F                           ;C2CE6D|C90F    |      ;  
 	bcs @lbl_C2CE39                      ;C2CE6F|B0C8    |C2CE39;  
 	sta.b w0002                   ;C2CE71|8502    |000002;  
-	jsl.l func_C3F65F                    ;C2CE73|225FF6C3|C3F65F;  
+	jsl.l Random                    ;C2CE73|225FF6C3|C3F65F;  
 	lda.b w0000                           ;C2CE77|A500    |000000;  
 	and.b #$03                           ;C2CE79|2903    |      ;  
 	tax                                  ;C2CE7B|AA      |      ;  
@@ -14228,7 +14228,7 @@ func_C2CE2C:
 func_C2CEB0:
 	php                                  ;C2CEB0|08      |      ;  
 	sep #$30                             ;C2CEB1|E230    |      ;  
-	jsl.l func_C3F65F                    ;C2CEB3|225FF6C3|C3F65F;  
+	jsl.l Random                    ;C2CEB3|225FF6C3|C3F65F;  
 	lda.b w0000                           ;C2CEB7|A500    |000000;  
 	and.b #$03                           ;C2CEB9|2903    |      ;  
 	tax                                  ;C2CEBB|AA      |      ;  
@@ -14270,7 +14270,7 @@ func_C2CEF5:
 	php                                  ;C2CEF5|08      |      ;  
 	sep #$30                             ;C2CEF6|E230    |      ;  
 	stx.w $89BD                          ;C2CEF8|8EBD89  |7E89BD;  
-	jsl.l func_C3F65F                    ;C2CEFB|225FF6C3|C3F65F;  
+	jsl.l Random                    ;C2CEFB|225FF6C3|C3F65F;  
 	lda.b w0000                           ;C2CEFF|A500    |000000;  
 	and.b #$01                           ;C2CF01|2901    |      ;  
 	beq @lbl_C2CF0F                      ;C2CF03|F00A    |C2CF0F;  
@@ -14280,7 +14280,7 @@ func_C2CEF5:
 	lda.b w0000                           ;C2CF0B|A500    |000000;  
 	beq @lbl_C2CF53                      ;C2CF0D|F044    |C2CF53;  
 @lbl_C2CF0F:
-	jsl.l func_C3F65F                    ;C2CF0F|225FF6C3|C3F65F;  
+	jsl.l Random                    ;C2CF0F|225FF6C3|C3F65F;  
 	lda.b w0000                           ;C2CF13|A500    |000000;  
 	and.b #$02                           ;C2CF15|2902    |      ;  
 	eor.b #$03                           ;C2CF17|4903    |      ;  
@@ -15541,7 +15541,7 @@ func_C2D8F0:
 @lbl_C2D916:
 	ldx.b w0000                            ;C2D916|A600    |000000;  
 	ldy.b w0001                            ;C2D918|A401    |000001;  
-	jsl.l func_C3F65F                    ;C2D91A|225FF6C3|C3F65F;  
+	jsl.l Random                    ;C2D91A|225FF6C3|C3F65F;  
 	lda.b w0000                           ;C2D91E|A500    |000000;  
 	and.b #$01                           ;C2D920|2901    |      ;  
 	beq @lbl_C2D928                      ;C2D922|F004    |C2D928;  

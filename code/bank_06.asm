@@ -2662,24 +2662,24 @@ func_C62456:
 ;prints out the message corresponding to the given id
 ;w0000 (16 bit): message id
 DisplayMessage:
-	php                                  ;C62525|08      |      ;  
-	sep #$20                             ;C62526|E220    |      ;  
-	lda.l $7ED605                        ;C62528|AF05D67E|7ED605;  
-	bne @lbl_C62538                      ;C6252C|D00A    |C62538;  
-	lda.l $7ED601                        ;C6252E|AF01D67E|7ED601;  
-	beq @lbl_C62538                      ;C62532|F004    |C62538;  
-	jsl.l func_C06DFE                    ;C62534|22FE6DC0|C06DFE;  
+	php
+	sep #$20
+	lda.l $7ED605
+	bne @lbl_C62538
+	lda.l $7ED601
+	beq @lbl_C62538  
+	jsl.l func_C06DFE
 @lbl_C62538:
-	plp                                  ;C62538|28      |      ;  
-	rtl                                  ;C62539|6B      |      ;  
+	plp
+	rtl
 
 func_C6253A:
-	php                                  ;C6253A|08      |      ;  
-	sep #$20                             ;C6253B|E220    |      ;  
-	lda.b #$00                           ;C6253D|A900    |      ;  
-	sta.l $7ED601                        ;C6253F|8F01D67E|7ED601;  
-	plp                                  ;C62543|28      |      ;  
-	rtl                                  ;C62544|6B      |      ;  
+	php
+	sep #$20
+	lda.b #$00
+	sta.l $7ED601
+	plp
+	rtl
 
 func_C62545:
 	php                                  ;C62545|08      |      ;  
@@ -2905,6 +2905,7 @@ func_C62766:
 	plp                                  ;C6276F|28      |      ;  
 	rtl                                  ;C62770|6B      |      ;  
 
+;result is stored in w0000
 GetCurrentFloor:
 	php                                  ;C62771|08      |      ;  
 	sep #$20                             ;C62772|E220    |      ;  
@@ -3211,7 +3212,7 @@ func_C62B69:
 	plp                                  ;C62B7C|28      |      ;  
 	rtl                                  ;C62B7D|6B      |      ;  
 
-func_C62B7E:
+DisplayMessage1:
 	php                                  ;C62B7E|08      |      ;  
 	sep #$20                             ;C62B7F|E220    |      ;  
 	rep #$10                             ;C62B81|C210    |      ;  

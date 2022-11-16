@@ -7094,7 +7094,7 @@ DATA8_C5B60D:
 func_C5CBED:
 	php                                  ;C5CBED|08      |      ;  
 	rep #$20                             ;C5CBEE|C220    |      ;  
-	stz.b $ED                            ;C5CBF0|64ED    |0000ED;  
+	stz.b w00ed                            ;C5CBF0|64ED    |0000ED;  
 	lda.w #$0003                         ;C5CBF2|A90300  |      ;  
 	sta.b w0000                           ;C5CBF5|8500    |000000;  
 	jsl.l func_C5E62E                    ;C5CBF7|222EE6C5|C5E62E;  
@@ -8064,7 +8064,7 @@ func_C5DB49:
 	stz.b w0006                            ;C5DB55|6406    |000006;  
 	lda.b w0000                           ;C5DB57|A500    |000000;  
 	sta.b w0004                   ;C5DB59|8504    |000004;  
-	sta.b $E5                            ;C5DB5B|85E5    |0000E5;  
+	sta.b w00e5                            ;C5DB5B|85E5    |0000E5;  
 	cmp.w #$0080                         ;C5DB5D|C98000  |      ;  
 	bcs @lbl_C5DB68                      ;C5DB60|B006    |C5DB68;  
 	lda.w #$7F80                         ;C5DB62|A9807F  |      ;  
@@ -8136,7 +8136,7 @@ func_C5DB49:
 @lbl_C5DBDB:
 	ldx.w #$AF58                         ;C5DBDB|A258AF  |      ;  
 	ldy.w #$AF5A                         ;C5DBDE|A05AAF  |      ;  
-	lda.b $E5                            ;C5DBE1|A5E5    |0000E5;  
+	lda.b w00e5                            ;C5DBE1|A5E5    |0000E5;  
 	cmp.w #$0081                         ;C5DBE3|C98100  |      ;  
 	bcc @lbl_C5DBEB                      ;C5DBE6|9003    |C5DBEB;  
 	lda.w #$0080                         ;C5DBE8|A98000  |      ;  
@@ -8912,7 +8912,7 @@ func_C5E61B:
 	php                                  ;C5E61B|08      |      ;  
 	rep #$30                             ;C5E61C|C230    |      ;  
 	jsr.w func_C5E4CE                    ;C5E61E|20CEE4  |C5E4CE;  
-	stx.b $ED                            ;C5E621|86ED    |0000ED;  
+	stx.b w00ed                            ;C5E621|86ED    |0000ED;  
 	lda.w #$0003                         ;C5E623|A90300  |      ;  
 	sta.b w0000                           ;C5E626|8500    |000000;  
 	jsl.l func_C5E62E                    ;C5E628|222EE6C5|C5E62E;  
@@ -8927,7 +8927,7 @@ func_C5E62E:
 	asl a                                ;C5E636|0A      |      ;  
 	tax                                  ;C5E637|AA      |      ;  
 	lda.l UNREACH_C5E640,x               ;C5E638|BF40E6C5|C5E640;  
-	sta.b $EF                            ;C5E63C|85EF    |0000EF;  
+	sta.b w00ef                            ;C5E63C|85EF    |0000EF;  
 	plp                                  ;C5E63E|28      |      ;  
 	rtl                                  ;C5E63F|6B      |      ;  
 
@@ -8947,7 +8947,7 @@ func_C5E650:
 	txy                                  ;C5E65C|9B      |      ;  
 	lda.w $DE2D,y                        ;C5E65D|B92DDE  |7FDE2D;  
 	and.w #$1C00                         ;C5E660|29001C  |      ;  
-	sta.b $E5                            ;C5E663|85E5    |0000E5;  
+	sta.b w00e5                            ;C5E663|85E5    |0000E5;  
 	lda.w $DE82,y                        ;C5E665|B982DE  |7FDE82;  
 	pha                                  ;C5E668|48      |      ;  
 	lda.w $DE76,y                        ;C5E669|B976DE  |7FDE76;  
@@ -8956,12 +8956,12 @@ func_C5E650:
 	tax                                  ;C5E670|AA      |      ;  
 	phx                                  ;C5E671|DA      |      ;  
 	lda.w #$20D1                         ;C5E672|A9D120  |      ;  
-	ora.b $E5                            ;C5E675|05E5    |0000E5;  
+	ora.b w00e5                            ;C5E675|05E5    |0000E5;  
 	sta.w $D85C,x                        ;C5E677|9D5CD8  |7FD85C;  
 	lda.w $DE5E,y                        ;C5E67A|B95EDE  |7FDE5E;  
 	sta.b w0002                   ;C5E67D|8502    |000002;  
 	lda.w #$20D3                         ;C5E67F|A9D320  |      ;  
-	ora.b $E5                            ;C5E682|05E5    |0000E5;  
+	ora.b w00e5                            ;C5E682|05E5    |0000E5;  
 @lbl_C5E684:
 	sta.w $D85E,x                        ;C5E684|9D5ED8  |7FD85E;  
 	inx                                  ;C5E687|E8      |      ;  
@@ -8969,7 +8969,7 @@ func_C5E650:
 	dec.b w0002                   ;C5E689|C602    |000002;  
 	bne @lbl_C5E684                      ;C5E68B|D0F7    |C5E684;  
 	lda.w #$20D4                         ;C5E68D|A9D420  |      ;  
-	ora.b $E5                            ;C5E690|05E5    |0000E5;  
+	ora.b w00e5                            ;C5E690|05E5    |0000E5;  
 	sta.w $D85E,x                        ;C5E692|9D5ED8  |7FD85E;  
 	lda.w $DEB2,y                        ;C5E695|B9B2DE  |7FDEB2;  
 	asl a                                ;C5E698|0A      |      ;  
@@ -8977,7 +8977,7 @@ func_C5E650:
 	clc                                  ;C5E69A|18      |      ;  
 	adc.w $DE46,y                        ;C5E69B|7946DE  |7FDE46;  
 	adc.w #$2560                         ;C5E69E|696025  |      ;  
-	ora.b $E5                            ;C5E6A1|05E5    |0000E5;  
+	ora.b w00e5                            ;C5E6A1|05E5    |0000E5;  
 	sta.b w0006                            ;C5E6A3|8506    |000006;  
 	lda.w $DE6A,y                        ;C5E6A5|B96ADE  |7FDE6A;  
 	sta.b w0004                   ;C5E6A8|8504    |000004;  
@@ -8985,7 +8985,7 @@ func_C5E650:
 @lbl_C5E6AB:
 	phx                                  ;C5E6AB|DA      |      ;  
 	lda.w #$20D9                         ;C5E6AC|A9D920  |      ;  
-	ora.b $E5                            ;C5E6AF|05E5    |0000E5;  
+	ora.b w00e5                            ;C5E6AF|05E5    |0000E5;  
 	sta.w $D89C,x                        ;C5E6B1|9D9CD8  |7FD89C;  
 	lda.w $DE5E,y                        ;C5E6B4|B95EDE  |7FDE5E;  
 	sta.b w0002                   ;C5E6B7|8502    |000002;  
@@ -9000,7 +9000,7 @@ func_C5E650:
 	dec.b w0002                   ;C5E6C6|C602    |000002;  
 	bne @lbl_C5E6BD                      ;C5E6C8|D0F3    |C5E6BD;  
 	lda.w #$20DB                         ;C5E6CA|A9DB20  |      ;  
-	ora.b $E5                            ;C5E6CD|05E5    |0000E5;  
+	ora.b w00e5                            ;C5E6CD|05E5    |0000E5;  
 	sta.w $D89E,x                        ;C5E6CF|9D9ED8  |7FD89E;  
 	pla                                  ;C5E6D2|68      |      ;  
 	clc                                  ;C5E6D3|18      |      ;  
@@ -9013,12 +9013,12 @@ func_C5E650:
 	dec.b w0004                   ;C5E6E0|C604    |000004;  
 	bne @lbl_C5E6AB                      ;C5E6E2|D0C7    |C5E6AB;  
 	lda.w #$20DC                         ;C5E6E4|A9DC20  |      ;  
-	ora.b $E5                            ;C5E6E7|05E5    |0000E5;  
+	ora.b w00e5                            ;C5E6E7|05E5    |0000E5;  
 	sta.w $D89C,x                        ;C5E6E9|9D9CD8  |7FD89C;  
 	lda.w $DE5E,y                        ;C5E6EC|B95EDE  |7FDE5E;  
 	sta.b w0002                   ;C5E6EF|8502    |000002;  
 	lda.w #$20DE                         ;C5E6F1|A9DE20  |      ;  
-	ora.b $E5                            ;C5E6F4|05E5    |0000E5;  
+	ora.b w00e5                            ;C5E6F4|05E5    |0000E5;  
 @lbl_C5E6F6:
 	sta.w $D89E,x                        ;C5E6F6|9D9ED8  |7FD89E;  
 	inx                                  ;C5E6F9|E8      |      ;  
@@ -9026,7 +9026,7 @@ func_C5E650:
 	dec.b w0002                   ;C5E6FB|C602    |000002;  
 	bne @lbl_C5E6F6                      ;C5E6FD|D0F7    |C5E6F6;  
 	lda.w #$20DF                         ;C5E6FF|A9DF20  |      ;  
-	ora.b $E5                            ;C5E702|05E5    |0000E5;  
+	ora.b w00e5                            ;C5E702|05E5    |0000E5;  
 	sta.w $D89E,x                        ;C5E704|9D9ED8  |7FD89E;  
 	pla                                  ;C5E707|68      |      ;  
 	sta.b w0000                           ;C5E708|8500    |000000;  
@@ -9079,9 +9079,9 @@ func_C5E7A8:
 	ldy.b #$7F                           ;C5E7B5|A07F    |      ;  
 	phy                                  ;C5E7B7|5A      |      ;  
 	plb                                  ;C5E7B8|AB      |      ;  
-	lda.b $EF                            ;C5E7B9|A5EF    |0000EF;  
+	lda.b w00ef                            ;C5E7B9|A5EF    |0000EF;  
 	pha                                  ;C5E7BB|48      |      ;  
-	lda.b $ED                            ;C5E7BC|A5ED    |0000ED;  
+	lda.b w00ed                            ;C5E7BC|A5ED    |0000ED;  
 	pha                                  ;C5E7BE|48      |      ;  
 	ldy.b #$C5                           ;C5E7BF|A0C5    |      ;  
 	phy                                  ;C5E7C1|5A      |      ;  
@@ -9094,9 +9094,9 @@ func_C5E7A8:
 	jsl.l func_C5E7DE                    ;C5E7D1|22DEE7C5|C5E7DE;  
 	rtl                                  ;C5E7D5|6B      |      ;  
 	pla                                  ;C5E7D6|68      |      ;  
-	sta.b $ED                            ;C5E7D7|85ED    |0000ED;  
+	sta.b w00ed                            ;C5E7D7|85ED    |0000ED;  
 	pla                                  ;C5E7D9|68      |      ;  
-	sta.b $EF                            ;C5E7DA|85EF    |0000EF;  
+	sta.b w00ef                            ;C5E7DA|85EF    |0000EF;  
 @lbl_C5E7DC:
 	plp                                  ;C5E7DC|28      |      ;  
 	rtl                                  ;C5E7DD|6B      |      ;  
@@ -9108,7 +9108,7 @@ func_C5E7DE:
 	pha                                  ;C5E7E3|48      |      ;  
 	plb                                  ;C5E7E4|AB      |      ;  
 	rep #$30                             ;C5E7E5|C230    |      ;  
-	ldy.b $ED                            ;C5E7E7|A4ED    |0000ED;  
+	ldy.b w00ed                            ;C5E7E7|A4ED    |0000ED;  
 	lda.w $DE6A,y                        ;C5E7E9|B96ADE  |7FDE6A;  
 	sta.b w0002                   ;C5E7EC|8502    |000002;  
 	lda.w $DECA,y                        ;C5E7EE|B9CADE  |7FDECA;  
@@ -9141,7 +9141,7 @@ func_C5E7DE:
 func_C5E81A:
 	php                                  ;C5E81A|08      |      ;  
 	sep #$30                             ;C5E81B|E230    |      ;  
-	ldx.b $ED                            ;C5E81D|A6ED    |0000ED;  
+	ldx.b w00ed                            ;C5E81D|A6ED    |0000ED;  
 	stz.b w0002                   ;C5E81F|6402    |000002;  
 	lda.l $7FDF1E,x                      ;C5E821|BF1EDF7F|7FDF1E;  
 	clc                                  ;C5E825|18      |      ;  
@@ -9277,7 +9277,7 @@ func_C5E8E3:
 @lbl_C5E90F:
 	lda.b w0000                           ;C5E90F|A500    |000000;  
 	pha                                  ;C5E911|48      |      ;  
-	ldx.b $ED                            ;C5E912|A6ED    |0000ED;  
+	ldx.b w00ed                            ;C5E912|A6ED    |0000ED;  
 	lda.b w0004                   ;C5E914|A504    |000004;  
 	and.w #$00FF                         ;C5E916|29FF00  |      ;  
 	clc                                  ;C5E919|18      |      ;  
@@ -9336,7 +9336,7 @@ func_C5E97B:
 	plb                                  ;C5E99A|AB      |      ;  
 
 func_C5E99B:
-	ldy.b $ED                            ;C5E99B|A4ED    |0000ED;  
+	ldy.b w00ed                            ;C5E99B|A4ED    |0000ED;  
 	lda.w $DF12,y                        ;C5E99D|B912DF  |7FDF12;  
 	and.w #$0007                         ;C5E9A0|290700  |      ;  
 	sta.b w0000                           ;C5E9A3|8500    |000000;  
@@ -9348,7 +9348,7 @@ func_C5E99B:
 	and.w #$00FF                         ;C5E9B2|29FF00  |      ;  
 	asl a                                ;C5E9B5|0A      |      ;  
 	tay                                  ;C5E9B6|A8      |      ;  
-	stz.b $E5                            ;C5E9B7|64E5    |0000E5;  
+	stz.b w00e5                            ;C5E9B7|64E5    |0000E5;  
 	lda.w $DF64,y                        ;C5E9B9|B964DF  |7FDF64;  
 	sty.b w0006                            ;C5E9BC|8406    |000006;  
 	ldy.b w0000                            ;C5E9BE|A400    |000000;  
@@ -9358,30 +9358,30 @@ func_C5E9C5:
 	dex                                  ;C5E9C5|CA      |      ;  
 	dex                                  ;C5E9C6|CA      |      ;  
 func_C5E9C7:
-	stz.b $E5                            ;C5E9C7|64E5    |0000E5;  
+	stz.b w00e5                            ;C5E9C7|64E5    |0000E5;  
 	lda.w $DF64,y                        ;C5E9C9|B964DF  |7FDF64;  
 	sty.b w0006                            ;C5E9CC|8406    |000006;  
 	ldy.b w0000                            ;C5E9CE|A400    |000000;  
 	beq func_C5E9D8                      ;C5E9D0|F006    |C5E9D8;  
 func_C5E9D2:
 	lsr a                                ;C5E9D2|4A      |      ;  
-	ror.b $E5                            ;C5E9D3|66E5    |0000E5;  
+	ror.b w00e5                            ;C5E9D3|66E5    |0000E5;  
 	dey                                  ;C5E9D5|88      |      ;  
 	bne func_C5E9D2                      ;C5E9D6|D0FA    |C5E9D2;  
 func_C5E9D8:
 	jmp.w ($00EF)                        ;C5E9D8|6CEF00  |0000EF;  
-	sta.b $E7                            ;C5E9DB|85E7    |0000E7;  
-	sta.b $E9                            ;C5E9DD|85E9    |0000E9;  
-	sta.b $E8                            ;C5E9DF|85E8    |0000E8;  
-	lda.b $E9                            ;C5E9E1|A5E9    |0000E9;  
+	sta.b w00e7                            ;C5E9DB|85E7    |0000E7;  
+	sta.b w00e9                            ;C5E9DD|85E9    |0000E9;  
+	sta.b w00e8                            ;C5E9DF|85E8    |0000E8;  
+	lda.b w00e9                            ;C5E9E1|A5E9    |0000E9;  
 	ora.w $B05E,x                        ;C5E9E3|1D5EB0  |7FB05E;  
 	sta.w $B05E,x                        ;C5E9E6|9D5EB0  |7FB05E;  
-	lda.b $E7                            ;C5E9E9|A5E7    |0000E7;  
+	lda.b w00e7                            ;C5E9E9|A5E7    |0000E7;  
 	ora.w $B06E,x                        ;C5E9EB|1D6EB0  |7FB06E;  
 	sta.w $B06E,x                        ;C5E9EE|9D6EB0  |7FB06E;  
-	lda.b $E6                            ;C5E9F1|A5E6    |0000E6;  
-	sta.b $E7                            ;C5E9F3|85E7    |0000E7;  
-	lda.b $E6                            ;C5E9F5|A5E6    |0000E6;  
+	lda.b w00e6                            ;C5E9F1|A5E6    |0000E6;  
+	sta.b w00e7                            ;C5E9F3|85E7    |0000E7;  
+	lda.b w00e6                            ;C5E9F5|A5E6    |0000E6;  
 	ora.w $B07E,x                        ;C5E9F7|1D7EB0  |7FB07E;  
 	sta.w $B07E,x                        ;C5E9FA|9D7EB0  |7FB07E;  
 
@@ -9400,7 +9400,7 @@ func_C5E9FD:
 	sta.b w0002                   ;C5EA10|8502    |000002;  
 	bra func_C5E9C7                      ;C5EA12|80B3    |C5E9C7;  
 @lbl_C5EA14:
-	ldx.b $ED                            ;C5EA14|A6ED    |0000ED;  
+	ldx.b w00ed                            ;C5EA14|A6ED    |0000ED;  
 	lda.b w0004                   ;C5EA16|A504    |000004;  
 	and.w #$00FF                         ;C5EA18|29FF00  |      ;  
 	clc                                  ;C5EA1B|18      |      ;  
@@ -9422,7 +9422,7 @@ func_C5E9FD:
 	.db $B0,$A5,$E6,$85,$E7,$A5,$E6,$49   ;C5EA4E|        |C5E9F5;  
 	.db $FF,$FF,$3D,$7E,$B0,$9D,$7E,$B0   ;C5EA56|        |7E3DFF;  
 	.db $4C,$FD,$E9                       ;C5EA5E|        |C5E9FD;  
-	sta.b $E7                            ;C5EA61|85E7    |0000E7;  
+	sta.b w00e7                            ;C5EA61|85E7    |0000E7;  
 	eor.w #$FFFF                         ;C5EA63|49FFFF  |      ;  
 	sep #$20                             ;C5EA66|E220    |      ;  
 	and.w $B06F,x                        ;C5EA68|3D6FB0  |7FB06F;  
@@ -9430,22 +9430,22 @@ func_C5E9FD:
 	xba                                  ;C5EA6E|EB      |      ;  
 	and.w $B05F,x                        ;C5EA6F|3D5FB0  |7FB05F;  
 	sta.w $B05F,x                        ;C5EA72|9D5FB0  |7FB05F;  
-	lda.b $E8                            ;C5EA75|A5E8    |0000E8;  
+	lda.b w00e8                            ;C5EA75|A5E8    |0000E8;  
 	ora.w $B05E,x                        ;C5EA77|1D5EB0  |7FB05E;  
 	sta.w $B05E,x                        ;C5EA7A|9D5EB0  |7FB05E;  
-	lda.b $E7                            ;C5EA7D|A5E7    |0000E7;  
+	lda.b w00e7                            ;C5EA7D|A5E7    |0000E7;  
 	ora.w $B06E,x                        ;C5EA7F|1D6EB0  |7FB06E;  
 	sta.w $B06E,x                        ;C5EA82|9D6EB0  |7FB06E;  
-	lda.b $E6                            ;C5EA85|A5E6    |0000E6;  
+	lda.b w00e6                            ;C5EA85|A5E6    |0000E6;  
 	eor.b #$FF                           ;C5EA87|49FF    |      ;  
 	and.w $B07F,x                        ;C5EA89|3D7FB0  |7FB07F;  
 	xba                                  ;C5EA8C|EB      |      ;  
-	lda.b $E6                            ;C5EA8D|A5E6    |0000E6;  
+	lda.b w00e6                            ;C5EA8D|A5E6    |0000E6;  
 	ora.w $B07E,x                        ;C5EA8F|1D7EB0  |7FB07E;  
 	rep #$20                             ;C5EA92|C220    |      ;  
 	sta.w $B07E,x                        ;C5EA94|9D7EB0  |7FB07E;  
 	jmp.w func_C5E9FD                    ;C5EA97|4CFDE9  |C5E9FD;  
-	sta.b $E7                            ;C5EA9A|85E7    |0000E7;  
+	sta.b w00e7                            ;C5EA9A|85E7    |0000E7;  
 	eor.w #$FFFF                         ;C5EA9C|49FFFF  |      ;  
 	sep #$20                             ;C5EA9F|E220    |      ;  
 	and.w $B06E,x                        ;C5EAA1|3D6EB0  |7FB06E;  
@@ -9453,16 +9453,16 @@ func_C5E9FD:
 	xba                                  ;C5EAA7|EB      |      ;  
 	and.w $B05E,x                        ;C5EAA8|3D5EB0  |7FB05E;  
 	sta.w $B05E,x                        ;C5EAAB|9D5EB0  |7FB05E;  
-	lda.b $E8                            ;C5EAAE|A5E8    |0000E8;  
+	lda.b w00e8                            ;C5EAAE|A5E8    |0000E8;  
 	ora.w $B05F,x                        ;C5EAB0|1D5FB0  |7FB05F;  
 	sta.w $B05F,x                        ;C5EAB3|9D5FB0  |7FB05F;  
-	lda.b $E7                            ;C5EAB6|A5E7    |0000E7;  
+	lda.b w00e7                            ;C5EAB6|A5E7    |0000E7;  
 	ora.w $B06F,x                        ;C5EAB8|1D6FB0  |7FB06F;  
 	sta.w $B06F,x                        ;C5EABB|9D6FB0  |7FB06F;  
-	lda.b $E6                            ;C5EABE|A5E6    |0000E6;  
+	lda.b w00e6                            ;C5EABE|A5E6    |0000E6;  
 	ora.w $B07F,x                        ;C5EAC0|1D7FB0  |7FB07F;  
 	xba                                  ;C5EAC3|EB      |      ;  
-	lda.b $E6                            ;C5EAC4|A5E6    |0000E6;  
+	lda.b w00e6                            ;C5EAC4|A5E6    |0000E6;  
 	eor.b #$FF                           ;C5EAC6|49FF    |      ;  
 	and.w $B07E,x                        ;C5EAC8|3D7EB0  |7FB07E;  
 	rep #$20                             ;C5EACB|C220    |      ;  
@@ -9490,7 +9490,7 @@ func_C5EB42:
 	pha                                  ;C5EB47|48      |      ;  
 	plb                                  ;C5EB48|AB      |      ;  
 	rep #$30                             ;C5EB49|C230    |      ;  
-	ldy.b $ED                            ;C5EB4B|A4ED    |0000ED;  
+	ldy.b w00ed                            ;C5EB4B|A4ED    |0000ED;  
 	ldx.w $DF2A,y                        ;C5EB4D|BE2ADF  |7FDF2A;  
 	lda.w $DECA,y                        ;C5EB50|B9CADE  |7FDECA;  
 	clc                                  ;C5EB53|18      |      ;  
@@ -9501,10 +9501,10 @@ func_C5EB42:
 	lsr a                                ;C5EB5C|4A      |      ;  
 	lsr a                                ;C5EB5D|4A      |      ;  
 	dec a                                ;C5EB5E|3A      |      ;  
-	sta.b $E5                            ;C5EB5F|85E5    |0000E5;  
+	sta.b w00e5                            ;C5EB5F|85E5    |0000E5;  
 	lda.w $DF1E,y                        ;C5EB61|B91EDF  |7FDF1E;  
 	and.w #$0007                         ;C5EB64|290700  |      ;  
-	sta.b $E7                            ;C5EB67|85E7    |0000E7;  
+	sta.b w00e7                            ;C5EB67|85E7    |0000E7;  
 	lda.b w0005                            ;C5EB69|A505    |000005;  
 	and.w #$00FF                         ;C5EB6B|29FF00  |      ;  
 	sta.b w0004                   ;C5EB6E|8504    |000004;  
@@ -9519,17 +9519,17 @@ func_C5EB42:
 	dey                                  ;C5EB7D|88      |      ;  
 	bpl @lbl_C5EB7C                      ;C5EB7E|10FC    |C5EB7C;  
 	eor.w #$FFFF                         ;C5EB80|49FFFF  |      ;  
-	sta.b $E9                            ;C5EB83|85E9    |0000E9;  
-	sta.b $E8                            ;C5EB85|85E8    |0000E8;  
+	sta.b w00e9                            ;C5EB83|85E9    |0000E9;  
+	sta.b w00e8                            ;C5EB85|85E8    |0000E8;  
 	bra @lbl_C5EB8B                      ;C5EB87|8002    |C5EB8B;  
 @lbl_C5EB89:
 	dex                                  ;C5EB89|CA      |      ;  
 	dex                                  ;C5EB8A|CA      |      ;  
 @lbl_C5EB8B:
-	lda.b $E9                            ;C5EB8B|A5E9    |0000E9;  
+	lda.b w00e9                            ;C5EB8B|A5E9    |0000E9;  
 	and.w $B05E,x                        ;C5EB8D|3D5EB0  |7FB05E;  
 	sta.w $B05E,x                        ;C5EB90|9D5EB0  |7FB05E;  
-	ldy.b $E5                            ;C5EB93|A4E5    |0000E5;  
+	ldy.b w00e5                            ;C5EB93|A4E5    |0000E5;  
 	bmi @lbl_C5EBA5                      ;C5EB95|300E    |C5EBA5;  
 	phx                                  ;C5EB97|DA      |      ;  
 	txa                                  ;C5EB98|8A      |      ;  
@@ -9544,14 +9544,14 @@ func_C5EB42:
 @lbl_C5EBA5:
 	dec.b w0004                   ;C5EBA5|C604    |000004;  
 	beq @lbl_C5EBBA                      ;C5EBA7|F011    |C5EBBA;  
-	dec.b $E7                            ;C5EBA9|C6E7    |0000E7;  
+	dec.b w00e7                            ;C5EBA9|C6E7    |0000E7;  
 	bpl @lbl_C5EB89                      ;C5EBAB|10DC    |C5EB89;  
 	txa                                  ;C5EBAD|8A      |      ;  
 	sec                                  ;C5EBAE|38      |      ;  
 	sbc.w #$01F2                         ;C5EBAF|E9F201  |      ;  
 	tax                                  ;C5EBB2|AA      |      ;  
 	lda.w #$0007                         ;C5EBB3|A90700  |      ;  
-	sta.b $E7                            ;C5EBB6|85E7    |0000E7;  
+	sta.b w00e7                            ;C5EBB6|85E7    |0000E7;  
 	bra @lbl_C5EB8B                      ;C5EBB8|80D1    |C5EB8B;  
 @lbl_C5EBBA:
 	plp                                  ;C5EBBA|28      |      ;  
@@ -9561,29 +9561,29 @@ func_C5EB42:
 func_C5EBBD:
 	php                                  ;C5EBBD|08      |      ;  
 	rep #$30                             ;C5EBBE|C230    |      ;  
-	ldx.b $ED                            ;C5EBC0|A6ED    |0000ED;  
+	ldx.b w00ed                            ;C5EBC0|A6ED    |0000ED;  
 	lda.b w0002                   ;C5EBC2|A502    |000002;  
 	and.w #$00FF                         ;C5EBC4|29FF00  |      ;  
 	clc                                  ;C5EBC7|18      |      ;  
 	adc.l $7FDEA6,x                      ;C5EBC8|7FA6DE7F|7FDEA6;  
 	sta.l $7FDF12,x                      ;C5EBCC|9F12DF7F|7FDF12;  
 	and.w #$00F8                         ;C5EBD0|29F800  |      ;  
-	sta.b $E5                            ;C5EBD3|85E5    |0000E5;  
+	sta.b w00e5                            ;C5EBD3|85E5    |0000E5;  
 	lda.b w0003                            ;C5EBD5|A503    |000003;  
 	and.w #$00FF                         ;C5EBD7|29FF00  |      ;  
 	clc                                  ;C5EBDA|18      |      ;  
 	adc.l $7FDEB2,x                      ;C5EBDB|7FB2DE7F|7FDEB2;  
 	sta.l $7FDF1E,x                      ;C5EBDF|9F1EDF7F|7FDF1E;  
 	and.w #$0007                         ;C5EBE3|290700  |      ;  
-	ora.b $E5                            ;C5EBE6|05E5    |0000E5;  
+	ora.b w00e5                            ;C5EBE6|05E5    |0000E5;  
 	asl a                                ;C5EBE8|0A      |      ;  
-	sta.b $E5                            ;C5EBE9|85E5    |0000E5;  
+	sta.b w00e5                            ;C5EBE9|85E5    |0000E5;  
 	lda.l $7FDF1E,x                      ;C5EBEB|BF1EDF7F|7FDF1E;  
 	and.w #$00F8                         ;C5EBEF|29F800  |      ;  
 	xba                                  ;C5EBF2|EB      |      ;  
 	lsr a                                ;C5EBF3|4A      |      ;  
 	lsr a                                ;C5EBF4|4A      |      ;  
-	ora.b $E5                            ;C5EBF5|05E5    |0000E5;  
+	ora.b w00e5                            ;C5EBF5|05E5    |0000E5;  
 	sta.l $7FDF2A,x                      ;C5EBF7|9F2ADF7F|7FDF2A;  
 	plp                                  ;C5EBFB|28      |      ;  
 	rtl                                  ;C5EBFC|6B      |      ;  
@@ -9591,7 +9591,7 @@ func_C5EBBD:
 func_C5EBFD:
 	php                                  ;C5EBFD|08      |      ;  
 	rep #$30                             ;C5EBFE|C230    |      ;  
-	ldx.b $ED                            ;C5EC00|A6ED    |0000ED;  
+	ldx.b w00ed                            ;C5EC00|A6ED    |0000ED;  
 	lda.b w0000                           ;C5EC02|A500    |000000;  
 	and.w #$00FF                         ;C5EC04|29FF00  |      ;  
 	clc                                  ;C5EC07|18      |      ;  
@@ -9599,10 +9599,10 @@ func_C5EBFD:
 	sta.l $7FDF12,x                      ;C5EC0C|9F12DF7F|7FDF12;  
 	and.w #$00F8                         ;C5EC10|29F800  |      ;  
 	asl a                                ;C5EC13|0A      |      ;  
-	sta.b $E5                            ;C5EC14|85E5    |0000E5;  
+	sta.b w00e5                            ;C5EC14|85E5    |0000E5;  
 	lda.l $7FDF2A,x                      ;C5EC16|BF2ADF7F|7FDF2A;  
 	and.w #$FE0E                         ;C5EC1A|290EFE  |      ;  
-	ora.b $E5                            ;C5EC1D|05E5    |0000E5;  
+	ora.b w00e5                            ;C5EC1D|05E5    |0000E5;  
 	sta.l $7FDF2A,x                      ;C5EC1F|9F2ADF7F|7FDF2A;  
 	plp                                  ;C5EC23|28      |      ;  
 	rtl                                  ;C5EC24|6B      |      ;  
@@ -9712,7 +9712,7 @@ func_C5ECF6:
 func_C5ED0A:
 	php                                  ;C5ED0A|08      |      ;  
 	sep #$30                             ;C5ED0B|E230    |      ;  
-	ldx.b $ED                            ;C5ED0D|A6ED    |0000ED;  
+	ldx.b w00ed                            ;C5ED0D|A6ED    |0000ED;  
 	lda.b w0002                   ;C5ED0F|A502    |000002;  
 	sta.l $7FDF5A,x                      ;C5ED11|9F5ADF7F|7FDF5A;  
 	stz.b w0002                   ;C5ED15|6402    |000002;  
@@ -9732,9 +9732,9 @@ func_C5ED1F:
 	sta.b w0000                           ;C5ED2A|8500    |000000;  
 	lda.l $7FDE2E,x                      ;C5ED2C|BF2EDE7F|7FDE2E;  
 	tay                                  ;C5ED30|A8      |      ;  
-	stz.b $E5                            ;C5ED31|64E5    |0000E5;  
+	stz.b w00e5                            ;C5ED31|64E5    |0000E5;  
 	and.b #$1C                           ;C5ED33|291C    |      ;  
-	sta.b $E6                            ;C5ED35|85E6    |0000E6;  
+	sta.b w00e6                            ;C5ED35|85E6    |0000E6;  
 	lda.l $7FDF5A,x                      ;C5ED37|BF5ADF7F|7FDF5A;  
 	beq @lbl_C5ED77                      ;C5ED3B|F03A    |C5ED77;  
 	dey                                  ;C5ED3D|88      |      ;  
@@ -9779,7 +9779,7 @@ func_C5ED1F:
 	adc.l $7FDEBE,x                      ;C5ED8B|7FBEDE7F|7FDEBE;  
 	tax                                  ;C5ED8F|AA      |      ;  
 	tya                                  ;C5ED90|98      |      ;  
-	ora.b $E5                            ;C5ED91|05E5    |0000E5;  
+	ora.b w00e5                            ;C5ED91|05E5    |0000E5;  
 	sta.l $7FD858,x                      ;C5ED93|9F58D87F|7FD858;  
 	sta.l $7FD85A,x                      ;C5ED97|9F5AD87F|7FD85A;  
 @lbl_C5ED9B:
@@ -10216,12 +10216,12 @@ func_C5F0AC:
 	lsr a                                ;C5F0C4|4A      |      ;  
 	bcs @lbl_C5F0CF                      ;C5F0C5|B008    |C5F0CF;  
 	lsr a                                ;C5F0C7|4A      |      ;  
-	sta.b $E5                            ;C5F0C8|85E5    |0000E5;  
+	sta.b w00e5                            ;C5F0C8|85E5    |0000E5;  
 	bcc @lbl_C5F0F5                      ;C5F0CA|9029    |C5F0F5;  
 	jmp.w func_C5F181                    ;C5F0CC|4C81F1  |C5F181;  
 @lbl_C5F0CF:
 	lsr a                                ;C5F0CF|4A      |      ;  
-	sta.b $E5                            ;C5F0D0|85E5    |0000E5;  
+	sta.b w00e5                            ;C5F0D0|85E5    |0000E5;  
 	bcc @lbl_C5F0F8                      ;C5F0D2|9024    |C5F0F8;  
 	jmp.w func_C5F1AB                    ;C5F0D4|4CABF1  |C5F1AB;  
 	ldx.b w0004                   ;C5F0D7|A604    |000004;  
@@ -10232,13 +10232,13 @@ func_C5F0AC:
 	bcc @lbl_C5F0E3                      ;C5F0DF|9002    |C5F0E3;  
 	inc.b w0005                            ;C5F0E1|E605    |000005;  
 @lbl_C5F0E3:
-	lsr.b $E5                            ;C5F0E3|46E5    |0000E5;  
+	lsr.b w00e5                            ;C5F0E3|46E5    |0000E5;  
 	bcs @lbl_C5F0EE                      ;C5F0E5|B007    |C5F0EE;  
-	lsr.b $E5                            ;C5F0E7|46E5    |0000E5;  
+	lsr.b w00e5                            ;C5F0E7|46E5    |0000E5;  
 	bcc @lbl_C5F0F5                      ;C5F0E9|900A    |C5F0F5;  
 	jmp.w func_C5F181                    ;C5F0EB|4C81F1  |C5F181;  
 @lbl_C5F0EE:
-	lsr.b $E5                            ;C5F0EE|46E5    |0000E5;  
+	lsr.b w00e5                            ;C5F0EE|46E5    |0000E5;  
 	bcc @lbl_C5F0F8                      ;C5F0F0|9006    |C5F0F8;  
 	jmp.w func_C5F1AB                    ;C5F0F2|4CABF1  |C5F1AB;  
 @lbl_C5F0F5:
@@ -10301,12 +10301,12 @@ func_C5F118:
 	rts                                  ;C5F180|60      |      ;  
 func_C5F181:
 	lda.b #$08                           ;C5F181|A908    |      ;  
-	sta.b $E7                            ;C5F183|85E7    |0000E7;  
+	sta.b w00e7                            ;C5F183|85E7    |0000E7;  
 	lda.b [w0000],y                        ;C5F185|B700    |000000;  
 	iny                                  ;C5F187|C8      |      ;  
-	sta.b $E9                            ;C5F188|85E9    |0000E9;  
+	sta.b w00e9                            ;C5F188|85E9    |0000E9;  
 @lbl_C5F18A:
-	lsr.b $E9                            ;C5F18A|46E9    |0000E9;  
+	lsr.b w00e9                            ;C5F18A|46E9    |0000E9;  
 	bcc @lbl_C5F19E                      ;C5F18C|9010    |C5F19E;  
 	lda.b [w0000],y                        ;C5F18E|B700    |000000;  
 	iny                                  ;C5F190|C8      |      ;  
@@ -10314,7 +10314,7 @@ func_C5F181:
 	stz.w w0001,x                        ;C5F194|9E0100  |7F0001;  
 	inx                                  ;C5F197|E8      |      ;  
 	inx                                  ;C5F198|E8      |      ;  
-	dec.b $E7                            ;C5F199|C6E7    |0000E7;  
+	dec.b w00e7                            ;C5F199|C6E7    |0000E7;  
 	bne @lbl_C5F18A                      ;C5F19B|D0ED    |C5F18A;  
 	rts                                  ;C5F19D|60      |      ;  
 @lbl_C5F19E:
@@ -10322,21 +10322,21 @@ func_C5F181:
 	stz.w w0001,x                        ;C5F1A1|9E0100  |7F0001;  
 	inx                                  ;C5F1A4|E8      |      ;  
 	inx                                  ;C5F1A5|E8      |      ;  
-	dec.b $E7                            ;C5F1A6|C6E7    |0000E7;  
+	dec.b w00e7                            ;C5F1A6|C6E7    |0000E7;  
 	bne @lbl_C5F18A                      ;C5F1A8|D0E0    |C5F18A;  
 	rts                                  ;C5F1AA|60      |      ;  
 func_C5F1AB:
 	lda.b #$08                           ;C5F1AB|A908    |      ;  
-	sta.b $E7                            ;C5F1AD|85E7    |0000E7;  
+	sta.b w00e7                            ;C5F1AD|85E7    |0000E7;  
 	lda.b [w0000],y                        ;C5F1AF|B700    |000000;  
 	iny                                  ;C5F1B1|C8      |      ;  
 	lsr a                                ;C5F1B2|4A      |      ;  
-	sta.b $E9                            ;C5F1B3|85E9    |0000E9;  
+	sta.b w00e9                            ;C5F1B3|85E9    |0000E9;  
 	bcs @lbl_C5F1BE                      ;C5F1B5|B007    |C5F1BE;  
 	tdc                                  ;C5F1B7|7B      |      ;  
 	bra @lbl_C5F1C1                      ;C5F1B8|8007    |C5F1C1;  
 @lbl_C5F1BA:
-	lsr.b $E9                            ;C5F1BA|46E9    |0000E9;  
+	lsr.b w00e9                            ;C5F1BA|46E9    |0000E9;  
 	bcc @lbl_C5F1C1                      ;C5F1BC|9003    |C5F1C1;  
 @lbl_C5F1BE:
 	lda.b [w0000],y                        ;C5F1BE|B700    |000000;  
@@ -10346,7 +10346,7 @@ func_C5F1AB:
 	stz.w w0001,x                        ;C5F1C4|9E0100  |7F0001;  
 	inx                                  ;C5F1C7|E8      |      ;  
 	inx                                  ;C5F1C8|E8      |      ;  
-	dec.b $E7                            ;C5F1C9|C6E7    |0000E7;  
+	dec.b w00e7                            ;C5F1C9|C6E7    |0000E7;  
 	bne @lbl_C5F1BA                      ;C5F1CB|D0ED    |C5F1BA;  
 	rts                                  ;C5F1CD|60      |      ;  
 
@@ -10383,12 +10383,12 @@ func_C5F1E9:
 	lsr a                                ;C5F1FE|4A      |      ;  
 	bcs @lbl_C5F209                      ;C5F1FF|B008    |C5F209;  
 	lsr a                                ;C5F201|4A      |      ;  
-	sta.b $E5                            ;C5F202|85E5    |0000E5;  
+	sta.b w00e5                            ;C5F202|85E5    |0000E5;  
 	bcc @lbl_C5F22C                      ;C5F204|9026    |C5F22C;  
 	jmp.w func_C5F299                    ;C5F206|4C99F2  |C5F299;  
 @lbl_C5F209:
 	lsr a                                ;C5F209|4A      |      ;  
-	sta.b $E5                            ;C5F20A|85E5    |0000E5;  
+	sta.b w00e5                            ;C5F20A|85E5    |0000E5;  
 	bcc @lbl_C5F22F                      ;C5F20C|9021    |C5F22F;  
 	jmp.w func_C5F2C1                    ;C5F20E|4CC1F2  |C5F2C1;  
 	lda.b w0004                   ;C5F211|A504    |000004;  
@@ -10396,13 +10396,13 @@ func_C5F1E9:
 	clc                                  ;C5F214|18      |      ;  
 	adc.w #$0010                         ;C5F215|691000  |      ;  
 	sta.b w0004                   ;C5F218|8504    |000004;  
-	lsr.b $E5                            ;C5F21A|46E5    |0000E5;  
+	lsr.b w00e5                            ;C5F21A|46E5    |0000E5;  
 	bcs @lbl_C5F225                      ;C5F21C|B007    |C5F225;  
-	lsr.b $E5                            ;C5F21E|46E5    |0000E5;  
+	lsr.b w00e5                            ;C5F21E|46E5    |0000E5;  
 	bcc @lbl_C5F22C                      ;C5F220|900A    |C5F22C;  
 	jmp.w func_C5F299                    ;C5F222|4C99F2  |C5F299;  
 @lbl_C5F225:
-	lsr.b $E5                            ;C5F225|46E5    |0000E5;  
+	lsr.b w00e5                            ;C5F225|46E5    |0000E5;  
 	bcc @lbl_C5F22F                      ;C5F227|9006    |C5F22F;  
 	jmp.w func_C5F2C1                    ;C5F229|4CC1F2  |C5F2C1;  
 @lbl_C5F22C:
@@ -10459,12 +10459,12 @@ func_C5F299:
 	txa                                  ;C5F299|8A      |      ;  
 	clc                                  ;C5F29A|18      |      ;  
 	adc.w #$0010                         ;C5F29B|691000  |      ;  
-	sta.b $E7                            ;C5F29E|85E7    |0000E7;  
+	sta.b w00e7                            ;C5F29E|85E7    |0000E7;  
 	lda.b [w0000],y                        ;C5F2A0|B700    |000000;  
 	iny                                  ;C5F2A2|C8      |      ;  
-	sta.b $E9                            ;C5F2A3|85E9    |0000E9;  
+	sta.b w00e9                            ;C5F2A3|85E9    |0000E9;  
 @lbl_C5F2A5:
-	lsr.b $E9                            ;C5F2A5|46E9    |0000E9;  
+	lsr.b w00e9                            ;C5F2A5|46E9    |0000E9;  
 	bcc @lbl_C5F2B7                      ;C5F2A7|900E    |C5F2B7;  
 	lda.b [w0000],y                        ;C5F2A9|B700    |000000;  
 	iny                                  ;C5F2AB|C8      |      ;  
@@ -10472,14 +10472,14 @@ func_C5F299:
 	sta.w w0000,x                        ;C5F2AD|9D0000  |7F0000;  
 	inx                                  ;C5F2B0|E8      |      ;  
 	inx                                  ;C5F2B1|E8      |      ;  
-	cpx.b $E7                            ;C5F2B2|E4E7    |0000E7;  
+	cpx.b w00e7                            ;C5F2B2|E4E7    |0000E7;  
 	bne @lbl_C5F2A5                      ;C5F2B4|D0EF    |C5F2A5;  
 	rts                                  ;C5F2B6|60      |      ;  
 @lbl_C5F2B7:
 	stz.w w0000,x                        ;C5F2B7|9E0000  |7F0000;  
 	inx                                  ;C5F2BA|E8      |      ;  
 	inx                                  ;C5F2BB|E8      |      ;  
-	cpx.b $E7                            ;C5F2BC|E4E7    |0000E7;  
+	cpx.b w00e7                            ;C5F2BC|E4E7    |0000E7;  
 	bne @lbl_C5F2A5                      ;C5F2BE|D0E5    |C5F2A5;  
 	rts                                  ;C5F2C0|60      |      ;  
 
@@ -10487,16 +10487,16 @@ func_C5F2C1:
 	txa                                  ;C5F2C1|8A      |      ;  
 	clc                                  ;C5F2C2|18      |      ;  
 	adc.w #$0010                         ;C5F2C3|691000  |      ;  
-	sta.b $E7                            ;C5F2C6|85E7    |0000E7;  
+	sta.b w00e7                            ;C5F2C6|85E7    |0000E7;  
 	lda.b [w0000],y                        ;C5F2C8|B700    |000000;  
 	iny                                  ;C5F2CA|C8      |      ;  
 	lsr a                                ;C5F2CB|4A      |      ;  
-	sta.b $E9                            ;C5F2CC|85E9    |0000E9;  
+	sta.b w00e9                            ;C5F2CC|85E9    |0000E9;  
 	bcs @lbl_C5F2D7                      ;C5F2CE|B007    |C5F2D7;  
 	tdc                                  ;C5F2D0|7B      |      ;  
 	bra @lbl_C5F2DB                      ;C5F2D1|8008    |C5F2DB;  
 @lbl_C5F2D3:
-	lsr.b $E9                            ;C5F2D3|46E9    |0000E9;  
+	lsr.b w00e9                            ;C5F2D3|46E9    |0000E9;  
 	bcc @lbl_C5F2DB                      ;C5F2D5|9004    |C5F2DB;  
 @lbl_C5F2D7:
 	lda.b [w0000],y                        ;C5F2D7|B700    |000000;  
@@ -10506,7 +10506,7 @@ func_C5F2C1:
 	sta.w w0000,x                        ;C5F2DB|9D0000  |7F0000;  
 	inx                                  ;C5F2DE|E8      |      ;  
 	inx                                  ;C5F2DF|E8      |      ;  
-	lsr.b $E9                            ;C5F2E0|46E9    |0000E9;  
+	lsr.b w00e9                            ;C5F2E0|46E9    |0000E9;  
 	bcc @lbl_C5F2E8                      ;C5F2E2|9004    |C5F2E8;  
 	lda.b [w0000],y                        ;C5F2E4|B700    |000000;  
 	iny                                  ;C5F2E6|C8      |      ;  
@@ -10515,7 +10515,7 @@ func_C5F2C1:
 	sta.w w0000,x                        ;C5F2E8|9D0000  |7F0000;  
 	inx                                  ;C5F2EB|E8      |      ;  
 	inx                                  ;C5F2EC|E8      |      ;  
-	cpx.b $E7                            ;C5F2ED|E4E7    |0000E7;  
+	cpx.b w00e7                            ;C5F2ED|E4E7    |0000E7;  
 	bne @lbl_C5F2D3                      ;C5F2EF|D0E2    |C5F2D3;  
 	rts                                  ;C5F2F1|60      |      ;  
 	.db $08,$E2,$30,$22,$4D,$F3,$C5,$A9   ;C5F2F2

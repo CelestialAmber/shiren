@@ -1,5 +1,5 @@
 ;fe32d1
-Text_FE32D1:
+Text428:
 textfunction $0 $4
 text "草"
 textfunction $0 $14
@@ -22,7 +22,7 @@ textfunction $0 $7
 text "他@"
 
 ;fe3307
-Text_FE3307:
+Text429:
 textfunction $0 $4
 text "薬草"
 textfunction $0 $7
@@ -75,7 +75,7 @@ textfunction $0 $7
 text "毒消@"
 
 ;fe33ac
-Text_FE33AC:
+Text430:
 textfunction $0 $4
 text "お払"
 textfunction $0 $8
@@ -130,7 +130,7 @@ textfunction $0 $9
 text "天恵@"
 
 ;fe3451
-Text_FE3451:
+Text431:
 textfunction $0 $4
 text "封印"
 textfunction $0 $7
@@ -155,7 +155,7 @@ textfunction $0 $4
 text "場所@"
 
 ;fe349e
-Text_FE349E:
+Text432:
 textfunction $0 $4
 text "保存"
 textfunction $0 $7
@@ -194,7 +194,7 @@ textfunction $0 $7
 text "ガイ@"
 
 ;fe3513
-Text_FE3513:
+Text433:
 textfunction $0 $4
 text "にぎり\l"
 textfunction $0 $4
@@ -207,7 +207,7 @@ textfunction $0 $4
 text "特にぎ@"
 
 ;fe3539
-Text_FE3539:
+Text434:
 textfunction $0 $4
 text "こん棒　"
 textfunction $0 $F
@@ -242,7 +242,7 @@ textfunction $0 $A
 text "妖刀かま@"
 
 ;fe35bd
-Text_FE35BD:
+Text435:
 textfunction $0 $4
 text "皮甲の盾"
 textfunction $0 $8
@@ -277,7 +277,7 @@ textfunction $0 $B
 text "見かけ盾@"
 
 ;fe3645
-Text_FE3645:
+Text436:
 textfunction $0 $4
 text "通過"
 textfunction $0 $7
@@ -310,7 +310,7 @@ textfunction $0 $7
 text "垂流@"
 
 ;fe36b2
-Text_FE36B2:
+Text437:
 textfunction $0 $4
 text "木矢\l"
 textfunction $0 $4
@@ -319,7 +319,7 @@ textfunction $0 $4
 text "銀矢@"
 
 ;fe36ca
-Text_FE36CA:
+Text438:
 textfunction $0 $4
 text "肉\l"
 textfunction $0 $4
@@ -357,19 +357,19 @@ textfunction $0 $8
 text "右下@"
 
 ;fe372a
-Text_FE372A:
+Text442:
 text "レベル"
 textfunction $0 $4
 numvar $12
 text "@"
 
 ;fe3733
-Text_FE3733:
+Text443:
 strvar $87
 text "@"
 
 ;fe3736
-Text_FE3736:
+Text444:
 strvar $0
 text "から\l@"
 
@@ -397,11 +397,11 @@ numvar $12
 text "\l@"
 
 ;fe377a
-Text_FE377A:
+Text446:
 text "ウインドウ番号エラー\l@"
 
 ;fe3787
-Text_FE3787:
+Text447:
 textfunction $0 $4
 text "特技"
 textfunction $0 $7
@@ -412,7 +412,7 @@ textfunction $0 $9
 text "中断@"
 
 ;fe37a2
-Text_FE37A2:
+Text448:
 textfunction $0 $4
 text "特技\l"
 textfunction $0 $4
@@ -421,16 +421,16 @@ textfunction $0 $4
 text "中断@"
 
 ;fe37b8
-Text_FE37B8:
+Text449:
 text "シレン@"
 
 ;fe37bc
-Text_FE37BC:
+Text450:
 text "にせ"
 strvar TextStrVar_PlayerName
 text "@"
 
 ;fe37c1
-Text_FE37C1:
+Text451:
 strvar TextStrVar_PlayerName
 text "@"

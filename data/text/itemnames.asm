@@ -1,1587 +1,1587 @@
 ;fe3eea
-Text_FE3EEA:
+Text751:
 text "武器@"
 
 ;fe3eef
-Text_FE3EEF:
+Text752:
 text "矢@"
 
 ;fe3ef2
-Text_FE3EF2:
+Text753:
 text "盾@"
 
 ;fe3ef4
-Text_FE3EF4:
+Text754:
 text "腕輪@"
 
 ;fe3ef7
-Text_FE3EF7:
+Text755:
 text "巻物@"
 
 ;fe3efa
-Text_FE3EFA:
+Text756:
 text "杖@"
 
 ;fe3efc
-Text_FE3EFC:
+Text757:
 text "草@"
 
 ;fe3efe
-Text_FE3EFE:
+Text758:
 text "壺@"
 
 ;fe3f00
-Text_FE3F00:
+Text759:
 text "おにぎり@"
 
 ;fe3f05
-Text_FE3F05:
+Text760:
 text "山賊親分@"
 
 ;fe3f0e
-Text_FE3F0E:
+Text761:
 text "天狗師匠@"
 
 ;fe3f17
-Text_FE3F17:
+Text762:
 text "予備３３@"
 
 ;fe3f1d
-Text_FE3F1D:
+Text763:
 text "予備４３@"
 
 ;fe3f23
-Text_FE3F23:
+Text764:
 text "こん棒@"
 
 ;fe3f28
-Text_FE3F28:
+Text765:
 text "長巻@"
 
 ;fe3f2c
-Text_FE3F2C:
+Text766:
 text "ブフーの包丁@"
 
 ;fe3f35
-Text_FE3F35:
+Text767:
 text "カタナ@"
 
 ;fe3f39
-Text_FE3F39:
+Text768:
 text "ドラゴンキラー@"
 
 ;fe3f41
-Text_FE3F41:
+Text769:
 text "どうたぬき@"
 
 ;fe3f47
-Text_FE3F47:
+Text770:
 text "剛剣マンジカブラ@"
 
 ;fe3f52
-Text_FE3F52:
+Text771:
 text "成仏の鎌@"
 
 ;fe3f5a
-Text_FE3F5A:
+Text772:
 text "つるはし@"
 
 ;fe3f5f
-Text_FE3F5F:
+Text773:
 text "必中の剣@"
 
 ;fe3f66
-Text_FE3F66:
+Text774:
 text "ミノタウロスの斧@"
 
 ;fe3f70
-Text_FE3F70:
+Text775:
 text "妖刀かまいたち@"
 
 ;fe3f7a
-Text_FE3F7A:
+Text776:
 text "１ツ目殺し@"
 
 ;fe3f81
-Text_FE3F81:
+Text777:
 text "ドレインバスター@"
 
 ;fe3f8a
-Text_FE3F8A:
+Text778:
 text "火迅風魔刀@"
 
 ;fe3f94
-Text_FE3F94:
+Text779:
 text "秘剣カブラステギ@"
 
 ;fe3f9f
-Text_FE3F9F:
+Text780:
 text "木の矢@"
 
 ;fe3fa5
-Text_FE3FA5:
+Text781:
 text "鉄の矢@"
 
 ;fe3fab
-Text_FE3FAB:
+Text782:
 text "銀の矢@"
 
 ;fe3fb1
-Text_FE3FB1:
+Text783:
 text "新規アイテム@"
 
 ;fe3fb8
-Text_FE3FB8:
+Text784:
 text "新規アイテム@"
 
 ;fe3fbf
-Text_FE3FBF:
+Text785:
 text "新規アイテム@"
 
 ;fe3fc6
-Text_FE3FC6:
+Text786:
 text "皮甲の盾@"
 
 ;fe3fcd
-Text_FE3FCD:
+Text787:
 text "青銅甲の盾@"
 
 ;fe3fd6
-Text_FE3FD6:
+Text788:
 text "無どくの盾@"
 
 ;fe3fdd
-Text_FE3FDD:
+Text789:
 text "木甲の盾@"
 
 ;fe3fe4
-Text_FE3FE4:
+Text790:
 text "鉄甲の盾@"
 
 ;fe3feb
-Text_FE3FEB:
+Text791:
 text "ドラゴンシールド@"
 
 ;fe3ff4
-Text_FE3FF4:
+Text792:
 text "風魔の盾@"
 
 ;fe3ffa
-Text_FE3FFA:
+Text793:
 text "バトルカウンター@"
 
 ;fe4003
-Text_FE4003:
+Text794:
 text "重装の盾@"
 
 ;fe4009
-Text_FE4009:
+Text795:
 text "やまびこの盾@"
 
 ;fe4010
-Text_FE4010:
+Text796:
 text "見切りの盾@"
 
 ;fe4017
-Text_FE4017:
+Text797:
 text "見かけだおしの盾@"
 
 ;fe4020
-Text_FE4020:
+Text798:
 text "使い捨ての盾@"
 
 ;fe4029
-Text_FE4029:
+Text799:
 text "地雷ナバリの盾@"
 
 ;fe4032
-Text_FE4032:
+Text800:
 text "トドの盾@"
 
 ;fe4037
-Text_FE4037:
+Text801:
 text "ラセン風魔の盾@"
 
 ;fe4040
-Text_FE4040:
+Text802:
 text "新規アイテム@"
 
 ;fe4047
-Text_FE4047:
+Text803:
 text "新規アイテム@"
 
 ;fe404e
-Text_FE404E:
+Text804:
 text "薬草@"
 
 ;fe4052
-Text_FE4052:
+Text805:
 text "弟切草@"
 
 ;fe4058
-Text_FE4058:
+Text806:
 text "しあわせ草@"
 
 ;fe405e
-Text_FE405E:
+Text807:
 text "めぐすり草@"
 
 ;fe4064
-Text_FE4064:
+Text808:
 text "ドラゴン草@"
 
 ;fe406a
-Text_FE406A:
+Text809:
 text "無敵草@"
 
 ;fe4070
-Text_FE4070:
+Text810:
 text "天使の種@"
 
 ;fe4078
-Text_FE4078:
+Text811:
 text "復活の草@"
 
 ;fe407f
-Text_FE407F:
+Text812:
 text "消え去り草@"
 
 ;fe4087
-Text_FE4087:
+Text813:
 text "くねくね草@"
 
 ;fe408d
-Text_FE408D:
+Text814:
 text "不幸の種@"
 
 ;fe4095
-Text_FE4095:
+Text815:
 text "超不幸の種@"
 
 ;fe409f
-Text_FE409F:
+Text816:
 text "キグニ族の種@"
 
 ;fe40a8
-Text_FE40A8:
+Text817:
 text "物忘れの草@"
 
 ;fe40af
-Text_FE40AF:
+Text818:
 text "－－－@"
 
 ;fe40b3
-Text_FE40B3:
+Text819:
 text "命の草@"
 
 ;fe40b8
-Text_FE40B8:
+Text820:
 text "胃拡張の種@"
 
 ;fe40c2
-Text_FE40C2:
+Text821:
 text "胃縮小の種@"
 
 ;fe40cc
-Text_FE40CC:
+Text822:
 text "話の種@"
 
 ;fe40d2
-Text_FE40D2:
+Text823:
 text "ちからの草@"
 
 ;fe40d8
-Text_FE40D8:
+Text824:
 text "どく消し草@"
 
 ;fe40df
-Text_FE40DF:
+Text825:
 text "どく草@"
 
 ;fe40e3
-Text_FE40E3:
+Text826:
 text "混乱草@"
 
 ;fe40e9
-Text_FE40E9:
+Text827:
 text "睡眠草@"
 
 ;fe40ef
-Text_FE40EF:
+Text828:
 text "雑草@"
 
 ;fe40f3
-Text_FE40F3:
+Text829:
 text "新規アイテム@"
 
 ;fe40fa
-Text_FE40FA:
+Text830:
 text "新規アイテム@"
 
 ;fe4101
-Text_FE4101:
+Text831:
 text "新規アイテム@"
 
 ;fe4108
-Text_FE4108:
+Text832:
 text "新規アイテム@"
 
 ;fe410f
-Text_FE410F:
+Text833:
 text "新規アイテム@"
 
 ;fe4116
-Text_FE4116:
+Text834:
 text "新規アイテム@"
 
 ;fe411d
-Text_FE411D:
+Text835:
 text "新規アイテム@"
 
 ;fe4124
-Text_FE4124:
+Text836:
 text "新規アイテム@"
 
 ;fe412b
-Text_FE412B:
+Text837:
 text "新規アイテム@"
 
 ;fe4132
-Text_FE4132:
+Text838:
 text "新規アイテム@"
 
 ;fe4139
-Text_FE4139:
+Text839:
 text "新規アイテム@"
 
 ;fe4140
-Text_FE4140:
+Text840:
 text "新規アイテム@"
 
 ;fe4147
-Text_FE4147:
+Text841:
 text "新規アイテム@"
 
 ;fe414e
-Text_FE414E:
+Text842:
 text "新規アイテム@"
 
 ;fe4155
-Text_FE4155:
+Text843:
 text "新規アイテム@"
 
 ;fe415c
-Text_FE415C:
+Text844:
 text "新規アイテム@"
 
 ;fe4163
-Text_FE4163:
+Text845:
 text "新規アイテム@"
 
 ;fe416a
-Text_FE416A:
+Text846:
 text "新規アイテム@"
 
 ;fe4171
-Text_FE4171:
+Text847:
 text "新規アイテム@"
 
 ;fe4178
-Text_FE4178:
+Text848:
 text "新規アイテム@"
 
 ;fe417f
-Text_FE417F:
+Text849:
 text "新規アイテム@"
 
 ;fe4186
-Text_FE4186:
+Text850:
 text "おはらいの巻物@"
 
 ;fe418e
-Text_FE418E:
+Text851:
 text "識別の巻物@"
 
 ;fe4195
-Text_FE4195:
+Text852:
 text "あかりの巻物@"
 
 ;fe419c
-Text_FE419C:
+Text853:
 text "壺増大の巻物@"
 
 ;fe41a4
-Text_FE41A4:
+Text854:
 text "真空斬りの巻物@"
 
 ;fe41af
-Text_FE41AF:
+Text855:
 text "くちなしの巻物@"
 
 ;fe41b7
-Text_FE41B7:
+Text856:
 text "－－の巻物@"
 
 ;fe41bd
-Text_FE41BD:
+Text857:
 text "ワナの巻物@"
 
 ;fe41c3
-Text_FE41C3:
+Text858:
 text "困った時の巻物@"
 
 ;fe41cc
-Text_FE41CC:
+Text859:
 text "敵倍速の巻物@"
 
 ;fe41d6
-Text_FE41D6:
+Text860:
 text "バクスイの巻物@"
 
 ;fe41de
-Text_FE41DE:
+Text861:
 text "パワーアップの巻物@"
 
 ;fe41e8
-Text_FE41E8:
+Text862:
 text "－－の巻物@"
 
 ;fe41ee
-Text_FE41EE:
+Text863:
 text "自爆の巻物@"
 
 ;fe41f6
-Text_FE41F6:
+Text864:
 text "大部屋の巻物@"
 
 ;fe41fe
-Text_FE41FE:
+Text865:
 text "モンスターハウスの巻物@"
 
 ;fe420a
-Text_FE420A:
+Text866:
 text "混乱の巻物@"
 
 ;fe4212
-Text_FE4212:
+Text867:
 text "ジェノサイドの巻物@"
 
 ;fe421c
-Text_FE421C:
+Text868:
 text "白紙の巻物@"
 
 ;fe4224
-Text_FE4224:
+Text869:
 text "迷子の巻物@"
 
 ;fe422b
-Text_FE422B:
+Text870:
 text "天の恵みの巻物@"
 
 ;fe4235
-Text_FE4235:
+Text871:
 text "地の恵みの巻物@"
 
 ;fe423e
-Text_FE423E:
+Text872:
 text "メッキの巻物@"
 
 ;fe4245
-Text_FE4245:
+Text873:
 text "吸い出しの巻物@"
 
 ;fe424e
-Text_FE424E:
+Text874:
 text "拾えずの巻物@"
 
 ;fe4256
-Text_FE4256:
+Text875:
 text "－－の巻物@"
 
 ;fe425c
-Text_FE425C:
+Text876:
 text "新規アイテム@"
 
 ;fe4263
-Text_FE4263:
+Text877:
 text "新規アイテム@"
 
 ;fe426a
-Text_FE426A:
+Text878:
 text "新規アイテム@"
 
 ;fe4271
-Text_FE4271:
+Text879:
 text "新規アイテム@"
 
 ;fe4278
-Text_FE4278:
+Text880:
 text "新規アイテム@"
 
 ;fe427f
-Text_FE427F:
+Text881:
 text "新規アイテム@"
 
 ;fe4286
-Text_FE4286:
+Text882:
 text "新規アイテム@"
 
 ;fe428d
-Text_FE428D:
+Text883:
 text "新規アイテム@"
 
 ;fe4294
-Text_FE4294:
+Text884:
 text "新規アイテム@"
 
 ;fe429b
-Text_FE429B:
+Text885:
 text "新規アイテム@"
 
 ;fe42a2
-Text_FE42A2:
+Text886:
 text "新規アイテム@"
 
 ;fe42a9
-Text_FE42A9:
+Text887:
 text "新規アイテム@"
 
 ;fe42b0
-Text_FE42B0:
+Text888:
 text "封印の杖@"
 
 ;fe42b7
-Text_FE42B7:
+Text889:
 text "ふきとばしの杖@"
 
 ;fe42bf
-Text_FE42BF:
+Text890:
 text "しあわせの杖@"
 
 ;fe42c6
-Text_FE42C6:
+Text891:
 text "不幸の杖@"
 
 ;fe42cd
-Text_FE42CD:
+Text892:
 text "身がわりの杖@"
 
 ;fe42d5
-Text_FE42D5:
+Text893:
 text "場所替えの杖@"
 
 ;fe42de
-Text_FE42DE:
+Text894:
 text "ブフーの杖@"
 
 ;fe42e4
-Text_FE42E4:
+Text895:
 text "ガイコツまどうの杖@"
 
 ;fe42ee
-Text_FE42EE:
+Text896:
 text "かなしばりの杖@"
 
 ;fe42f6
-Text_FE42F6:
+Text897:
 text "一時しのぎの杖@"
 
 ;fe42ff
-Text_FE42FF:
+Text898:
 text "痛み分けの杖@"
 
 ;fe4308
-Text_FE4308:
+Text899:
 text "新規アイテム@"
 
 ;fe430f
-Text_FE430F:
+Text900:
 text "新規アイテム@"
 
 ;fe4316
-Text_FE4316:
+Text901:
 text "新規アイテム@"
 
 ;fe431d
-Text_FE431D:
+Text902:
 text "新規アイテム@"
 
 ;fe4324
-Text_FE4324:
+Text903:
 text "新規アイテム@"
 
 ;fe432b
-Text_FE432B:
+Text904:
 text "新規アイテム@"
 
 ;fe4332
-Text_FE4332:
+Text905:
 text "新規アイテム@"
 
 ;fe4339
-Text_FE4339:
+Text906:
 text "新規アイテム@"
 
 ;fe4340
-Text_FE4340:
+Text907:
 text "新規アイテム@"
 
 ;fe4347
-Text_FE4347:
+Text908:
 text "新規アイテム@"
 
 ;fe434e
-Text_FE434E:
+Text909:
 text "新規アイテム@"
 
 ;fe4355
-Text_FE4355:
+Text910:
 text "新規アイテム@"
 
 ;fe435c
-Text_FE435C:
+Text911:
 text "通過の腕輪@"
 
 ;fe4364
-Text_FE4364:
+Text912:
 text "値切の腕輪@"
 
 ;fe436c
-Text_FE436C:
+Text913:
 text "ワナ師の腕輪@"
 
 ;fe4374
-Text_FE4374:
+Text914:
 text "レベル固定の腕輪@"
 
 ;fe437f
-Text_FE437F:
+Text915:
 text "回復の腕輪@"
 
 ;fe4387
-Text_FE4387:
+Text916:
 text "錆よけの腕輪@"
 
 ;fe438f
-Text_FE438F:
+Text917:
 text "会心の腕輪@"
 
 ;fe4397
-Text_FE4397:
+Text918:
 text "痛恨の腕輪@"
 
 ;fe439f
-Text_FE439F:
+Text919:
 text "呪いよけの腕輪@"
 
 ;fe43a8
-Text_FE43A8:
+Text920:
 text "遠投の腕輪@"
 
 ;fe43b0
-Text_FE43B0:
+Text921:
 text "しあわせの腕輪@"
 
 ;fe43b8
-Text_FE43B8:
+Text922:
 text "垂れ流しの腕輪@"
 
 ;fe43c2
-Text_FE43C2:
+Text923:
 text "透視の腕輪@"
 
 ;fe43ca
-Text_FE43CA:
+Text924:
 text "混乱よけの腕輪@"
 
 ;fe43d4
-Text_FE43D4:
+Text925:
 text "識別の腕輪@"
 
 ;fe43db
-Text_FE43DB:
+Text926:
 text "新規アイテム@"
 
 ;fe43e2
-Text_FE43E2:
+Text927:
 text "新規アイテム@"
 
 ;fe43e9
-Text_FE43E9:
+Text928:
 text "新規アイテム@"
 
 ;fe43f0
-Text_FE43F0:
+Text929:
 text "新規アイテム@"
 
 ;fe43f7
-Text_FE43F7:
+Text930:
 text "新規アイテム@"
 
 ;fe43fe
-Text_FE43FE:
+Text931:
 text "新規アイテム@"
 
 ;fe4405
-Text_FE4405:
+Text932:
 text "新規アイテム@"
 
 ;fe440c
-Text_FE440C:
+Text933:
 text "新規アイテム@"
 
 ;fe4413
-Text_FE4413:
+Text934:
 text "新規アイテム@"
 
 ;fe441a
-Text_FE441A:
+Text935:
 text "新規アイテム@"
 
 ;fe4421
-Text_FE4421:
+Text936:
 text "新規アイテム@"
 
 ;fe4428
-Text_FE4428:
+Text937:
 text "新規アイテム@"
 
 ;fe442f
-Text_FE442F:
+Text938:
 text "おにぎり@"
 
 ;fe4434
-Text_FE4434:
+Text939:
 text "大きいおにぎり@"
 
 ;fe443c
-Text_FE443C:
+Text940:
 text "くさったおにぎり@"
 
 ;fe4445
-Text_FE4445:
+Text941:
 text "巨大なおにぎり@"
 
 ;fe444e
-Text_FE444E:
+Text942:
 text "特製おにぎり@"
 
 ;fe4457
-Text_FE4457:
+Text943:
 text "新規アイテム@"
 
 ;fe445e
-Text_FE445E:
+Text944:
 text "保存の壺@"
 
 ;fe4465
-Text_FE4465:
+Text945:
 text "やりすごしの壺@"
 
 ;fe446d
-Text_FE446D:
+Text946:
 text "分裂の壺@"
 
 ;fe4474
-Text_FE4474:
+Text947:
 text "強化の壺@"
 
 ;fe447a
-Text_FE447A:
+Text948:
 text "識別の壺@"
 
 ;fe4480
-Text_FE4480:
+Text949:
 text "背中の壺@"
 
 ;fe4486
-Text_FE4486:
+Text950:
 text "倉庫の壺@"
 
 ;fe448d
-Text_FE448D:
+Text951:
 text "弱化の壺@"
 
 ;fe4494
-Text_FE4494:
+Text952:
 text "－－－@"
 
 ;fe4498
-Text_FE4498:
+Text953:
 text "底抜けの壺@"
 
 ;fe44a0
-Text_FE44A0:
+Text954:
 text "魔物のるつぼ@"
 
 ;fe44a8
-Text_FE44A8:
+Text955:
 text "変化の壺@"
 
 ;fe44af
-Text_FE44AF:
+Text956:
 text "合成の壺@"
 
 ;fe44b6
-Text_FE44B6:
+Text957:
 text "トドの壺@"
 
 ;fe44bb
-Text_FE44BB:
+Text958:
 text "ガイバラの壺@"
 
 ;fe44c2
-Text_FE44C2:
+Text959:
 text "アホくさい壺@"
 
 ;fe44c9
-Text_FE44C9:
+Text960:
 text "割れない壺@"
 
 ;fe44d0
-Text_FE44D0:
+Text961:
 text "うっぷんばらしの壺@"
 
 ;fe44da
-Text_FE44DA:
+Text962:
 text "新規アイテム@"
 
 ;fe44e1
-Text_FE44E1:
+Text963:
 text "新規アイテム@"
 
 ;fe44e8
-Text_FE44E8:
+Text964:
 text "新規アイテム@"
 
 ;fe44ef
-Text_FE44EF:
+Text965:
 text "新規アイテム@"
 
 ;fe44f6
-Text_FE44F6:
+Text966:
 text "新規アイテム@"
 
 ;fe44fd
-Text_FE44FD:
+Text967:
 text "新規アイテム@"
 
 ;fe4504
-Text_FE4504:
+Text968:
 text "新規アイテム@"
 
 ;fe450b
-Text_FE450B:
+Text969:
 text "新規アイテム@"
 
 ;fe4512
-Text_FE4512:
+Text970:
 text "新規アイテム@"
 
 ;fe4519
-Text_FE4519:
+Text971:
 text "新規アイテム@"
 
 ;fe4520
-Text_FE4520:
+Text972:
 text "新規アイテム@"
 
 ;fe4527
-Text_FE4527:
+Text973:
 text "新規アイテム@"
 
 ;fe452e
-Text_FE452E:
+Text974:
 text "新規アイテム@"
 
 ;fe4535
-Text_FE4535:
+Text975:
 text "新規アイテム@"
 
 ;fe453c
-Text_FE453C:
+Text976:
 text "新規アイテム@"
 
 ;fe4543
-Text_FE4543:
+Text977:
 text "新規アイテム@"
 
 ;fe454a
-Text_FE454A:
+Text978:
 text "新規アイテム@"
 
 ;fe4551
-Text_FE4551:
+Text979:
 text "新規アイテム@"
 
 ;fe4558
-Text_FE4558:
+Text980:
 text "新規アイテム@"
 
 ;fe455f
-Text_FE455F:
+Text981:
 text "新規アイテム@"
 
 ;fe4566
-Text_FE4566:
+Text982:
 text "新規アイテム@"
 
 ;fe456d
-Text_FE456D:
+Text983:
 text "新規アイテム@"
 
 ;fe4574
-Text_FE4574:
+Text984:
 text "新規アイテム@"
 
 ;fe457b
-Text_FE457B:
+Text985:
 text "新規アイテム@"
 
 ;fe4582
-Text_FE4582:
+Text986:
 text "新規アイテム@"
 
 ;fe4589
-Text_FE4589:
+Text987:
 text "新規アイテム@"
 
 ;fe4590
-Text_FE4590:
+Text988:
 text "モンスターの肉@"
 
 ;fe4599
-Text_FE4599:
+Text989:
 text "黄金の羽根@"
 
 ;fe45a1
-Text_FE45A1:
+Text990:
 text "しあわせの箱@"
 
 ;fe45a9
-Text_FE45A9:
+Text991:
 text "奇妙な箱@"
 
 ;fe45b1
-Text_FE45B1:
+Text992:
 text "新規アイテム目的物@"
 
 ;fe45bc
-Text_FE45BC:
+Text993:
 text "ギタン@"
 
 ;fe45c0
-Text_FE45C0:
+Text994:
 text "　　　　　　　　　　@"
 
 ;fe45cb
-Text_FE45CB:
+Text995:
 text "ンドゥバ@"
 
 ;fe45d0
-Text_FE45D0:
+Text996:
 text "赤い草@"
 
 ;fe45d5
-Text_FE45D5:
+Text997:
 text "青い草@"
 
 ;fe45da
-Text_FE45DA:
+Text998:
 text "黄色い草@"
 
 ;fe45e0
-Text_FE45E0:
+Text999:
 text "緑の草@"
 
 ;fe45e5
-Text_FE45E5:
+Text1000:
 text "白い草@"
 
 ;fe45ea
-Text_FE45EA:
+Text1001:
 text "黒い草@"
 
 ;fe45ef
-Text_FE45EF:
+Text1002:
 text "紫の草@"
 
 ;fe45f4
-Text_FE45F4:
+Text1003:
 text "茶色の草@"
 
 ;fe45fb
-Text_FE45FB:
+Text1004:
 text "灰色の草@"
 
 ;fe4602
-Text_FE4602:
+Text1005:
 text "水色の草@"
 
 ;fe4609
-Text_FE4609:
+Text1006:
 text "黄緑の草@"
 
 ;fe460f
-Text_FE460F:
+Text1007:
 text "褐色の草@"
 
 ;fe4616
-Text_FE4616:
+Text1008:
 text "白黒の草@"
 
 ;fe461d
-Text_FE461D:
+Text1009:
 text "紅白の草@"
 
 ;fe4624
-Text_FE4624:
+Text1010:
 text "肌色の草@"
 
 ;fe462b
-Text_FE462B:
+Text1011:
 text "紅色の草@"
 
 ;fe4632
-Text_FE4632:
+Text1012:
 text "虹色の草@"
 
 ;fe4639
-Text_FE4639:
+Text1013:
 text "無色の草@"
 
 ;fe4640
-Text_FE4640:
+Text1014:
 text "空色の草@"
 
 ;fe4647
-Text_FE4647:
+Text1015:
 text "朱色の草@"
 
 ;fe464e
-Text_FE464E:
+Text1016:
 text "紺色の草@"
 
 ;fe4655
-Text_FE4655:
+Text1017:
 text "土色の草@"
 
 ;fe465c
-Text_FE465C:
+Text1018:
 text "秋色の草@"
 
 ;fe4663
-Text_FE4663:
+Text1019:
 text "青緑の草@"
 
 ;fe466a
-Text_FE466A:
+Text1020:
 text "青紫の草@"
 
 ;fe4671
-Text_FE4671:
+Text1021:
 text "赤紫の草@"
 
 ;fe4678
-Text_FE4678:
+Text1022:
 text "玉虫色の草@"
 
 ;fe4681
-Text_FE4681:
+Text1023:
 text "焦茶色の草@"
 
 ;fe468a
-Text_FE468A:
+Text1024:
 text "真紅の草@"
 
 ;fe4691
-Text_FE4691:
+Text1025:
 text "赤茶色の草@"
 
 ;fe469a
-Text_FE469A:
+Text1026:
 text "山吹色の草@"
 
 ;fe46a3
-Text_FE46A3:
+Text1027:
 text "黄土色の草@"
 
 ;fe46ab
-Text_FE46AB:
+Text1028:
 text "うす緑の草@"
 
 ;fe46b2
-Text_FE46B2:
+Text1029:
 text "クリーム色の草@"
 
 ;fe46bb
-Text_FE46BB:
+Text1030:
 text "うす紫の草@"
 
 ;fe46c2
-Text_FE46C2:
+Text1031:
 text "ベージュの草@"
 
 ;fe46c9
-Text_FE46C9:
+Text1032:
 text "うす茶色の草@"
 
 ;fe46d2
-Text_FE46D2:
+Text1033:
 text "レモン色の草@"
 
 ;fe46da
-Text_FE46DA:
+Text1034:
 text "バラ色の草@"
 
 ;fe46e1
-Text_FE46E1:
+Text1035:
 text "うす紅色の草@"
 
 ;fe46ea
-Text_FE46EA:
+Text1036:
 text "うす桃色の草@"
 
 ;fe46f3
-Text_FE46F3:
+Text1037:
 text "うす赤色の草@"
 
 ;fe46fc
-Text_FE46FC:
+Text1038:
 text "ぐんじょう色の草@"
 
 ;fe4706
-Text_FE4706:
+Text1039:
 text "こがね色の草@"
 
 ;fe470e
-Text_FE470E:
+Text1040:
 text "ピンク色の草@"
 
 ;fe4716
-Text_FE4716:
+Text1041:
 text "オレンジ色の草@"
 
 ;fe471f
-Text_FE471F:
+Text1042:
 text "ネズミの絵の巻物@"
 
 ;fe4729
-Text_FE4729:
+Text1043:
 text "ウシの絵の巻物@"
 
 ;fe4732
-Text_FE4732:
+Text1044:
 text "トラの絵の巻物@"
 
 ;fe473b
-Text_FE473B:
+Text1045:
 text "ウサギの絵の巻物@"
 
 ;fe4745
-Text_FE4745:
+Text1046:
 text "リュウの絵の巻物@"
 
 ;fe474f
-Text_FE474F:
+Text1047:
 text "ヘビの絵の巻物@"
 
 ;fe4758
-Text_FE4758:
+Text1048:
 text "ウマの絵の巻物@"
 
 ;fe4761
-Text_FE4761:
+Text1049:
 text "ヒツジの絵の巻物@"
 
 ;fe476b
-Text_FE476B:
+Text1050:
 text "サルの絵の巻物@"
 
 ;fe4774
-Text_FE4774:
+Text1051:
 text "ニワトリの絵の巻物@"
 
 ;fe477f
-Text_FE477F:
+Text1052:
 text "イヌの絵の巻物@"
 
 ;fe4788
-Text_FE4788:
+Text1053:
 text "イノシシの絵の巻物@"
 
 ;fe4793
-Text_FE4793:
+Text1054:
 text "ネコの絵の巻物@"
 
 ;fe479c
-Text_FE479C:
+Text1055:
 text "シカの絵の巻物@"
 
 ;fe47a5
-Text_FE47A5:
+Text1056:
 text "カエルの絵の巻物@"
 
 ;fe47af
-Text_FE47AF:
+Text1057:
 text "トカゲの絵の巻物@"
 
 ;fe47b9
-Text_FE47B9:
+Text1058:
 text "ゾウの絵の巻物@"
 
 ;fe47c2
-Text_FE47C2:
+Text1059:
 text "キリンの絵の巻物@"
 
 ;fe47cc
-Text_FE47CC:
+Text1060:
 text "カメの絵の巻物@"
 
 ;fe47d5
-Text_FE47D5:
+Text1061:
 text "ツルの絵の巻物@"
 
 ;fe47de
-Text_FE47DE:
+Text1062:
 text "ウグイスの絵の巻物@"
 
 ;fe47e9
-Text_FE47E9:
+Text1063:
 text "クマの絵の巻物@"
 
 ;fe47f2
-Text_FE47F2:
+Text1064:
 text "スズメの絵の巻物@"
 
 ;fe47fc
-Text_FE47FC:
+Text1065:
 text "カバの絵の巻物@"
 
 ;fe4805
-Text_FE4805:
+Text1066:
 text "ライオンの絵の巻物@"
 
 ;fe4810
-Text_FE4810:
+Text1067:
 text "サイの絵の巻物@"
 
 ;fe4819
-Text_FE4819:
+Text1068:
 text "コンドルの絵の巻物@"
 
 ;fe4824
-Text_FE4824:
+Text1069:
 text "タカの絵の巻物@"
 
 ;fe482d
-Text_FE482D:
+Text1070:
 text "ハトの絵の巻物@"
 
 ;fe4836
-Text_FE4836:
+Text1071:
 text "カラスの絵の巻物@"
 
 ;fe4840
-Text_FE4840:
+Text1072:
 text "ワシの絵の巻物@"
 
 ;fe4849
-Text_FE4849:
+Text1073:
 text "メジロの絵の巻物@"
 
 ;fe4853
-Text_FE4853:
+Text1074:
 text "コアラの絵の巻物@"
 
 ;fe485d
-Text_FE485D:
+Text1075:
 text "ダチョウの絵の巻物@"
 
 ;fe4868
-Text_FE4868:
+Text1076:
 text "キツネの絵の巻物@"
 
 ;fe4872
-Text_FE4872:
+Text1077:
 text "タヌキの絵の巻物@"
 
 ;fe487c
-Text_FE487C:
+Text1078:
 text "イタチの絵の巻物@"
 
 ;fe4886
-Text_FE4886:
+Text1079:
 text "ワニの絵の巻物@"
 
 ;fe488f
-Text_FE488F:
+Text1080:
 text "桜の杖@"
 
 ;fe4894
-Text_FE4894:
+Text1081:
 text "梅の杖@"
 
 ;fe4899
-Text_FE4899:
+Text1082:
 text "松の杖@"
 
 ;fe489e
-Text_FE489E:
+Text1083:
 text "竹の杖@"
 
 ;fe48a3
-Text_FE48A3:
+Text1084:
 text "杉の杖@"
 
 ;fe48a8
-Text_FE48A8:
+Text1085:
 text "柳の杖@"
 
 ;fe48ad
-Text_FE48AD:
+Text1086:
 text "栗の杖@"
 
 ;fe48b2
-Text_FE48B2:
+Text1087:
 text "石の杖@"
 
 ;fe48b7
-Text_FE48B7:
+Text1088:
 text "骨の杖@"
 
 ;fe48bc
-Text_FE48BC:
+Text1089:
 text "牙の杖@"
 
 ;fe48c1
-Text_FE48C1:
+Text1090:
 text "桐の杖@"
 
 ;fe48c6
-Text_FE48C6:
+Text1091:
 text "鉛の杖@"
 
 ;fe48cb
-Text_FE48CB:
+Text1092:
 text "鉄の杖@"
 
 ;fe48d0
-Text_FE48D0:
+Text1093:
 text "銅の杖@"
 
 ;fe48d5
-Text_FE48D5:
+Text1094:
 text "錫の杖@"
 
 ;fe48da
-Text_FE48DA:
+Text1095:
 text "金の杖@"
 
 ;fe48de
-Text_FE48DE:
+Text1096:
 text "銀の杖@"
 
 ;fe48e3
-Text_FE48E3:
+Text1097:
 text "青銅の杖@"
 
 ;fe48ea
-Text_FE48EA:
+Text1098:
 text "ひのきの杖@"
 
 ;fe48f0
-Text_FE48F0:
+Text1099:
 text "しいの杖@"
 
 ;fe48f5
-Text_FE48F5:
+Text1100:
 text "かえでの杖@"
 
 ;fe48fb
-Text_FE48FB:
+Text1101:
 text "けやきの杖@"
 
 ;fe4901
-Text_FE4901:
+Text1102:
 text "もみじの杖@"
 
 ;fe4907
-Text_FE4907:
+Text1103:
 text "ダイヤの腕輪@"
 
 ;fe490e
-Text_FE490E:
+Text1104:
 text "パールの腕輪@"
 
 ;fe4915
-Text_FE4915:
+Text1105:
 text "ルビーの腕輪@"
 
 ;fe491c
-Text_FE491C:
+Text1106:
 text "サファイアの腕輪@"
 
 ;fe4925
-Text_FE4925:
+Text1107:
 text "サンゴの腕輪@"
 
 ;fe492c
-Text_FE492C:
+Text1108:
 text "トルコ石の腕輪@"
 
 ;fe4935
-Text_FE4935:
+Text1109:
 text "エメラルドの腕輪@"
 
 ;fe493e
-Text_FE493E:
+Text1110:
 text "アメジストの腕輪@"
 
 ;fe4947
-Text_FE4947:
+Text1111:
 text "オパールの腕輪@"
 
 ;fe494f
-Text_FE494F:
+Text1112:
 text "ヒスイの腕輪@"
 
 ;fe4956
-Text_FE4956:
+Text1113:
 text "コハクの腕輪@"
 
 ;fe495d
-Text_FE495D:
+Text1114:
 text "トパーズの腕輪@"
 
 ;fe4965
-Text_FE4965:
+Text1115:
 text "メノウの腕輪@"
 
 ;fe496c
-Text_FE496C:
+Text1116:
 text "ジルコニアの腕輪@"
 
 ;fe4975
-Text_FE4975:
+Text1117:
 text "ガーネットの腕輪@"
 
 ;fe497e
-Text_FE497E:
+Text1118:
 text "カトレアの腕輪@"
 
 ;fe4986
-Text_FE4986:
+Text1119:
 text "ラピスラズリの腕輪@"
 
 ;fe4990
-Text_FE4990:
+Text1120:
 text "アクアマリンの腕輪@"
 
 ;fe499a
-Text_FE499A:
+Text1121:
 text "ムーンストーンの腕輪@"
 
 ;fe49a5
-Text_FE49A5:
+Text1122:
 text "タイガーアイの腕輪@"
 
 ;fe49af
-Text_FE49AF:
+Text1123:
 text "ブラッドストーンの腕輪@"
 
 ;fe49bb
-Text_FE49BB:
+Text1124:
 text "クジャク石の腕輪@"
 
 ;fe49c5
-Text_FE49C5:
+Text1125:
 text "キャッツアイの腕輪@"
 
 ;fe49cf
-Text_FE49CF:
+Text1126:
 text "クリスタルの腕輪@"
 
 ;fe49d8
-Text_FE49D8:
+Text1127:
 text "ガラスの腕輪@"
 
 ;fe49df
-Text_FE49DF:
+Text1128:
 text "プラチナの腕輪@"
 
 ;fe49e7
-Text_FE49E7:
+Text1129:
 text "トルマリンの腕輪@"
 
 ;fe49f0
-Text_FE49F0:
+Text1130:
 text "細い壺@"
 
 ;fe49f5
-Text_FE49F5:
+Text1131:
 text "丸い壺@"
 
 ;fe49fa
-Text_FE49FA:
+Text1132:
 text "四角い壺@"
 
 ;fe4a01
-Text_FE4A01:
+Text1133:
 text "三角の壺@"
 
 ;fe4a08
-Text_FE4A08:
+Text1134:
 text "太い壺@"
 
 ;fe4a0d
-Text_FE4A0D:
+Text1135:
 text "星形の壺@"
 
 ;fe4a14
-Text_FE4A14:
+Text1136:
 text "卵形の壺@"
 
 ;fe4a1b
-Text_FE4A1B:
+Text1137:
 text "浅い壺@"
 
 ;fe4a20
-Text_FE4A20:
+Text1138:
 text "深い壺@"
 
 ;fe4a25
-Text_FE4A25:
+Text1139:
 text "半月形の壺@"
 
 ;fe4a2e
-Text_FE4A2E:
+Text1140:
 text "三日月形の壺@"
 
 ;fe4a39
-Text_FE4A39:
+Text1141:
 text "傾いた壺@"
 
 ;fe4a3f
-Text_FE4A3F:
+Text1142:
 text "ゆがんだ壺@"
 
 ;fe4a45
-Text_FE4A45:
+Text1143:
 text "くびれた壺@"
 
 ;fe4a4b
-Text_FE4A4B:
+Text1144:
 text "ひょうたん形の壺@"
 
 ;fe4a55
-Text_FE4A55:
+Text1145:
 text "でこぼこの壺@"
 
 ;fe4a5c
-Text_FE4A5C:
+Text1146:
 text "ひし型の壺@"
 
 ;fe4a63
-Text_FE4A63:
+Text1147:
 text "だるま型の壺@"

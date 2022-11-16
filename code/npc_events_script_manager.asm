@@ -288,7 +288,7 @@ NPCScriptFunction_C15B07:
 	lda.b w0000                           ;C15B45|A500    |000000;  
 	cmp.b #$05                           ;C15B47|C905    |      ;  
 	bcs @lbl_C15B2A                      ;C15B49|B0DF    |C15B2A;  
-	jsl.l func_C3F65F                    ;C15B4B|225FF6C3|C3F65F;  
+	jsl.l Random                    ;C15B4B|225FF6C3|C3F65F;  
 	lda.b w0000                           ;C15B4F|A500    |000000;  
 	cmp.b #$55                           ;C15B51|C955    |      ;  
 	bcs @lbl_C15B2A                      ;C15B53|B0D5    |C15B2A;  
@@ -786,7 +786,7 @@ NPCScriptFunction_C15FE0:
 	GetEvent Event00
 	cmp.b #$08                           ;C1602A|C908    |      ;  
 	bcc @lbl_C15FFF                      ;C1602C|90D1    |C15FFF;  
-	jsl.l func_C3F65F                    ;C1602E|225FF6C3|C3F65F;  
+	jsl.l Random                    ;C1602E|225FF6C3|C3F65F;  
 	lda.b w0000                           ;C16032|A500    |000000;  
 	cmp.b #$55                           ;C16034|C955    |      ;  
 	bcs @lbl_C15FFF                      ;C16036|B0C7    |C15FFF;  
@@ -894,7 +894,7 @@ NPCScriptFunction_C16144:
 	jsl.l func_C62B37                    ;C16169|22372BC6|C62B37;  
 	lda.b w0000                           ;C1616D|A500    |000000;  
 	beq @lbl_C1617E                      ;C1616F|F00D    |C1617E;  
-	jsl.l func_C3F65F                    ;C16171|225FF6C3|C3F65F;  
+	jsl.l Random                    ;C16171|225FF6C3|C3F65F;  
 	lda.b w0000                           ;C16175|A500    |000000;  
 	cmp.b #$40                           ;C16177|C940    |      ;  
 	bcs @lbl_C1617E                      ;C16179|B003    |C1617E;  
@@ -1079,7 +1079,7 @@ NPCScriptFunction_C1634D:
 	bne @lbl_C16383                      ;C16368|D019    |C16383;  
 	GetEvent Event_Surala
 	bne @lbl_C16383                      ;C16374|D00D    |C16383;  
-	jsl.l func_C3F65F                    ;C16376|225FF6C3|C3F65F;  
+	jsl.l Random                    ;C16376|225FF6C3|C3F65F;  
 	lda.b w0000                           ;C1637A|A500    |000000;  
 	cmp.b #$40                           ;C1637C|C940    |      ;  
 	bcs @lbl_C16383                      ;C1637E|B003    |C16383;  
@@ -1200,7 +1200,7 @@ NPCScriptFunction_C164AD:
 	lda.b w0000                           ;C164B4|A500    |000000;  
 	cmp.b #$0F                           ;C164B6|C90F    |      ;  
 	bcs @lbl_C164C7                      ;C164B8|B00D    |C164C7;  
-	jsl.l func_C3F65F                    ;C164BA|225FF6C3|C3F65F;  
+	jsl.l Random                    ;C164BA|225FF6C3|C3F65F;  
 	lda.b w0000                           ;C164BE|A500    |000000;  
 	cmp.b #$20                           ;C164C0|C920    |      ;  
 	bcs @lbl_C164C7                      ;C164C2|B003    |C164C7;  
@@ -1216,7 +1216,7 @@ NPCScriptFunction_C164CA:
 	php                                  ;C164CA|08      |      ;  
 	sep #$20                             ;C164CB|E220    |      ;  
 @lbl_C164CD:
-	jsl.l func_C3F65F                    ;C164CD|225FF6C3|C3F65F;  
+	jsl.l Random                    ;C164CD|225FF6C3|C3F65F;  
 	lda.b w0000                           ;C164D1|A500    |000000;  
 	and.b #$03                           ;C164D3|2903    |      ;  
 	cmp.b #$03                           ;C164D5|C903    |      ;  
@@ -1252,7 +1252,7 @@ NPCScriptFunction_C1651A:
 	bcc @lbl_C16538                      ;C16525|9011    |C16538;  
 	cmp.b #$0F                           ;C16527|C90F    |      ;  
 	bcs @lbl_C16538                      ;C16529|B00D    |C16538;  
-	jsl.l func_C3F65F                    ;C1652B|225FF6C3|C3F65F;  
+	jsl.l Random                    ;C1652B|225FF6C3|C3F65F;  
 	lda.b w0000                           ;C1652F|A500    |000000;  
 	cmp.b #$0A                           ;C16531|C90A    |      ;  
 	bcs @lbl_C16538                      ;C16533|B003    |C16538;  
@@ -1273,7 +1273,7 @@ NPCScriptFunction_C1653B:
 	bcc @lbl_C16559                      ;C16546|9011    |C16559;  
 	cmp.b #$0A                           ;C16548|C90A    |      ;  
 	bcs @lbl_C16559                      ;C1654A|B00D    |C16559;  
-	jsl.l func_C3F65F                    ;C1654C|225FF6C3|C3F65F;  
+	jsl.l Random                    ;C1654C|225FF6C3|C3F65F;  
 	lda.b w0000                           ;C16550|A500    |000000;  
 	cmp.b #$0A                           ;C16552|C90A    |      ;  
 	bcs @lbl_C16559                      ;C16554|B003    |C16559;  
@@ -1294,7 +1294,7 @@ NPCScriptFunction_C1655C:
 	bcc @lbl_C1657A                      ;C16567|9011    |C1657A;  
 	cmp.b #$11                           ;C16569|C911    |      ;  
 	bcs @lbl_C1657A                      ;C1656B|B00D    |C1657A;  
-	jsl.l func_C3F65F                    ;C1656D|225FF6C3|C3F65F;  
+	jsl.l Random                    ;C1656D|225FF6C3|C3F65F;  
 	lda.b w0000                           ;C16571|A500    |000000;  
 	cmp.b #$15                           ;C16573|C915    |      ;  
 	bcs @lbl_C1657A                      ;C16575|B003    |C1657A;  
@@ -1368,7 +1368,7 @@ NPCScriptFunction_C1660E:
 NPCScriptFunction_C16623:
 	php                                  ;C16623|08      |      ;  
 	sep #$20                             ;C16624|E220    |      ;  
-	jsl.l func_C3F65F                    ;C16626|225FF6C3|C3F65F;  
+	jsl.l Random                    ;C16626|225FF6C3|C3F65F;  
 	lda.b w0000                           ;C1662A|A500    |000000;  
 	cmp.b #$20                           ;C1662C|C920    |      ;  
 	bcs @lbl_C16633                      ;C1662E|B003    |C16633;  
@@ -1389,7 +1389,7 @@ NPCScriptFunction_C16636:
 NPCScriptFunction_C16649:
 	php                                  ;C16649|08      |      ;  
 	sep #$20                             ;C1664A|E220    |      ;  
-	jsl.l func_C3F65F                    ;C1664C|225FF6C3|C3F65F;  
+	jsl.l Random                    ;C1664C|225FF6C3|C3F65F;  
 	lda.b w0000                           ;C16650|A500    |000000;  
 	cmp.b #$55                           ;C16652|C955    |      ;  
 	bcc @lbl_C16659                   ;C16654|9003    |C16659;  
@@ -1404,7 +1404,7 @@ NPCScriptFunction_C16649:
 NPCScriptFunction_C1665C:
 	php                                  ;C1665C|08      |      ;  
 	sep #$20                             ;C1665D|E220    |      ;  
-	jsl.l func_C3F65F                    ;C1665F|225FF6C3|C3F65F;  
+	jsl.l Random                    ;C1665F|225FF6C3|C3F65F;  
 	lda.b w0000                           ;C16663|A500    |000000;  
 	cmp.b #$80                           ;C16665|C980    |      ;  
 	bcc @lbl_C1666C                      ;C16667|9003    |C1666C;  
@@ -1433,7 +1433,7 @@ NPCScriptFunction_C166A1:
 	jsl.l func_C62B37                    ;C166AE|22372BC6|C62B37;  
 	lda.b w0000                           ;C166B2|A500    |000000;  
 	beq @lbl_C166C3                      ;C166B4|F00D    |C166C3;  
-	jsl.l func_C3F65F                    ;C166B6|225FF6C3|C3F65F;  
+	jsl.l Random                    ;C166B6|225FF6C3|C3F65F;  
 	lda.b w0000                           ;C166BA|A500    |000000;  
 	cmp.b #$20                           ;C166BC|C920    |      ;  
 	bcs @lbl_C166C3                      ;C166BE|B003    |C166C3;  
@@ -1895,10 +1895,10 @@ func_C16B75:
 	rtl                                  ;C16BE9|6B      |      ;  
 
 DATA8_C16BEA:
-	.db $00                               ;C16BEA
+	.db $00
 
 DATA8_C16BEB:
-	.db $04                               ;C16BEB
+	.db $04
 
 DATA8_C16BEC:
 	.db $04,$01,$05,$04,$02,$06,$04,$03   ;C16BEC
@@ -1916,10 +1916,10 @@ DATA8_C16BEC:
 	.db $25,$05,$26,$26,$05,$27,$27,$05   ;C16C4C
 	.db $28,$23,$06,$29,$24,$06,$2A,$25   ;C16C54
 	.db $06,$2B,$26,$06,$2C,$27,$06,$FF   ;C16C5C
-	.db $32,$05,$23,$33,$06,$23,$34,$07   ;C16C64|        |000005;  
-	.db $23,$35,$08,$23,$36,$09,$23,$37   ;C16C6C|        |000035;  
-	.db $06,$24,$38,$07,$24,$39,$08,$24   ;C16C74|        |000024;  
-	.db $FF                               ;C16C7C|        |30E208;  
+	.db $32,$05,$23,$33,$06,$23,$34,$07   ;C16C64
+	.db $23,$35,$08,$23,$36,$09,$23,$37   ;C16C6C
+	.db $06,$24,$38,$07,$24,$39,$08,$24   ;C16C74
+	.db $FF                               ;C16C7C
 
 func_C16C7D:
 	php                                  ;C16C7D|08      |      ;  

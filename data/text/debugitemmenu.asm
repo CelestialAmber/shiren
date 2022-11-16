@@ -48,12 +48,12 @@ cmdf6
 text "値は？（キャンセルすると自動設定）\l@"
 
 ;ff1068
-Text_FF1068:
+Text2378:
 cmdf6
 text "モンスターは？\l@"
 
 ;ff1072
-Text_FF1072:
+Text2379:
 textfunction $5
 text "@"
 

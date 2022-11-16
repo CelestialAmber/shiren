@@ -1,923 +1,1154 @@
 ;fe51c1
-Text_FE51C1:
-text "装備すると攻撃力が上がるぞ。@"
+Text1359:
+text "装備すると攻撃力が上がるぞ。"
+endtext
 
 ;fe51d1
-Text_FE51D1:
-text "つかの長いなぎなたのような剣だ。\l装備すると攻撃力が上がるぞ。@"
+Text1360:
+text "つかの長いなぎなたのような剣だ。\l装備すると攻撃力が上がるぞ。"
+endtext
 
 ;fe51f4
-Text_FE51F4:
-text "倒した時に肉を得られることがあるぞ。@"
+Text1361:
+text "倒した時に肉を得られることがあるぞ。"
+endtext
 
 ;fe520a
-Text_FE520A:
-text "風来人に、ひろく愛用されている剣。\l装備すると攻撃力が上がるぞ。@"
+Text1362:
+text "風来人に、ひろく愛用されている剣。\l装備すると攻撃力が上がるぞ。"
+endtext
 
 ;fe522f
-Text_FE522F:
-text "装備すると攻撃力が上がるぞ。\lドラゴン系モンスターに\l大きなダメージをあたえるぞ。@"
+Text1363:
+text "装備すると攻撃力が上がるぞ。\lドラゴン系モンスターに\l大きなダメージをあたえるぞ。"
+endtext
 
 ;fe525b
-Text_FE525B:
-text "天下の名刀。どうたぬき源馬作。@"
+Text1364:
+text "天下の名刀。どうたぬき源馬作。"
+endtext
 
 ;fe5271
-Text_FE5271:
-text "天才刀工師カブラが作った、\l幻ともいわれる希代の剛剣。@"
+Text1365:
+text "天才刀工師カブラが作った、\l幻ともいわれる希代の剛剣。"
+endtext
 
 ;fe5298
-Text_FE5298:
-text "ゴースト系モンスターに大きな\lダメージをあたえるぞ。@"
+Text1366:
+text "ゴースト系モンスターに大きな\lダメージをあたえるぞ。"
+endtext
 
 ;fe52b4
-Text_FE52B4:
-text "装備してかべを掘ることができる。\l攻撃力も上がるぞ。@"
+Text1367:
+text "装備してかべを掘ることができる。\l攻撃力も上がるぞ。"
+endtext
 
 ;fe52d1
-Text_FE52D1:
-text "必ず攻撃が当たるぞ。@"
+Text1368:
+text "必ず攻撃が当たるぞ。"
+endtext
 
 ;fe52df
-Text_FE52DF:
-text "会心の一撃がでるぞ。@"
+Text1369:
+text "会心の一撃がでるぞ。"
+endtext
 
 ;fe52ed
-Text_FE52ED:
-text "前方３方向１度に攻撃できるぞ。@"
+Text1370:
+text "前方３方向１度に攻撃できるぞ。"
+endtext
 
 ;fe5303
-Text_FE5303:
-text "１ツ目のモンスターに大きな\lダメージを与えるぞ。@"
+Text1371:
+text "１ツ目のモンスターに大きな\lダメージを与えるぞ。"
+endtext
 
 ;fe531d
-Text_FE531D:
-text "ステータスを吸い取るモンスターに\l大きなダメージを与えるぞ。@"
+Text1372:
+text "ステータスを吸い取るモンスターに\l大きなダメージを与えるぞ。"
+endtext
 
 ;fe533f
-Text_FE533F:
-text "カタナをきたえぬいてできた剣だ。@"
+Text1373:
+text "カタナをきたえぬいてできた剣だ。"
+endtext
 
 ;fe5351
-Text_FE5351:
-text "剛剣マンジカブラをきたえぬいて\lできた剣だ。@"
+Text1374:
+text "剛剣マンジカブラをきたえぬいて\lできた剣だ。"
+endtext
 
 ;fe536b
-Text_FE536B:
-text "遠くからモンスターを攻撃できるぞ。\l装備するとＬボタンでうてるぞ。@"
+Text1375:
+text "遠くからモンスターを攻撃できるぞ。\l装備するとＬボタンでうてるぞ。"
+endtext
 
 ;fe5390
-Text_FE5390:
-text "遠くからモンスターを攻撃できるぞ。\l装備するとＬボタンでうてるぞ。@"
+Text1376:
+text "遠くからモンスターを攻撃できるぞ。\l装備するとＬボタンでうてるぞ。"
+endtext
 
 ;fe53b5
-Text_FE53B5:
-text "遠くからモンスターを貫通攻撃できるぞ。\l装備するとＬボタンでうてるぞ。@"
+Text1377:
+text "遠くからモンスターを貫通攻撃できるぞ。\l装備するとＬボタンでうてるぞ。"
+endtext
 
 ;fe53de
-Text_FE53DE:
-text "開発中@"
+Text1378:
+text "開発中"
+endtext
 
 ;fe53e3
-Text_FE53E3:
-text "開発中@"
+Text1379:
+text "開発中"
+endtext
 
 ;fe53e8
-Text_FE53E8:
-text "開発中@"
+Text1380:
+text "開発中"
+endtext
 
 ;fe53ed
-Text_FE53ED:
-text "サビないし、おなかがへりにくい。\l装備すると防御力が上がるぞ。@"
+Text1381:
+text "サビないし、おなかがへりにくい。\l装備すると防御力が上がるぞ。"
+endtext
 
 ;fe540f
-Text_FE540F:
-text "青銅で作られた盾。\l装備すると防御力が上がるぞ。@"
+Text1382:
+text "青銅で作られた盾。\l装備すると防御力が上がるぞ。"
+endtext
 
 ;fe542d
-Text_FE542D:
-text "装備すると防御力が上がるぞ。\l毒大将の毒をはねかえすぞ。@"
+Text1383:
+text "装備すると防御力が上がるぞ。\l毒大将の毒をはねかえすぞ。"
+endtext
 
 ;fe544f
-Text_FE544F:
-text "装備すると防御力が上がるぞ。\lさびないぞ。@"
+Text1384:
+text "装備すると防御力が上がるぞ。\lさびないぞ。"
+endtext
 
 ;fe5467
-Text_FE5467:
-text "はがねでつくられた盾。\l装備すると防御力が上がるぞ。@"
+Text1385:
+text "はがねでつくられた盾。\l装備すると防御力が上がるぞ。"
+endtext
 
 ;fe5484
-Text_FE5484:
-text "装備すると防御力が上がるぞ。\lドラゴンの炎から受けるダメージが\lすくなくなるぞ。@"
+Text1386:
+text "装備すると防御力が上がるぞ。\lドラゴンの炎から受けるダメージが\lすくなくなるぞ。"
+endtext
 
 ;fe54b1
-Text_FE54B1:
-text "風魔鉄から作られた防御力の高い盾。@"
+Text1387:
+text "風魔鉄から作られた防御力の高い盾。"
+endtext
 
 ;fe54c9
-Text_FE54C9:
-text "モンスターからの攻撃を\lカウンターではね返す盾。\l装備すると防御力が上がるぞ。@"
+Text1388:
+text "モンスターからの攻撃を\lカウンターではね返す盾。\l装備すると防御力が上がるぞ。"
+endtext
 
 ;fe54f5
-Text_FE54F5:
-text "防御力は高いが、重いせいか\lおなかがへりやすい。\l装備すると防御力が上がるぞ。@"
+Text1389:
+text "防御力は高いが、重いせいか\lおなかがへりやすい。\l装備すると防御力が上がるぞ。"
+endtext
 
 ;fe5523
-Text_FE5523:
-text "魔法攻撃を跳ね返すぞ。@"
+Text1390:
+text "魔法攻撃を跳ね返すぞ。"
+endtext
 
 ;fe5534
-Text_FE5534:
-text "敵の攻撃が当たりにくくなるぞ。@"
+Text1391:
+text "敵の攻撃が当たりにくくなるぞ。"
+endtext
 
 ;fe5547
-Text_FE5547:
-text "強そうに見える盾だが、弱いぞ。\l値段が高いぞ。@"
+Text1392:
+text "強そうに見える盾だが、弱いぞ。\l値段が高いぞ。"
+endtext
 
 ;fe5563
-Text_FE5563:
-text "高防御だが、攻撃を受けるたびに\l性能が下がっていく盾。\l装備すると防御力が上がるぞ。@"
+Text1393:
+text "高防御だが、攻撃を受けるたびに\l性能が下がっていく盾。\l装備すると防御力が上がるぞ。"
+endtext
 
 ;fe5597
-Text_FE5597:
-text "爆発のダメージを少なくするぞ。@"
+Text1394:
+text "爆発のダメージを少なくするぞ。"
+endtext
 
 ;fe55a9
-Text_FE55A9:
-text "アイテムやお金を盗まれないぞ。@"
+Text1395:
+text "アイテムやお金を盗まれないぞ。"
+endtext
 
 ;fe55ba
-Text_FE55BA:
-text "風魔の盾をきたえぬいて\lできた盾だ。@"
+Text1396:
+text "風魔の盾をきたえぬいて\lできた盾だ。"
+endtext
 
 ;fe55ce
-Text_FE55CE:
-text "開発中@"
+Text1397:
+text "開発中"
+endtext
 
 ;fe55d3
-Text_FE55D3:
-text "開発中@"
+Text1398:
+text "開発中"
+endtext
 
 ;fe55d8
-Text_FE55D8:
-text "ＨＰが少し回復するぞ。@"
+Text1399:
+text "ＨＰが少し回復するぞ。"
+endtext
 
 ;fe55e9
-Text_FE55E9:
-text "ＨＰがたくさん回復するぞ。@"
+Text1400:
+text "ＨＰがたくさん回復するぞ。"
+endtext
 
 ;fe55fb
-Text_FE55FB:
-text "レベルが上がるぞ。@"
+Text1401:
+text "レベルが上がるぞ。"
+endtext
 
 ;fe5605
-Text_FE5605:
-text "見えないモンスターやワナが\l発見できるぞ。@"
+Text1402:
+text "見えないモンスターやワナが\l発見できるぞ。"
+endtext
 
 ;fe561b
-Text_FE561B:
-text "口から火をふくぞ。\l遠くまで届くぞ。@"
+Text1403:
+text "口から火をふくぞ。\l遠くまで届くぞ。"
+endtext
 
 ;fe5632
-Text_FE5632:
-text "しばらく無敵になるぞ。@"
+Text1404:
+text "しばらく無敵になるぞ。"
+endtext
 
 ;fe5640
-Text_FE5640:
-text "レベルが５つ上がるぞ。@"
+Text1405:
+text "レベルが５つ上がるぞ。"
+endtext
 
 ;fe564c
-Text_FE564C:
-text "持っていると、一度だけ生き返る\lことができるぞ。\l壺の中に入れているとだめだぞ。@"
+Text1406:
+text "持っていると、一度だけ生き返る\lことができるぞ。\l壺の中に入れているとだめだぞ。"
+endtext
 
 ;fe5678
-Text_FE5678:
-text "しばらく透明になれるぞ。@"
+Text1407:
+text "しばらく透明になれるぞ。"
+endtext
 
 ;fe5687
-Text_FE5687:
-text "レベルが下がってしまうぞ。@"
+Text1408:
+text "レベルが下がってしまうぞ。"
+endtext
 
 ;fe5695
-Text_FE5695:
-text "レベルが３つ下がってしまうぞ。@"
+Text1409:
+text "レベルが３つ下がってしまうぞ。"
+endtext
 
 ;fe56a5
-Text_FE56A5:
-text "レベルもＨＰも１になってしまうぞ。@"
+Text1410:
+text "レベルもＨＰも１になってしまうぞ。"
+endtext
 
 ;fe56b9
-Text_FE56B9:
-text "しばらくめちゃくちゃ暴れるぞ。@"
+Text1411:
+text "しばらくめちゃくちゃ暴れるぞ。"
+endtext
 
 ;fe56ca
-Text_FE56CA:
-text "識別した物を忘れてしまうぞ。@"
+Text1412:
+text "識別した物を忘れてしまうぞ。"
+endtext
 
 ;fe56db
-Text_FE56DB:
-text "置いたところにモンスターが集まるぞ。@"
+Text1413:
+text "置いたところにモンスターが集まるぞ。"
+endtext
 
 ;fe56f0
-Text_FE56F0:
-text "最大ＨＰが上がるぞ。@"
+Text1414:
+text "最大ＨＰが上がるぞ。"
+endtext
 
 ;fe56fe
-Text_FE56FE:
-text "最大満腹度が上がるぞ。@"
+Text1415:
+text "最大満腹度が上がるぞ。"
+endtext
 
 ;fe570e
-Text_FE570E:
-text "最大満腹度が下がるぞ。@"
+Text1416:
+text "最大満腹度が下がるぞ。"
+endtext
 
 ;fe571e
-Text_FE571E:
-text "小話を一つ言うぞ。@"
+Text1417:
+text "小話を一つ言うぞ。"
+endtext
 
 ;fe572c
-Text_FE572C:
-text "ちからが１ポイント増えるぞ。@"
+Text1418:
+text "ちからが１ポイント増えるぞ。"
+endtext
 
 ;fe573c
-Text_FE573C:
-text "ちからが最大値まで回復するぞ。@"
+Text1419:
+text "ちからが最大値まで回復するぞ。"
+endtext
 
 ;fe5750
-Text_FE5750:
-text "ちからとＨＰが下がってしまうぞ。\l動きが遅くなってしまうぞ。@"
+Text1420:
+text "ちからとＨＰが下がってしまうぞ。\l動きが遅くなってしまうぞ。"
+endtext
 
 ;fe5773
-Text_FE5773:
-text "混乱してしまうぞ。@"
+Text1421:
+text "混乱してしまうぞ。"
+endtext
 
 ;fe577f
-Text_FE577F:
-text "しばらく眠ってしまうぞ。@"
+Text1422:
+text "しばらく眠ってしまうぞ。"
+endtext
 
 ;fe578d
-Text_FE578D:
-text "ただの雑草だぞ。@"
+Text1423:
+text "ただの雑草だぞ。"
+endtext
 
 ;fe5797
-Text_FE5797:
-text "\l@"
+Text1424:
+text "\l"
+endtext
 
 ;fe5799
-Text_FE5799:
-text "\l@"
+Text1425:
+text "\l"
+endtext
 
 ;fe579b
-Text_FE579B:
-text "\l@"
+Text1426:
+text "\l"
+endtext
 
 ;fe579d
-Text_FE579D:
-text "\l@"
+Text1427:
+text "\l"
+endtext
 
 ;fe579f
-Text_FE579F:
-text "\l@"
+Text1428:
+text "\l"
+endtext
 
 ;fe57a1
-Text_FE57A1:
-text "\l@"
+Text1429:
+text "\l"
+endtext
 
 ;fe57a3
-Text_FE57A3:
-text "\l@"
+Text1430:
+text "\l"
+endtext
 
 ;fe57a5
-Text_FE57A5:
-text "\l@"
+Text1431:
+text "\l"
+endtext
 
 ;fe57a7
-Text_FE57A7:
-text "\l@"
+Text1432:
+text "\l"
+endtext
 
 ;fe57a9
-Text_FE57A9:
-text "\l@"
+Text1433:
+text "\l"
+endtext
 
 ;fe57ab
-Text_FE57AB:
-text "\l@"
+Text1434:
+text "\l"
+endtext
 
 ;fe57ad
-Text_FE57AD:
-text "\l@"
+Text1435:
+text "\l"
+endtext
 
 ;fe57af
-Text_FE57AF:
-text "\l@"
+Text1436:
+text "\l"
+endtext
 
 ;fe57b1
-Text_FE57B1:
-text "\l@"
+Text1437:
+text "\l"
+endtext
 
 ;fe57b3
-Text_FE57B3:
-text "\l@"
+Text1438:
+text "\l"
+endtext
 
 ;fe57b5
-Text_FE57B5:
-text "\l@"
+Text1439:
+text "\l"
+endtext
 
 ;fe57b7
-Text_FE57B7:
-text "\l@"
+Text1440:
+text "\l"
+endtext
 
 ;fe57b9
-Text_FE57B9:
-text "\l@"
+Text1441:
+text "\l"
+endtext
 
 ;fe57bb
-Text_FE57BB:
-text "\l@"
+Text1442:
+text "\l"
+endtext
 
 ;fe57bd
-Text_FE57BD:
-text "\l@"
+Text1443:
+text "\l"
+endtext
 
 ;fe57bf
-Text_FE57BF:
-text "\l@"
+Text1444:
+text "\l"
+endtext
 
 ;fe57c1
-Text_FE57C1:
-text "装備しているものの呪いがとけるぞ。@"
+Text1445:
+text "装備しているものの呪いがとけるぞ。"
+endtext
 
 ;fe57d4
-Text_FE57D4:
-text "アイテムが識別できるぞ。@"
+Text1446:
+text "アイテムが識別できるぞ。"
+endtext
 
 ;fe57e2
-Text_FE57E2:
-text "今いる場所の地形がわかるぞ。@"
+Text1447:
+text "今いる場所の地形がわかるぞ。"
+endtext
 
 ;fe57f3
-Text_FE57F3:
-text "壺が大きくなるぞ。@"
+Text1448:
+text "壺が大きくなるぞ。"
+endtext
 
 ;fe57fd
-Text_FE57FD:
-text "つむじ風を呼び、真空波をつくりだし、\l部屋にいるすべてのモンスターに\lダメージを与えるぞ。@"
+Text1449:
+text "つむじ風を呼び、真空波をつくりだし、\l部屋にいるすべてのモンスターに\lダメージを与えるぞ。"
+endtext
 
 ;fe5831
-Text_FE5831:
-text "今いる地形では口が使えなくなるぞ。@"
+Text1450:
+text "今いる地形では口が使えなくなるぞ。"
+endtext
 
 ;fe5846
-Text_FE5846:
-text "時間を戻せるぞ。@"
+Text1451:
+text "時間を戻せるぞ。"
+endtext
 
 ;fe5851
-Text_FE5851:
-text "今いる地形の地面にワナがふえるぞ。@"
+Text1452:
+text "今いる地形の地面にワナがふえるぞ。"
+endtext
 
 ;fe5865
-Text_FE5865:
-text "困った時に読むと、\lいいことがあるぞ。@"
+Text1453:
+text "困った時に読むと、\lいいことがあるぞ。"
+endtext
 
 ;fe587b
-Text_FE587B:
-text "モンスターの動きが２倍になるぞ。@"
+Text1454:
+text "モンスターの動きが２倍になるぞ。"
+endtext
 
 ;fe588e
-Text_FE588E:
-text "部屋にいるすべてのモンスターが\lしばらく眠ってしまうぞ。@"
+Text1455:
+text "部屋にいるすべてのモンスターが\lしばらく眠ってしまうぞ。"
+endtext
 
 ;fe58ad
-Text_FE58AD:
-text "今いる地形では、モンスターに与える\lダメージが増えるぞ。@"
+Text1456:
+text "今いる地形では、モンスターに与える\lダメージが増えるぞ。"
+endtext
 
 ;fe58cd
-Text_FE58CD:
-text "部屋にいるすべてのモンスターが\l消滅するぞ。@"
+Text1457:
+text "部屋にいるすべてのモンスターが\l消滅するぞ。"
+endtext
 
 ;fe58e7
-Text_FE58E7:
-text "自分をも巻き込むすさまじい衝撃波で、\l近くにいるすべてのモンスターを\lこなごなに分解するぞ。@"
+Text1458:
+text "自分をも巻き込むすさまじい衝撃波で、\l近くにいるすべてのモンスターを\lこなごなに分解するぞ。"
+endtext
 
 ;fe591e
-Text_FE591E:
-text "大部屋になってしまうぞ。@"
+Text1459:
+text "大部屋になってしまうぞ。"
+endtext
 
 ;fe592c
-Text_FE592C:
-text "モンスターハウスができるぞ。@"
+Text1460:
+text "モンスターハウスができるぞ。"
+endtext
 
 ;fe593b
-Text_FE593B:
-text "部屋にいるすべてのモンスターが\lしばらく混乱して\lまっすぐ歩けなくなるぞ。@"
+Text1461:
+text "部屋にいるすべてのモンスターが\lしばらく混乱して\lまっすぐ歩けなくなるぞ。"
+endtext
 
 ;fe5965
-Text_FE5965:
-text "モンスターに投げると、その種類の\lモンスターはもうでてこなくなるぞ。@"
+Text1462:
+text "モンスターに投げると、その種類の\lモンスターはもうでてこなくなるぞ。"
+endtext
 
 ;fe598b
-Text_FE598B:
-text "呪文を書き込んで、好きな巻物に\lしてしまえるぞ。@"
+Text1463:
+text "呪文を書き込んで、好きな巻物に\lしてしまえるぞ。"
+endtext
 
 ;fe59a9
-Text_FE59A9:
-text "マップを忘れてしまうぞ。@"
+Text1464:
+text "マップを忘れてしまうぞ。"
+endtext
 
 ;fe59b7
-Text_FE59B7:
-text "装備している剣が強くなるぞ。@"
+Text1465:
+text "装備している剣が強くなるぞ。"
+endtext
 
 ;fe59c7
-Text_FE59C7:
-text "装備している盾が強くなるぞ。@"
+Text1466:
+text "装備している盾が強くなるぞ。"
+endtext
 
 ;fe59d6
-Text_FE59D6:
-text "装備している剣と盾がメッキされて\l錆びなくなるぞ。@"
+Text1467:
+text "装備している剣と盾がメッキされて\l錆びなくなるぞ。"
+endtext
 
 ;fe59f2
-Text_FE59F2:
-text "壺の中身を取り出せるぞ。@"
+Text1468:
+text "壺の中身を取り出せるぞ。"
+endtext
 
 ;fe5a01
-Text_FE5A01:
-text "今いる地形ではアイテムを\l拾えなくなるぞ。@"
+Text1469:
+text "今いる地形ではアイテムを\l拾えなくなるぞ。"
+endtext
 
 ;fe5a19
-Text_FE5A19:
-text "床に置くと、すこしたってから\l爆発するぞ。\lまだ開発中だぞ。@"
+Text1470:
+text "床に置くと、すこしたってから\l爆発するぞ。\lまだ開発中だぞ。"
+endtext
 
 ;fe5a3c
-Text_FE5A3C:
-text "\l@"
+Text1471:
+text "\l"
+endtext
 
 ;fe5a3e
-Text_FE5A3E:
-text "\l@"
+Text1472:
+text "\l"
+endtext
 
 ;fe5a40
-Text_FE5A40:
-text "\l@"
+Text1473:
+text "\l"
+endtext
 
 ;fe5a42
-Text_FE5A42:
-text "\l@"
+Text1474:
+text "\l"
+endtext
 
 ;fe5a44
-Text_FE5A44:
-text "\l@"
+Text1475:
+text "\l"
+endtext
 
 ;fe5a46
-Text_FE5A46:
-text "\l@"
+Text1476:
+text "\l"
+endtext
 
 ;fe5a48
-Text_FE5A48:
-text "\l@"
+Text1477:
+text "\l"
+endtext
 
 ;fe5a4a
-Text_FE5A4A:
-text "\l@"
+Text1478:
+text "\l"
+endtext
 
 ;fe5a4c
-Text_FE5A4C:
-text "\l@"
+Text1479:
+text "\l"
+endtext
 
 ;fe5a4e
-Text_FE5A4E:
-text "\l@"
+Text1480:
+text "\l"
+endtext
 
 ;fe5a50
-Text_FE5A50:
-text "\l@"
+Text1481:
+text "\l"
+endtext
 
 ;fe5a52
-Text_FE5A52:
-text "\l@"
+Text1482:
+text "\l"
+endtext
 
 ;fe5a54
-Text_FE5A54:
-text "モンスターの特技をふうじるぞ。@"
+Text1483:
+text "モンスターの特技をふうじるぞ。"
+endtext
 
 ;fe5a66
-Text_FE5A66:
-text "モンスターを遠くにふっとばせるぞ。@"
+Text1484:
+text "モンスターを遠くにふっとばせるぞ。"
+endtext
 
 ;fe5a79
-Text_FE5A79:
-text "モンスターのレベルを上げられるぞ。@"
+Text1485:
+text "モンスターのレベルを上げられるぞ。"
+endtext
 
 ;fe5a8b
-Text_FE5A8B:
-text "モンスターのレベルを下げられるぞ。@"
+Text1486:
+text "モンスターのレベルを下げられるぞ。"
+endtext
 
 ;fe5a9d
-Text_FE5A9D:
-text "モンスターを自分の身がわりにするぞ。@"
+Text1487:
+text "モンスターを自分の身がわりにするぞ。"
+endtext
 
 ;fe5ab3
-Text_FE5AB3:
-text "モンスターと自分の位置が入れ替わるぞ。@"
+Text1488:
+text "モンスターと自分の位置が入れ替わるぞ。"
+endtext
 
 ;fe5acc
-Text_FE5ACC:
-text "モンスターを肉にしてしまうぞ。@"
+Text1489:
+text "モンスターを肉にしてしまうぞ。"
+endtext
 
 ;fe5add
-Text_FE5ADD:
-text "ガイコツまどうが持っている杖だ。\lいろいろなことが起きるぞ。@"
+Text1490:
+text "ガイコツまどうが持っている杖だ。\lいろいろなことが起きるぞ。"
+endtext
 
 ;fe5afd
-Text_FE5AFD:
-text "モンスターを金縛りにするぞ。@"
+Text1491:
+text "モンスターを金縛りにするぞ。"
+endtext
 
 ;fe5b0d
-Text_FE5B0D:
-text "モンスターを出口の所へワープさせて\l金縛りにするぞ。@"
+Text1492:
+text "モンスターを出口の所へワープさせて\l金縛りにするぞ。"
+endtext
 
 ;fe5b2b
-Text_FE5B2B:
-text "自分の痛みをモンスターにも\l感じさせる事ができるぞ。@"
+Text1493:
+text "自分の痛みをモンスターにも\l感じさせる事ができるぞ。"
+endtext
 
 ;fe5b4a
-Text_FE5B4A:
-text "\l@"
+Text1494:
+text "\l"
+endtext
 
 ;fe5b4c
-Text_FE5B4C:
-text "\l@"
+Text1495:
+text "\l"
+endtext
 
 ;fe5b4e
-Text_FE5B4E:
-text "\l@"
+Text1496:
+text "\l"
+endtext
 
 ;fe5b50
-Text_FE5B50:
-text "\l@"
+Text1497:
+text "\l"
+endtext
 
 ;fe5b52
-Text_FE5B52:
-text "\l@"
+Text1498:
+text "\l"
+endtext
 
 ;fe5b54
-Text_FE5B54:
-text "\l@"
+Text1499:
+text "\l"
+endtext
 
 ;fe5b56
-Text_FE5B56:
-text "\l@"
+Text1500:
+text "\l"
+endtext
 
 ;fe5b58
-Text_FE5B58:
-text "\l@"
+Text1501:
+text "\l"
+endtext
 
 ;fe5b5a
-Text_FE5B5A:
-text "\l@"
+Text1502:
+text "\l"
+endtext
 
 ;fe5b5c
-Text_FE5B5C:
-text "\l@"
+Text1503:
+text "\l"
+endtext
 
 ;fe5b5e
-Text_FE5B5E:
-text "\l@"
+Text1504:
+text "\l"
+endtext
 
 ;fe5b60
-Text_FE5B60:
-text "\l@"
+Text1505:
+text "\l"
+endtext
 
 ;fe5b62
-Text_FE5B62:
-text "装備すると隠し通路を発見するぞ。\l水の上を歩けるようになるぞ。@"
+Text1506:
+text "装備すると隠し通路を発見するぞ。\l水の上を歩けるようになるぞ。"
+endtext
 
 ;fe5b87
-Text_FE5B87:
-text "装備すると店で値切ることができるぞ。@"
+Text1507:
+text "装備すると店で値切ることができるぞ。"
+endtext
 
 ;fe5b9c
-Text_FE5B9C:
-text "装備するとワナにかからなくなるぞ。\lモンスターがワナにかかるようになるぞ。@"
+Text1508:
+text "装備するとワナにかからなくなるぞ。\lモンスターがワナにかかるようになるぞ。"
+endtext
 
 ;fe5bc2
-Text_FE5BC2:
-text "装備すると経験値にかかわらず\lレベルが固定されるぞ。@"
+Text1509:
+text "装備すると経験値にかかわらず\lレベルが固定されるぞ。"
+endtext
 
 ;fe5be2
-Text_FE5BE2:
-text "装備するとＨＰの回復がはやくなるぞ。\lしかしそのあいだ\lはらへりもはやいぞ。@"
+Text1510:
+text "装備するとＨＰの回復がはやくなるぞ。\lしかしそのあいだ\lはらへりもはやいぞ。"
+endtext
 
 ;fe5c0d
-Text_FE5C0D:
-text "装備すると剣も盾も錆びなくなるぞ。@"
+Text1511:
+text "装備すると剣も盾も錆びなくなるぞ。"
+endtext
 
 ;fe5c21
-Text_FE5C21:
-text "装備すると\l会心の一撃がでやすくなるぞ。@"
+Text1512:
+text "装備すると\l会心の一撃がでやすくなるぞ。"
+endtext
 
 ;fe5c39
-Text_FE5C39:
-text "装備すると\l痛恨の一撃をうけやすくなるぞ。@"
+Text1513:
+text "装備すると\l痛恨の一撃をうけやすくなるぞ。"
+endtext
 
 ;fe5c52
-Text_FE5C52:
-text "装備すると持っているものに\l呪いをかけられることがなくなるぞ。@"
+Text1514:
+text "装備すると持っているものに\l呪いをかけられることがなくなるぞ。"
+endtext
 
 ;fe5c73
-Text_FE5C73:
-text "装備すると投げたものがすべて\l貫通してしまうぞ。@"
+Text1515:
+text "装備すると投げたものがすべて\l貫通してしまうぞ。"
+endtext
 
 ;fe5c8f
-Text_FE5C8F:
-text "装備すると\l時間とともに経験値が上がっていくぞ。@"
+Text1516:
+text "装備すると\l時間とともに経験値が上がっていくぞ。"
+endtext
 
 ;fe5cac
-Text_FE5CAC:
-text "装備すると\l持っているアイテムを落としてしまうぞ。@"
+Text1517:
+text "装備すると\l持っているアイテムを落としてしまうぞ。"
+endtext
 
 ;fe5cc7
-Text_FE5CC7:
-text "装備すると\lモンスターとアイテムの位置がわかるぞ。@"
+Text1518:
+text "装備すると\lモンスターとアイテムの位置がわかるぞ。"
+endtext
 
 ;fe5ce3
-Text_FE5CE3:
-text "装備すると混乱しなくなるぞ。@"
+Text1519:
+text "装備すると混乱しなくなるぞ。"
+endtext
 
 ;fe5cf4
-Text_FE5CF4:
-text "装備すると\l拾ったアイテムが識別されるぞ。@"
+Text1520:
+text "装備すると\l拾ったアイテムが識別されるぞ。"
+endtext
 
 ;fe5d0c
-Text_FE5D0C:
-text "\l@"
+Text1521:
+text "\l"
+endtext
 
 ;fe5d0e
-Text_FE5D0E:
-text "\l@"
+Text1522:
+text "\l"
+endtext
 
 ;fe5d10
-Text_FE5D10:
-text "\l@"
+Text1523:
+text "\l"
+endtext
 
 ;fe5d12
-Text_FE5D12:
-text "\l@"
+Text1524:
+text "\l"
+endtext
 
 ;fe5d14
-Text_FE5D14:
-text "\l@"
+Text1525:
+text "\l"
+endtext
 
 ;fe5d16
-Text_FE5D16:
-text "\l@"
+Text1526:
+text "\l"
+endtext
 
 ;fe5d18
-Text_FE5D18:
-text "\l@"
+Text1527:
+text "\l"
+endtext
 
 ;fe5d1a
-Text_FE5D1A:
-text "\l@"
+Text1528:
+text "\l"
+endtext
 
 ;fe5d1c
-Text_FE5D1C:
-text "\l@"
+Text1529:
+text "\l"
+endtext
 
 ;fe5d1e
-Text_FE5D1E:
-text "\l@"
+Text1530:
+text "\l"
+endtext
 
 ;fe5d20
-Text_FE5D20:
-text "\l@"
+Text1531:
+text "\l"
+endtext
 
 ;fe5d22
-Text_FE5D22:
-text "\l@"
+Text1532:
+text "\l"
+endtext
 
 ;fe5d24
-Text_FE5D24:
-text "少しおなかがふくれるぞ。@"
+Text1533:
+text "少しおなかがふくれるぞ。"
+endtext
 
 ;fe5d32
-Text_FE5D32:
-text "おなかがふくれるぞ。@"
+Text1534:
+text "おなかがふくれるぞ。"
+endtext
 
 ;fe5d3d
-Text_FE5D3D:
-text "おなかがすこしふくれるが、\l毒でからだをこわしてしまうぞ。@"
+Text1535:
+text "おなかがすこしふくれるが、\l毒でからだをこわしてしまうぞ。"
+endtext
 
 ;fe5d5c
-Text_FE5D5C:
-text "最大満腹度が５％増えるぞ。\lおなかがいっぱいになるぞ。@"
+Text1536:
+text "最大満腹度が５％増えるぞ。\lおなかがいっぱいになるぞ。"
+endtext
 
 ;fe5d7e
-Text_FE5D7E:
-text "おなかがすこしふくれるぞ。\l特別なちからを身につけられる\lこともあるぞ。@"
+Text1537:
+text "おなかがすこしふくれるぞ。\l特別なちからを身につけられる\lこともあるぞ。"
+endtext
 
 ;fe5da5
-Text_FE5DA5:
-text "開発中@"
+Text1538:
+text "開発中"
+endtext
 
 ;fe5daa
-Text_FE5DAA:
-text "アイテムを\l出し入れできるぞ。@"
+Text1539:
+text "アイテムを\l出し入れできるぞ。"
+endtext
 
 ;fe5dba
-Text_FE5DBA:
-text "中に隠れてモンスターから\l姿を消せるぞ。@"
+Text1540:
+text "中に隠れてモンスターから\l姿を消せるぞ。"
+endtext
 
 ;fe5dd2
-Text_FE5DD2:
-text "壺に入れたアイテムを\lふやせるぞ。@"
+Text1541:
+text "壺に入れたアイテムを\lふやせるぞ。"
+endtext
 
 ;fe5de4
-Text_FE5DE4:
-text "しばらく入れたままにしておくと、\lアイテムを強くできるぞ。@"
+Text1542:
+text "しばらく入れたままにしておくと、\lアイテムを強くできるぞ。"
+endtext
 
 ;fe5e02
-Text_FE5E02:
-text "壺に入れたアイテムを\l識別できるぞ。@"
+Text1543:
+text "壺に入れたアイテムを\l識別できるぞ。"
+endtext
 
 ;fe5e16
-Text_FE5E16:
-text "ステータスが回復するぞ。@"
+Text1544:
+text "ステータスが回復するぞ。"
+endtext
 
 ;fe5e25
-Text_FE5E25:
-text "壺に入れたアイテムが、渓谷の宿場の\l倉庫に送られるぞ。@"
+Text1545:
+text "壺に入れたアイテムが、渓谷の宿場の\l倉庫に送られるぞ。"
+endtext
 
 ;fe5e47
-Text_FE5E47:
-text "しばらく入れたままにしておくと、\lアイテムを弱くしてしまうぞ。@"
+Text1546:
+text "しばらく入れたままにしておくと、\lアイテムを弱くしてしまうぞ。"
+endtext
 
 ;fe5e68
-Text_FE5E68:
-text "手が抜けなくなるぞ。@"
+Text1547:
+text "手が抜けなくなるぞ。"
+endtext
 
 ;fe5e75
-Text_FE5E75:
-text "アイテムがなくなるぞ。@"
+Text1548:
+text "アイテムがなくなるぞ。"
+endtext
 
 ;fe5e81
-Text_FE5E81:
-text "これはモンスターだ！！@"
+Text1549:
+text "これはモンスターだ！！"
+endtext
 
 ;fe5e8d
-Text_FE5E8D:
-text "アイテムが変化するぞ。@"
+Text1550:
+text "アイテムが変化するぞ。"
+endtext
 
 ;fe5e9b
-Text_FE5E9B:
-text "剣、盾、杖を合成出来るぞ。\l入れる順番に気をつけろ。@"
+Text1551:
+text "剣、盾、杖を合成出来るぞ。\l入れる順番に気をつけろ。"
+endtext
 
 ;fe5eba
-Text_FE5EBA:
-text "ぬすっトドが入っているぞ。@"
+Text1552:
+text "ぬすっトドが入っているぞ。"
+endtext
 
 ;fe5ec8
-Text_FE5EC8:
-text "陶芸家ガイバラが作った壺だ。@"
+Text1553:
+text "陶芸家ガイバラが作った壺だ。"
+endtext
 
 ;fe5edb
-Text_FE5EDB:
-text "陶芸家ガイバラが作った壺だ。@"
+Text1554:
+text "陶芸家ガイバラが作った壺だ。"
+endtext
 
 ;fe5eee
-Text_FE5EEE:
-text "陶芸家ガイバラが作った壺だ。\lかべに当てても割れないぞ。@"
+Text1555:
+text "陶芸家ガイバラが作った壺だ。\lかべに当てても割れないぞ。"
+endtext
 
 ;fe5f11
-Text_FE5F11:
-text "陶芸家ガイバラが作った壺だ。\lかべに当たると爆発するぞ。@"
+Text1556:
+text "陶芸家ガイバラが作った壺だ。\lかべに当たると爆発するぞ。"
+endtext
 
 ;fe5f34
-Text_FE5F34:
-text "開発中@"
+Text1557:
+text "開発中"
+endtext
 
 ;fe5f39
-Text_FE5F39:
-text "開発中@"
+Text1558:
+text "開発中"
+endtext
 
 ;fe5f3e
-Text_FE5F3E:
-text "開発中@"
+Text1559:
+text "開発中"
+endtext
 
 ;fe5f43
-Text_FE5F43:
-text "開発中@"
+Text1560:
+text "開発中"
+endtext
 
 ;fe5f48
-Text_FE5F48:
-text "開発中@"
+Text1561:
+text "開発中"
+endtext
 
 ;fe5f4d
-Text_FE5F4D:
-text "開発中@"
+Text1562:
+text "開発中"
+endtext
 
 ;fe5f52
-Text_FE5F52:
-text "開発中@"
+Text1563:
+text "開発中"
+endtext
 
 ;fe5f57
-Text_FE5F57:
-text "開発中@"
+Text1564:
+text "開発中"
+endtext
 
 ;fe5f5c
-Text_FE5F5C:
-text "開発中@"
+Text1565:
+text "開発中"
+endtext
 
 ;fe5f61
-Text_FE5F61:
-text "開発中@"
+Text1566:
+text "開発中"
+endtext
 
 ;fe5f66
-Text_FE5F66:
-text "開発中@"
+Text1567:
+text "開発中"
+endtext
 
 ;fe5f6b
-Text_FE5F6B:
-text "開発中@"
+Text1568:
+text "開発中"
+endtext
 
 ;fe5f70
-Text_FE5F70:
-text "開発中@"
+Text1569:
+text "開発中"
+endtext
 
 ;fe5f75
-Text_FE5F75:
-text "開発中@"
+Text1570:
+text "開発中"
+endtext
 
 ;fe5f7a
-Text_FE5F7A:
-text "開発中@"
+Text1571:
+text "開発中"
+endtext
 
 ;fe5f7f
-Text_FE5F7F:
-text "開発中@"
+Text1572:
+text "開発中"
+endtext
 
 ;fe5f84
-Text_FE5F84:
-text "開発中@"
+Text1573:
+text "開発中"
+endtext
 
 ;fe5f89
-Text_FE5F89:
-text "開発中@"
+Text1574:
+text "開発中"
+endtext
 
 ;fe5f8e
-Text_FE5F8E:
-text "開発中@"
+Text1575:
+text "開発中"
+endtext
 
 ;fe5f93
-Text_FE5F93:
-text "開発中@"
+Text1576:
+text "開発中"
+endtext
 
 ;fe5f98
-Text_FE5F98:
-text "開発中@"
+Text1577:
+text "開発中"
+endtext
 
 ;fe5f9d
-Text_FE5F9D:
-text "開発中@"
+Text1578:
+text "開発中"
+endtext
 
 ;fe5fa2
-Text_FE5FA2:
-text "開発中@"
+Text1579:
+text "開発中"
+endtext
 
 ;fe5fa7
-Text_FE5FA7:
-text "開発中@"
+Text1580:
+text "開発中"
+endtext
 
 ;fe5fac
-Text_FE5FAC:
-text "開発中@"
+Text1581:
+text "開発中"
+endtext
 
 ;fe5fb1
-Text_FE5FB1:
-text "開発中@"
+Text1582:
+text "開発中"
+endtext
 
 ;fe5fb6
-Text_FE5FB6:
-text "これを食べれば、モンスターに変身\lできるぞ。@"
+Text1583:
+text "これを食べれば、モンスターに変身\lできるぞ。"
+endtext
 
 ;fe5fcf
-Text_FE5FCF:
-text "これを王様にわたせば\l不思議のダンジョンで冒険ができるぞ。@"
+Text1584:
+text "これを王様にわたせば\l不思議のダンジョンで冒険ができるぞ。"
+endtext
 
 ;fe5ff4
-Text_FE5FF4:
-text "これこそ、長いあいださがしもとめて\lいた宝ものだ。@"
+Text1585:
+text "これこそ、長いあいださがしもとめて\lいた宝ものだ。"
+endtext
 
 ;fe6010
-Text_FE6010:
-text "なんかヘンなにおいがするぞ。@"
+Text1586:
+text "なんかヘンなにおいがするぞ。"
+endtext
 
 ;fe601f
-Text_FE601F:
-text "新規アイテム目的物だ。@"
+Text1587:
+text "新規アイテム目的物だ。"
+endtext
 
 ;fe602c
-Text_FE602C:
-text "これはお金だ。@"
+Text1588:
+text "これはお金だ。"
+endtext
 
 ;fe6034
-Text_FE6034:
-text "　　　@"
+Text1589:
+text "　　　"
+endtext
