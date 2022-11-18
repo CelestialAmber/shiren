@@ -2203,11 +2203,11 @@ func_8190EC:
 func_81916D:
 	phx                                  ;81916D|DA      |      ;  
 	clc                                  ;81916E|18      |      ;  
-	adc.l CharacterSpritesTable          ;81916F|6F8E01C0|C0018E;  
+	adc.l CharacterSpritesPointerTableEnd          ;81916F|6F8E01C0|C0018E;  
 	tax                                  ;819173|AA      |      ;  
-	lda.l DATA8_C00000,x                 ;819174|BF0000C0|C00000;  
+	lda.l CharacterSpritesPointerTable,x                 ;819174|BF0000C0|C00000;  
 	sta.b w0000                           ;819178|8500    |000000;  
-	lda.l DATA8_C00002,x                 ;81917A|BF0200C0|C00002;  
+	lda.l CharacterSpritesPointerTable+2,x                 ;81917A|BF0200C0|C00002;  
 	sta.b w0002                   ;81917E|8502    |000002;  
 	and.w #$FE00                         ;819180|2900FE  |      ;  
 	plx                                  ;819183|FA      |      ;  
@@ -4035,7 +4035,7 @@ func_81A3DA:
 	asl a                                ;81A3E8|0A      |      ;  
 	adc.w $2F0E,y                        ;81A3E9|790E2F  |7E2F0E;  
 	tax                                  ;81A3EC|AA      |      ;  
-	lda.l DATA8_C00002,x                 ;81A3ED|BF0200C0|C00002;  
+	lda.l CharacterSpritesPointerTable+2,x                 ;81A3ED|BF0200C0|C00002;  
 	bit.w #$0100                         ;81A3F1|890001  |      ;  
 	beq @lbl_81A3F9                      ;81A3F4|F003    |C1A3F9;  
 	.db $4C,$20,$A5                       ;81A3F6|        |C1A520;  
@@ -4136,7 +4136,7 @@ func_81A49D:
 	iny                                  ;81A49E|C8      |      ;  
 
 func_81A49F:
-	lda.l DATA8_C00002,x                 ;81A49F|BF0200C0|C00002;  
+	lda.l CharacterSpritesPointerTable+2,x                 ;81A49F|BF0200C0|C00002;  
 
 func_81A4A3:
 	sta.b w0002                   ;81A4A3|8502    |000002;  
@@ -4154,7 +4154,7 @@ func_81A4A3:
 	lda.w $22AE,y                        ;81A4BB|B9AE22  |7E22AE;  
 	sta.w $2306,y                        ;81A4BE|990623  |7E2306;  
 	stz.b w0003                            ;81A4C1|6403    |000003;  
-	lda.l DATA8_C00000,x                 ;81A4C3|BF0000C0|C00000;  
+	lda.l CharacterSpritesPointerTable,x                 ;81A4C3|BF0000C0|C00000;  
 	sta.b w0000                           ;81A4C7|8500    |000000;  
 	cmp.w $2FBE,y                        ;81A4C9|D9BE2F  |7E2FBE;  
 	sta.w $2FBE,y                        ;81A4CC|99BE2F  |7E2FBE;  
@@ -4467,7 +4467,7 @@ func_81A7D8:
 	asl a                                ;81A7E2|0A      |      ;  
 	bpl @lbl_81A7FC                      ;81A7E3|1017    |C1A7FC;  
 	ldx.w $2F0E,y                        ;81A7E5|BE0E2F  |7E2F0E;  
-	lda.l DATA8_C00002,x                 ;81A7E8|BF0200C0|C00002;  
+	lda.l CharacterSpritesPointerTable+2,x                 ;81A7E8|BF0200C0|C00002;  
 	bit.w #$0100                         ;81A7EC|890001  |      ;  
 	bne @lbl_C1A7F9                   ;81A7EF|D008    |C1A7F9;  
 	pea.w $A81C                          ;81A7F1|F41CA8  |7EA81C;  
@@ -4480,7 +4480,7 @@ func_81A7D8:
 	asl a                                ;81A7FF|0A      |      ;  
 	adc.w $2F0E,y                        ;81A800|790E2F  |7E2F0E;  
 	tax                                  ;81A803|AA      |      ;  
-	lda.l DATA8_C00002,x                 ;81A804|BF0200C0|C00002;  
+	lda.l CharacterSpritesPointerTable+2,x                 ;81A804|BF0200C0|C00002;  
 	bit.w #$0100                         ;81A808|890001  |      ;  
 	beq @lbl_81A810                      ;81A80B|F003    |C1A810;  
 	.db $4C,$83,$A8                       ;81A80D|        |C1A883;  
@@ -4998,6 +4998,7 @@ func_81ACF2:
 	rts                                  ;81AD33|60      |      ;  
 	.db $C2,$30                           ;81AD34
 
+;related to effect scripts
 func_81AD36:
 	lda.w $2516,y                        ;81AD36|B91625  |7E2516;  
 	sta.b w0074                            ;81AD39|8574    |000074;  
@@ -5016,11 +5017,20 @@ func_81AD36:
 	jmp.w (Data_81AD57,x)               ;81AD54|7C57AD  |C1AD57;  
 
 Data_81AD57:
-	.db $7B,$AE,$B3,$AE,$F6,$AF,$B4,$AF   ;81AD57
-	.db $66,$B0,$75,$B0,$BD,$B0           ;81AD5F
-	.db $C7,$B1                           ;81AD65|        |0000B1;  
-	.db $DA,$B1,$76,$B2,$A8,$B2,$E8,$B2   ;81AD67
-	.db $1B,$B3                           ;81AD6F
+	.dw $AE7B
+	.dw $AEB3
+	.dw $AFF6
+	.dw $AFB4
+	.dw $B066
+	.dw $B075
+	.dw $B0BD
+	.dw $B1C7
+	.dw $B1DA
+	.dw $B276
+	.dw $B2A8
+	.dw $B2E8
+	.dw $B31B
+
 func_81AD71:
 	asl a                                ;81AD71|0A      |      ;  
 	tax                                  ;81AD72|AA      |      ;  
@@ -5795,7 +5805,7 @@ func_81B4DF:
 	jsr.w func_81BE49                    ;81B647|2049BE  |C1BE49;  
 	pha                                  ;81B64A|48      |      ;  
 	ldx.w $2F0E,y                        ;81B64B|BE0E2F  |7E2F0E;  
-	lda.l DATA8_C00002,x                 ;81B64E|BF0200C0|C00002;  
+	lda.l CharacterSpritesPointerTable+2,x                 ;81B64E|BF0200C0|C00002;  
 	plx                                  ;81B652|FA      |      ;  
 	bit.w #$0100                         ;81B653|890001  |      ;  
 	beq @lbl_81B65A                      ;81B656|F002    |C1B65A;  
@@ -5995,7 +6005,7 @@ Data_81B851:
 	jsr.w func_81BE41                    ;81B876|2041BE  |C1BE41;  
 	asl a                                ;81B879|0A      |      ;  
 	tax                                  ;81B87A|AA      |      ;  
-	lda.l DATA8_C00000,x                 ;81B87B|BF0000C0|C00000;  
+	lda.l CharacterSpritesPointerTable,x                 ;81B87B|BF0000C0|C00000;  
 	sta.b w0000                           ;81B87F|8500    |000000;  
 	jsr.w func_81BE41                    ;81B881|2041BE  |C1BE41;  
 	asl a                                ;81B884|0A      |      ;  
@@ -6009,12 +6019,12 @@ Data_81B851:
 	adc.w $2F0E,y                        ;81B890|790E2F  |7E2F0E;  
 @lbl_81B893:
 	tax                                  ;81B893|AA      |      ;  
-	lda.l DATA8_C00002,x                 ;81B894|BF0200C0|C00002;  
+	lda.l CharacterSpritesPointerTable+2,x                 ;81B894|BF0200C0|C00002;  
 	sta.b w0000                           ;81B898|8500    |000000;  
 	stz.b w0001                            ;81B89A|6401    |000001;  
 	and.w #$FE00                         ;81B89C|2900FE  |      ;  
 	sta.b w0002                   ;81B89F|8502    |000002;  
-	lda.l DATA8_C00000,x                 ;81B8A1|BF0000C0|C00000;  
+	lda.l CharacterSpritesPointerTable,x                 ;81B8A1|BF0000C0|C00000;  
 	plx                                  ;81B8A5|FA      |      ;  
 	sta.w $2224,x                        ;81B8A6|9D2422  |7E2224;  
 	lda.b w0000                           ;81B8A9|A500    |000000;  
