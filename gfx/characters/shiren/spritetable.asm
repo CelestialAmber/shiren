@@ -1,18 +1,19 @@
 ;615c
-ShirenSprites2:
-	.dl Data_d7f3c1
+;Sprites used for regular shiren
+ShirenSprites:
+	.dl Shiren_WalkRight0
 	.db $06
-	.dl Data_d7f5c2
+	.dl Shiren_WalkRight1
 	.db $06
-	.dl Data_d7f7c3
+	.dl Shiren_WalkRight2
 	.db $06
-	.dl Data_d7f9c4
+	.dl Shiren_WalkUpRight0
 	.db $06
-	.dl Data_d7fbc5
+	.dl Shiren_WalkUpRight1
 	.db $06
-	.dl Data_d7fdc6
+	.dl Shiren_WalkUpRight2
 	.db $06
-	.dl Data_d80000
+	.dl Shiren_WalkUp0
 	.db $06
 	.dl Data_d80201
 	.db $06
@@ -180,19 +181,19 @@ ShirenSprites2:
 	.db $06
 	.dl Data_d84ff1
 	.db $06                
-	.dl Data_d7f3c1
+	.dl Shiren_WalkRight0
 	.db $06                
-	.dl Data_d7f5c2
+	.dl Shiren_WalkRight1
 	.db $06
-	.dl Data_d7f7c3
+	.dl Shiren_WalkRight2
 	.db $06
-	.dl Data_d7f9c4
+	.dl Shiren_WalkUpRight0
 	.db $06
-	.dl Data_d7fbc5
+	.dl Shiren_WalkUpRight1
 	.db $06
-	.dl Data_d7fdc6
+	.dl Shiren_WalkUpRight2
 	.db $06                
-	.dl Data_d80000
+	.dl Shiren_WalkUp0
 	.db $06
 	.dl Data_d80201
 	.db $06
@@ -254,11 +255,11 @@ ShirenSprites2:
 	.db $06
 	.dl Data_d86032
 	.db $06
-	.dl Data_d8615a
+	.dl Shiren_Sleep1
 	.db $06
-	.dl Data_d862d9
+	.dl Shiren_Sleep2
 	.db $06
-	.dl Data_d8644e
+	.dl Shiren_Observing
 	.db $06
 	.dl Data_d8659d
 	.db $06

@@ -1,26 +1,26 @@
 ;uncompressed graphics
 
-Data_d7f3c1:
+Shiren_WalkRight0:
 .db $00
 .incbin "gfx/characters/shiren/walk_right_0.4bpp"
 
-Data_d7f5c2:
+Shiren_WalkRight1:
 .db $00
 .incbin "gfx/characters/shiren/walk_right_1.4bpp"
 
-Data_d7f7c3:
+Shiren_WalkRight2:
 .db $00
 .incbin "gfx/characters/shiren/walk_right_2.4bpp"
 
-Data_d7f9c4:
+Shiren_WalkUpRight0:
 .db $00
 .incbin "gfx/characters/shiren/walk_upright_0.4bpp"
 
-Data_d7fbc5:
+Shiren_WalkUpRight1:
 .db $00
 .incbin "gfx/characters/shiren/walk_upright_1.4bpp"
 
-Data_d7fdc6:
+Shiren_WalkUpRight2:
 .db $00
 .incbin "gfx/characters/shiren/walk_upright_2.4bpp"
 
@@ -28,7 +28,7 @@ Data_d7fdc6:
 .org $0000 ;$D80000
 
 ;d80000
-Data_d80000:
+Shiren_WalkUp0:
 .db $00
 .incbin "gfx/characters/shiren/walk_up_0.4bpp"
 
@@ -308,15 +308,15 @@ Data_d86032:
 .incbin "gfx/characters/shiren/climbing_2.4bpp.lz"
 
 ;d8615a
-Data_d8615a:
+Shiren_Sleep1:
 .incbin "gfx/characters/shiren/sleep_1.4bpp.lz"
 
 ;d862d9
-Data_d862d9:
+Shiren_Sleep2:
 .incbin "gfx/characters/shiren/sleep_2.4bpp.lz"
 
 ;d8644e
-Data_d8644e:
+Shiren_Observing:
 .incbin "gfx/characters/shiren/observing.4bpp.lz"
 
 ;d8659d

@@ -1,18 +1,18 @@
-;Shiren
-ShirenSprites1:
-	.dl Data_d7f3c1
+;Used for decoy shiren?
+ShirenDecoySprites:
+	.dl Shiren_WalkRight0
 	.db $08 
-	.dl Data_d7f5c2
+	.dl Shiren_WalkRight1
 	.db $08
-	.dl Data_d7f7c3
+	.dl Shiren_WalkRight2
 	.db $08
-	.dl Data_d7f9c4
+	.dl Shiren_WalkUpRight0
 	.db $08
-	.dl Data_d7fbc5
+	.dl Shiren_WalkUpRight1
 	.db $08
-	.dl Data_d7fdc6
+	.dl Shiren_WalkUpRight2
 	.db $08
-	.dl Data_d80000
+	.dl Shiren_WalkUp0
 	.db $08
 	.dl Data_d80201
 	.db $08
