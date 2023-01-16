@@ -10,7 +10,7 @@ Data_d2923f:
 
 ;d29378
 Data_d29378:
-.incbin "gfx/characters/tengu/d29378.4bpp.lz"
+.incbin "gfx/characters/tengu/d29378.right1.4bpp.lz"
 
 ;d294c1
 Data_d294c1:
@@ -22,39 +22,39 @@ Data_d29624:
 
 ;d29767
 Data_d29767:
-.incbin "gfx/characters/tengu/d29767.4bpp.lz"
+.incbin "gfx/characters/tengu/d29767.right1.4bpp.lz"
 
 ;d298ac
 Data_d298ac:
-.incbin "gfx/characters/tengu/d298ac.4bpp.lz"
+.incbin "gfx/characters/tengu/d298ac.right1.4bpp.lz"
 
 ;d29a33
 Data_d29a33:
-.incbin "gfx/characters/tengu/d29a33.4bpp.lz"
+.incbin "gfx/characters/tengu/d29a33.right2.4bpp.lz"
 
 ;d29b8c
 Data_d29b8c:
-.incbin "gfx/characters/tengu/d29b8c.4bpp.lz"
+.incbin "gfx/characters/tengu/d29b8c.right1.4bpp.lz"
 
 ;d29cfd
 Data_d29cfd:
-.incbin "gfx/characters/tengu/d29cfd.4bpp.lz"
+.incbin "gfx/characters/tengu/d29cfd.right4.4bpp.lz"
 
 ;d29e76
 Data_d29e76:
-.incbin "gfx/characters/tengu/d29e76.4bpp.lz"
+.incbin "gfx/characters/tengu/d29e76.right5.4bpp.lz"
 
 ;d29fd5
 Data_d29fd5:
-.incbin "gfx/characters/tengu/d29fd5.4bpp.lz"
+.incbin "gfx/characters/tengu/d29fd5.right2.4bpp.lz"
 
 ;d2a114
 Data_d2a114:
-.incbin "gfx/characters/tengu/d2a114.4bpp.lz"
+.incbin "gfx/characters/tengu/d2a114.right2.4bpp.lz"
 
 ;d2a29b
 Data_d2a29b:
-.incbin "gfx/characters/tengu/d2a29b.4bpp.lz"
+.incbin "gfx/characters/tengu/d2a29b.right2.4bpp.lz"
 
 ;d2a402
 Data_d2a402:
@@ -66,7 +66,7 @@ Data_d2a57b:
 
 ;d2a6fc
 Data_d2a6fc:
-.incbin "gfx/characters/tengu/d2a6fc.4bpp.lz"
+.incbin "gfx/characters/tengu/d2a6fc.right4.4bpp.lz"
 
 ;d2a86f
 Data_d2a86f:
@@ -86,7 +86,7 @@ Data_d2ace4:
 
 ;d2ae65
 Data_d2ae65:
-.incbin "gfx/characters/tengu/d2ae65.4bpp.lz"
+.incbin "gfx/characters/tengu/d2ae65.right1.4bpp.lz"
 
 ;d2afd0
 Data_d2afd0:
@@ -94,7 +94,7 @@ Data_d2afd0:
 
 ;d2b133
 Data_d2b133:
-.incbin "gfx/characters/tengu/d2b133.4bpp.lz"
+.incbin "gfx/characters/tengu/d2b133.right3.4bpp.lz"
 
 ;d2b282
 Data_d2b282:
@@ -130,11 +130,11 @@ Data_d2be9f:
 
 ;d2c052
 Data_d2c052:
-.incbin "gfx/characters/tengu/d2c052.4bpp.lz"
+.incbin "gfx/characters/tengu/d2c052.right3.4bpp.lz"
 
 ;d2c1d7
 Data_d2c1d7:
-.incbin "gfx/characters/tengu/d2c1d7.4bpp.lz"
+.incbin "gfx/characters/tengu/d2c1d7.right4.4bpp.lz"
 
 ;d2c340
 Data_d2c340:
@@ -150,7 +150,7 @@ Data_d2c5da:
 
 ;d2c75b
 Data_d2c75b:
-.incbin "gfx/characters/tengu/d2c75b.4bpp.lz"
+.incbin "gfx/characters/tengu/d2c75b.right1.4bpp.lz"
 
 ;d2c85a
 Data_d2c85a:
@@ -158,11 +158,11 @@ Data_d2c85a:
 
 ;d2ca07
 Data_d2ca07:
-.incbin "gfx/characters/tengu/d2ca07.4bpp.lz"
+.incbin "gfx/characters/tengu/d2ca07.right2.4bpp.lz"
 
 ;d2cb56
 Data_d2cb56:
-.incbin "gfx/characters/tengu/d2cb56.4bpp.lz"
+.incbin "gfx/characters/tengu/d2cb56.left15.unkflag.4bpp.lz"
 
 ;d2cc36
 Data_d2cc36:
@@ -174,11 +174,11 @@ Data_d2cdaf:
 
 ;d2cf5a
 Data_d2cf5a:
-.incbin "gfx/characters/tengu/d2cf5a.4bpp.lz"
+.incbin "gfx/characters/tengu/d2cf5a.right3.4bpp.lz"
 
 ;d2d02b
 Data_d2d02b:
-.incbin "gfx/characters/tengu/d2d02b.4bpp.lz"
+.incbin "gfx/characters/tengu/d2d02b.right4.4bpp.lz"
 
 ;d2d1ae
 Data_d2d1ae:
@@ -186,7 +186,7 @@ Data_d2d1ae:
 
 ;d2d331
 Data_d2d331:
-.incbin "gfx/characters/tengu/d2d331.4bpp.lz"
+.incbin "gfx/characters/tengu/d2d331.right4.4bpp.lz"
 
 ;d2d44a
 Data_d2d44a:
@@ -198,7 +198,7 @@ Data_d2d5e3:
 
 ;d2d76c
 Data_d2d76c:
-.incbin "gfx/characters/tengu/d2d76c.4bpp.lz"
+.incbin "gfx/characters/tengu/d2d76c.right1.4bpp.lz"
 
 ;d2d857
 Data_d2d857:
@@ -206,11 +206,11 @@ Data_d2d857:
 
 ;d2d9f8
 Data_d2d9f8:
-.incbin "gfx/characters/tengu/d2d9f8.4bpp.lz"
+.incbin "gfx/characters/tengu/d2d9f8.right3.4bpp.lz"
 
 ;d2db5f
 Data_d2db5f:
-.incbin "gfx/characters/tengu/d2db5f.4bpp.lz"
+.incbin "gfx/characters/tengu/d2db5f.left12.unkflag.4bpp.lz"
 
 ;d2dc27
 Data_d2dc27:
@@ -222,4 +222,4 @@ Data_d2ddbc:
 
 ;d2df5d
 Data_d2df5d:
-.incbin "gfx/characters/tengu/d2df5d.4bpp.lz"
+.incbin "gfx/characters/tengu/d2df5d.right2.4bpp.lz"

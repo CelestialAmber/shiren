@@ -26,7 +26,7 @@ Data_ccc4ea:
 
 ;ccc627
 Data_ccc627:
-.incbin "gfx/characters/darkowl/ccc627.4bpp.lz"
+.incbin "gfx/characters/darkowl/ccc627.right2.4bpp.lz"
 
 ;ccc792
 Data_ccc792:
@@ -34,27 +34,27 @@ Data_ccc792:
 
 ;ccc8ed
 Data_ccc8ed:
-.incbin "gfx/characters/darkowl/ccc8ed.4bpp.lz"
+.incbin "gfx/characters/darkowl/ccc8ed.right4.4bpp.lz"
 
 ;ccca4a
 Data_ccca4a:
-.incbin "gfx/characters/darkowl/ccca4a.4bpp.lz"
+.incbin "gfx/characters/darkowl/ccca4a.right3.4bpp.lz"
 
 ;cccba7
 Data_cccba7:
-.incbin "gfx/characters/darkowl/cccba7.4bpp.lz"
+.incbin "gfx/characters/darkowl/cccba7.right3.4bpp.lz"
 
 ;cccd14
 Data_cccd14:
-.incbin "gfx/characters/darkowl/cccd14.4bpp.lz"
+.incbin "gfx/characters/darkowl/cccd14.right2.4bpp.lz"
 
 ;ccce9b
 Data_ccce9b:
-.incbin "gfx/characters/darkowl/ccce9b.4bpp.lz"
+.incbin "gfx/characters/darkowl/ccce9b.right1.4bpp.lz"
 
 ;ccd010
 Data_ccd010:
-.incbin "gfx/characters/darkowl/ccd010.4bpp.lz"
+.incbin "gfx/characters/darkowl/ccd010.right1.4bpp.lz"
 
 ;ccd187
 Data_ccd187:
@@ -102,15 +102,15 @@ Data_cce091:
 
 ;cce1f2
 Data_cce1f2:
-.incbin "gfx/characters/darkowl/cce1f2.4bpp.lz"
+.incbin "gfx/characters/darkowl/cce1f2.right3.4bpp.lz"
 
 ;cce357
 Data_cce357:
-.incbin "gfx/characters/darkowl/cce357.4bpp.lz"
+.incbin "gfx/characters/darkowl/cce357.right2.4bpp.lz"
 
 ;cce4e4
 Data_cce4e4:
-.incbin "gfx/characters/darkowl/cce4e4.4bpp.lz"
+.incbin "gfx/characters/darkowl/cce4e4.right1.4bpp.lz"
 
 ;cce653
 Data_cce653:
@@ -134,7 +134,7 @@ Data_ccebf7:
 
 ;cced6c
 Data_cced6c:
-.incbin "gfx/characters/darkowl/cced6c.4bpp.lz"
+.incbin "gfx/characters/darkowl/cced6c.right2.4bpp.lz"
 
 ;cceed7
 Data_cceed7:
@@ -142,15 +142,15 @@ Data_cceed7:
 
 ;ccf074
 Data_ccf074:
-.incbin "gfx/characters/darkowl/ccf074.4bpp.lz"
+.incbin "gfx/characters/darkowl/ccf074.right4.4bpp.lz"
 
 ;ccf1cd
 Data_ccf1cd:
-.incbin "gfx/characters/darkowl/ccf1cd.4bpp.lz"
+.incbin "gfx/characters/darkowl/ccf1cd.right2.4bpp.lz"
 
 ;ccf356
 Data_ccf356:
-.incbin "gfx/characters/darkowl/ccf356.4bpp.lz"
+.incbin "gfx/characters/darkowl/ccf356.right2.4bpp.lz"
 
 ;ccf4d9
 Data_ccf4d9:

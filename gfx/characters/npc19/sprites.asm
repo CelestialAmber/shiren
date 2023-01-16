@@ -96,32 +96,32 @@ Data_d5930c:
 
 ;d5944c
 Data_d5944c:
-.incbin "gfx/characters/npc19/d5944c.4bpp.lz"
+.incbin "gfx/characters/npc19/d5944c.right2.4bpp.lz"
 
 ;d5956d
 Data_d5956d:
-.incbin "gfx/characters/npc19/d5956d.4bpp.lz"
+.incbin "gfx/characters/npc19/d5956d.right3.4bpp.lz"
 
 ;d59674
 Data_d59674:
-.incbin "gfx/characters/npc19/d59674.4bpp.lz"
+.incbin "gfx/characters/npc19/d59674.right3.4bpp.lz"
 
 ;d59773
 Data_d59773:
-.incbin "gfx/characters/npc19/d59773.4bpp.lz"
+.incbin "gfx/characters/npc19/d59773.right4.4bpp.lz"
 
 ;d59874
 Data_d59874:
-.incbin "gfx/characters/npc19/d59874.4bpp.lz"
+.incbin "gfx/characters/npc19/d59874.right2.4bpp.lz"
 
 ;d5999b
 Data_d5999b:
-.incbin "gfx/characters/npc19/d5999b.4bpp.lz"
+.incbin "gfx/characters/npc19/d5999b.right2.4bpp.lz"
 
 ;d59ac2
 Data_d59ac2:
-.incbin "gfx/characters/npc19/d59ac2.4bpp.lz"
+.incbin "gfx/characters/npc19/d59ac2.right2.4bpp.lz"
 
 ;d59bf3
 Data_d59bf3:
-.incbin "gfx/characters/npc19/d59bf3.4bpp.lz"
+.incbin "gfx/characters/npc19/d59bf3.right2.4bpp.lz"

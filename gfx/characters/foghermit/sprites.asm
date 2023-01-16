@@ -12,7 +12,7 @@ Data_c82492:
 
 ;c825ae
 Data_c825ae:
-.incbin "gfx/characters/foghermit/c825ae.4bpp.lz"
+.incbin "gfx/characters/foghermit/c825ae.right3.4bpp.lz"
 
 ;c826e3
 Data_c826e3:
@@ -20,47 +20,47 @@ Data_c826e3:
 
 ;c82817
 Data_c82817:
-.incbin "gfx/characters/foghermit/c82817.4bpp.lz"
+.incbin "gfx/characters/foghermit/c82817.right3.4bpp.lz"
 
 ;c82946
 Data_c82946:
-.incbin "gfx/characters/foghermit/c82946.4bpp.lz"
+.incbin "gfx/characters/foghermit/c82946.right3.4bpp.lz"
 
 ;c82a89
 Data_c82a89:
-.incbin "gfx/characters/foghermit/c82a89.4bpp.lz"
+.incbin "gfx/characters/foghermit/c82a89.right3.4bpp.lz"
 
 ;c82bd8
 Data_c82bd8:
-.incbin "gfx/characters/foghermit/c82bd8.4bpp.lz"
+.incbin "gfx/characters/foghermit/c82bd8.right4.4bpp.lz"
 
 ;c82d07
 Data_c82d07:
-.incbin "gfx/characters/foghermit/c82d07.4bpp.lz"
+.incbin "gfx/characters/foghermit/c82d07.right4.4bpp.lz"
 
 ;c82e34
 Data_c82e34:
-.incbin "gfx/characters/foghermit/c82e34.4bpp.lz"
+.incbin "gfx/characters/foghermit/c82e34.right4.4bpp.lz"
 
 ;c82f7b
 Data_c82f7b:
-.incbin "gfx/characters/foghermit/c82f7b.4bpp.lz"
+.incbin "gfx/characters/foghermit/c82f7b.right3.4bpp.lz"
 
 ;c830b4
 Data_c830b4:
-.incbin "gfx/characters/foghermit/c830b4.4bpp.lz"
+.incbin "gfx/characters/foghermit/c830b4.right4.4bpp.lz"
 
 ;c831d9
 Data_c831d9:
-.incbin "gfx/characters/foghermit/c831d9.4bpp.lz"
+.incbin "gfx/characters/foghermit/c831d9.right3.4bpp.lz"
 
 ;c8332e
 Data_c8332e:
-.incbin "gfx/characters/foghermit/c8332e.4bpp.lz"
+.incbin "gfx/characters/foghermit/c8332e.right4.4bpp.lz"
 
 ;c83457
 Data_c83457:
-.incbin "gfx/characters/foghermit/c83457.4bpp.lz"
+.incbin "gfx/characters/foghermit/c83457.right4.4bpp.lz"
 
 ;c8358e
 Data_c8358e:
@@ -76,7 +76,7 @@ Data_c83904:
 
 ;c83ae1
 Data_c83ae1:
-.incbin "gfx/characters/foghermit/c83ae1.4bpp.lz"
+.incbin "gfx/characters/foghermit/c83ae1.right1.4bpp.lz"
 
 ;c83c9e
 Data_c83c9e:
@@ -84,7 +84,7 @@ Data_c83c9e:
 
 ;c83e5d
 Data_c83e5d:
-.incbin "gfx/characters/foghermit/c83e5d.4bpp.lz"
+.incbin "gfx/characters/foghermit/c83e5d.right2.4bpp.lz"
 
 ;c83fb4
 Data_c83fb4:
@@ -100,7 +100,7 @@ Data_c8424d:
 
 ;c843cc
 Data_c843cc:
-.incbin "gfx/characters/foghermit/c843cc.4bpp.lz"
+.incbin "gfx/characters/foghermit/c843cc.right4.4bpp.lz"
 
 ;c84517
 Data_c84517:
@@ -108,7 +108,7 @@ Data_c84517:
 
 ;c84669
 Data_c84669:
-.incbin "gfx/characters/foghermit/c84669.4bpp.lz"
+.incbin "gfx/characters/foghermit/c84669.right3.4bpp.lz"
 
 ;c8480e
 Data_c8480e:
@@ -120,15 +120,15 @@ Data_c8496f:
 
 ;c84ae8
 Data_c84ae8:
-.incbin "gfx/characters/foghermit/c84ae8.4bpp.lz"
+.incbin "gfx/characters/foghermit/c84ae8.right3.4bpp.lz"
 
 ;c84c2f
 Data_c84c2f:
-.incbin "gfx/characters/foghermit/c84c2f.4bpp.lz"
+.incbin "gfx/characters/foghermit/c84c2f.right1.4bpp.lz"
 
 ;c84d6f
 Data_c84d6f:
-.incbin "gfx/characters/foghermit/c84d6f.4bpp.lz"
+.incbin "gfx/characters/foghermit/c84d6f.right5.4bpp.lz"
 
 ;c84ee4
 Data_c84ee4:
@@ -148,15 +148,15 @@ Data_c8537b:
 
 ;c8550e
 Data_c8550e:
-.incbin "gfx/characters/foghermit/c8550e.4bpp.lz"
+.incbin "gfx/characters/foghermit/c8550e.right1.4bpp.lz"
 
 ;c85650
 Data_c85650:
-.incbin "gfx/characters/foghermit/c85650.4bpp.lz"
+.incbin "gfx/characters/foghermit/c85650.right5.4bpp.lz"
 
 ;c857c5
 Data_c857c5:
-.incbin "gfx/characters/foghermit/c857c5.4bpp.lz"
+.incbin "gfx/characters/foghermit/c857c5.right3.4bpp.lz"
 
 ;c85940
 Data_c85940:
@@ -164,4 +164,4 @@ Data_c85940:
 
 ;c85aeb
 Data_c85aeb:
-.incbin "gfx/characters/foghermit/c85aeb.4bpp.lz"
+.incbin "gfx/characters/foghermit/c85aeb.right1.4bpp.lz"

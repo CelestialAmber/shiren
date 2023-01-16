@@ -20,16 +20,30 @@ else
   SHA1SUM := shasum
 endif
 
+PYTHON := python3
+
 OBJS = main.o
 
-#Default target
-default: all
+### Build targets
+
+.SUFFIXES:
+.SECONDEXPANSION:
+.PRECIOUS:
+.SECONDARY:
+.PHONY: all tools clean tidy
 
 all: $(rom)
 
-clean:
-	rm $(rom) $(OBJS) shiren.sym
-	make clean -C spc
+tidy:
+	rm -f $(rom) $(OBJS) shiren.sym
+	make -C spc clean
+	make -C tools clean
+
+clean: tidy
+	find . \( -iname '*.lz' \) -exec rm {} +
+
+tools:
+	$(MAKE) -C tools/
 
 WLAFLAGS =
 
@@ -43,8 +57,23 @@ ifeq (,$(filter clean spc,$(MAKECMDGOALS)))
 $(info $(shell make -C spc))
 endif
 
-%.o: %.asm
+ifeq (,$(filter clean tools,$(MAKECMDGOALS)))
+$(info $(shell $(MAKE) -C tools))
+endif
+
+
+%.o: dep = $(shell tools/scan_includes $(@D)/$*.asm)
+%.o: %.asm $$(dep)
 	wla-65816 $(WLAFLAGS) -o $@ $<
+
+#TODO: the script should be rewritten in C to speed up build time, rn it takes forever
+gfx/characters/%.4bpp.lz : gfx/characters/%.4bpp
+	$(info Compressing $<)
+	@$(PYTHON) tools/gfx.py --header $<
+
+gfx/items/%.4bpp.lz : gfx/items/%.4bpp
+	$(info Compressing $<)
+	@$(PYTHON) tools/gfx.py $<
 
 $(rom): $(OBJS)
 	wlalink -S linkfile $@

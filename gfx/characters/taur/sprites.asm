@@ -14,7 +14,7 @@ Data_cb577c:
 
 ;cb5925
 Data_cb5925:
-.incbin "gfx/characters/taur/cb5925.4bpp.lz"
+.incbin "gfx/characters/taur/cb5925.right2.4bpp.lz"
 
 ;cb5ab8
 Data_cb5ab8:
@@ -34,7 +34,7 @@ Data_cb5fbb:
 
 ;cb6162
 Data_cb6162:
-.incbin "gfx/characters/taur/cb6162.4bpp.lz"
+.incbin "gfx/characters/taur/cb6162.right1.4bpp.lz"
 
 ;cb6313
 Data_cb6313:
@@ -46,11 +46,11 @@ Data_cb64ba:
 
 ;cb6639
 Data_cb6639:
-.incbin "gfx/characters/taur/cb6639.4bpp.lz"
+.incbin "gfx/characters/taur/cb6639.right1.4bpp.lz"
 
 ;cb67ee
 Data_cb67ee:
-.incbin "gfx/characters/taur/cb67ee.4bpp.lz"
+.incbin "gfx/characters/taur/cb67ee.right1.4bpp.lz"
 
 ;cb698b
 Data_cb698b:
@@ -86,11 +86,11 @@ Data_cb758c:
 
 ;cb7757
 Data_cb7757:
-.incbin "gfx/characters/taur/cb7757.4bpp.lz"
+.incbin "gfx/characters/taur/cb7757.right1.4bpp.lz"
 
 ;cb78f6
 Data_cb78f6:
-.incbin "gfx/characters/taur/cb78f6.4bpp.lz"
+.incbin "gfx/characters/taur/cb78f6.right4.4bpp.lz"
 
 ;cb7a87
 Data_cb7a87:
@@ -126,15 +126,15 @@ Data_cb8628:
 
 ;cb87d5
 Data_cb87d5:
-.incbin "gfx/characters/taur/cb87d5.4bpp.lz"
+.incbin "gfx/characters/taur/cb87d5.right3.4bpp.lz"
 
 ;cb8898
 Data_cb8898:
-.incbin "gfx/characters/taur/cb8898.4bpp.lz"
+.incbin "gfx/characters/taur/cb8898.left12.unkflag.4bpp.lz"
 
 ;cb89ac
 Data_cb89ac:
-.incbin "gfx/characters/taur/cb89ac.4bpp.lz"
+.incbin "gfx/characters/taur/cb89ac.right3.4bpp.lz"
 
 ;cb8b29
 Data_cb8b29:
@@ -142,7 +142,7 @@ Data_cb8b29:
 
 ;cb8cd8
 Data_cb8cd8:
-.incbin "gfx/characters/taur/cb8cd8.4bpp.lz"
+.incbin "gfx/characters/taur/cb8cd8.right6.4bpp.lz"
 
 ;cb8d83
 Data_cb8d83:
@@ -150,19 +150,19 @@ Data_cb8d83:
 
 ;cb8e90
 Data_cb8e90:
-.incbin "gfx/characters/taur/cb8e90.4bpp.lz"
+.incbin "gfx/characters/taur/cb8e90.right1.4bpp.lz"
 
 ;cb9031
 Data_cb9031:
-.incbin "gfx/characters/taur/cb9031.4bpp.lz"
+.incbin "gfx/characters/taur/cb9031.right1.4bpp.lz"
 
 ;cb91e0
 Data_cb91e0:
-.incbin "gfx/characters/taur/cb91e0.4bpp.lz"
+.incbin "gfx/characters/taur/cb91e0.right1.4bpp.lz"
 
 ;cb92e9
 Data_cb92e9:
-.incbin "gfx/characters/taur/cb92e9.4bpp.lz"
+.incbin "gfx/characters/taur/cb92e9.right7.4bpp.lz"
 
 ;cb930a
 Data_cb930a:
@@ -170,23 +170,23 @@ Data_cb930a:
 
 ;cb94ad
 Data_cb94ad:
-.incbin "gfx/characters/taur/cb94ad.4bpp.lz"
+.incbin "gfx/characters/taur/cb94ad.right2.4bpp.lz"
 
 ;cb966a
 Data_cb966a:
-.incbin "gfx/characters/taur/cb966a.4bpp.lz"
+.incbin "gfx/characters/taur/cb966a.right2.4bpp.lz"
 
 ;cb96f5
 Data_cb96f5:
-.incbin "gfx/characters/taur/cb96f5.4bpp.lz"
+.incbin "gfx/characters/taur/cb96f5.right4.4bpp.lz"
 
 ;cb9828
 Data_cb9828:
-.incbin "gfx/characters/taur/cb9828.4bpp.lz"
+.incbin "gfx/characters/taur/cb9828.right1.4bpp.lz"
 
 ;cb99e9
 Data_cb99e9:
-.incbin "gfx/characters/taur/cb99e9.4bpp.lz"
+.incbin "gfx/characters/taur/cb99e9.right1.4bpp.lz"
 
 ;cb9adc
 Data_cb9adc:

@@ -10,7 +10,7 @@ Data_d24d6a:
 
 ;d24dc1
 Data_d24dc1:
-.incbin "gfx/characters/items/d24dc1.4bpp.lz"
+.incbin "gfx/characters/items/d24dc1.right1.4bpp.lz"
 
 ;d24e38
 Data_d24e38:
@@ -30,7 +30,7 @@ Data_d24f93:
 
 ;d25014
 Data_d25014:
-.incbin "gfx/characters/items/d25014.4bpp.lz"
+.incbin "gfx/characters/items/d25014.right1.4bpp.lz"
 
 ;d25097
 Data_d25097:

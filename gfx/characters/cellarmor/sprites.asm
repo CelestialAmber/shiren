@@ -2,15 +2,15 @@
 
 ;cabf4f
 Data_cabf4f:
-.incbin "gfx/characters/cellarmor/cabf4f.4bpp.lz"
+.incbin "gfx/characters/cellarmor/cabf4f.right4.4bpp.lz"
 
 ;cac0be
 Data_cac0be:
-.incbin "gfx/characters/cellarmor/cac0be.4bpp.lz"
+.incbin "gfx/characters/cellarmor/cac0be.right5.4bpp.lz"
 
 ;cac243
 Data_cac243:
-.incbin "gfx/characters/cellarmor/cac243.4bpp.lz"
+.incbin "gfx/characters/cellarmor/cac243.right4.4bpp.lz"
 
 ;cac3c8
 Data_cac3c8:
@@ -38,23 +38,23 @@ Data_cacca3:
 
 ;cace74
 Data_cace74:
-.incbin "gfx/characters/cellarmor/cace74.4bpp.lz"
+.incbin "gfx/characters/cellarmor/cace74.right1.4bpp.lz"
 
 ;cad029
 Data_cad029:
-.incbin "gfx/characters/cellarmor/cad029.4bpp.lz"
+.incbin "gfx/characters/cellarmor/cad029.right1.4bpp.lz"
 
 ;cad1d2
 Data_cad1d2:
-.incbin "gfx/characters/cellarmor/cad1d2.4bpp.lz"
+.incbin "gfx/characters/cellarmor/cad1d2.right2.4bpp.lz"
 
 ;cad363
 Data_cad363:
-.incbin "gfx/characters/cellarmor/cad363.4bpp.lz"
+.incbin "gfx/characters/cellarmor/cad363.right1.4bpp.lz"
 
 ;cad4e8
 Data_cad4e8:
-.incbin "gfx/characters/cellarmor/cad4e8.4bpp.lz"
+.incbin "gfx/characters/cellarmor/cad4e8.right1.4bpp.lz"
 
 ;cad653
 Data_cad653:
@@ -94,11 +94,11 @@ Data_cae423:
 
 ;cae5d4
 Data_cae5d4:
-.incbin "gfx/characters/cellarmor/cae5d4.4bpp.lz"
+.incbin "gfx/characters/cellarmor/cae5d4.right1.4bpp.lz"
 
 ;cae785
 Data_cae785:
-.incbin "gfx/characters/cellarmor/cae785.4bpp.lz"
+.incbin "gfx/characters/cellarmor/cae785.right1.4bpp.lz"
 
 ;cae8e8
 Data_cae8e8:
@@ -114,7 +114,7 @@ Data_caeb7c:
 
 ;caecb7
 Data_caecb7:
-.incbin "gfx/characters/cellarmor/caecb7.4bpp.lz"
+.incbin "gfx/characters/cellarmor/caecb7.right1.4bpp.lz"
 
 ;caee02
 Data_caee02:
@@ -126,23 +126,23 @@ Data_caef81:
 
 ;caf12e
 Data_caf12e:
-.incbin "gfx/characters/cellarmor/caf12e.4bpp.lz"
+.incbin "gfx/characters/cellarmor/caf12e.left8.unkflag.4bpp.lz"
 
 ;caf1c1
 Data_caf1c1:
-.incbin "gfx/characters/cellarmor/caf1c1.4bpp.lz"
+.incbin "gfx/characters/cellarmor/caf1c1.right2.4bpp.lz"
 
 ;caf34a
 Data_caf34a:
-.incbin "gfx/characters/cellarmor/caf34a.4bpp.lz"
+.incbin "gfx/characters/cellarmor/caf34a.right2.4bpp.lz"
 
 ;caf4fb
 Data_caf4fb:
-.incbin "gfx/characters/cellarmor/caf4fb.4bpp.lz"
+.incbin "gfx/characters/cellarmor/caf4fb.left12.unkflag.4bpp.lz"
 
 ;caf5fd
 Data_caf5fd:
-.incbin "gfx/characters/cellarmor/caf5fd.4bpp.lz"
+.incbin "gfx/characters/cellarmor/caf5fd.right1.4bpp.lz"
 
 ;caf756
 Data_caf756:
@@ -150,7 +150,7 @@ Data_caf756:
 
 ;caf8df
 Data_caf8df:
-.incbin "gfx/characters/cellarmor/caf8df.4bpp.lz"
+.incbin "gfx/characters/cellarmor/caf8df.right3.4bpp.lz"
 
 ;caf92a
 Data_caf92a:
@@ -162,7 +162,7 @@ Data_cafaf1:
 
 ;cafc82
 Data_cafc82:
-.incbin "gfx/characters/cellarmor/cafc82.4bpp.lz"
+.incbin "gfx/characters/cellarmor/cafc82.right13.4bpp.lz"
 
 ;cafcc5
 Data_cafcc5:
@@ -179,11 +179,11 @@ Data_cafe80:
 
 ;cb0033
 Data_cb0033:
-.incbin "gfx/characters/cellarmor/cb0033.4bpp.lz"
+.incbin "gfx/characters/cellarmor/cb0033.right5.4bpp.lz"
 
 ;cb00c1
 Data_cb00c1:
-.incbin "gfx/characters/cellarmor/cb00c1.4bpp.lz"
+.incbin "gfx/characters/cellarmor/cb00c1.right1.4bpp.lz"
 
 ;cb021a
 Data_cb021a:
@@ -191,7 +191,7 @@ Data_cb021a:
 
 ;cb03ab
 Data_cb03ab:
-.incbin "gfx/characters/cellarmor/cb03ab.4bpp.lz"
+.incbin "gfx/characters/cellarmor/cb03ab.left8.unkflag.4bpp.lz"
 
 ;cb03e6
 Data_cb03e6:
@@ -199,7 +199,7 @@ Data_cb03e6:
 
 ;cb0585
 Data_cb0585:
-.incbin "gfx/characters/cellarmor/cb0585.4bpp.lz"
+.incbin "gfx/characters/cellarmor/cb0585.right10.4bpp.lz"
 
 ;cb05e1
 Data_cb05e1:
@@ -211,11 +211,11 @@ Data_cb078c:
 
 ;cb07ff
 Data_cb07ff:
-.incbin "gfx/characters/cellarmor/cb07ff.4bpp.lz"
+.incbin "gfx/characters/cellarmor/cb07ff.right2.4bpp.lz"
 
 ;cb099a
 Data_cb099a:
-.incbin "gfx/characters/cellarmor/cb099a.4bpp.lz"
+.incbin "gfx/characters/cellarmor/cb099a.right4.4bpp.lz"
 
 ;cb09cb
 Data_cb09cb:
@@ -231,7 +231,7 @@ Data_cb0c07:
 
 ;cb0da8
 Data_cb0da8:
-.incbin "gfx/characters/cellarmor/cb0da8.4bpp.lz"
+.incbin "gfx/characters/cellarmor/cb0da8.right5.unkflag.4bpp.lz"
 
 ;cb0dd3
 Data_cb0dd3:
@@ -247,7 +247,7 @@ Data_cb0fed:
 
 ;cb1184
 Data_cb1184:
-.incbin "gfx/characters/cellarmor/cb1184.4bpp.lz"
+.incbin "gfx/characters/cellarmor/cb1184.right10.4bpp.lz"
 
 ;cb11ff
 Data_cb11ff:
@@ -255,4 +255,4 @@ Data_cb11ff:
 
 ;cb13ba
 Data_cb13ba:
-.incbin "gfx/characters/cellarmor/cb13ba.4bpp.lz"
+.incbin "gfx/characters/cellarmor/cb13ba.left12.unkflag.4bpp.lz"

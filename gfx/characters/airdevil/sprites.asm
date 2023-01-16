@@ -2,7 +2,7 @@
 
 ;c9c983
 Data_c9c983:
-.incbin "gfx/characters/airdevil/c9c983.4bpp.lz"
+.incbin "gfx/characters/airdevil/c9c983.right1.4bpp.lz"
 
 ;c9cac8
 Data_c9cac8:
@@ -10,11 +10,11 @@ Data_c9cac8:
 
 ;c9cc11
 Data_c9cc11:
-.incbin "gfx/characters/airdevil/c9cc11.4bpp.lz"
+.incbin "gfx/characters/airdevil/c9cc11.right1.4bpp.lz"
 
 ;c9cd5c
 Data_c9cd5c:
-.incbin "gfx/characters/airdevil/c9cd5c.4bpp.lz"
+.incbin "gfx/characters/airdevil/c9cd5c.right2.4bpp.lz"
 
 ;c9ce91
 Data_c9ce91:
@@ -34,11 +34,11 @@ Data_c9d24a:
 
 ;c9d361
 Data_c9d361:
-.incbin "gfx/characters/airdevil/c9d361.4bpp.lz"
+.incbin "gfx/characters/airdevil/c9d361.right7.4bpp.lz"
 
 ;c9d456
 Data_c9d456:
-.incbin "gfx/characters/airdevil/c9d456.4bpp.lz"
+.incbin "gfx/characters/airdevil/c9d456.right2.4bpp.lz"
 
 ;c9d55b
 Data_c9d55b:
@@ -46,11 +46,11 @@ Data_c9d55b:
 
 ;c9d6da
 Data_c9d6da:
-.incbin "gfx/characters/airdevil/c9d6da.4bpp.lz"
+.incbin "gfx/characters/airdevil/c9d6da.right1.4bpp.lz"
 
 ;c9d895
 Data_c9d895:
-.incbin "gfx/characters/airdevil/c9d895.4bpp.lz"
+.incbin "gfx/characters/airdevil/c9d895.right1.4bpp.lz"
 
 ;c9da56
 Data_c9da56:

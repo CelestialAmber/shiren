@@ -2,27 +2,27 @@
 
 ;cbc5a5
 Data_cbc5a5:
-.incbin "gfx/characters/evilsoldier/cbc5a5.4bpp.lz"
+.incbin "gfx/characters/evilsoldier/cbc5a5.right2.4bpp.lz"
 
 ;cbc6eb
 Data_cbc6eb:
-.incbin "gfx/characters/evilsoldier/cbc6eb.4bpp.lz"
+.incbin "gfx/characters/evilsoldier/cbc6eb.right2.4bpp.lz"
 
 ;cbc823
 Data_cbc823:
-.incbin "gfx/characters/evilsoldier/cbc823.4bpp.lz"
+.incbin "gfx/characters/evilsoldier/cbc823.right2.4bpp.lz"
 
 ;cbc95d
 Data_cbc95d:
-.incbin "gfx/characters/evilsoldier/cbc95d.4bpp.lz"
+.incbin "gfx/characters/evilsoldier/cbc95d.right2.4bpp.lz"
 
 ;cbcaf4
 Data_cbcaf4:
-.incbin "gfx/characters/evilsoldier/cbcaf4.4bpp.lz"
+.incbin "gfx/characters/evilsoldier/cbcaf4.right1.4bpp.lz"
 
 ;cbcc75
 Data_cbcc75:
-.incbin "gfx/characters/evilsoldier/cbcc75.4bpp.lz"
+.incbin "gfx/characters/evilsoldier/cbcc75.right3.4bpp.lz"
 
 ;cbcde6
 Data_cbcde6:
@@ -38,11 +38,11 @@ Data_cbd0ec:
 
 ;cbd26d
 Data_cbd26d:
-.incbin "gfx/characters/evilsoldier/cbd26d.4bpp.lz"
+.incbin "gfx/characters/evilsoldier/cbd26d.right1.4bpp.lz"
 
 ;cbd3e8
 Data_cbd3e8:
-.incbin "gfx/characters/evilsoldier/cbd3e8.4bpp.lz"
+.incbin "gfx/characters/evilsoldier/cbd3e8.right2.4bpp.lz"
 
 ;cbd547
 Data_cbd547:
@@ -50,11 +50,11 @@ Data_cbd547:
 
 ;cbd6c0
 Data_cbd6c0:
-.incbin "gfx/characters/evilsoldier/cbd6c0.4bpp.lz"
+.incbin "gfx/characters/evilsoldier/cbd6c0.left15.unkflag.4bpp.lz"
 
 ;cbd812
 Data_cbd812:
-.incbin "gfx/characters/evilsoldier/cbd812.4bpp.lz"
+.incbin "gfx/characters/evilsoldier/cbd812.left14.unkflag.4bpp.lz"
 
 ;cbd966
 Data_cbd966:
@@ -70,7 +70,7 @@ Data_cbdc41:
 
 ;cbddc2
 Data_cbddc2:
-.incbin "gfx/characters/evilsoldier/cbddc2.4bpp.lz"
+.incbin "gfx/characters/evilsoldier/cbddc2.right1.4bpp.lz"
 
 ;cbdf53
 Data_cbdf53:
@@ -114,11 +114,11 @@ Data_cbecba:
 
 ;cbee23
 Data_cbee23:
-.incbin "gfx/characters/evilsoldier/cbee23.4bpp.lz"
+.incbin "gfx/characters/evilsoldier/cbee23.right4.4bpp.lz"
 
 ;cbef68
 Data_cbef68:
-.incbin "gfx/characters/evilsoldier/cbef68.4bpp.lz"
+.incbin "gfx/characters/evilsoldier/cbef68.right4.4bpp.lz"
 
 ;cbf0ef
 Data_cbf0ef:
@@ -130,7 +130,7 @@ Data_cbf2c0:
 
 ;cbf461
 Data_cbf461:
-.incbin "gfx/characters/evilsoldier/cbf461.4bpp.lz"
+.incbin "gfx/characters/evilsoldier/cbf461.right2.4bpp.lz"
 
 ;cbf5d2
 Data_cbf5d2:
@@ -138,11 +138,11 @@ Data_cbf5d2:
 
 ;cbf77d
 Data_cbf77d:
-.incbin "gfx/characters/evilsoldier/cbf77d.4bpp.lz"
+.incbin "gfx/characters/evilsoldier/cbf77d.right3.4bpp.lz"
 
 ;cbf8ee
 Data_cbf8ee:
-.incbin "gfx/characters/evilsoldier/cbf8ee.4bpp.lz"
+.incbin "gfx/characters/evilsoldier/cbf8ee.right1.4bpp.lz"
 
 ;cbfa85
 Data_cbfa85:
@@ -171,7 +171,7 @@ Data_cc00b3:
 
 ;cc0232
 Data_cc0232:
-.incbin "gfx/characters/evilsoldier/cc0232.4bpp.lz"
+.incbin "gfx/characters/evilsoldier/cc0232.right2.unkflag.4bpp.lz"
 
 ;cc027d
 Data_cc027d:
@@ -183,11 +183,11 @@ Data_cc0422:
 
 ;cc05c1
 Data_cc05c1:
-.incbin "gfx/characters/evilsoldier/cc05c1.4bpp.lz"
+.incbin "gfx/characters/evilsoldier/cc05c1.right1.4bpp.lz"
 
 ;cc0766
 Data_cc0766:
-.incbin "gfx/characters/evilsoldier/cc0766.4bpp.lz"
+.incbin "gfx/characters/evilsoldier/cc0766.right2.4bpp.lz"
 
 ;cc08cd
 Data_cc08cd:
@@ -195,8 +195,8 @@ Data_cc08cd:
 
 ;cc0a2e
 Data_cc0a2e:
-.incbin "gfx/characters/evilsoldier/cc0a2e.4bpp.lz"
+.incbin "gfx/characters/evilsoldier/cc0a2e.right3.4bpp.lz"
 
 ;cc0bab
 Data_cc0bab:
-.incbin "gfx/characters/evilsoldier/cc0bab.4bpp.lz"
+.incbin "gfx/characters/evilsoldier/cc0bab.right1.4bpp.lz"

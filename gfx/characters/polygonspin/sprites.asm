@@ -2,11 +2,11 @@
 
 ;cfe3e2
 Data_cfe3e2:
-.incbin "gfx/characters/polygonspin/cfe3e2.4bpp.lz"
+.incbin "gfx/characters/polygonspin/cfe3e2.right2.4bpp.lz"
 
 ;cfe4e4
 Data_cfe4e4:
-.incbin "gfx/characters/polygonspin/cfe4e4.4bpp.lz"
+.incbin "gfx/characters/polygonspin/cfe4e4.right1.4bpp.lz"
 
 ;cfe5bd
 Data_cfe5bd:
@@ -14,15 +14,15 @@ Data_cfe5bd:
 
 ;cfe68a
 Data_cfe68a:
-.incbin "gfx/characters/polygonspin/cfe68a.4bpp.lz"
+.incbin "gfx/characters/polygonspin/cfe68a.right4.4bpp.lz"
 
 ;cfe7b3
 Data_cfe7b3:
-.incbin "gfx/characters/polygonspin/cfe7b3.4bpp.lz"
+.incbin "gfx/characters/polygonspin/cfe7b3.right1.4bpp.lz"
 
 ;cfe8cf
 Data_cfe8cf:
-.incbin "gfx/characters/polygonspin/cfe8cf.4bpp.lz"
+.incbin "gfx/characters/polygonspin/cfe8cf.right2.4bpp.lz"
 
 ;cfe9e3
 Data_cfe9e3:
@@ -34,11 +34,11 @@ Data_cfeb60:
 
 ;cfecbf
 Data_cfecbf:
-.incbin "gfx/characters/polygonspin/cfecbf.4bpp.lz"
+.incbin "gfx/characters/polygonspin/cfecbf.right1.4bpp.lz"
 
 ;cfee1a
 Data_cfee1a:
-.incbin "gfx/characters/polygonspin/cfee1a.4bpp.lz"
+.incbin "gfx/characters/polygonspin/cfee1a.right1.4bpp.lz"
 
 ;cfef5f
 Data_cfef5f:
@@ -50,11 +50,11 @@ Data_cff085:
 
 ;cff1c1
 Data_cff1c1:
-.incbin "gfx/characters/polygonspin/cff1c1.4bpp.lz"
+.incbin "gfx/characters/polygonspin/cff1c1.right3.4bpp.lz"
 
 ;cff2fc
 Data_cff2fc:
-.incbin "gfx/characters/polygonspin/cff2fc.4bpp.lz"
+.incbin "gfx/characters/polygonspin/cff2fc.right1.4bpp.lz"
 
 ;cff457
 Data_cff457:
@@ -66,11 +66,11 @@ Data_cff5f8:
 
 ;cff78b
 Data_cff78b:
-.incbin "gfx/characters/polygonspin/cff78b.4bpp.lz"
+.incbin "gfx/characters/polygonspin/cff78b.right1.4bpp.lz"
 
 ;cff8fe
 Data_cff8fe:
-.incbin "gfx/characters/polygonspin/cff8fe.4bpp.lz"
+.incbin "gfx/characters/polygonspin/cff8fe.right3.4bpp.lz"
 
 ;cffa63
 Data_cffa63:
@@ -78,7 +78,7 @@ Data_cffa63:
 
 ;cffb9c
 Data_cffb9c:
-.incbin "gfx/characters/polygonspin/cffb9c.4bpp.lz"
+.incbin "gfx/characters/polygonspin/cffb9c.right1.4bpp.lz"
 
 ;cffce9
 Data_cffce9:
@@ -86,7 +86,7 @@ Data_cffce9:
 
 ;cffe36
 Data_cffe36:
-.incbin "gfx/characters/polygonspin/cffe36.4bpp.lz"
+.incbin "gfx/characters/polygonspin/cffe36.right2.4bpp.lz"
 
 ;cfff3c
 Data_cfff3c:
@@ -103,7 +103,7 @@ Data_d00059:
 
 ;d00179
 Data_d00179:
-.incbin "gfx/characters/polygonspin/d00179.4bpp.lz"
+.incbin "gfx/characters/polygonspin/d00179.right1.4bpp.lz"
 
 ;d002be
 Data_d002be:
@@ -111,7 +111,7 @@ Data_d002be:
 
 ;d003e7
 Data_d003e7:
-.incbin "gfx/characters/polygonspin/d003e7.4bpp.lz"
+.incbin "gfx/characters/polygonspin/d003e7.right1.4bpp.lz"
 
 ;d004e4
 Data_d004e4:
@@ -123,7 +123,7 @@ Data_d005ee:
 
 ;d0073d
 Data_d0073d:
-.incbin "gfx/characters/polygonspin/d0073d.4bpp.lz"
+.incbin "gfx/characters/polygonspin/d0073d.right1.4bpp.lz"
 
 ;d0087a
 Data_d0087a:
@@ -131,19 +131,19 @@ Data_d0087a:
 
 ;d0098b
 Data_d0098b:
-.incbin "gfx/characters/polygonspin/d0098b.4bpp.lz"
+.incbin "gfx/characters/polygonspin/d0098b.right3.4bpp.lz"
 
 ;d00ac8
 Data_d00ac8:
-.incbin "gfx/characters/polygonspin/d00ac8.4bpp.lz"
+.incbin "gfx/characters/polygonspin/d00ac8.right1.4bpp.lz"
 
 ;d00c29
 Data_d00c29:
-.incbin "gfx/characters/polygonspin/d00c29.4bpp.lz"
+.incbin "gfx/characters/polygonspin/d00c29.right3.4bpp.lz"
 
 ;d00d7a
 Data_d00d7a:
-.incbin "gfx/characters/polygonspin/d00d7a.4bpp.lz"
+.incbin "gfx/characters/polygonspin/d00d7a.right2.4bpp.lz"
 
 ;d00e99
 Data_d00e99:
@@ -151,7 +151,7 @@ Data_d00e99:
 
 ;d01026
 Data_d01026:
-.incbin "gfx/characters/polygonspin/d01026.4bpp.lz"
+.incbin "gfx/characters/polygonspin/d01026.right3.4bpp.lz"
 
 ;d0118b
 Data_d0118b:
@@ -159,27 +159,27 @@ Data_d0118b:
 
 ;d012e6
 Data_d012e6:
-.incbin "gfx/characters/polygonspin/d012e6.4bpp.lz"
+.incbin "gfx/characters/polygonspin/d012e6.right1.4bpp.lz"
 
 ;d013f1
 Data_d013f1:
-.incbin "gfx/characters/polygonspin/d013f1.4bpp.lz"
+.incbin "gfx/characters/polygonspin/d013f1.right4.4bpp.lz"
 
 ;d014fa
 Data_d014fa:
-.incbin "gfx/characters/polygonspin/d014fa.4bpp.lz"
+.incbin "gfx/characters/polygonspin/d014fa.right2.4bpp.lz"
 
 ;d01621
 Data_d01621:
-.incbin "gfx/characters/polygonspin/d01621.4bpp.lz"
+.incbin "gfx/characters/polygonspin/d01621.right2.4bpp.lz"
 
 ;d0179a
 Data_d0179a:
-.incbin "gfx/characters/polygonspin/d0179a.4bpp.lz"
+.incbin "gfx/characters/polygonspin/d0179a.right1.4bpp.lz"
 
 ;d018f5
 Data_d018f5:
-.incbin "gfx/characters/polygonspin/d018f5.4bpp.lz"
+.incbin "gfx/characters/polygonspin/d018f5.right1.4bpp.lz"
 
 ;d01a64
 Data_d01a64:
@@ -187,19 +187,19 @@ Data_d01a64:
 
 ;d01bd1
 Data_d01bd1:
-.incbin "gfx/characters/polygonspin/d01bd1.4bpp.lz"
+.incbin "gfx/characters/polygonspin/d01bd1.right2.4bpp.lz"
 
 ;d01d26
 Data_d01d26:
-.incbin "gfx/characters/polygonspin/d01d26.4bpp.lz"
+.incbin "gfx/characters/polygonspin/d01d26.right2.4bpp.lz"
 
 ;d01e8d
 Data_d01e8d:
-.incbin "gfx/characters/polygonspin/d01e8d.4bpp.lz"
+.incbin "gfx/characters/polygonspin/d01e8d.right4.4bpp.lz"
 
 ;d01fbe
 Data_d01fbe:
-.incbin "gfx/characters/polygonspin/d01fbe.4bpp.lz"
+.incbin "gfx/characters/polygonspin/d01fbe.right2.4bpp.lz"
 
 ;d02109
 Data_d02109:

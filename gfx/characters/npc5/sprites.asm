@@ -52,11 +52,11 @@ Data_d3ce05:
 
 ;d3cf4d
 Data_d3cf4d:
-.incbin "gfx/characters/npc5/d3cf4d.4bpp.lz"
+.incbin "gfx/characters/npc5/d3cf4d.right4.4bpp.lz"
 
 ;d3d092
 Data_d3d092:
-.incbin "gfx/characters/npc5/d3d092.4bpp.lz"
+.incbin "gfx/characters/npc5/d3d092.right5.4bpp.lz"
 
 ;d3d1c9
 Data_d3d1c9:
@@ -64,7 +64,7 @@ Data_d3d1c9:
 
 ;d3d2fb
 Data_d3d2fb:
-.incbin "gfx/characters/npc5/d3d2fb.4bpp.lz"
+.incbin "gfx/characters/npc5/d3d2fb.right1.4bpp.lz"
 
 ;d3d434
 Data_d3d434:

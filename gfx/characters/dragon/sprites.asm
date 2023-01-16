@@ -14,15 +14,15 @@ Data_cb173a:
 
 ;cb18a5
 Data_cb18a5:
-.incbin "gfx/characters/dragon/cb18a5.4bpp.lz"
+.incbin "gfx/characters/dragon/cb18a5.right1.4bpp.lz"
 
 ;cb1a34
 Data_cb1a34:
-.incbin "gfx/characters/dragon/cb1a34.4bpp.lz"
+.incbin "gfx/characters/dragon/cb1a34.right1.4bpp.lz"
 
 ;cb1bbd
 Data_cb1bbd:
-.incbin "gfx/characters/dragon/cb1bbd.4bpp.lz"
+.incbin "gfx/characters/dragon/cb1bbd.right1.4bpp.lz"
 
 ;cb1d54
 Data_cb1d54:
@@ -30,19 +30,19 @@ Data_cb1d54:
 
 ;cb1f17
 Data_cb1f17:
-.incbin "gfx/characters/dragon/cb1f17.4bpp.lz"
+.incbin "gfx/characters/dragon/cb1f17.right2.4bpp.lz"
 
 ;cb20b8
 Data_cb20b8:
-.incbin "gfx/characters/dragon/cb20b8.4bpp.lz"
+.incbin "gfx/characters/dragon/cb20b8.right1.4bpp.lz"
 
 ;cb2269
 Data_cb2269:
-.incbin "gfx/characters/dragon/cb2269.4bpp.lz"
+.incbin "gfx/characters/dragon/cb2269.right1.4bpp.lz"
 
 ;cb2408
 Data_cb2408:
-.incbin "gfx/characters/dragon/cb2408.4bpp.lz"
+.incbin "gfx/characters/dragon/cb2408.right1.4bpp.lz"
 
 ;cb25b1
 Data_cb25b1:
@@ -54,7 +54,7 @@ Data_cb2730:
 
 ;cb28dd
 Data_cb28dd:
-.incbin "gfx/characters/dragon/cb28dd.4bpp.lz"
+.incbin "gfx/characters/dragon/cb28dd.right1.4bpp.lz"
 
 ;cb2aa2
 Data_cb2aa2:
@@ -98,7 +98,7 @@ Data_cb3a7b:
 
 ;cb3c4a
 Data_cb3c4a:
-.incbin "gfx/characters/dragon/cb3c4a.4bpp.lz"
+.incbin "gfx/characters/dragon/cb3c4a.right1.4bpp.lz"
 
 ;cb3dff
 Data_cb3dff:
@@ -122,7 +122,7 @@ Data_cb44f1:
 
 ;cb4686
 Data_cb4686:
-.incbin "gfx/characters/dragon/cb4686.4bpp.lz"
+.incbin "gfx/characters/dragon/cb4686.right1.4bpp.lz"
 
 ;cb4801
 Data_cb4801:
@@ -134,7 +134,7 @@ Data_cb499a:
 
 ;cb4b43
 Data_cb4b43:
-.incbin "gfx/characters/dragon/cb4b43.4bpp.lz"
+.incbin "gfx/characters/dragon/cb4b43.right2.4bpp.lz"
 
 ;cb4cf6
 Data_cb4cf6:

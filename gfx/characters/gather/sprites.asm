@@ -88,7 +88,7 @@ Data_c79248:
 
 ;c793f3
 Data_c793f3:
-.incbin "gfx/characters/gather/c793f3.4bpp.lz"
+.incbin "gfx/characters/gather/c793f3.right2.4bpp.lz"
 
 ;c7958c
 Data_c7958c:
@@ -96,7 +96,7 @@ Data_c7958c:
 
 ;c79649
 Data_c79649:
-.incbin "gfx/characters/gather/c79649.4bpp.lz"
+.incbin "gfx/characters/gather/c79649.right3.4bpp.lz"
 
 ;c796bb
 Data_c796bb:
@@ -108,11 +108,11 @@ Data_c7985e:
 
 ;c799bf
 Data_c799bf:
-.incbin "gfx/characters/gather/c799bf.4bpp.lz"
+.incbin "gfx/characters/gather/c799bf.right4.4bpp.lz"
 
 ;c79a69
 Data_c79a69:
-.incbin "gfx/characters/gather/c79a69.4bpp.lz"
+.incbin "gfx/characters/gather/c79a69.right6.4bpp.lz"
 
 ;c79aaa
 Data_c79aaa:
@@ -120,7 +120,7 @@ Data_c79aaa:
 
 ;c79c59
 Data_c79c59:
-.incbin "gfx/characters/gather/c79c59.4bpp.lz"
+.incbin "gfx/characters/gather/c79c59.right2.4bpp.lz"
 
 ;c79dde
 Data_c79dde:
@@ -128,7 +128,7 @@ Data_c79dde:
 
 ;c79e98
 Data_c79e98:
-.incbin "gfx/characters/gather/c79e98.4bpp.lz"
+.incbin "gfx/characters/gather/c79e98.right13.4bpp.lz"
 
 ;c79eab
 Data_c79eab:
@@ -140,11 +140,11 @@ Data_c7a058:
 
 ;c7a1ed
 Data_c7a1ed:
-.incbin "gfx/characters/gather/c7a1ed.4bpp.lz"
+.incbin "gfx/characters/gather/c7a1ed.left14.unkflag.4bpp.lz"
 
 ;c7a276
 Data_c7a276:
-.incbin "gfx/characters/gather/c7a276.4bpp.lz"
+.incbin "gfx/characters/gather/c7a276.right10.4bpp.lz"
 
 ;c7a2ec
 Data_c7a2ec:
@@ -156,8 +156,8 @@ Data_c7a4b9:
 
 ;c7a666
 Data_c7a666:
-.incbin "gfx/characters/gather/c7a666.4bpp.lz"
+.incbin "gfx/characters/gather/c7a666.right3.4bpp.lz"
 
 ;c7a6ff
 Data_c7a6ff:
-.incbin "gfx/characters/gather/c7a6ff.4bpp.lz"
+.incbin "gfx/characters/gather/c7a6ff.left12.unkflag.4bpp.lz"
