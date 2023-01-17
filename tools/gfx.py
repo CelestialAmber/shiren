@@ -1,14 +1,56 @@
 #!/usr/bin/env python3
 
-#Compresses 4bpp graphics files into Shiren's compressed graphics format.
-#Usage: gfx.py [-h] [--header] file.4bpp
+#Graphics tool for the Shiren disassembly. Can convert png to 4bpp and compress 4bpp files
+#to Shiren's compression format
+#Usage: gfx.py [-h] cmd [--pattern v|h] [--header] file.4bpp
 
-import sys
 import argparse
-import subprocess
-import struct
-import enum
-import signal
+import png
+
+
+#Converts a 4bpp indexed image to a 4bpp file
+def ConvertImageTo4BPP(width, height, imageData, pattern):
+	tileData = []
+	pixels = list(imageData)
+	tileWidth = int(width/8)
+	tileHeight = int(height/8)
+	tiles = tileWidth*tileHeight
+
+	for i in range(tiles):
+		tileX = 0
+		tileY = 0
+		firstHalfIndex = i*32 #Used to keep track of where to add the low bitplane bytes
+
+		if pattern == 0: #Horizontal
+			tileX = (i % tileWidth)*8
+			tileY = int(i/tileWidth)*8
+		else:
+			tileX = int(i/tileHeight)*8
+			tileY = (i % tileHeight)*8
+		
+		for y in range(8):
+			tileByte1 = 0
+			tileByte2 = 0
+			tileByte3 = 0
+			tileByte4 = 0
+			for x in range(8):
+				col = pixels[tileY + y][tileX + x]
+				#Write each bit of the color to a separate byte for each bitplane
+				tileByte1 |= ((col & 1) << (7-x)) #bitplane 0
+				tileByte2 |= (((col >> 1) & 1) << (7-x)) #bitplane 1
+				tileByte3 |= (((col >> 2) & 1) << (7-x)) #bitplane 2
+				tileByte4 |= (((col >> 3) & 1) << (7-x)) #bitplane 3
+
+			#Add the bytes to the tile data list
+			#Insert the first two bytes at the end of the first half, and add the last
+			#two bytes to the end
+			tileData.insert(firstHalfIndex,tileByte1)
+			tileData.insert(firstHalfIndex+1,tileByte2)
+			tileData.append(tileByte3)
+			tileData.append(tileByte4)
+			firstHalfIndex += 2
+
+	return bytearray(tileData)
 
 
 def Compress(imageData, dest, bitDepth):
@@ -32,8 +74,6 @@ def Compress(imageData, dest, bitDepth):
 				minLength = 0
 				blockType = 0
 				compressedTileData = []
-
-				#Try all 4 methods, and choose the best
 
 				#Check if the tile is blank (all 0 bytes)
 				blank = True
@@ -201,7 +241,10 @@ def CalculateHeaderByte(width, height, unkFlag, pixelOffsetDir, pixelOffset):
 #Main code
 
 parser = argparse.ArgumentParser(description='Compresses 1bpp/4bpp graphics files into Shiren\'s compressed graphics format.')
-
+parser.add_argument('cmd', type=str,
+	help='command (pngto4bpp, compress)')
+parser.add_argument('-p','--pattern', type=str,
+	help='tile pattern to use when converting from png to 1bpp/4bpp (v: vertical, h: horizontal)')
 parser.add_argument('--header', action='store_true',
 	help="if specified, includes the header byte")
 parser.add_argument('filename', type=str,
@@ -209,48 +252,68 @@ parser.add_argument('filename', type=str,
 args = parser.parse_args()
 
 filename = args.filename
-graphicsDataFile = open(filename, "rb")
-imageData = graphicsDataFile.read()
-tempList = []
-unkFlag = False #is the unknown flag (bit 4) true in the header?
-pixelOffsetInfoStr = ""
-filenameParts = filename.split(".")
-
-newFilename = filename.replace(".4bpp","")
 
 
+if args.cmd == "compress":
+	graphicsDataFile = open(filename, "rb")
+	imageData = graphicsDataFile.read()
+	tempList = []
+	unkFlag = False #is the unknown flag (bit 4) true in the header?
+	pixelOffsetInfoStr = ""
+	filenameParts = filename.split(".")
 
-for part in filenameParts:
-	#If the filename contains pixel offset information, save it to the pixel offset info string
-	if part.startswith("left") or part.startswith("right"):
-		pixelOffsetInfoStr = part
-		#print(pixelOffsetStr)
-	elif part == "unkflag":
-		#print("File uses unknown flag")
-		unkFlag = True
+	newFilename = filename.replace(".4bpp","")
 
 
-#If the header argument was passed, calculate and add the header byte
-if args.header:
-	#By default, the offset is 0 and the direction is right
-	offsetDir = 0
-	offset = 0
+	#If the header argument was passed, calculate and add the header byte
+	if args.header:
+		#By default, the offset is 0 and the direction is right
+		offsetDir = 0
+		offset = 0
 
-	if len(pixelOffsetInfoStr) > 0:
-		offsetDir = 0 if "right" in pixelOffsetInfoStr else 1 #0 for right, 1 for left
-		offsetNumStr = pixelOffsetInfoStr.replace("right","").replace("left","")
-		offset = int(offsetNumStr)
+		for part in filenameParts:
+			#If the filename contains pixel offset information, save it to the pixel offset info string
+			if part.startswith("left") or part.startswith("right"):
+				pixelOffsetInfoStr = part
+				#print(pixelOffsetStr)
+			elif part == "unkflag":
+				#print("File uses unknown flag")
+				unkFlag = True
+
+		if len(pixelOffsetInfoStr) > 0:
+			offsetDir = 0 if "right" in pixelOffsetInfoStr else 1 #0 for right, 1 for left
+			offsetNumStr = pixelOffsetInfoStr.replace("right","").replace("left","")
+			offset = int(offsetNumStr)
+
+		height = 32 #height is always 32
+		width = int(len(imageData)/((height*4)/8)) #Calculate the height from the width
+		#print(str(width) + "x" + str(height))
+		#print("Offset dir: " + ("right" if offsetDir == 0 else "left"))
+		#print("Offset: " + str(offset))
+		headerByte = CalculateHeaderByte(width,height,unkFlag,offsetDir,offset)
+		tempList.append(headerByte) #Add the header byte
+
+	compressedData = Compress(imageData, tempList, 4)
+
+	with open(newFilename + ".4bpp.lz", 'wb') as destinationFile:
+		destinationFile.write(compressedData)
+		destinationFile.close()
+elif args.cmd == "pngto4bpp":
+	#Convert the specified png file to a 4bpp file
+	imageFile = open(filename, 'rb')
+	width, height, pixels, meta = png.Reader(imageFile).read()
+
+	#Use horizontal tile pattern/order by default
+	pattern = 0
+
+	if(args.pattern == "h"): #Horizontal
+		pattern = 0
+	elif(args.pattern == "v"): #Vertical
+		pattern = 1
 	
-	height = 32 #height is always 32
-	width = int(len(imageData)/((height*4)/8)) #Calculate the height from the width
-	#print(str(width) + "x" + str(height))
-	#print("Offset dir: " + ("right" if offsetDir == 0 else "left"))
-	#print("Offset: " + str(offset))
-	headerByte = CalculateHeaderByte(width,height,unkFlag,offsetDir,offset)
-	tempList.append(headerByte) #Add the header byte
-
-compressedData = Compress(imageData, tempList, 4)
-
-with open(newFilename + ".4bpp.lz", 'wb') as destinationFile:
-	destinationFile.write(compressedData)
-	destinationFile.close()
+	tileData = ConvertImageTo4BPP(width, height, pixels, pattern)
+	path = filename.replace(".png",".4bpp")
+	
+	with open(path, 'wb') as destFile:
+		destFile.write(tileData)
+		destFile.close()
