@@ -20,16 +20,33 @@ else
   SHA1SUM := shasum
 endif
 
+PYTHON := python3
+
 OBJS = main.o
 
-#Default target
-default: all
+### Build targets
+
+.SUFFIXES:
+.SECONDEXPANSION:
+.PRECIOUS:
+.SECONDARY:
+.PHONY: all tools clean tidy
 
 all: $(rom)
 
-clean:
-	rm $(rom) $(OBJS) shiren.sym
-	make clean -C spc
+tidy:
+	rm -f $(rom) $(OBJS) shiren.sym
+	$(MAKE) -C spc clean
+	$(MAKE) -C tools clean
+
+clean: tidy
+	find . \( -iname '*.lz' \) -exec rm {} +
+	find gfx/items \( -iname '*.4bpp' \) -exec rm {} +
+#remove 4bpp files except for shiren's uncompressed ones
+	find gfx/characters \( -iname '*.4bpp' -not -path "gfx/characters/shiren/walk*" \) -exec rm {} +
+
+tools:
+	$(MAKE) -C tools/
 
 WLAFLAGS =
 
@@ -40,12 +57,30 @@ endif
 
 #Build the spc code if it hasn't been built yet
 ifeq (,$(filter clean spc,$(MAKECMDGOALS)))
-$(info $(shell make -C spc))
+$(info $(shell $(MAKE) -C spc))
 endif
 
-%.o: %.asm
-	wla-65816 $(WLAFLAGS) -o $@ $<
+ifeq (,$(filter clean tools,$(MAKECMDGOALS)))
+$(info $(shell $(MAKE) -C tools))
+endif
 
 $(rom): $(OBJS)
 	wlalink -S linkfile $@
 	$(SHA1SUM) -c shiren.sha1
+
+%.o: dep = $(shell tools/scan_includes $(@D)/$*.asm)
+%.o: %.asm $$(dep)
+	wla-65816 $(WLAFLAGS) -o $@ $<
+
+#TODO: the script should be rewritten in C to speed up build time, rn it takes forever
+gfx/characters/%.4bpp.lz : gfx/characters/%.4bpp
+	$(PYTHON) tools/gfx.py compress --header $<
+
+gfx/items/%.4bpp.lz : gfx/items/%.4bpp
+	$(PYTHON) tools/gfx.py compress $<
+
+gfx/characters/%.4bpp : gfx/characters/%.png
+	$(PYTHON) tools/gfx.py pngto4bpp -p v $<
+
+gfx/items/%.4bpp : gfx/items/%.png
+	$(PYTHON) tools/gfx.py pngto4bpp $<

@@ -4,7 +4,7 @@ Data_d43f24:
 
 ;d43ff7
 Data_d43ff7:
-.incbin "gfx/characters/npc10/d43ff7.4bpp.lz"
+.incbin "gfx/characters/npc10/d43ff7.right3.4bpp.lz"
 
 ;d440d9
 Data_d440d9:
@@ -12,11 +12,11 @@ Data_d440d9:
 
 ;d441a8
 Data_d441a8:
-.incbin "gfx/characters/npc10/d441a8.4bpp.lz"
+.incbin "gfx/characters/npc10/d441a8.left15.unkflag.4bpp.lz"
 
 ;d442aa
 Data_d442aa:
-.incbin "gfx/characters/npc10/d442aa.4bpp.lz"
+.incbin "gfx/characters/npc10/d442aa.right3.4bpp.lz"
 
 ;d443c1
 Data_d443c1:
@@ -24,11 +24,11 @@ Data_d443c1:
 
 ;d444c9
 Data_d444c9:
-.incbin "gfx/characters/npc10/d444c9.4bpp.lz"
+.incbin "gfx/characters/npc10/d444c9.right3.4bpp.lz"
 
 ;d445ea
 Data_d445ea:
-.incbin "gfx/characters/npc10/d445ea.4bpp.lz"
+.incbin "gfx/characters/npc10/d445ea.right2.4bpp.lz"
 
 ;d44711
 Data_d44711:
@@ -36,23 +36,23 @@ Data_d44711:
 
 ;d44825
 Data_d44825:
-.incbin "gfx/characters/npc10/d44825.4bpp.lz"
+.incbin "gfx/characters/npc10/d44825.right2.4bpp.lz"
 
 ;d44925
 Data_d44925:
-.incbin "gfx/characters/npc10/d44925.4bpp.lz"
+.incbin "gfx/characters/npc10/d44925.right2.4bpp.lz"
 
 ;d44a27
 Data_d44a27:
-.incbin "gfx/characters/npc10/d44a27.4bpp.lz"
+.incbin "gfx/characters/npc10/d44a27.right2.4bpp.lz"
 
 ;d44b11
 Data_d44b11:
-.incbin "gfx/characters/npc10/d44b11.4bpp.lz"
+.incbin "gfx/characters/npc10/d44b11.right3.4bpp.lz"
 
 ;d44c3e
 Data_d44c3e:
-.incbin "gfx/characters/npc10/d44c3e.4bpp.lz"
+.incbin "gfx/characters/npc10/d44c3e.right2.4bpp.lz"
 
 ;d44d77
 Data_d44d77:
@@ -60,11 +60,11 @@ Data_d44d77:
 
 ;d44e9b
 Data_d44e9b:
-.incbin "gfx/characters/npc10/d44e9b.4bpp.lz"
+.incbin "gfx/characters/npc10/d44e9b.right6.4bpp.lz"
 
 ;d44fa8
 Data_d44fa8:
-.incbin "gfx/characters/npc10/d44fa8.4bpp.lz"
+.incbin "gfx/characters/npc10/d44fa8.right2.4bpp.lz"
 
 ;d450fb
 Data_d450fb:
@@ -76,8 +76,8 @@ Data_d45278:
 
 ;d453ad
 Data_d453ad:
-.incbin "gfx/characters/npc10/d453ad.4bpp.lz"
+.incbin "gfx/characters/npc10/d453ad.right2.4bpp.lz"
 
 ;d454fa
 Data_d454fa:
-.incbin "gfx/characters/npc10/d454fa.4bpp.lz"
+.incbin "gfx/characters/npc10/d454fa.right4.4bpp.lz"

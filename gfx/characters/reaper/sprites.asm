@@ -10,31 +10,31 @@ Data_c71505:
 
 ;c7165c
 Data_c7165c:
-.incbin "gfx/characters/reaper/c7165c.4bpp.lz"
+.incbin "gfx/characters/reaper/c7165c.right1.4bpp.lz"
 
 ;c717ad
 Data_c717ad:
-.incbin "gfx/characters/reaper/c717ad.4bpp.lz"
+.incbin "gfx/characters/reaper/c717ad.right2.4bpp.lz"
 
 ;c71914
 Data_c71914:
-.incbin "gfx/characters/reaper/c71914.4bpp.lz"
+.incbin "gfx/characters/reaper/c71914.right2.4bpp.lz"
 
 ;c71a81
 Data_c71a81:
-.incbin "gfx/characters/reaper/c71a81.4bpp.lz"
+.incbin "gfx/characters/reaper/c71a81.right3.4bpp.lz"
 
 ;c71bda
 Data_c71bda:
-.incbin "gfx/characters/reaper/c71bda.4bpp.lz"
+.incbin "gfx/characters/reaper/c71bda.right1.4bpp.lz"
 
 ;c71d3d
 Data_c71d3d:
-.incbin "gfx/characters/reaper/c71d3d.4bpp.lz"
+.incbin "gfx/characters/reaper/c71d3d.right1.4bpp.lz"
 
 ;c71ea4
 Data_c71ea4:
-.incbin "gfx/characters/reaper/c71ea4.4bpp.lz"
+.incbin "gfx/characters/reaper/c71ea4.right1.4bpp.lz"
 
 ;c71fff
 Data_c71fff:
@@ -54,7 +54,7 @@ Data_c7241c:
 
 ;c7258f
 Data_c7258f:
-.incbin "gfx/characters/reaper/c7258f.4bpp.lz"
+.incbin "gfx/characters/reaper/c7258f.right1.4bpp.lz"
 
 ;c726f4
 Data_c726f4:
@@ -62,7 +62,7 @@ Data_c726f4:
 
 ;c7285b
 Data_c7285b:
-.incbin "gfx/characters/reaper/c7285b.4bpp.lz"
+.incbin "gfx/characters/reaper/c7285b.right1.4bpp.lz"
 
 ;c729ca
 Data_c729ca:
@@ -86,7 +86,7 @@ Data_c72f5c:
 
 ;c730c1
 Data_c730c1:
-.incbin "gfx/characters/reaper/c730c1.4bpp.lz"
+.incbin "gfx/characters/reaper/c730c1.left13.unkflag.4bpp.lz"
 
 ;c731ff
 Data_c731ff:
@@ -94,7 +94,7 @@ Data_c731ff:
 
 ;c73332
 Data_c73332:
-.incbin "gfx/characters/reaper/c73332.4bpp.lz"
+.incbin "gfx/characters/reaper/c73332.right2.4bpp.lz"
 
 ;c73469
 Data_c73469:
@@ -114,7 +114,7 @@ Data_c73922:
 
 ;c73abf
 Data_c73abf:
-.incbin "gfx/characters/reaper/c73abf.4bpp.lz"
+.incbin "gfx/characters/reaper/c73abf.right1.4bpp.lz"
 
 ;c73c78
 Data_c73c78:
@@ -138,7 +138,7 @@ Data_c742c6:
 
 ;c7444f
 Data_c7444f:
-.incbin "gfx/characters/reaper/c7444f.4bpp.lz"
+.incbin "gfx/characters/reaper/c7444f.right1.4bpp.lz"
 
 ;c745ae
 Data_c745ae:
@@ -146,7 +146,7 @@ Data_c745ae:
 
 ;c74717
 Data_c74717:
-.incbin "gfx/characters/reaper/c74717.4bpp.lz"
+.incbin "gfx/characters/reaper/c74717.right5.4bpp.lz"
 
 ;c74762
 Data_c74762:
@@ -154,11 +154,11 @@ Data_c74762:
 
 ;c748c7
 Data_c748c7:
-.incbin "gfx/characters/reaper/c748c7.4bpp.lz"
+.incbin "gfx/characters/reaper/c748c7.right6.4bpp.lz"
 
 ;c74a42
 Data_c74a42:
-.incbin "gfx/characters/reaper/c74a42.4bpp.lz"
+.incbin "gfx/characters/reaper/c74a42.right8.4bpp.lz"
 
 ;c74a72
 Data_c74a72:
@@ -178,7 +178,7 @@ Data_c74f0b:
 
 ;c750a8
 Data_c750a8:
-.incbin "gfx/characters/reaper/c750a8.4bpp.lz"
+.incbin "gfx/characters/reaper/c750a8.right3.4bpp.lz"
 
 ;c75213
 Data_c75213:
@@ -210,7 +210,7 @@ Data_c75ac7:
 
 ;c75c5e
 Data_c75c5e:
-.incbin "gfx/characters/reaper/c75c5e.4bpp.lz"
+.incbin "gfx/characters/reaper/c75c5e.right1.4bpp.lz"
 
 ;c75dd3
 Data_c75dd3:
@@ -222,7 +222,7 @@ Data_c75f48:
 
 ;c760c3
 Data_c760c3:
-.incbin "gfx/characters/reaper/c760c3.4bpp.lz"
+.incbin "gfx/characters/reaper/c760c3.right6.4bpp.lz"
 
 ;c76246
 Data_c76246:
@@ -242,7 +242,7 @@ Data_c7671f:
 
 ;c768be
 Data_c768be:
-.incbin "gfx/characters/reaper/c768be.4bpp.lz"
+.incbin "gfx/characters/reaper/c768be.right3.4bpp.lz"
 
 ;c76a47
 Data_c76a47:

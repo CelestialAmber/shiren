@@ -2,43 +2,43 @@
 
 ;d1d9af
 Data_d1d9af:
-.incbin "gfx/characters/fieldbandit/d1d9af.4bpp.lz"
+.incbin "gfx/characters/fieldbandit/d1d9af.right3.4bpp.lz"
 
 ;d1dad3
 Data_d1dad3:
-.incbin "gfx/characters/fieldbandit/d1dad3.4bpp.lz"
+.incbin "gfx/characters/fieldbandit/d1dad3.right5.4bpp.lz"
 
 ;d1dc0c
 Data_d1dc0c:
-.incbin "gfx/characters/fieldbandit/d1dc0c.4bpp.lz"
+.incbin "gfx/characters/fieldbandit/d1dc0c.right5.4bpp.lz"
 
 ;d1dd51
 Data_d1dd51:
-.incbin "gfx/characters/fieldbandit/d1dd51.4bpp.lz"
+.incbin "gfx/characters/fieldbandit/d1dd51.right1.4bpp.lz"
 
 ;d1de93
 Data_d1de93:
-.incbin "gfx/characters/fieldbandit/d1de93.4bpp.lz"
+.incbin "gfx/characters/fieldbandit/d1de93.right2.4bpp.lz"
 
 ;d1e008
 Data_d1e008:
-.incbin "gfx/characters/fieldbandit/d1e008.4bpp.lz"
+.incbin "gfx/characters/fieldbandit/d1e008.right2.4bpp.lz"
 
 ;d1e146
 Data_d1e146:
-.incbin "gfx/characters/fieldbandit/d1e146.4bpp.lz"
+.incbin "gfx/characters/fieldbandit/d1e146.right2.4bpp.lz"
 
 ;d1e2d3
 Data_d1e2d3:
-.incbin "gfx/characters/fieldbandit/d1e2d3.4bpp.lz"
+.incbin "gfx/characters/fieldbandit/d1e2d3.right3.4bpp.lz"
 
 ;d1e448
 Data_d1e448:
-.incbin "gfx/characters/fieldbandit/d1e448.4bpp.lz"
+.incbin "gfx/characters/fieldbandit/d1e448.right3.4bpp.lz"
 
 ;d1e5bb
 Data_d1e5bb:
-.incbin "gfx/characters/fieldbandit/d1e5bb.4bpp.lz"
+.incbin "gfx/characters/fieldbandit/d1e5bb.right3.4bpp.lz"
 
 ;d1e706
 Data_d1e706:
@@ -46,11 +46,11 @@ Data_d1e706:
 
 ;d1e81c
 Data_d1e81c:
-.incbin "gfx/characters/fieldbandit/d1e81c.4bpp.lz"
+.incbin "gfx/characters/fieldbandit/d1e81c.right3.4bpp.lz"
 
 ;d1e95f
 Data_d1e95f:
-.incbin "gfx/characters/fieldbandit/d1e95f.4bpp.lz"
+.incbin "gfx/characters/fieldbandit/d1e95f.right1.4bpp.lz"
 
 ;d1eacc
 Data_d1eacc:
@@ -58,15 +58,15 @@ Data_d1eacc:
 
 ;d1ec1f
 Data_d1ec1f:
-.incbin "gfx/characters/fieldbandit/d1ec1f.4bpp.lz"
+.incbin "gfx/characters/fieldbandit/d1ec1f.right4.4bpp.lz"
 
 ;d1ed82
 Data_d1ed82:
-.incbin "gfx/characters/fieldbandit/d1ed82.4bpp.lz"
+.incbin "gfx/characters/fieldbandit/d1ed82.right1.4bpp.lz"
 
 ;d1eed1
 Data_d1eed1:
-.incbin "gfx/characters/fieldbandit/d1eed1.4bpp.lz"
+.incbin "gfx/characters/fieldbandit/d1eed1.right1.4bpp.lz"
 
 ;d1f056
 Data_d1f056:
@@ -90,7 +90,7 @@ Data_d1f630:
 
 ;d1f7dd
 Data_d1f7dd:
-.incbin "gfx/characters/fieldbandit/d1f7dd.4bpp.lz"
+.incbin "gfx/characters/fieldbandit/d1f7dd.left13.unkflag.4bpp.lz"
 
 ;d1f933
 Data_d1f933:
@@ -102,11 +102,11 @@ Data_d1face:
 
 ;d1fc24
 Data_d1fc24:
-.incbin "gfx/characters/fieldbandit/d1fc24.4bpp.lz"
+.incbin "gfx/characters/fieldbandit/d1fc24.right2.4bpp.lz"
 
 ;d1fda5
 Data_d1fda5:
-.incbin "gfx/characters/fieldbandit/d1fda5.4bpp.lz"
+.incbin "gfx/characters/fieldbandit/d1fda5.right1.4bpp.lz"
 
 ;d1fef3
 Data_d1fef3:
@@ -123,15 +123,15 @@ Data_d20092:
 
 ;d201e8
 Data_d201e8:
-.incbin "gfx/characters/fieldbandit/d201e8.4bpp.lz"
+.incbin "gfx/characters/fieldbandit/d201e8.right1.4bpp.lz"
 
 ;d2037b
 Data_d2037b:
-.incbin "gfx/characters/fieldbandit/d2037b.4bpp.lz"
+.incbin "gfx/characters/fieldbandit/d2037b.right4.4bpp.lz"
 
 ;d204b6
 Data_d204b6:
-.incbin "gfx/characters/fieldbandit/d204b6.4bpp.lz"
+.incbin "gfx/characters/fieldbandit/d204b6.right7.4bpp.lz"
 
 ;d2060f
 Data_d2060f:
@@ -139,7 +139,7 @@ Data_d2060f:
 
 ;d20752
 Data_d20752:
-.incbin "gfx/characters/fieldbandit/d20752.4bpp.lz"
+.incbin "gfx/characters/fieldbandit/d20752.right2.4bpp.lz"
 
 ;d2086c
 Data_d2086c:
@@ -155,7 +155,7 @@ Data_d20b08:
 
 ;d20c6f
 Data_d20c6f:
-.incbin "gfx/characters/fieldbandit/d20c6f.4bpp.lz"
+.incbin "gfx/characters/fieldbandit/d20c6f.right5.4bpp.lz"
 
 ;d20d7c
 Data_d20d7c:
@@ -163,7 +163,7 @@ Data_d20d7c:
 
 ;d20f03
 Data_d20f03:
-.incbin "gfx/characters/fieldbandit/d20f03.4bpp.lz"
+.incbin "gfx/characters/fieldbandit/d20f03.right5.4bpp.lz"
 
 ;d2102c
 Data_d2102c:
@@ -175,7 +175,7 @@ Data_d21173:
 
 ;d212a2
 Data_d212a2:
-.incbin "gfx/characters/fieldbandit/d212a2.4bpp.lz"
+.incbin "gfx/characters/fieldbandit/d212a2.right4.4bpp.lz"
 
 ;d213d9
 Data_d213d9:

@@ -10,15 +10,15 @@ Data_d1ac0a:
 
 ;d1ad63
 Data_d1ad63:
-.incbin "gfx/characters/snaky/d1ad63.4bpp.lz"
+.incbin "gfx/characters/snaky/d1ad63.right3.4bpp.lz"
 
 ;d1aee0
 Data_d1aee0:
-.incbin "gfx/characters/snaky/d1aee0.4bpp.lz"
+.incbin "gfx/characters/snaky/d1aee0.right2.4bpp.lz"
 
 ;d1b06b
 Data_d1b06b:
-.incbin "gfx/characters/snaky/d1b06b.4bpp.lz"
+.incbin "gfx/characters/snaky/d1b06b.right1.4bpp.lz"
 
 ;d1b1f0
 Data_d1b1f0:
@@ -26,11 +26,11 @@ Data_d1b1f0:
 
 ;d1b383
 Data_d1b383:
-.incbin "gfx/characters/snaky/d1b383.4bpp.lz"
+.incbin "gfx/characters/snaky/d1b383.right1.4bpp.lz"
 
 ;d1b534
 Data_d1b534:
-.incbin "gfx/characters/snaky/d1b534.4bpp.lz"
+.incbin "gfx/characters/snaky/d1b534.right1.4bpp.lz"
 
 ;d1b6df
 Data_d1b6df:
@@ -46,11 +46,11 @@ Data_d1ba37:
 
 ;d1bbc0
 Data_d1bbc0:
-.incbin "gfx/characters/snaky/d1bbc0.4bpp.lz"
+.incbin "gfx/characters/snaky/d1bbc0.right2.4bpp.lz"
 
 ;d1bd45
 Data_d1bd45:
-.incbin "gfx/characters/snaky/d1bd45.4bpp.lz"
+.incbin "gfx/characters/snaky/d1bd45.right1.4bpp.lz"
 
 ;d1befe
 Data_d1befe:
@@ -62,7 +62,7 @@ Data_d1c087:
 
 ;d1c210
 Data_d1c210:
-.incbin "gfx/characters/snaky/d1c210.4bpp.lz"
+.incbin "gfx/characters/snaky/d1c210.right1.4bpp.lz"
 
 ;d1c3af
 Data_d1c3af:
@@ -78,11 +78,11 @@ Data_d1c6f5:
 
 ;d1c894
 Data_d1c894:
-.incbin "gfx/characters/snaky/d1c894.4bpp.lz"
+.incbin "gfx/characters/snaky/d1c894.right1.4bpp.lz"
 
 ;d1ca3f
 Data_d1ca3f:
-.incbin "gfx/characters/snaky/d1ca3f.4bpp.lz"
+.incbin "gfx/characters/snaky/d1ca3f.right1.4bpp.lz"
 
 ;d1cb6e
 Data_d1cb6e:
@@ -94,7 +94,7 @@ Data_d1ccbb:
 
 ;d1ce50
 Data_d1ce50:
-.incbin "gfx/characters/snaky/d1ce50.4bpp.lz"
+.incbin "gfx/characters/snaky/d1ce50.right2.4bpp.lz"
 
 ;d1cfdd
 Data_d1cfdd:
@@ -102,7 +102,7 @@ Data_d1cfdd:
 
 ;d1d1ba
 Data_d1d1ba:
-.incbin "gfx/characters/snaky/d1d1ba.4bpp.lz"
+.incbin "gfx/characters/snaky/d1d1ba.right1.4bpp.lz"
 
 ;d1d347
 Data_d1d347:

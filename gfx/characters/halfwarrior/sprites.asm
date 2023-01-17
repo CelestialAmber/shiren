@@ -2,27 +2,27 @@
 
 ;cd8515
 Data_cd8515:
-.incbin "gfx/characters/halfwarrior/cd8515.4bpp.lz"
+.incbin "gfx/characters/halfwarrior/cd8515.right4.4bpp.lz"
 
 ;cd864b
 Data_cd864b:
-.incbin "gfx/characters/halfwarrior/cd864b.4bpp.lz"
+.incbin "gfx/characters/halfwarrior/cd864b.right4.4bpp.lz"
 
 ;cd877b
 Data_cd877b:
-.incbin "gfx/characters/halfwarrior/cd877b.4bpp.lz"
+.incbin "gfx/characters/halfwarrior/cd877b.right4.4bpp.lz"
 
 ;cd889b
 Data_cd889b:
-.incbin "gfx/characters/halfwarrior/cd889b.4bpp.lz"
+.incbin "gfx/characters/halfwarrior/cd889b.right3.4bpp.lz"
 
 ;cd8a0e
 Data_cd8a0e:
-.incbin "gfx/characters/halfwarrior/cd8a0e.4bpp.lz"
+.incbin "gfx/characters/halfwarrior/cd8a0e.right2.4bpp.lz"
 
 ;cd8b81
 Data_cd8b81:
-.incbin "gfx/characters/halfwarrior/cd8b81.4bpp.lz"
+.incbin "gfx/characters/halfwarrior/cd8b81.right4.4bpp.lz"
 
 ;cd8cd6
 Data_cd8cd6:
@@ -38,7 +38,7 @@ Data_cd9002:
 
 ;cd918b
 Data_cd918b:
-.incbin "gfx/characters/halfwarrior/cd918b.4bpp.lz"
+.incbin "gfx/characters/halfwarrior/cd918b.right1.4bpp.lz"
 
 ;cd92e8
 Data_cd92e8:
@@ -46,27 +46,27 @@ Data_cd92e8:
 
 ;cd944b
 Data_cd944b:
-.incbin "gfx/characters/halfwarrior/cd944b.4bpp.lz"
+.incbin "gfx/characters/halfwarrior/cd944b.right1.4bpp.lz"
 
 ;cd95a0
 Data_cd95a0:
-.incbin "gfx/characters/halfwarrior/cd95a0.4bpp.lz"
+.incbin "gfx/characters/halfwarrior/cd95a0.left15.unkflag.4bpp.lz"
 
 ;cd96ec
 Data_cd96ec:
-.incbin "gfx/characters/halfwarrior/cd96ec.4bpp.lz"
+.incbin "gfx/characters/halfwarrior/cd96ec.left14.unkflag.4bpp.lz"
 
 ;cd982e
 Data_cd982e:
-.incbin "gfx/characters/halfwarrior/cd982e.4bpp.lz"
+.incbin "gfx/characters/halfwarrior/cd982e.right1.4bpp.lz"
 
 ;cd996e
 Data_cd996e:
-.incbin "gfx/characters/halfwarrior/cd996e.4bpp.lz"
+.incbin "gfx/characters/halfwarrior/cd996e.right1.4bpp.lz"
 
 ;cd9adb
 Data_cd9adb:
-.incbin "gfx/characters/halfwarrior/cd9adb.4bpp.lz"
+.incbin "gfx/characters/halfwarrior/cd9adb.left15.unkflag.4bpp.lz"
 
 ;cd9c21
 Data_cd9c21:
@@ -78,7 +78,7 @@ Data_cd9d8e:
 
 ;cd9f1f
 Data_cd9f1f:
-.incbin "gfx/characters/halfwarrior/cd9f1f.4bpp.lz"
+.incbin "gfx/characters/halfwarrior/cd9f1f.right1.4bpp.lz"
 
 ;cda09c
 Data_cda09c:
@@ -86,19 +86,19 @@ Data_cda09c:
 
 ;cda217
 Data_cda217:
-.incbin "gfx/characters/halfwarrior/cda217.4bpp.lz"
+.incbin "gfx/characters/halfwarrior/cda217.right5.4bpp.lz"
 
 ;cda364
 Data_cda364:
-.incbin "gfx/characters/halfwarrior/cda364.4bpp.lz"
+.incbin "gfx/characters/halfwarrior/cda364.right2.4bpp.lz"
 
 ;cda48a
 Data_cda48a:
-.incbin "gfx/characters/halfwarrior/cda48a.4bpp.lz"
+.incbin "gfx/characters/halfwarrior/cda48a.right4.4bpp.lz"
 
 ;cda5f3
 Data_cda5f3:
-.incbin "gfx/characters/halfwarrior/cda5f3.4bpp.lz"
+.incbin "gfx/characters/halfwarrior/cda5f3.right1.4bpp.lz"
 
 ;cda7a8
 Data_cda7a8:
@@ -126,7 +126,7 @@ Data_cdaf47:
 
 ;cdb0cc
 Data_cdb0cc:
-.incbin "gfx/characters/halfwarrior/cdb0cc.4bpp.lz"
+.incbin "gfx/characters/halfwarrior/cdb0cc.right2.4bpp.lz"
 
 ;cdb26b
 Data_cdb26b:
@@ -162,7 +162,7 @@ Data_cdbc5a:
 
 ;cdbdc3
 Data_cdbdc3:
-.incbin "gfx/characters/halfwarrior/cdbdc3.4bpp.lz"
+.incbin "gfx/characters/halfwarrior/cdbdc3.right1.4bpp.lz"
 
 ;cdbf32
 Data_cdbf32:
@@ -170,7 +170,7 @@ Data_cdbf32:
 
 ;cdc0b1
 Data_cdc0b1:
-.incbin "gfx/characters/halfwarrior/cdc0b1.4bpp.lz"
+.incbin "gfx/characters/halfwarrior/cdc0b1.right6.4bpp.lz"
 
 ;cdc1f2
 Data_cdc1f2:

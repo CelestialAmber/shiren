@@ -4,23 +4,23 @@
 
 ;c7e01c
 Data_c7e01c:
-.incbin "gfx/characters/piggy/c7e01c.4bpp.lz"
+.incbin "gfx/characters/piggy/c7e01c.right2.4bpp.lz"
 
 ;c7e14e
 Data_c7e14e:
-.incbin "gfx/characters/piggy/c7e14e.4bpp.lz"
+.incbin "gfx/characters/piggy/c7e14e.right1.4bpp.lz"
 
 ;c7e284
 Data_c7e284:
-.incbin "gfx/characters/piggy/c7e284.4bpp.lz"
+.incbin "gfx/characters/piggy/c7e284.right2.4bpp.lz"
 
 ;c7e3b2
 Data_c7e3b2:
-.incbin "gfx/characters/piggy/c7e3b2.4bpp.lz"
+.incbin "gfx/characters/piggy/c7e3b2.left15.unkflag.4bpp.lz"
 
 ;c7e50c
 Data_c7e50c:
-.incbin "gfx/characters/piggy/c7e50c.4bpp.lz"
+.incbin "gfx/characters/piggy/c7e50c.right2.4bpp.lz"
 
 ;c7e659
 Data_c7e659:
@@ -32,19 +32,19 @@ Data_c7e7ab:
 
 ;c7e940
 Data_c7e940:
-.incbin "gfx/characters/piggy/c7e940.4bpp.lz"
+.incbin "gfx/characters/piggy/c7e940.right1.4bpp.lz"
 
 ;c7eac5
 Data_c7eac5:
-.incbin "gfx/characters/piggy/c7eac5.4bpp.lz"
+.incbin "gfx/characters/piggy/c7eac5.right3.4bpp.lz"
 
 ;c7ec60
 Data_c7ec60:
-.incbin "gfx/characters/piggy/c7ec60.4bpp.lz"
+.incbin "gfx/characters/piggy/c7ec60.right2.4bpp.lz"
 
 ;c7edf5
 Data_c7edf5:
-.incbin "gfx/characters/piggy/c7edf5.4bpp.lz"
+.incbin "gfx/characters/piggy/c7edf5.right5.4bpp.lz"
 
 ;c7ef48
 Data_c7ef48:
@@ -56,7 +56,7 @@ Data_c7f0ed:
 
 ;c7f29a
 Data_c7f29a:
-.incbin "gfx/characters/piggy/c7f29a.4bpp.lz"
+.incbin "gfx/characters/piggy/c7f29a.right1.4bpp.lz"
 
 ;c7f445
 Data_c7f445:
@@ -97,15 +97,15 @@ Data_c7ff88:
 
 ;c80067
 Data_c80067:
-.incbin "gfx/characters/piggy/c80067.4bpp.lz"
+.incbin "gfx/characters/piggy/c80067.left12.unkflag.4bpp.lz"
 
 ;c8012d
 Data_c8012d:
-.incbin "gfx/characters/piggy/c8012d.4bpp.lz"
+.incbin "gfx/characters/piggy/c8012d.right2.4bpp.lz"
 
 ;c802be
 Data_c802be:
-.incbin "gfx/characters/piggy/c802be.4bpp.lz"
+.incbin "gfx/characters/piggy/c802be.right2.4bpp.lz"
 
 ;c80451
 Data_c80451:
@@ -117,11 +117,11 @@ Data_c8050a:
 
 ;c805df
 Data_c805df:
-.incbin "gfx/characters/piggy/c805df.4bpp.lz"
+.incbin "gfx/characters/piggy/c805df.right1.4bpp.lz"
 
 ;c80762
 Data_c80762:
-.incbin "gfx/characters/piggy/c80762.4bpp.lz"
+.incbin "gfx/characters/piggy/c80762.right1.4bpp.lz"
 
 ;c808e5
 Data_c808e5:
@@ -165,11 +165,11 @@ Data_c813d4:
 
 ;c814cb
 Data_c814cb:
-.incbin "gfx/characters/piggy/c814cb.4bpp.lz"
+.incbin "gfx/characters/piggy/c814cb.right4.4bpp.lz"
 
 ;c8161a
 Data_c8161a:
-.incbin "gfx/characters/piggy/c8161a.4bpp.lz"
+.incbin "gfx/characters/piggy/c8161a.right2.4bpp.lz"
 
 ;c81740
 Data_c81740:
@@ -177,27 +177,27 @@ Data_c81740:
 
 ;c817ad
 Data_c817ad:
-.incbin "gfx/characters/piggy/c817ad.4bpp.lz"
+.incbin "gfx/characters/piggy/c817ad.right5.4bpp.lz"
 
 ;c818fa
 Data_c818fa:
-.incbin "gfx/characters/piggy/c818fa.4bpp.lz"
+.incbin "gfx/characters/piggy/c818fa.right1.4bpp.lz"
 
 ;c81a46
 Data_c81a46:
-.incbin "gfx/characters/piggy/c81a46.4bpp.lz"
+.incbin "gfx/characters/piggy/c81a46.right3.4bpp.lz"
 
 ;c81b8b
 Data_c81b8b:
-.incbin "gfx/characters/piggy/c81b8b.4bpp.lz"
+.incbin "gfx/characters/piggy/c81b8b.right2.4bpp.lz"
 
 ;c81d20
 Data_c81d20:
-.incbin "gfx/characters/piggy/c81d20.4bpp.lz"
+.incbin "gfx/characters/piggy/c81d20.right1.4bpp.lz"
 
 ;c81e99
 Data_c81e99:
-.incbin "gfx/characters/piggy/c81e99.4bpp.lz"
+.incbin "gfx/characters/piggy/c81e99.right2.4bpp.lz"
 
 ;c8202c
 Data_c8202c:

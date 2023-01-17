@@ -2,11 +2,11 @@
 
 ;cc5b70
 Data_cc5b70:
-.incbin "gfx/characters/masterhen/cc5b70.4bpp.lz"
+.incbin "gfx/characters/masterhen/cc5b70.right2.4bpp.lz"
 
 ;cc5d01
 Data_cc5d01:
-.incbin "gfx/characters/masterhen/cc5d01.4bpp.lz"
+.incbin "gfx/characters/masterhen/cc5d01.right3.4bpp.lz"
 
 ;cc5e94
 Data_cc5e94:
@@ -22,7 +22,7 @@ Data_cc61f0:
 
 ;cc638b
 Data_cc638b:
-.incbin "gfx/characters/masterhen/cc638b.4bpp.lz"
+.incbin "gfx/characters/masterhen/cc638b.right2.4bpp.lz"
 
 ;cc652e
 Data_cc652e:
@@ -42,15 +42,15 @@ Data_cc6a41:
 
 ;cc6bf4
 Data_cc6bf4:
-.incbin "gfx/characters/masterhen/cc6bf4.4bpp.lz"
+.incbin "gfx/characters/masterhen/cc6bf4.right1.4bpp.lz"
 
 ;cc6da5
 Data_cc6da5:
-.incbin "gfx/characters/masterhen/cc6da5.4bpp.lz"
+.incbin "gfx/characters/masterhen/cc6da5.right1.4bpp.lz"
 
 ;cc6f44
 Data_cc6f44:
-.incbin "gfx/characters/masterhen/cc6f44.4bpp.lz"
+.incbin "gfx/characters/masterhen/cc6f44.right1.4bpp.lz"
 
 ;cc70ef
 Data_cc70ef:
@@ -86,11 +86,11 @@ Data_cc7cd0:
 
 ;cc7eab
 Data_cc7eab:
-.incbin "gfx/characters/masterhen/cc7eab.4bpp.lz"
+.incbin "gfx/characters/masterhen/cc7eab.right1.4bpp.lz"
 
 ;cc8076
 Data_cc8076:
-.incbin "gfx/characters/masterhen/cc8076.4bpp.lz"
+.incbin "gfx/characters/masterhen/cc8076.left8.unkflag.4bpp.lz"
 
 ;cc80b7
 Data_cc80b7:
@@ -98,7 +98,7 @@ Data_cc80b7:
 
 ;cc8260
 Data_cc8260:
-.incbin "gfx/characters/masterhen/cc8260.4bpp.lz"
+.incbin "gfx/characters/masterhen/cc8260.left8.unkflag.4bpp.lz"
 
 ;cc8311
 Data_cc8311:
@@ -106,7 +106,7 @@ Data_cc8311:
 
 ;cc84a2
 Data_cc84a2:
-.incbin "gfx/characters/masterhen/cc84a2.4bpp.lz"
+.incbin "gfx/characters/masterhen/cc84a2.left9.unkflag.4bpp.lz"
 
 ;cc8547
 Data_cc8547:
@@ -114,7 +114,7 @@ Data_cc8547:
 
 ;cc86f6
 Data_cc86f6:
-.incbin "gfx/characters/masterhen/cc86f6.4bpp.lz"
+.incbin "gfx/characters/masterhen/cc86f6.left14.unkflag.4bpp.lz"
 
 ;cc87a3
 Data_cc87a3:
@@ -122,7 +122,7 @@ Data_cc87a3:
 
 ;cc896e
 Data_cc896e:
-.incbin "gfx/characters/masterhen/cc896e.4bpp.lz"
+.incbin "gfx/characters/masterhen/cc896e.right11.4bpp.lz"
 
 ;cc89c8
 Data_cc89c8:
@@ -130,7 +130,7 @@ Data_cc89c8:
 
 ;cc8b7d
 Data_cc8b7d:
-.incbin "gfx/characters/masterhen/cc8b7d.4bpp.lz"
+.incbin "gfx/characters/masterhen/cc8b7d.right7.4bpp.lz"
 
 ;cc8bf4
 Data_cc8bf4:
@@ -138,11 +138,11 @@ Data_cc8bf4:
 
 ;cc8da9
 Data_cc8da9:
-.incbin "gfx/characters/masterhen/cc8da9.4bpp.lz"
+.incbin "gfx/characters/masterhen/cc8da9.right7.4bpp.lz"
 
 ;cc8e18
 Data_cc8e18:
-.incbin "gfx/characters/masterhen/cc8e18.4bpp.lz"
+.incbin "gfx/characters/masterhen/cc8e18.right2.4bpp.lz"
 
 ;cc8fa3
 Data_cc8fa3:
@@ -154,7 +154,7 @@ Data_cc9040:
 
 ;cc91eb
 Data_cc91eb:
-.incbin "gfx/characters/masterhen/cc91eb.4bpp.lz"
+.incbin "gfx/characters/masterhen/cc91eb.left8.unkflag.4bpp.lz"
 
 ;cc924c
 Data_cc924c:
@@ -162,11 +162,11 @@ Data_cc924c:
 
 ;cc93f7
 Data_cc93f7:
-.incbin "gfx/characters/masterhen/cc93f7.4bpp.lz"
+.incbin "gfx/characters/masterhen/cc93f7.left8.unkflag.4bpp.lz"
 
 ;cc94ac
 Data_cc94ac:
-.incbin "gfx/characters/masterhen/cc94ac.4bpp.lz"
+.incbin "gfx/characters/masterhen/cc94ac.right13.4bpp.lz"
 
 ;cc9553
 Data_cc9553:
@@ -174,7 +174,7 @@ Data_cc9553:
 
 ;cc971c
 Data_cc971c:
-.incbin "gfx/characters/masterhen/cc971c.4bpp.lz"
+.incbin "gfx/characters/masterhen/cc971c.right13.4bpp.lz"
 
 ;cc97d1
 Data_cc97d1:
@@ -186,7 +186,7 @@ Data_cc9990:
 
 ;cc9b55
 Data_cc9b55:
-.incbin "gfx/characters/masterhen/cc9b55.4bpp.lz"
+.incbin "gfx/characters/masterhen/cc9b55.left9.unkflag.4bpp.lz"
 
 ;cc9b98
 Data_cc9b98:
@@ -198,7 +198,7 @@ Data_cc9d2d:
 
 ;cc9e42
 Data_cc9e42:
-.incbin "gfx/characters/masterhen/cc9e42.4bpp.lz"
+.incbin "gfx/characters/masterhen/cc9e42.right14.4bpp.lz"
 
 ;cc9ecd
 Data_cc9ecd:

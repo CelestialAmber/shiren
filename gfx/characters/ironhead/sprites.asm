@@ -1,18 +1,18 @@
 ;ca055d
 Data_ca055d:
-.incbin "gfx/characters/ironhead/ca055d.4bpp.lz"
+.incbin "gfx/characters/ironhead/ca055d.right3.4bpp.lz"
 
 ;ca0710
 Data_ca0710:
-.incbin "gfx/characters/ironhead/ca0710.4bpp.lz"
+.incbin "gfx/characters/ironhead/ca0710.right3.4bpp.lz"
 
 ;ca08dd
 Data_ca08dd:
-.incbin "gfx/characters/ironhead/ca08dd.4bpp.lz"
+.incbin "gfx/characters/ironhead/ca08dd.right2.4bpp.lz"
 
 ;ca0aa0
 Data_ca0aa0:
-.incbin "gfx/characters/ironhead/ca0aa0.4bpp.lz"
+.incbin "gfx/characters/ironhead/ca0aa0.right1.4bpp.lz"
 
 ;ca0c63
 Data_ca0c63:
@@ -44,7 +44,7 @@ Data_ca173d:
 
 ;ca190a
 Data_ca190a:
-.incbin "gfx/characters/ironhead/ca190a.4bpp.lz"
+.incbin "gfx/characters/ironhead/ca190a.right1.4bpp.lz"
 
 ;ca1acb
 Data_ca1acb:
@@ -60,7 +60,7 @@ Data_ca1e5b:
 
 ;ca201a
 Data_ca201a:
-.incbin "gfx/characters/ironhead/ca201a.4bpp.lz"
+.incbin "gfx/characters/ironhead/ca201a.right1.4bpp.lz"
 
 ;ca21ff
 Data_ca21ff:
@@ -92,7 +92,7 @@ Data_ca2d21:
 
 ;ca2eec
 Data_ca2eec:
-.incbin "gfx/characters/ironhead/ca2eec.4bpp.lz"
+.incbin "gfx/characters/ironhead/ca2eec.right2.4bpp.lz"
 
 ;ca30ad
 Data_ca30ad:
@@ -144,7 +144,7 @@ Data_ca4404:
 
 ;ca452d
 Data_ca452d:
-.incbin "gfx/characters/ironhead/ca452d.4bpp.lz"
+.incbin "gfx/characters/ironhead/ca452d.right7.4bpp.lz"
 
 ;ca4667
 Data_ca4667:
@@ -160,7 +160,7 @@ Data_ca4a0b:
 
 ;ca4b28
 Data_ca4b28:
-.incbin "gfx/characters/ironhead/ca4b28.4bpp.lz"
+.incbin "gfx/characters/ironhead/ca4b28.right2.4bpp.lz"
 
 ;ca4b8a
 Data_ca4b8a:
@@ -168,7 +168,7 @@ Data_ca4b8a:
 
 ;ca4d4b
 Data_ca4d4b:
-.incbin "gfx/characters/ironhead/ca4d4b.4bpp.lz"
+.incbin "gfx/characters/ironhead/ca4d4b.right2.4bpp.lz"
 
 ;ca4e54
 Data_ca4e54:
@@ -176,7 +176,7 @@ Data_ca4e54:
 
 ;ca4fe3
 Data_ca4fe3:
-.incbin "gfx/characters/ironhead/ca4fe3.4bpp.lz"
+.incbin "gfx/characters/ironhead/ca4fe3.right8.4bpp.lz"
 
 ;ca5090
 Data_ca5090:
@@ -184,11 +184,11 @@ Data_ca5090:
 
 ;ca524b
 Data_ca524b:
-.incbin "gfx/characters/ironhead/ca524b.4bpp.lz"
+.incbin "gfx/characters/ironhead/ca524b.right1.4bpp.lz"
 
 ;ca535a
 Data_ca535a:
-.incbin "gfx/characters/ironhead/ca535a.4bpp.lz"
+.incbin "gfx/characters/ironhead/ca535a.right2.4bpp.lz"
 
 ;ca54fd
 Data_ca54fd:
@@ -200,7 +200,7 @@ Data_ca56ca:
 
 ;ca5811
 Data_ca5811:
-.incbin "gfx/characters/ironhead/ca5811.4bpp.lz"
+.incbin "gfx/characters/ironhead/ca5811.right5.4bpp.lz"
 
 ;ca58ca
 Data_ca58ca:
@@ -236,7 +236,7 @@ Data_ca63a1:
 
 ;ca657a
 Data_ca657a:
-.incbin "gfx/characters/ironhead/ca657a.4bpp.lz"
+.incbin "gfx/characters/ironhead/ca657a.right1.4bpp.lz"
 
 ;ca6605
 Data_ca6605:
