@@ -158,11 +158,9 @@ int compress(uint8_t* imageData, int uncompressedSize, int bitDepth) {
 						tileInfoVal |= (uint16_t)((lineBit2 << (k * 2 + 1)) | (lineBit1 << (k * 2)));
 					}
 
-					//Write the tile info value
-					//HACK: The first index should be 0 and the last one 1, but for some reason the two bytes are
-					//flipped in the variable so this is a temporary fix
-					tempTileData[1] =  (uint8_t)(tileInfoVal >> 8);
 					tempTileData[0] =  (uint8_t)(tileInfoVal & 0xFF);
+					tempTileData[1] =  (uint8_t)(tileInfoVal >> 8);
+					
 
 					int length = tempArrayIndex;
 
@@ -204,11 +202,8 @@ int compress(uint8_t* imageData, int uncompressedSize, int bitDepth) {
 						tileInfoVal |= (uint16_t)(lineBit << k);
 					}
 
-					//Write the tile info value
-					//HACK: The first index should be 0 and the last one 1, but for some reason the two bytes are
-					//flipped in the variable so this is a temporary fix
-					tempTileData[1] = (uint8_t)(tileInfoVal >> 8);
-					tempTileData[0] = (uint8_t)(tileInfoVal & 0xFF);
+					tempTileData[0] =  (uint8_t)(tileInfoVal & 0xFF);
+					tempTileData[1] =  (uint8_t)(tileInfoVal >> 8);
 
 					length = tempArrayIndex;
 
