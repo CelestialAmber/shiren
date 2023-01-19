@@ -72,15 +72,16 @@ $(rom): $(OBJS)
 %.o: %.asm $$(dep)
 	wla-65816 $(WLAFLAGS) -o $@ $<
 
-#TODO: the script should be rewritten in C to speed up build time, rn it takes forever
+#Quiet the graphics conversion messages to speed up build time
+
 gfx/characters/%.4bpp.lz : gfx/characters/%.4bpp
-	$(PYTHON) tools/gfx.py compress --header $<
+	@tools/gfxcompress $< $@
 
 gfx/items/%.4bpp.lz : gfx/items/%.4bpp
-	$(PYTHON) tools/gfx.py compress $<
+	@tools/gfxcompress --noheader $< $@
 
 gfx/characters/%.4bpp : gfx/characters/%.png
-	$(PYTHON) tools/gfx.py pngto4bpp -p v $<
+	@tools/gbagfx/gbagfx $< $@ -vertical
 
 gfx/items/%.4bpp : gfx/items/%.png
-	$(PYTHON) tools/gfx.py pngto4bpp $<
+	@tools/gbagfx/gbagfx $< $@
