@@ -6,7 +6,6 @@ CFLAGS := -O3 -std=c11 -Wall
 tools := scan_includes gfxcompress
 
 all: $(tools)
-	$(MAKE) -C gbagfx
 	@:
 
 clean:
@@ -14,6 +13,10 @@ clean:
 	$(MAKE) -C gbagfx clean
 
 scan_includes: common.h
+
+ifeq (,$(filter clean gbagfx,$(MAKECMDGOALS)))
+$(info $(shell $(MAKE) -C gbagfx))
+endif
 
 %: %.c
 	$(CC) $(CFLAGS) -o $@ $<

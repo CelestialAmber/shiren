@@ -43,7 +43,7 @@ clean: tidy
 	find . \( -iname '*.lz' \) -exec rm {} +
 	find gfx/items \( -iname '*.4bpp' \) -exec rm {} +
 #remove 4bpp files except for shiren's uncompressed ones
-	find gfx/characters \( -iname '*.4bpp' -not -path "gfx/characters/shiren/walk*" \) -exec rm {} +
+	find gfx/characters \( -iname '*.4bpp' \) -exec rm {} +
 
 tools:
 	$(MAKE) -C tools/
@@ -71,6 +71,15 @@ $(rom): $(OBJS)
 %.o: dep = $(shell tools/scan_includes $(@D)/$*.asm)
 %.o: %.asm $$(dep)
 	wla-65816 $(WLAFLAGS) -o $@ $<
+
+### Special graphics rules
+
+gfx/characters/shiren/walk_%.4bpp : gfx/characters/shiren/walk_%.png
+	@tools/gbagfx/gbagfx $< $@
+
+
+
+### General graphics rules
 
 #Quiet the graphics conversion messages to speed up build time
 
