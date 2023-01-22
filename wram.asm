@@ -5,27 +5,27 @@
 ;Direct Page
 
 ;7e0000
-w0000:
+wTemp00:
     ds 1
 
     
 ;7e0001
-w0001:
+wTemp01:
     ds 1
 
 
 ;7e0002
-w0002:
+wTemp02:
     ds 1
 
 
 ;7e0003
-w0003:
+wTemp03:
     ds 1
 
 
 ;7e0004
-w0004:
+wTemp04:
     ds 1
 
 
