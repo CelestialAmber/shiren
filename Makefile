@@ -42,7 +42,6 @@ tidy:
 clean: tidy
 	find . \( -iname '*.lz' \) -exec rm {} +
 	find gfx/items \( -iname '*.4bpp' \) -exec rm {} +
-#remove 4bpp files except for shiren's uncompressed ones
 	find gfx/characters \( -iname '*.4bpp' \) -exec rm {} +
 
 tools:
