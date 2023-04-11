@@ -5830,7 +5830,7 @@ text "してもらわない"
 endtext
 
 ;ff0b33
-Text2315:
+PlayerPayedKechi200GitanText:
 cmdf6
 strvar TextStrVar_PlayerName
 text "は、座頭ケチに２００ギタン\l払った。"

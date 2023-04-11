@@ -36,6 +36,7 @@ Start:
 	xce
 	sei
 	jml.l func_808009
+
 func_808009:
 	sep #$20
 	lda.b #$00

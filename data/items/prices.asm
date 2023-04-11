@@ -48,7 +48,7 @@ ScrollBuySellPrices:
 	.dw 0, 0 ;-- scroll (dummy entry)
 	.db $F4,$01,$64,$00 ;scroll of explosion
 	.db $90,$01,$C8,$00 ;great hall scroll
-	.db $50,$00,$28,$00 ;monster scroll
+	.db $50,$00,$28,$00 ;monster house scroll
 	.db $64,$00,$32,$00 ;scroll of confusion
 	.db $50,$C3,$EE,$02 ;scroll of removal
 	.db $B8,$0B,$E8,$03 ;blank scroll
@@ -86,7 +86,7 @@ RiceBallBuySellPrices:
 ;d9a3ac
 WeaponBuySellPrices:
 	.db $F0,$00,$50,$00 ;cudgel
-	.db $F4,$01,$C8,$00 ;polearm
+	.db $F4,$01,$C8,$00 ;nagamaki
 	.db $E8,$03,$26,$02 ;bufu's cleaver
 	.db $20,$03,$2C,$01 ;katana
 	.db $1C,$0C,$2E,$04 ;dragonkiller
@@ -106,7 +106,7 @@ WeaponBuySellPrices:
 ;d9a3ec
 WeaponUpgradePriceBonus:
 	.db $18,$00,$08,$00 ;cudgel
-	.db $32,$00,$14,$00 ;polearm
+	.db $32,$00,$14,$00 ;nagamaki
 	.db $64,$00,$37,$00 ;bufu's cleaver
 	.db $50,$00,$1E,$00 ;katana
 	.db $36,$01,$6B,$00 ;dragonkiller
@@ -255,7 +255,7 @@ StaffUsesPriceBonus:
 	.db $1E,$00,$0F,$00 ;skull staff
 	.db $64,$00,$32,$00 ;paralysis staff
 	.db $32,$00,$19,$00 ;staff of postpone
-	.db $64,$00,$32,$00 ;pain sharing staff
+	.db $64,$00,$32,$00 ;pain split staff
 
 ;monster meat buy/sell prices
 MonsterMeatBuySellPrices:

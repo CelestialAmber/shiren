@@ -2321,7 +2321,7 @@ TextPointerTable:
 	.dw Text2312
 	.dw Text2313
 	.dw Text2314
-	.dw Text2315
+	.dw PlayerPayedKechi200GitanText
 	.dw Text2316
 	.dw Text2317
 	.dw Text2318

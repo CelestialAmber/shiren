@@ -3,3 +3,4 @@
 .include "macros/events.asm"
 .include "macros/npc_events.asm"
 .include "macros/code.asm"
+.include "macros/maps.asm"

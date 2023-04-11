@@ -6,13 +6,13 @@ FeisProblemsMapTerrainDataTable:
 	.dl Floor2Terrain
 	.dl Floor3Terrain
 	.dl Floor4Terrain
-	.dl TerrainData_C3BF21
-	.dl TerrainData_C3BF52
-	.dl TerrainData_C3C057
-	.dl TerrainData_C3BF84
-	.dl TerrainData_C3BFA3
-	.dl TerrainData_C3BFCB
-	.dl TerrainData_C3BFD2
+	.dl Floor5Terrain
+	.dl Floor6Terrain
+	.dl Floor7Terrain
+	.dl Floor8Terrain
+	.dl Floor9Terrain
+	.dl Floor10Terrain
+	.dl Floor11Terrain
 	.dl TerrainData_C3C110
 	.dl TerrainData_C3C010
 	.dl TerrainData_C3C035
@@ -50,2401 +50,331 @@ FeisProblemsMapTerrainDataTable:
 	.dl TerrainData_C3BC80
 	.dl TerrainData_C3BB97
 	.dl TerrainData_C3C18B
-	.dl TerrainData_C3C5BB
-	.dl TerrainData_C3C067
+	.dl Floor49Terrain
+	.dl Floor50Terrain
 
 ;c3b812
 FeisProblemsMapItemDataTable:
-	.dl $C3C70C
-	.dl $C3C70C
-	.dl $C3C705
-	.dl $C3C70D
-	.dl $C3C714
-	.dl $C3C721
-	.dl $C3C79C
-	.dl $C3C735
-	.dl $C3C73C
-	.dl $C3C743
-	.dl $C3C744
-	.dl $C3C7E0
-	.dl $C3C75E
-	.dl $C3C795
-	.dl $C3C728
-	.dl $C3C83F
-	.dl $C3C751
-	.dl $C3C7F9
-	.dl $C3C806
-	.dl $C3C832
-	.dl $C3C9C8
-	.dl $C3C9DB
-	.dl $C3C84C
-	.dl $C3C853
-	.dl $C3C86C
-	.dl $C3C87F
-	.dl $C3C8A4
-	.dl $C3C8FA
-	.dl $C3C907
-	.dl $C3C908
-	.dl $C3C611
-	.dl $C3C9FB
-	.dl $C3C624
-	.dl $C3C933
-	.dl $C3C631
-	.dl $C3C952
-	.dl $C3C8CF
-	.dl $C3C65D
-	.dl $C3C682
-	.dl $C3C6A1
-	.dl $C3C6D9
-	.dl $C3C991
-	.dl $C3C6F8
-	.dl $C3C965
-	.dl $C3C984
-	.dl $C3C6BA
-	.dl $C3C64A
-	.dl $C3C81F
-	.dl $C3C9EE
-	.dl $C3C7D9
+	.dl NoItemsData
+	.dl NoItemsData
+	.dl Floor3Items
+	.dl Floor4Items
+	.dl Floor5Items
+	.dl Floor6Items
+	.dl Floor7Items
+	.dl ItemData_C3C735
+	.dl ItemData_C3C73C
+	.dl ItemData_C3C743
+	.dl ItemData_C3C744
+	.dl ItemData_C3C7E0
+	.dl ItemData_C3C75E
+	.dl ItemData_C3C795
+	.dl ItemData_C3C728
+	.dl ItemData_C3C83F
+	.dl ItemData_C3C751
+	.dl ItemData_C3C7F9
+	.dl ItemData_C3C806
+	.dl ItemData_C3C832
+	.dl ItemData_C3C9C8
+	.dl ItemData_C3C9DB
+	.dl ItemData_C3C84C
+	.dl ItemData_C3C853
+	.dl ItemData_C3C86C
+	.dl ItemData_C3C87F
+	.dl ItemData_C3C8A4
+	.dl ItemData_C3C8FA
+	.dl ItemData_C3C907
+	.dl ItemData_C3C908
+	.dl ItemData_C3C611
+	.dl ItemData_C3C9FB
+	.dl ItemData_C3C624
+	.dl ItemData_C3C933
+	.dl ItemData_C3C631
+	.dl ItemData_C3C952
+	.dl ItemData_C3C8CF
+	.dl ItemData_C3C65D
+	.dl ItemData_C3C682
+	.dl ItemData_C3C6A1
+	.dl ItemData_C3C6D9
+	.dl ItemData_C3C991
+	.dl ItemData_C3C6F8
+	.dl ItemData_C3C965
+	.dl ItemData_C3C984
+	.dl ItemData_C3C6BA
+	.dl ItemData_C3C64A
+	.dl ItemData_C3C81F
+	.dl ItemData_C3C9EE
+	.dl ItemData_C3C7D9
 
 ;c3b8a8
 FeisProblemsMapStairsDataTable:
-	.dl $C3CA20
-	.dl $C3CA1E
-	.dl $C3CA1C
-	.dl $C3CA22
-	.dl $C3CA24
-	.dl $C3CA26
-	.dl $C3CA38
-	.dl $C3CA2A
-	.dl $C3CA2C
-	.dl $C3CA2E
-	.dl $C3CA30
-	.dl $C3CA3C
-	.dl $C3CA34
-	.dl $C3CA36
-	.dl $C3CA28
-	.dl $C3CA46
-	.dl $C3CA32
-	.dl $C3CA3E
-	.dl $C3CA40
-	.dl $C3CA44
-	.dl $C3CA64
-	.dl $C3CA66
-	.dl $C3CA48
-	.dl $C3CA4A
-	.dl $C3CA4C
-	.dl $C3CA4E
-	.dl $C3CA50
-	.dl $C3CA54
-	.dl $C3CA56
-	.dl $C3CA58
-	.dl $C3CA08
-	.dl $C3CA6A
-	.dl $C3CA0A
-	.dl $C3CA5A
-	.dl $C3CA0C
-	.dl $C3CA5C
-	.dl $C3CA52
-	.dl $C3CA10
-	.dl $C3CA12
-	.dl $C3CA14
-	.dl $C3CA18
-	.dl $C3CA62
-	.dl $C3CA1A
-	.dl $C3CA5E
-	.dl $C3CA60
-	.dl $C3CA16
-	.dl $C3CA0E
-	.dl $C3CA42
-	.dl $C3CA68
-	.dl $C3CA3A
+	.dl Floor1StairsPos
+	.dl Floor2StairsPos
+	.dl Floor3StairsPos
+	.dl Floor4StairsPos
+	.dl StairsPos_C3CA24
+	.dl StairsPos_C3CA26
+	.dl StairsPos_C3CA38
+	.dl StairsPos_C3CA2A
+	.dl StairsPos_C3CA2C
+	.dl StairsPos_C3CA2E
+	.dl StairsPos_C3CA30
+	.dl StairsPos_C3CA3C
+	.dl StairsPos_C3CA34
+	.dl StairsPos_C3CA36
+	.dl StairsPos_C3CA28
+	.dl StairsPos_C3CA46
+	.dl StairsPos_C3CA32
+	.dl StairsPos_C3CA3E
+	.dl StairsPos_C3CA40
+	.dl StairsPos_C3CA44
+	.dl StairsPos_C3CA64
+	.dl StairsPos_C3CA66
+	.dl StairsPos_C3CA48
+	.dl StairsPos_C3CA4A
+	.dl StairsPos_C3CA4C
+	.dl StairsPos_C3CA4E
+	.dl StairsPos_C3CA50
+	.dl StairsPos_C3CA54
+	.dl StairsPos_C3CA56
+	.dl StairsPos_C3CA58
+	.dl StairsPos_C3CA08
+	.dl StairsPos_C3CA6A
+	.dl StairsPos_C3CA0A
+	.dl StairsPos_C3CA5A
+	.dl StairsPos_C3CA0C
+	.dl StairsPos_C3CA5C
+	.dl StairsPos_C3CA52
+	.dl StairsPos_C3CA10
+	.dl StairsPos_C3CA12
+	.dl StairsPos_C3CA14
+	.dl StairsPos_C3CA18
+	.dl StairsPos_C3CA62
+	.dl StairsPos_C3CA1A
+	.dl StairsPos_C3CA5E
+	.dl StairsPos_C3CA60
+	.dl StairsPos_C3CA16
+	.dl StairsPos_C3CA0E
+	.dl StairsPos_C3CA42
+	.dl StairsPos_C3CA68
+	.dl StairsPos_C3CA3A
 
 ;c3b93e
 FeisProblemsMapTrapDataTable:
-	.dl $C3CA6C
-	.dl $C3CA6C
-	.dl $C3CA6C
-	.dl $C3CA6C
-	.dl $C3CA6C
-	.dl $C3CAD3
-	.dl $C3CA6C
-	.dl $C3CAEC
-	.dl $C3CA6C
-	.dl $C3CA6C
-	.dl $C3CA6C
-	.dl $C3CAFD
-	.dl $C3CA6C
-	.dl $C3CAF6
-	.dl $C3CA6C
-	.dl $C3CB30
-	.dl $C3CA6C
-	.dl $C3CB01
-	.dl $C3CA6C
-	.dl $C3CB14
-	.dl $C3CA6C
-	.dl $C3CB45
-	.dl $C3CA6C
-	.dl $C3CB37
-	.dl $C3CA6C
-	.dl $C3CA6C
-	.dl $C3CA6C
-	.dl $C3CA6C
-	.dl $C3CA6C
-	.dl $C3CA6C
-	.dl $C3CA6D
-	.dl $C3CBAC
-	.dl $C3CA6C
-	.dl $C3CA6C
-	.dl $C3CA74
-	.dl $C3CA6C
-	.dl $C3CA6C
-	.dl $C3CA6C
-	.dl $C3CA7B
-	.dl $C3CA7F
-	.dl $C3CA6C
-	.dl $C3CB3B
-	.dl $C3CABA
-	.dl $C3CA6C
-	.dl $C3CA6C
-	.dl $C3CAAD
-	.dl $C3CA6C
-	.dl $C3CA6C
-	.dl $C3CA6C
-	.dl $C3CA6C
+	.dl NoTrapsData
+	.dl NoTrapsData
+	.dl NoTrapsData
+	.dl NoTrapsData
+	.dl NoTrapsData
+	.dl Floor6Traps
+	.dl NoTrapsData
+	.dl Floor8Traps
+	.dl NoTrapsData
+	.dl NoTrapsData
+	.dl NoTrapsData
+	.dl Floor12Traps
+	.dl NoTrapsData
+	.dl TrapData_C3CAF6
+	.dl NoTrapsData
+	.dl TrapData_C3CB30
+	.dl NoTrapsData
+	.dl TrapData_C3CB01
+	.dl NoTrapsData
+	.dl TrapData_C3CB14
+	.dl NoTrapsData
+	.dl TrapData_C3CB45
+	.dl NoTrapsData
+	.dl TrapData_C3CB37
+	.dl NoTrapsData
+	.dl NoTrapsData
+	.dl NoTrapsData
+	.dl NoTrapsData
+	.dl NoTrapsData
+	.dl NoTrapsData
+	.dl TrapData_C3CA6D
+	.dl TrapData_C3CBAC
+	.dl NoTrapsData
+	.dl NoTrapsData
+	.dl TrapData_C3CA74
+	.dl NoTrapsData
+	.dl NoTrapsData
+	.dl NoTrapsData
+	.dl TrapData_C3CA7B
+	.dl TrapData_C3CA7F
+	.dl NoTrapsData
+	.dl TrapData_C3CB3B
+	.dl TrapData_C3CABA
+	.dl NoTrapsData
+	.dl NoTrapsData
+	.dl TrapData_C3CAAD
+	.dl NoTrapsData
+	.dl NoTrapsData
+	.dl NoTrapsData
+	.dl NoTrapsData
 
 ;c3b9d4
 FeisProblemsMapCharacterDataTable:
-	.dl $C3CC97
-	.dl $C3CC97
-	.dl $C3CC91
-	.dl $C3CC98
-	.dl $C3CCA8
-	.dl $C3CCAE
-	.dl $C3CD37
-	.dl $C3CC97
-	.dl $C3CCBA
-	.dl $C3CCD9
-	.dl $C3CCDF
-	.dl $C3CD65
-	.dl $C3CD31
-	.dl $C3CC97
-	.dl $C3CCB4
-	.dl $C3CDF6
-	.dl $C3CD12
-	.dl $C3CD8E
-	.dl $C3CD94
-	.dl $C3CDDC
-	.dl $C3CF1D
-	.dl $C3CF28
-	.dl $C3CE15
-	.dl $C3CE20
-	.dl $C3CE3F
-	.dl $C3CE45
-	.dl $C3CE50
-	.dl $C3CE66
-	.dl $C3CE71
-	.dl $C3CE81
-	.dl $C3CBB0
-	.dl $C3CF43
-	.dl $C3CBD9
-	.dl $C3CE9B
-	.dl $C3CBEE
-	.dl $C3CEA6
-	.dl $C3CE56
-	.dl $C3CBFA
-	.dl $C3CC05
-	.dl $C3CC10
-	.dl $C3CC35
-	.dl $C3CEFE
-	.dl $C3CC7C
-	.dl $C3CEBB
-	.dl $C3CEF3
-	.dl $C3CC20
-	.dl $C3CBF4
-	.dl $C3CDCC
-	.dl $C3CF2E
-	.dl $C3CC97
+	.dl NoCharsData
+	.dl NoCharsData
+	.dl Floor3Chars
+	.dl Floor4Chars
+	.dl Floor5Chars
+	.dl Floor6Chars
+	.dl Floor7Chars
+	.dl NoCharsData
+	.dl Floor9Chars
+	.dl Floor10Chars
+	.dl Floor11Chars
+	.dl Floor12Chars
+	.dl Floor13Chars
+	.dl NoCharsData
+	.dl Floor15Chars
+	.dl Floor16Chars
+	.dl Floor17Chars
+	.dl Floor18Chars
+	.dl Floor19Chars
+	.dl Floor20Chars
+	.dl Floor21Chars
+	.dl Floor22Chars
+	.dl Floor23Chars
+	.dl Floor24Chars
+	.dl Floor25Chars
+	.dl Floor26Chars
+	.dl Floor27Chars
+	.dl Floor28Chars
+	.dl Floor29Chars
+	.dl Floor30Chars
+	.dl Floor31Chars
+	.dl Floor32Chars
+	.dl Floor33Chars
+	.dl Floor34Chars
+	.dl Floor35Chars
+	.dl Floor36Chars
+	.dl Floor37Chars
+	.dl Floor38Chars
+	.dl Floor39Chars
+	.dl Floor40Chars
+	.dl Floor41Chars
+	.dl Floor42Chars
+	.dl Floor43Chars
+	.dl Floor44Chars
+	.dl Floor45Chars
+	.dl Floor46Chars
+	.dl Floor47Chars
+	.dl Floor48Chars
+	.dl Floor49Chars
+	.dl NoCharsData
 
 ;c3ba6a
 FeisProblemsMapRoomDataTable:
-	.dl $C3D00D
-	.dl $C3CFFF
-	.dl $C3CFF7
-	.dl $C3D015
-	.dl $C3D01D
-	.dl $C3D025
-	.dl $C3D091
-	.dl $C3D035
-	.dl $C3D043
-	.dl $C3D04B
-	.dl $C3D053
-	.dl $C3D0B3
-	.dl $C3D06F
-	.dl $C3D089
-	.dl $C3D02D
-	.dl $C3D0ED
-	.dl $C3D061
-	.dl $C3D0C1
-	.dl $C3D0CF
-	.dl $C3D0DF
-	.dl $C3D1CB
-	.dl $C3D1D9
-	.dl $C3D101
-	.dl $C3D115
-	.dl $C3D129
-	.dl $C3D137
-	.dl $C3D145
-	.dl $C3D15B
-	.dl $C3D169
-	.dl $C3D171
-	.dl $C3CF53
-	.dl $C3D1EF
-	.dl $C3CF5B
-	.dl $C3D179
-	.dl $C3CF63
-	.dl $C3D181
-	.dl $C3D14D
-	.dl $C3CF85
-	.dl $C3CF9F
-	.dl $C3CFB3
-	.dl $C3CFCF
-	.dl $C3D1B7
-	.dl $C3CFE3
-	.dl $C3D18F
-	.dl $C3D1A3
-	.dl $C3CFC1
-	.dl $C3CF77
-	.dl $C3D0D7
-	.dl $C3D1E7
-	.dl $C3D099
+	.dl Floor1Rooms
+	.dl Floor2Rooms
+	.dl Floor3Rooms
+	.dl Floor4Rooms
+	.dl Floor5Rooms
+	.dl RoomData_C3D025
+	.dl RoomData_C3D091
+	.dl RoomData_C3D035
+	.dl RoomData_C3D043
+	.dl RoomData_C3D04B
+	.dl RoomData_C3D053
+	.dl RoomData_C3D0B3
+	.dl RoomData_C3D06F
+	.dl RoomData_C3D089
+	.dl RoomData_C3D02D
+	.dl RoomData_C3D0ED
+	.dl RoomData_C3D061
+	.dl RoomData_C3D0C1
+	.dl RoomData_C3D0CF
+	.dl RoomData_C3D0DF
+	.dl RoomData_C3D1CB
+	.dl RoomData_C3D1D9
+	.dl RoomData_C3D101
+	.dl RoomData_C3D115
+	.dl RoomData_C3D129
+	.dl RoomData_C3D137
+	.dl RoomData_C3D145
+	.dl RoomData_C3D15B
+	.dl RoomData_C3D169
+	.dl RoomData_C3D171
+	.dl RoomData_C3CF53
+	.dl RoomData_C3D1EF
+	.dl RoomData_C3CF5B
+	.dl RoomData_C3D179
+	.dl RoomData_C3CF63
+	.dl RoomData_C3D181
+	.dl RoomData_C3D14D
+	.dl RoomData_C3CF85
+	.dl RoomData_C3CF9F
+	.dl RoomData_C3CFB3
+	.dl RoomData_C3CFCF
+	.dl RoomData_C3D1B7
+	.dl RoomData_C3CFE3
+	.dl RoomData_C3D18F
+	.dl RoomData_C3D1A3
+	.dl RoomData_C3CFC1
+	.dl RoomData_C3CF77
+	.dl RoomData_C3D0D7
+	.dl RoomData_C3D1E7
+	.dl RoomData_C3D099
 
 ;c3bb00
 FeisProblemsMapTrapListDataTable:
-	.dl $C3D203
-	.dl $C3D203
-	.dl $C3D203
-	.dl $C3D203
-	.dl $C3D203
-	.dl $C3D203
-	.dl $C3D203
-	.dl $C3D203
-	.dl $C3D203
-	.dl $C3D203
-	.dl $C3D203
-	.dl $C3D203
-	.dl $C3D203
-	.dl $C3D203
-	.dl $C3D203
-	.dl $C3D20E
-	.dl $C3D203
-	.dl $C3D20E
-	.dl $C3D20E
-	.dl $C3D20E
-	.dl $C3D20E
-	.dl $C3D203
-	.dl $C3D20E
-	.dl $C3D20E
-	.dl $C3D20E
-	.dl $C3D20E
-	.dl $C3D20E
-	.dl $C3D20E
-	.dl $C3D20E
-	.dl $C3D20E
-	.dl $C3D20E
-	.dl $C3D203
-	.dl $C3D20E
-	.dl $C3D20E
-	.dl $C3D20E
-	.dl $C3D20E
-	.dl $C3D20E
-	.dl $C3D203
-	.dl $C3D203
-	.dl $C3D203
-	.dl $C3D203
-	.dl $C3D20E
-	.dl $C3D203
-	.dl $C3D20E
-	.dl $C3D20E
-	.dl $C3D203
-	.dl $C3D20E
-	.dl $C3D20E
-	.dl $C3D203
-	.dl $C3D203
-
-
-;terrain data
-;format:
-;each entry has a list of tiles, followed by an ff byte at the end of the list
-;tile format: 0: x pos, 1: y pos, 2: tile id
-	
-;c3bb96
-;dummy entry
-TerrainData_C3BB96:
-	.db $FF
-	
-;c3bb97
-TerrainData_C3BB97:
-	.db $0A,$09,$70
-	.db $0B,$09,$30
-	.db $0C,$09,$71
-	.db $FF
-	
-;c3bba1
-TerrainData_C3BBA1:
-	.db 10,7,$E0
-	.db 10,8,$B0
-	.db 10,9,$B0
-	.db 10,10,$B0
-	.db 10,11,$B0
-	.db 10,12,$E0
-	.db $FF
-	
-;c3bbb4
-TerrainData_C3BBB4:
-	.db $07,$09,$70
-	.db $07,$0A,$30
-	.db $07,$0B,$30
-	.db $08,$0B,$30
-	.db $08,$0C,$30
-	.db $08,$0D,$71
-	.db $0B,$11,$71
-	.db $0C,$11,$30
-	.db $0D,$11,$30
-	.db $0E,$11,$30
-	.db $0F,$11,$72
-	.db $10,$10,$B0
-	.db $11,$10,$B0
-	.db $12,$10,$B0
-	.db $13,$10,$B0
-	.db $14,$10,$B0
-	.db $15,$10,$B0
-	.db $13,$0E,$72
-	.db $13,$0D,$30
-	.db $13,$0C,$30
-	.db $13,$0B,$73
-	.db $FF
-
-;c3bbf4
-TerrainData_C3BBF4:
-	.db $07,$0F,$70
-	.db $07,$0E,$30
-	.db $07,$0D,$30
-	.db $07,$0C,$30
-	.db $07,$0B,$30
-	.db $07,$0A,$71
-	.db $09,$07,$B0
-	.db $0D,$06,$71
-	.db $0E,$06,$30
-	.db $0F,$06,$30
-	.db $10,$06,$30
-	.db $11,$06,$30
-	.db $12,$06,$72
-	.db $14,$07,$B0
-	.db $14,$09,$B0
-	.db $17,$07,$B0
-	.db $17,$08,$B0
-	.db $FF
-
-;c3bc28
-TerrainData_C3BC28:
-	.db $0B,$0D,$70
-	.db $0B,$0E,$30
-	.db $0B,$0F,$30
-	.db $0B,$10,$30
-	.db $0B,$11,$71
-	.db $11,$18,$B0
-	.db $10,$18,$B0
-	.db $0F,$18,$B0
-	.db $0E,$18,$B0
-	.db $0D,$18,$B0
-	.db $0C,$18,$B0
-	.db $0B,$18,$B0
-	.db $0B,$17,$B0
-	.db $0B,$16,$B0
-	.db $0B,$15,$B0
-	.db $0B,$14,$B0
-	.db $0B,$13,$B0
-	.db $0C,$13,$B0
-	.db $0D,$13,$B0
-	.db $0E,$13,$B0
-	.db $0F,$13,$B0
-	.db $10,$13,$B0
-	.db $10,$14,$B0
-	.db $10,$15,$B0
-	.db $10,$16,$B0
-	.db $0F,$16,$B0
-	.db $0E,$16,$B0
-	.db $0D,$16,$B0
-	.db $0D,$15,$B0
-	.db $FF
-
-;c3bc80
-TerrainData_C3BC80:
-	.db $0E,$08,$70
-	.db $0D,$08,$30
-	.db $0C,$08,$30
-	.db $0B,$08,$30
-	.db $0A,$08,$30
-	.db $0A,$09,$30
-	.db $0A,$0A,$30
-	.db $0A,$0B,$30
-	.db $0A,$0C,$30
-	.db $0A,$0D,$71
-	.db $11,$08,$B0
-	.db $11,$09,$B0
-	.db $14,$06,$B0
-	.db $14,$07,$B0
-	.db $16,$08,$B0
-	.db $16,$09,$B0
-	.db $18,$06,$B0
-	.db $18,$07,$B0
-	.db $1A,$08,$B0
-	.db $1A,$09,$B0
-	.db $1C,$06,$B0
-	.db $1C,$07,$B0
-	.db $07,$0F,$B0
-	.db $07,$10,$B0
-	.db $07,$11,$B0
-	.db $07,$12,$B0
-	.db $07,$13,$B0
-	.db $07,$14,$B0
-	.db $09,$14,$B0
-	.db $0A,$14,$B0
-	.db $0B,$14,$B0
-	.db $0C,$14,$B0
-	.db $0D,$14,$B0
-	.db $0D,$13,$B0
-	.db $0D,$12,$B0
-	.db $0D,$11,$B0
-	.db $0D,$0F,$B0
-	.db $0C,$0F,$B0
-	.db $0B,$0F,$B0
-	.db $0A,$0F,$B0
-	.db $09,$0F,$B0
-	.db $09,$10,$B0
-	.db $09,$11,$B0
-	.db $09,$12,$B0
-	.db $0A,$12,$B0
-	.db $0B,$12,$B0
-	.db $0B,$11,$B0
-	.db $06,$16,$B0
-	.db $07,$16,$B0
-	.db $08,$16,$B0
-	.db $09,$16,$B0
-	.db $0A,$16,$B0
-	.db $0B,$16,$B0
-	.db $0C,$16,$B0
-	.db $0D,$16,$B0
-	.db $0E,$16,$B0
-	.db $FF
-
-;c3bd29
-TerrainData_C3BD29:
-	.db $08,$1B,$C1
-	.db $08,$1A,$C0
-	.db $08,$19,$C0
-	.db $08,$18,$C1
-	.db $08,$0D,$71
-	.db $08,$0C,$30
-	.db $08,$0B,$30
-	.db $08,$0A,$72
-	.db $05,$10,$B0
-	.db $06,$10,$B0
-	.db $07,$10,$B0
-	.db $08,$10,$B0
-	.db $09,$10,$B0
-	.db $0A,$10,$B0
-	.db $0B,$10,$B0
-	.db $FF
-
-;c3bd57
-TerrainData_C3BD57:
-	.db $12,$10,$70
-	.db $13,$10,$30
-	.db $14,$10,$30
-	.db $15,$10,$30
-	.db $16,$10,$30
-	.db $17,$10,$30
-	.db $17,$11,$30
-	.db $17,$12,$30
-	.db $17,$13,$30
-	.db $17,$14,$30
-	.db $17,$15,$30
-	.db $17,$16,$30
-	.db $17,$17,$30
-	.db $17,$18,$71
-	.db $12,$13,$70
-	.db $13,$13,$30
-	.db $14,$13,$30
-	.db $15,$13,$30
-	.db $15,$14,$30
-	.db $15,$15,$30
-	.db $15,$16,$30
-	.db $15,$17,$30
-	.db $15,$18,$71
-	.db $0C,$10,$70
-	.db $0B,$10,$30
-	.db $0A,$10,$30
-	.db $09,$10,$30
-	.db $09,$0F,$30
-	.db $09,$0E,$30
-	.db $09,$0D,$30
-	.db $09,$0C,$30
-	.db $09,$0B,$72
-	.db $0C,$13,$70
-	.db $0B,$13,$30
-	.db $0A,$13,$30
-	.db $09,$13,$30
-	.db $08,$13,$30
-	.db $07,$13,$30
-	.db $07,$12,$30
-	.db $07,$11,$30
-	.db $07,$10,$30
-	.db $07,$0F,$30
-	.db $07,$0E,$30
-	.db $07,$0D,$30
-	.db $07,$0C,$30
-	.db $07,$0B,$72
-	.db $06,$06,$B0
-	.db $07,$06,$B0
-	.db $08,$06,$B0
-	.db $09,$06,$B0
-	.db $0A,$06,$B0
-	.db $FF
-
-;c3bdf1
-Floor3Terrain:
-	.db $0A,$06,$70
-	.db $0B,$06,$30
-	.db $0C,$06,$30
-	.db $0D,$06,$30
-	.db $0E,$06,$30
-	.db $0E,$07,$30
-	.db $0E,$08,$30
-	.db $0E,$09,$30
-	.db $0E,$0A,$30
-	.db $0D,$0A,$30
-	.db $0C,$0A,$30
-	.db $0B,$0A,$30
-	.db $0A,$0A,$70
-	.db $05,$08,$E0
-	.db $06,$08,$E0
-	.db $07,$08,$E0
-	.db $08,$08,$B0
-	.db $09,$08,$E0
-	.db $FF
-	
-;c3be28
-Floor2Terrain:
-	.db $09,$06,$C1
-	.db $0A,$06,$C0
-	.db $0B,$06,$C1
-	.db $0D,$0A,$C1
-	.db $0D,$0B,$C0
-	.db $0D,$0C,$C0
-	.db $0D,$0D,$C0
-	.db $0D,$0E,$C0
-	.db $0E,$0E,$C0
-	.db $0F,$0E,$C0
-	.db $10,$0E,$C0
-	.db $11,$0E,$C0
-	.db $12,$0E,$C0
-	.db $13,$0E,$C0
-	.db $13,$0F,$C0
-	.db $12,$0F,$C0
-	.db $11,$0F,$C0
-	.db $10,$0F,$C0
-	.db $0F,$0F,$C0
-	.db $0E,$0F,$C0
-	.db $0E,$10,$C0
-	.db $0F,$10,$C0
-	.db $10,$10,$C0
-	.db $11,$10,$C0
-	.db $12,$10,$C0
-	.db $12,$11,$C0
-	.db $11,$11,$C0
-	.db $10,$11,$C0
-	.db $0F,$11,$C0
-	.db $0F,$12,$C0
-	.db $10,$12,$C0
-	.db $11,$12,$C0
-	.db $11,$13,$C0
-	.db $10,$13,$C0
-	.db $10,$14,$C0
-	.db $FF
-
-
-;c3be92
-Floor1Terrain:
-	.db $08,$05,$B0
-	.db $0A,$05,$B0
-	.db $0C,$05,$B0
-	.db $0D,$06,$B0
-	.db $08,$07,$B0
-	.db $0C,$07,$B0
-	.db $05,$08,$B0
-	.db $09,$08,$B0
-	.db $0B,$08,$B0
-	.db $0D,$08,$B0
-	.db $06,$09,$B0
-	.db $08,$09,$B0
-	.db $0A,$09,$B0
-	.db $0C,$09,$B0
-	.db $05,$0A,$B0
-	.db $07,$0A,$B0
-	.db $09,$0A,$B0
-	.db $0D,$0A,$B0
-	.db $06,$0B,$B0
-	.db $0A,$0B,$B0
-	.db $05,$0C,$B0
-	.db $06,$0D,$B0
-	.db $08,$0D,$B0
-	.db $0A,$0D,$B0
-	.db $09,$06,$E0
-	.db $0B,$06,$E0
-	.db $07,$08,$E0
-	.db $0A,$08,$E0
-	.db $08,$0A,$E0
-	.db $0B,$0A,$E0
-	.db $07,$0C,$E0
-	.db $09,$0C,$E0
-	.db $FF
-
-;c3bef3
-Floor4Terrain:
-	.db $08,$05,$B0
-	.db $08,$06,$B0
-	.db $08,$07,$B0
-	.db $08,$08,$B0
-	.db $08,$09,$B0
-	.db $0C,$05,$B0
-	.db $0C,$06,$B0
-	.db $0C,$07,$B0
-	.db $0C,$08,$B0
-	.db $0C,$09,$B0
-	.db $10,$05,$B0
-	.db $10,$06,$B0
-	.db $10,$07,$B0
-	.db $10,$08,$B0
-	.db $10,$09,$B0
-	.db $FF
-
-;c3bf21
-TerrainData_C3BF21:
-	.db $05,$07,$B0
-	.db $06,$07,$B0
-	.db $07,$07,$B0
-	.db $08,$07,$B0
-	.db $09,$07,$B0
-	.db $0A,$07,$E0
-	.db $06,$09,$E0
-	.db $07,$09,$B0
-	.db $08,$09,$B0
-	.db $09,$09,$B0
-	.db $0A,$09,$E0
-	.db $06,$0A,$E0
-	.db $07,$0A,$B0
-	.db $08,$0A,$B0
-	.db $09,$0A,$B0
-	.db $0A,$0A,$E0
-	.db $FF
-	
-;c3bf52
-TerrainData_C3BF52:
-	.db $0B,$06,$B0
-	.db $0B,$08,$E0
-	.db $0D,$06,$E0
-	.db $0D,$08,$B0
-	.db $0F,$06,$B0
-	.db $0F,$08,$E0
-	.db $11,$06,$E0
-	.db $11,$08,$B0
-	.db $FF
-
-;c3bf6b
-TerrainData_C3BF6B:
-	.db $05,$07,$B0
-	.db $06,$07,$B0
-	.db $07,$07,$B0
-	.db $08,$07,$B0
-	.db $09,$07,$B0
-	.db $0A,$07,$B0
-	.db $0B,$07,$B0
-	.db $08,$08,$B0
-	.db $FF
-
-;c3bf84
-TerrainData_C3BF84:
-	.db $09,$05,$B0
-	.db $09,$06,$B0
-	.db $09,$07,$B0
-	.db $09,$08,$B0
-	.db $09,$09,$B0
-	.db $06,$13,$E0
-	.db $07,$13,$E0
-	.db $08,$13,$E0
-	.db $09,$13,$E0
-	.db $0A,$13,$E0
-	.db $FF
-
-;c3bfa3
-TerrainData_C3BFA3:
-	.db $0A,$06,$B0
-	.db $0B,$06,$B0
-	.db $0B,$07,$B0
-	.db $0B,$08,$B0
-	.db $0B,$09,$B0
-	.db $0A,$09,$B0
-	.db $09,$09,$B0
-	.db $08,$09,$B0
-	.db $07,$09,$B0
-	.db $07,$08,$B0
-	.db $07,$07,$B0
-	.db $07,$06,$B0
-	.db $08,$06,$B0
-	.db $FF
-
-;c3bfcb
-TerrainData_C3BFCB:
-	.db $07,$06,$B0
-	.db $07,$08,$E0
-	.db $FF
-
-;c3bfd2
-TerrainData_C3BFD2:
-	.db $0B,$08,$70
-	.db $0C,$08,$30
-	.db $0D,$08,$30
-	.db $0E,$08,$30
-	.db $0F,$08,$71
-	.db $FF
-
-;c3bfe2
-TerrainData_C3BFE2:
-	.db $05,$08,$E0
-	.db $06,$08,$E0
-	.db $07,$08,$E0
-	.db $08,$08,$E0
-	.db $09,$08,$E0
-	.db $0A,$06,$70
-	.db $0B,$06,$30
-	.db $0C,$06,$30
-	.db $0D,$06,$30
-	.db $0E,$06,$71
-	.db $0A,$0A,$70
-	.db $0B,$0A,$30
-	.db $0C,$0A,$30
-	.db $0D,$0A,$30
-	.db $0E,$0A,$71
-	.db $FF
-
-;c3c010	
-TerrainData_C3C010:
-	.db $0F,$08,$B0
-	.db $0F,$09,$B0
-	.db $0F,$0A,$B0
-	.db $17,$07,$C2
-	.db $18,$07,$C2
-	.db $19,$07,$C2
-	.db $17,$08,$C2
-	.db $18,$08,$C2
-	.db $19,$08,$C2
-	.db $17,$09,$C2
-	.db $18,$09,$C2
-	.db $19,$09,$C2
-	.db $FF
-
-;c3c035
-TerrainData_C3C035:
-	.db $08,$05,$E0
-	.db $08,$06,$B0
-	.db $08,$07,$B0
-	.db $08,$08,$B0
-	.db $08,$09,$E0
-	.db $0E,$05,$E0
-	.db $0E,$06,$B0
-	.db $0E,$07,$B0
-	.db $0E,$08,$B0
-	.db $0E,$09,$E0
-	.db $0B,$06,$E0
-	.db $FF
-
-;c3c057
-TerrainData_C3C057:
-	.db $06,$0A,$B0
-	.db $07,$0A,$B0
-	.db $08,$0A,$B0
-	.db $09,$0A,$B0
-	.db $0A,$0A,$B0
-	.db $FF
-
-;c3c067	
-TerrainData_C3C067:
-	.db $17,$07,$C1
-	.db $18,$07,$C1
-	.db $18,$06,$C0
-	.db $19,$06,$C0
-	.db $19,$05,$C0
-	.db $1A,$05,$C0
-	.db $1B,$05,$C0
-	.db $1C,$05,$C0
-	.db $1C,$06,$C0
-	.db $1D,$06,$C0
-	.db $1D,$07,$C0
-	.db $1E,$07,$C0
-	.db $1D,$08,$C0
-	.db $1E,$08,$C0
-	.db $1D,$09,$C0
-	.db $1E,$09,$C0
-	.db $1C,$0A,$C0
-	.db $1D,$0A,$C0
-	.db $1B,$0B,$C0
-	.db $1C,$0B,$C0
-	.db $1A,$0C,$C0
-	.db $1B,$0C,$C0
-	.db $1A,$0D,$C0
-	.db $1B,$0D,$C0
-	.db $1A,$0E,$C0
-	.db $1B,$0E,$C0
-	.db $1A,$0F,$B0
-	.db $1B,$0F,$B0
-	.db $1A,$10,$C2
-	.db $1B,$10,$C2
-	.db $1A,$11,$C2
-	.db $1B,$11,$C2
-	.db $1C,$11,$B0
-	.db $1D,$11,$B0
-	.db $1E,$11,$B0
-	.db $1F,$11,$B0
-	.db $20,$11,$B0
-	.db $21,$11,$B0
-	.db $22,$11,$B0
-	.db $23,$11,$B0
-	.db $24,$10,$C2
-	.db $25,$10,$C2
-	.db $24,$11,$C2
-	.db $25,$11,$C2
-	.db $24,$0F,$B0
-	.db $25,$0F,$B0
-	.db $24,$0E,$C0
-	.db $25,$0E,$C0
-	.db $24,$0D,$C0
-	.db $25,$0D,$C0
-	.db $24,$0C,$C0
-	.db $25,$0C,$C0
-	.db $24,$0B,$C1
-	.db $25,$0B,$C1
-	.db $23,$05,$E0
-	.db $26,$05,$E0
-	.db $FF
-
-;c3c110
-TerrainData_C3C110:
-	.db $0E,$09,$70
-	.db $0F,$09,$30
-	.db $10,$09,$30
-	.db $11,$09,$71
-	.db $07,$07,$B0
-	.db $0B,$07,$B0
-	.db $07,$0B,$B0
-	.db $0B,$0B,$B0
-	.db $FF
-
-;c3c129
-TerrainData_C3C129:
-	.db $09,$07,$70
-	.db $0A,$07,$30
-	.db $0B,$07,$30
-	.db $0C,$07,$30
-	.db $0D,$07,$71
-	.db $10,$06,$E0
-	.db $11,$06,$E0
-	.db $12,$06,$E0
-	.db $10,$07,$E0
-	.db $11,$07,$E0
-	.db $12,$07,$E0
-	.db $10,$08,$E0
-	.db $11,$08,$E0
-	.db $12,$08,$E0
-	.db $FF
-
-;c3c154
-TerrainData_C3C154:
-	.db $06,$0B,$B0
-	.db $07,$0B,$B0
-	.db $08,$0B,$B0
-	.db $09,$0B,$B0
-	.db $0A,$0B,$B0
-	.db $0B,$0B,$B0
-	.db $0C,$0B,$B0
-	.db $07,$06,$B0
-	.db $07,$07,$B0
-	.db $07,$08,$B0
-	.db $07,$09,$B0
-	.db $08,$09,$B0
-	.db $09,$09,$B0
-	.db $0A,$09,$B0
-	.db $0B,$09,$B0
-	.db $0B,$08,$B0
-	.db $0B,$07,$B0
-	.db $0B,$06,$B0
-	.db $FF
-
-;c3c18b
-TerrainData_C3C18B:
-	.db $06,$09,$B0
-	.db $07,$09,$B0
-	.db $08,$09,$B0
-	.db $09,$09,$B0
-	.db $0A,$09,$B0
-	.db $FF
-	
-;c3c19b
-TerrainData_C3C19B:
-	.db $05,$07,$E0
-	.db $05,$08,$E0
-	.db $05,$09,$E0
-	.db $06,$07,$B0
-	.db $06,$08,$B0
-	.db $06,$09,$B0
-	.db $0A,$07,$B0
-	.db $0A,$08,$B0
-	.db $0A,$09,$B0
-	.db $0B,$07,$E0
-	.db $0B,$08,$E0
-	.db $0B,$09,$E0
-	.db $08,$0C,$70
-	.db $08,$0D,$30
-	.db $08,$0E,$30
-	.db $08,$0F,$71
-	.db $FF
-
-;c3c1cc
-TerrainData_C3C1CC:
-	.db $07,$09,$70
-	.db $07,$0A,$30
-	.db $07,$0B,$30
-	.db $07,$0C,$71
-	.db $07,$11,$71
-	.db $07,$12,$30
-	.db $07,$13,$30
-	.db $07,$14,$72
-	.db $FF
-
-;c3c1e5
-TerrainData_C3C1E5:
-	.db $18,$07,$70
-	.db $17,$07,$30
-	.db $16,$07,$30
-	.db $15,$07,$30
-	.db $14,$07,$71
-	.db $0E,$07,$71
-	.db $0D,$07,$30
-	.db $0C,$07,$30
-	.db $0B,$07,$30
-	.db $0A,$07,$72
-	.db $FF
-
-;c3c204
-TerrainData_C3C204:
-	.db $08,$0A,$B0
-	.db $08,$0B,$B0
-	.db $08,$0C,$B0
-	.db $08,$0D,$B0
-	.db $08,$0E,$B0
-	.db $06,$10,$E0
-	.db $06,$12,$E0
-	.db $06,$14,$E0
-	.db $0A,$10,$E0
-	.db $0A,$12,$E0
-	.db $0A,$14,$E0
-	.db $0C,$12,$71
-	.db $0D,$12,$30
-	.db $0E,$12,$30
-	.db $0F,$12,$30
-	.db $10,$12,$72
-	.db $FF
-
-;c3c235
-TerrainData_C3C235:
-	.db $06,$07,$E0
-	.db $07,$07,$E0
-	.db $08,$07,$E0
-	.db $09,$07,$E0
-	.db $0A,$07,$E0
-	.db $06,$08,$B0
-	.db $07,$08,$B0
-	.db $08,$08,$B0
-	.db $09,$08,$B0
-	.db $0A,$08,$B0
-	.db $08,$10,$70
-	.db $08,$0F,$30
-	.db $08,$0E,$30
-	.db $08,$0D,$30
-	.db $08,$0C,$71
-	.db $07,$12,$B0
-	.db $08,$12,$B0
-	.db $09,$12,$B0
-	.db $07,$13,$B0
-	.db $09,$13,$B0
-	.db $07,$14,$B0
-	.db $08,$14,$B0
-	.db $09,$14,$B0
-	.db $FF
-
-;c3c27b
-TerrainData_C3C27B:
-	.db $07,$07,$E0
-	.db $07,$08,$E0
-	.db $07,$09,$E0
-	.db $07,$0A,$E0
-	.db $10,$07,$70
-	.db $0F,$07,$30
-	.db $0E,$07,$30
-	.db $0D,$07,$30
-	.db $0D,$08,$30
-	.db $0C,$08,$30
-	.db $0B,$08,$30
-	.db $0A,$08,$71
-	.db $13,$06,$B0
-	.db $13,$07,$B0
-	.db $13,$08,$B0
-	.db $13,$09,$B0
-	.db $FF
-
-;c3c2ac
-TerrainData_C3C2AC:
-	.db $08,$08,$E0
-	.db $0A,$08,$E0
-	.db $0C,$08,$E0
-	.db $08,$0A,$E0
-	.db $0C,$0A,$E0
-	.db $08,$0C,$E0
-	.db $0A,$0C,$E0
-	.db $0C,$0C,$E0
-	.db $FF
-
-;c3c2c5
-TerrainData_C3C2C5:
-	.db $07,$12,$70
-	.db $07,$11,$30
-	.db $07,$10,$30
-	.db $07,$0F,$30
-	.db $08,$0F,$30
-	.db $08,$0E,$30
-	.db $08,$0D,$30
-	.db $08,$0C,$71
-	.db $07,$08,$E0
-	.db $08,$08,$E0
-	.db $09,$08,$E0
-	.db $FF
-
-;c3c2e7
-TerrainData_C3C2E7:
-	.db $06,$08,$B0
-	.db $06,$09,$B0
-	.db $06,$0A,$B0
-	.db $08,$09,$C1
-	.db $09,$09,$C0
-	.db $0A,$09,$C0
-	.db $0B,$09,$C0
-	.db $0B,$08,$C0
-	.db $0C,$08,$C0
-	.db $0D,$08,$C0
-	.db $0E,$08,$C1
-	.db $12,$06,$B0
-	.db $12,$07,$B0
-	.db $12,$08,$B0
-	.db $12,$09,$B0
-	.db $12,$0A,$B0
-	.db $FF
-
-;c3c318
-TerrainData_C3C318:
-	.db $05,$06,$B0
-	.db $06,$06,$B0
-	.db $07,$06,$B0
-	.db $08,$06,$B0
-	.db $09,$06,$B0
-	.db $0A,$06,$B0
-	.db $0B,$06,$B0
-	.db $0C,$06,$B0
-	.db $0D,$06,$B0
-	.db $0E,$06,$B0
-	.db $0F,$06,$B0
-	.db $10,$06,$B0
-	.db $10,$07,$B0
-	.db $10,$08,$B0
-	.db $10,$09,$B0
-	.db $10,$0A,$B0
-	.db $10,$0B,$B0
-	.db $10,$0C,$B0
-	.db $10,$0D,$B0
-	.db $0C,$09,$B0
-	.db $0C,$0A,$B0
-	.db $0C,$0B,$B0
-	.db $0D,$09,$B0
-	.db $0D,$0A,$B0
-	.db $0D,$0B,$B0
-	.db $FF
-
-;c3c364
-TerrainData_C3C364:
-	.db $09,$06,$B0
-	.db $09,$07,$B0
-	.db $08,$07,$B0
-	.db $07,$07,$B0
-	.db $06,$07,$B0
-	.db $05,$07,$B0
-	.db $06,$09,$B0
-	.db $06,$0A,$B0
-	.db $07,$0A,$B0
-	.db $08,$0A,$B0
-	.db $09,$0A,$B0
-	.db $0A,$0A,$B0
-	.db $09,$0C,$B0
-	.db $09,$0D,$B0
-	.db $08,$0D,$B0
-	.db $07,$0D,$B0
-	.db $06,$0D,$B0
-	.db $05,$0D,$B0
-	.db $FF
-
-;c3c39b
-TerrainData_C3C39B:
-	.db $07,$0D,$E0
-	.db $08,$0D,$B0
-	.db $09,$0D,$B0
-	.db $0A,$0D,$B0
-	.db $0B,$0D,$B0
-	.db $0C,$0D,$B0
-	.db $0D,$0D,$B0
-	.db $0E,$0D,$E0,$FF
-
-;c3c3b4
-TerrainData_C3C3B4:
-	.db $07,$11,$B0
-	.db $07,$12,$B0
-	.db $07,$13,$B0
-	.db $07,$14,$B0
-	.db $0B,$0F,$70
-	.db $0B,$0E,$30
-	.db $0B,$0D,$30
-	.db $0B,$0C,$30
-	.db $0B,$0B,$71
-	.db $FF
-
-;c3c3d0
-TerrainData_C3C3D0:
-	.db $06,$05,$B0
-	.db $06,$06,$B0
-	.db $06,$07,$B0
-	.db $06,$08,$B0
-	.db $06,$09,$B0
-	.db $09,$05,$B0
-	.db $09,$06,$B0
-	.db $09,$07,$B0
-	.db $09,$08,$B0
-	.db $09,$09,$B0
-	.db $0B,$07,$70
-	.db $0C,$07,$30
-	.db $0D,$07,$30
-	.db $0E,$07,$30
-	.db $0F,$07,$30
-	.db $10,$07,$30
-	.db $10,$08,$30
-	.db $10,$09,$71
-	.db $11,$0B,$E0
-	.db $13,$0C,$E0
-	.db $10,$0D,$E0
-	.db $12,$0E,$E0
-	.db $15,$0E,$71
-	.db $16,$0E,$30
-	.db $17,$0E,$30
-	.db $18,$0E,$30
-	.db $19,$0E,$72
-	.db $FF
-
-;c3c422
-TerrainData_C3C422:
-	.db $07,$09,$70
-	.db $07,$08,$30
-	.db $07,$07,$30
-	.db $07,$06,$30
-	.db $08,$06,$30
-	.db $09,$06,$30
-	.db $0A,$06,$30
-	.db $0B,$06,$30
-	.db $0C,$06,$30
-	.db $0D,$06,$30
-	.db $0E,$06,$30
-	.db $0F,$06,$71
-	.db $10,$07,$B0
-	.db $11,$07,$B0
-	.db $12,$07,$B0
-	.db $13,$07,$B0
-	.db $14,$07,$B0
-	.db $15,$06,$71
-	.db $16,$06,$30
-	.db $17,$06,$30
-	.db $18,$06,$30
-	.db $19,$06,$30
-	.db $1A,$06,$30
-	.db $1A,$07,$30
-	.db $1A,$08,$72
-	.db $1D,$0D,$72
-	.db $1D,$0E,$30
-	.db $1D,$0F,$30
-	.db $1D,$10,$30
-	.db $1C,$10,$30
-	.db $1B,$10,$30
-	.db $1A,$10,$30
-	.db $19,$10,$30
-	.db $18,$10,$30
-	.db $17,$10,$30
-	.db $16,$10,$30
-	.db $15,$10,$71
-	.db $14,$0F,$B0
-	.db $13,$0F,$B0
-	.db $12,$0F,$B0
-	.db $11,$0F,$B0
-	.db $10,$0F,$B0
-	.db $0F,$10,$71
-	.db $0E,$10,$30
-	.db $0D,$10,$30
-	.db $0C,$10,$30
-	.db $0B,$10,$30
-	.db $0A,$10,$30
-	.db $0A,$0F,$30
-	.db $0A,$0E,$70
-	.db $FF
-
-;c3c4b9
-TerrainData_C3C4B9:
-	.db $08,$11,$70
-	.db $08,$10,$30
-	.db $08,$0F,$30
-	.db $08,$0E,$30
-	.db $08,$0D,$30
-	.db $09,$0D,$30
-	.db $0A,$0D,$30
-	.db $0B,$0D,$30
-	.db $0C,$0D,$30
-	.db $0D,$0D,$30
-	.db $0E,$0D,$30
-	.db $0F,$0D,$30
-	.db $10,$0D,$30
-	.db $10,$0C,$30
-	.db $10,$0B,$30
-	.db $10,$0A,$30
-	.db $10,$09,$30
-	.db $10,$08,$30
-	.db $0F,$08,$71
-	.db $11,$08,$30
-	.db $12,$08,$30
-	.db $13,$08,$72
-	.db $FF
-
-;c3c4fc
-TerrainData_C3C4FC:
-	.db $06,$0B,$70
-	.db $06,$0C,$30
-	.db $06,$0D,$30
-	.db $06,$0E,$30
-	.db $06,$0F,$71
-	.db $0C,$12,$71
-	.db $0D,$12,$30
-	.db $0E,$12,$30
-	.db $0F,$12,$30
-	.db $10,$12,$30
-	.db $11,$12,$30
-	.db $12,$12,$30
-	.db $13,$12,$30
-	.db $14,$12,$30
-	.db $15,$12,$30
-	.db $16,$12,$30
-	.db $17,$12,$30
-	.db $18,$12,$30
-	.db $19,$12,$30
-	.db $1A,$12,$30
-	.db $1B,$12,$30
-	.db $1C,$12,$30
-	.db $11,$13,$30
-	.db $11,$14,$30
-	.db $11,$15,$30
-	.db $12,$15,$30
-	.db $13,$15,$30
-	.db $14,$15,$30
-	.db $15,$15,$30
-	.db $15,$14,$30
-	.db $15,$13,$30
-	.db $07,$10,$B0
-	.db $07,$11,$B0
-	.db $07,$12,$B0
-	.db $07,$13,$B0
-	.db $07,$14,$B0
-	.db $FF
-
-;c3c569
-TerrainData_C3C569:
-	.db $08,$07,$B0
-	.db $08,$0C,$70
-	.db $08,$0D,$30
-	.db $08,$0E,$30
-	.db $08,$0F,$30
-	.db $08,$10,$30
-	.db $07,$10,$30
-	.db $06,$10,$30
-	.db $06,$11,$30
-	.db $06,$12,$30
-	.db $06,$13,$71
-	.db $0D,$1C,$71
-	.db $0D,$1D,$30
-	.db $0D,$1E,$30
-	.db $0D,$1F,$30
-	.db $0E,$1F,$30
-	.db $0F,$1F,$30
-	.db $10,$1F,$30
-	.db $11,$1F,$30
-	.db $12,$1F,$30
-	.db $13,$1F,$30
-	.db $14,$1F,$30
-	.db $15,$1F,$30
-	.db $16,$1F,$30
-	.db $17,$1F,$30
-	.db $18,$1F,$30
-	.db $19,$1F,$30
-	.db $FF
-
-;c3c5bb
-TerrainData_C3C5BB:
-	.db $09,$06,$E0
-	.db $05,$09,$E0
-	.db $06,$09,$E0
-	.db $07,$09,$E0
-	.db $08,$09,$E0
-	.db $09,$09,$E0
-	.db $0A,$09,$E0
-	.db $FF
-
-;c3c5d1
-TerrainData_C3C5D1:
-	.db $0B,$18,$B0
-	.db $0C,$18,$B0
-	.db $0E,$18,$B0
-	.db $0D,$17,$70
-	.db $0D,$16,$30
-	.db $0D,$15,$30
-	.db $0D,$14,$30
-	.db $0D,$13,$30
-	.db $0C,$13,$30
-	.db $0B,$13,$30
-	.db $0A,$13,$71
-	.db $07,$0F,$71
-	.db $07,$0E,$30
-	.db $07,$0D,$30
-	.db $07,$0C,$72
-	.db $06,$07,$E0
-	.db $09,$07,$E0
-	.db $06,$08,$B0
-	.db $09,$08,$B0
-	.db $08,$06,$72
-	.db $08,$05,$30
-	.db $FF
-
-;c3c611
-TerrainData_C3C611:
-	.db $06,$09,$67
-	.db $80,$01,$00
-	.db $07,$09,$83
-	.db $80,$01,$00
-	.db $08,$09,$67
-	.db $80,$01,$00
-	.db $FF
-
-;c3c624	
-	.db $09,$09,$80
-	.db $04,$01,$00
-	.db $09,$0A,$08
-	.db $80,$01,$00
-	.db $FF
-
-;c3c631	
-TerrainData_C3C631:
-	.db $07,$05,$58
-	.db $80,$01,$00
-	.db $09,$06,$9C
-	.db $80,$01,$00
-	.db $07,$07,$2B
-	.db $80,$01,$00
-	.db $0C,$09,$08
-	.db $80,$01,$00
-	.db $FF
-	
-;c3c64a
-TerrainData_C3C64A:
-	.db $06,$06,$85
-	.db $01,$01,$00
-	.db $0F,$07,$E5
-	.db $64,$01,$00
-	.db $10,$07,$E5
-	.db $64,$01,$00
-	.db $FF
-	
-;c3c65d
-TerrainData_C3C65D:
-	.db $09,$0F,$AE
-	.db $80,$01,$00
-	.db $08,$10,$AE
-	.db $80,$01,$00
-	.db $09,$11,$AE
-	.db $80,$01,$00
-	.db $08,$12,$AE
-	.db $80,$01,$00
-	.db $09,$13,$81
-	.db $01,$01,$00
-	.db $12,$11,$7D
-	.db $01,$01,$00
-	.db $FF
-
-;c3c682
-TerrainData_C3C682:
-	.db $06,$11,$24
-	.db $80,$01,$00
-	.db $08,$11,$23
-	.db $80,$01,$00
-	.db $08,$07,$9C
-	.db $80,$01,$00
-	.db $1A,$09,$2C
-	.db $80,$01,$00
-	.db $16,$08,$2C
-	.db $80,$01,$00
-	.db $FF
-	
-;c3c6a1
-TerrainData_C3C6A1:
-	.db $0B,$0C,$2B
-	.db $80,$01,$00
-	.db $0D,$14,$2C
-	.db $80,$01,$00
-	.db $0E,$15,$2C
-	.db $80,$01,$00
-	.db $0F,$15,$7D
-	.db $01,$01,$00
-	.db $FF
-	
-;c3c6ba
-TerrainData_C3C6BA:
-	.db $16,$06,$2B
-	.db $80,$01,$00
-	.db $06,$13,$84
-	.db $02,$01,$00
-	.db $0E,$11,$81
-	.db $02,$01,$00
-	.db $0A,$10,$82
-	.db $00,$01,$00
-	.db $0A,$11,$82
-	.db $00,$01,$00
-	.db $FF
-	
-;c3c6d9
-TerrainData_C3C6D9:
-	.db $07,$14,$85
-	.db $01,$01,$00
-	.db $09,$14,$81
-	.db $02,$01,$00
-	.db $08,$1E,$82
-	.db $00,$01,$00
-	.db $07,$1F,$82
-	.db $00,$01,$00
-	.db $09,$1F,$82
-	.db $00,$01,$00
-	.db $FF
-
-;c3c6f8
-TerrainData_C3C6F8:
-	.db $10,$11,$0D
-	.db $05,$01,$00
-	.db $0E,$12,$68
-	.db $80,$01,$00
-	.db $FF
-
-
-;item data
-;Entry format:
-;0: x position
-;1: y position
-;2: item type
-;3: unknown (automatically calculated if 80)
-;4: identified flag
-;5: merchandise item flag
-	
-;c3c705
-	.db $07,$09,$2C,$80,$01,$00
-	.db $FF
-
-	.db $FF
-
-	.db $07,$07,$81,$03,$01,$00
-	.db $FF
-	
-	.db $07,$06,$57,$80,$01,$00
-	.db $09,$06,$7D,$01,$00,$00
-	.db $FF
-	
-	.db $08,$09,$2B,$80,$01,$00
-	.db $FF
-	
-	.db $06,$06,$C1,$01,$01,$00
-	.db $06,$09,$81,$01,$01,$00
-	.db $FF
-	
-	.db $0A,$06,$2B,$80,$01,$00
-	.db $FF
-	
-	.db $0A,$0A,$84,$01,$01,$00
-	.db $FF
-	
-	.db $FF
-	
-	.db $06,$08,$5A,$80,$01,$00
-	.db $11,$08,$68,$80,$01,$00
-	.db $FF
-	
-	.db $06,$06,$5A,$80,$01,$00
-	.db $08,$06,$5A,$80,$01,$00
-	.db $FF
-	
-	.db $07,$07,$08,$80,$01,$00
-	.db $08,$07,$9F,$80,$01,$00
-	.db $08,$08,$08,$80,$01,$00
-	.db $11,$09,$08,$80,$01,$00
-	.db $16,$0C,$08,$80,$01,$00
-	.db $0C,$08,$E5,$20,$01,$00
-	.db $18,$08,$E5,$20,$01,$00
-	.db $0E,$04,$E5,$60,$01,$00
-	.db $22,$05,$E5,$60,$01,$00
-	.db $FF
-	
-	.db $12,$06,$2B,$80,$01,$00
-	.db $FF
-	
-	.db $08,$0B,$60,$80,$01,$00
-	.db $05,$0B,$E5,$40,$01,$00
-	.db $06,$09,$E5,$40,$01,$00
-	.db $05,$07,$E5,$40,$01,$00
-	.db $05,$05,$E5,$40,$01,$00
-	.db $07,$06,$E5,$40,$01,$00
-	.db $09,$06,$E5,$40,$01,$00
-	.db $0B,$05,$E5,$40,$01,$00
-	.db $0B,$07,$E5,$40,$01,$00
-	.db $0A,$09,$E5,$40,$01,$00
-	.db $FF
-	
-	.db $18,$08,$93,$80,$01,$00
-	.db $FF
-	
-	.db $09,$08,$2B,$80,$01,$00
-	.db $08,$09,$28,$80,$01,$00
-	.db $0A,$09,$29,$80,$01,$00
-	.db $09,$0A,$2B,$80,$01,$00
-	.db $FF
-	
-	.db $14,$06,$A0,$80,$01,$00
-	.db $14,$08,$2B,$80,$01,$00
-	.db $FF
-	
-	.db $07,$0A,$67,$80,$01,$00
-	.db $08,$0A,$67,$80,$01,$00
-	.db $0A,$0A,$67,$80,$01,$00
-	.db $0B,$0A,$67,$80,$01,$00
-	.db $FF
-	
-	.db $07,$0A,$34,$80,$01,$00
-	.db $08,$0A,$34,$80,$01,$00
-	.db $09,$0A,$34,$80,$01,$00
-	.db $FF
-	
-	.db $08,$06,$5E,$80,$01,$00
-	.db $08,$12,$5E,$80,$01,$00
-	.db $FF
-	
-	.db $06,$17,$B9,$06,$01,$00
-	.db $08,$17,$2B,$80,$01,$00
-	.db $FF
-	
-	.db $1C,$07,$85,$02,$01,$00
-	.db $FF
-	
-	.db $07,$07,$2B,$80,$01,$00
-	.db $09,$07,$17,$80,$01,$00
-	.db $07,$12,$0B,$05,$01,$00
-	.db $09,$12,$0B,$05,$01,$00
-	.db $FF
-	
-	.db $07,$15,$82,$00,$01,$00
-	.db $08,$15,$82,$00,$01,$00
-	.db $09,$15,$82,$00,$01,$00
-	.db $FF
-	
-	.db $14,$07,$2C,$80,$01,$00
-	.db $14,$08,$2C,$80,$01,$00
-	.db $14,$09,$2C,$80,$01,$00
-	.db $08,$08,$2C,$80,$01,$00
-	.db $08,$09,$2C,$80,$01,$00
-	.db $15,$08,$9C,$80,$01,$00
-	.db $FF
-	
-	.db $06,$06,$E5,$80,$01,$00
-	.db $0A,$06,$E5,$80,$01,$00
-	.db $0E,$06,$E5,$80,$01,$00
-	.db $0F,$0A,$E5,$80,$01,$00
-	.db $0E,$0E,$E5,$80,$01,$00
-	.db $0A,$0E,$E5,$80,$01,$00
-	.db $06,$0E,$E5,$80,$01,$00
-	.db $FF
-	
-	.db $07,$09,$37,$80,$01,$00
-	.db $08,$09,$28,$80,$01,$00
-	.db $09,$09,$37,$80,$01,$00
-	.db $06,$13,$0C,$00,$01,$00
-	.db $07,$13,$0C,$FF,$01,$00
-	.db $07,$14,$22,$00,$01,$00
-	.db $08,$14,$22,$FF,$01,$00
-	.db $FF
-	
-	.db $11,$08,$11,$14,$01,$00
-	.db $11,$09,$61,$80,$01,$00
-	.db $FF
-	
-	.db $FF
-	
-	.db $07,$09,$01,$12,$01,$00
-	.db $08,$09,$1E,$14,$01,$00
-	.db $09,$09,$29,$80,$01,$00
-	.db $06,$0E,$01,$0C,$01,$00
-	.db $07,$0E,$9B,$80,$01,$00
-	.db $08,$0E,$1E,$0A,$01,$00
-	.db $09,$0E,$28,$80,$01,$00
-	.db $FF
-	
-	.db $0B,$0B,$40,$80,$01,$00
-	.db $0D,$06,$08,$80,$01,$00
-	.db $0E,$06,$7D,$02,$01,$00
-	.db $0D,$05,$81,$02,$01,$00
-	.db $0E,$05,$08,$80,$01,$00
-	.db $FF
-	
-	.db $05,$12,$82,$00,$01,$00
-	.db $06,$12,$82,$00,$01,$00
-	.db $05,$13,$82,$00,$01,$00
-	.db $FF
-	
-	.db $07,$06,$7D,$01,$01,$00
-	.db $07,$07,$2B,$80,$01,$00
-	.db $07,$08,$85,$01,$01,$00
-	.db $11,$0C,$E5,$80,$01,$00
-	.db $12,$0D,$09,$06,$01,$00
-	.db $FF
-	
-	.db $08,$0B,$64,$80,$01,$00
-	.db $1C,$0B,$64,$80,$01,$00
-	.db $FF
-	
-	.db $0B,$07,$05,$37,$01,$01
-	.db $0C,$07,$2C,$80,$01,$01
-	.db $0D,$07,$AF,$80,$01,$01
-	.db $0B,$08,$2C,$80,$01,$01
-	.db $0C,$08,$2D,$80,$01,$01
-	.db $0D,$08,$2C,$80,$01,$01
-	.db $0B,$09,$60,$80,$01,$01
-	.db $0C,$09,$2C,$80,$01,$01
-	.db $0D,$09,$9D,$00,$01,$01
-	.db $FF
-	
-	.db $08,$07,$81,$01,$00,$00
-	.db $09,$08,$B8,$01,$01,$00
-	.db $17,$12,$10,$01,$01,$00
-	.db $FF
-	
-	.db $08,$06,$2B,$80,$01,$00
-	.db $13,$1F,$7D,$01,$01,$00
-	.db $16,$1F,$81,$01,$01,$00
-	.db $FF
-	
-	.db $06,$07,$81,$01,$01,$00
-	.db $09,$08,$E5,$80,$01,$00
-	.db $FF
-	
-	.db $09,$12,$2B,$80,$01,$00
-	.db $09,$13,$58,$80,$01,$00
-	.db $FF
-
-
-;stairs data
-;Format:
-;0: x position
-;1: y position
-	
-;c3ca08
-	.db $07,$10
-	
-	.db $0D,$07
-	
-	.db $0C,$0B
-	
-	.db $12,$07
-	
-	.db $16,$09
-	
-	.db $15,$08
-	
-	.db $0A,$0A
-	
-	.db $0A,$18
-	
-	.db $08,$07
-	
-	.db $08,$08
-	
-	.db $05,$06
-	
-	.db $10,$14
-
-	.db $0C,$0C
-
-	.db $13,$07
-	
-	.db $08,$0B
-	
-	.db $12,$09
-	
-	.db $08,$0A
-	
-	.db $08,$09
-	
-	.db $08,$05
-	
-	.db $0F,$07
-	
-	.db $14,$08
-
-	.db $07,$0B
-	
-	.db $1E,$0A
-	
-	.db $06,$07
-	
-	.db $0B,$0A
-	
-	.db $24,$05
-	
-	.db $13,$09
-	
-	.db $06,$07
-	
-	.db $09,$0C
-
-	.db $08,$05
-	
-	.db $08,$16
-	
-	.db $07,$05
-	
-	.db $07,$07
-	
-	.db $12,$12
-	
-	.db $08,$13
-	
-	.db $05,$08
-	
-	.db $06,$0A
-
-	.db $08,$05
-	
-	.db $15,$08
-	
-	.db $05,$0A
-	
-	.db $05,$05
-	
-	.db $0A,$0F
-	
-	.db $10,$05
-	
-	.db $1D,$0E
-	
-	.db $12,$0B
-	
-	.db $17,$08
-	
-	.db $1C,$12
-	
-	.db $0E,$14
-	
-	.db $0B,$09
-
-	.db $07,$09
-
-
-;trap data
-
-;c3ca6c
-	.db $FF
-
-	.db $05,$05,$C7
-	.db $09,$05,$C7
-	.db $FF
-	
-	.db $05,$09,$C2
-	.db $05,$08,$C9
-	.db $FF
-	
-	.db $14,$06,$C7
-	.db $FF
-	
-	.db $0C,$07,$CD
-	.db $0B,$07,$CD
-	.db $0A,$07,$CD
-	.db $09,$07,$CD
-	.db $08,$07,$CD
-	.db $08,$08,$CD
-	.db $08,$09,$CD
-	.db $08,$0A,$CD
-	.db $08,$0B,$CD
-	.db $09,$0B,$CD
-	.db $0A,$0B,$CD
-	.db $0B,$0B,$CD
-	.db $0B,$0A,$CD
-	.db $0B,$09,$CD
-	.db $0A,$09,$CD
-	.db $FF
-
-	.db $08,$0F,$C1
-	.db $08,$13,$C1
-	.db $0C,$13,$C1
-	.db $0C,$10,$C1
-	.db $FF
-	
-	.db $07,$0A,$CE
-	.db $09,$0A,$CE
-	.db $0D,$10,$CE
-	.db $0D,$13,$CE
-	.db $11,$10,$CE
-	.db $11,$13,$CE
-	.db $15,$19,$CE
-	.db $17,$19,$CE
-	.db $FF
-	
-	.db $0B,$05,$C1
-	.db $0D,$07,$C1
-	.db $0F,$07,$C1
-	.db $11,$09,$C1
-	.db $0B,$07,$C6
-	.db $0D,$09,$C6
-	.db $0F,$05,$C6
-	.db $11,$07,$C6
-	.db $FF
-	
-	.db $0A,$05,$C2
-	.db $06,$12,$C2
-	.db $0A,$14,$C2
-	.db $FF
-	
-	.db $0A,$09,$D7
-	.db $10,$06,$D7
-	.db $FF
-
-	.db $09,$09,$D4
-	.db $FF
-	
-	.db $10,$05,$CD
-	.db $11,$05,$CD
-	.db $12,$05,$CD
-	.db $10,$09,$D6
-	.db $11,$09,$D6
-	.db $12,$09,$D6
-	.db $FF
-	
-	.db $07,$07,$C4
-	.db $08,$07,$C4
-	.db $09,$07,$C4
-	.db $07,$08,$CF
-	.db $08,$08,$CF
-	.db $09,$08,$CF
-	.db $07,$09,$CD
-	.db $08,$09,$CD
-	.db $09,$09,$CD
-	.db $FF
-	
-	.db $08,$0D,$C7
-	.db $08,$15,$C7
-	.db $FF
-	
-	.db $08,$08,$D7
-	.db $FF
-	
-	.db $0E,$07,$85
-	.db $0E,$08,$85
-	.db $0E,$09,$85
-	.db $FF
-	
-	.db $07,$14,$C0
-	.db $0B,$14,$C0
-	.db $0C,$14,$C0
-	.db $06,$15,$C0
-	.db $09,$15,$C0
-	.db $0A,$15,$C0
-	.db $0B,$15,$C0
-	.db $0C,$15,$C0
-	.db $0D,$15,$C0
-	.db $05,$16,$C0
-	.db $09,$16,$C0
-	.db $0B,$16,$C0
-	.db $0D,$16,$C0
-	.db $06,$17,$C0
-	.db $08,$17,$C0
-	.db $0A,$17,$C0
-	.db $0B,$17,$C0
-	.db $0C,$17,$C0
-	.db $0D,$17,$C0
-	.db $08,$18,$C0
-	.db $09,$18,$C0
-	.db $0B,$18,$C0
-	.db $0C,$18,$C0
-	.db $0D,$18,$C0
-	.db $05,$19,$C0
-	.db $06,$19,$C0
-	.db $08,$19,$C0
-	.db $0C,$19,$C0
-	.db $06,$1A,$C0
-	.db $09,$1A,$C0
-	.db $0B,$1A,$C0
-	.db $09,$1B,$C0
-	.db $0C,$1B,$C0
-	.db $0E,$1B,$C0
-	.db $FF
-	
-	.db $07,$13,$D7
-	.db $FF
-
-;character data
-;Entry format:
-;0: x position
-;1: y position
-;2: character id
-;3: level
-;4: awake flag
-	
-	.db $06,$0D,$01,$01,$00
-	.db $07,$0D,$01,$01,$00
-	.db $08,$0D,$01,$01,$00
-	.db $05,$0F,$2C,$02,$00
-	.db $06,$0F,$2C,$02,$00
-	.db $07,$0F,$2C,$02,$00
-	.db $08,$0F,$2C,$02,$00
-	.db $09,$0F,$2C,$02,$00
-	.db $FF
-	
-	.db $0B,$08,$1C,$01,$00
-	.db $0B,$09,$1C,$01,$00
-	.db $0B,$0A,$1C,$01,$00
-	.db $0B,$0B,$1C,$01,$00
-	.db $FF
-	
-	.db $0E,$0B,$0A,$01,$01
-	.db $FF
-	
-	.db $09,$09,$2C,$02,$00
-	.db $FF
-	
-	.db $08,$14,$27,$02,$01
-	.db $12,$0F,$16,$01,$01
-	.db $FF
-	
-	.db $13,$09,$0A,$01,$01
-	.db $0C,$09,$08,$01,$01
-	.db $FF
-	
-	.db $0C,$09,$2C,$02,$01
-	.db $07,$06,$02,$01,$01
-	.db $07,$0C,$2C,$02,$01
-	.db $FF
-	
-	.db $1B,$08,$2B,$01,$00
-	.db $1C,$08,$2B,$01,$00
-	.db $1B,$09,$2B,$01,$00
-	.db $1C,$09,$2B,$01,$00
-	.db $FF
-	
-	.db $07,$0F,$03,$01,$01
-	.db $08,$0F,$03,$01,$01
-	.db $09,$0F,$03,$01,$01
-	.db $06,$13,$2C,$02,$01
-	.db $08,$13,$2C,$02,$01
-	.db $0A,$13,$2C,$02,$01
-	.db $06,$15,$2C,$02,$01
-	.db $08,$15,$2C,$02,$01
-	.db $0A,$15,$2C,$02,$01
-	.db $08,$1C,$1B,$01,$00
-	.db $05,$1E,$1B,$01,$00
-	.db $0B,$1E,$1B,$01,$00
-	.db $07,$21,$1B,$01,$00
-	.db $09,$21,$1B,$01,$00
-	.db $FF
-	
-	.db $08,$05,$27,$01,$01
-	.db $08,$07,$0D,$01,$01
-	.db $0D,$11,$12,$01,$00
-	.db $16,$1E,$27,$01,$01
-	.db $FF
-
-
-;c3cc91	
-	.db $07,$07,$2C,$02,$00
-	.db $FF
-
-	.db $FF
-
-	.db $0A,$07,$2C,$02,$00
-	.db $0E,$07,$2C,$02,$00
-	.db $12,$07,$2C,$02,$00
-	.db $FF
-
-	.db $08,$08,$03,$01,$00
-	.db $FF
-	
-	.db $05,$09,$2C,$02,$00
-	.db $FF
-	
-	.db $0A,$09,$39,$01,$00
-	.db $FF
-	
-	.db $08,$07,$1D,$01,$00
-	.db $09,$07,$03,$01,$00
-	.db $0A,$07,$03,$01,$00
-	.db $08,$08,$2C,$02,$00
-	.db $09,$08,$2C,$02,$00
-	.db $0A,$08,$2C,$02,$00
-	.db $FF
-	
-	.db $0A,$07,$04,$02,$00
-	.db $FF
-	
-	.db $06,$06,$2C,$01,$00
-	.db $08,$08,$2C,$01,$00
-	.db $06,$0A,$2C,$01,$00
-	.db $09,$07,$02,$01,$00
-	.db $09,$09,$02,$01,$00
-	.db $11,$05,$02,$01,$01
-	.db $14,$08,$02,$01,$01
-	.db $11,$0B,$02,$01,$01
-	.db $13,$06,$2C,$01,$01
-	.db $13,$0A,$2C,$01,$01
-	.db $FF
-	
-	.db $06,$0A,$2C,$02,$00,$07   ;C3CD08
-	.db $0A,$2C,$02,$00,$08,$0A,$2C,$02,$00,$0F,$0A,$2C,$02,$01,$11,$0A   ;C3CD18
-	.db $2C,$02,$01,$13,$0A,$2C,$02,$01,$FF,$21,$09,$38,$01,$01,$FF,$0A   ;C3CD28
-	.db $08,$03,$01,$00,$08,$08,$2C,$02,$00,$06,$08,$17,$01,$00,$0A,$07   ;C3CD38
-	.db $03,$01,$00,$08,$07,$2C,$02,$00,$06,$07,$17,$01,$00,$0A,$06,$03   ;C3CD48
-	.db $01,$00,$08,$06,$2C,$02,$00,$06,$06,$17,$01,$00,$FF,$09,$05,$2C   ;C3CD58
-	.db $02,$00,$0D,$09,$2C,$02,$00,$09,$0D,$2C,$02,$00,$05,$09,$2C,$02   ;C3CD68
-	.db $00,$06,$06,$03,$01,$00,$0C,$06,$03,$01,$00,$0C,$0C,$03,$01,$00   ;C3CD78
-	.db $06,$0C,$03,$01,$00,$FF,$07,$07,$2C,$03,$01,$FF,$08,$06,$2C,$02   ;C3CD88
-	.db $00,$09,$06,$02,$01,$00,$0A,$06,$2C,$02,$00,$08,$07,$02,$01,$00   ;C3CD98
-	.db $09,$07,$2C,$02,$00,$0A,$07,$02,$01,$00,$08,$08,$2C,$02,$00,$09   ;C3CDA8
-	.db $08,$02,$01,$00,$0A,$08,$2C,$02,$00,$06,$0C,$02,$01,$00,$0C,$0C   ;C3CDB8
-	.db $2C,$02,$00,$FF,$07,$08,$2C,$02,$00,$08,$08,$2C,$02,$00,$09,$08   ;C3CDC8
-	.db $2C,$02,$00,$FF,$05,$12,$03,$01,$01,$05,$15,$03,$01,$01,$08,$15   ;C3CDD8
-	.db $03,$01,$01,$0B,$15,$03,$01,$01,$0B,$12,$03,$01,$01,$FF,$06,$06   ;C3CDE8
-	.db $11,$01,$01,$07,$06,$11,$01,$01,$08,$06,$11,$01,$01,$06,$0E,$38   ;C3CDF8
-	.db $01,$01,$07,$0E,$38,$01,$01,$08,$0E,$38,$01,$01,$FF,$0F,$07,$2C   ;C3CE08
-	.db $02,$01,$19,$07,$01,$01,$00,$FF,$05,$0F,$38,$01,$01,$0B,$0F,$38   ;C3CE18
-	.db $01,$01,$05,$12,$38,$01,$01,$0B,$12,$38,$01,$01,$05,$15,$38,$01   ;C3CE28
-	.db $01,$0B,$15,$38,$01,$01,$FF,$08,$06,$21,$01,$01,$FF,$11,$09,$08   ;C3CE38
-	.db $01,$00,$05,$0A,$08,$01,$01,$FF,$0A,$0A,$22,$01,$00,$FF,$07,$07   ;C3CE48
-	.db $26,$01,$01,$08,$07,$26,$01,$01,$09,$07,$26,$01,$01,$FF,$05,$09   ;C3CE58
-	.db $16,$01,$00,$13,$08,$02,$01,$01,$FF,$07,$05,$25,$01,$00,$11,$0A   ;C3CE68
-	.db $25,$01,$00,$06,$0B,$2C,$02,$00,$FF,$08,$06,$09,$02,$00,$06,$06   ;C3CE78
-	.db $24,$02,$00,$08,$0C,$2C,$01,$00,$07,$0C,$09,$01,$00,$06,$0C,$24   ;C3CE88
-	.db $01,$00,$FF,$0A,$09,$2D,$01,$00,$0B,$09,$2D,$01,$00,$FF,$0F,$05   ;C3CE98
-	.db $2C,$02,$01,$0F,$06,$2C,$02,$01,$10,$06,$2C,$02,$01,$0C,$12,$02   ;C3CEA8
-	.db $01,$00,$FF,$05,$07,$0E,$01,$00,$11,$0A,$05,$01,$01,$14,$0C,$05   ;C3CEB8
-	.db $01,$01,$0F,$0D,$0A,$01,$01,$12,$0F,$0A,$01,$01,$1C,$0D,$38,$01   ;C3CEC8
-	.db $01,$1C,$0F,$38,$01,$01,$1D,$0D,$38,$01,$01,$1D,$0F,$38,$01,$01   ;C3CED8
-	.db $1E,$0D,$38,$01,$01,$1E,$0F,$38,$01,$01,$FF,$0C,$0B,$03,$01,$01   ;C3CEE8
-	.db $18,$0B,$03,$01,$01,$FF,$07,$13,$05,$01,$00,$08,$13,$05,$01,$00   ;C3CEF8
-	.db $17,$07,$10,$01,$01,$17,$08,$22,$01,$01,$17,$09,$02,$01,$01,$0E   ;C3CF08
-	.db $08,$4D,$01,$00,$FF,$0A,$12,$01,$01,$01,$19,$12,$2C,$02,$01,$FF   ;C3CF18
-	.db $08,$0B,$2C,$02,$00,$FF,$09,$05,$05,$01,$00,$07,$0A,$2C,$02,$00   ;C3CF28
-	.db $06,$0A,$2C,$02,$00,$05,$0A,$2C,$02,$00,$FF,$07,$10,$1B,$01,$01   ;C3CF38
-	.db $08,$0B,$03,$01,$01,$07,$07,$03,$01,$01,$FF
-	
-;room data
-;Entry format:
-;0: room id
-;1: room left x position
-;2: room top y position
-;3: room right x position
-;4: room bottom y position
-;5: room info
-
-;After the ff terminator, there is a byte for the number of rooms in the list
-	
-;c3cf53
-	.db $00,$04,$04,$0A,$11,$00
-	.db $FF
-	.db $01
-	
-	.db $00,$06,$06,$0E,$0D,$00
-	.db $FF
-	.db $01
-	
-	.db $00,$04,$04,$0A,$0A,$00
-	.db $01,$0B,$08,$10,$0E,$00
-	.db $02,$04,$0F,$0A,$16,$00
-	.db $FF
-	.db $03
-	
-	.db $00,$04,$04,$0A,$0B,$00
-	.db $01,$0C,$04,$13,$0B,$00
-	.db $FF
-	.db $02
-	
-	.db $00,$04,$04,$0A,$09,$00
-	.db $01,$06,$0D,$0B,$15,$00
-	.db $02,$0F,$0E,$16,$14,$00
-	.db $03,$11,$07,$18,$0B,$00
-	.db $FF
-	.db $04
-	
-	.db $00,$04,$0F,$0A,$14,$00
-	.db $01,$05,$04,$0D,$0A,$00
-	.db $02,$12,$04,$1B,$0A,$00
-	.db $FF
-	.db $03
-	
-	.db $00,$06,$05,$0D,$0D,$00
-	.db $01,$09,$11,$12,$1A,$00
-	.db $FF
-	.db $02
-	
-	.db $00,$0E,$05,$1D,$0A,$00
-	.db $01,$05,$0D,$0F,$19,$00
-	.db $FF
-	.db $02
-	
-	.db $00,$04,$1B,$0C,$22,$00
-	.db $01,$04,$0D,$0C,$18,$00
-	.db $02,$05,$04,$0B,$0A,$00
-	.db $FF
-	.db $03
-	
-	.db $00,$0C,$0E,$12,$15,$00
-	.db $01,$13,$18,$19,$1F,$00
-	.db $02,$05,$04,$0B,$0B,$00
-	.db $FF
-	.db $03
-	
-	.db $00,$04,$04,$0A,$0C,$00
-	.db $FF
-	.db $01
-	
-	.db $00,$05,$04,$09,$08,$00
-	.db $01,$0B,$04,$0F,$0A,$00
-	.db $FF
-	.db $02
-
-	.db $00,$04,$04,$0E,$0E,$00
-	.db $FF
-	.db $01
-	
-	.db $00,$04,$04,$14,$0A,$00
-	.db $FF
-	.db $01
-
-	.db $00,$04,$04,$0C,$0C,$00
-	.db $FF
-	.db $01
-	
-	.db $00,$04,$04,$14,$0A,$00
-	.db $FF
-	.db $01
-
-	.db $00,$04,$04,$0C,$0B,$00
-	.db $FF
-	.db $01
-	
-	.db $00,$04,$04,$0E,$0A,$00
-	.db $01,$05,$0E,$0B,$18,$00
-	.db $FF
-	.db $02
-	
-	.db $00,$05,$04,$0D,$0B,$00
-	.db $FF
-	.db $01
-	
-	.db $00,$04,$04,$10,$0A,$00
-	.db $FF
-	.db $01
-	
-	.db $00,$04,$05,$0B,$0B,$00
-	.db $01,$0F,$04,$15,$0C,$00
-	.db $FF
-	.db $02
-	
-	.db $00,$04,$04,$0A,$0C,$00
-	.db $01,$0E,$04,$14,$0C,$00
-	.db $FF
-	.db $02
-	
-	.db $00,$06,$06,$09,$09,$00
-	.db $01,$0B,$07,$13,$0B,$00
-	.db $02,$16,$06,$1A,$0A,$02
-	.db $03,$1D,$07,$22,$0B,$00
-	.db $FF
-	.db $04
-	
-	.db $00,$04,$04,$13,$0A,$00
-	.db $FF
-	.db $01
-	
-	.db $00,$04,$04,$0C,$0C,$00
-	.db $FF
-	.db $01
-	
-	.db $00,$16,$07,$19,$09,$00
-	.db $01,$19,$0F,$1C,$12,$02
-	.db $02,$23,$0F,$26,$12,$02
-	.db $03,$22,$04,$27,$0B,$00
-	.db $FF
-	.db $04
-	
-	.db $00,$04,$04,$0E,$0E,$00
-	.db $01,$11,$07,$15,$0B,$00
-	.db $FF
-	.db $02
-	
-	.db $00,$04,$05,$09,$09,$00
-	.db $01,$0D,$04,$15,$0A,$00
-	.db $FF
-	.db $02
-	
-	.db $00,$04,$04,$0E,$0D,$00
-	.db $FF
-	.db $01
-	
-	.db $00,$04,$04,$0C,$0C,$00
-	.db $FF
-	.db $01
-	
-	.db $00,$04,$04,$0C,$0C,$00
-	.db $01,$04,$0F,$0C,$17,$00
-	.db $FF
-	.db $02
-	
-	.db $00,$04,$04,$0A,$09,$00
-	.db $01,$04,$0C,$0A,$11,$00
-	.db $02,$04,$14,$0A,$19,$00
-	.db $FF
-	.db $03
-	
-	.db $00,$18,$04,$1E,$0A,$00
-	.db $01,$0E,$04,$14,$0A,$00
-	.db $02,$04,$04,$0A,$0A,$00
-	.db $FF
-	.db $03
-	
-	.db $00,$05,$04,$0B,$0A,$00
-	.db $01,$04,$0E,$0C,$16,$00
-	.db $02,$10,$10,$14,$14,$00
-	.db $FF
-	.db $03
-	
-	.db $00,$05,$10,$0B,$17,$00
-	.db $01,$04,$04,$0C,$0C,$00
-	.db $FF
-	.db $02
-	
-	.db $00,$10,$04,$16,$0A,$00
-	.db $01,$04,$05,$0A,$0B,$00
-	.db $FF
-	.db $02
-	
-	.db $00,$04,$04,$10,$10,$00
-	.db $FF
-	.db $01
-	
-	.db $00,$04,$12,$0A,$17,$00
-	.db $01,$04,$04,$0C,$0C,$00
-	.db $FF
-	.db $02
-	
-	.db $00,$04,$07,$08,$0B,$00
-	.db $01,$0E,$04,$16,$0C,$00
-	.db $FF
-	.db $02
-	
-	.db $00,$04,$04,$12,$0E,$00
-	.db $FF
-	.db $01
-	
-	.db $00,$04,$04,$0B,$10,$00
-	.db $FF
-	.db $01
-	
-	.db $00,$06,$04,$0F,$10,$00
-	.db $FF
-	.db $01
-	
-	.db $00,$04,$0F,$0D,$16,$00
-	.db $01,$09,$04,$11,$0B,$00
-	.db $FF
-	.db $02
-	
-	.db $00,$04,$04,$0B,$0A,$00
-	.db $01,$0E,$09,$15,$10,$00
-	.db $02,$19,$0B,$20,$11,$00
-	.db $FF
-	.db $03
-	
-	.db $00,$05,$09,$0D,$0E,$00
-	.db $01,$0F,$05,$15,$11,$00
-	.db $02,$17,$08,$1F,$0D,$00
-	.db $FF
-	.db $03
-	
-	.db $00,$04,$11,$0B,$17,$00
-	.db $01,$08,$05,$0F,$0B,$20
-	.db $02,$13,$06,$18,$0A,$00
-	.db $FF
-	.db $03
-	
-	.db $00,$04,$04,$0C,$0B,$00
-	.db $01,$04,$0F,$0C,$15,$00
-	.db $FF
-	.db $02
-	
-	.db $00,$04,$04,$0C,$0C,$00
-	.db $01,$04,$13,$0F,$1C,$00
-	.db $FF
-	.db $02
-	
-	.db $00,$04,$04,$0C,$0C,$00
-	.db $FF
-	.db $01
-	
-	.db $00,$0A,$17,$0F,$1C,$00
-	.db $01,$04,$0F,$0A,$15,$00
-	.db $02,$05,$06,$0A,$0C,$00
-	.db $FF
-	.db $03
-
-;trap list data
-
-;c3d203
-	.db $01,$07,$00,$14,$02,$17,$0D,$0E,$05,$06,$08
-;c3d20e
-	.db $07,$00,$02,$01,$01,$17,$0D,$0F,$16,$04,$09
+	.dl FeisProblemsTrapList1
+	.dl FeisProblemsTrapList1
+	.dl FeisProblemsTrapList1
+	.dl FeisProblemsTrapList1
+	.dl FeisProblemsTrapList1
+	.dl FeisProblemsTrapList1
+	.dl FeisProblemsTrapList1
+	.dl FeisProblemsTrapList1
+	.dl FeisProblemsTrapList1
+	.dl FeisProblemsTrapList1
+	.dl FeisProblemsTrapList1
+	.dl FeisProblemsTrapList1
+	.dl FeisProblemsTrapList1
+	.dl FeisProblemsTrapList1
+	.dl FeisProblemsTrapList1
+	.dl FeisProblemsTrapList2
+	.dl FeisProblemsTrapList1
+	.dl FeisProblemsTrapList2
+	.dl FeisProblemsTrapList2
+	.dl FeisProblemsTrapList2
+	.dl FeisProblemsTrapList2
+	.dl FeisProblemsTrapList1
+	.dl FeisProblemsTrapList2
+	.dl FeisProblemsTrapList2
+	.dl FeisProblemsTrapList2
+	.dl FeisProblemsTrapList2
+	.dl FeisProblemsTrapList2
+	.dl FeisProblemsTrapList2
+	.dl FeisProblemsTrapList2
+	.dl FeisProblemsTrapList2
+	.dl FeisProblemsTrapList2
+	.dl FeisProblemsTrapList1
+	.dl FeisProblemsTrapList2
+	.dl FeisProblemsTrapList2
+	.dl FeisProblemsTrapList2
+	.dl FeisProblemsTrapList2
+	.dl FeisProblemsTrapList2
+	.dl FeisProblemsTrapList1
+	.dl FeisProblemsTrapList1
+	.dl FeisProblemsTrapList1
+	.dl FeisProblemsTrapList1
+	.dl FeisProblemsTrapList2
+	.dl FeisProblemsTrapList1
+	.dl FeisProblemsTrapList2
+	.dl FeisProblemsTrapList2
+	.dl FeisProblemsTrapList1
+	.dl FeisProblemsTrapList2
+	.dl FeisProblemsTrapList2
+	.dl FeisProblemsTrapList1
+	.dl FeisProblemsTrapList1
+
+.include "data/maps/feis_problems/terrain.asm"
+.include "data/maps/feis_problems/items.asm"
+.include "data/maps/feis_problems/stairs.asm"
+.include "data/maps/feis_problems/traps.asm"
+.include "data/maps/feis_problems/chars.asm"
+.include "data/maps/feis_problems/rooms.asm"
+.include "data/maps/feis_problems/traplists.asm"
