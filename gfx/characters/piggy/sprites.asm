@@ -88,12 +88,7 @@ Data_c7fe0f:
 
 ;c7ff88
 Data_c7ff88:
-.incbin "gfx/characters/piggy/c7ff88.4bpp.lz" read 0x78
-
-.bank $8
-.org $0000
-
-.incbin "gfx/characters/piggy/c7ff88.4bpp.lz" skip 0x78
+filedata "gfx/characters/piggy/c7ff88.4bpp.lz" 0x7 0xFF88
 
 ;c80067
 Data_c80067:

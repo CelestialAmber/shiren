@@ -134,12 +134,7 @@ Data_d0fd72:
 
 ;d0feed
 Data_d0feed:
-.incbin "gfx/characters/soldierant/d0feed.right5.4bpp.lz" read 0x113
-
-.bank $11
-.org $0000
-
-.incbin "gfx/characters/soldierant/d0feed.right5.4bpp.lz" skip 0x113
+filedata "gfx/characters/soldierant/d0feed.right5.4bpp.lz" 0x10 0xFEED
 
 ;d1006e
 Data_d1006e:

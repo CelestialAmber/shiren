@@ -198,67 +198,67 @@ Level1EnemyHPStatTable:
 
 ;c29562
 Level1EnemyStrengthStatTable:
-	.db $00 ;dummy entry 
-	.db $02 ;mamel 
-	.db $0F ;death reaper                 
-	.db $26 ;gather                         
-	.db $04 ;bowboy 
-	.db $00 ;pickpocket                     
-	.db $09 ;piggy 
-	.db $11 ;fog hermit                     
-	.db $20 ;inferno                         
-	.db $00 ;green slime                         
-	.db $00 ;thiefwalrus                         
-	.db $16 ;parthenos 
-	.db $11 ;kigny 
-	.db $18 ;twisty hani 
-	.db $1B ;air devil 
-	.db $0F ;n'duba 
-	.db $0D ;ironhead     
-	.db $05 ;ghost radish                         
-	.db $18 ;leech worm 
-	.db $15 ;cell armor 
-	.db $4C ;dragon 
-	.db $09 ;taur             
-	.db $07 ;fluffy bunny 
-	.db $07 ;evil soldier                     
-	.db $0D ;dead soldier 
-	.db $02 ;master hen x (unused) 
-	.db $01 ;hen                 
-	.db $09 ;dark owl                         
-	.db $04 ;knifegator                         
-	.db $02 ;egg thing                         
-	.db $30 ;half warrior                         
-	.db $14 ;schubell                         
-	.db $0B ;floor dragon                         
-	.db $1A ;pacorepkin                         
-	.db $09 ;popster tank                         
-	.db $07 ;rice baby 
-	.db $1B ;curse girl                     
-	.db $0E ;skull mage 
-	.db $11 ;gaze 
-	.db $0D ;polygon spin 
-	.db $96 ;tainted insect 
-	.db $17 ;soldier ant         
-	.db $30 ;mecharoid                         
-	.db $24 ;dremlas                         
-	.db $0A ;snaky 
-	.db $08 ;field bandit                     
-	.db $11 ;baby tank 
-	.db $02 ;weapon (unused) 
-	.db $02 ;arrow (unused) 
-	.db $02 ;shield (unused) 
-	.db $02 ;armband (unused) 
-	.db $02 ;scroll (unused) 
-	.db $02 ;staff (unused) 
-	.db $02 ;herb (unused) 
-	.db $02 ;jar (unused) 
-	.db $02 ;rice ball (unused)                     
-	.db $04 ;mini robber 
-	.db $03 ;baby tengu                     
-	.db $02 ;reserve 3 (unused slot) 
-	.db $02 ;reserve 4 (unused slot)     
-    ;npcs                
+	.db $00 ;dummy entry
+	.db $02 ;mamel
+	.db $0F ;death reaper
+	.db $26 ;gather
+	.db $04 ;bowboy
+	.db $00 ;pickpocket
+	.db $09 ;piggy
+	.db $11 ;fog hermit
+	.db $20 ;inferno
+	.db $00 ;green slime
+	.db $00 ;thiefwalrus
+	.db $16 ;parthenos
+	.db $11 ;kigny
+	.db $18 ;twisty hani
+	.db $1B ;air devil
+	.db $0F ;n'duba
+	.db $0D ;ironhead
+	.db $05 ;ghost radish
+	.db $18 ;leech worm
+	.db $15 ;cell armor
+	.db $4C ;dragon
+	.db $09 ;taur
+	.db $07 ;fluffy bunny
+	.db $07 ;evil soldier
+	.db $0D ;dead soldier
+	.db $02 ;master hen x (unused)
+	.db $01 ;hen
+	.db $09 ;dark owl
+	.db $04 ;knifegator
+	.db $02 ;egg thing
+	.db $30 ;half warrior
+	.db $14 ;schubell
+	.db $0B ;floor dragon
+	.db $1A ;pacorepkin
+	.db $09 ;popster tank
+	.db $07 ;rice baby
+	.db $1B ;curse girl
+	.db $0E ;skull mage
+	.db $11 ;gaze
+	.db $0D ;polygon spin
+	.db $96 ;tainted insect
+	.db $17 ;soldier ant
+	.db $30 ;mecharoid
+	.db $24 ;dremlas
+	.db $0A ;snaky
+	.db $08 ;field bandit
+	.db $11 ;baby tank
+	.db $02 ;weapon (unused)
+	.db $02 ;arrow (unused)
+	.db $02 ;shield (unused)
+	.db $02 ;armband (unused)
+	.db $02 ;scroll (unused)
+	.db $02 ;staff (unused)
+	.db $02 ;herb (unused)
+	.db $02 ;jar (unused)
+	.db $02 ;rice ball (unused)
+	.db $04 ;mini robber
+	.db $03 ;baby tengu
+	.db $02 ;reserve 3 (unused slot)
+	.db $02 ;reserve 4 (unused slot)
+    ;npcs
 	.db $08
 	.db $08
 	.db $07
@@ -455,138 +455,138 @@ Level1EnemyDefenseStatTable:
 	.db $01 ;reserve 3 (unused slot)
 	.db $01 ;reserve 4 (unused slot)
     ;npcs
-	.db $00 
-	.db $14 
-	.db $09 
-	.db $05 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $06 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $12 
-	.db $00 
-	.db $18 
-	.db $1B 
-	.db $00 
-	.db $18 
-	.db $00 
-	.db $00 
-	.db $04 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $18 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $0D 
-	.db $00 
-	.db $14 
-	.db $00 
-	.db $18 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
+	.db $00
+	.db $14
+	.db $09
+	.db $05
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $06
+	.db $00
+	.db $00
+	.db $00
+	.db $12
+	.db $00
+	.db $18
+	.db $1B
+	.db $00
+	.db $18
+	.db $00
+	.db $00
+	.db $04
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $18
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $0D
+	.db $00
+	.db $14
+	.db $00
+	.db $18
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
 
 ;c296e2
 Level1EnemyItemDropRateStatTable:
@@ -651,141 +651,12 @@ Level1EnemyItemDropRateStatTable:
 	.db $01 ;reserve 3 (unused slot)
 	.db $01 ;reserve 4 (unused slot)
     ;npcs
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
-	.db $00 
+	.rept 132
+		.db $00
+	.endr
 
 ;c297a2
-Level1EnemyExpTable:
+Level1EnemyExpLowByteTable:
 	.db $00 ;dummy entry
 	.db $02 ;mamel
 	.db $1E ;death reaper
@@ -847,188 +718,59 @@ Level1EnemyExpTable:
 	.db $02 ;reserve 3 (unused slot)
 	.db $02 ;reserve 4 (unused slot)
     ;npcs
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
+	.rept 132
+		.db $00
+	.endr
 
 ;unknown stat
 ;only tainted insect has a nonzero value
-Level1EnemyUnknownStat1Table:
+Level1EnemyExpMiddleByteTable:
 	.db $00 ;dummy entry
 	.db $00 ;mamel
-	.db $00 ;death reaper                
-	.db $00 ;gather                        
+	.db $00 ;death reaper
+	.db $00 ;gather
 	.db $00 ;bowboy
-	.db $00 ;pickpocket                    
+	.db $00 ;pickpocket
 	.db $00 ;piggy
-	.db $00 ;fog hermit                    
-	.db $00 ;inferno                        
-	.db $00 ;green slime                        
-	.db $00 ;thiefwalrus                        
+	.db $00 ;fog hermit
+	.db $00 ;inferno
+	.db $00 ;green slime
+	.db $00 ;thiefwalrus
 	.db $00 ;parthenos
 	.db $00 ;kigny
 	.db $00 ;twisty hani
 	.db $00 ;air devil
 	.db $00 ;n'duba
-	.db $00 ;ironhead    
-	.db $00 ;ghost radish                        
+	.db $00 ;ironhead
+	.db $00 ;ghost radish
 	.db $00 ;leech worm
 	.db $00 ;cell armor
 	.db $09 ;dragon
-	.db $00 ;taur            
+	.db $00 ;taur
 	.db $00 ;fluffy bunny
-	.db $00 ;evil soldier                    
+	.db $00 ;evil soldier
 	.db $00 ;dead soldier
 	.db $00 ;master hen x (unused)
-	.db $00 ;hen                
-	.db $00 ;dark owl                        
-	.db $00 ;knifegator                        
-	.db $00 ;egg thing                        
-	.db $00 ;half warrior                        
-	.db $00 ;schubell                        
-	.db $00 ;floor dragon                        
-	.db $00 ;pacorepkin                        
-	.db $00 ;popster tank                        
+	.db $00 ;hen
+	.db $00 ;dark owl
+	.db $00 ;knifegator
+	.db $00 ;egg thing
+	.db $00 ;half warrior
+	.db $00 ;schubell
+	.db $00 ;floor dragon
+	.db $00 ;pacorepkin
+	.db $00 ;popster tank
 	.db $00 ;rice baby
-	.db $00 ;curse girl                    
+	.db $00 ;curse girl
 	.db $00 ;skull mage
 	.db $00 ;gaze
 	.db $00 ;polygon spin
 	.db $27 ;tainted insect
 	.db $00 ;soldier ant
-	.db $00 ;mecharoid                        
-	.db $00 ;dremlas                        
+	.db $00 ;mecharoid
+	.db $00 ;dremlas
 	.db $00 ;snaky
-	.db $00 ;field bandit                    
+	.db $00 ;field bandit
 	.db $00 ;baby tank
 	.db $00 ;weapon (unused)
 	.db $00 ;arrow (unused)
@@ -1038,29 +780,23 @@ Level1EnemyUnknownStat1Table:
 	.db $00 ;staff (unused)
 	.db $00 ;herb (unused)
 	.db $00 ;jar (unused)
-	.db $00 ;rice ball (unused)                    
+	.db $00 ;rice ball (unused)
 	.db $00 ;mini robber
-	.db $00 ;baby tengu                    
+	.db $00 ;baby tengu
 	.db $00 ;reserve 3 (unused slot)
 	.db $00 ;reserve 4 (unused slot)
     ;npcs
 	.db $00
 	.db $00
 	.db $00
-	.db $00                
-	.db $00                            
-	.db $00                            
-	.db $00                            
 	.db $00
 	.db $00
 	.db $00
 	.db $00
 	.db $00
 	.db $00
-	.db $00    
 	.db $00
 	.db $00
-	.db $00                    
 	.db $00
 	.db $00
 	.db $00
@@ -1069,19 +805,13 @@ Level1EnemyUnknownStat1Table:
 	.db $00
 	.db $00
 	.db $00
-	.db $00                            
 	.db $00
-	.db $00                        
-	.db $00                            
 	.db $00
-	.db $00                        
 	.db $00
 	.db $00
 	.db $00
 	.db $00
-	.db $00            
 	.db $00
-	.db $00                        
 	.db $00
 	.db $00
 	.db $00
@@ -1092,21 +822,14 @@ Level1EnemyUnknownStat1Table:
 	.db $00
 	.db $00
 	.db $00
-	.db $00                    
 	.db $00
-	.db $00                        
 	.db $00
 	.db $00
-	.db $00                    
 	.db $00
 	.db $00
 	.db $00
 	.db $00
 	.db $00
-	.db $00        
-	.db $00                            
-	.db $00                            
-	.db $00                            
 	.db $00
 	.db $00
 	.db $00
@@ -1118,15 +841,12 @@ Level1EnemyUnknownStat1Table:
 	.db $00
 	.db $00
 	.db $00
-	.db $00                
-	.db $00                            
 	.db $00
 	.db $00
 	.db $00
 	.db $00
 	.db $00
 	.db $00
-	.db $00    
 	.db $00
 	.db $00
 	.db $00
@@ -1147,12 +867,7 @@ Level1EnemyUnknownStat1Table:
 	.db $00
 	.db $00
 	.db $00
-	.db $00            
 	.db $00
-	.db $00                        
-	.db $00                            
-	.db $00                            
-	.db $00                            
 	.db $00
 	.db $00
 	.db $00
@@ -1162,215 +877,54 @@ Level1EnemyUnknownStat1Table:
 	.db $00
 	.db $00
 	.db $00
-	.db $00                        
-	.db $00                            
-	.db $00                            
 	.db $00
 	.db $00
 	.db $00
 	.db $00
-	.db $00            
 	.db $00
-	.db $00                        
-	.db $00                            
 	.db $00
 	.db $00
-	.db $00                    
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
 
 ;unknown stat
-Level1EnemyUnknownStat2Table:
-	.db $00
-	.db $00
-	.db $00                    
-	.db $00                            
-	.db $00
-	.db $00                        
-	.db $00
-	.db $00                        
-	.db $00                            
-	.db $00                            
-	.db $00                            
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00        
-	.db $00                            
-	.db $00
-	.db $00
-	.db $00
-	.db $00                
-	.db $00
-	.db $00                        
-	.db $00
-	.db $00
-	.db $00                    
-	.db $00                            
-	.db $00                            
-	.db $00                            
-	.db $00                            
-	.db $00                            
-	.db $00                            
-	.db $00                            
-	.db $00                            
-	.db $00
-	.db $00                        
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00            
-	.db $00                            
-	.db $00                            
-	.db $00
-	.db $00                        
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00                        
-	.db $00
-	.db $00                        
-	.db $00
-	.db $00                        
-	.db $00
-	.db $00
-	.db $00
-	.db $00                
-	.db $00                            
-	.db $00                            
-	.db $00                            
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00    
-	.db $00
-	.db $00
-	.db $00                    
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00                            
-	.db $00
-	.db $00                        
-	.db $00                            
-	.db $00
-	.db $00                        
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00            
-	.db $00
-	.db $00                        
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00                    
-	.db $00
-	.db $00                        
-	.db $00
-	.db $00
-	.db $00                    
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00        
-	.db $00                            
-	.db $00                            
-	.db $00                            
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00                
-	.db $00                            
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00    
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00            
-	.db $00
-	.db $00                        
-	.db $00                            
-	.db $00                            
-	.db $00                            
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00                        
-	.db $00                            
-	.db $00                            
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00            
-	.db $00
-	.db $00                        
-	.db $00                            
-	.db $00
-	.db $00
-	.db $00                    
+Level1EnemyExpHighByteTable:
+	;all 0 for level 1
+	.rept 192
+		.db $00
+	.endr
 
 Level2EnemyHPStatTable:
 	.db $0F
@@ -1381,15 +935,15 @@ Level2EnemyHPStatTable:
 	.db $28
 	.db $32
 	.db $41
-	.db $41                            
+	.db $41
 	.db $23
 	.db $33
 	.db $05
 	.db $3C
 	.db $05
 	.db $05
-	.db $32    
-	.db $3C                            
+	.db $32
+	.db $3C
 	.db $2D
 	.db $28
 	.db $41
@@ -1403,15 +957,15 @@ Level2EnemyHPStatTable:
 	.db $05
 	.db $28
 	.db $05
-	.db $64        
-	.db $1E                            
+	.db $64
+	.db $1E
 	.db $4B
 	.db $3C
 	.db $28
 	.db $0F
 	.db $28
-	.db $27        
-	.db $33                            
+	.db $27
+	.db $33
 	.db $50
 	.db $05
 	.db $2D
@@ -1564,7 +1118,7 @@ Level2EnemyHPStatTable:
 	.db $05
 	.db $05
 	.db $05
-	.db $05                            
+	.db $05
 
 Level2EnemyStrengthStatTable:
 	.db $00
@@ -1575,15 +1129,15 @@ Level2EnemyStrengthStatTable:
 	.db $00
 	.db $16
 	.db $27
-	.db $30                            
+	.db $30
 	.db $00
 	.db $00
 	.db $02
 	.db $27
 	.db $02
 	.db $02
-	.db $27    
-	.db $30                            
+	.db $27
+	.db $30
 	.db $1B
 	.db $19
 	.db $30
@@ -1597,15 +1151,15 @@ Level2EnemyStrengthStatTable:
 	.db $02
 	.db $1B
 	.db $02
-	.db $FF        
-	.db $1D                            
+	.db $FF
+	.db $1D
 	.db $37
 	.db $27
 	.db $0A
 	.db $0D
 	.db $24
-	.db $1B        
-	.db $1D                            
+	.db $1B
+	.db $1D
 	.db $1D
 	.db $02
 	.db $27
@@ -1758,7 +1312,7 @@ Level2EnemyStrengthStatTable:
 	.db $02
 	.db $02
 	.db $02
-	.db $02                            
+	.db $02
 
 Level2EnemyDefenseStatTable:
 	.db $00
@@ -1769,15 +1323,15 @@ Level2EnemyDefenseStatTable:
 	.db $05
 	.db $19
 	.db $11
-	.db $13                            
+	.db $13
 	.db $0F
 	.db $0C
 	.db $01
 	.db $0F
 	.db $01
 	.db $01
-	.db $14    
-	.db $15                            
+	.db $14
+	.db $15
 	.db $0D
 	.db $15
 	.db $14
@@ -1791,15 +1345,15 @@ Level2EnemyDefenseStatTable:
 	.db $01
 	.db $10
 	.db $25
-	.db $23        
-	.db $1A                            
+	.db $23
+	.db $1A
 	.db $17
 	.db $0F
 	.db $1A
 	.db $0B
 	.db $13
-	.db $13        
-	.db $13                            
+	.db $13
+	.db $13
 	.db $0F
 	.db $01
 	.db $12
@@ -1953,6 +1507,8 @@ Level2EnemyDefenseStatTable:
 	.db $01
 	.db $01
 	.db $01
+
+Level2EnemyItemDropRateStatTable:
 	.db $00
 	.db $08
 	.db $01
@@ -2144,9 +1700,9 @@ Level2EnemyDefenseStatTable:
 	.db $01
 	.db $01
 	.db $01
-	.db $01                            
+	.db $01
 
-Level2EnemyExpTable:
+Level2EnemyExpLowByteTable:
 	.db $00
 	.db $03
 	.db $82
@@ -2155,15 +1711,15 @@ Level2EnemyExpTable:
 	.db $14
 	.db $C8
 	.db $96
-	.db $AA                            
+	.db $AA
 	.db $5A
 	.db $32
 	.db $02
 	.db $64
 	.db $02
 	.db $02
-	.db $FA    
-	.db $F4                            
+	.db $FA
+	.db $F4
 	.db $50
 	.db $32
 	.db $8A
@@ -2177,15 +1733,15 @@ Level2EnemyExpTable:
 	.db $02
 	.db $50
 	.db $32
-	.db $D0        
-	.db $2C                            
+	.db $D0
+	.db $2C
 	.db $F4
 	.db $FA
 	.db $2C
 	.db $4B
 	.db $64
-	.db $46        
-	.db $2C                            
+	.db $46
+	.db $2C
 	.db $90
 	.db $02
 	.db $32
@@ -2338,9 +1894,9 @@ Level2EnemyExpTable:
 	.db $02
 	.db $02
 	.db $02
-	.db $02                            
+	.db $02
 
-Level2EnemyUnknownStat1Table:
+Level2EnemyExpMiddleByteTable:
 	.db $00
 	.db $00
 	.db $00
@@ -2349,15 +1905,15 @@ Level2EnemyUnknownStat1Table:
 	.db $00
 	.db $00
 	.db $00
-	.db $00                            
 	.db $00
 	.db $00
 	.db $00
 	.db $00
 	.db $00
 	.db $00
-	.db $00    
-	.db $01                            
+	.db $00
+	.db $00
+	.db $01
 	.db $00
 	.db $00
 	.db $02
@@ -2371,15 +1927,15 @@ Level2EnemyUnknownStat1Table:
 	.db $00
 	.db $00
 	.db $00
-	.db $07        
-	.db $01                            
+	.db $07
+	.db $01
 	.db $01
 	.db $00
 	.db $01
 	.db $00
 	.db $00
-	.db $00        
-	.db $01                            
+	.db $00
+	.db $01
 	.db $01
 	.db $00
 	.db $00
@@ -2532,201 +2088,13 @@ Level2EnemyUnknownStat1Table:
 	.db $00
 	.db $00
 	.db $00
-	.db $00                            
+	.db $00
 
-Level2EnemyUnknownStat2Table:
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00                            
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00    
-	.db $00                            
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00        
-	.db $00                            
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00        
-	.db $00                            
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00                            
+Level2EnemyExpHighByteTable:
+	;all 0 for level 2
+	.rept 192
+		.db $00
+	.endr
 
 Level3EnemyHPStatTable:
 	.db $0F
@@ -2757,8 +2125,8 @@ Level3EnemyHPStatTable:
 	.db $5A
 	.db $05
 	.db $05
-	.db $64            
-	.db $0A                            
+	.db $64
+	.db $0A
 	.db $FA
 	.db $46
 	.db $50
@@ -2920,7 +2288,7 @@ Level3EnemyHPStatTable:
 	.db $05
 	.db $05
 	.db $05
-	.db $05                        
+	.db $05
 
 Level3EnemyStrengthStatTable:
 	.db $00
@@ -2951,8 +2319,8 @@ Level3EnemyStrengthStatTable:
 	.db $FF
 	.db $02
 	.db $02
-	.db $FF            
-	.db $02                            
+	.db $FF
+	.db $02
 	.db $FF
 	.db $FF
 	.db $F3
@@ -3114,7 +2482,7 @@ Level3EnemyStrengthStatTable:
 	.db $02
 	.db $02
 	.db $02
-	.db $02                        
+	.db $02
 
 Level3EnemyDefenseStatTable:
 	.db $00
@@ -3145,8 +2513,8 @@ Level3EnemyDefenseStatTable:
 	.db $1A
 	.db $01
 	.db $01
-	.db $1E            
-	.db $1F                            
+	.db $1E
+	.db $1F
 	.db $21
 	.db $1E
 	.db $1B
@@ -3309,6 +2677,8 @@ Level3EnemyDefenseStatTable:
 	.db $01
 	.db $01
 	.db $01
+
+Level3EnemyItemDropRateStatTable:
 	.db $00
 	.db $40
 	.db $01
@@ -3500,9 +2870,9 @@ Level3EnemyDefenseStatTable:
 	.db $01
 	.db $01
 	.db $01
-	.db $01                        
+	.db $01
 
-Level3EnemyExpTable:
+Level3EnemyExpLowByteTable:
 	.db $00
 	.db $E8
 	.db $B6
@@ -3531,8 +2901,8 @@ Level3EnemyExpTable:
 	.db $E8
 	.db $02
 	.db $02
-	.db $E8            
-	.db $96                            
+	.db $E8
+	.db $96
 	.db $70
 	.db $E8
 	.db $E8
@@ -3694,9 +3064,9 @@ Level3EnemyExpTable:
 	.db $02
 	.db $02
 	.db $02
-	.db $02                        
+	.db $02
 
-Level3EnemyUnknownStat1Table:
+Level3EnemyExpMiddleByteTable:
 	.db $00
 	.db $03
 	.db $03
@@ -3725,8 +3095,8 @@ Level3EnemyUnknownStat1Table:
 	.db $03
 	.db $00
 	.db $00
-	.db $03            
-	.db $00                            
+	.db $03
+	.db $00
 	.db $17
 	.db $03
 	.db $03
@@ -3888,198 +3258,10 @@ Level3EnemyUnknownStat1Table:
 	.db $00
 	.db $00
 	.db $00
-	.db $00                        
+	.db $00
 
-Level3EnemyUnknownStat2Table:
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00            
-	.db $00                            
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00                        
+Level3EnemyExpHighByteTable:
+	;all 0 for level 3
+	.rept 192
+		.db $00
+	.endr

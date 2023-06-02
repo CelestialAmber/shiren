@@ -226,12 +226,7 @@ Data_cdfeea:
 
 ;cdfff7
 Data_cdfff7:
-.incbin "gfx/characters/schubell/cdfff7.4bpp.lz" read 0x9
-
-.bank $e
-.org $0000
-
-.incbin "gfx/characters/schubell/cdfff7.4bpp.lz" skip 0x9
+filedata "gfx/characters/schubell/cdfff7.4bpp.lz" 0xD 0xFFF7
 
 ;ce00f4
 Data_ce00f4:

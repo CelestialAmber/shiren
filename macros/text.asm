@@ -15,6 +15,12 @@
     .STRINGMAP mainFontMap, \1
 .endm
 
+;1: number of spaces
+.macro space
+	.rept \1
+		.db 0
+	.endr
+.endm
 
 ;Waits for player input before clearing text window.
 .macro cleartext

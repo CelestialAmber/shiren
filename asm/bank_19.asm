@@ -124,32 +124,32 @@ DATA8_D94546:
 .incbin "gfx/logo.4bpp"
 
 DATA8_D96546:
-	.db $C2,$65
-	.db $0A,$66
-	.db $52,$66
-	.db $9A,$66 
-	.db $E2,$66
-	.db $2A,$67
-	.db $72,$67
-	.db $BA,$67 
-	.db $02,$68
-	.db $4A,$68
-	.db $92,$68
-	.db $DA,$68 
-	.db $22,$69
-	.db $6A,$69
-	.db $B2,$69
-	.db $FA,$69 
-	.db $42,$6A
-	.db $8A,$6A
-	.db $D2,$6A
-	.db $1A,$6B 
-	.db $62,$6B
-	.db $AA,$6B
-	.db $F2,$6B
-	.db $3A,$6C 
-	.db $82,$6C
-	.db $7A,$65
+	.dw $65C2
+	.dw $660A
+	.dw $6652
+	.dw $669A
+	.dw $66E2
+	.dw $672A
+	.dw $6772
+	.dw $67BA
+	.dw $6802
+	.dw $684A
+	.dw $6892
+	.dw $68DA
+	.dw $6922
+	.dw $696A
+	.dw $69B2
+	.dw $69FA
+	.dw $6A42
+	.dw $6A8A
+	.dw $6AD2
+	.dw $6B1A
+	.dw $6B62
+	.dw $6BAA
+	.dw $6BF2
+	.dw $6C3A
+	.dw $6C82
+	.dw $657A
 
 ;title logo animated 2 frames
 ;72 bytes per frame

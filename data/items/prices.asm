@@ -4,61 +4,61 @@
 ;herb buy/sell prices
 ;d9a298
 HerbBuySellPrices:
-	.dw $0032,$0019 ;medicinal herb
-	.dw $0064,$0032 ;restorative herb
-	.dw $03E8,$01F4 ;happiness herb
-	.dw $0032,$0019 ;herb of sight
-	.dw $01F4,$00C8 ;dragon herb
-	.dw $0BB8,$0064 ;herb of victory
-	.dw $2710,$05DC ;angel seed
-	.dw $1388,$09C4 ;herb of revival
+	.dw 50, 25 ;medicinal herb
+	.dw 100, 50 ;restorative herb
+	.dw 1000, 500 ;happiness herb
+	.dw 50, 25 ;herb of sight
+	.dw 500, 200 ;dragon herb
+	.dw 3000, 100 ;herb of victory
+	.dw 10000, 1500 ;angel seed
+	.dw 5000, 2500 ;herb of revival
 	.dw 0, 0 ;herb of invisibility (unused)
-	.dw $00C8,$0032 ;bitter herb
-	.dw $00C8,$0028 ;seed of misfortune
-	.dw $00C8,$001E ;seed of ill luck
-	.dw $00C8,$0064 ;kigny seed
-	.dw $0064,$0019 ;herb of amnesia (unused)
+	.dw 200, 50 ;bitter herb
+	.dw 200, 40 ;seed of misfortune
+	.dw 200, 30 ;seed of ill luck
+	.dw 200, 100 ;kigny seed
+	.dw 100, 25 ;herb of amnesia (unused)
 	.dw 0, 0 ;--- (dummy entry)
-	.dw $01F4,$00C8 ;life herb
-	.dw $03E8,$01F4 ;big belly seed
-	.dw $00C8,$003C ;little belly seed
-	.dw $0BB8,$05DC ;conversation seed (unused)
-	.dw $01F4,$00FA ;herb of strength
-	.dw $028A,$00FA ;antidote herb
-	.dw $0032,$0019 ;poison herb
-	.dw $0BB8,$05DC ;herb of confusion
-	.dw $1388,$09C4 ;sleeping herb
-	.dw $0032,$0019 ;weeds
+	.dw 500, 200 ;life herb
+	.dw 1000, 500 ;big belly seed
+	.dw 200, 60 ;little belly seed
+	.dw 3000, 1500 ;conversation seed (unused)
+	.dw 500, 250 ;herb of strength
+	.dw 650, 250 ;antidote herb
+	.dw 50, 25 ;poison herb
+	.dw 3000, 1500 ;herb of confusion
+	.dw 5000, 2500 ;sleeping herb
+	.dw 50, 25 ;weeds
 
 ;scroll buy/sell prices
 ;d9a2fc
 ScrollBuySellPrices:
-	.db $F4,$01,$FA,$00 ;scroll of blessing
-	.db $2C,$01,$96,$00 ;scroll of identity
-	.db $2C,$01,$FA,$00 ;scroll of light
-	.db $E8,$03,$F4,$01 ;bigpot scroll
-	.db $E8,$03,$F4,$01 ;blastwave scroll
-	.db $F4,$01,$FA,$00 ;scroll of silence
+	.dw 500, 250 ;scroll of blessing
+	.dw 300, 150 ;scroll of identity
+	.dw 300, 250 ;scroll of light
+	.dw 1000, 500 ;bigpot scroll
+	.dw 1000, 500 ;blastwave scroll
+	.dw 500, 250 ;scroll of silence
 	.dw 0, 0 ;-- scroll (dummy entry)
-	.db $E8,$03,$F4,$01 ;scroll of traps
-	.db $E8,$03,$FA,$00 ;scroll of need
-	.db $64,$00,$32,$00 ;scroll of haste
-	.db $C8,$00,$64,$00 ;scroll of sleep
-	.db $E8,$03,$64,$00 ;power up scroll
+	.dw 1000, 500 ;scroll of traps
+	.dw 1000, 250 ;scroll of need
+	.dw 100, 50 ;scroll of haste
+	.dw 200, 100 ;scroll of sleep
+	.dw 1000, 100 ;power up scroll
 	.dw 0, 0 ;-- scroll (dummy entry)
-	.db $F4,$01,$64,$00 ;scroll of explosion
-	.db $90,$01,$C8,$00 ;great hall scroll
-	.db $50,$00,$28,$00 ;monster house scroll
-	.db $64,$00,$32,$00 ;scroll of confusion
-	.db $50,$C3,$EE,$02 ;scroll of removal
-	.db $B8,$0B,$E8,$03 ;blank scroll
-	.db $C8,$00,$64,$00 ;wandering scroll
-	.db $20,$03,$90,$01 ;air bless scroll
-	.db $20,$03,$90,$01 ;earth bless scroll
-	.db $DC,$05,$F4,$01 ;plating scroll
-	.db $DC,$05,$EE,$02 ;extraction scroll
-	.db $2C,$01,$2C,$01 ;hands full scroll
-	.db $E8,$03,$64,$00 ;-- scroll
+	.dw 500, 100 ;scroll of explosion
+	.dw 400, 200 ;great hall scroll
+	.dw 80, 40 ;monster house scroll
+	.dw 100, 50 ;scroll of confusion
+	.dw 50000, 750 ;scroll of removal
+	.dw 3000, 1000 ;blank scroll
+	.dw 200, 100 ;wandering scroll
+	.dw 800, 400 ;air bless scroll
+	.dw 800, 400 ;earth bless scroll
+	.dw 1500, 500 ;plating scroll
+	.dw 1500, 750 ;extraction scroll
+	.dw 300, 300 ;hands full scroll
+	.dw 1000, 100 ;-- scroll
 	.dw 0, 0 ;unused slots
 	.dw 0, 0
 	.dw 0, 0
@@ -75,65 +75,65 @@ ScrollBuySellPrices:
 ;rice ball buy/sell prices
 ;d9a394
 RiceBallBuySellPrices:
-	.db $64,$00,$19,$00 ;rice ball
-	.db $C8,$00,$32,$00 ;big rice ball
-	.db $64,$00,$19,$00 ;rotten rice ball
-	.db $2C,$01,$4B,$00 ;giant rice ball
-	.db $32,$00,$0A,$00 ;special rice ball
+	.dw 100, 25 ;rice ball
+	.dw 200, 50 ;big rice ball
+	.dw 100, 25 ;rotten rice ball
+	.dw 300, 75 ;giant rice ball
+	.dw 50, 10 ;special rice ball
 	.dw 0, 0 ;unused slot
 
 ;weapon buy/sell prices
 ;d9a3ac
 WeaponBuySellPrices:
-	.db $F0,$00,$50,$00 ;cudgel
-	.db $F4,$01,$C8,$00 ;nagamaki
-	.db $E8,$03,$26,$02 ;bufu's cleaver
-	.db $20,$03,$2C,$01 ;katana
-	.db $1C,$0C,$2E,$04 ;dragonkiller
-	.db $B0,$04,$90,$01 ;mastersword
-	.db $98,$3A,$58,$1B ;kabra's blade
-	.db $DC,$05,$EE,$02 ;sickle slayer
-	.db $78,$00,$46,$00 ;pickaxe
-	.db $28,$23,$8E,$12 ;homing sword
-	.db $94,$11,$D0,$07 ;minotaur's axe
-	.db $D8,$0E,$A4,$06 ;razor wind
-	.db $28,$0A,$E2,$04 ;cyclops killer
-	.db $80,$0C,$40,$06 ;drain buster
-	.db $30,$75,$D4,$30 ;firebrand
-	.db $40,$9C,$5C,$44 ;kabra reborn
+	.dw 240, 80 ;cudgel
+	.dw 500, 200 ;nagamaki
+	.dw 1000, 550 ;bufu's cleaver
+	.dw 800, 300 ;katana
+	.dw 3100, 1070 ;dragonkiller
+	.dw 1200, 400 ;mastersword
+	.dw 15000, 7000 ;kabra's blade
+	.dw 1500, 750 ;sickle slayer
+	.dw 120, 70 ;pickaxe
+	.dw 9000, 4750 ;homing sword
+	.dw 4500, 2000 ;minotaur's axe
+	.dw 3800, 1700 ;razor wind
+	.dw 2600, 1250 ;cyclops killer
+	.dw 3200, 1600 ;drain buster
+	.dw 30000, 12500 ;firebrand
+	.dw 40000, 17500 ;kabra reborn
 
 ;weapon upgrade price bonus (per 1 point)
 ;d9a3ec
 WeaponUpgradePriceBonus:
-	.db $18,$00,$08,$00 ;cudgel
-	.db $32,$00,$14,$00 ;nagamaki
-	.db $64,$00,$37,$00 ;bufu's cleaver
-	.db $50,$00,$1E,$00 ;katana
-	.db $36,$01,$6B,$00 ;dragonkiller
-	.db $78,$00,$28,$00 ;mastersword
-	.db $DC,$05,$BC,$02 ;kabra's blade
-	.db $96,$00,$4B,$00 ;sickle slayer
-	.db $0C,$00,$07,$00 ;pickaxe
-	.db $84,$03,$DB,$01 ;homing sword
-	.db $C2,$01,$C8,$00 ;minotaur's axe
-	.db $7C,$01,$AA,$00 ;razor wind
-	.db $04,$01,$7D,$00 ;cyclops killer
-	.db $40,$01,$A0,$00 ;drain buster
-	.db $B8,$0B,$E2,$04 ;firebrand
-	.db $A0,$0F,$D6,$06 ;kabra reborn
+	.dw 24, 8 ;cudgel
+	.dw 50, 20 ;nagamaki
+	.dw 100, 55 ;bufu's cleaver
+	.dw 80, 30 ;katana
+	.dw 310, 107 ;dragonkiller
+	.dw 120, 40 ;mastersword
+	.dw 1500, 700 ;kabra's blade
+	.dw 150, 75 ;sickle slayer
+	.dw 12, 7 ;pickaxe
+	.dw 900, 475 ;homing sword
+	.dw 450, 200 ;minotaur's axe
+	.dw 380, 170 ;razor wind
+	.dw 260, 125 ;cyclops killer
+	.dw 320, 160 ;drain buster
+	.dw 3000, 1250 ;firebrand
+	.dw 4000, 1750 ;kabra reborn
 
 ;weapon ability information?
 ;referenced by @lbl_C33D67?
 ;d9a42c
-	.db $F4,$01,$82,$00 ;dragonkiller
-	.db $F4,$01,$96,$00 ;sickle slayer
-	.db $E8,$03,$FA,$00 ;cyclops killer
-	.db $20,$03,$C8,$00
-	.db $E8,$03,$FA,$00
-	.db $78,$00,$1E,$00
-	.db $E8,$03,$FA,$00
-	.db $DC,$05,$90,$01
-	.db $B0,$04,$2C,$01
+	.dw 500, 130 ;dragonkiller
+	.dw 500, 150 ;sickle slayer
+	.dw 1000, 250 ;cyclops killer
+	.dw 800, 200
+	.dw 1000, 250
+	.dw 120, 30
+	.dw 1000, 250
+	.dw 1500, 400
+	.dw 1200, 300
 	.dw 0, 0
 	.dw 0, 0
 	.dw 0, 0
@@ -141,9 +141,9 @@ WeaponUpgradePriceBonus:
 ;arrow buy/sell prices
 ;d9a45c
 ArrowBuySellPrices:
-	.db $0A,$00,$02,$00 ;wood arrow
-	.db $28,$00,$0A,$00 ;iron arrow
-	.db $50,$00,$14,$00 ;silver arrow
+	.dw 10, 2 ;wood arrow
+	.dw 40, 10 ;iron arrow
+	.dw 80, 20 ;silver arrow
 	.dw 0, 0
 	.dw 0, 0
 	.dw 0, 0
@@ -151,251 +151,251 @@ ArrowBuySellPrices:
 ;shield buy/sell prices
 ;d9a474
 ShieldBuySellPrices:
-	.db $90,$01,$C8,$00 ;hide shield
-	.db $2C,$01,$64,$00 ;bronzeward
+	.dw 400, 200 ;hide shield
+	.dw 300, 100 ;bronzeward
 	.dw 0, 0 ;anti-poison shield
-	.db $90,$01,$96,$00 ;wood shield
-	.db $08,$07,$EE,$02 ;iron shield
-	.db $C4,$09,$E2,$04 ;dragonward
-	.db $88,$13,$C4,$09 ;windshield
-	.db $C4,$09,$E2,$04 ;spiked ward
-	.db $B8,$0B,$E8,$03 ;armor ward
-	.db $70,$17,$B8,$0B ;echo shield
-	.db $88,$13,$DC,$05 ;evasive shield
-	.db $10,$27,$C4,$09 ;fancy shield
-	.db $D0,$07,$EE,$02 ;fragile shield
-	.db $D0,$07,$EE,$02 ;blast shield
-	.db $E8,$03,$90,$01 ;walrus shield
-	.db $50,$C3,$E4,$57 ;stormward
+	.dw 400, 150 ;wood shield
+	.dw 1800, 750 ;iron shield
+	.dw 2500, 1250 ;dragonward
+	.dw 5000, 2500 ;windshield
+	.dw 2500, 1250 ;spiked ward
+	.dw 3000, 1000 ;armor ward
+	.dw 6000, 3000 ;echo shield
+	.dw 5000, 1500 ;evasive shield
+	.dw 10000, 2500 ;fancy shield
+	.dw 2000, 750 ;fragile shield
+	.dw 2000, 750 ;blast shield
+	.dw 1000, 400 ;walrus shield
+	.dw 50000, 22500 ;stormward
 	.dw 0, 0
 	.dw 0, 0
 
 ;shield upgrade price bonus (per 1 point)
 ShieldUpgradePriceBonus:
-	.db $28,$00,$14,$00 ;hide shield
-	.db $1E,$00,$0A,$00 ;bronzeward
+	.dw 40, 20 ;hide shield
+	.dw 30, 10 ;bronzeward
 	.dw 0, 0 ;anti-poison shield
-	.db $28,$00,$0F,$00 ;wood shield
-	.db $B4,$00,$4B,$00 ;iron shield
-	.db $FA,$00,$7D,$00 ;dragonward
-	.db $F4,$01,$FA,$00 ;windshield
-	.db $FA,$00,$7D,$00 ;spiked ward
-	.db $2C,$01,$64,$00 ;armor ward
-	.db $58,$02,$2C,$01 ;echo shield
-	.db $F4,$01,$96,$00 ;evasive shield
-	.db $E8,$03,$FA,$00 ;fancy shield
-	.db $C8,$00,$4B,$00 ;fragile shield
-	.db $C8,$00,$4B,$00 ;blast shield
-	.db $64,$00,$28,$00 ;walrus shield
-	.db $88,$13,$CA,$08 ;stormward
+	.dw 40, 15 ;wood shield
+	.dw 180, 75 ;iron shield
+	.dw 250, 125 ;dragonward
+	.dw 500, 250 ;windshield
+	.dw 250, 125 ;spiked ward
+	.dw 300, 100 ;armor ward
+	.dw 600, 300 ;echo shield
+	.dw 500, 150 ;evasive shield
+	.dw 1000, 250 ;fancy shield
+	.dw 200, 75 ;fragile shield
+	.dw 200, 75 ;blast shield
+	.dw 100, 40 ;walrus shield
+	.dw 5000, 2250 ;stormward
 	.dw 0, 0 ;
 	.dw 0, 0 ;
 
 ;shield ability information?
 ;d9a504
 DATA8_D9A504:
-	.db $90,$01,$64,$00
+	.dw 400, 100
 	.dw 0, 0
-	.db $C8,$00,$32,$00
+	.dw 200, 50
 	.dw 0, 0
-	.db $C4,$09,$E2,$04
-	.db $C4,$09,$E2,$04
-	.db $70,$17,$B8,$0B
-	.db $C4,$09,$DC,$05
+	.dw 2500, 1250
+	.dw 2500, 1250
+	.dw 6000, 3000
+	.dw 2500, 1500
 	.dw 0, 0
-	.db $D0,$07,$EE,$02
-	.db $E8,$03,$90,$01
+	.dw 2000, 750
+	.dw 1000, 400
 	.dw 0, 0
 	.dw 0, 0                
 
 ;armband buy/sell prices
 ;d9a538
 ArmbandBuySellPrices:
-	.db $60,$09,$B0,$04 ;passage armband
-	.db $10,$27,$88,$13 ;discount armband
-	.db $88,$13,$C4,$09 ;trap armband
-	.db $60,$09,$B0,$04 ;levelholder
-	.db $88,$13,$C4,$09 ;recovery armband
-	.db $60,$09,$B0,$04 ;rustless armband
-	.db $10,$27,$88,$13 ;critical armband
-	.db $10,$27,$88,$13 ;armband of regret
-	.db $60,$09,$B0,$04 ;blessing armband
-	.db $B0,$04,$58,$02 ;pitcher's armband
-	.db $10,$27,$88,$13 ;happy armband
-	.db $60,$09,$B0,$04 ;armband of loss
-	.db $10,$0E,$08,$07 ;armband of sight
-	.db $60,$09,$B0,$04 ;armband of calm
-	.db $30,$75,$98,$3A ;identity armband             
+	.dw 2400, 1200 ;passage armband
+	.dw 10000, 5000 ;discount armband
+	.dw 5000, 2500 ;trap armband
+	.dw 2400, 1200 ;levelholder
+	.dw 5000, 2500 ;recovery armband
+	.dw 2400, 1200 ;rustless armband
+	.dw 10000, 5000 ;critical armband
+	.dw 10000, 5000 ;armband of regret
+	.dw 2400, 1200 ;blessing armband
+	.dw 1200, 600 ;pitcher's armband
+	.dw 10000, 5000 ;happy armband
+	.dw 2400, 1200 ;armband of loss
+	.dw 3600, 1800 ;armband of sight
+	.dw 2400, 1200 ;armband of calm
+	.dw 30000, 15000 ;identity armband             
 
 ;staff buy/sell price
 ;d9a574
 StaffBuySellPrices:
-	.db $E8,$03,$F4,$01 ;staff of sloth
-	.db $F4,$01,$FA,$00 ;knockback staff
-	.db $F4,$01,$FA,$00 ;staff of happiness
-	.db $F4,$01,$FA,$00 ;staff of misfortune
-	.db $E8,$03,$F4,$01 ;doppelganger staff
-	.db $BC,$02,$5E,$01 ;switching staff
-	.db $D0,$07,$F4,$01 ;bufu's staff
-	.db $2C,$01,$96,$00 ;skull staff
-	.db $E8,$03,$F4,$01 ;paralysis staff
-	.db $F4,$01,$FA,$00 ;staff of postpone
-	.db $E8,$03,$F4,$01 ;pain sharing staff
+	.dw 1000, 500 ;staff of sloth
+	.dw 500, 250 ;knockback staff
+	.dw 500, 250 ;staff of happiness
+	.dw 500, 250 ;staff of misfortune
+	.dw 1000, 500 ;doppelganger staff
+	.dw 700, 350 ;switching staff
+	.dw 2000, 500 ;bufu's staff
+	.dw 300, 150 ;skull staff
+	.dw 1000, 500 ;paralysis staff
+	.dw 500, 250 ;staff of postpone
+	.dw 1000, 500 ;pain sharing staff
 
 ;staff uses buy/sell price bonus (per use on staff)
 ;d9a5a0
 StaffUsesPriceBonus:
-	.db $64,$00,$32,$00 ;staff of sloth
-	.db $32,$00,$19,$00 ;knockback staff
-	.db $32,$00,$19,$00 ;staff of happiness
-	.db $32,$00,$19,$00 ;staff of misfortune
-	.db $64,$00,$32,$00 ;doppelganger staff
-	.db $46,$00,$23,$00 ;switching staff
-	.db $C8,$00,$32,$00 ;bufu's staff
-	.db $1E,$00,$0F,$00 ;skull staff
-	.db $64,$00,$32,$00 ;paralysis staff
-	.db $32,$00,$19,$00 ;staff of postpone
-	.db $64,$00,$32,$00 ;pain split staff
+	.dw 100, 50 ;staff of sloth
+	.dw 50, 25 ;knockback staff
+	.dw 50, 25 ;staff of happiness
+	.dw 50, 25 ;staff of misfortune
+	.dw 100, 50 ;doppelganger staff
+	.dw 70, 35 ;switching staff
+	.dw 200, 50 ;bufu's staff
+	.dw 30, 15 ;skull staff
+	.dw 100, 50 ;paralysis staff
+	.dw 50, 25 ;staff of postpone
+	.dw 100, 50 ;pain split staff
 
 ;monster meat buy/sell prices
 MonsterMeatBuySellPrices:
-	.db $F4,$01,$FA,$00 ;mamel
-	.db $E8,$03,$F4,$01 ;pit mamel
-	.db $D0,$07,$E8,$03 ;cave mamel
-	.db $B8,$0B,$DC,$05 ;death reaper
-	.db $A0,$0F,$D0,$07 ;hell reaper
-	.db $88,$13,$C4,$09 ;death angel
-	.db $E8,$03,$F4,$01 ;gather
-	.db $DC,$05,$EE,$02 ;killer gather
-	.db $D0,$07,$E8,$03 ;hell gather
-	.db $08,$07,$20,$03 ;bowboy
-	.db $B8,$0B,$DC,$05 ;crossbowboy
+	.dw 500, 250 ;mamel
+	.dw 1000, 500 ;pit mamel
+	.dw 2000, 1000 ;cave mamel
+	.dw 3000, 1500 ;death reaper
+	.dw 4000, 2000 ;hell reaper
+	.dw 5000, 2500 ;death angel
+	.dw 1000, 500 ;gather
+	.dw 1500, 750 ;killer gather
+	.dw 2000, 1000 ;hell gather
+	.dw 1800, 800 ;bowboy
+	.dw 3000, 1500 ;crossbowboy
 	.dw 0, 0 ;bowboy x (unused)
-	.db $E8,$03,$F4,$01 ;pickpocket
-	.db $D0,$07,$E8,$03 ;thief
-	.db $B8,$0B,$DC,$05 ;burglar
-	.db $DC,$05,$EE,$02 ;piggy
-	.db $D0,$07,$E8,$03 ;piggo
-	.db $C4,$09,$E2,$04 ;piggora
-	.db $DC,$05,$EE,$02 ;fog hermit
-	.db $B8,$0B,$DC,$05 ;haze hermit
-	.db $A0,$0F,$D0,$07 ;mist hermit
-	.db $D0,$07,$E8,$03 ;inferno
-	.db $B8,$0B,$DC,$05 ;inferno2
-	.db $88,$13,$D0,$07 ;inferno3
-	.db $20,$03,$90,$01 ;green slime
-	.db $84,$03,$C2,$01 ;purple slime
-	.db $E8,$03,$F4,$01 ;grey slime
-	.db $D0,$07,$E8,$03 ;thiefwalrus
-	.db $B8,$0B,$DC,$05 ;greenwalrus
-	.db $A0,$0F,$D0,$07 ;ironwalrus
+	.dw 1000, 500 ;pickpocket
+	.dw 2000, 1000 ;thief
+	.dw 3000, 1500 ;burglar
+	.dw 1500, 750 ;piggy
+	.dw 2000, 1000 ;piggo
+	.dw 2500, 1250 ;piggora
+	.dw 1500, 750 ;fog hermit
+	.dw 3000, 1500 ;haze hermit
+	.dw 4000, 2000 ;mist hermit
+	.dw 2000, 1000 ;inferno
+	.dw 3000, 1500 ;inferno2
+	.dw 5000, 2000 ;inferno3
+	.dw 800, 400 ;green slime
+	.dw 900, 450 ;purple slime
+	.dw 1000, 500 ;grey slime
+	.dw 2000, 1000 ;thiefwalrus
+	.dw 3000, 1500 ;greenwalrus
+	.dw 4000, 2000 ;ironwalrus
 	.dw 0, 0 ;parthenos (unused)
 	.dw 0, 0 ;parthenos x (unused)
 	.dw 0, 0 ;parthenos x (unused)
-	.db $E8,$03,$F4,$01 ;kigny
-	.db $DC,$05,$EE,$02 ;kigny2
-	.db $88,$13,$DC,$05 ;kigny3
-	.db $B0,$04,$F4,$01 ;twisty hani
+	.dw 1000, 500 ;kigny
+	.dw 1500, 750 ;kigny2
+	.dw 5000, 1500 ;kigny3
+	.dw 1200, 500 ;twisty hani
 	.dw 0, 0 ;twisty hani x (unused)
 	.dw 0, 0 ;twisty hani x (unused)
-	.db $70,$17,$B8,$0B ;air devil
+	.dw 6000, 3000 ;air devil
 	.dw 0, 0 ;air devil x (unused)
 	.dw 0, 0 ;air devil x (unused)
-	.db $64,$00,$32,$00 ;n'duba
-	.db $C8,$00,$64,$00 ;n'dulu
-	.db $2C,$01,$96,$00 ;n'bama
-	.db $E8,$03,$F4,$01 ;ironhead
-	.db $DC,$05,$EE,$02 ;chainhead
-	.db $20,$4E,$E8,$03 ;gigahead
-	.db $08,$07,$20,$03 ;ghost radish
-	.db $B8,$0B,$DC,$05 ;daze radish
-	.db $4C,$1D,$B8,$0B ;sleep radish
-	.db $E8,$03,$F4,$01 ;leech worm
-	.db $DC,$05,$EE,$02 ;leech bug
-	.db $D0,$07,$E8,$03 ;leech fly
-	.db $C4,$09,$E2,$04 ;cell armor
-	.db $AC,$0D,$D6,$06 ;metal armor
-	.db $94,$11,$CA,$08 ;steel armor
-	.db $10,$27,$88,$13 ;dragon
-	.db $30,$75,$10,$27 ;sky dragon
-	.db $60,$EA,$98,$3A ;ark dragon
-	.db $D0,$07,$E8,$03 ;taur
-	.db $B8,$0B,$DC,$05 ;minotaur
-	.db $A0,$0F,$D0,$07 ;megataur
-	.db $DC,$05,$EE,$02 ;fluffy bunny
+	.dw 100, 50 ;n'duba
+	.dw 200, 100 ;n'dulu
+	.dw 300, 150 ;n'bama
+	.dw 1000, 500 ;ironhead
+	.dw 1500, 750 ;chainhead
+	.dw 20000, 1000 ;gigahead
+	.dw 1800, 800 ;ghost radish
+	.dw 3000, 1500 ;daze radish
+	.dw 7500, 3000 ;sleep radish
+	.dw 1000, 500 ;leech worm
+	.dw 1500, 750 ;leech bug
+	.dw 2000, 1000 ;leech fly
+	.dw 2500, 1250 ;cell armor
+	.dw 3500, 1750 ;metal armor
+	.dw 4500, 2250 ;steel armor
+	.dw 10000, 5000 ;dragon
+	.dw 30000, 10000 ;sky dragon
+	.dw 60000, 15000 ;ark dragon
+	.dw 2000, 1000 ;taur
+	.dw 3000, 1500 ;minotaur
+	.dw 4000, 2000 ;megataur
+	.dw 1500, 750 ;fluffy bunny
 	.dw 0, 0 ;carbuncle x (unused)
 	.dw 0, 0 ;carbuncle x (unused)
-	.db $88,$13,$C4,$09 ;evil soldier
-	.db $70,$17,$B8,$0B ;evil veteral
-	.db $58,$1B,$AC,$0D ;evil general
-	.db $B8,$0B,$DC,$05 ;dead soldier
+	.dw 5000, 2500 ;evil soldier
+	.dw 6000, 3000 ;evil veteral
+	.dw 7000, 3500 ;evil general
+	.dw 3000, 1500 ;dead soldier
 	.dw 0, 0 ;dead soldier x (unused)
 	.dw 0, 0 ;dead soldier x (unused)
 	.dw 0, 0 ;master hen x (unused)
-	.db $F4,$01,$FA,$00 ;master hen
-	.db $E2,$04,$58,$02 ;great hen
-	.db $DC,$05,$EE,$02 ;hen
+	.dw 500, 250 ;master hen
+	.dw 1250, 600 ;great hen
+	.dw 1500, 750 ;hen
 	.dw 0, 0 ;hen x (unused)
 	.dw 0, 0 ;hen x (unused)
-	.db $88,$13,$C4,$09 ;dark owl
+	.dw 5000, 2500 ;dark owl
 	.dw 0, 0 ;dark owl x (unused)
 	.dw 0, 0 ;dark owl x (unused)
-	.db $E8,$03,$90,$01 ;knifegator
-	.db $D0,$07,$E8,$03 ;sabregator
-	.db $88,$13,$E2,$04 ;bladegator
-	.db $F4,$01,$FA,$00 ;egg thing
-	.db $58,$02,$2C,$01 ;running egg
-	.db $C4,$09,$B0,$04 ;flying egg
-	.db $20,$4E,$E8,$03 ;half warrior
-	.db $30,$75,$DC,$05 ;half fighter
-	.db $40,$9C,$D0,$07 ;half master
-	.db $E8,$03,$F4,$01 ;schubell
-	.db $D0,$07,$E8,$03 ;menbell
-	.db $B8,$0B,$DC,$05 ;bellthoven
-	.db $F4,$01,$FA,$00 ;floor dragon
-	.db $58,$02,$2C,$01 ;dragon head
-	.db $BC,$02,$5E,$01 ;dirt dragon
-	.db $B8,$0B,$DC,$05 ;pacorepkin
-	.db $A0,$0F,$D0,$07 ;pacorepkina
-	.db $88,$13,$C4,$09 ;pacorepking
-	.db $D0,$07,$E8,$03 ;popster tank
-	.db $B8,$0B,$DC,$05 ;dadster tank
-	.db $10,$27,$94,$11 ;oldster tank
-	.db $F4,$01,$FA,$00 ;rice baby
-	.db $E8,$03,$F4,$01 ;rice changer
-	.db $DC,$05,$EE,$02 ;rice boss
-	.db $E8,$03,$F4,$01 ;curse girl
-	.db $DC,$05,$EE,$02 ;curse sis
-	.db $D0,$07,$E8,$03 ;curse mom
-	.db $BC,$02,$5E,$01 ;skull mage
-	.db $20,$03,$90,$01 ;skull wizard
-	.db $84,$03,$C2,$01 ;skull wraith
-	.db $E8,$03,$F4,$01 ;gaze
-	.db $D0,$07,$E8,$03 ;super gaze
-	.db $B8,$0B,$DC,$05 ;hyper gaze
-	.db $DC,$05,$EE,$02 ;polygon spin
-	.db $B8,$0B,$DC,$05 ;polygon jive
-	.db $40,$1F,$A0,$0F ;polygon song
+	.dw 1000, 400 ;knifegator
+	.dw 2000, 1000 ;sabregator
+	.dw 5000, 1250 ;bladegator
+	.dw 500, 250 ;egg thing
+	.dw 600, 300 ;running egg
+	.dw 2500, 1200 ;flying egg
+	.dw 20000, 1000 ;half warrior
+	.dw 30000, 1500 ;half fighter
+	.dw 40000, 2000 ;half master
+	.dw 1000, 500 ;schubell
+	.dw 2000, 1000 ;menbell
+	.dw 3000, 1500 ;bellthoven
+	.dw 500, 250 ;floor dragon
+	.dw 600, 300 ;dragon head
+	.dw 700, 350 ;dirt dragon
+	.dw 3000, 1500 ;pacorepkin
+	.dw 4000, 2000 ;pacorepkina
+	.dw 5000, 2500 ;pacorepking
+	.dw 2000, 1000 ;popster tank
+	.dw 3000, 1500 ;dadster tank
+	.dw 10000, 4500 ;oldster tank
+	.dw 500, 250 ;rice baby
+	.dw 1000, 500 ;rice changer
+	.dw 1500, 750 ;rice boss
+	.dw 1000, 500 ;curse girl
+	.dw 1500, 750 ;curse sis
+	.dw 2000, 1000 ;curse mom
+	.dw 700, 350 ;skull mage
+	.dw 800, 400 ;skull wizard
+	.dw 900, 450 ;skull wraith
+	.dw 1000, 500 ;gaze
+	.dw 2000, 1000 ;super gaze
+	.dw 3000, 1500 ;hyper gaze
+	.dw 1500, 750 ;polygon spin
+	.dw 3000, 1500 ;polygon jive
+	.dw 8000, 4000 ;polygon song
 	.dw 0, 0 ;tainted insect
 	.dw 0, 0 ;tainted insect 2
 	.dw 0, 0 ;tainted insect 3
-	.db $F4,$01,$FA,$00 ;soldier ant
-	.db $58,$02,$2C,$01 ;corporal ant
-	.db $BC,$02,$5E,$01 ;captain ant
-	.db $B8,$0B,$DC,$05 ;mecharoid
+	.dw 500, 250 ;soldier ant
+	.dw 600, 300 ;corporal ant
+	.dw 700, 350 ;captain ant
+	.dw 3000, 1500 ;mecharoid
 	.dw 0, 0 ;mecharoid x (unused)
 	.dw 0, 0 ;mecharoid x (unused)
-	.db $E8,$03,$F4,$01 ;dremlas
-	.db $D0,$07,$E8,$03 ;madremlas
-	.db $B8,$0B,$DC,$05 ;hardremlas
-	.db $20,$03,$90,$01 ;snaky
-	.db $84,$03,$C2,$01 ;vipy
-	.db $E8,$03,$F4,$01 ;pythy
-	.db $E8,$03,$F4,$01 ;field bandit
-	.db $4C,$04,$26,$02 ;jar bandit
-	.db $B0,$04,$58,$02 ;item bandit
-	.db $AC,$0D,$D6,$06 ;baby tank
-	.db $A0,$0F,$D0,$07 ;mini tank
+	.dw 1000, 500 ;dremlas
+	.dw 2000, 1000 ;madremlas
+	.dw 3000, 1500 ;hardremlas
+	.dw 800, 400 ;snaky
+	.dw 900, 450 ;vipy
+	.dw 1000, 500 ;pythy
+	.dw 1000, 500 ;field bandit
+	.dw 1100, 550 ;jar bandit
+	.dw 1200, 600 ;item bandit
+	.dw 3500, 1750 ;baby tank
+	.dw 4000, 2000 ;mini tank
 	.dw 0, 0 ;baby tank x (unused)
 	.dw 0, 0 ;weapon meat (unused)
 	.dw 0, 0 ;weapon meat
@@ -424,60 +424,60 @@ MonsterMeatBuySellPrices:
 	.dw 0, 0 ;rice meat
 	.dw 0, 0 ;rice meat
 	.dw 0, 0 ;rice meat
-	.db $64,$00,$32,$00 ;mini robber
-	.db $C8,$00,$64,$00 ;robber
-	.db $90,$01,$96,$00 ;robber chief
-	.db $96,$00,$46,$00 ;baby tengu
-	.db $2C,$01,$96,$00 ;young tengu
-	.db $58,$02,$C8,$00 ;tengu chief
+	.dw 100, 50 ;mini robber
+	.dw 200, 100 ;robber
+	.dw 400, 150 ;robber chief
+	.dw 150, 70 ;baby tengu
+	.dw 300, 150 ;young tengu
+	.dw 600, 200 ;tengu chief
 	.dw 0, 0
 	.dw 0, 0
 	.dw 0, 0
 	.dw 0, 0
 	.dw 0, 0
 	.dw 0, 0
-	.db $00,$00        
-
+	.dw 0
+  
 ;jar buy/sell prices
 ;d9a892
 JarBuySellPrices:
-	.db $40,$06,$58,$02 ;jar of holding
-	.db $E8,$03,$90,$01 ;jar of hiding
-	.db $B8,$0B,$DC,$05 ;division jar
-	.db $10,$27,$88,$13 ;strengthening jar
-	.db $E8,$03,$F4,$01 ;jar of identity
-	.db $DC,$05,$BC,$02 ;chiropractic jar
-	.db $C4,$09,$B0,$04 ;storehouse jar
-	.db $E8,$03,$C8,$00 ;weakening jar
+	.dw 1600, 600 ;jar of holding
+	.dw 1000, 400 ;jar of hiding
+	.dw 3000, 1500 ;division jar
+	.dw 10000, 5000 ;strengthening jar
+	.dw 1000, 500 ;jar of identity
+	.dw 1500, 700 ;chiropractic jar
+	.dw 2500, 1200 ;storehouse jar
+	.dw 1000, 200 ;weakening jar
 	.dw 0, 0 ;dummy entry
-	.db $C4,$09,$90,$01 ;bottomless jar
-	.db $D0,$07,$2C,$01 ;monster jar 
-	.db $E8,$03,$F4,$01 ;jar of change
-	.db $AC,$0D,$DC,$05 ;melding jar
-	.db $40,$06,$58,$02 ;walrus jar
-	.db $98,$3A,$DC,$05 ;gaibara's jar
-	.db $4C,$1D,$DC,$05 ;pointless jar
-	.db $10,$27,$DC,$05 ;unbreakable jar
-	.db $4C,$1D,$DC,$05 ;venting jar
+	.dw 2500, 400 ;bottomless jar
+	.dw 2000, 300 ;monster jar 
+	.dw 1000, 500 ;jar of change
+	.dw 3500, 1500 ;melding jar
+	.dw 1600, 600 ;walrus jar
+	.dw 15000, 1500 ;gaibara's jar
+	.dw 7500, 1500 ;pointless jar
+	.dw 10000, 1500 ;unbreakable jar
+	.dw 7500, 1500 ;venting jar
 
 ;jar size upgrade price bonus (per size upgrade)
 ;d9a8da
 JarSizeUpgradePriceBonus:
 	.dw 0, 0 ;jar of holding
 	.dw 0, 0 ;jar of hiding
-	.db $2C,$01,$96,$00 ;division jar
-	.db $E8,$03,$F4,$01 ;strengthening jar
-	.db $64,$00,$32,$00 ;jar of identity
-	.db $96,$00,$46,$00 ;chiropractic jar
-	.db $FA,$00,$78,$00 ;storehouse jar
-	.db $64,$00,$14,$00 ;weakening jar
+	.dw 300, 150 ;division jar
+	.dw 1000, 500 ;strengthening jar
+	.dw 100, 50 ;jar of identity
+	.dw 150, 70 ;chiropractic jar
+	.dw 250, 120 ;storehouse jar
+	.dw 100, 20 ;weakening jar
 	.dw 0, 0 ;dummy entry
 	.dw 0, 0 ;bottomless jar
-	.db $C8,$00,$1E,$00 ;monster jar 
-	.db $64,$00,$32,$00 ;jar of change
-	.db $5E,$01,$96,$00 ;melding jar
-	.db $A0,$00,$3C,$00 ;walrus jar
-	.db $DC,$05,$96,$00 ;gaibara's jar
-	.db $EE,$02,$96,$00 ;pointless jar
-	.db $E8,$03,$96,$00 ;unbreakable jar
-	.db $EE,$02,$96,$00 ;venting jar
+	.dw 200, 30 ;monster jar 
+	.dw 100, 50 ;jar of change
+	.dw 350, 150 ;melding jar
+	.dw 160, 60 ;walrus jar
+	.dw 1500, 150 ;gaibara's jar
+	.dw 750, 150 ;pointless jar
+	.dw 1000, 150 ;unbreakable jar
+	.dw 750, 150 ;venting jar

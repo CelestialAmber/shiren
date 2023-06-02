@@ -1,75 +1,94 @@
 ;fe6038
 GoldenCityCutsceneText1:
-text "　　　　コッパ「あそこに見えるの、\l　　　　　　　　"
+space 4
+text "コッパ「あそこに見えるの、\l"
+space 8
 textfunction $0 $5
 text "もしかして、黄金郷じゃ・・・"
 endtext
 
 ;fe6065
 GoldenCityCutsceneText2:
-text "　\l　　　　　　　　い、行ってみようぜ！」"
+text "　\l"
+space 8
+text "い、行ってみようぜ！」"
 endtext
 
 ;fe607b
 OpeningCutsceneText1:
-text "　　　　　　"
+space 6
 textfunction $0 $4
-text "そして、その黄金郷こそが、\l　　　　　　テーブルマウンテンの頂上、"
+text "そして、その黄金郷こそが、\l"
+space 6
+text "テーブルマウンテンの頂上、"
 endtext
 
 ;fe60a8
 OpeningCutsceneText2:
-text "　　　　「太陽の大地」にあるという風を聞き、"
+space 4
+text "「太陽の大地」にあるという風を聞き、"
 endtext
 
 ;fe60c2
 OpeningCutsceneText3:
-text "　　　　　"
+space 5
 textfunction $0 $4
-text "いままでも多くの風来人達が、\l　　　　　　　　　　　挑戦してきた"
+text "いままでも多くの風来人達が、\l"
+space 11
+text "挑戦してきた"
 endtext
 
 ;fe60ef
 OpeningCutsceneText4:
-text "　　　　　　　"
+space 7
 textfunction $0 $5
 text "しかし、到達できた者は、"
 endtext
 
 ;fe6109
 OpeningCutsceneText5:
-text "　　　　　　　　　　まだ誰もいない"
+space 10
+text "まだ誰もいない"
 endtext
 
 ;fe611c
 IntroCutsceneText1:
-text "　　　　　　　　　　伝説の神鳥\l　　　　　　　　　黄金のコンドル"
+space 10
+text "伝説の神鳥\l"
+space 9
+text "黄金のコンドル"
 endtext
 
 ;fe6141
 IntroCutsceneText2:
-text "　　　　　　　　その黄金のコンドルが\l　　　　　　　"
+space 8
+text "その黄金のコンドルが\l"
+space 7
 textfunction $0 $3
 text "棲むところ・・・そこには、"
 endtext
 
 ;fe616d
 IntroCutsceneText3:
-text "　　　　　　　　　　幻の黄金郷が\l　　　　　　"
+space 10
+text "幻の黄金郷が\l"
+space 6
 textfunction $0 $7
 text "存在すると伝えられている"
 endtext
 
 ;fe6199
 IntroCutsceneText4:
-text "　　　　　　"
+space 6
 textfunction $0 $5
-text "この伝説を求めはじめた頃、\l　　　　　　一人の若き風来人に出会った。"
+text "この伝説を求めはじめた頃、\l"
+space 6
+text "一人の若き風来人に出会った。"
 endtext
 
 ;fe61cc
 IntroCutsceneText5:
-text "　　　　　　　　　　"
+space 10
 textfunction $0 $4
 text "名は、"
 strvar TextStrVar_PlayerName
@@ -77,326 +96,405 @@ endtext
 
 ;fe61e0
 IntroCutsceneText6:
-text "　　　　　　　友の遺志を受け継いでの\l　　　　　　　　　"
+space 7
+text "友の遺志を受け継いでの\l"
+space 9
 textfunction $0 $5
 text "旅ガラスだという"
 endtext
 
 ;fe620d
 IntroCutsceneText7:
-text "　　　　　　"
+space 6
 textfunction $0 $5
-text "コンビを組んで、はや半年。\l　　　　"
+text "コンビを組んで、はや半年。\l"
+space 4
 textfunction $0 $5
 text "しょっちゅうケンカばかりだが・・・"
 endtext
 
 ;fe6240
 IntroCutsceneText8:
-text "　　　　　　　　　　よっこいせっと！"
+space 10
+text "よっこいせっと！"
 endtext
 
 ;fe6253
 IntroCutsceneText9:
-text "　　　　　　おい、"
+space 6
+text "おい、"
 strvar TextStrVar_PlayerName
 text "！　見てみろよ！　"
 endtext
 
 ;fe6268
 IntroCutsceneText10:
-text "　　　　　　　　　こばみ谷だぜ"
+space 9
+text "こばみ谷だぜ"
 strvar TextStrVar_PlayerName
-text "。\l　　　　　　　　やっと、ここまで来たな。　"
+text "。\l"
+space 8
+text "やっと、ここまで来たな。　"
 endtext
 
 ;fe6292
 IntroCutsceneText11:
-text "　　　　　　　　　真ん中に、でっかい\l　　　　　　"
+space 9
+text "真ん中に、でっかい\l"
+space 6
 textfunction $0 $5
 text "塔みたいな山が見えるだろ？　"
 endtext
 
 ;fe62c0
 IntroCutsceneText12:
-text "　　　　　　"
+space 6
 textfunction $0 $5
 text "あの頂上が、太陽の大地だ。　"
 endtext
 
 ;fe62db
 IntroCutsceneText13:
-text "　　　　　　　　　　さあ、行こうぜ！　"
+space 10
+text "さあ、行こうぜ！　"
 endtext
 
 ;fe62ef
 IntroCutsceneText14:
-text "　　　　　　　　　　　　おっと、\l　　　　　　　自己紹介が遅れちまった。"
+space 12
+text "おっと、\l"
+space 7
+text "自己紹介が遅れちまった。"
 endtext
 
 ;fe6319
 IntroCutsceneText15:
-text "　　　　　　　　　　"
+space 10
 textfunction $0 $4
-text "オイラはコッパ\l　　　　　"
+text "オイラはコッパ\l"
+space 5
 textfunction $0 $4
 text "今じゃ数少ない「語りイタチ」だ。"
 endtext
 
 ;fe634a
 IntroCutsceneText16:
-text "　　　　　　　　"
+space 8
 strvar TextStrVar_PlayerName
-text "をこばみ谷に\l　　　　　　　さそったのもこのオイラ。"
+text "をこばみ谷に\l"
+space 7
+text "さそったのもこのオイラ。"
 endtext
 
 ;fe6370
 IntroCutsceneText17:
-text "　　　　　　　　　黄金郷のウワサを\l　　　　　　　　　　聞いたからさ。"
+space 9
+text "黄金郷のウワサを\l"
+space 10
+text "聞いたからさ。"
 endtext
 
 ;fe6396
 IntroCutsceneText18:
-text "　　　　　　　しかし、ここまで来るのは\l　　　　　　　　　　大変だったぜ。"
+space 7
+text "しかし、ここまで来るのは\l"
+space 10
+text "大変だったぜ。"
 endtext
 
 ;fe63bd
 IntroCutsceneText19:
-text "　　　　　　　　ま、オイラは袋の中で\l　　　　　　　寝てるだけだったが・・・"
+space 8
+text "ま、オイラは袋の中で\l"
+space 7
+text "寝てるだけだったが・・・"
 endtext
 
 ;fe63e6
 IntroCutsceneText20:
-text "　　　　　　　　　　　　んっ？"
+space 12
+text "んっ？"
 endtext
 
 ;fe63f6
 IntroCutsceneText21:
-text "　　　　　　　　　　　　"
+space 12
 endtext
 
 ;fe6403
 IntroCutsceneText22:
-text "　　　　　　あっ、オーイ待ってくれよーっ！"
+space 6
+text "あっ、オーイ待ってくれよーっ！"
 endtext
 
 ;fe641a
 IntroCutsceneText23:
-text "　　　　　"
+space 5
 endtext
 
 ;fe6420
 IntroCutsceneText24:
-text "　　　　　　　　　お互い、よく寝たな。　"
+space 9
+text "お互い、よく寝たな。　"
 endtext
 
 ;fe6437
 IntroCutsceneText25:
-text "　　　　　　　もう少しで渓谷の宿場だ。　"
+space 7
+text "もう少しで渓谷の宿場だ。　"
 endtext
 
 ;fe6450
 IntroCutsceneText26:
-text "　　　　　　がんばって行こうぜ！　相棒！　"
+space 6
+text "がんばって行こうぜ！　相棒！　"
 endtext
 
 ;fe6468
 Text1623:
-text "　コッパ「こりゃ・・・すげえ\l　行ってみようぜ！」"
+text "　コッパ「こりゃ・・・すげえ\l"
+text "　行ってみようぜ！」"
 endtext
 
 ;fe6482
 Text1624:
-text "　コッパ「乗れ・・・って、\l　言っているみたいだぜ」"
+text "　コッパ「乗れ・・・って、\l"
+text "　言っているみたいだぜ」"
 endtext
 
 ;fe649f
 Text1625:
-text "　　　"
+space 3
 endtext
 
 ;fe64a3
 EndingCutsceneText1:
-text "　　　　コッパ「"
+space 4
+text "コッパ「"
 strvar TextStrVar_PlayerName
-text "！・・・ほら、あそこ！\l　　　　　　　　　太陽の大地だ！！」"
+text "！・・・ほら、あそこ！\l"
+space 9
+text "太陽の大地だ！！」"
 endtext
 
 ;fe64ce
 EndingCutsceneText2:
-text "　　"
+space 2
 endtext
 
 ;fe64d1
 EndingCutsceneText3:
-text "　"
+space 1
 textfunction $0 $4
-text "異国の風来人「あ、あれはっ！\l　　　　　　　　　　黄金のコンドルじゃないか！！\l"
+text "異国の風来人「あ、あれはっ！\l"
+space 10
+text "黄金のコンドルじゃないか！！\l"
 endtext
 
 ;fe6500
 EndingCutsceneText4:
-text "　　　　　　　"
+space 7
 textfunction $0 $5
 text "伝説は、本当だったんだ！"
 endtext
 
 ;fe651b
 EndingCutsceneText5:
-text "　　　　　　　　・・・・・・・・・・・・"
+space 8
+text "・・・・・・・・・・・・"
 endtext
 
 ;fe6530
 EndingCutsceneText6:
-text "　　　　　　"
+space 6
 textfunction $0 $4
 text "はっ！　こうしちゃいられない。"
 endtext
 
 ;fe6549
 EndingCutsceneText7:
-text "　　　　　　はやく、願い事、願い事・・・\l　　　　　　"
+space 6
+text "はやく、願い事、願い事・・・\l"
+space 6
 textfunction $0 $4
 text "えーと、えーと、ええーーっと"
 endtext
 
 ;fe6576
 EndingCutsceneText8:
-text "　　　　　　　　　　　オ、オネショが\l　　　　　　　　　なおりますように・・・」"
+space 11
+text "オ、オネショが\l"
+space 9
+text "なおりますように・・・」"
 endtext
 
 ;fe659f
 EndingCutsceneText9:
-text "　　　　　サルヤマ「先生！　あれは・・・」"
+space 5
+text "サルヤマ「先生！　あれは・・・」"
 endtext
 
 ;fe65b6
 EndingCutsceneText10:
-text "　　　ガイバラ「むう・・・\l　　　　　　　　　"
+text "　　　ガイバラ「むう・・・\l"
+space 9
 textfunction $0 $2
 text "あれが伝説の・・・美しい」"
 endtext
 
 ;fe65e1
 EndingCutsceneText11:
-text "　　　　サルヤマ「先生！\l　　　　　　　　　　"
+space 4
+text "サルヤマ「先生！\l"
+space 10
 textfunction $0 $5
 text "みんな願い事してますよ。"
 endtext
 
 ;fe6609
 EndingCutsceneText12:
-text "　　　　　　　　　"
+space 9
 textfunction $0 $5
 text "私たちも、早く！」"
 endtext
 
 ;fe6621
 EndingCutsceneText13:
-text "　　　　　ガイバラ「うむっ、願い事か！\l　　　　　　　　　　　　　よしっ！"
+space 5
+text "ガイバラ「うむっ、願い事か！\l"
+space 13
+text "よしっ！"
 endtext
 
 ;fe6647
 EndingCutsceneText14:
-text "　　　　　・・・願い事ねえ、願い事・・・\l　　　　"
+space 5
+text "・・・願い事ねえ、願い事・・・\l"
+space 4
 textfunction $0 $5
 text "・・・・・・・・・・・・・・・・・"
 endtext
 
 ;fe6675
 EndingCutsceneText15:
-text "　　　　　　　　ぬぬ・・ぬぬぬ・・・\l　　　　　　ぬぬぬぬぬぬぬぬ・・・・"
+space 8
+text "ぬぬ・・ぬぬぬ・・・\l"
+space 6
+text "ぬぬぬぬぬぬぬぬ・・・・"
 endtext
 
 ;fe669b
 EndingCutsceneText16:
-text "　　　　　　　うおおおおおーーーーーっ！\l　　　　なんにも思いつかーーーーーーんっ！！"
+space 7
+text "うおおおおおーーーーーっ！\l"
+space 4
+text "なんにも思いつかーーーーーーんっ！！"
 endtext
 
 ;fe66c8
 EndingCutsceneText17:
-text "　　　　　　　　　サルヤマーーーーッ、\l　　　　　　　"
+space 9
+text "サルヤマーーーーッ、\l"
+space 7
 textfunction $0 $5
 text "な、なんか、出せーーっ！」"
 endtext
 
 ;fe66f4
 EndingCutsceneText18:
-text "　　　　　　　　サルヤマ「はい！　先生！」"
+space 8
+text "サルヤマ「はい！　先生！」"
 endtext
 
 ;fe670b
 EndingCutsceneText19:
-text "　　　　ガイバラ「ち、ちがうーーーーっ！！」"
+space 4
+text "ガイバラ「ち、ちがうーーーーっ！！」"
 endtext
 
 ;fe6722
 EndingCutsceneText20:
-text "　　　　かじ屋の娘「黄金のコンドル・・・」"
+space 4
+text "かじ屋の娘「黄金のコンドル・・・」"
 endtext
 
 ;fe6739
 EndingCutsceneText21:
-text "　　　　　少女「わあーーっ、\l　　　　　　　　　おじいちゃん、みてみてー！」"
+space 5
+text "少女「わあーーっ、\l"
+space 9
+text "おじいちゃん、みてみてー！」"
 endtext
 
 ;fe6761
 EndingCutsceneText22:
-text "　　　　　　"
+space 6
 textfunction $0 $5
-text "老人「老いたわしの目じゃ、\l　　　　　　　　　　"
+text "老人「老いたわしの目じゃ、\l"
+space 10
 textfunction $0 $4
 text "よく見えんが・・・"
 endtext
 
 ;fe6791
 EndingCutsceneText23:
-text "　　　　　"
+space 5
 textfunction $0 $5
 text "そうか・・・言い伝えは・・・・"
 endtext
 
 ;fe67ab
 EndingCutsceneText24:
-text "　　　　　　　　　"
+space 9
 textfunction $0 $5
 text "さっ、願い事じゃ。"
 endtext
 
 ;fe67c1
 EndingCutsceneText25:
-text "　　　　　コンドルが行ってしまわぬうちに、\l　　　　　　　　　　早く祈るのじゃ」"
+space 5
+text "コンドルが行ってしまわぬうちに、\l"
+space 10
+text "早く祈るのじゃ」"
 endtext
 
 ;fe67ec
 EndingCutsceneText26:
-text "　　　　　　　　　少女「えーと・・・"
+space 9
+text "少女「えーと・・・"
 endtext
 
 ;fe6800
 EndingCutsceneText27:
-text "　　　　　　　おじいちゃんが、いつまでも\l　　　　　　元気でいられますように・・・」"
+space 7
+text "おじいちゃんが、いつまでも\l"
+space 6
+text "元気でいられますように・・・」"
 endtext
 
 ;fe682c
 EndingCutsceneText28:
-text "　　"
+space 2
 textfunction $0 $5
-text "老人「この子の花嫁姿が見られれば、\l　　　　　　わしは・・わしは・・・」"
+text "老人「この子の花嫁姿が見られれば、\l"
+space 6
+text "わしは・・わしは・・・」"
 endtext
 
 ;fe685a
 EndingCutsceneText29:
-text "　　かじ屋の娘「私の大切なすべての人達が、\l　　　　　　　　　"
+text "　　かじ屋の娘「私の大切なすべての人達が、\l"
+space 9
 textfunction $0 $5
 text "よく笑い、よく涙ぐみ、"
 endtext
 
 ;fe688e
 EndingCutsceneText30:
-text "　　　　　"
+space 5
 textfunction $0 $5
-text "・・・もしかしたら恋をして、\l　　"
+text "・・・もしかしたら恋をして、\l"
+space 2
 textfunction $0 $3
 text "生き生きと、生きてゆけますように・・・」"
 endtext
@@ -411,7 +509,7 @@ ReceivedItemText:
 textfunction $2
 cmdf6
 playsound $4F
-text "　"
+space 1
 strvar TextStrVar_PlayerName
 text "は、\l"
 strvar TextStrVar_ItemName
@@ -995,7 +1093,7 @@ text "女「・・・じゃあ、いい？\l・・・やさしく・・いくわ
 cleartext
 text "\l"
 textfunction $80
-text "　　"
+space 2
 playsound $A2
 text "　「ドーーーーーーーーーーーーン！！」\l"
 endtext
@@ -1022,7 +1120,7 @@ text "せめてもの　つぐないに、これを\l受け取って下さい」
 cleartext
 text "\l"
 textfunction $80
-text "　　"
+space 2
 playsound $A2
 text "　「ドーーーーーーーーーーーーン！！」\l"
 endtext
@@ -1078,7 +1176,7 @@ text "\l・・チュッ！」"
 cleartext
 text "\l"
 textfunction $80
-text "　　"
+space 2
 playsound $A2
 text "　「ドーーーーーーーーーーーーン！！」\l"
 endtext
@@ -1087,7 +1185,7 @@ endtext
 OryuDialogue3Text3:
 text "\l"
 textfunction $80
-text "　　"
+space 2
 playsound $A2
 text "　「ドーーーーーーーーーーーーン！！」\l"
 endtext
@@ -2212,7 +2310,7 @@ text "これを貸すから、\lちょっと協力してくれよ」"
 cleartext
 textfunction $80
 playsound $4F
-text "　"
+space 1
 strvar TextStrVar_PlayerName
 text "は、ブフーの杖［０］をもらった\l"
 endtext
@@ -2228,7 +2326,7 @@ text "料理人「おっ、\lうまそうなマムルの肉だな。\lありが�
 next
 textfunction $80
 playsound $4F
-text "　"
+space 1
 strvar TextStrVar_PlayerName
 text "は、マムルの肉を手渡した"
 cleartext
@@ -2262,7 +2360,7 @@ endtext
 Text1902:
 textfunction $80
 playsound $51
-text "　"
+space 1
 strvar TextStrVar_PlayerName
 text "は、\lマムルのしっぽ焼きを食べてみた。"
 next
@@ -2437,7 +2535,7 @@ endtext
 Text1925:
 textfunction $80
 playsound $51
-text "　"
+space 1
 strvar TextStrVar_PlayerName
 text "は、\l「ぴーたんめん」を食べてみた。\l"
 endtext
@@ -2446,7 +2544,7 @@ endtext
 Text1926:
 textfunction $80
 playsound $51
-text "　"
+space 1
 strvar TextStrVar_PlayerName
 text "は、\l「ゲイズ焼きそば」を食べてみた。\l"
 endtext
@@ -2455,7 +2553,7 @@ endtext
 Text1927:
 textfunction $80
 playsound $51
-text "　"
+space 1
 strvar TextStrVar_PlayerName
 text "は、\l「トドの背中焼き」を食べてみた。\l"
 endtext
@@ -2752,7 +2850,7 @@ endtext
 ;feae06
 Text1965:
 playsound $50
-text "　"
+space 1
 textfunction $80
 strvar TextStrVar_PlayerName
 text "は、\lナオキに"
@@ -2895,7 +2993,7 @@ text "さんがきたら、\lこれを渡すようにたのまれたんです」
 next
 textfunction $80
 playsound $C9
-text "　"
+space 1
 strvar TextStrVar_PlayerName
 text "は、ブフーの杖をもらった！\l"
 endtext
@@ -3063,7 +3161,7 @@ endtext
 ;feb426
 Text2010:
 playsound $4F
-text "　"
+space 1
 textfunction $80
 strvar TextStrVar_PlayerName
 text "は、\l"
@@ -3387,7 +3485,7 @@ endtext
 Text2049:
 textfunction $80
 playsound $4F
-text "　"
+space 1
 strvar TextStrVar_PlayerName
 text "は、\l"
 strvar TextStrVar_ItemName
@@ -3408,7 +3506,7 @@ endtext
 Text2052:
 textfunction $80
 playsound $4F
-text "　"
+space 1
 strvar TextStrVar_PlayerName
 text "は、\l困った時の巻物を手にいれた\l"
 endtext
@@ -3708,7 +3806,7 @@ text "女「キャッ！"
 textfunction $2
 text "・・・壺が！」"
 playsound $59
-text "　"
+space 1
 textfunction $7F $3C
 text "\l女「かたずけなきゃ・・・"
 textfunction $7F $14
@@ -4081,7 +4179,7 @@ endtext
 Text2130:
 textfunction $80
 playsound $4F
-text "　"
+space 1
 strvar TextStrVar_PlayerName
 text "は、\l"
 strvar TextStrVar_ItemName
@@ -4175,7 +4273,7 @@ text "車屋のガラ「ちょいと、とばすから\lしっかり　ささえ
 next
 text "いくぜ！」"
 playsound $C7
-text "　"
+space 1
 textfunction $7F $3C
 text "\l"
 endtext
@@ -4299,7 +4397,7 @@ text "車屋のゴロ「峠を\lイッキに越えますので、\lしっかり�
 next
 text "いきます！」"
 playsound $C7
-text "　"
+space 1
 textfunction $7F $3C
 text "\l"
 endtext
@@ -4450,7 +4548,7 @@ endtext
 Text2170:
 textfunction $80
 playsound $C9
-text "　"
+space 1
 strvar TextStrVar_PlayerName
 text "は、\lうっぷんばらしの壺をもらった！"
 cleartext
@@ -4569,7 +4667,7 @@ textfunction $80
 strvar TextStrVar_PlayerName
 text "は、\l正面戦士の肉を受け取った。"
 playsound $4F
-text "　"
+space 1
 cleartext
 textfunction $81
 text "ナオキ「おれは、\lもう少しここにいるよ。"
@@ -5769,7 +5867,7 @@ endtext
 Text2307:
 cmdf6
 playsound $8F
-text "　"
+space 1
 strvar TextStrVar_EntityName
 text "は、おはらいの呪文を唱えた。\l"
 endtext
@@ -5835,12 +5933,12 @@ cmdf6
 strvar TextStrVar_PlayerName
 text "は、座頭ケチに２００ギタン\l払った。"
 playsound $50
-text "　"
+space 1
 next
 endtext
 
 ;ff0b50
-Text2316:
+KechiMassageSuccessText:
 text "座頭ケチは、"
 strvar TextStrVar_PlayerName
 text "の背中のツボを\l押した！"
@@ -5849,7 +5947,7 @@ text "　\l"
 endtext
 
 ;ff0b6d
-Text2317:
+KechiMassageFailureText:
 text "座頭ケチは、まちがったツボを押して\lしまった！"
 cleartext
 text "ＨＰが、１０下がった。\lちからが、４下がった。\l満腹度も、なぜか３０％減った。\l"

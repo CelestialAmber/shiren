@@ -1869,7 +1869,7 @@ func_818EC2:
 func_818F0F:
 	php
 	rep #$30
-	lda.l DATA8_DD4002
+	lda.l DATA8_DD4000+2
 	sec
 	sbc.l DATA8_DD4000
 	ldy.w #$FFFF

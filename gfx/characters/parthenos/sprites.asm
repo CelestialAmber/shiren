@@ -34,12 +34,7 @@ Data_c8fd41:
 
 ;c8fec8
 Data_c8fec8:
-.incbin "gfx/characters/parthenos/c8fec8.4bpp.lz" read 0x138
-
-.bank $9
-.org $0000
-
-.incbin "gfx/characters/parthenos/c8fec8.4bpp.lz" skip 0x138
+filedata "gfx/characters/parthenos/c8fec8.4bpp.lz" 0x8 0xFEC8
 
 ;c90043
 Data_c90043:

@@ -22,12 +22,7 @@ Data_ccfd0c:
 
 ;ccfea3
 Data_ccfea3:
-.incbin "gfx/characters/knifegator/ccfea3.right4.4bpp.lz" read 0x15d
-
-.bank $d
-.org $0000
-
-.incbin "gfx/characters/knifegator/ccfea3.right4.4bpp.lz" skip 0x15d
+filedata "gfx/characters/knifegator/ccfea3.right4.4bpp.lz" 0xC 0xFEA3
 
 ;cd002e
 Data_cd002e:

@@ -52,12 +52,7 @@ Data_d2fed5:
 
 ;d2ffca
 Data_d2ffca:
-.incbin "gfx/characters/fluffybunny/d2ffca.right2.4bpp.lz" read 0x36
-
-.bank $13
-.org $0000
-
-.incbin "gfx/characters/fluffybunny/d2ffca.right2.4bpp.lz" skip 0x36
+filedata "gfx/characters/fluffybunny/d2ffca.right2.4bpp.lz" 0x12 0xFFCA
 
 ;d300ed
 Data_d300ed:

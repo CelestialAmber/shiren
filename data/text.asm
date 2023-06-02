@@ -2322,8 +2322,8 @@ TextPointerTable:
 	.dw Text2313
 	.dw Text2314
 	.dw PlayerPayedKechi200GitanText
-	.dw Text2316
-	.dw Text2317
+	.dw KechiMassageSuccessText
+	.dw KechiMassageFailureText
 	.dw Text2318
 	.dw Text2319
 	.dw Text2320

@@ -8,3 +8,4 @@
 .include "constants/items.asm"
 .include "constants/events.asm"
 .include "constants/locations.asm"
+.include "constants/objects.asm"

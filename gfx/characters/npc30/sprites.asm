@@ -32,12 +32,7 @@ Data_d6fe53:
 
 ;d6ffaf
 Data_d6ffaf:
-.incbin "gfx/characters/npc30/d6ffaf.right2.4bpp.lz" read 0x51
-
-.bank $17
-.org $0000
-
-.incbin "gfx/characters/npc30/d6ffaf.right2.4bpp.lz" skip 0x51
+filedata "gfx/characters/npc30/d6ffaf.right2.4bpp.lz" 0x16 0xFFAF
 
 ;d700f7
 Data_d700f7:

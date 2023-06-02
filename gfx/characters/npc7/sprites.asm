@@ -36,12 +36,7 @@ Data_d3feb2:
 
 ;d3fff0
 Data_d3fff0:
-.incbin "gfx/characters/npc7/d3fff0.right1.4bpp.lz" read 0x10
-
-.bank $14
-.org $0000
-
-.incbin "gfx/characters/npc7/d3fff0.right1.4bpp.lz" skip 0x10
+filedata "gfx/characters/npc7/d3fff0.right1.4bpp.lz" 0x13 0xFFF0
 
 ;d40138
 Data_d40138:

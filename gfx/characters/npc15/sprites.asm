@@ -136,12 +136,7 @@ Data_d4fde0:
 
 ;d4ff2b
 Data_d4ff2b:
-.incbin "gfx/characters/npc15/d4ff2b.right4.4bpp.lz" read 0xd5
-
-.bank $15
-.org $0000
-
-.incbin "gfx/characters/npc15/d4ff2b.right4.4bpp.lz" skip 0xd5
+filedata "gfx/characters/npc15/d4ff2b.right4.4bpp.lz" 0x14 0xFF2B
 
 ;d50075
 Data_d50075:

@@ -9101,9 +9101,9 @@ func_80D5AF:
 	clc
 	adc.b wTemp00
 	tax
-	lda.l DATA8_E00000,x
+	lda.l TilesetDataTable,x
 	sta.b w0031
-	lda.l DATA8_E00000+1,x
+	lda.l TilesetDataTable+1,x
 	sta.b w0032
 	stz.b w003f
 	jmp.w func_80D5F1
@@ -10845,7 +10845,7 @@ func_80E3FA:
 	jsl.l func_8087FF
 	plx
 	inc.b wTemp02
-	lda.l DATA8_FA899F,x
+	lda.l DATA8_FA8999 + 6,x
 	sta.b wTemp00
 	phx
 	jsl.l func_8087FF
@@ -10863,7 +10863,7 @@ func_80E3FA:
 	jsl.l func_8087FF
 	plx
 	inc.b wTemp02
-	lda.l DATA8_FA899D,x
+	lda.l DATA8_FA8999 + 4,x
 	sta.l $7F8E6A
 	sta.b wTemp00
 	phx
@@ -10871,7 +10871,7 @@ func_80E3FA:
 	plx
 	lda.w #$0007
 	sta.b wTemp02
-	lda.l DATA8_FA899B,x
+	lda.l DATA8_FA8999 + 2,x
 	sta.b wTemp00
 	jsl.l func_8087FF
 	jsl.l func_8085B1

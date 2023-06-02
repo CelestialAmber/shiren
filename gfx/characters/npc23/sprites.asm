@@ -24,12 +24,7 @@ Data_d5fe81:
 
 ;d5ffa5
 Data_d5ffa5:
-.incbin "gfx/characters/npc23/d5ffa5.right1.4bpp.lz" read 0x5b
-
-.bank $16
-.org $0000
-
-.incbin "gfx/characters/npc23/d5ffa5.right1.4bpp.lz" skip 0x5b
+filedata "gfx/characters/npc23/d5ffa5.right1.4bpp.lz" 0x15 0xFFA5
 
 ;d600dd
 Data_d600dd:

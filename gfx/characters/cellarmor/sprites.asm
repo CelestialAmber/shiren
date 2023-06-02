@@ -170,12 +170,7 @@ Data_cafcc5:
 
 ;cafe80
 Data_cafe80:
-.incbin "gfx/characters/cellarmor/cafe80.4bpp.lz" read 0x180
-
-.bank $b
-.org $0000
-
-.incbin "gfx/characters/cellarmor/cafe80.4bpp.lz" skip 0x180
+filedata "gfx/characters/cellarmor/cafe80.4bpp.lz" 0xA 0xFE80
 
 ;cb0033
 Data_cb0033:

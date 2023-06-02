@@ -90,12 +90,7 @@ Data_cffe36:
 
 ;cfff3c
 Data_cfff3c:
-.incbin "gfx/characters/polygonspin/cfff3c.4bpp.lz" read 0xc4
-
-.bank $10
-.org $0000
-
-.incbin "gfx/characters/polygonspin/cfff3c.4bpp.lz" skip 0xc4
+filedata "gfx/characters/polygonspin/cfff3c.4bpp.lz" 0xF 0xFF3C
 
 ;d00059
 Data_d00059:

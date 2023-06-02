@@ -158,12 +158,7 @@ Data_cbfda7:
 
 ;cbff56
 Data_cbff56:
-.incbin "gfx/characters/evilsoldier/cbff56.4bpp.lz" read 0xaa
-
-.bank $c
-.org $0000
-
-.incbin "gfx/characters/evilsoldier/cbff56.4bpp.lz" skip 0xaa
+filedata "gfx/characters/evilsoldier/cbff56.4bpp.lz" 0xB 0xFF56
 
 ;cc00b3
 Data_cc00b3:

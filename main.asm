@@ -18,20 +18,20 @@
 .include "code/bank_06.asm"
 
 ;character graphics data
-;bank 07-18
+;bank 7-18
 .include "gfx/characters/character_sprites.asm"
 
 ;font graphics data
 .include "asm/bank_19.asm"
 
 ;shuffle dungeon map data
-.include "data/maps/shuffle_dungeon.asm"
+.include "data/maps/shuffle_floors.asm"
 
 ;demo recording files (bank 1b)
 .include "data/demos/demos.asm"
 
-;font data (bank 1c)
-.include "data/fonts/font_data.asm"
+;font data/misc ui graphics (bank 1c)
+.include "asm/bank_1C.asm"
 
 ;sound data (banks 1d-1f)
 .include "audio/sound_data.asm"
@@ -39,21 +39,6 @@
 ;map tilesets graphics data
 ;bank 20-26
 .include "gfx/map_tilesets/map_tilesets.asm"
-;rest of bank 26
-.include "asm/bank_26.asm"
-
-;unknown data (banks 27-31)
-.include "data/something/bank_27.asm"
-.include "data/something/bank_28.asm"
-.include "data/something/bank_29.asm"
-.include "data/something/bank_2A.asm"
-.include "data/something/bank_2B.asm"
-.include "data/something/bank_2C.asm"
-.include "data/something/bank_2D.asm"
-.include "data/something/bank_2E.asm"
-.include "data/something/bank_2F.asm"
-.include "data/something/bank_30.asm"
-.include "data/something/bank_31.asm"
 
 
 .include "asm/bank_32.asm"

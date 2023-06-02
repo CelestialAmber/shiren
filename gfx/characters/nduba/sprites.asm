@@ -106,12 +106,7 @@ Data_c9fd62:
 
 ;c9ff0f
 Data_c9ff0f:
-.incbin "gfx/characters/nduba/c9ff0f.right3.4bpp.lz" read 0xf1
-
-.bank $a
-.org $0000
-
-.incbin "gfx/characters/nduba/c9ff0f.right3.4bpp.lz" skip 0xf1
+filedata "gfx/characters/nduba/c9ff0f.right3.4bpp.lz" 0x9 0xFF0F
 
 ;ca006e
 Data_ca006e:

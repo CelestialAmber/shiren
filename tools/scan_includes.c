@@ -41,7 +41,7 @@ void scan_file(const char *filename, bool strict) {
 	contents[size] = '\0';
 
 	for (char *ptr = contents; ptr && ptr - contents < size; ptr++) {
-		bool is_incbin = false, is_include = false;
+		bool is_incbin = false, is_include = false, is_filedata = false;
 		switch (*ptr) {
 		case ';':
 			ptr = strchr(ptr, '\n');
@@ -72,6 +72,27 @@ void scan_file(const char *filename, bool strict) {
 					printf("%s ", include_path);
 					if (is_include) {
 						scan_file(include_path, strict);
+					}
+				}
+			}
+			break;
+		case 'f':
+			is_filedata = !strncmp(ptr, "filedata \"", 10);
+			if(is_filedata){
+				ptr = strchr(ptr, '"');
+				if (ptr) {
+					ptr++;
+					char *include_path = ptr;
+					size_t length = strcspn(ptr, "\"");
+					ptr += length + 1;
+					include_path[length] = '\0';
+					printf("%s ", include_path);
+					if (is_include) {
+						scan_file(include_path, strict);
+					}
+					ptr = strchr(ptr, '\n');
+					if (!ptr) {
+						fprintf(stderr, "%s: no newline at end of file\n", filename);
 					}
 				}
 			}

@@ -134,12 +134,7 @@ Data_cefe2f:
 
 ;ceff63
 Data_ceff63:
-.incbin "gfx/characters/cursegirl/ceff63.right6.4bpp.lz" read 0x9d
-
-.bank $f
-.org $0000
-
-.incbin "gfx/characters/cursegirl/ceff63.right6.4bpp.lz" skip 0x9d
+filedata "gfx/characters/cursegirl/ceff63.right6.4bpp.lz" 0xE 0xFF63
 
 ;cf0070
 Data_cf0070:

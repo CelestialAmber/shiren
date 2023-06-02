@@ -110,12 +110,7 @@ Data_d1fda5:
 
 ;d1fef3
 Data_d1fef3:
-.incbin "gfx/characters/fieldbandit/d1fef3.4bpp.lz" read 0x10d
-
-.bank $12
-.org $0000
-
-.incbin "gfx/characters/fieldbandit/d1fef3.4bpp.lz" skip 0x10d
+filedata "gfx/characters/fieldbandit/d1fef3.4bpp.lz" 0x11 0xFEF3
 
 ;d20092
 Data_d20092:
