@@ -9,6 +9,7 @@
 ;fc 7f: wait (0: wait time?)
 
 .STRINGMAPTABLE mainFontMap "data/mainFontMap.tbl"
+.STRINGMAPTABLE areaTitleFontMap "data/areaTitleFontMap.tbl"
 
 ;Uses a stringmap for the game's unique text encoding.
 .macro text
@@ -80,4 +81,10 @@
 
 .macro endtext
 	.db $FF
+.endm
+
+
+;Area title text
+.macro areaname
+	.STRINGMAP areaTitleFontMap, \1
 .endm

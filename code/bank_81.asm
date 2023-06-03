@@ -341,7 +341,7 @@ func_818251:
 	rep #$30
 	lda.w #$4000
 	sta.b w005f
-	lda.b [$5F]  ;DATA8_DD4000
+	lda.b [$5F]  ;SoundDataOffsetTable
 	clc
 	adc.b w005f
 	ply
@@ -1869,9 +1869,9 @@ func_818EC2:
 func_818F0F:
 	php
 	rep #$30
-	lda.l DATA8_DD4000+2
+	lda.l SoundDataOffsetTable+2
 	sec
-	sbc.l DATA8_DD4000
+	sbc.l SoundDataOffsetTable
 	ldy.w #$FFFF
 	sec
 @lbl_818F1F:
@@ -3809,7 +3809,7 @@ Jumptable_81A1D7:
 	tyx
 	lda.l DATA8_FBC34A,x
 	sta.b wTemp00
-	lda.l DATA8_FBC34C,x
+	lda.l DATA8_FBC34A+2,x
 	sta.b wTemp02
 	jsl.l func_81CB47
 	pla

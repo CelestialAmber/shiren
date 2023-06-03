@@ -530,10 +530,10 @@ func_80854D:
 	inc a
 	sta.b w000b,s
 	lda.l debugMode
-	bne @lbl_80856E
+	bne @notDebugMode
 	.db $AF,$00,$01,$00,$29,$00,$20,$F0,$08,$E2,$20,$8F,$00,$21,$00,$C2   ;80855D  
-	.db $20                               ;80856D  
-@lbl_80856E:
+	.db $20
+@notDebugMode:
 	lda.w #$0001
 func_808571:
 	sei

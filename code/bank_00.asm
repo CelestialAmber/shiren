@@ -76,7 +76,7 @@ func_C0641C:
 	jsl.l func_80F2FE
 	jsl.l func_819046
 	jsl.l func_80DF6B
-	jsl.l func_C5CC1E
+	jsl.l DisplayAreaTitle
 	stz.b wTemp01
 	lda.b wTemp00
 	sta.l $7E843C

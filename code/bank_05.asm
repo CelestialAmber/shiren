@@ -29,7 +29,7 @@ func_C5CBFD:
 	plp
 	rtl
 
-func_C5CC1E:
+DisplayAreaTitle:
 	php
 	sep #$20
 	lda.b #$7F
@@ -141,7 +141,7 @@ func_C5CC1E:
 	sta.b wTemp04
 	stz.b w0006
 @lbl_C5CCF4:
-	lda.l UNREACH_C5CDCF,x
+	lda.l AreaNames,x
 	and.w #$00FF
 	cmp.w #$00F0
 	bcc @lbl_C5CD0C
@@ -263,42 +263,152 @@ func_C5CDB0:
 	rts
 
 UNREACH_C5CDCE:
-	.db $05                               ;C5CDCE  
+	.db $05
 
-UNREACH_C5CDCF:
-	.db $FD,$FD,$FD,$FD,$FD,$FD,$FD,$F8   ;C5CDCF  
-	.db $F8                               ;C5CDD7
-	.db $08,$00,$01,$02,$03,$04,$FD,$FD,$F8,$F8,$08,$05,$06,$02,$07,$08   ;C5CDD8
-	.db $09,$FD,$F8,$F8,$0B,$0A,$0B,$00   ;C5CDE8
-	.db $0C,$FD,$FD,$FD,$F8               ;C5CDF0
-	.db $F8                               ;C5CDF5
-	.db $0A,$0D,$0E,$02,$0F,$FD,$FD,$FD   ;C5CDF6
-	.db $F8                               ;C5CDFE
-	.db $F8                               ;C5CDFF
-	.db $0D,$10,$11,$12,$FD,$FD,$FD,$FD,$F8,$F8,$0A,$0A,$16,$02,$29,$0E   ;C5CE00
-	.db $FD,$FD,$F8,$F8                   ;C5CE10  
-	.db $0A,$0A,$16,$02,$17,$FD,$FD,$FD   ;C5CE14
-	.db $F8                               ;C5CE1C
-	.db $F8,$08,$18,$19,$1A,$0A,$1B,$1C,$FD,$F8,$F8,$07,$1D,$1E,$1F,$20   ;C5CE1D
-	.db $02,$01,$FD,$F8,$F8               ;C5CE2D
-	.db $0A,$21,$22,$02,$23,$24,$FD,$FD   ;C5CE32
-	.db $F8                               ;C5CE3A
-	.db $F8,$0A,$0A,$25,$02,$26,$27,$FD,$FD,$F8,$F8,$0B,$28,$23,$01,$FD   ;C5CE3B
-	.db $FD,$FD,$FD,$F8,$F8,$0A,$01,$0B,$02,$29,$0E,$FD,$FD,$F8,$F8,$0B   ;C5CE4B  
-	.db $2A,$2B,$2C,$2D,$FD,$FD,$FD,$F8   ;C5CE5B
-	.db $F8                               ;C5CE63
-	.db $05,$2E,$2F,$19,$30,$31,$32,$33,$2E,$33,$07,$1F,$34,$35,$36,$02   ;C5CE64
-	.db $0F,$FD,$F8,$F8                   ;C5CE74
-	.db $0A,$37,$39,$33,$3A,$01,$FD,$FD,$F8,$F8,$0A,$3B,$3C,$02,$3D,$3E   ;C5CE78
-	.db $FD,$FD,$F8,$F8,$0A,$3F,$40,$02,$3D,$3E,$FD,$FD,$F8,$F8,$0A,$41   ;C5CE88  
-	.db $42,$02,$3D,$3E,$FD,$FD,$F8,$F8,$08,$43,$44,$02,$45,$1F,$FD,$FD   ;C5CE98
-	.db $F8,$F8,$0A,$46,$47,$48,$49,$FD,$FD,$FD,$F8,$F8,$08,$4A,$02,$4B   ;C5CEA8
-	.db $4C,$4D,$FD,$FD,$F8,$F8,$0A,$4E,$4F,$02,$26,$27,$FD,$FD,$F8,$F8   ;C5CEB8  
-	.db $08,$50,$51,$52,$02,$53,$54,$FD   ;C5CEC8
-	.db $F8,$F8                           ;C5CED0
-	.db $06,$50,$51,$52,$02,$41,$5C,$53,$54,$F8,$08,$55,$56,$02,$57,$58   ;C5CED2  
-	.db $59,$FD,$F8,$F8,$08,$5A,$5B,$5D,$02,$26,$27,$FD,$F8,$F8,$05,$FD   ;C5CEE2  
-	.db $FD,$FD,$FD,$FD,$FD,$FD,$F8,$F8   ;C5CEF2  
+AreaNames:
+	.db $FD,$FD,$FD,$FD,$FD,$FD,$FD,$F8,$F8
+
+	;kobami valley
+	.db $08
+	areaname "渓谷の宿場"
+	.db $FD,$FD,$F8,$F8
+
+	;cedar-lined road
+	.db $08
+	areaname "杉並の旧街道"
+	.db $FD,$F8,$F8
+
+	;mountain stream
+	.db $0B
+	areaname "山間渓流"
+	.db $FD,$FD,$FD,$F8,$F8
+
+	;bamboo village
+	.db $0A
+	areaname "竹林の村"
+	.db $FD,$FD,$FD,$F8,$F8
+
+	;pegasus valley
+	.db $0D
+	areaname "天馬峠"
+	.db $FD,$FD,$FD,$FD,$F8,$F8
+	
+	;mountaintop forest
+	.db $0A
+	areaname "山頂の森林"
+	.db $FD,$FD,$F8,$F8
+
+	;mountaintop town
+	.db $0A
+	areaname "山頂の町"
+	.db $FD,$FD,$FD,$F8,$F8
+	
+	;old mine
+	.db $08
+	areaname "ネブリ山廃坑"
+	.db $FD,$F8,$F8
+	
+	;janus valley
+	.db $07
+	areaname "二面地蔵の谷"
+	.db $FD,$F8,$F8
+
+	;cavern in the cliff
+	.db $0A
+	areaname "断崖の岩屋"
+	.db $FD,$FD,$F8,$F8
+	
+	;mountain spirit cave
+	.db $0A
+	areaname "山霊の洞窟"
+	.db $FD,$FD,$F8,$F8
+	
+	;cryptic rock valley
+	.db 11
+	areaname "奇岩谷"
+	.db $FD,$FD,$FD,$FD,$F8,$F8
+	
+	;valley forest (unused?)
+	.db 10
+	areaname "谷間の森林"
+	.db $FD,$FD,$F8,$F8
+	
+	;waterfall marsh
+	.db 11
+	areaname "瀑布湿原"
+	.db $FD,$FD,$FD,$F8,$F8
+
+	;table mountain
+	.db 5
+	areaname "テーブルマウンテン"
+	
+	;underground water village
+	.db 7
+	areaname "地下水脈の村"
+	.db $FD,$F8,$F8
+
+	;illusion ghost valley
+	.db $0A
+	areaname "ムゲン幽谷"
+	.db $FD,$FD,$F8,$F8
+	
+	;trial of phantoms
+	.db $0A
+	areaname "幻魔の試練"
+	.db $FD,$FD,$F8,$F8
+	
+	;dragoncry trials
+	.db $0A
+	areaname "竜哭の試練"
+	.db $FD,$FD,$F8,$F8
+	
+	;final trial
+	.db $0A
+	areaname "最後の試練"
+	.db $FD,$FD,$F8,$F8
+	
+	;land of the sun
+	.db $08
+	areaname "太陽の大地"
+	.db $FD,$FD,$F8,$F8
+	
+	;golden city
+	.db $0A
+	areaname "黄金都市"
+	.db $FD,$FD,$FD,$F8,$F8
+	
+	;beneath the rainbow
+	.db $08
+	areaname "虹の根もと"
+	.db $FD,$FD,$F8,$F8
+	
+	;waterfall cave
+	.db $0A
+	areaname "滝壺の洞窟"
+	.db $FD,$FD,$F8,$F8
+
+	;fei's problem
+	.db $08
+	areaname "フェイの問題"
+	.db $FD,$F8,$F8
+
+	;fei's final problem
+	.db $06
+	areaname "フェイの最終問題"
+	.db $F8
+	
+	;kitchen god shrine
+	.db $08
+	areaname "食神のほこら"
+	.db $FD,$F8,$F8
+	
+	;trap master's dungeon
+	.db $08
+	areaname "掛軸裏の洞窟"
+	.db $FD,$F8,$F8
+	
+	.db $05
+	.db $FD,$FD,$FD,$FD,$FD,$FD,$FD,$F8,$F8
 
 UNREACH_C5CEFA:
 	.db $00,$01,$02,$03,$04,$05,$06,$07,$01,$02,$03,$04,$05,$06,$07,$08   ;C5CEFA

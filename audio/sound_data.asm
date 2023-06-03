@@ -10,16 +10,14 @@
 ;the data comes after
 
 
-;sound data table
+;sound data table (samples and music)
 ;the addresses are stored as the offset from dd4000
-
-;0xBB bytes, base spc address: 0x427
-DATA8_DD4000:
+;dd4000
+SoundDataOffsetTable:
 spcdataheader 0xBB 0x427
 
-;dd4004
-SoundDataOffsetTable:
-audiodata BRRSample_dd4cbc
+;Samples
+audiodata BRRSample_dd4cbc ;0
 audiodata Data_dd7376
 audiodata Data_dd73a8
 audiodata Data_dd73da
@@ -29,17 +27,17 @@ audiodata BRRSample_dd749d
 audiodata BRRSample_dd778d
 audiodata BRRSample_dd7a8f
 audiodata BRRSample_dd7bea
-audiodata BRRSample_dd7f85
+audiodata BRRSample_dd7f85 ;10
 audiodata BRRSample_dd8440
 audiodata BRRSample_dd8811
 audiodata BRRSample_dd8bb5
 audiodata BRRSample_dd8e27
 audiodata BRRSample_dd9225
-audiodata DATA8_DD4000
+audiodata SoundDataOffsetTable
 audiodata BRRSample_dd95db
 audiodata BRRSample_dd9a18
 audiodata BRRSample_dd9ce4
-audiodata BRRSample_dda1a8
+audiodata BRRSample_dda1a8 ;20
 audiodata BRRSample_dda6d8
 audiodata BRRSample_ddaacd
 audiodata BRRSample_ddb612
@@ -49,7 +47,7 @@ audiodata BRRSample_dde2fd
 audiodata BRRSample_dde767
 audiodata BRRSample_dded6f
 audiodata BRRSample_ddf55d
-audiodata BRRSample_ddfce8
+audiodata BRRSample_ddfce8 ;30
 audiodata BRRSample_de0b69
 audiodata BRRSample_de1f8a
 audiodata BRRSample_de2388
@@ -59,17 +57,17 @@ audiodata BRRSample_de407d
 audiodata BRRSample_de4ce2
 audiodata BRRSample_de5aa6
 audiodata BRRSample_de5e0b
-audiodata BRRSample_de6521
+audiodata BRRSample_de6521 ;40
 audiodata BRRSample_de74e6
 audiodata BRRSample_de78a5
 audiodata BRRSample_de82a6
 audiodata BRRSample_de82d8
 audiodata BRRSample_de8337
 audiodata BRRSample_de8519
-audiodata BRRSample_de870d
+audiodata BRRSample_LevelUpStartVoice
 audiodata BRRSample_de9ef1
 audiodata BRRSample_deaec8
-audiodata BRRSample_deb320
+audiodata BRRSample_deb320 ;50
 audiodata BRRSample_dec351
 audiodata BRRSample_deca04
 audiodata BRRSample_ded198
@@ -79,8 +77,11 @@ audiodata BRRSample_dee64a
 audiodata BRRSample_deea6c
 audiodata BRRSample_defc95
 audiodata BRRSample_df0f69
-audiodata BRRSample_df18ad
-audiodata Data_df214f
+audiodata BRRSample_df18ad ;60
+
+;Music data tables
+;Group 1
+audiodata Data_df214f ;0
 audiodata Data_df215f
 audiodata Data_df2949
 audiodata Data_df2ba4
@@ -90,7 +91,7 @@ audiodata Data_df2f93
 audiodata Data_df32ef
 audiodata Data_df32fd
 audiodata Data_df38d1
-audiodata Data_df38e1
+audiodata Data_df38e1 ;10
 audiodata Data_df400d
 audiodata Data_df479f
 audiodata Data_df4c67
@@ -100,7 +101,7 @@ audiodata Data_df59b0
 audiodata Data_df5cc5
 audiodata Data_df61e4
 audiodata Data_df61f0
-audiodata Data_df6c1d
+audiodata Data_df6c1d ;20
 audiodata Data_df6c29
 audiodata Data_df6fa5
 audiodata Data_df6fb3
@@ -110,7 +111,7 @@ audiodata Data_df8668
 audiodata Data_df8676
 audiodata Data_df8686
 audiodata Data_df8afd
-audiodata Data_df8b0b
+audiodata Data_df8b0b ;30
 audiodata Data_df9400
 audiodata Data_df940c
 audiodata Data_df979b
@@ -120,7 +121,7 @@ audiodata Data_dfb329
 audiodata Data_dfba7a
 audiodata Data_dfc9e2
 audiodata Data_dfcab5
-audiodata Data_dfcac1
+audiodata Data_dfcac1 ;40
 audiodata Data_dfcc8b
 audiodata Data_dfcc93
 audiodata Data_dfcc9b
@@ -130,18 +131,20 @@ audiodata Data_dfcfa2
 audiodata Data_dfd019
 audiodata Data_dfd14c
 audiodata Data_dfd152
-audiodata Data_dfd158
-audiodata DATA8_DD4000
-audiodata Data_dfd1f0
-audiodata Data_dfd1fa
+audiodata Data_dfd158 ;50
+;Group 2
+audiodata SoundDataOffsetTable ;no sound
+audiodata SFX_ShirenLevelUp
+audiodata SFX_EnemyLevelUp
 audiodata Data_dfd304
 audiodata Data_dfd3ba
 audiodata Data_dfd41d
 audiodata Data_dfd4c0
 audiodata Data_dfd580
 audiodata Data_dfd586
-audiodata Data_dfd590
-audiodata DATA8_DD4000
+audiodata Data_dfd590 ;60
+;Group 3
+audiodata SoundDataOffsetTable ;no sound
 audiodata Data_dfd671
 audiodata Data_dfd677
 audiodata Data_dfd67b
@@ -150,7 +153,7 @@ audiodata Data_dfd683
 audiodata Data_dfd687
 audiodata Data_dfd68b
 audiodata Data_dfd68f
-audiodata Data_dfd693
+audiodata Data_dfd693 ;70
 audiodata Data_dfd697
 audiodata Data_dfd69b
 audiodata Data_dfd7cc
@@ -160,7 +163,7 @@ audiodata Data_dfd7d8
 audiodata Data_dfd83d
 audiodata Data_dfd841
 audiodata Data_dfd845
-audiodata Data_dfd849
+audiodata Data_dfd849 ;80
 audiodata Data_dfd84d
 audiodata Data_dfd851
 audiodata Data_dfd855
@@ -170,7 +173,7 @@ audiodata Data_dfd861
 audiodata Data_dfd865
 audiodata Data_dfd869
 audiodata Data_dfd86d
-audiodata Data_dfd871
+audiodata Data_dfd871 ;90
 audiodata Data_dfd875
 audiodata Data_dfda98
 audiodata Data_dfda9c
@@ -180,7 +183,7 @@ audiodata Data_dfdaa8
 audiodata Data_dfdaac
 audiodata Data_dfdab0
 audiodata Data_dfdab4
-audiodata Data_dfdab8
+audiodata Data_dfdab8 ;100
 audiodata Data_dfdabc
 audiodata Data_dfdac0
 audiodata Data_dfdac4
@@ -200,7 +203,7 @@ audiodata Data_dfdd8f
 audiodata Data_dfdd93
 audiodata Data_dfdd97
 audiodata Data_dfdd9b
-audiodata Data_dfdd9f
+audiodata Data_dfdd9f ;120
 audiodata Data_dfdda3
 audiodata Data_dfdda7
 audiodata Data_dfddab
@@ -210,7 +213,7 @@ audiodata Data_dfddb9
 audiodata Data_dfddbd
 audiodata Data_dfddc1
 audiodata Data_dfddc5
-audiodata Data_dfddc9
+audiodata Data_dfddc9 ;130
 audiodata Data_dfddcd
 audiodata Data_dfddd1
 audiodata Data_dfddd5
@@ -220,7 +223,7 @@ audiodata Data_dfdde3
 audiodata Data_dfdde7
 audiodata Data_dfddeb
 audiodata Data_dfddf1
-audiodata Data_dfddf5
+audiodata Data_dfddf5 ;140
 audiodata Data_dfddf9
 audiodata Data_dfddfd
 audiodata Data_dfde01
@@ -230,7 +233,7 @@ audiodata Data_dfe3ae
 audiodata Data_dfe3b2
 audiodata Data_dfe3b6
 audiodata Data_dfe3ba
-audiodata Data_dfe3be
+audiodata Data_dfe3be ;150
 audiodata Data_dfe3c2
 audiodata Data_dfe3c6
 audiodata Data_dfe3ca
@@ -240,7 +243,7 @@ audiodata Data_dfe3d6
 audiodata Data_dfe3da
 audiodata Data_dfe3de
 audiodata Data_dfe3e2
-audiodata Data_dfe3e6
+audiodata Data_dfe3e6 ;160
 audiodata Data_dfe3ea
 audiodata Data_dfe3ee
 audiodata Data_dfe3f2
@@ -250,7 +253,7 @@ audiodata Data_dfe3fe
 audiodata Data_dfe402
 audiodata Data_dfe408
 audiodata Data_dfe826
-audiodata Data_dfe82a
+audiodata Data_dfe82a ;170
 audiodata Data_dfe82e
 audiodata Data_dfe834
 audiodata Data_dfe838
@@ -260,7 +263,7 @@ audiodata Data_dfe844
 audiodata Data_dfe84a
 audiodata Data_dfe84e
 audiodata Data_dfe852
-audiodata Data_dfe856
+audiodata Data_dfe856 ;180
 audiodata Data_dfe85a
 audiodata Data_dfe85e
 audiodata Data_dfe862
@@ -270,7 +273,7 @@ audiodata Data_dfe86e
 audiodata Data_dfe872
 audiodata Data_dfe876
 audiodata Data_dfe87a
-audiodata Data_dfe87e
+audiodata Data_dfe87e ;190
 audiodata Data_dfe882
 audiodata Data_dfe886
 audiodata Data_dfecc7
@@ -280,7 +283,7 @@ audiodata Data_dfecd5
 audiodata Data_dfecdb
 audiodata Data_dfece1
 audiodata Data_dfece7
-audiodata Data_dfeceb
+audiodata Data_dfeceb ;200
 audiodata Data_dfee74
 audiodata Data_dfeeda
 audiodata Data_dfeede
@@ -290,7 +293,7 @@ audiodata Data_dfeeec
 audiodata Data_dfeef2
 audiodata Data_dfeef6
 audiodata Data_dfeefa
-audiodata Data_dfeefe
+audiodata Data_dfeefe ;210
 audiodata Data_dfef02
 audiodata Data_dfef06
 audiodata Data_dfef0a
@@ -300,7 +303,7 @@ audiodata Data_dfef18
 audiodata Data_dfef1c
 audiodata Data_dfef20
 audiodata Data_dfef24
-audiodata Data_dfef2a
+audiodata Data_dfef2a ;220
 audiodata Data_dfef30
 audiodata Data_dfef36
 audiodata Data_dfef3a
@@ -310,7 +313,7 @@ audiodata Data_dfef48
 audiodata Data_dfef4c
 audiodata Data_dfef50
 audiodata Data_dfef54
-audiodata Data_dfef58
+audiodata Data_dfef58 ;230
 audiodata Data_dfef5c
 audiodata Data_dfef60
 audiodata Data_dfef64
@@ -320,7 +323,7 @@ audiodata Data_dfef70
 audiodata Data_dfef74
 audiodata Data_dfef7a
 audiodata Data_dfef7e
-audiodata Data_dfef82
+audiodata Data_dfef82 ;240
 audiodata Data_dfef86
 audiodata Data_dfef8a
 audiodata Data_dfef8e
@@ -330,7 +333,7 @@ audiodata Data_dfef9e
 audiodata Data_dfefa4
 audiodata Data_dfefa8
 audiodata Data_dfefac
-audiodata Data_dfefb0
+audiodata Data_dfefb0 ;250
 audiodata Data_dff781
 audiodata Data_dff785
 audiodata Data_dff789
@@ -340,7 +343,7 @@ audiodata Data_dff797
 audiodata Data_dff79b
 audiodata Data_dff79f
 audiodata Data_dff7a3
-audiodata Data_dff7a9
+audiodata Data_dff7a9 ;260
 audiodata Data_dff7ad
 audiodata Data_dff7b1
 audiodata Data_dff7b5
@@ -350,7 +353,7 @@ audiodata Data_dff7c1
 audiodata Data_dff7c5
 audiodata Data_dff7c9
 audiodata Data_dff7cf
-audiodata Data_dff7d3
+audiodata Data_dff7d3 ;270
 audiodata Data_dff7d7
 audiodata Data_dff7dd
 audiodata Data_dff7e1
@@ -360,7 +363,7 @@ audiodata Data_dff7f1
 audiodata Data_dff7f7
 audiodata Data_dff7fb
 audiodata Data_dff7ff
-audiodata Data_dff803
+audiodata Data_dff803 ;280
 audiodata Data_dff807
 audiodata Data_dff80b
 audiodata Data_dffdb2
@@ -370,7 +373,7 @@ audiodata Data_dffef6
 audiodata Data_dffefc
 audiodata Data_dfff46
 audiodata Data_dfff4a
-audiodata Data_dfff50
+audiodata Data_dfff50 ;290
 audiodata Data_dfff56
 
 ;dd4427
@@ -430,61 +433,67 @@ spcdataheader 0xE3 0x8000
 .include "audio/brr_samples.asm"
 
 ;Music data
-.include "audio/music/music_kobamivalley_intro.asm"
-.include "audio/music/music_df2949.asm"
-.include "audio/music/music_df2ba4.asm"
-.include "audio/music/music_df2db1.asm"
-.include "audio/music/music_df2f87.asm"
-.include "audio/music/music_df32ef.asm"
-.include "audio/music/music_df38d1.asm"
-.include "audio/music/music_df400d.asm"
-.include "audio/music/music_df479f.asm"
-.include "audio/music/music_df4c67.asm"
-.include "audio/music/music_df5287.asm"
-.include "audio/music/music_df56fa.asm"
-.include "audio/music/music_df59b0.asm"
-.include "audio/music/music_df5cc5.asm"
-.include "audio/music/music_df61e4.asm"
-.include "audio/music/music_df6c1d.asm"
-.include "audio/music/music_df6fa5.asm"
-.include "audio/music/music_df7709.asm"
-.include "audio/music/music_df7dc8.asm"
-.include "audio/music/music_df8668.asm"
-.include "audio/music/music_df8afd.asm"
-.include "audio/music/music_df9400.asm"
-.include "audio/music/music_df979b.asm"
-.include "audio/music/music_df99d5.asm"
-.include "audio/music/music_dfa880.asm"
-.include "audio/music/music_dfb329.asm"
-.include "audio/music/music_dfba7a.asm"
-.include "audio/music/music_dfc9e2.asm"
-.include "audio/music/music_dfcab5.asm"
-.include "audio/music/music_dfcc8b.asm"
-.include "audio/music/music_dfcd75.asm"
-.include "audio/music/music_dfcee4.asm"
-.include "audio/music/music_dfcfa2.asm"
-.include "audio/music/music_dfd019.asm"
-.include "audio/music/music_dfd14c.asm"
-.include "audio/music/music_dfd1f0.asm"
-.include "audio/music/music_dfd304.asm"
-.include "audio/music/music_dfd3ba.asm"
-.include "audio/music/music_dfd41d.asm"
-.include "audio/music/music_dfd4c0.asm"
-.include "audio/music/music_dfd580.asm"
-.include "audio/music/music_dfd671.asm"
-.include "audio/music/music_dfd7cc.asm"
-.include "audio/music/music_dfd83d.asm"
-.include "audio/music/music_dfda98.asm"
-.include "audio/music/music_dfdd15.asm"
-.include "audio/music/music_dfdd7f.asm"
-.include "audio/music/music_dfe3a6.asm"
-.include "audio/music/music_dfe826.asm"
-.include "audio/music/music_dfecc7.asm"
-.include "audio/music/music_dfee74.asm"
-.include "audio/music/music_dfeeda.asm"
-.include "audio/music/music_dff781.asm"
-.include "audio/music/music_dffdb2.asm"
-.include "audio/music/music_dffe8d.asm"
-.include "audio/music/music_dffec9.asm"
-.include "audio/music/music_dffef6.asm"
-.include "audio/music/music_dfff46.asm"
+
+;Group 1 (music + condor voice clips)
+.include "audio/music/music_kobamivalley_opening.asm" ;ids 0-1
+.include "audio/music/music_intro.asm" ;id 2
+.include "audio/music/music_intro_koppa.asm" ;id 3
+.include "audio/music/music_intro_dream.asm" ;id 4
+.include "audio/music/music_fileselect_feisproblem.asm" ;ids 5-6
+.include "audio/music/music_mountaintoptown.asm" ;ids 7-8
+.include "audio/music/music_mountaintoptown_variants.asm" ;id 9-10
+.include "audio/music/music_bamboovillage.asm" ;id 11
+.include "audio/music/music_crypticrockvalley.asm" ;id 12
+.include "audio/music/music_goldencity.asm" ;id 13
+.include "audio/music/music_shop.asm" ;id 14
+.include "audio/music/music_gaibara.asm" ;id 15
+.include "audio/music/music_pekeji.asm" ;id 16
+.include "audio/music/music_oldcedarlinedroad.asm" ;id 17
+.include "audio/music/music_pegasusvalley_mountaintopforest.asm" ;ids 18-19
+.include "audio/music/music_20.asm" ;id 20
+.include "audio/music/music_tablemountain4_trials.asm" ;ids 22-23
+.include "audio/music/music_mountainspiritcave1.asm" ;id 24
+.include "audio/music/music_mountainspiritcave2.asm" ;id 25
+.include "audio/music/music_tablemountain1-3.asm" ;ids 26-28
+.include "audio/music/music_neburimine_cliffcavern.asm" ;ids 29-30
+.include "audio/music/music_tablemountain5-6.asm" ;ids 31-32
+.include "audio/music/music_waterfallcave.asm" ;id 33
+.include "audio/music/music_monsterhouse.asm" ;id 34
+.include "audio/music/music_specialmonsterhouse.asm" ;id 35
+.include "audio/music/music_thief.asm" ;id 36
+.include "audio/music/music_ending.asm" ;id 37
+.include "audio/music/music_wind_opening.asm" ;id 38
+.include "audio/music/music_wind_illusionghostvalley.asm" ;ids 39-40
+.include "audio/music/music_stream.asm" ;ids 41-43
+.include "audio/music/music_waterfallmarsh.asm" ;id 44
+.include "audio/music/music_intro_bug_sounds.asm" ;id 45
+.include "audio/music/music_condor_room.asm" ;id 46
+.include "audio/music/music_condor_freed.asm" ;id 47
+.include "audio/music/music_condor_cries.asm" ;ids 48-50
+
+;Group 2 (sfx/jingles, music stops, then resumes)
+.include "audio/sfx/sfx_level_up.asm" ;ids 52-53
+.include "audio/sfx/sfx_inn.asm" ;id 54
+.include "audio/sfx/sfx_partner_joins.asm" ;id 55
+.include "audio/sfx/sfx_leaderboard.asm" ;id 56
+.include "audio/sfx/sfx_suspend_game.asm" ;id 57
+.include "audio/sfx/sfx_wind.asm" ;ids 58-60
+
+;Group 3 (sfx, music isn't stopped)
+.include "audio/sfx/sfx_group_1.asm" ;ids 62-72
+.include "audio/sfx/sfx_group_2.asm" ;ids 73-76
+.include "audio/sfx/sfx_group_3.asm" ;ids 77-91
+.include "audio/sfx/sfx_group_4.asm" ;ids 92-108
+.include "audio/sfx/sfx_group_5.asm" ;ids 109-111
+.include "audio/sfx/sfx_scrolls.asm" ;ids 112-143
+.include "audio/sfx/sfx_status_effects_herbs.asm" ;ids 144-168
+.include "audio/sfx/sfx_traps.asm" ;ids 169-192
+.include "audio/sfx/sfx_group_9.asm" ;ids 193-200
+.include "audio/sfx/sfx_item_get.asm" ;id 201
+.include "audio/sfx/sfx_enemies.asm" ;ids 202-250
+.include "audio/sfx/sfx_group_11.asm" ;ids 251-282
+.include "audio/sfx/sfx_bird.asm" ;id 283
+.include "audio/sfx/sfx_light_shining.asm" ;id 284
+.include "audio/sfx/sfx_285.asm" ;id 285
+.include "audio/sfx/sfx_condor.asm" ;ids 286-287
+.include "audio/sfx/sfx_group_13.asm" ;ids 288-291

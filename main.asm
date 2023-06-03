@@ -37,7 +37,7 @@
 .include "audio/sound_data.asm"
 
 ;map tilesets graphics data
-;bank 20-26
+;banks 20-26
 .include "gfx/map_tilesets/map_tilesets.asm"
 
 
@@ -50,11 +50,11 @@
 .include "asm/bank_38.asm"
 .include "asm/bank_39.asm"
 .include "asm/bank_3A.asm"
-.include "asm/bank_3B.asm"
-.include "asm/bank_3C.asm"
-.include "asm/bank_3D.asm"
 
-;banks 3e and 3f
+;banks 3b-3d
+.include "asm/bank_3B.asm"
+
+;banks 3e-3f
 .bank $3e
 .org $0000 ;$fe0000
 .include "data/text.asm"

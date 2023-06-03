@@ -40,7 +40,7 @@ tidy:
 	$(MAKE) -C tools clean
 
 clean: tidy
-	find . \( -iname '*.lz' \) -exec rm {} +
+	find gfx \( -iname '*.lz' \) -exec rm {} +
 	find gfx/items \( -iname '*.4bpp' \) -exec rm {} +
 	find gfx/characters \( -iname '*.4bpp' \) -exec rm {} +
 
@@ -86,6 +86,9 @@ gfx/characters/%.4bpp.lz : gfx/characters/%.4bpp
 	@tools/gfxcompress $< $@
 
 gfx/items/%.4bpp.lz : gfx/items/%.4bpp
+	@tools/gfxcompress --noheader $< $@
+
+gfx/misc/%.4bpp.lz : gfx/misc/%.4bpp
 	@tools/gfxcompress --noheader $< $@
 
 gfx/characters/%.4bpp : gfx/characters/%.png

@@ -14900,7 +14900,7 @@ func_C4A6E9:
 	sep #$20
 	ldy.w #$0000
 @lbl_C4A70C:
-	lda.l DATA8_FA8001,x
+	lda.l DATA8_FA8000+1,x
 	sta.w $AA61,y
 	lda.l DATA8_FA800E,x
 	sta.w $AA60,y
