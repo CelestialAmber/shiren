@@ -65,7 +65,7 @@ $(info $(shell $(MAKE) -C tools))
 endif
 
 #Split the tainted insect sprites beforehand
-ifeq (,$(filter clean, $(MAKECMDGOALS)))
+ifeq (,$(filter clean tidy, $(MAKECMDGOALS)))
 $(info $(shell ./tools/split_images.sh gfx/characters/taintedinsect))
 endif
 
