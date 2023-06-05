@@ -4,6 +4,8 @@
 ;weapon/staff/shield graphics data
 ;all the graphics are compressed
 ;unlike the npc sprites, the item sprites don't have a header byte
+;the weapon/shield sprites are bunched together in other_obj/sprite_weapon.bmp
+;and sprite_shield.bmp in shiren pc
 
 ;graphics data tables
 
@@ -481,8 +483,7 @@ Data_fbb5a8:
 	.db $B0,$60,$F0,$E0,$80,$80,$E0,$C0,$40,$80,$80,$80,$5B,$B9,$1B,$05  ;FBC0E2
 	.db $03,$0B,$07,$0F,$07,$17,$0F,$0B,$07,$02,$02,$00,$00,$04,$04,$00  ;FBC0F2
 	.db $00,$F5,$D7,$FC,$98,$DC,$B8,$FC,$F8,$40,$40,$34,$F8,$88,$88,$78  ;FBC102
-	.db $F0,$80,$80,$68,$F0,$F8,$E0,$D0   ;FBC112
-	.db $E0,$20                           ;FBC11A
+	.db $F0,$80,$80,$68,$F0,$F8,$E0,$D0,$E0,$20
 
 DATA8_FBC11C:
 	.db $20,$55
@@ -1009,13 +1010,15 @@ DATA8_FBC34A:
 	.db $6B,$79,$73,$BB,$7B
 	
 	
-;fbccc1
 ;dungeon item sprites
+;other_obj/items.bmp in shiren pc
+;fbccc1
 .incbin "gfx/objects/items.4bpp"
 
 
 ;misc compressed graphics
 ;no header byte
+;these graphics are all together in other_obj/special.bmp in shiren pc
 
 ;fbd701
 Graphics_FBD701:

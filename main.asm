@@ -40,16 +40,11 @@
 ;banks 20-26
 .include "gfx/map_tilesets/map_tilesets.asm"
 
-
+;banks 32-33
 .include "asm/bank_32.asm"
-.include "asm/bank_33.asm"
+
+;banks 34-3a
 .include "asm/bank_34.asm"
-.include "asm/bank_35.asm"
-.include "asm/bank_36.asm"
-.include "asm/bank_37.asm"
-.include "asm/bank_38.asm"
-.include "asm/bank_39.asm"
-.include "asm/bank_3A.asm"
 
 ;banks 3b-3d
 .include "asm/bank_3B.asm"

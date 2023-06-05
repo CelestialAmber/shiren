@@ -7,6 +7,58 @@
 import argparse
 import png
 
+def IsBlankChunk(chunk):
+	for x in range(32):
+		for y in range(32):
+			if chunk[y][x] != 0: return False
+	return True
+
+#Checks if the given chunk already exists in the chunk list
+def IsDuplicateChunk(chunks, newChunk):
+	for i in range(len(chunks)):
+		match = True
+		for x in range(32):
+			for y in range(32):
+				if newChunk[y][x] != chunks[i][y][x]: match = False
+		if match == True: return True
+	
+	return False
+
+
+#Splits a 4bpp indexed image into separate 32x32 chunks. This is mainly used to split up the Tainted
+#Insect sprites into smaller pieces that the game can use.
+def SplitImage(width, height, imageData, filename, palette):
+	chunkWidth = int(width/32)
+	chunkHeight = int(height/32)
+	numChunks = chunkWidth * chunkHeight
+	chunks = []
+	pixels = list(imageData)
+
+	for i in range(numChunks):
+		newChunk = []
+		chunkX = (i % chunkWidth)*32
+		chunkY = int(i/chunkWidth)*32
+		#print("Chunk pos: (" + str(chunkX) + "," + str(chunkY) + ")")
+
+		for y in range(32):
+			currentRow = []
+			for x in range(32):
+				col = pixels[chunkY + y][chunkX + x]
+				currentRow.append(col)
+			newChunk.append(currentRow)
+
+		#If the current chunk isn't blank and isn't a duplicate, add it to the list
+		if not IsDuplicateChunk(chunks, newChunk) and not IsBlankChunk(newChunk):
+			chunks.append(newChunk)
+
+	#Save all the chunks to png files
+	for i in range(len(chunks)):
+		newFilename = filename.replace(".png","") + "_part" + str(i) + ".png"
+		with open(newFilename, 'wb') as f:
+			w = png.Writer(32, 32, bitdepth=4, palette=palette)
+			w.write(f, chunks[i])
+	
+
 
 #Converts a 4bpp indexed image to a 4bpp file
 def ConvertImageTo4BPP(width, height, imageData, pattern):
@@ -242,7 +294,7 @@ def CalculateHeaderByte(width, height, unkFlag, pixelOffsetDir, pixelOffset):
 
 parser = argparse.ArgumentParser(description='Compresses 1bpp/4bpp graphics files into Shiren\'s compressed graphics format.')
 parser.add_argument('cmd', type=str,
-	help='command (pngto4bpp, compress)')
+	help='command (pngto4bpp, compress, split)')
 parser.add_argument('-p','--pattern', type=str,
 	help='tile pattern to use when converting from png to 1bpp/4bpp (v: vertical, h: horizontal)')
 parser.add_argument('--header', action='store_true',
@@ -317,3 +369,11 @@ elif args.cmd == "pngto4bpp":
 	with open(path, 'wb') as destFile:
 		destFile.write(tileData)
 		destFile.close()
+elif args.cmd == "split":
+	#Split the given png file into 32x32 chunks (used mainly for Tainted Insect sprites
+	#b/c they're an absolute unit)
+	imageFile = open(filename, 'rb')
+	reader = png.Reader(imageFile)
+	width, height, pixels, meta = reader.read()
+	palette = meta['palette']
+	SplitImage(width, height, pixels, filename, palette)

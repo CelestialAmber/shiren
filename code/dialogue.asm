@@ -4,8 +4,8 @@
 
 func_C10000:
 	php
-	rep #$20
-	sep #$10
+	rep #$20 ;A->16
+	sep #$10 ;XY->8
 	tsc
 	sta.l $7E859F
 	lda.b wTemp00
@@ -19,21 +19,21 @@ func_C10000:
 @lbl_C10029:
 	pla
 	sta.b wTemp00
-	sep #$30
+	sep #$30 ;AXY->8
 	lda.b wTemp01
 	sec
 	sbc.b #$3C
-	rep #$30
+	rep #$30 ;AXY->16
 	and.w #$00FF
 	asl a
 	tax
 	lda.l DATA8_C1004F,x
-	sep #$10
+	sep #$10 ;XY->8
 	pea.w w0046
 	pha
 	ldx.b wTemp00
 	rts
-	sep #$30
+	sep #$30 ;AXY->8
 	jsl.l func_C62437
 	plp
 	rtl
@@ -89,16 +89,16 @@ DATA8_C1004F:
 
 func_C10157:
 	php
-	sep #$30
+	sep #$30 ;AXY->8
 	ldx.b #$FF
 @lbl_C1015C:
 	inx
-	lda.l $7E894F,x
+	lda.l wShirenStatus.itemAmounts,x
 	bpl @lbl_C1015C
 	cpx.b #$14
 	bcs @lbl_C1016F
 	lda.b wTemp00
-	sta.l $7E894F,x
+	sta.l wShirenStatus.itemAmounts,x
 	plp
 	rtl
 @lbl_C1016F:
@@ -108,7 +108,7 @@ func_C10157:
 
 func_C10189:
 	php
-	sep #$30
+	sep #$30 ;AXY->8
 	jsl.l func_C28A92
 	jsl.l func_C3001F
 	jsl.l func_C300D2
@@ -116,13 +116,13 @@ func_C10189:
 	rts
 	.db $08,$E2,$30,$22,$CE,$8A,$C2,$22,$1F,$00,$C3,$22,$D2,$00,$C3,$A9   ;C1019A
 	.db $80,$85,$00,$64,$02,$48,$22,$79,$04,$C6,$68,$1A,$D0,$F3,$28,$60   ;C101AA  
-	rep #$20
+	rep #$20 ;A->16
 	lda.w #$0689
 	sta.b wTemp00
 	jsl.l DisplayMessage
 	rts
-	sep #$20
-	rep #$10
+	sep #$20 ;A->8
+	rep #$10 ;XY->16
 	phx
 	GetEvent Event17
 	plx
@@ -182,8 +182,8 @@ func_C10189:
 	.db $85,$00,$DA,$22,$92,$01,$C3,$FA,$E8,$BF,$4F,$89,$7E,$10,$DB,$68   ;C10478  
 	.db $F0,$0B,$A2,$04,$09,$86,$00,$22,$25,$25,$C6,$28,$60,$A2,$5C,$00   ;C10488  
 	.db $86,$00,$22,$25,$25,$C6,$28,$60   ;C10498  
-	sep #$20
-	rep #$10
+	sep #$20 ;A->8
+	rep #$10 ;XY->16
 	txa
 	pha
 	jsr.w func_C104AB
@@ -191,8 +191,8 @@ func_C10189:
 	rts
 
 func_C104AB:
-	sep #$20
-	rep #$10
+	sep #$20 ;A->8
+	rep #$10 ;XY->16
 	lda.l $7E8871,x
 	bne @lbl_C104E0
 	ldy.w #$07EB
@@ -232,8 +232,8 @@ func_C104AB:
 	.db $C9,$04,$B0,$0F,$1A,$9F,$71,$88,$7E,$A0,$F9,$07,$84,$00,$22,$25   ;C105E0
 	.db $25,$C6,$60,$A0,$FA,$07,$84,$00   ;C105F0  
 	.db $22,$25,$25,$C6,$60               ;C105F8  
-	sep #$20
-	rep #$10
+	sep #$20 ;A->8
+	rep #$10 ;XY->16
 	lda.l $7E8871,x
 	bne @lbl_C10661
 	ldy.w #$06CA
@@ -283,8 +283,8 @@ func_C104AB:
 	.db $00,$22,$25,$25,$C6,$60,$84,$02,$A0,$DD,$06,$84,$00,$22,$25,$25   ;C10721
 	.db $C6,$60,$A0,$DE,$06,$84,$00,$22   ;C10731  
 	.db $25,$25,$C6,$60                   ;C10739  
-	sep #$20
-	rep #$10
+	sep #$20 ;A->8
+	rep #$10 ;XY->16
 	phx
 	GetEvent Event09
 	plx
@@ -313,8 +313,8 @@ func_C104AB:
 	.db $00,$FA,$89,$01,$F0,$0A,$A0,$EF,$08,$84,$00,$22,$25,$25,$C6,$60   ;C1078F
 	.db $A0,$D9,$06,$84,$00,$22,$25,$25,$C6,$60,$A0,$7F,$08,$84,$00,$22   ;C1079F
 	.db $25,$25,$C6,$60                   ;C107AF  
-	sep #$20
-	rep #$10
+	sep #$20 ;A->8
+	rep #$10 ;XY->16
 	phx
 	GetEvent Event09
 	plx
@@ -351,8 +351,8 @@ func_C104AB:
 	.db $0A,$A0,$D3,$06,$84,$00,$22,$25,$25,$C6,$60,$A9,$FF,$9F,$71,$88   ;C10885
 	.db $7E,$86,$00,$22,$1B,$72,$C2,$A0,$D5,$06,$84,$00,$22,$25,$25,$C6   ;C10895  
 	.db $60                               ;C108A5
-	sep #$20
-	rep #$10
+	sep #$20 ;A->8
+	rep #$10 ;XY->16
 	txa
 	pha
 	jsr.w func_C108B1
@@ -558,7 +558,7 @@ func_C10E35:
 @lbl_C10E52:
 	inx
 @lbl_C10E53:
-	lda.l $7E894F,x
+	lda.l wShirenStatus.itemAmounts,x
 	bpl @lbl_C10E3A
 	ldx.w #$FFFF
 	rts
@@ -568,7 +568,7 @@ func_C10E5D:
 	sta.b wTemp00
 	jsl.l func_C23BA6
 	jsl.l func_C62405
-	lda.b w0005,s
+	lda.b wTemp05,s
 	inc a
 	sta.b wTemp00
 	ldy.w #$1005
@@ -576,18 +576,18 @@ func_C10E5D:
 	lda.b #$C1
 	sta.b wTemp04
 	jsl.l func_C2938C
-	lda.b w0005,s
+	lda.b wTemp05,s
 	inc a
 	sta.b wTemp00
 	jsl.l func_C21591
 	lda.b #$13
 	sta.b wTemp00
-	lda.b w0005,s
+	lda.b wTemp05,s
 	inc a
 	sta.b wTemp01
 	jsl.l func_C2444B
 	jsl.l func_C62405
-	lda.b w0005,s
+	lda.b wTemp05,s
 	inc a
 	sta.b wTemp00
 	ldy.w #$1008
@@ -648,8 +648,8 @@ func_C10E5D:
 	.db $00,$22,$25,$25,$C6,$60,$C9,$08,$B0,$0D,$A0,$74,$08,$84,$00,$22   ;C1114B
 	.db $7E,$2B,$C6,$A5,$00,$80,$D9,$A0,$7B,$08,$84,$00,$22,$25,$25,$C6   ;C1115B  
 	.db $60,$03,$FF,$03,$03,$12,$FF       ;C1116B
-	sep #$20
-	rep #$10
+	sep #$20 ;A->8
+	rep #$10 ;XY->16
 	phx
 	GetEvent Event_Gaibara
 	plx
@@ -666,8 +666,8 @@ func_C10E5D:
 	.db $1A,$68,$FA,$BF,$6F,$88,$7E,$C9,$04,$B0,$0A,$A0,$E0,$06,$84,$00   ;C111C0
 	.db $22,$25,$25,$C6,$60,$A0,$01,$07   ;C111D0  
 	.db $84,$00,$22,$25,$25,$C6,$60       ;C111D8  
-	sep #$20
-	rep #$10
+	sep #$20 ;A->8
+	rep #$10 ;XY->16
 	txa
 	pha
 	jsr.w func_C111EA
@@ -675,8 +675,8 @@ func_C10E5D:
 	rts
 
 func_C111EA:
-	sep #$20
-	rep #$10
+	sep #$20 ;A->8
+	rep #$10 ;XY->16
 	lda.l $7E8871,x
 	beq @lbl_C111F7
 	.db $4C,$EA,$12                       ;C111F4  
@@ -821,7 +821,7 @@ func_C1173F:
 	ldy.w #$0709
 	sty.b wTemp00
 	jsl.l DisplayMessage
-	lda.b w0005,s
+	lda.b wTemp05,s
 	sta.b wTemp00
 	jsl.l func_C21591
 	ldy.w #$090C
@@ -881,8 +881,8 @@ func_C1173F:
 	.db $22,$84,$15,$C2,$A3,$01,$85,$00,$22,$9E,$15,$C2,$A9,$85,$85,$00   ;C11921  
 	.db $A9,$02,$85,$02,$22,$79,$04,$C6   ;C11931
 	.db $68,$60                           ;C11939
-	sep #$20
-	rep #$10
+	sep #$20 ;A->8
+	rep #$10 ;XY->16
 	txa
 	pha
 	jsr.w func_C11946
@@ -890,8 +890,8 @@ func_C1173F:
 	rts
 
 func_C11946:
-	sep #$20
-	rep #$10
+	sep #$20 ;A->8
+	rep #$10 ;XY->16
 	lda.l $7E8871,x
 	beq @lbl_C11953
 	.db $4C,$4C,$1B                       ;C11950  
@@ -1127,9 +1127,9 @@ func_C11B11:
 
 func_C12244:
 	php
-	rep #$20
-	sep #$10
-	lda.b w0006,s
+	rep #$20 ;A->16
+	sep #$10 ;XY->8
+	lda.b wTemp06,s
 	sta.b wTemp00
 	ldy.b #$15
 	sty.b wTemp02
@@ -1150,7 +1150,7 @@ func_C12244:
 	.db $68,$68,$68,$48,$22,$CE,$25,$C6   ;C1226D
 	.db $68,$3A,$10,$F7,$28,$60           ;C12275
 @lbl_C1227B:
-	lda.b w0005,s
+	lda.b wTemp05,s
 	sta.b wTemp00
 	jsr.w func_C122CA
 	ldx.b wTemp00
@@ -1184,10 +1184,10 @@ func_C122A5:
 	sty.b wTemp02
 	ldy.b #$02
 	sty.b wTemp03
-	lda.b w0005,s
+	lda.b wTemp05,s
 	sta.b wTemp04
 	lda.b wTemp03,s
-	sta.b w0006
+	sta.b wTemp06
 	phx
 	jsl.l func_C626CA
 	plx
@@ -1195,7 +1195,7 @@ func_C122A5:
 
 func_C122CA:
 	php
-	sep #$30
+	sep #$30 ;AXY->8
 	ldx.b wTemp00
 	lda.l DATA8_C122EB,x
 	sta.b wTemp00
@@ -1234,8 +1234,8 @@ DATA8_C122EB:
 	.db $85,$00,$22,$1B,$72,$C2,$A0,$83,$08,$84,$00,$22,$25,$25,$C6,$60   ;C123DE  
 
 
-	sep #$20
-	rep #$10
+	sep #$20 ;A->8
+	rep #$10 ;XY->16
 	GetEvent Event_Gaibara
 	cmp.b #$03
 	bcs @lbl_C1240A
@@ -1257,8 +1257,8 @@ DATA8_C122EB:
 	.db $00,$22,$25,$25,$C6,$60           ;C124AA
 
 
-	sep #$20
-	rep #$10
+	sep #$20 ;A->8
+	rep #$10 ;XY->16
 	txa
 	pha
 	jsr.w func_C124BB
@@ -1266,8 +1266,8 @@ DATA8_C122EB:
 	rts
 
 func_C124BB:
-	sep #$20
-	rep #$10
+	sep #$20 ;A->8
+	rep #$10 ;XY->16
 	lda.l $7E8871,x
 	cmp.b #$02
 	bcc @lbl_C124CA
@@ -1453,12 +1453,12 @@ func_C12ABD:
 @lbl_C12AD6:
 	inx
 @lbl_C12AD7:
-	lda.l $7E894F,x
+	lda.l wShirenStatus.itemAmounts,x
 	bpl @lbl_C12AC2
 	clc
 	rts
 @lbl_C12ADF:
-	lda.l $7E894F,x
+	lda.l wShirenStatus.itemAmounts,x
 	stx.b wTemp00
 	pha
 	jsl.l func_C23C4D
@@ -1585,8 +1585,8 @@ func_C12ABD:
 	.db $06,$06,$06,$FF,$04,$10,$FF       ;C131FB
 
 
-	sep #$20
-	rep #$10
+	sep #$20 ;A->8
+	rep #$10 ;XY->16
 	stx.b wTemp00
 	stz.b wTemp01
 	stx.b wTemp02
@@ -1603,12 +1603,12 @@ func_C12ABD:
 	rts
 
 func_C13228:
-	sep #$20
-	rep #$10
-	rep #$20
+	sep #$20 ;A->8
+	rep #$10 ;XY->16
+	rep #$20 ;A->16
 	lda.b wTemp03,s
 	sta.b wTemp02
-	sep #$20
+	sep #$20 ;A->8
 	ldy.w #$07CB
 	sty.b wTemp00
 	jsl.l DisplayMessage1
@@ -1617,10 +1617,10 @@ func_C13228:
 	.db $A0,$CD,$07,$84,$00,$22,$25,$25   ;C13241
 	.db $C6,$60                           ;C13249  
 @lbl_C1324B:
-	rep #$20
+	rep #$20 ;A->16
 	lda.b wTemp03,s
 	sta.b wTemp00
-	sep #$20
+	sep #$20 ;A->8
 	ldy.w #$0000
 	sty.b wTemp02
 	jsl.l func_C25BB7
@@ -1690,8 +1690,8 @@ func_C13228:
 	sty.b wTemp00
 	jsl.l DisplayMessage
 	rts
-	sep #$20
-	rep #$10
+	sep #$20 ;A->8
+	rep #$10 ;XY->16
 	txa
 	pha
 	jsr.w func_C13304
@@ -1699,8 +1699,8 @@ func_C13228:
 	rts
 
 func_C13304:
-	sep #$20
-	rep #$10
+	sep #$20 ;A->8
+	rep #$10 ;XY->16
 	phx
 	stx.b wTemp00
 	stz.b wTemp01
@@ -1731,7 +1731,7 @@ func_C13304:
 	bcs @lbl_C13347
 	lda.b #$5B
 @lbl_C13347:
-	sta.b w0006
+	sta.b wTemp06
 	jsl.l func_C6051F
 	lda.b wTemp00
 	cmp.b #$FF
@@ -1784,7 +1784,7 @@ func_C13304:
 	tdc
 	lda.b wTemp00
 	tax
-	lda.l $7E894F,x
+	lda.l wShirenStatus.itemAmounts,x
 	phx
 	sta.b wTemp00
 	jsl.l func_C30710
@@ -1797,7 +1797,7 @@ func_C13304:
 	cmp.b #$03
 	beq @lbl_C13437
 	plx
-	lda.l $7E894F,x
+	lda.l wShirenStatus.itemAmounts,x
 	sta.b wTemp02
 	ldy.w #$07D5
 	sty.b wTemp00
@@ -1817,7 +1817,7 @@ func_C13304:
 	bne @lbl_C13460
 @lbl_C1344D:
 	plx
-	lda.l $7E894F,x
+	lda.l wShirenStatus.itemAmounts,x
 	sta.b wTemp02
 	ldy.w #$07D6
 	sty.b wTemp00
@@ -1826,7 +1826,7 @@ func_C13304:
 @lbl_C13460:
 	plx
 	stx.b wTemp00
-	lda.l $7E894F,x
+	lda.l wShirenStatus.itemAmounts,x
 	pha
 	jsl.l func_C23C4D
 	lda.b wTemp00
@@ -1981,8 +1981,8 @@ func_C13304:
 	.db $25,$25,$C6,$60                   ;C139D8
 
 
-	sep #$20
-	rep #$10
+	sep #$20 ;A->8
+	rep #$10 ;XY->16
 	phx
 	GetEvent Event17
 	plx
@@ -1995,8 +1995,8 @@ func_C13304:
 	sty.b wTemp00
 	jsl.l DisplayMessage
 	rts
-	sep #$20
-	rep #$10
+	sep #$20 ;A->8
+	rep #$10 ;XY->16
 	txa
 	sta.b wTemp00
 	jsl.l func_C2721B
@@ -2012,8 +2012,8 @@ func_C13304:
 	sty.b wTemp00
 	jsl.l DisplayMessage
 	rts
-	sep #$20
-	rep #$10
+	sep #$20 ;A->8
+	rep #$10 ;XY->16
 	GetEvent Event09
 	cmp.b #$08
 	beq @lbl_C13A69
@@ -2032,8 +2032,8 @@ func_C13304:
 @lbl_C13A69:
 	.db $A0,$7D,$08,$84,$00,$22,$25,$25   ;C13A69
 	.db $C6,$60                           ;C13A71  
-	sep #$20
-	rep #$10
+	sep #$20 ;A->8
+	rep #$10 ;XY->16
 	phx
 	GetEvent Event17
 	plx
@@ -2069,10 +2069,10 @@ func_C13304:
 	and.b #$07
 	asl a                       
 	tax                         
-	rep #$20                    
+	rep #$20 ;A->16                    
 	lda.l FortuneTellerResultsText,x
 	sta.b wTemp00                 
-	sep #$20                    
+	sep #$20 ;A->8                    
 	jsl.l DisplayMessage         
 	ldy.w #$0810                
 	sty.b wTemp00                 
@@ -2083,10 +2083,10 @@ func_C13304:
 	and.b #$03
 	asl a                       
 	tax                         
-	rep #$20                    
+	rep #$20 ;A->16                    
 	lda.l FortuneTellerTipsText,x
 	sta.b wTemp00          
-	sep #$20             
+	sep #$20 ;A->8             
 	jsl.l DisplayMessage 
 	ldy.w #$0811         
 	sty.b wTemp00          
@@ -2115,8 +2115,8 @@ FortuneTellerTipsText:
 	.db $A0,$FD,$08,$84,$00,$22,$25,$25,$C6,$60,$A0,$20,$08,$84,$00,$22   ;C13B37
 	.db $25,$25,$C6,$60                   ;C13B47  
 
-	sep #$20
-	rep #$10
+	sep #$20 ;A->8
+	rep #$10 ;XY->16
 	phx
 	GetEvent Event17
 	plx
@@ -2132,8 +2132,8 @@ FortuneTellerTipsText:
 	.db $E2,$20,$C2,$10,$DA,$A9,$17,$85,$00,$22,$12,$05,$C6,$A5,$00,$FA   ;C13B73
 	.db $89,$01,$F0,$0A,$A0,$FF,$08,$84,$00,$22,$25,$25,$C6,$60,$A0,$22   ;C13B83
 	.db $08,$84,$00,$22,$25,$25,$C6,$60   ;C13B93
-	sep #$20
-	rep #$10
+	sep #$20 ;A->8
+	rep #$10 ;XY->16
 	phx
 	GetEvent Event17
 	plx
@@ -2151,8 +2151,8 @@ FortuneTellerTipsText:
 	.db $08,$84,$00,$22,$25,$25,$C6,$60,$E2,$20,$C2,$10,$DA,$A9,$17,$85   ;C13BE3
 	.db $00,$22,$12,$05,$C6,$A5,$00,$FA,$89,$01,$F0,$0A,$A0,$F8,$08,$84   ;C13BF3
 	.db $00,$22,$25,$25,$C6,$60,$A0,$1F,$08,$84,$00,$22,$25,$25,$C6,$60   ;C13C03
-	sep #$20
-	rep #$10
+	sep #$20 ;A->8
+	rep #$10 ;XY->16
 	lda.l $7E8871,x
 	bne @lbl_C13C2C
 	inc a
@@ -2166,8 +2166,8 @@ FortuneTellerTipsText:
 	sty.b wTemp00
 	jsl.l DisplayMessage
 	rts
-	sep #$20
-	rep #$10
+	sep #$20 ;A->8
+	rep #$10 ;XY->16
 	phx
 	GetEvent Event17
 	plx
@@ -2192,8 +2192,8 @@ FortuneTellerTipsText:
 @lbl_C13C78:
 	.db $A0,$2C,$08,$84,$00,$22,$25,$25   ;C13C78
 	.db $C6,$60                           ;C13C80  
-	sep #$20
-	rep #$10
+	sep #$20 ;A->8
+	rep #$10 ;XY->16
 	phx
 	GetEvent Event17
 	plx
@@ -2234,10 +2234,10 @@ FortuneTellerTipsText:
 	and.b #$07
 	asl a
 	tax
-	rep #$20
+	rep #$20 ;A->16
 	lda.l UNREACH_C13D7C,x
 	sta.b wTemp00
-	sep #$20
+	sep #$20 ;A->8
 	jsl.l DisplayMessage
 	ldy.w #$0830
 	sty.b wTemp00
@@ -2254,8 +2254,8 @@ FortuneTellerTipsText:
 
 UNREACH_C13D7C:
 	.db $33,$08,$34,$08,$35,$08,$36,$08,$37,$08,$38,$08,$39,$08,$3A,$08   ;C13D7C  
-	sep #$20
-	rep #$10
+	sep #$20 ;A->8
+	rep #$10 ;XY->16
 	phx
 	GetEvent Event17
 	plx
@@ -2330,36 +2330,36 @@ UNREACH_C13D7C:
 	jsl.l DisplayMessage
 @lbl_C13E81:
 	rts
-	sep #$20
-	rep #$10
+	sep #$20 ;A->8
+	rep #$10 ;XY->16
 	ldy.w #$0692
 	sty.b wTemp00
 	jsl.l DisplayMessage
 	SetEvent Event0F $01
 	rts
-	sep #$20
-	rep #$10
+	sep #$20 ;A->8
+	rep #$10 ;XY->16
 	ldy.w #$068B
 	sty.b wTemp00
 	jsl.l DisplayMessage
 	SetEvent Event0F $01
 	rts
-	sep #$20
-	rep #$10
+	sep #$20 ;A->8
+	rep #$10 ;XY->16
 	ldy.w #$083B
 	sty.b wTemp00
 	jsl.l DisplayMessage
 	SetEvent Event10 $01
 	rts
-	sep #$20
-	rep #$10
+	sep #$20 ;A->8
+	rep #$10 ;XY->16
 	ldy.w #$083C
 	sty.b wTemp00
 	jsl.l DisplayMessage
 	SetEvent Event11 $01
 	rts
-	sep #$20
-	rep #$10
+	sep #$20 ;A->8
+	rep #$10 ;XY->16
 	phx
 	GetEvent Event17
 	plx
@@ -2373,8 +2373,8 @@ UNREACH_C13D7C:
 	jsl.l DisplayMessage
 	SetEvent Event12 $01
 	rts
-	sep #$20
-	rep #$10
+	sep #$20 ;A->8
+	rep #$10 ;XY->16
 	phx
 	GetEvent Event17
 	plx
@@ -2388,8 +2388,8 @@ UNREACH_C13D7C:
 	jsl.l DisplayMessage
 	SetEvent Event13 $01
 	rts
-	sep #$20
-	rep #$10
+	sep #$20 ;A->8
+	rep #$10 ;XY->16
 	phx
 	GetEvent Event17
 	plx
@@ -2402,8 +2402,8 @@ UNREACH_C13D7C:
 	sty.b wTemp00
 	jsl.l DisplayMessage
 	rts
-	sep #$20
-	rep #$10
+	sep #$20 ;A->8
+	rep #$10 ;XY->16
 	phx
 	GetEvent Event17
 	plx
@@ -2436,8 +2436,8 @@ UNREACH_C13D7C:
 	sty.b wTemp00
 	jsl.l DisplayMessage
 	rts
-	sep #$20
-	rep #$10
+	sep #$20 ;A->8
+	rep #$10 ;XY->16
 	phx
 	GetEvent Event17
 	plx
@@ -2450,8 +2450,8 @@ UNREACH_C13D7C:
 	sty.b wTemp00
 	jsl.l DisplayMessage
 	rts
-	sep #$20
-	rep #$10
+	sep #$20 ;A->8
+	rep #$10 ;XY->16
 	phx
 	GetEvent Event17
 	plx
@@ -2472,8 +2472,8 @@ UNREACH_C13D7C:
 	sty.b wTemp00
 	jsl.l DisplayMessage
 	rts
-	sep #$20
-	rep #$10
+	sep #$20 ;A->8
+	rep #$10 ;XY->16
 	stx.b wTemp00
 	stz.b wTemp01
 	stx.b wTemp02
@@ -2593,10 +2593,10 @@ func_C14214:
 	lda.b wTemp02
 	asl a
 	tax
-	rep #$20
+	rep #$20 ;A->16
 	lda.l UNREACH_C1423B,x
 	sta.b wTemp02
-	sep #$20
+	sep #$20 ;A->8
 	lda.b #$C1
 	sta.b wTemp04
 	lda.b #$13
@@ -2637,8 +2637,8 @@ UNREACH_C1423B:
 	.db $24,$C6,$A0,$0A,$0A,$84,$00,$A0,$15,$25,$84,$02,$22,$EC,$29,$C6   ;C143CA  
 	.db $A0,$63,$08,$84,$00,$22,$7E,$2B   ;C143DA
 	.db $C6,$A5,$00,$80,$9C               ;C143E2  
-	sep #$20
-	rep #$10
+	sep #$20 ;A->8
+	rep #$10 ;XY->16
 	GetEvent Event15
 	cmp.b #$06
 	bcs @lbl_C14403
@@ -2664,7 +2664,7 @@ NPCScriptFunction_C1445C:
 	
 NPCScriptFunction_C14479:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	GetEvent Event15
 	cmp.b #$05
 	bcs @lbl_C14496
@@ -2672,7 +2672,7 @@ NPCScriptFunction_C14479:
 @lbl_C14496:
 	plp
 	rts
-	rep #$20
+	rep #$20 ;A->16
 	lda.w #$06B6
 	sta.b wTemp00
 	jsl.l DisplayMessage
@@ -2709,8 +2709,8 @@ NPCScriptFunction_C14479:
 	.db $C2,$10,$A0,$A8,$08,$84,$00,$22,$25,$25,$C6,$60,$E2,$20,$C2,$10   ;C14674
 	.db $A0,$A9,$08,$84,$00,$22,$25,$25   ;C14684
 	.db $C6,$60                           ;C1468C  
-	sep #$20
-	rep #$10
+	sep #$20 ;A->8
+	rep #$10 ;XY->16
 	ldy.w #$08AB
 	sty.b wTemp00
 	jsl.l DisplayMessage1
@@ -2730,8 +2730,8 @@ NPCScriptFunction_C14479:
 	.db $A9,$17,$85,$00,$22,$12,$05,$C6,$A5,$00,$FA,$89,$01,$F0,$0A,$A0   ;C14709
 	.db $E8,$08,$84,$00,$22,$25,$25,$C6,$60,$A0,$AF,$08,$84,$00,$22,$25   ;C14719
 	.db $25,$C6,$60                       ;C14729  
-	sep #$20
-	rep #$10
+	sep #$20 ;A->8
+	rep #$10 ;XY->16
 	phx
 	GetEvent Event17
 	plx
@@ -2744,8 +2744,8 @@ NPCScriptFunction_C14479:
 	sty.b wTemp00
 	jsl.l DisplayMessage
 	rts
-	sep #$20
-	rep #$10
+	sep #$20 ;A->8
+	rep #$10 ;XY->16
 	phx
 	GetEvent Event17
 	plx
@@ -2772,8 +2772,8 @@ NPCScriptFunction_C14479:
 	.db $29,$01,$1A,$9F,$71,$88,$7E,$3A,$D0,$0A,$A0,$B4,$08,$84,$00,$22   ;C147A3
 	.db $25,$25,$C6,$60,$A0,$B5,$08,$84   ;C147B3  
 	.db $00,$22,$25,$25,$C6,$60           ;C147BB
-	sep #$20
-	rep #$10
+	sep #$20 ;A->8
+	rep #$10 ;XY->16
 	phx
 	GetEvent Event17
 	plx
@@ -2790,8 +2790,8 @@ NPCScriptFunction_C14479:
 	.db $29,$01,$1A,$9F,$71,$88,$7E,$3A,$D0,$0A,$A0,$B7,$08,$84,$00,$22   ;C147F9
 	.db $25,$25,$C6,$60,$A0,$B8,$08,$84   ;C14809  
 	.db $00,$22,$25,$25,$C6,$60           ;C14811
-	sep #$20
-	rep #$10
+	sep #$20 ;A->8
+	rep #$10 ;XY->16
 	lda.l $7E8871,x
 	bne @lbl_C1482E
 	jsl.l Random
@@ -2809,8 +2809,8 @@ NPCScriptFunction_C14479:
 	sty.b wTemp00
 	jsl.l DisplayMessage
 	rts
-	sep #$20
-	rep #$10
+	sep #$20 ;A->8
+	rep #$10 ;XY->16
 	lda.l $7E8871,x
 	bne @lbl_C14860
 @lbl_C1484F:
@@ -2842,8 +2842,8 @@ NPCScriptFunction_C14479:
 	.db $A0,$BD,$07,$84,$00,$22,$25,$25,$C6,$60,$E2,$20,$C2,$10,$A0,$BE   ;C1490D
 	.db $07,$84,$00,$22,$25,$25,$C6,$60,$E2,$20,$C2,$10,$A0,$BF,$07,$84   ;C1491D  
 	.db $00,$22,$25,$25,$C6,$60           ;C1492D
-	sep #$20
-	rep #$10
+	sep #$20 ;A->8
+	rep #$10 ;XY->16
 	phx
 	GetEvent Event17
 	plx
@@ -2876,8 +2876,8 @@ NPCScriptFunction_C14479:
 	.db $22,$12,$05,$C6,$A5,$00,$C9,$05,$B0,$0A,$A0,$CD,$08,$84,$00,$22   ;C149EF  
 	.db $25,$25,$C6,$60,$A0,$CF,$08,$84   ;C149FF  
 	.db $00,$22,$25,$25,$C6,$60           ;C14A07
-	sep #$20
-	rep #$10
+	sep #$20 ;A->8
+	rep #$10 ;XY->16
 	phx
 	GetEvent Event17
 	plx
@@ -2902,8 +2902,8 @@ NPCScriptFunction_C14479:
 	.db $22,$79,$04,$C6,$A9,$8B,$85,$00,$A9,$01,$85,$02,$22,$79,$04,$C6   ;C14AC5  
 	.db $A0,$0A,$01,$84,$00,$22,$23,$2A,$C6,$02,$02,$02,$02,$02,$02,$02   ;C14AD5
 	.db $02,$02,$02,$FF                   ;C14AE5
-	sep #$20
-	rep #$10
+	sep #$20 ;A->8
+	rep #$10 ;XY->16
 	phx
 	GetEvent Event09
 	plx
@@ -2938,8 +2938,8 @@ NPCScriptFunction_C14479:
 @lbl_C14B60:
 	.db $8A,$85,$00,$22,$1B,$72,$C2,$A0,$81,$08,$84,$00,$22,$25,$25,$C6   ;C14B60
 	.db $60                               ;C14B70
-	sep #$20
-	rep #$10
+	sep #$20 ;A->8
+	rep #$10 ;XY->16
 	phx
 	GetEvent Event09
 	plx
@@ -2998,7 +2998,7 @@ NPCScriptFunction_C14479:
 
 func_C14D64:
 	php
-	sep #$30
+	sep #$30 ;AXY->8
 	lda.b wTemp00
 	asl a
 	tay
@@ -3011,7 +3011,7 @@ func_C14D64:
 	dec a
 	asl a
 	tax
-	rep #$20
+	rep #$20 ;A->16
 	lda.w #$004B
 	sta.b wTemp00
 	phx
@@ -3043,7 +3043,7 @@ func_C14D64:
 	plp
 	rtl
 @lbl_C14DC1:
-	sep #$30
+	sep #$30 ;AXY->8
 	lda.b #$00
 	sta.b wTemp00
 	jsl.l func_C62BF2
@@ -3107,8 +3107,8 @@ DATA8_C14E92:
 
 func_C14FD0:
 	php
-	rep #$20
-	sep #$10
+	rep #$20 ;A->16
+	sep #$10 ;XY->8
 	lda.b wTemp00
 	pha
 	jsl.l GetCurrentDungeon
@@ -3132,12 +3132,12 @@ func_C14FD0:
 	sta.b wTemp00
 	plp
 	php
-	rep #$20
+	rep #$20 ;A->16
 	lda.b wTemp00
 	pha
-	sep #$30
+	sep #$30 ;AXY->8
 	ldx.b wTemp00
-	lda.l $7E894F,x
+	lda.l wShirenStatus.itemAmounts,x
 	sta.b wTemp00
 	jsl.l func_C30710
 	lda.b wTemp00
@@ -3155,17 +3155,17 @@ func_C14FD0:
 	.db $AC,$02,$22,$37,$24,$C6,$C2,$20,$68,$85,$00,$E2,$30,$A9,$01,$85   ;C1507C  
 	.db $02,$28,$6B                       ;C1508C
 @lbl_C1508F:
-	rep #$20
+	rep #$20 ;A->16
 	pla
 	sta.b wTemp00
-	sep #$30
+	sep #$30 ;AXY->8
 	stz.b wTemp02
 	plp
 	rtl
 
 func_C1509A:
 	php
-	sep #$30
+	sep #$30 ;AXY->8
 	jsl.l Random
 	lda.b wTemp00
 	cmp.b #$10

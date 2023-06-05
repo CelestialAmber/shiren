@@ -1,5 +1,6 @@
 
 ;dungeon object sprites (16x16)
+;all together in other_obj/bg_items.bmp in shiren pc
 ;fdd5e9
 DungeonObjectSprites1:
 ;herb

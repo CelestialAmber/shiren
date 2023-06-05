@@ -302,8 +302,8 @@ DATA8_D96546:
 	
 	
 ;d96dca
-;2bpp font
-.incbin "gfx/fonts/font1.2bpp"
+;credits font
+.incbin "gfx/fonts/staff.2bpp"
 	
 ;d98dca
 	.db $1E,$8F,$55,$8F   ;D98DC6

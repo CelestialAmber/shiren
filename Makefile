@@ -43,6 +43,7 @@ clean: tidy
 	find gfx \( -iname '*.lz' \) -exec rm {} +
 	find gfx/items \( -iname '*.4bpp' \) -exec rm {} +
 	find gfx/characters \( -iname '*.4bpp' \) -exec rm {} +
+	find -E gfx/characters/taintedinsect -regex '.+_part.+\.png' -exec rm {} +
 
 tools:
 	$(MAKE) -C tools/
@@ -63,6 +64,13 @@ ifeq (,$(filter clean tools,$(MAKECMDGOALS)))
 $(info $(shell $(MAKE) -C tools))
 endif
 
+#Split the tainted insect sprites beforehand
+ifeq (,$(filter clean, $(MAKECMDGOALS)))
+$(info $(shell ./tools/split_images.sh gfx/characters/taintedinsect))
+endif
+
+
+
 $(rom): $(OBJS)
 	wlalink -S linkfile $@
 	$(SHA1SUM) -c shiren.sha1
@@ -77,7 +85,6 @@ gfx/characters/shiren/walk_%.4bpp : gfx/characters/shiren/walk_%.png
 	@tools/gbagfx/gbagfx $< $@
 
 
-
 ### General graphics rules
 
 #Quiet the graphics conversion messages to speed up build time
@@ -89,6 +96,9 @@ gfx/items/%.4bpp.lz : gfx/items/%.4bpp
 	@tools/gfxcompress --noheader $< $@
 
 gfx/misc/%.4bpp.lz : gfx/misc/%.4bpp
+	@tools/gfxcompress --noheader $< $@
+
+gfx/bg3/%.2bpp.lz : gfx/bg3/%.2bpp
 	@tools/gfxcompress --noheader $< $@
 
 gfx/characters/%.4bpp : gfx/characters/%.png

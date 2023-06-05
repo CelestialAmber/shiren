@@ -285,84 +285,216 @@ DATA8_C50010:
 	.db $D7,$2E,$0A,$00,$1E,$EE,$E0       ;C50A28
 	.db $1B,$36,$0A,$28,$00,$00,$EE,$00   ;C50A2F
 
-UNREACH_C50A37:
-	.db $78,$EE                           ;C50A37
-	.db $CD,$0B,$F7,$1A,$9F,$1C           ;C50A39
-	.db $3C,$1E                           ;C50A3F  
-	.db $9A,$1F,$2E,$20,$24,$21           ;C50A41
-	.db $00,$24                           ;C50A47
-	.db $6C,$25                           ;C50A49
-	.db $82,$26                           ;C50A4B  
-	.db $5E,$28                           ;C50A4D
-	.db $66,$29,$74,$30,$4F,$32,$8C,$34   ;C50A4F  
-	.db $64,$36                           ;C50A57  
-	.db $74,$37,$15,$39                   ;C50A59
-	.db $F3,$3B,$8F,$3E,$37,$41,$AE,$43   ;C50A5D  
-	.db $DA,$46,$B0,$48                   ;C50A65
-	.db $C6,$49,$5E,$4C,$B6,$4E           ;C50A69  
-	.db $38,$50                           ;C50A6F
-	.db $79,$53                           ;C50A71  
-	.db $2D,$56                           ;C50A73
-	.db $B7,$57                           ;C50A75  
-	.db $FF,$58                           ;C50A77
-	.db $9B,$5B                           ;C50A79
-	.db $84,$5D                           ;C50A7B
-	.db $C9,$5F                           ;C50A7D
-	.db $47,$60,$88,$63,$28,$66,$4D,$68   ;C50A7F
-	.db $0C,$6B,$7A,$6D,$A7,$6E           ;C50A87  
-	.db $27,$70                           ;C50A8D
-	.db $AA,$71                           ;C50A8F
-	.db $59,$75,$01,$77,$87,$79           ;C50A91
-	.db $71,$7B,$A1,$7B,$D1,$7B,$01,$7C,$31,$7C,$61,$7C,$91,$7C,$C1,$7C   ;C50A97  
-	.db $F1,$7C                           ;C50AA7  
-	.db $F0,$92,$7E,$94                   ;C50AA9
-	.db $0E,$96,$3E,$96                   ;C50AAD  
-	.db $DC,$8B,$C9,$83,$AC,$8B,$9F,$84   ;C50AB1
-	.db $9F,$8C                           ;C50AB9  
-	.db $53,$90                           ;C50ABB
-	.db $F7,$85                           ;C50ABD  
-	.db $58,$8E,$58,$8E,$58,$8E,$58,$8E   ;C50ABF
-	.db $58,$8E,$04,$88,$09,$8A           ;C50AC7
-	.db $21,$7D,$C4,$7E,$0D,$80           ;C50ACD  
-	.db $0D,$80,$6B,$81,$AC,$8B,$CF,$8C,$2F,$89,$E6,$8F,$57,$8F,$74,$82   ;C50AD3
-	.db $6B,$81                           ;C50AE3
-	.db $14,$83,$63,$83                   ;C50AE5
-	.db $57,$8F                           ;C50AE9  
-	.db $C5,$82,$F9,$81                   ;C50AEB
-	.db $C9,$83,$DC,$8B,$DC,$8B,$C0,$92   ;C50AEF
-	.db $5F,$89                           ;C50AF7  
-	.db $C9,$83,$57,$86                   ;C50AF9
-	.db $AC,$8B,$27,$86,$C9,$9B,$C9,$9B,$C9,$9B,$7E,$8A,$09,$8A,$3F,$8C   ;C50AFD  
-	.db $9F,$84,$0D,$80,$5F,$89           ;C50B0D  
-	.db $6B,$81,$AC,$8B                   ;C50B13
-	.db $53,$90,$C9,$83,$2F,$89           ;C50B17  
-	.db $14,$83,$C5,$82,$74,$82,$23,$90,$6F,$8C,$90,$92,$74,$82,$C5,$82   ;C50B1D
-	.db $D9,$89,$CF,$84,$C9,$9B,$53,$90,$9F,$84,$9F,$8C,$23,$90,$C5,$82   ;C50B2D
-	.db $09,$8A,$D9,$89,$57,$8F,$CF,$84   ;C50B3D
-	.db $27,$86                           ;C50B45
-	.db $23,$90                           ;C50B47  
-	.db $9F,$84,$DC,$8B,$6B,$81,$F7,$85   ;C50B49
-	.db $3F,$8C,$90,$92,$9F,$8C           ;C50B51
-	.db $5F,$89,$D9,$89,$2F,$89,$CF,$84,$3F,$8C,$C9,$83,$83,$90,$9F,$84   ;C50B57  
-	.db $27,$86,$27,$86,$27,$86,$27,$86,$F7,$1A,$F7,$1A,$F7,$1A,$F7,$1A   ;C50B67  
-	.db $09,$8A,$C5,$82,$74,$82,$3F,$8C   ;C50B77
-	.db $D9,$89                           ;C50B7F
-	.db $C9,$9B,$9F,$84                   ;C50B81
-	.db $D9,$89,$74,$82,$09,$8A,$C5,$82   ;C50B85
-	.db $DC,$8B                           ;C50B8D  
-	.db $09,$8A,$74,$82                   ;C50B8F
-	.db $83,$90,$58,$8E,$04,$88,$3F,$8C   ;C50B93  
-	.db $F7,$85,$6F,$8C                   ;C50B9B  
-	.db $B3,$90                           ;C50B9F
-	.db $9F,$8C                           ;C50BA1  
-	.db $AC,$8B,$9F,$8C,$9F,$84,$CF,$84   ;C50BA3
-	.db $DC,$8B                           ;C50BAB
-	.db $23,$90,$CF,$84                   ;C50BAD  
-	.db $09,$8A,$09,$8A                   ;C50BB1
-	.db $57,$8F,$E6,$8F,$23,$90,$53,$90,$B3,$90,$B3,$90,$90,$92,$C0,$92   ;C50BB5  
-	.db $C9,$9B                           ;C50BC5
-	.db $9E,$96                           ;C50BC7
-	.db $9F,$8C,$6E,$96                   ;C50BC9  
+;something related to characters
+;each has an entry
+UnknownTable_c50a37:
+	.dw $EE78 ;some value
+	.dw Data_c50bcd ;0
+	.dw Data_c51af7 ;1
+	.dw $1C9F
+	.dw $1E3C
+	.dw $1F9A
+	.dw $202E
+	.dw $2124
+	.dw $2400
+	.dw $256C
+	.dw $2682
+	.dw $285E
+	.dw $2966
+	.dw $3074
+	.dw $324F
+	.dw $348C
+	.dw $3664
+	.dw $3774
+	.dw $3915
+	.dw $3BF3
+	.dw $3E8F
+	.dw $4137
+	.dw $43AE
+	.dw $46DA
+	.dw $48B0
+	.dw $49C6
+	.dw $4C5E
+	.dw $4EB6
+	.dw $5038
+	.dw $5379
+	.dw $562D
+	.dw $57B7
+	.dw $58FF
+	.dw $5B9B
+	.dw $5D84
+	.dw $5FC9
+	.dw $6047
+	.dw $6388
+	.dw $6628
+	.dw $684D
+	.dw $6B0C
+	.dw $6D7A
+	.dw $6EA7
+	.dw $7027
+	.dw $71AA
+	.dw $7559
+	.dw $7701
+	.dw $7987
+	.dw $7B71
+	.dw $7BA1
+	.dw $7BD1
+	.dw $7C01
+	.dw $7C31
+	.dw $7C61
+	.dw $7C91
+	.dw $7CC1
+	.dw $7CF1
+	.dw $92F0
+	.dw $947E
+	.dw $960E
+	.dw $963E
+	.dw $8BDC
+	.dw $83C9
+	.dw $8BAC
+	.dw $849F
+	.dw $8C9F
+	.dw $9053
+	.dw $85F7
+	.dw $8E58
+	.dw $8E58
+	.dw $8E58
+	.dw $8E58
+	.dw $8E58
+	.dw $8804
+	.dw $8A09
+	.dw $7D21
+	.dw $7EC4
+	.dw $800D
+	.dw $800D
+	.dw $816B
+	.dw $8BAC
+	.dw $8CCF
+	.dw $892F
+	.dw $8FE6
+	.dw $8F57
+	.dw $8274
+	.dw $816B
+	.dw $8314
+	.dw $8363
+	.dw $8F57
+	.dw $82C5
+	.dw $81F9
+	.dw $83C9
+	.dw $8BDC
+	.dw $8BDC
+	.dw $92C0
+	.dw $895F
+	.dw $83C9
+	.dw $8657
+	.dw $8BAC
+	.dw $8627
+	.dw $9BC9
+	.dw $9BC9
+	.dw $9BC9
+	.dw $8A7E
+	.dw $8A09
+	.dw $8C3F
+	.dw $849F
+	.dw $800D
+	.dw $895F
+	.dw $816B
+	.dw $8BAC
+	.dw $9053
+	.dw $83C9
+	.dw $892F
+	.dw $8314
+	.dw $82C5
+	.dw $8274
+	.dw $9023
+	.dw $8C6F
+	.dw $9290
+	.dw $8274
+	.dw $82C5
+	.dw $89D9
+	.dw $84CF
+	.dw $9BC9
+	.dw $9053
+	.dw $849F
+	.dw $8C9F
+	.dw $9023
+	.dw $82C5
+	.dw $8A09
+	.dw $89D9
+	.dw $8F57
+	.dw $84CF
+	.dw $8627
+	.dw $9023
+	.dw $849F
+	.dw $8BDC
+	.dw $816B
+	.dw $85F7
+	.dw $8C3F
+	.dw $9290
+	.dw $8C9F
+	.dw $895F
+	.dw $89D9
+	.dw $892F
+	.dw $84CF
+	.dw $8C3F
+	.dw $83C9
+	.dw $9083
+	.dw $849F
+	.dw $8627
+	.dw $8627
+	.dw $8627
+	.dw $8627
+	.dw Data_c51af7
+	.dw Data_c51af7
+	.dw Data_c51af7
+	.dw Data_c51af7
+	.dw $8A09
+	.dw $82C5
+	.dw $8274
+	.dw $8C3F
+	.dw $89D9
+	.dw $9BC9
+	.dw $849F
+	.dw $89D9
+	.dw $8274
+	.dw $8A09
+	.dw $82C5
+	.dw $8BDC
+	.dw $8A09
+	.dw $8274
+	.dw $9083
+	.dw $8E58
+	.dw $8804
+	.dw $8C3F
+	.dw $85F7
+	.dw $8C6F
+	.dw $90B3
+	.dw $8C9F
+	.dw $8BAC
+	.dw $8C9F
+	.dw $849F
+	.dw $84CF
+	.dw $8BDC
+	.dw $9023
+	.dw $84CF
+	.dw $8A09
+	.dw $8A09
+	.dw $8F57
+	.dw $8FE6 ;193
+	.dw $9023
+	.dw $9053
+	.dw $90B3
+	.dw $90B3
+	.dw $9290
+	.dw $92C0
+	.dw $9BC9
+	.dw $969E
+	.dw $8C9F
+	.dw $966E
+
+
+;c50bcd
+Data_c50bcd:
 	.db $6D,$0C,$6F,$C2                   ;C50BCD
 	.db $8F,$C2,$1F,$C3                   ;C50BD1  
 	.db $0F,$C3                           ;C50BD5
@@ -684,7 +816,11 @@ UNREACH_C50A37:
 	.db $0F,$F0,$00,$12,$22,$A1,$40,$00,$13,$A0,$40,$01,$2E,$A0,$80,$33   ;C51AB8  
 	.db $A0,$C0,$04,$2F,$AF,$00,$00,$13,$AE,$40,$00,$12,$F0,$00,$15,$22   ;C51AC8
 	.db $A0,$C3,$00,$16,$A0,$C3,$00,$30,$A0,$C3,$32,$A0,$82,$32,$A1,$04   ;C51AD8
-	.db $04,$31,$AE,$BA,$00,$17,$AF,$3C,$00,$16,$AE,$FB,$00,$15,$F0,$27   ;C51AE8  
+	.db $04,$31,$AE,$BA,$00,$17,$AF,$3C,$00,$16,$AE,$FB,$00,$15,$F0
+	
+;c51af7
+Data_c51af7:
+	.db $27
 	.db $1B                               ;C51AF8
 	.db $6F,$C2                           ;C51AF9
 	.db $6F,$C2,$CF,$C2                   ;C51AFB  

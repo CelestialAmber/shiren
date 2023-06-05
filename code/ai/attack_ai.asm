@@ -2,7 +2,7 @@
 
 func_C21415:
 	php
-	sep #$30
+	sep #$30 ;AXY->8
 	ldx.b wTemp00
 	lda.b wTemp01
 	and.b #$3F
@@ -142,7 +142,7 @@ func_C21415:
 
 func_C21584:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	lda.b #$00
 	sta.b wTemp02
 	jsl.l func_C62550
@@ -151,7 +151,7 @@ func_C21584:
 
 func_C21591:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	lda.b #$81
 	sta.b wTemp02
 	jsl.l func_C62550
@@ -160,7 +160,7 @@ func_C21591:
 
 func_C2159E:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	lda.b #$40
 	sta.b wTemp02
 	jsl.l func_C62550
@@ -180,7 +180,7 @@ func_C2159E:
 ;dead soldier
 
 	php
-	sep #$30
+	sep #$30 ;AXY->8
 	ldx.b wTemp01
 	lda.l $7E8835,x
 	bne @lbl_C21674
@@ -243,7 +243,7 @@ func_C2159E:
 ;field bandit
 
 	php
-	sep #$30
+	sep #$30 ;AXY->8
 	ldx.b wTemp00
 	lda.b wTemp01
 	bit.b #$40
@@ -273,7 +273,7 @@ func_C2159E:
 ;mecharoid
 
 	php
-	sep #$30
+	sep #$30 ;AXY->8
 	ldx.b wTemp00
 	lda.b wTemp01
 	bit.b #$40
@@ -328,7 +328,7 @@ func_C2159E:
 ;fluffy bunny
 
 	php
-	sep #$30
+	sep #$30 ;AXY->8
 	lda.b wTemp01
 	bit.b #$40
 	bne @lbl_C217FF
@@ -439,7 +439,7 @@ func_C2159E:
 ;curse girl
 
 	php
-	sep #$30
+	sep #$30 ;AXY->8
 	lda.b wTemp01
 	cmp.b #$13
 	bne @lbl_C219E4
@@ -471,7 +471,7 @@ func_C2159E:
 ;schubell
 
 	php
-	sep #$30
+	sep #$30 ;AXY->8
 	ldx.b wTemp00
 	jsl.l Random
 	lda.b wTemp00
@@ -482,7 +482,7 @@ func_C2159E:
 	plp
 	rtl
 @lbl_C21A99:
-	sep #$30
+	sep #$30 ;AXY->8
 	lda.b #$00
 	pha
 	lda.b #$01
@@ -506,12 +506,12 @@ func_C2159E:
 	bpl @lbl_C21AD6
 	.db $4C,$67,$1B                       ;C21AD3  
 @lbl_C21AD6:
-	rep #$20
+	rep #$20 ;A->16
 	lda.b wTemp00
 	sta.b wTemp01,s
 @lbl_C21ADC:
 	jsl.l Random
-	sep #$20
+	sep #$20 ;A->8
 	lda.b wTemp03,s
 	tax
 	lda.l $7E8619,x
@@ -525,12 +525,12 @@ func_C2159E:
 	sta.b wTemp04
 	asl a
 	tax
-	rep #$20
+	rep #$20 ;A->16
 	lda.l DATA8_C21B97,x
 	pha
 	phk
 	plb
-	sep #$20
+	sep #$20 ;A->8
 	lda.b ($01,s),y
 	cmp.l $7E8996
 	bne @lbl_C21B11
@@ -541,7 +541,7 @@ func_C2159E:
 	pla
 	lda.b #$06
 	sta.b wTemp02
-	rep #$20
+	rep #$20 ;A->16
 	lda.b wTemp01,s
 	sta.b wTemp00
 	jsl.l func_C20086
@@ -553,7 +553,7 @@ func_C2159E:
 	phx
 	jsl.l func_C35B7A
 	plx
-	sep #$20
+	sep #$20 ;A->8
 	lda.b #$00
 	sta.l $7E8731,x
 	stx.b wTemp00
@@ -567,14 +567,14 @@ func_C2159E:
 	lda.l $7E85DC
 	sta.l $7E87E5,x
 	lda.b #$01
-	sta.b w0005,s
+	sta.b wTemp05,s
 	lda.b wTemp04,s
 	dec a
 	sta.b wTemp04,s
 	beq @lbl_C21B67
 	.db $4C,$BC,$1A                       ;C21B64  
 @lbl_C21B67:
-	sep #$30
+	sep #$30 ;AXY->8
 	pla
 	pla
 	plx
@@ -625,7 +625,7 @@ DATA8_C21B97:
 ;baby tank
 
 	php
-	sep #$30
+	sep #$30 ;AXY->8
 	ldx.b wTemp00
 	stx.b wTemp00
 	phx
@@ -657,7 +657,7 @@ DATA8_C21B97:
 	lda.l $7E85C9,x
 	sta.b wTemp03
 	stx.b wTemp04
-	stz.b w0005
+	stz.b wTemp05
 	cpx.b #$13
 	bne @lbl_C21C5B
 	.db $AF,$8A,$89,$7E,$85,$05           ;C21C55  
@@ -684,11 +684,11 @@ DATA8_C21B97:
 ;rice changer
 
 	php
-	sep #$30
+	sep #$30 ;AXY->8
 	lda.b wTemp01
 	cmp.b #$13
 	bne @lbl_C21D16
-	lda.l $7E894F
+	lda.l wShirenStatus.itemAmounts
 	bmi @lbl_C21D16
 	ldx.b wTemp00
 	jsl.l Random
@@ -712,7 +712,7 @@ DATA8_C21B97:
 	ldx.b #$FF
 @lbl_C21D40:
 	inx
-	lda.l $7E894F,x
+	lda.l wShirenStatus.itemAmounts,x
 	bpl @lbl_C21D40
 	dex
 	stx.b wTemp01
@@ -721,7 +721,7 @@ DATA8_C21B97:
 	ldx.b wTemp00
 	pla
 	sta.b wTemp00
-	lda.l $7E894F,x
+	lda.l wShirenStatus.itemAmounts,x
 	cmp.l $7E8970
 	beq @lbl_C21D16
 	cmp.l $7E8971
@@ -733,7 +733,7 @@ DATA8_C21B97:
 	phx
 	jsl.l func_C21591
 	plx
-	lda.l $7E894F,x
+	lda.l wShirenStatus.itemAmounts,x
 	sta.b wTemp02
 	lda.b #$0B
 	sta.b wTemp00
@@ -742,7 +742,7 @@ DATA8_C21B97:
 	phx
 	jsl.l DisplayMessage
 	plx
-	lda.l $7E894F,x
+	lda.l wShirenStatus.itemAmounts,x
 	sta.b wTemp00
 	phx
 	jsl.l func_C306F4
@@ -753,7 +753,7 @@ DATA8_C21B97:
 	jsl.l func_C3035D
 	plx
 	lda.b wTemp00
-	sta.l $7E894F,x
+	sta.l wShirenStatus.itemAmounts,x
 	stz.b wTemp00
 	plp
 	rtl
@@ -777,7 +777,7 @@ DATA8_C21B97:
 ;skull mage
 
 	php
-	sep #$30
+	sep #$30 ;AXY->8
 	ldx.b wTemp00
 	lda.b wTemp01
 	bit.b #$40
@@ -887,7 +887,7 @@ DATA8_C21B97:
 ;thief walrus
 
 	php
-	sep #$30
+	sep #$30 ;AXY->8
 	ldx.b wTemp00
 	lda.b wTemp01
 	bit.b #$40
@@ -939,7 +939,7 @@ DATA8_C21B97:
 ;ghost radish
 
 	php
-	sep #$30
+	sep #$30 ;AXY->8
 	ldx.b wTemp00
 	lda.b wTemp01
 	bit.b #$40
@@ -974,7 +974,7 @@ DATA8_C21B97:
 	lda.l $7E85C9,x
 	sta.b wTemp03
 	stx.b wTemp04
-	stz.b w0005
+	stz.b wTemp05
 	jsl.l func_C33382
 @lbl_C22361:
 	stz.b wTemp00
@@ -996,7 +996,7 @@ DATA8_C21B97:
 ;gaze
 
 	php
-	sep #$30
+	sep #$30 ;AXY->8
 	ldx.b wTemp00
 	ldy.b wTemp01
 	jsl.l Random
@@ -1087,7 +1087,7 @@ DATA8_C21B97:
 ;gaibara
 
 	php
-	sep #$30
+	sep #$30 ;AXY->8
 	ldx.b wTemp00
 	phx
 	jsl.l func_C6008C
@@ -1109,7 +1109,7 @@ DATA8_C21B97:
 ;pekeji
 
 	php
-	sep #$30
+	sep #$30 ;AXY->8
 	ldx.b wTemp00
 	lda.b wTemp01
 	bit.b #$40

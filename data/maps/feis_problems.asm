@@ -174,39 +174,39 @@ FeisProblemsMapTrapDataTable:
 	.dl NoTrapsData
 	.dl Floor12Traps
 	.dl NoTrapsData
-	.dl TrapData_C3CAF6
+	.dl Floor14Traps
 	.dl NoTrapsData
-	.dl TrapData_C3CB30
+	.dl Floor16Traps
 	.dl NoTrapsData
-	.dl TrapData_C3CB01
+	.dl Floor18Traps
 	.dl NoTrapsData
-	.dl TrapData_C3CB14
+	.dl Floor20Traps
 	.dl NoTrapsData
-	.dl TrapData_C3CB45
+	.dl Floor22Traps
 	.dl NoTrapsData
-	.dl TrapData_C3CB37
-	.dl NoTrapsData
-	.dl NoTrapsData
+	.dl Floor24Traps
 	.dl NoTrapsData
 	.dl NoTrapsData
 	.dl NoTrapsData
 	.dl NoTrapsData
-	.dl TrapData_C3CA6D
-	.dl TrapData_C3CBAC
 	.dl NoTrapsData
 	.dl NoTrapsData
-	.dl TrapData_C3CA74
+	.dl Floor31Traps
+	.dl Floor32Traps
+	.dl NoTrapsData
+	.dl NoTrapsData
+	.dl Floor35Traps
 	.dl NoTrapsData
 	.dl NoTrapsData
 	.dl NoTrapsData
-	.dl TrapData_C3CA7B
-	.dl TrapData_C3CA7F
+	.dl Floor39Traps
+	.dl Floor40Traps
 	.dl NoTrapsData
-	.dl TrapData_C3CB3B
-	.dl TrapData_C3CABA
+	.dl Floor42Traps
+	.dl Floor43Traps
 	.dl NoTrapsData
 	.dl NoTrapsData
-	.dl TrapData_C3CAAD
+	.dl Floor46Traps
 	.dl NoTrapsData
 	.dl NoTrapsData
 	.dl NoTrapsData

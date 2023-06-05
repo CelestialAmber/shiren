@@ -2,12 +2,13 @@
 #include <stdio.h>
 #include <stdint.h>
 #include <string.h>
+#include <stdbool.h>
 
 //TODO: cleanup/improve this file
 
 uint8_t *compressed = NULL;
 char* filename = NULL;
-int skipHeaderByte = 0;
+bool skipHeaderByte = false;
 
 int startsWith(const char *str, const char *pre)
 {
@@ -33,14 +34,14 @@ int CalculateHeaderByte(int length){
 			pixelOffsetDir = 0;
 			pixelOffset = atoi(currentPart + 5); //Convert the number in the string to a number
 			if(pixelOffset == 0){
-				printf("Error: Invalid format. Should be .right[number]");
+				printf("Error: Invalid format. Should be .right[number]\n");
 				exit(EXIT_FAILURE);
 			}
 		}else if(startsWith(currentPart, "left")){
 			pixelOffsetDir = 1;
 			pixelOffset = atoi(currentPart + 4); //Convert the number in the string to a number
 			if(pixelOffset == 0){
-				printf("Error: Invalid format. Should be .left[number]");
+				printf("Error: Invalid format. Should be .left[number]\n");
 				exit(EXIT_FAILURE);
 			}
 		}else if(startsWith(currentPart, "unkflag")){
@@ -56,7 +57,7 @@ int CalculateHeaderByte(int length){
 	else if(width == 24) imageType = 2;
 	else if(width == 32) imageType = 3;
 	else{
-		printf("Error: width must be 16/24/32");
+		printf("Error: width must be 16/24/32\n");
 		exit(EXIT_FAILURE);
 	}
 
@@ -67,8 +68,9 @@ int CalculateHeaderByte(int length){
 
 //TODO: add support for 1bpp images
 int compress(uint8_t* imageData, int uncompressedSize, int bitDepth) {
-	int debugInfo = 0;
-	int tiles = uncompressedSize/32;
+	bool debugInfo = false;
+	int tileSize = 8 * bitDepth;
+	int tiles = uncompressedSize/tileSize;
     int index = 0;
 
 	//If the header byte should be included, calculate it and save it to the array at the beginning
@@ -82,50 +84,84 @@ int compress(uint8_t* imageData, int uncompressedSize, int bitDepth) {
 	uint8_t compressedTileData[32*2];
 	uint8_t tempTileData[32*2];
 
-	if (bitDepth == 4) {
-		//Compress tiles in groups of 4
-		for (int i = 0; i < tiles; i += 4) {
-			if (debugInfo) printf("Creating block %d\n",(i / 4));
-			uint8_t groupByte = 0;
-			int groupLength = 0;
-			int tempIndex = index;
+	//Compress tiles in groups of 4
+	for (int i = 0; i < tiles; i += 4) {
+		if (debugInfo) printf("Creating block %d\n",(i / 4));
+		uint8_t groupByte = 0;
+		int groupLength = 0;
+		int tempIndex = index;
 
-			//For each tile in the group, try each compression method and choose the best one
-			for (int j = 0; j < 4; j++) {
-				if (debugInfo) printf("Compressing tile %d\n",j);
+		//For each tile in the group, try each compression method and choose the best one
+		for (int j = 0; j < 4; j++) {
+			if (debugInfo) printf("Compressing tile %d\n",j);
 
-				uint8_t* tilePtr = imageData + 32*(i + j);
-				int minLength = 0;
-				int type = 0;
+			uint8_t* tilePtr = imageData + tileSize*(i + j);
+			int minLength = 0;
+			int type = 0;
 
-				//Check if the tile is blank (all 0 bytes)
-				int blank = 1;
+			//Check if the tile is blank (all 0 bytes)
+			bool blank = true;
 
-				for(int k = 0; k < 32; k++) {
-					if (tilePtr[k] != 0) {
-						blank = 0;
-						break;
-					}
+			for(int k = 0; k < tileSize; k++) {
+				if (tilePtr[k] != 0) {
+					blank = false;
+					break;
 				}
+			}
 
-				//If the tile is blank, use type 1 (blank tile)
-				if (blank == 1) {
-					if (debugInfo) printf("Tile is blank, using type 1\n");
-					type = 1;
-				} else {
-					//Type 0 (uncompressed)
-					memcpy(compressedTileData, tilePtr, 32); //Copy the current tile to the temp array
-					minLength = 32;
-					type = 0;
+			//If the tile is blank, use type 1 (blank tile)
+			if (blank) {
+				if (debugInfo) printf("Tile is blank, using type 1\n");
+				type = 1;
+			} else {
+				//Type 0 (uncompressed)
+				memcpy(compressedTileData, tilePtr, tileSize); //Copy the current tile to the temp array
+				minLength = tileSize;
+				type = 0;
 
-					//Type 2 (both halves are combined, missing lines are blank)
+				//Type 2 (both halves are combined, missing lines are blank)
 
-					
-					//Info value for types 2/3
-					uint16_t tileInfoVal = 0;
-					int tempArrayIndex = 2; //Start at index 2 to leave room for the info bytes
+				
+				//Info value for types 2/3
+				uint16_t tileInfoVal = 0;
+				int tempArrayIndex = (bitDepth == 4 ? 2 : 1); //Start at index 1/2 to leave room for the info bytes
 
-					for (int k = 0; k < 8; k++) {
+				for (int k = 0; k < 8; k++) {
+					if(bitDepth == 1){
+						int lineBit;
+						uint8_t planeByte = tilePtr[k];
+
+						//If the byte is 0, then the line bit is 0 (blank line)
+						if (planeByte == 0) {
+							lineBit = 0;
+						} else {
+							//Otherwise, add the byte to the list
+							lineBit = 1;
+							tempTileData[tempArrayIndex++] = planeByte;
+						}
+
+						//Write the line bit to the info byte
+						tileInfoVal |= (uint8_t)(lineBit << k);
+					}
+					else if(bitDepth == 2){
+						int lineBit;
+						uint8_t plane1Byte = tilePtr[k * 2];
+						uint8_t plane2Byte = tilePtr[k * 2 + 1];
+
+						//If both bytes are 0, then the line bit is 0 (blank line)
+						if (plane1Byte == 0 && plane2Byte == 0) {
+							lineBit = 0;
+						} else {
+							//Otherwise, add the two bytes to the list
+							lineBit = 1;
+							tempTileData[tempArrayIndex++] = plane1Byte;
+							tempTileData[tempArrayIndex++] = plane2Byte;
+						}
+
+						//Write the line bit to the info byte
+						tileInfoVal |= (uint8_t)(lineBit << k);
+					}
+					else if(bitDepth == 4){
 						int lineBit1; //1st line bit
 						int lineBit2; //2nd line bit
 						uint8_t plane1Byte = tilePtr[k * 2];
@@ -157,30 +193,54 @@ int compress(uint8_t* imageData, int uncompressedSize, int bitDepth) {
 						//Write the two line bits to the info byte
 						tileInfoVal |= (uint16_t)((lineBit2 << (k * 2 + 1)) | (lineBit1 << (k * 2)));
 					}
+				}
 
+				if(bitDepth == 1 || bitDepth == 2){
+					tempTileData[0] =  (uint8_t)(tileInfoVal & 0xFF);
+				}else{
 					tempTileData[0] =  (uint8_t)(tileInfoVal & 0xFF);
 					tempTileData[1] =  (uint8_t)(tileInfoVal >> 8);
-					
+				}
 
-					int length = tempArrayIndex;
+				int length = tempArrayIndex;
 
-					if(debugInfo)printf("Type 2 info val: %x\n",tileInfoVal);
+				if(debugInfo)printf("Type 2 info val: %x\n",tileInfoVal);
 
-					if (length < minLength) {
-						memcpy(compressedTileData, tempTileData, length);
-						minLength = length;
-						type = 2;
-					}
+				if (length < minLength) {
+					memcpy(compressedTileData, tempTileData, length);
+					minLength = length;
+					type = 2;
+				}
 
-					if (debugInfo) printf("Type 2 size: %d\n",length);
+				if (debugInfo) printf("Type 2 size: %d\n",length);
 
-					//Type 3 (halves are kept separate, missing lines use last defined line (blank by default))
+				//Type 3 (halves are kept separate, missing lines use last defined line (blank by default))
 
-					tempArrayIndex = 2;
-					tileInfoVal = 0;
-					uint8_t lastLineBytes[2] = {0,0};
+				tempArrayIndex = (bitDepth == 4 ? 2 : 1);
+				tileInfoVal = 0;
+				uint8_t lastLineBytes[2] = {0,0};
 
+				if(bitDepth == 1){
 					for (int k = 0; k < 16; k++) {
+						int lineBit;
+						uint8_t planeByte = tilePtr[k];
+
+						//If the byte is the same as the last byte, then the line bit is 0
+						if (planeByte == lastLineBytes[0]) {
+							lineBit = 0;
+						} else {
+							//Otherwise, add the first two bytes to the list
+							lineBit = 1;
+							tempTileData[tempArrayIndex++] = planeByte;
+						}
+
+						lastLineBytes[0] = planeByte;
+
+						//Write the line bit to the info byte
+						tileInfoVal |= (uint16_t)(lineBit << k);
+					}
+				}else{
+					for (int k = 0; k < (bitDepth == 2 ? 8 : 16); k++) {
 						int lineBit;
 						uint8_t plane1Byte = tilePtr[k * 2];
 						uint8_t plane2Byte = tilePtr[k * 2 + 1];
@@ -201,38 +261,40 @@ int compress(uint8_t* imageData, int uncompressedSize, int bitDepth) {
 						//Write the line bit to the info byte
 						tileInfoVal |= (uint16_t)(lineBit << k);
 					}
-
-					tempTileData[0] =  (uint8_t)(tileInfoVal & 0xFF);
-					tempTileData[1] =  (uint8_t)(tileInfoVal >> 8);
-
-					length = tempArrayIndex;
-
-					if(debugInfo)printf("Type 3 info val: %x\n",tileInfoVal);
-
-					if (length < minLength) {
-						memcpy(compressedTileData,tempTileData,length);
-						minLength = length;
-						type = 3;
-					}
-
-					if (debugInfo) printf("Type 3 size: %d\n",length);
 				}
 
-				if (debugInfo) printf("Chose type %d\n",type);
-				uint8_t* destPtr = compressed + tempIndex + (j == 0 ? 1 : 0); //Only add 1 to the destination offset if this is the first tile to leave room for the group byte
-				memcpy(destPtr, compressedTileData, minLength); //Write the compressed tile to the compressed data array
-				tempIndex += minLength + (j == 0 ? 1 : 0);
-				groupLength += minLength + (j == 0 ? 1 : 0);
-				//Write the current type to the group byte
-				groupByte |= (uint8_t)((type & 3) << (j * 2));
+				if(bitDepth == 1 || bitDepth == 2){
+					tempTileData[0] = (uint8_t)(tileInfoVal & 0xFF);
+				}else{
+					tempTileData[0] = (uint8_t)(tileInfoVal & 0xFF);
+					tempTileData[1] = (uint8_t)(tileInfoVal >> 8);
+				}
+
+				length = tempArrayIndex;
+
+				if(debugInfo)printf("Type 3 info val: %x\n",tileInfoVal);
+
+				if (length < minLength) {
+					memcpy(compressedTileData,tempTileData,length);
+					minLength = length;
+					type = 3;
+				}
+
+				if (debugInfo) printf("Type 3 size: %d\n",length);
 			}
 
-			//Add the group byte
-			compressed[index] = groupByte;
-			index += groupLength;
+			if (debugInfo) printf("Chose type %d\n",type);
+			uint8_t* destPtr = compressed + tempIndex + (j == 0 ? 1 : 0); //Only add 1 to the destination offset if this is the first tile to leave room for the group byte
+			memcpy(destPtr, compressedTileData, minLength); //Write the compressed tile to the compressed data array
+			tempIndex += minLength + (j == 0 ? 1 : 0);
+			groupLength += minLength + (j == 0 ? 1 : 0);
+			//Write the current type to the group byte
+			groupByte |= (uint8_t)((type & 3) << (j * 2));
 		}
-	} else {
-		//handle 1bpp
+
+		//Add the group byte
+		compressed[index] = groupByte;
+		index += groupLength;
 	}
 
     return index;
@@ -249,7 +311,7 @@ int main(int argc, char *argv[]) {
     int argOffset = 0;
 
     if(!strcmp(argv[1], "--noheader")){
-    	skipHeaderByte = 1;
+    	skipHeaderByte = true;
     	argOffset = 1;
     }
 
@@ -257,6 +319,17 @@ int main(int argc, char *argv[]) {
 	char *outfile = argv[2 + argOffset];
 
 	filename = infile;
+
+	int bitDepth = 4;
+
+	//Determine the bit depth from the file extension
+	if(strstr(filename,".4bpp") != NULL){
+		bitDepth = 4;
+	}else if(strstr(filename,".2bpp") != NULL){
+		bitDepth = 2;
+	}else if(strstr(filename,".1bpp") != NULL){
+		bitDepth = 1;
+	}
 
 	FILE *f = fopen(infile, "rb");
 	if (!f) {
@@ -279,7 +352,11 @@ int main(int argc, char *argv[]) {
 	even if it's extremely unlikely to ever even be more than the uncompressed file. */
     compressed = (uint8_t *)calloc(filesize * 2, 1);
 
-	int compressed_size = compress(data,filesize,4);
+	//TODO: Consider changing this for the header bytes in the bg3 graphics and kointai font graphics.
+	//For now, only the character graphics header byte is handled, so skip the byte for non 4bpp graphics
+	if(bitDepth != 4) skipHeaderByte = true;
+
+	int compressed_size = compress(data,filesize,bitDepth);
 
 	free(data);
 

@@ -4,8 +4,8 @@
 func_C150D7:
 	jsl.l func_C16B75     
 	php                   
-	sep #$20              
-	rep #$10              
+	sep #$20 ;A->8              
+	rep #$10 ;XY->16              
 	ldy.w #$0000          
 	bra @lbl_C150EB       
 @lbl_C150E5:
@@ -133,8 +133,8 @@ DATA8_C150F5:
 
 func_C151C3:
 	php
-	sep #$20
-	rep #$10
+	sep #$20 ;A->8
+	rep #$10 ;XY->16
 	pha
 	jsr.w func_C151E9
 	ldx.b wTemp00
@@ -185,7 +185,7 @@ func_C151E9:
 
 NPCScriptFunction_C15A43:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	jsl.l func_C627DB
 	lda.b wTemp00
 	cmp.b #$0C
@@ -193,14 +193,14 @@ NPCScriptFunction_C15A43:
 
 NPCScript_ValidFloor:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	jsl.l GetCurrentFloor 
 	lda.b wTemp00
 	SetCarryIfEqual
 
 NPCScript_InDebugMode:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	lda.l debugMode
 	SetCarryIfEqual
 
@@ -208,7 +208,7 @@ NPCScript_InDebugMode:
 
 NPCScript_InKobamiValley:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	jsl.l GetCurrentDungeon
 	lda.b wTemp00
 	cmp.b #DungeonKobamiValley ;are we in kobami valley?
@@ -216,7 +216,7 @@ NPCScript_InKobamiValley:
 
 NPCScript_InKitchenGodShrine:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	jsl.l GetCurrentDungeon
 	lda.b wTemp00
 	cmp.b #DungeonKitchenGodShrine ;are we in kitchen god shrine?
@@ -225,7 +225,7 @@ NPCScript_InKitchenGodShrine:
 
 NPCScript_InTrapMasterDungeon:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	jsl.l GetCurrentDungeon
 	lda.b wTemp00
 	cmp.b #DungeonTrapMaster ;are we in the trap master dungeon?
@@ -234,7 +234,7 @@ NPCScript_InTrapMasterDungeon:
 
 NPCScript_InFeisFinalProblemDungeon:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	jsl.l GetCurrentDungeon
 	lda.b wTemp00
 	cmp.b #DungeonFeisFinalProblem ;are we in fei's final problem?
@@ -243,28 +243,28 @@ NPCScript_InFeisFinalProblemDungeon:
 
 NPCScriptFunction_C15AC2:
 	php
-	sep #$30
+	sep #$30 ;AXY->8
 	GetEvent Event18
 	bit.b #$02
 	ClearCarryIfEqual
 
 NPCScriptFunction_C15AD9:
 	php
-	sep #$30
+	sep #$30 ;AXY->8
 	GetEvent Event18
 	bit.b #$04
 	ClearCarryIfEqual
 
 NPCScriptFunction_C15AF0:
 	php
-	sep #$30
+	sep #$30 ;AXY->8
 	GetEvent Event18
 	bit.b #$08
 	ClearCarryIfEqual
 
 NPCScriptFunction_C15B07:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	GetEvent Event83
 	bne @lbl_C15B2A
 	GetEvent Event_Oryu
@@ -300,14 +300,14 @@ NPCScriptFunction_C15B07:
 
 NPCScriptFunction_C15B65:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	GetEvent Event_Oryu
 	cmp.b #$05
 	SetCarryIfEqual
 
 NPCScriptFunction_C15B7C:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	jsl.l func_C627DB
 	lda.b wTemp00
 	cmp.b #$0A
@@ -326,7 +326,7 @@ NPCScriptFunction_C15B7C:
 
 NPCScriptFunction_C15B99:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	jsl.l func_C627DB
 	lda.b wTemp00
 	cmp.b #$0A
@@ -345,7 +345,7 @@ NPCScriptFunction_C15B99:
 
 NPCScriptFunction_C15BB6:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	jsl.l func_C627DB
 	lda.b wTemp00
 	cmp.b #$0A
@@ -364,7 +364,7 @@ NPCScriptFunction_C15BB6:
 
 NPCScriptFunction_C15BD3:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	jsl.l func_C627DB
 	lda.b wTemp00
 	cmp.b #$0A
@@ -383,7 +383,7 @@ NPCScriptFunction_C15BD3:
 
 NPCScriptFunction_C15BF0:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	jsl.l func_C627DB
 	lda.b wTemp00
 	cmp.b #$01
@@ -412,7 +412,7 @@ NPCScriptFunction_C15C32:
 
 NPCScriptFunction_C15C3F:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	GetEvent Event8B
 	cmp.b #$01
 	SetCarryIfEqual
@@ -424,7 +424,7 @@ NPCScriptFunction_C15C56:
 
 NPCScriptFunction_C15C7E:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	GetEvent Event8B
 	cmp.b #$02
 	SetCarryIfEqual
@@ -436,7 +436,7 @@ NPCScriptFunction_C15C95:
 
 NPCScriptFunction_C15CB1:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	GetEvent Event8C
 	SetCarryIfNotEqual
 
@@ -447,7 +447,7 @@ NPCScriptFunction_C15CC6:
 
 NPCScriptFunction_C15CE2:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	GetEvent Event8D
 	SetCarryIfNotEqual
 
@@ -458,7 +458,7 @@ NPCScriptFunction_C15CF7:
 
 NPCScriptFunction_C15D13:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	GetEvent Event8E
 	SetCarryIfNotEqual
 
@@ -471,7 +471,7 @@ NPCScriptFunction_C15D28:
 
 NPCScriptFunction_C15D62:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	jsl.l func_C627DB
 	lda.b wTemp00
 	cmp.b #$0A
@@ -490,7 +490,7 @@ NPCScriptFunction_C15D62:
 
 NPCScriptFunction_C15D7F:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	jsl.l func_C627DB
 	lda.b wTemp00
 	cmp.b #$0A
@@ -509,7 +509,7 @@ NPCScriptFunction_C15D7F:
 
 NPCScriptFunction_C15D9C:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	jsl.l func_C627DB
 	lda.b wTemp00
 	cmp.b #$0A
@@ -528,7 +528,7 @@ NPCScriptFunction_C15D9C:
 
 NPCScriptFunction_C15DB9:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	jsl.l func_C627DB
 	lda.b wTemp00
 	cmp.b #$0A
@@ -547,7 +547,7 @@ NPCScriptFunction_C15DB9:
 
 NPCScriptFunction_C15DD6:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	jsl.l func_C627DB
 	lda.b wTemp00
 	cmp.b #$0A
@@ -576,14 +576,14 @@ NPCScriptFunction_C15E10:
 
 NPCScriptFunction_C15E21:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	GetEvent Event17
 	bit.b #$01
 	ClearCarryIfNotEqual
 
 NPCScriptFunction_C15E38:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	GetEvent Event8A
 	cmp.b #$01
 	beq @lbl_C15E50
@@ -599,7 +599,7 @@ NPCScriptFunction_C15E38:
 
 NPCScriptFunction_C15E53:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	GetEvent Event_Oryu
 	beq @lbl_C15E69
 	cmp.b #$04
@@ -614,7 +614,7 @@ NPCScriptFunction_C15E53:
 
 NPCScriptFunction_C15E6C:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	jsr.w NPCScriptFunction_C15E53
 	cmp.b #$01
 	beq @lbl_C15E7D
@@ -630,14 +630,14 @@ NPCScriptFunction_C15E6C:
 
 NPCScriptFunction_C15E80:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	jsr.w NPCScriptFunction_C15E53
 	cmp.b #$03
 	ClearCarryIfNotEqual
 
 NPCScriptFunction_C15E90:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	jsl.l GetCurrentFloor
 	lda.b wTemp00
 	cmp.b #$0F
@@ -655,13 +655,13 @@ NPCScriptFunction_C15E90:
 
 NPCScriptFunction_C15EC7:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	GetEvent Event_Gaibara
 	ClearCarryIfNotEqual
 	
 NPCScriptFunction_C15EDC:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	jsr.w NPCScriptFunction_C15EC7
 	cmp.b #$04
 	bcc @lbl_C15EE9
@@ -673,14 +673,14 @@ NPCScriptFunction_C15EDC:
 
 NPCScriptFunction_C15EEC:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	jsr.w NPCScriptFunction_C15EC7
 	cmp.b #$04
 	ClearCarryIfNotEqual
 
 NPCScriptFunction_C15EFC:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	GetEvent Event17
 	bit.b #$01
 	beq @lbl_C15F18
@@ -699,7 +699,7 @@ NPCScriptFunction_C15F1E:
 
 NPCScriptFunction_C15F2F:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	jsr.w NPCScriptFunction_C15EC7
 	cmp.b #$06
 	bcs @lbl_C15F3C
@@ -734,14 +734,14 @@ NPCScriptFunction_C15FA1:
 
 NPCScriptFunction_C15FC9:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	GetEvent Event80
 	cmp.b #$02
 	SetCarryIfEqual
 
 NPCScriptFunction_C15FE0:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	GetEvent Event85
 	bne @lbl_C15FFF
 	GetEvent Event05
@@ -780,28 +780,28 @@ NPCScriptFunction_C15FE0:
 
 NPCScriptFunction_C16048:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	GetEvent Event05
 	cmp.b #$01
 	ClearCarryIfNotEqual
 
 NPCScriptFunction_C1605F:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	GetEvent Event05
 	cmp.b #$02
 	ClearCarryIfNotEqual
 
 NPCScriptFunction_C16076:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	GetEvent Event05
 	cmp.b #$04
 	SetCarryIfEqual
 
 NPCScriptFunction_C1608D:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	GetEvent Event06
 	beq @lbl_C160DC
 	cmp.b #$01
@@ -819,14 +819,14 @@ NPCScriptFunction_C1608D:
 
 NPCScriptFunction_C160DF:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	GetEvent Event06
 	cmp.b #$04
 	ClearCarryIfNotEqual
 
 NPCScriptFunction_C160F6:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	GetEvent Event86
 	bne @lbl_C1611D
 	jsl.l GetCurrentFloor
@@ -850,14 +850,14 @@ NPCScriptFunction_C160F6:
 
 NPCScriptFunction_C1612D:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	GetEvent Event06
 	cmp.b #$06
 	ClearCarryIfNotEqual
 
 NPCScriptFunction_C16144:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	GetEvent Event09
 	bne @lbl_C1617E
 	GetEvent Event88
@@ -883,7 +883,7 @@ NPCScriptFunction_C16144:
 
 NPCScriptFunction_C16181:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	GetEvent Event09
 	beq @lbl_C161B9
 	GetEvent Event_Gaibara
@@ -898,7 +898,7 @@ NPCScriptFunction_C16181:
 
 NPCScriptFunction_C161BC:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	GetEvent Event09
 	cmp.b #$01
 	bne @lbl_C161E8
@@ -916,7 +916,7 @@ NPCScriptFunction_C161BC:
 
 NPCScriptFunction_C161EB:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	GetEvent Event09
 	cmp.b #$02
 	bne @lbl_C1621F
@@ -933,28 +933,28 @@ NPCScriptFunction_C161EB:
 
 NPCScriptFunction_C16222:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	GetEvent Event09
 	cmp.b #$03
 	SetCarryIfEqual
 
 NPCScriptFunction_C16239:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	GetEvent Event09
 	cmp.b #$05
 	SetCarryIfEqual
 
 NPCScriptFunction_C16250:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	GetEvent Event09
 	cmp.b #$06
 	SetCarryIfEqual
 
 NPCScriptFunction_C16267:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	GetEvent Event09
 	cmp.b #$07
 	bcc @lbl_C1627B
@@ -968,7 +968,7 @@ NPCScriptFunction_C16267:
 
 NPCScriptFunction_C1627E:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	GetEvent Event17
 	and.b #$17
 	cmp.b #$17
@@ -976,7 +976,7 @@ NPCScriptFunction_C1627E:
 
 NPCScriptFunction_C16297:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	GetEvent Event17
 	bit.b #$01
 	beq @lbl_C162BA
@@ -993,7 +993,7 @@ NPCScriptFunction_C16297:
 
 NPCScriptFunction_C162C0:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	GetEvent Event09
 	cmp.b #$08
 	bcs @lbl_C162D4
@@ -1030,14 +1030,14 @@ NPCScriptFunction_C16321:
 
 NPCScriptFunction_C16336:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	GetEvent Event09
 	cmp.b #$02
 	SetCarryIfEqual
 
 NPCScriptFunction_C1634D:
 	php                  
-	sep #$20             
+	sep #$20 ;A->8             
 	jsl.l GetCurrentFloor
 	lda.b wTemp00          
 	cmp.b #$0C           
@@ -1066,7 +1066,7 @@ NPCScriptFunction_C16386:
 
 NPCScriptFunction_C1639B:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	GetEvent Event0C
 	cmp.b #$01
 	SetCarryIfEqual
@@ -1077,7 +1077,7 @@ NPCScriptFunction_C163B2:
 
 NPCScriptFunction_C163C9:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	GetEvent Event0D
 	cmp.b #$01
 	bne @false
@@ -1093,7 +1093,7 @@ NPCScriptFunction_C163C9:
 
 NPCScriptFunction_C163EC:
 	php             
-	sep #$20        
+	sep #$20 ;A->8        
 	GetEvent Event00
 	cmp.b #$02      
 	bcs @lbl_C16400 
@@ -1107,43 +1107,43 @@ NPCScriptFunction_C163EC:
 
 NPCScriptFunction_C16403:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	GetEvent Event0F
 	SetCarryIfEqual
 
 NPCScriptFunction_C16418:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	GetEvent Event10
 	SetCarryIfEqual
 
 NPCScriptFunction_C1642D:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	GetEvent Event11
 	SetCarryIfEqual
 
 NPCScriptFunction_C16442:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	GetEvent Event12
 	SetCarryIfEqual
 
 NPCScriptFunction_C16457:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	GetEvent Event13
 	SetCarryIfEqual
 
 NPCScriptFunction_C1646C: 
 	php                                  ;C1646C
-	sep #$20
+	sep #$20 ;A->8
 	GetEvent Event15
 	SetCarryIfNotEqual 
 
 NPCScriptFunction_C16481:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	GetEvent Event15
 	cmp.b #$06
 	bcc @lbl_C16495
@@ -1161,7 +1161,7 @@ NPCScriptFunction_C16498:
 
 NPCScriptFunction_C164AD:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	jsl.l GetCurrentFloor
 	lda.b wTemp00
 	cmp.b #$0F
@@ -1180,7 +1180,7 @@ NPCScriptFunction_C164AD:
 
 NPCScriptFunction_C164CA:
 	php
-	sep #$20
+	sep #$20 ;A->8
 @lbl_C164CD:
 	jsl.l Random
 	lda.b wTemp00
@@ -1210,7 +1210,7 @@ NPCScriptFunction_C164CA:
 
 NPCScriptFunction_C1651A:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	jsl.l GetCurrentFloor
 	lda.b wTemp00
 	cmp.b #$05
@@ -1231,7 +1231,7 @@ NPCScriptFunction_C1651A:
 
 NPCScriptFunction_C1653B:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	jsl.l GetCurrentFloor
 	lda.b wTemp00
 	cmp.b #$01
@@ -1252,7 +1252,7 @@ NPCScriptFunction_C1653B:
 
 NPCScriptFunction_C1655C:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	jsl.l GetCurrentFloor
 	lda.b wTemp00
 	cmp.b #$08
@@ -1273,7 +1273,7 @@ NPCScriptFunction_C1655C:
 
 NPCScriptFunction_C1657D:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	GetEvent Event1A
 	cmp.b #$07
 	bcs @lbl_C16591
@@ -1290,34 +1290,34 @@ NPCScriptFunction_C16594:
 
 NPCScriptFunction_C165A5:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	GetEvent Event1B
 	ClearCarryIfNotEqual
 
 NPCScriptFunction_C165BA:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	GetEvent Event1B
 	cmp.b #$01
 	ClearCarryIfNotEqual
 
 NPCScriptFunction_C165D1:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	GetEvent Event1B
 	cmp.b #$02
 	ClearCarryIfNotEqual
 
 NPCScriptFunction_C165E8:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	SetEvent Event1B $02
 	plp
 	rts
 
 NPCScriptFunction_C165F9:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	GetEvent Event1C
 	ClearCarryIfNotEqual
 
@@ -1331,7 +1331,7 @@ NPCScriptFunction_C1660E:
 
 NPCScriptFunction_C16623:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	jsl.l Random
 	lda.b wTemp00
 	cmp.b #$20
@@ -1351,7 +1351,7 @@ NPCScriptFunction_C16636:
 
 NPCScriptFunction_C16649:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	jsl.l Random
 	lda.b wTemp00
 	cmp.b #$55
@@ -1366,7 +1366,7 @@ NPCScriptFunction_C16649:
 
 NPCScriptFunction_C1665C:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	jsl.l Random
 	lda.b wTemp00
 	cmp.b #$80
@@ -1385,7 +1385,7 @@ NPCScriptFunction_C1666F:
 
 NPCScriptFunction_C166A1:
 	php                  
-	sep #$20             
+	sep #$20 ;A->8             
 	jsl.l GetCurrentFloor
 	lda.b wTemp00          
 	cmp.b #$0F           
@@ -1422,8 +1422,8 @@ NPCScriptFunction_C166CD:
 
 NPCScriptFunction_C1674F:
 	php
-	sep #$20
-	rep #$10
+	sep #$20 ;A->8
+	rep #$10 ;XY->16
 	lda.b #$00
 	pha
 	GetEvent Event06
@@ -1450,11 +1450,11 @@ NPCScriptFunction_C1674F:
 
 NPCScriptFunction_C16790:
 	php
-	sep #$30
+	sep #$30 ;AXY->8
 	ldx.b #$63
 	lda.b #$00
 @lbl_C16797:
-	stx.b w0006
+	stx.b wTemp06
 	pha
 	phx
 	jsl.l func_C6051F
@@ -1465,7 +1465,7 @@ NPCScriptFunction_C16790:
 	eor.b wTemp02
 	eor.b wTemp03
 	eor.b wTemp04
-	eor.b w0005
+	eor.b wTemp05
 	dex
 	bpl @lbl_C16797
 	sta.b wTemp02
@@ -1484,7 +1484,7 @@ NPCScriptFunction_C167BC:
 
 NPCScriptFunction_C167F6:
 	php
-	sep #$30
+	sep #$30 ;AXY->8
 	ldx.b #$12
 @lbl_C167FB:
 	stx.b wTemp00
@@ -1504,7 +1504,7 @@ NPCScriptFunction_C167F6:
 
 func_C1681A:
 	php
-	sep #$30
+	sep #$30 ;AXY->8
 	lda.b wTemp02
 	pha
 	ldx.b wTemp00
@@ -1544,7 +1544,7 @@ func_C1681A:
 
 NPCScriptFunction_C16876:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	SetEvent Event93 $08
 	plp
 	rts
@@ -1561,8 +1561,8 @@ NPCScriptFunction_C16898:
 
 NPCScriptFunction_C168C7:
 	php
-	sep #$20
-	rep #$10
+	sep #$20 ;A->8
+	rep #$10 ;XY->16
 	stz.b wTemp00
 	lda.b #$07
 	sta.b wTemp01
@@ -1580,7 +1580,7 @@ UNREACH_C168E0:
 
 NPCScriptFunction_C168E8:
 	php
-	sep #$30
+	sep #$30 ;AXY->8
 	GetEvent Event18
 	ora.b #$01
 	sta.b wTemp02
@@ -1642,7 +1642,7 @@ NPCScriptFunction_C16A21:
 
 NPCScriptFunction_C16A55:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	lda.b #$13
 	sta.b wTemp00
 	lda.b #$02
@@ -1659,7 +1659,7 @@ NPCScriptFunction_C16A66:
 
 NPCScriptFunction_C16A6D:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	jsr.w func_C10189
 	jsl.l func_C60907
 	jsl.l func_C28B18
@@ -1668,7 +1668,7 @@ NPCScriptFunction_C16A6D:
 
 NPCScriptFunction_C16A7D:
 	php
-	sep #$30
+	sep #$30 ;AXY->8
 	ldx.b #$00
 @lbl_C16A82:
 	lda.b #$02
@@ -1719,7 +1719,7 @@ NPCScriptFunction_C16AC7:
 
 NPCScriptFunction_C16B2B:
 	php
-	sep #$30
+	sep #$30 ;AXY->8
 	ldx.b #$00
 @lbl_C16B30:
 	lda.b #$01
@@ -1761,7 +1761,7 @@ DATA8_C16B69:
 
 func_C16B75:
 	php
-	sep #$30
+	sep #$30 ;AXY->8
 	jsl.l func_C627DB
 	lda.b wTemp00
 	cmp.b #$0A
@@ -1789,7 +1789,7 @@ func_C16B75:
 	rtl
 @lbl_C16BAF:
 	lda.l DATA8_C16BEA,x
-	sta.b w0006
+	sta.b wTemp06
 	phx
 	jsl.l func_C6051F
 	plx
@@ -1839,7 +1839,7 @@ DATA8_C16BEC:
 
 func_C16C7D:
 	php
-	sep #$30
+	sep #$30 ;AXY->8
 	jsl.l func_C627DB
 	lda.b wTemp00
 	cmp.b #$0A
@@ -1881,7 +1881,7 @@ func_C16C7D:
 	jsl.l func_C306C9
 	plx
 	lda.l DATA8_C16BEA,x
-	sta.b w0006
+	sta.b wTemp06
 	phx
 	jsl.l func_C6054A
 	plx
@@ -1907,9 +1907,9 @@ func_C16C7D:
 	sta.b wTemp02
 	sta.b wTemp03
 	sta.b wTemp04
-	sta.b w0005
+	sta.b wTemp05
 	lda.l DATA8_C16BEA,x
-	sta.b w0006
+	sta.b wTemp06
 	phx
 	jsl.l func_C6054A
 	plx

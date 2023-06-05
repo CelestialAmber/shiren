@@ -1,44 +1,44 @@
 func_C3F64E:
 	php
-	rep #$20
+	rep #$20 ;A->16
 	lda.b wTemp00
-	sta.b w00b6
-	sta.b w00ba
+	sta.b wPrevRandomNums1
+	sta.b wPrevRandomNums2
 	lda.b wTemp02
-	sta.b w00b8
-	sta.b w00bc
+	sta.b wPrevRandomNums1+2
+	sta.b wPrevRandomNums2+2
 	plp
 	rtl
 
 ;Generates a random 8 bit number, and puts it in wTemp00?
-;a = ((w00b7 << 5) | w00b8) << 1;
-;w00b9 = w00b8;
-;w00b8 = w00b7;
-;w00b7 = w00b6;
+;a = ((wPrevRandomNums1[1] * 32) | wPrevRandomNums1[2]) * 2; //read as 16 bit array
+;wPrevRandomNums1[3] = wPrevRandomNums1[2];
+;wPrevRandomNums1[2] = wPrevRandomNums1[1];
+;wPrevRandomNums1[1] = wPrevRandomNums1[0];
 ;a >>= 8;
-;w00b6 = a;
+;wPrevRandomNums1[0] = a;
 ;wTemp00 = a;
 ;wTemp01 = 0;
 Random:
 	php
-	rep #$20
-	lda.b w00b7
+	rep #$20 ;A->16
+	lda.b wPrevRandomNums1+1
 	asl a
 	asl a
 	asl a
 	asl a
 	asl a
-	eor.b w00b8
+	eor.b wPrevRandomNums1+2
 	asl a
-	sep #$20
-	lda.b w00b8
-	sta.b w00b9
-	lda.b w00b7
-	sta.b w00b8
-	lda.b w00b6
-	sta.b w00b7
+	sep #$20 ;A->8
+	lda.b wPrevRandomNums1+2
+	sta.b wPrevRandomNums1+3
+	lda.b wPrevRandomNums1+1
+	sta.b wPrevRandomNums1+2
+	lda.b wPrevRandomNums1
+	sta.b wPrevRandomNums1+1
 	xba
-	sta.b w00b6
+	sta.b wPrevRandomNums1
 	sta.b wTemp00
 	stz.b wTemp01
 	plp
@@ -46,7 +46,7 @@ Random:
 
 func_C3F683:
 	php
-	rep #$30
+	rep #$30 ;AXY->16
 	lda.w #$0000
 	ldy.w #$0008
 @loop:
@@ -66,7 +66,7 @@ func_C3F683:
 
 func_C3F69F:
 	php
-	sep #$30
+	sep #$30 ;AXY->8
 	lda.b wTemp01
 	sec
 	sbc.b wTemp00
@@ -86,7 +86,7 @@ func_C3F69F:
 
 func_C3F6BE:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	lda.b #$04
 	sta.b wTemp00
 	stz.b wTemp01
@@ -100,7 +100,7 @@ func_C3F6BE:
 
 func_C3F6D5:
 	php
-	sep #$20
+	sep #$20 ;A->8
 	lda.b #$04
 	sta.b wTemp00
 	stz.b wTemp01
@@ -114,24 +114,24 @@ func_C3F6D5:
 
 Random1:
 	php
-	rep #$20
-	lda.b w00bb
+	rep #$20 ;A->16
+	lda.b wPrevRandomNums2+1
 	asl a
 	asl a
 	asl a
 	asl a
 	asl a
-	eor.b w00bc
+	eor.b wPrevRandomNums2+2
 	asl a
-	sep #$20
-	lda.b w00bc
-	sta.b w00bd
-	lda.b w00bb
-	sta.b w00bc
-	lda.b w00ba
-	sta.b w00bb
+	sep #$20 ;A->8
+	lda.b wPrevRandomNums2+2
+	sta.b wPrevRandomNums2+3
+	lda.b wPrevRandomNums2+1
+	sta.b wPrevRandomNums2+2
+	lda.b wPrevRandomNums2
+	sta.b wPrevRandomNums2+1
 	xba
-	sta.b w00ba
+	sta.b wPrevRandomNums2
 	sta.b wTemp00
 	stz.b wTemp01
 	plp

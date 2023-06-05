@@ -5,8 +5,7 @@
 ;Direct Page
 
 ;7e0000
-wTemp00:
-    ds 1
+wTemp00: ds 1
 
     
 ;7e0001
@@ -30,17 +29,17 @@ wTemp04:
 
 
 ;7e0005
-w0005:
+wTemp05:
     ds 1
 
 
 ;7e0006
-w0006:
+wTemp06:
     ds 1
 
 
 ;7e0007
-w0007:
+wTemp07:
     ds 1
 
 
@@ -759,36 +758,12 @@ w00b5:
     ds 1
 
 ;7e00b6
-w00b6:
-    ds 1
-
-;7e00b7
-w00b7:
-    ds 1
-
-;7e00b8
-w00b8:
-    ds 1
-
-;7e00b9
-w00b9:
-    ds 1
+wPrevRandomNums1:
+    dsb 4
 
 ;7e00ba
-w00ba:
-    ds 1
-
-;7e00bb
-w00bb:
-    ds 1
-
-;7e00bc
-w00bc:
-    ds 1
-
-;7e00bd
-w00bd:
-    ds 1
+wPrevRandomNums2:
+    ds 4
 
 ;7e00be
 w00be:
@@ -993,8 +968,144 @@ w00ee:
 w00ef:
     ds 1
 
-.   ds 16
+w00f0:
+	ds 16
 
 ;end of direct page
 
+w0100:
+	ds 0x1F00
+
+.ends
+
+.ramsection "High RAM" bank $7e APPENDTO "Low RAM"
+w2000:
+	ds 0x6000
+.ends
+
+.ramsection "Expanded RAM 7E" bank $7e APPENDTO "High RAM"
+w8000:
+	ds 0x93D
+
+;893d
+wShirenStatus INSTANCEOF ShirenStatus
+
+. ds 0x37da
+
+;c195
+wMapNum:
+	db
+
+;c196
+wTrapSpawnList:
+	dsw 5
+
+. ds 0x1452
+
+;d5f2
+wFloorNum:
+	db
+
+;d5f3
+wDungeonID:
+	db
+
+;d5f4
+wd5f4:
+	db
+
+;d5f5
+wd5f5:
+	db
+
+;d5f6
+wd5f6:
+	db
+
+;d5f7
+wd5f7:
+	db
+
+;d5f8
+wIsInTown:
+	db
+
+;d5f9
+wd5f9:
+	db
+
+;d5fa
+wStairsDir:
+	db
+
+;d5fb
+wd5fb:
+	db
+
+;d5fc
+wd5fc:
+	db
+
+;d5fd
+wIsMapActive:
+	db
+
+;d5fe
+wShuffleDungeonIndex:
+	db
+
+;d5ff
+wd5ff:
+	db
+
+;d600
+wPlaying:
+	db
+
+;d601
+wShowMessageEffects:
+	db
+
+;d602
+wd602:
+	dw
+
+;d604
+wd604:
+	db
+
+;d605
+wLoading:
+	db
+
+;d606
+;probably related to kron's wind
+wWindFlag:
+	db
+
+;d607
+wd607:
+	db
+
+;d608
+wd608:
+	db
+
+;d609
+wd609:
+	db
+
+;d60a
+wd60a:
+	db
+
+;d60b
+wd60b:
+	db
+
+.ends
+
+.ramsection "Expanded RAM 7F" bank $7f
+w7f0000:
+	ds 0x10000
 .ends

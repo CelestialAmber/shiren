@@ -59,240 +59,1161 @@ DATA8_DC0070:
 	
 ;dc1ad1
 UIGraphics_dc1ad1:
-.incbin "gfx/ui/dc1ad1.bin"
+.db $36
+.incbin "gfx/bg3/dc1ad1.2bpp.lz"
 
 ;dc24ce
 UIGraphics_dc24ce:
-.incbin "gfx/ui/dc24ce.bin"
+.incbin "gfx/bg3/dc24ce.bin"
 
 ;dc268e
 UIGraphics_dc268e:
-.incbin "gfx/ui/dc268e.bin"
+.incbin "gfx/bg3/dc268e.bin"
 
 ;dc2892
 UIGraphics_dc2892:
-.incbin "gfx/ui/dc2892.bin"
+.db $0A
+.incbin "gfx/bg3/dc2892.2bpp.lz"
 
 ;dc2a24
 UIGraphics_dc2a24:
-.incbin "gfx/ui/dc2a24.bin"
+.incbin "gfx/bg3/dc2a24.bin"
 
 ;dc2a64
 UIGraphics_dc2a64:
-.incbin "gfx/ui/dc2a64.bin"
+.db $07
+.incbin "gfx/bg3/dc2a64.2bpp.lz"
 
 ;dc2bcb
 UIGraphics_dc2bcb:
-.incbin "gfx/ui/dc2bcb.bin"
+.incbin "gfx/bg3/dc2bcb.bin"
 
 ;dc2bfe
 UIGraphics_dc2bfe:
-.incbin "gfx/ui/dc2bfe.bin"
+.db $35
+.incbin "gfx/bg3/dc2bfe.2bpp.lz"
 
 ;dc3501
 UIGraphics_dc3501:
-.incbin "gfx/ui/dc3501.bin"
+.incbin "gfx/bg3/dc3501.bin"
 
 ;dc3611
 UIGraphics_dc3611:
-.incbin "gfx/ui/dc3611.bin"
+.db $0C
+.incbin "gfx/bg3/dc3611.2bpp.lz"
 
 ;dc3821
 UIGraphics_dc3821:
-.incbin "gfx/ui/dc3821.bin"
+.incbin "gfx/bg3/dc3821.bin"
 
 ;dc3a01
 UIGraphics_dc3a01:
-.incbin "gfx/ui/dc3a01.bin"
+.db $1C
+.incbin "gfx/bg3/dc3a01.2bpp.lz"
 
 ;dc3efd
 UIGraphics_dc3efd:
-.incbin "gfx/ui/dc3efd.bin"
+.incbin "gfx/bg3/dc3efd.bin"
 
 ;dc3fbf
 UIGraphics_dc3fbf:
-.incbin "gfx/ui/dc3fbf.bin"
+.db $0A
+.incbin "gfx/bg3/dc3fbf.2bpp.lz"
 
 ;dc41d6
 UIGraphics_dc41d6:
-.incbin "gfx/ui/dc41d6.bin"
+.incbin "gfx/bg3/dc41d6.bin"
 
 ;dc45b8
 UIGraphics_dc45b8:
-.incbin "gfx/ui/dc45b8.bin"
+.incbin "gfx/bg3/dc45b8.bin"
 
 ;dc494b
 UIGraphics_dc494b:
-.incbin "gfx/ui/dc494b.bin"
+.db $26
+.incbin "gfx/bg3/dc494b.2bpp.lz"
 
 ;dc4eb3
 UIGraphics_dc4eb3:
-.incbin "gfx/ui/dc4eb3.bin"
+.incbin "gfx/bg3/dc4eb3.bin"
 
 ;dc4ff2
 UIGraphics_dc4ff2:
-.incbin "gfx/ui/dc4ff2.bin"
+.db $15
+.incbin "gfx/bg3/dc4ff2.2bpp.lz"
 
 ;dc545f
 UIGraphics_dc545f:
-.incbin "gfx/ui/dc545f.bin"
+.incbin "gfx/bg3/dc545f.bin"
 
 ;dc55a3
 UIGraphics_dc55a3:
-.incbin "gfx/ui/dc55a3.bin"
+.db $15
+.incbin "gfx/bg3/dc55a3.2bpp.lz"
 
 ;dc59ad
 UIGraphics_dc59ad:
-.incbin "gfx/ui/dc59ad.bin"
+.incbin "gfx/bg3/dc59ad.bin"
 
 ;dc5ac4
 UIGraphics_dc5ac4:
-.incbin "gfx/ui/dc5ac4.bin"
+.db $12
+.incbin "gfx/bg3/dc5ac4.2bpp.lz"
 
 ;dc5dbf
 UIGraphics_dc5dbf:
-.incbin "gfx/ui/dc5dbf.bin"
+.incbin "gfx/bg3/dc5dbf.bin"
 
 ;dc5e27
 UIGraphics_dc5e27:
-.incbin "gfx/ui/dc5e27.bin"
+.db $2E
+.incbin "gfx/bg3/dc5e27.2bpp.lz"
 
 ;dc6797
 UIGraphics_dc6797:
-.incbin "gfx/ui/dc6797.bin"
+.incbin "gfx/bg3/dc6797.bin"
 
 
 DATA8_DC699A:
-	.db $F5,$56,$00,$00,$18,$00,$30,$00,$48,$00,$60,$00,$78,$00,$90,$00  ;DC699A
-	.db $A8,$00,$C0,$00,$D8,$00,$F0,$00,$02,$01,$0E,$01,$26,$01,$3E,$01  ;DC69AA
-	.db $56,$01,$6C,$01,$82,$01,$9A,$01,$B2,$01,$C8,$01,$DC,$01,$F2,$01  ;DC69BA
-	.db $08,$02,$1E,$02,$34,$02,$4C,$02,$62,$02,$78,$02,$8E,$02,$A4,$02  ;DC69CA
-	.db $BA,$02,$D0,$02,$E4,$02,$FA,$02,$10,$03,$26,$03,$3C,$03,$52,$03  ;DC69DA
-	.db $68,$03,$7E,$03,$94,$03,$AA,$03,$C0,$03,$D6,$03,$EC,$03,$02,$04  ;DC69EA
-	.db $18,$04,$2E,$04,$40,$04,$56,$04,$6A,$04,$80,$04,$96,$04,$AC,$04  ;DC69FA
-	.db $C2,$04,$D6,$04,$EC,$04,$02,$05,$16,$05,$2C,$05,$42,$05,$5A,$05  ;DC6A0A
-	.db $70,$05,$86,$05,$9E,$05,$B4,$05,$CA,$05,$E2,$05,$F2,$05,$08,$06  ;DC6A1A
-	.db $20,$06,$34,$06,$4A,$06,$62,$06,$78,$06,$8E,$06,$A4,$06,$BA,$06  ;DC6A2A
-	.db $D0,$06,$E6,$06,$FC,$06,$12,$07,$28,$07,$3E,$07,$54,$07,$6A,$07  ;DC6A3A
-	.db $80,$07,$96,$07,$AC,$07,$C2,$07,$D2,$07,$E2,$07,$F2,$07,$04,$08  ;DC6A4A
-	.db $16,$08,$24,$08,$36,$08,$48,$08,$5A,$08,$66,$08,$7C,$08,$94,$08  ;DC6A5A
-	.db $AC,$08,$C4,$08,$D6,$08,$EE,$08,$06,$09,$1E,$09,$36,$09,$4E,$09  ;DC6A6A
-	.db $66,$09,$7E,$09,$96,$09,$AE,$09,$C2,$09,$DA,$09,$F2,$09,$0A,$0A  ;DC6A7A
-	.db $20,$0A,$36,$0A,$4A,$0A,$62,$0A,$78,$0A,$8E,$0A,$A2,$0A,$BA,$0A  ;DC6A8A
-	.db $D2,$0A,$EA,$0A,$02,$0B,$1A,$0B,$30,$0B,$48,$0B,$5E,$0B,$74,$0B  ;DC6A9A
-	.db $8C,$0B,$A4,$0B,$BC,$0B,$CE,$0B,$E2,$0B,$FA,$0B,$10,$0C,$24,$0C  ;DC6AAA
-	.db $3C,$0C,$54,$0C,$6A,$0C,$82,$0C,$9A,$0C,$AE,$0C,$C6,$0C,$DE,$0C  ;DC6ABA
-	.db $F0,$0C,$08,$0D,$22,$0D,$3A,$0D,$52,$0D,$6A,$0D,$7E,$0D,$94,$0D  ;DC6ACA
-	.db $AA,$0D,$C0,$0D,$D4,$0D,$EC,$0D,$FE,$0D,$10,$0E,$26,$0E,$3E,$0E  ;DC6ADA
-	.db $54,$0E,$6A,$0E,$7E,$0E,$94,$0E,$AA,$0E,$BE,$0E,$D0,$0E,$E2,$0E  ;DC6AEA
-	.db $EE,$0E,$FC,$0E,$0C,$0F,$1E,$0F,$30,$0F,$3E,$0F,$50,$0F,$5C,$0F  ;DC6AFA
-	.db $72,$0F,$78,$0F,$86,$0F,$8C,$0F,$A6,$0F,$B4,$0F,$CC,$0F,$E6,$0F  ;DC6B0A
-	.db $00,$10,$1A,$10,$34,$10,$4E,$10,$68,$10,$7A,$10,$94,$10,$AE,$10  ;DC6B1A
-	.db $C8,$10,$E2,$10,$FC,$10,$16,$11,$30,$11,$48,$11,$62,$11,$7C,$11  ;DC6B2A
-	.db $96,$11,$B0,$11,$CA,$11,$E2,$11,$FC,$11,$16,$12,$2E,$12,$48,$12  ;DC6B3A
-	.db $62,$12,$7C,$12,$96,$12,$B0,$12,$CA,$12,$E4,$12,$FE,$12,$18,$13  ;DC6B4A
-	.db $32,$13,$4C,$13,$66,$13,$7E,$13,$98,$13,$B2,$13,$CC,$13,$E6,$13  ;DC6B5A
-	.db $00,$14,$1A,$14,$32,$14,$4C,$14,$66,$14,$80,$14,$9A,$14,$B4,$14  ;DC6B6A
-	.db $CE,$14,$E8,$14,$02,$15,$1C,$15,$34,$15,$4E,$15,$68,$15,$82,$15  ;DC6B7A
-	.db $9C,$15,$B6,$15,$D0,$15,$E8,$15,$02,$16,$1C,$16,$36,$16,$50,$16  ;DC6B8A
-	.db $6A,$16,$84,$16,$9E,$16,$B6,$16,$D0,$16,$DE,$16,$F6,$16,$10,$17  ;DC6B9A
-	.db $28,$17,$42,$17,$5C,$17,$76,$17,$90,$17,$A8,$17,$C2,$17,$DC,$17  ;DC6BAA
-	.db $F6,$17,$0E,$18,$28,$18,$42,$18,$5C,$18,$76,$18,$90,$18,$AA,$18  ;DC6BBA
-	.db $C4,$18,$DA,$18,$F4,$18,$0C,$19,$26,$19,$40,$19,$5A,$19,$72,$19  ;DC6BCA
-	.db $8C,$19,$A6,$19,$C0,$19,$DA,$19,$F4,$19,$0A,$1A,$24,$1A,$3E,$1A  ;DC6BDA
-	.db $58,$1A,$72,$1A,$88,$1A,$A2,$1A,$BC,$1A,$D6,$1A,$EE,$1A,$08,$1B  ;DC6BEA
-	.db $22,$1B,$3C,$1B,$56,$1B,$70,$1B,$8A,$1B,$A4,$1B,$BE,$1B,$D8,$1B  ;DC6BFA
-	.db $EE,$1B,$04,$1C,$1E,$1C,$38,$1C,$52,$1C,$6C,$1C,$86,$1C,$A0,$1C  ;DC6C0A
-	.db $BA,$1C,$D4,$1C,$EE,$1C,$08,$1D,$22,$1D,$3C,$1D,$56,$1D,$70,$1D  ;DC6C1A
-	.db $88,$1D,$A2,$1D,$BC,$1D,$D6,$1D,$F0,$1D,$0A,$1E,$24,$1E,$38,$1E  ;DC6C2A
-	.db $52,$1E,$6C,$1E,$86,$1E,$A0,$1E,$BA,$1E,$D4,$1E,$EE,$1E,$06,$1F  ;DC6C3A
-	.db $20,$1F,$3A,$1F,$54,$1F,$6E,$1F,$88,$1F,$A0,$1F,$BA,$1F,$D4,$1F  ;DC6C4A
-	.db $EC,$1F,$06,$20,$20,$20,$3A,$20,$54,$20,$6E,$20,$84,$20,$9E,$20  ;DC6C5A
-	.db $B8,$20,$D2,$20,$EC,$20,$06,$21,$20,$21,$3A,$21,$54,$21,$6E,$21  ;DC6C6A
-	.db $86,$21,$A0,$21,$BA,$21,$D4,$21,$EE,$21,$08,$22,$22,$22,$3A,$22  ;DC6C7A
-	.db $54,$22,$6C,$22,$86,$22,$A0,$22,$BA,$22,$D4,$22,$EE,$22,$06,$23  ;DC6C8A
-	.db $1E,$23,$36,$23,$50,$23,$6A,$23,$84,$23,$9E,$23,$B8,$23,$D0,$23  ;DC6C9A
-	.db $EA,$23,$04,$24,$1E,$24,$38,$24,$52,$24,$6C,$24,$86,$24,$A0,$24  ;DC6CAA
-	.db $BA,$24,$D4,$24,$EC,$24,$06,$25,$20,$25,$34,$25,$4E,$25,$68,$25  ;DC6CBA
-	.db $82,$25,$9C,$25,$B6,$25,$D0,$25,$EA,$25,$04,$26,$1E,$26,$38,$26  ;DC6CCA
-	.db $52,$26,$6C,$26,$84,$26,$9C,$26,$B6,$26,$D0,$26,$EA,$26,$04,$27  ;DC6CDA
-	.db $1E,$27,$38,$27,$52,$27,$6C,$27,$86,$27,$A0,$27,$BA,$27,$D4,$27  ;DC6CEA
-	.db $EE,$27,$08,$28,$22,$28,$36,$28,$50,$28,$6A,$28,$84,$28,$9E,$28  ;DC6CFA
-	.db $B4,$28,$CE,$28,$E8,$28,$02,$29,$1C,$29,$36,$29,$50,$29,$6A,$29  ;DC6D0A
-	.db $82,$29,$9C,$29,$B6,$29,$D0,$29,$EA,$29,$04,$2A,$1E,$2A,$38,$2A  ;DC6D1A
-	.db $52,$2A,$6C,$2A,$86,$2A,$9E,$2A,$B8,$2A,$D2,$2A,$EC,$2A,$06,$2B  ;DC6D2A
-	.db $20,$2B,$3A,$2B,$54,$2B,$6E,$2B,$88,$2B,$A2,$2B,$BC,$2B,$D6,$2B  ;DC6D3A
-	.db $EE,$2B,$08,$2C,$22,$2C,$3A,$2C,$54,$2C,$6E,$2C,$88,$2C,$A2,$2C  ;DC6D4A
-	.db $BC,$2C,$D6,$2C,$F0,$2C,$0A,$2D,$24,$2D,$3E,$2D,$58,$2D,$72,$2D  ;DC6D5A
-	.db $8C,$2D,$A6,$2D,$BE,$2D,$D8,$2D,$F2,$2D,$0C,$2E,$26,$2E,$3E,$2E  ;DC6D6A
-	.db $58,$2E,$72,$2E,$8C,$2E,$A6,$2E,$C0,$2E,$DA,$2E,$F2,$2E,$0A,$2F  ;DC6D7A
-	.db $24,$2F,$3E,$2F,$58,$2F,$72,$2F,$8C,$2F,$A6,$2F,$BE,$2F,$D8,$2F  ;DC6D8A
-	.db $F2,$2F,$0C,$30,$26,$30,$40,$30,$5A,$30,$74,$30,$8E,$30,$A8,$30  ;DC6D9A
-	.db $C2,$30,$DC,$30,$F6,$30,$10,$31,$2A,$31,$44,$31,$5E,$31,$78,$31  ;DC6DAA
-	.db $90,$31,$AA,$31,$C4,$31,$DE,$31,$F8,$31,$12,$32,$2C,$32,$46,$32  ;DC6DBA
-	.db $60,$32,$7A,$32,$94,$32,$AE,$32,$C8,$32,$E2,$32,$FC,$32,$16,$33  ;DC6DCA
-	.db $30,$33,$4A,$33,$64,$33,$7E,$33,$98,$33,$B2,$33,$CC,$33,$E6,$33  ;DC6DDA
-	.db $00,$34,$1A,$34,$34,$34,$4E,$34,$68,$34,$82,$34,$9C,$34,$B6,$34  ;DC6DEA
-	.db $CC,$34,$E2,$34,$FC,$34,$12,$35,$2C,$35,$46,$35,$60,$35,$7A,$35  ;DC6DFA
-	.db $92,$35,$AA,$35,$C4,$35,$DE,$35,$F6,$35,$0E,$36,$28,$36,$42,$36  ;DC6E0A
-	.db $5C,$36,$76,$36,$90,$36,$AA,$36,$C4,$36,$DE,$36,$F8,$36,$12,$37  ;DC6E1A
-	.db $2C,$37,$46,$37,$60,$37,$7A,$37,$94,$37,$AE,$37,$C8,$37,$E2,$37  ;DC6E2A
-	.db $FC,$37,$16,$38,$30,$38,$4A,$38,$64,$38,$7E,$38,$98,$38,$B2,$38  ;DC6E3A
-	.db $CC,$38,$E6,$38,$00,$39,$18,$39,$32,$39,$48,$39,$62,$39,$78,$39  ;DC6E4A
-	.db $92,$39,$AC,$39,$C6,$39,$E0,$39,$FA,$39,$14,$3A,$2A,$3A,$44,$3A  ;DC6E5A
-	.db $5E,$3A,$78,$3A,$92,$3A,$AC,$3A,$C6,$3A,$E0,$3A,$FA,$3A,$14,$3B  ;DC6E6A
-	.db $2E,$3B,$48,$3B,$62,$3B,$7C,$3B,$96,$3B,$AC,$3B,$C6,$3B,$DE,$3B  ;DC6E7A
-	.db $F8,$3B,$12,$3C,$2C,$3C,$46,$3C,$60,$3C,$7A,$3C,$94,$3C,$AE,$3C  ;DC6E8A
-	.db $C8,$3C,$E2,$3C,$FC,$3C,$16,$3D,$30,$3D,$4A,$3D,$64,$3D,$7E,$3D  ;DC6E9A
-	.db $98,$3D,$B2,$3D,$CA,$3D,$E4,$3D,$FE,$3D,$16,$3E,$30,$3E,$4A,$3E  ;DC6EAA
-	.db $64,$3E,$7E,$3E,$98,$3E,$B2,$3E,$CC,$3E,$E6,$3E,$00,$3F,$1A,$3F  ;DC6EBA
-	.db $34,$3F,$4E,$3F,$68,$3F,$82,$3F,$9A,$3F,$B4,$3F,$CE,$3F,$E8,$3F  ;DC6ECA
-	.db $02,$40,$1A,$40,$34,$40,$4E,$40,$68,$40,$82,$40,$9C,$40,$B6,$40  ;DC6EDA
-	.db $D0,$40,$EA,$40,$04,$41,$16,$41,$22,$41,$3C,$41,$56,$41,$70,$41  ;DC6EEA
-	.db $8A,$41,$A4,$41,$BE,$41,$D8,$41,$F2,$41,$0C,$42,$26,$42,$3C,$42  ;DC6EFA
-	.db $56,$42,$70,$42,$8A,$42,$A4,$42,$BE,$42,$D8,$42,$F2,$42,$0C,$43  ;DC6F0A
-	.db $26,$43,$3E,$43,$58,$43,$72,$43,$8C,$43,$A6,$43,$C0,$43,$DA,$43  ;DC6F1A
-	.db $F4,$43,$0E,$44,$28,$44,$42,$44,$5C,$44,$76,$44,$90,$44,$AA,$44  ;DC6F2A
-	.db $C4,$44,$DE,$44,$F2,$44,$0C,$45,$26,$45,$40,$45,$5A,$45,$74,$45  ;DC6F3A
-	.db $8C,$45,$A6,$45,$C0,$45,$DA,$45,$F4,$45,$0E,$46,$28,$46,$42,$46  ;DC6F4A
-	.db $5C,$46,$72,$46,$8C,$46,$A6,$46,$BC,$46,$D6,$46,$EC,$46,$06,$47  ;DC6F5A
-	.db $1C,$47,$32,$47,$4C,$47,$66,$47,$80,$47,$9A,$47,$B4,$47,$CE,$47  ;DC6F6A
-	.db $E8,$47,$02,$48,$1C,$48,$36,$48,$50,$48,$6A,$48,$84,$48,$9E,$48  ;DC6F7A
-	.db $B8,$48,$D2,$48,$EA,$48,$04,$49,$1E,$49,$38,$49,$52,$49,$6C,$49  ;DC6F8A
-	.db $86,$49,$A0,$49,$BA,$49,$D4,$49,$EC,$49,$06,$4A,$1E,$4A,$34,$4A  ;DC6F9A
-	.db $4A,$4A,$5A,$4A,$6A,$4A,$84,$4A,$9E,$4A,$B8,$4A,$D2,$4A,$EC,$4A  ;DC6FAA
-	.db $06,$4B,$20,$4B,$3A,$4B,$54,$4B,$6E,$4B,$88,$4B,$A2,$4B,$BC,$4B  ;DC6FBA
-	.db $D6,$4B,$F0,$4B,$0A,$4C,$24,$4C,$3E,$4C,$58,$4C,$6E,$4C,$88,$4C  ;DC6FCA
-	.db $A2,$4C,$BC,$4C,$D6,$4C,$F0,$4C,$08,$4D,$22,$4D,$3C,$4D,$54,$4D  ;DC6FDA
-	.db $6E,$4D,$88,$4D,$A2,$4D,$BC,$4D,$D6,$4D,$F0,$4D,$0A,$4E,$24,$4E  ;DC6FEA
-	.db $3E,$4E,$58,$4E,$72,$4E,$8C,$4E,$A4,$4E,$BE,$4E,$D8,$4E,$F2,$4E  ;DC6FFA
-	.db $0C,$4F,$26,$4F,$40,$4F,$5A,$4F,$74,$4F,$8E,$4F,$A8,$4F,$C2,$4F  ;DC700A
-	.db $DC,$4F,$F6,$4F,$10,$50,$2A,$50,$42,$50,$5C,$50,$76,$50,$8E,$50  ;DC701A
-	.db $A8,$50,$C2,$50,$DC,$50,$F6,$50,$10,$51,$2A,$51,$44,$51,$5E,$51  ;DC702A
-	.db $78,$51,$90,$51,$AA,$51,$C4,$51,$DE,$51,$F8,$51,$12,$52,$2C,$52  ;DC703A
-	.db $46,$52,$60,$52,$7A,$52,$94,$52,$AE,$52,$C8,$52,$E0,$52,$FA,$52  ;DC704A
-	.db $14,$53,$2E,$53,$48,$53,$62,$53,$7C,$53,$96,$53,$AE,$53,$C8,$53  ;DC705A
-	.db $E2,$53,$FC,$53,$16,$54,$30,$54,$46,$54,$60,$54,$7A,$54,$94,$54  ;DC706A
-	.db $AE,$54,$C8,$54,$E2,$54,$FC,$54,$14,$55,$2E,$55,$48,$55,$62,$55  ;DC707A
-	.db $7C,$55,$94,$55,$AE,$55,$C8,$55,$E2,$55,$F8,$55,$12,$56,$2C,$56  ;DC708A
-	.db $46,$56,$60,$56,$7A,$56,$94,$56,$AE,$56,$C8,$56,$E2,$56,$FC,$56  ;DC709A
-	.db $16,$57,$30,$57,$4A,$57,$64,$57,$7E,$57,$98,$57,$B2,$57,$CC,$57  ;DC70AA
-	.db $E6,$57,$00,$58,$1A,$58,$34,$58,$4E,$58,$68,$58,$82,$58,$9C,$58  ;DC70BA
-	.db $B6,$58,$D0,$58,$EA,$58,$04,$59,$1E,$59,$36,$59,$50,$59,$6A,$59  ;DC70CA
-	.db $84,$59,$9E,$59,$B8,$59,$D2,$59,$EC,$59,$06,$5A,$20,$5A,$3A,$5A  ;DC70DA
-	.db $54,$5A,$6E,$5A,$8A,$5A,$A4,$5A,$BE,$5A,$D8,$5A,$F2,$5A,$0C,$5B  ;DC70EA
-	.db $26,$5B,$40,$5B,$5A,$5B,$74,$5B,$8E,$5B,$A8,$5B,$C2,$5B,$DC,$5B  ;DC70FA
-	.db $F4,$5B,$0E,$5C,$28,$5C,$42,$5C,$5C,$5C,$76,$5C,$90,$5C,$AA,$5C  ;DC710A
-	.db $C4,$5C,$DE,$5C,$F8,$5C,$12,$5D,$2C,$5D,$46,$5D,$60,$5D,$7A,$5D  ;DC711A
-	.db $94,$5D,$AE,$5D,$C8,$5D,$E2,$5D,$FC,$5D,$16,$5E,$2E,$5E,$48,$5E  ;DC712A
-	.db $62,$5E,$7C,$5E,$98,$5E,$B2,$5E,$CC,$5E,$E6,$5E,$00,$5F,$1A,$5F  ;DC713A
-	.db $34,$5F,$4E,$5F,$68,$5F,$82,$5F,$9A,$5F,$B4,$5F,$CE,$5F,$E8,$5F  ;DC714A
-	.db $02,$60,$1C,$60,$36,$60,$50,$60,$6A,$60,$84,$60,$9C,$60,$B6,$60  ;DC715A
-	.db $D0,$60,$EA,$60,$04,$61,$1E,$61,$38,$61,$52,$61,$6C,$61,$86,$61  ;DC716A
-	.db $A0,$61,$BA,$61,$D4,$61,$EE,$61,$08,$62,$22,$62,$3A,$62,$54,$62  ;DC717A
-	.db $6E,$62,$88,$62,$A2,$62,$BC,$62,$D6,$62,$F0,$62,$08,$63,$22,$63  ;DC718A
-	.db $3C,$63,$56,$63,$70,$63,$8A,$63,$A4,$63,$BE,$63,$D8,$63,$F2,$63  ;DC719A
-	.db $0C,$64,$26,$64,$40,$64,$5A,$64,$74,$64,$8E,$64,$A8,$64
+	.db $F5,$56
+	.dw $0000
+	.dw $0018
+	.dw $0030
+	.dw $0048
+	.dw $0060
+	.dw $0078
+	.dw $0090
+	.dw $00A8
+	.dw $00C0
+	.dw $00D8
+	.dw $00F0
+	.dw $0102
+	.dw $010E
+	.dw $0126
+	.dw $013E
+	.dw $0156
+	.dw $016C
+	.dw $0182
+	.dw $019A
+	.dw $01B2
+	.dw $01C8
+	.dw $01DC
+	.dw $01F2
+	.dw $0208
+	.dw $021E
+	.dw $0234
+	.dw $024C
+	.dw $0262
+	.dw $0278
+	.dw $028E
+	.dw $02A4
+	.dw $02BA
+	.dw $02D0
+	.dw $02E4
+	.dw $02FA
+	.dw $0310
+	.dw $0326
+	.dw $033C
+	.dw $0352
+	.dw $0368
+	.dw $037E
+	.dw $0394
+	.dw $03AA
+	.dw $03C0
+	.dw $03D6
+	.dw $03EC
+	.dw $0402
+	.dw $0418
+	.dw $042E
+	.dw $0440
+	.dw $0456
+	.dw $046A
+	.dw $0480
+	.dw $0496
+	.dw $04AC
+	.dw $04C2
+	.dw $04D6
+	.dw $04EC
+	.dw $0502
+	.dw $0516
+	.dw $052C
+	.dw $0542
+	.dw $055A
+	.dw $0570
+	.dw $0586
+	.dw $059E
+	.dw $05B4
+	.dw $05CA
+	.dw $05E2
+	.dw $05F2
+	.dw $0608
+	.dw $0620
+	.dw $0634
+	.dw $064A
+	.dw $0662
+	.dw $0678
+	.dw $068E
+	.dw $06A4
+	.dw $06BA
+	.dw $06D0
+	.dw $06E6
+	.dw $06FC
+	.dw $0712
+	.dw $0728
+	.dw $073E
+	.dw $0754
+	.dw $076A
+	.dw $0780
+	.dw $0796
+	.dw $07AC
+	.dw $07C2
+	.dw $07D2
+	.dw $07E2
+	.dw $07F2
+	.dw $0804
+	.dw $0816
+	.dw $0824
+	.dw $0836
+	.dw $0848
+	.dw $085A
+	.dw $0866
+	.dw $087C
+	.dw $0894
+	.dw $08AC
+	.dw $08C4
+	.dw $08D6
+	.dw $08EE
+	.dw $0906
+	.dw $091E
+	.dw $0936
+	.dw $094E
+	.dw $0966
+	.dw $097E
+	.dw $0996
+	.dw $09AE
+	.dw $09C2
+	.dw $09DA
+	.dw $09F2
+	.dw $0A0A
+	.dw $0A20
+	.dw $0A36
+	.dw $0A4A
+	.dw $0A62
+	.dw $0A78
+	.dw $0A8E
+	.dw $0AA2
+	.dw $0ABA
+	.dw $0AD2
+	.dw $0AEA
+	.dw $0B02
+	.dw $0B1A
+	.dw $0B30
+	.dw $0B48
+	.dw $0B5E
+	.dw $0B74
+	.dw $0B8C
+	.dw $0BA4
+	.dw $0BBC
+	.dw $0BCE
+	.dw $0BE2
+	.dw $0BFA
+	.dw $0C10
+	.dw $0C24
+	.dw $0C3C
+	.dw $0C54
+	.dw $0C6A
+	.dw $0C82
+	.dw $0C9A
+	.dw $0CAE
+	.dw $0CC6
+	.dw $0CDE
+	.dw $0CF0
+	.dw $0D08
+	.dw $0D22
+	.dw $0D3A
+	.dw $0D52
+	.dw $0D6A
+	.dw $0D7E
+	.dw $0D94
+	.dw $0DAA
+	.dw $0DC0
+	.dw $0DD4
+	.dw $0DEC
+	.dw $0DFE
+	.dw $0E10
+	.dw $0E26
+	.dw $0E3E
+	.dw $0E54
+	.dw $0E6A
+	.dw $0E7E
+	.dw $0E94
+	.dw $0EAA
+	.dw $0EBE
+	.dw $0ED0
+	.dw $0EE2
+	.dw $0EEE
+	.dw $0EFC
+	.dw $0F0C
+	.dw $0F1E
+	.dw $0F30
+	.dw $0F3E
+	.dw $0F50
+	.dw $0F5C
+	.dw $0F72
+	.dw $0F78
+	.dw $0F86
+	.dw $0F8C
+	.dw $0FA6
+	.dw $0FB4
+	.dw $0FCC
+	.dw $0FE6
+	.dw $1000
+	.dw $101A
+	.dw $1034
+	.dw $104E
+	.dw $1068
+	.dw $107A
+	.dw $1094
+	.dw $10AE
+	.dw $10C8
+	.dw $10E2
+	.dw $10FC
+	.dw $1116
+	.dw $1130
+	.dw $1148
+	.dw $1162
+	.dw $117C
+	.dw $1196
+	.dw $11B0
+	.dw $11CA
+	.dw $11E2
+	.dw $11FC
+	.dw $1216
+	.dw $122E
+	.dw $1248
+	.dw $1262
+	.dw $127C
+	.dw $1296
+	.dw $12B0
+	.dw $12CA
+	.dw $12E4
+	.dw $12FE
+	.dw $1318
+	.dw $1332
+	.dw $134C
+	.dw $1366
+	.dw $137E
+	.dw $1398
+	.dw $13B2
+	.dw $13CC
+	.dw $13E6
+	.dw $1400
+	.dw $141A
+	.dw $1432
+	.dw $144C
+	.dw $1466
+	.dw $1480
+	.dw $149A
+	.dw $14B4
+	.dw $14CE
+	.dw $14E8
+	.dw $1502
+	.dw $151C
+	.dw $1534
+	.dw $154E
+	.dw $1568
+	.dw $1582
+	.dw $159C
+	.dw $15B6
+	.dw $15D0
+	.dw $15E8
+	.dw $1602
+	.dw $161C
+	.dw $1636
+	.dw $1650
+	.dw $166A
+	.dw $1684
+	.dw $169E
+	.dw $16B6
+	.dw $16D0
+	.dw $16DE
+	.dw $16F6
+	.dw $1710
+	.dw $1728
+	.dw $1742
+	.dw $175C
+	.dw $1776
+	.dw $1790
+	.dw $17A8
+	.dw $17C2
+	.dw $17DC
+	.dw $17F6
+	.dw $180E
+	.dw $1828
+	.dw $1842
+	.dw $185C
+	.dw $1876
+	.dw $1890
+	.dw $18AA
+	.dw $18C4
+	.dw $18DA
+	.dw $18F4
+	.dw $190C
+	.dw $1926
+	.dw $1940
+	.dw $195A
+	.dw $1972
+	.dw $198C
+	.dw $19A6
+	.dw $19C0
+	.dw $19DA
+	.dw $19F4
+	.dw $1A0A
+	.dw $1A24
+	.dw $1A3E
+	.dw $1A58
+	.dw $1A72
+	.dw $1A88
+	.dw $1AA2
+	.dw $1ABC
+	.dw $1AD6
+	.dw $1AEE
+	.dw $1B08
+	.dw $1B22
+	.dw $1B3C
+	.dw $1B56
+	.dw $1B70
+	.dw $1B8A
+	.dw $1BA4
+	.dw $1BBE
+	.dw $1BD8
+	.dw $1BEE
+	.dw $1C04
+	.dw $1C1E
+	.dw $1C38
+	.dw $1C52
+	.dw $1C6C
+	.dw $1C86
+	.dw $1CA0
+	.dw $1CBA
+	.dw $1CD4
+	.dw $1CEE
+	.dw $1D08
+	.dw $1D22
+	.dw $1D3C
+	.dw $1D56
+	.dw $1D70
+	.dw $1D88
+	.dw $1DA2
+	.dw $1DBC
+	.dw $1DD6
+	.dw $1DF0
+	.dw $1E0A
+	.dw $1E24
+	.dw $1E38
+	.dw $1E52
+	.dw $1E6C
+	.dw $1E86
+	.dw $1EA0
+	.dw $1EBA
+	.dw $1ED4
+	.dw $1EEE
+	.dw $1F06
+	.dw $1F20
+	.dw $1F3A
+	.dw $1F54
+	.dw $1F6E
+	.dw $1F88
+	.dw $1FA0
+	.dw $1FBA
+	.dw $1FD4
+	.dw $1FEC
+	.dw $2006
+	.dw $2020
+	.dw $203A
+	.dw $2054
+	.dw $206E
+	.dw $2084
+	.dw $209E
+	.dw $20B8
+	.dw $20D2
+	.dw $20EC
+	.dw $2106
+	.dw $2120
+	.dw $213A
+	.dw $2154
+	.dw $216E
+	.dw $2186
+	.dw $21A0
+	.dw $21BA
+	.dw $21D4
+	.dw $21EE
+	.dw $2208
+	.dw $2222
+	.dw $223A
+	.dw $2254
+	.dw $226C
+	.dw $2286
+	.dw $22A0
+	.dw $22BA
+	.dw $22D4
+	.dw $22EE
+	.dw $2306
+	.dw $231E
+	.dw $2336
+	.dw $2350
+	.dw $236A
+	.dw $2384
+	.dw $239E
+	.dw $23B8
+	.dw $23D0
+	.dw $23EA
+	.dw $2404
+	.dw $241E
+	.dw $2438
+	.dw $2452
+	.dw $246C
+	.dw $2486
+	.dw $24A0
+	.dw $24BA
+	.dw $24D4
+	.dw $24EC
+	.dw $2506
+	.dw $2520
+	.dw $2534
+	.dw $254E
+	.dw $2568
+	.dw $2582
+	.dw $259C
+	.dw $25B6
+	.dw $25D0
+	.dw $25EA
+	.dw $2604
+	.dw $261E
+	.dw $2638
+	.dw $2652
+	.dw $266C
+	.dw $2684
+	.dw $269C
+	.dw $26B6
+	.dw $26D0
+	.dw $26EA
+	.dw $2704
+	.dw $271E
+	.dw $2738
+	.dw $2752
+	.dw $276C
+	.dw $2786
+	.dw $27A0
+	.dw $27BA
+	.dw $27D4
+	.dw $27EE
+	.dw $2808
+	.dw $2822
+	.dw $2836
+	.dw $2850
+	.dw $286A
+	.dw $2884
+	.dw $289E
+	.dw $28B4
+	.dw $28CE
+	.dw $28E8
+	.dw $2902
+	.dw $291C
+	.dw $2936
+	.dw $2950
+	.dw $296A
+	.dw $2982
+	.dw $299C
+	.dw $29B6
+	.dw $29D0
+	.dw $29EA
+	.dw $2A04
+	.dw $2A1E
+	.dw $2A38
+	.dw $2A52
+	.dw $2A6C
+	.dw $2A86
+	.dw $2A9E
+	.dw $2AB8
+	.dw $2AD2
+	.dw $2AEC
+	.dw $2B06
+	.dw $2B20
+	.dw $2B3A
+	.dw $2B54
+	.dw $2B6E
+	.dw $2B88
+	.dw $2BA2
+	.dw $2BBC
+	.dw $2BD6
+	.dw $2BEE
+	.dw $2C08
+	.dw $2C22
+	.dw $2C3A
+	.dw $2C54
+	.dw $2C6E
+	.dw $2C88
+	.dw $2CA2
+	.dw $2CBC
+	.dw $2CD6
+	.dw $2CF0
+	.dw $2D0A
+	.dw $2D24
+	.dw $2D3E
+	.dw $2D58
+	.dw $2D72
+	.dw $2D8C
+	.dw $2DA6
+	.dw $2DBE
+	.dw $2DD8
+	.dw $2DF2
+	.dw $2E0C
+	.dw $2E26
+	.dw $2E3E
+	.dw $2E58
+	.dw $2E72
+	.dw $2E8C
+	.dw $2EA6
+	.dw $2EC0
+	.dw $2EDA
+	.dw $2EF2
+	.dw $2F0A
+	.dw $2F24
+	.dw $2F3E
+	.dw $2F58
+	.dw $2F72
+	.dw $2F8C
+	.dw $2FA6
+	.dw $2FBE
+	.dw $2FD8
+	.dw $2FF2
+	.dw $300C
+	.dw $3026
+	.dw $3040
+	.dw $305A
+	.dw $3074
+	.dw $308E
+	.dw $30A8
+	.dw $30C2
+	.dw $30DC
+	.dw $30F6
+	.dw $3110
+	.dw $312A
+	.dw $3144
+	.dw $315E
+	.dw $3178
+	.dw $3190
+	.dw $31AA
+	.dw $31C4
+	.dw $31DE
+	.dw $31F8
+	.dw $3212
+	.dw $322C
+	.dw $3246
+	.dw $3260
+	.dw $327A
+	.dw $3294
+	.dw $32AE
+	.dw $32C8
+	.dw $32E2
+	.dw $32FC
+	.dw $3316
+	.dw $3330
+	.dw $334A
+	.dw $3364
+	.dw $337E
+	.dw $3398
+	.dw $33B2
+	.dw $33CC
+	.dw $33E6
+	.dw $3400
+	.dw $341A
+	.dw $3434
+	.dw $344E
+	.dw $3468
+	.dw $3482
+	.dw $349C
+	.dw $34B6
+	.dw $34CC
+	.dw $34E2
+	.dw $34FC
+	.dw $3512
+	.dw $352C
+	.dw $3546
+	.dw $3560
+	.dw $357A
+	.dw $3592
+	.dw $35AA
+	.dw $35C4
+	.dw $35DE
+	.dw $35F6
+	.dw $360E
+	.dw $3628
+	.dw $3642
+	.dw $365C
+	.dw $3676
+	.dw $3690
+	.dw $36AA
+	.dw $36C4
+	.dw $36DE
+	.dw $36F8
+	.dw $3712
+	.dw $372C
+	.dw $3746
+	.dw $3760
+	.dw $377A
+	.dw $3794
+	.dw $37AE
+	.dw $37C8
+	.dw $37E2
+	.dw $37FC
+	.dw $3816
+	.dw $3830
+	.dw $384A
+	.dw $3864
+	.dw $387E
+	.dw $3898
+	.dw $38B2
+	.dw $38CC
+	.dw $38E6
+	.dw $3900
+	.dw $3918
+	.dw $3932
+	.dw $3948
+	.dw $3962
+	.dw $3978
+	.dw $3992
+	.dw $39AC
+	.dw $39C6
+	.dw $39E0
+	.dw $39FA
+	.dw $3A14
+	.dw $3A2A
+	.dw $3A44
+	.dw $3A5E
+	.dw $3A78
+	.dw $3A92
+	.dw $3AAC
+	.dw $3AC6
+	.dw $3AE0
+	.dw $3AFA
+	.dw $3B14
+	.dw $3B2E
+	.dw $3B48
+	.dw $3B62
+	.dw $3B7C
+	.dw $3B96
+	.dw $3BAC
+	.dw $3BC6
+	.dw $3BDE
+	.dw $3BF8
+	.dw $3C12
+	.dw $3C2C
+	.dw $3C46
+	.dw $3C60
+	.dw $3C7A
+	.dw $3C94
+	.dw $3CAE
+	.dw $3CC8
+	.dw $3CE2
+	.dw $3CFC
+	.dw $3D16
+	.dw $3D30
+	.dw $3D4A
+	.dw $3D64
+	.dw $3D7E
+	.dw $3D98
+	.dw $3DB2
+	.dw $3DCA
+	.dw $3DE4
+	.dw $3DFE
+	.dw $3E16
+	.dw $3E30
+	.dw $3E4A
+	.dw $3E64
+	.dw $3E7E
+	.dw $3E98
+	.dw $3EB2
+	.dw $3ECC
+	.dw $3EE6
+	.dw $3F00
+	.dw $3F1A
+	.dw $3F34
+	.dw $3F4E
+	.dw $3F68
+	.dw $3F82
+	.dw $3F9A
+	.dw $3FB4
+	.dw $3FCE
+	.dw $3FE8
+	.dw $4002
+	.dw $401A
+	.dw $4034
+	.dw $404E
+	.dw $4068
+	.dw $4082
+	.dw $409C
+	.dw $40B6
+	.dw $40D0
+	.dw $40EA
+	.dw $4104
+	.dw $4116
+	.dw $4122
+	.dw $413C
+	.dw $4156
+	.dw $4170
+	.dw $418A
+	.dw $41A4
+	.dw $41BE
+	.dw $41D8
+	.dw $41F2
+	.dw $420C
+	.dw $4226
+	.dw $423C
+	.dw $4256
+	.dw $4270
+	.dw $428A
+	.dw $42A4
+	.dw $42BE
+	.dw $42D8
+	.dw $42F2
+	.dw $430C
+	.dw $4326
+	.dw $433E
+	.dw $4358
+	.dw $4372
+	.dw $438C
+	.dw $43A6
+	.dw $43C0
+	.dw $43DA
+	.dw $43F4
+	.dw $440E
+	.dw $4428
+	.dw $4442
+	.dw $445C
+	.dw $4476
+	.dw $4490
+	.dw $44AA
+	.dw $44C4
+	.dw $44DE
+	.dw $44F2
+	.dw $450C
+	.dw $4526
+	.dw $4540
+	.dw $455A
+	.dw $4574
+	.dw $458C
+	.dw $45A6
+	.dw $45C0
+	.dw $45DA
+	.dw $45F4
+	.dw $460E
+	.dw $4628
+	.dw $4642
+	.dw $465C
+	.dw $4672
+	.dw $468C
+	.dw $46A6
+	.dw $46BC
+	.dw $46D6
+	.dw $46EC
+	.dw $4706
+	.dw $471C
+	.dw $4732
+	.dw $474C
+	.dw $4766
+	.dw $4780
+	.dw $479A
+	.dw $47B4
+	.dw $47CE
+	.dw $47E8
+	.dw $4802
+	.dw $481C
+	.dw $4836
+	.dw $4850
+	.dw $486A
+	.dw $4884
+	.dw $489E
+	.dw $48B8
+	.dw $48D2
+	.dw $48EA
+	.dw $4904
+	.dw $491E
+	.dw $4938
+	.dw $4952
+	.dw $496C
+	.dw $4986
+	.dw $49A0
+	.dw $49BA
+	.dw $49D4
+	.dw $49EC
+	.dw $4A06
+	.dw $4A1E
+	.dw $4A34
+	.dw $4A4A
+	.dw $4A5A
+	.dw $4A6A
+	.dw $4A84
+	.dw $4A9E
+	.dw $4AB8
+	.dw $4AD2
+	.dw $4AEC
+	.dw $4B06
+	.dw $4B20
+	.dw $4B3A
+	.dw $4B54
+	.dw $4B6E
+	.dw $4B88
+	.dw $4BA2
+	.dw $4BBC
+	.dw $4BD6
+	.dw $4BF0
+	.dw $4C0A
+	.dw $4C24
+	.dw $4C3E
+	.dw $4C58
+	.dw $4C6E
+	.dw $4C88
+	.dw $4CA2
+	.dw $4CBC
+	.dw $4CD6
+	.dw $4CF0
+	.dw $4D08
+	.dw $4D22
+	.dw $4D3C
+	.dw $4D54
+	.dw $4D6E
+	.dw $4D88
+	.dw $4DA2
+	.dw $4DBC
+	.dw $4DD6
+	.dw $4DF0
+	.dw $4E0A
+	.dw $4E24
+	.dw $4E3E
+	.dw $4E58
+	.dw $4E72
+	.dw $4E8C
+	.dw $4EA4
+	.dw $4EBE
+	.dw $4ED8
+	.dw $4EF2
+	.dw $4F0C
+	.dw $4F26
+	.dw $4F40
+	.dw $4F5A
+	.dw $4F74
+	.dw $4F8E
+	.dw $4FA8
+	.dw $4FC2
+	.dw $4FDC
+	.dw $4FF6
+	.dw $5010
+	.dw $502A
+	.dw $5042
+	.dw $505C
+	.dw $5076
+	.dw $508E
+	.dw $50A8
+	.dw $50C2
+	.dw $50DC
+	.dw $50F6
+	.dw $5110
+	.dw $512A
+	.dw $5144
+	.dw $515E
+	.dw $5178
+	.dw $5190
+	.dw $51AA
+	.dw $51C4
+	.dw $51DE
+	.dw $51F8
+	.dw $5212
+	.dw $522C
+	.dw $5246
+	.dw $5260
+	.dw $527A
+	.dw $5294
+	.dw $52AE
+	.dw $52C8
+	.dw $52E0
+	.dw $52FA
+	.dw $5314
+	.dw $532E
+	.dw $5348
+	.dw $5362
+	.dw $537C
+	.dw $5396
+	.dw $53AE
+	.dw $53C8
+	.dw $53E2
+	.dw $53FC
+	.dw $5416
+	.dw $5430
+	.dw $5446
+	.dw $5460
+	.dw $547A
+	.dw $5494
+	.dw $54AE
+	.dw $54C8
+	.dw $54E2
+	.dw $54FC
+	.dw $5514
+	.dw $552E
+	.dw $5548
+	.dw $5562
+	.dw $557C
+	.dw $5594
+	.dw $55AE
+	.dw $55C8
+	.dw $55E2
+	.dw $55F8
+	.dw $5612
+	.dw $562C
+	.dw $5646
+	.dw $5660
+	.dw $567A
+	.dw $5694
+	.dw $56AE
+	.dw $56C8
+	.dw $56E2
+	.dw $56FC
+	.dw $5716
+	.dw $5730
+	.dw $574A
+	.dw $5764
+	.dw $577E
+	.dw $5798
+	.dw $57B2
+	.dw $57CC
+	.dw $57E6
+	.dw $5800
+	.dw $581A
+	.dw $5834
+	.dw $584E
+	.dw $5868
+	.dw $5882
+	.dw $589C
+	.dw $58B6
+	.dw $58D0
+	.dw $58EA
+	.dw $5904
+	.dw $591E
+	.dw $5936
+	.dw $5950
+	.dw $596A
+	.dw $5984
+	.dw $599E
+	.dw $59B8
+	.dw $59D2
+	.dw $59EC
+	.dw $5A06
+	.dw $5A20
+	.dw $5A3A
+	.dw $5A54
+	.dw $5A6E
+	.dw $5A8A
+	.dw $5AA4
+	.dw $5ABE
+	.dw $5AD8
+	.dw $5AF2
+	.dw $5B0C
+	.dw $5B26
+	.dw $5B40
+	.dw $5B5A
+	.dw $5B74
+	.dw $5B8E
+	.dw $5BA8
+	.dw $5BC2
+	.dw $5BDC
+	.dw $5BF4
+	.dw $5C0E
+	.dw $5C28
+	.dw $5C42
+	.dw $5C5C
+	.dw $5C76
+	.dw $5C90
+	.dw $5CAA
+	.dw $5CC4
+	.dw $5CDE
+	.dw $5CF8
+	.dw $5D12
+	.dw $5D2C
+	.dw $5D46
+	.dw $5D60
+	.dw $5D7A
+	.dw $5D94
+	.dw $5DAE
+	.dw $5DC8
+	.dw $5DE2
+	.dw $5DFC
+	.dw $5E16
+	.dw $5E2E
+	.dw $5E48
+	.dw $5E62
+	.dw $5E7C
+	.dw $5E98
+	.dw $5EB2
+	.dw $5ECC
+	.dw $5EE6
+	.dw $5F00
+	.dw $5F1A
+	.dw $5F34
+	.dw $5F4E
+	.dw $5F68
+	.dw $5F82
+	.dw $5F9A
+	.dw $5FB4
+	.dw $5FCE
+	.dw $5FE8
+	.dw $6002
+	.dw $601C
+	.dw $6036
+	.dw $6050
+	.dw $606A
+	.dw $6084
+	.dw $609C
+	.dw $60B6
+	.dw $60D0
+	.dw $60EA
+	.dw $6104
+	.dw $611E
+	.dw $6138
+	.dw $6152
+	.dw $616C
+	.dw $6186
+	.dw $61A0
+	.dw $61BA
+	.dw $61D4
+	.dw $61EE
+	.dw $6208
+	.dw $6222
+	.dw $623A
+	.dw $6254
+	.dw $626E
+	.dw $6288
+	.dw $62A2
+	.dw $62BC
+	.dw $62D6
+	.dw $62F0
+	.dw $6308
+	.dw $6322
+	.dw $633C
+	.dw $6356
+	.dw $6370
+	.dw $638A
+	.dw $63A4
+	.dw $63BE
+	.dw $63D8
+	.dw $63F2
+	.dw $640C
+	.dw $6426
+	.dw $6440
+	.dw $645A
+	.dw $6474
+	.dw $648E
+	.dw $64A8
 
 DATA8_DC71B8:
 	.db $C2,$64,$09,$0C,$07,$0C,$09,$0C,$09,$0C,$09,$0C,$09,$0C,$09,$0C  ;DC71B8

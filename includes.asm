@@ -1,5 +1,7 @@
 .include "rominfo.asm"
 .include "hardware.asm"
+
+.include "structs/structs.asm"
 .include "wram.asm"
 .include "macros.asm"
 

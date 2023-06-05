@@ -3,7 +3,7 @@
 
 func_C25FBB:
 	php
-	sep #$30
+	sep #$30 ;AXY->8
 	ldx.b wTemp00
 	lda.l $7E8835,x
 	ora.l $7E88C1,x
@@ -38,18 +38,18 @@ func_C25FBB:
 	phx
 	jsl.l func_C27CA8
 	plx
-	rep #$20
+	rep #$20 ;A->16
 	lda.b wTemp00
 	bmi @lbl_C2601B
 	sta.b wTemp02
 	stx.b wTemp00
 	jsl.l func_C2791F
-	sep #$20
+	sep #$20 ;A->8
 	stz.b wTemp00
 	plp
 	rtl
 @lbl_C2601B:
-	sep #$20
+	sep #$20 ;A->8
 	lda.l $7E8835,x
 	bne @lbl_C26046
 	stx.b wTemp00
@@ -78,7 +78,7 @@ func_C25FBB:
 
 func_C26087:
 	php
-	sep #$30
+	sep #$30 ;AXY->8
 	ldx.b wTemp00
 	stx.b wTemp00
 	phx
@@ -112,7 +112,7 @@ func_C26087:
 	plx
 	lda.b wTemp00
 @lbl_C260CE:
-	rep #$20
+	rep #$20 ;A->16
 	lda.b wTemp00
 	sta.b wTemp02
 	stx.b wTemp00
@@ -125,7 +125,7 @@ func_C26087:
 
 func_C260DB:
 	php
-	sep #$30
+	sep #$30 ;AXY->8
 	ldx.b wTemp00
 	phx
 	jsl.l func_C277F8
@@ -150,20 +150,20 @@ func_C260DB:
 	bpl @lbl_C26145
 	lda.b wTemp02
 	bmi @lbl_C26129
-	rep #$20
+	rep #$20 ;A->16
 	lda.b wTemp04
 	sta.b wTemp02
-	sep #$20
+	sep #$20 ;A->8
 	stx.b wTemp00
 	jsl.l func_C2791F
 	stz.b wTemp00
 	plp
 	rtl
 @lbl_C26129:
-	rep #$20
+	rep #$20 ;A->16
 	lda.b wTemp04
 	sta.b wTemp00
-	sep #$20
+	sep #$20 ;A->8
 	lda.l $7E85DD,x
 	sta.b wTemp02
 	lda.b #$01
@@ -174,7 +174,7 @@ func_C260DB:
 	plp
 	rtl
 @lbl_C26145:
-	sep #$30
+	sep #$30 ;AXY->8
 	jsl.l Random
 	lda.b wTemp00
 	and.b #$04
@@ -201,7 +201,7 @@ func_C260DB:
 
 func_C26208:
 	php
-	sep #$30
+	sep #$30 ;AXY->8
 	lda.b #$7E
 	pha
 	plb
@@ -259,15 +259,15 @@ func_C26208:
 	lda.l DATA8_C26281,x
 	bpl @lbl_C26249
 	pla
-	rep #$20
+	rep #$20 ;A->16
 	lda.w #$FFFF
 	sta.b wTemp00
 	plp
 	rtl
 @lbl_C26276:
-	sep #$20
+	sep #$20 ;A->8
 	pla
-	rep #$20
+	rep #$20 ;A->16
 	lda.b wTemp04
 	sta.b wTemp00
 	plp
@@ -279,7 +279,7 @@ DATA8_C26281:
 
 func_C2628F:
 	php
-	sep #$30
+	sep #$30 ;AXY->8
 	ldx.b wTemp00
 	jsl.l Random
 	lda.b wTemp00
@@ -301,7 +301,7 @@ func_C2628F:
 	phx
 	jsl.l func_C27A85
 	plx
-	rep #$20
+	rep #$20 ;A->16
 	lda.b wTemp00
 	sta.b wTemp02
 	stx.b wTemp00
@@ -318,7 +318,7 @@ func_C2628F:
 
 func_C262D5:
 	php
-	sep #$30
+	sep #$30 ;AXY->8
 	ldx.b wTemp00
 	jsl.l Random
 	lda.b wTemp00
@@ -336,10 +336,10 @@ func_C262D5:
 	phx
 	jsl.l func_C27A85
 	plx
-	rep #$20
+	rep #$20 ;A->16
 	lda.b wTemp00
 	sta.b wTemp02
-	sep #$20
+	sep #$20 ;A->8
 	stx.b wTemp00
 	jsl.l func_C2791F
 	stz.b wTemp00
@@ -354,7 +354,7 @@ func_C262D5:
 ;dark owl
 
 	php
-	sep #$30
+	sep #$30 ;AXY->8
 	ldx.b wTemp00
 	lda.l $7E87BD,x
 	sta.b wTemp00
@@ -369,7 +369,7 @@ func_C262D5:
 ;mecharoid
 
 	php
-	sep #$30
+	sep #$30 ;AXY->8
 	ldx.b wTemp00
 	jsl.l Random
 	lda.b wTemp00
@@ -405,7 +405,7 @@ func_C262D5:
 ;pacorepkin
 
 	php
-	sep #$30
+	sep #$30 ;AXY->8
 	ldx.b wTemp00
 	lda.l $7E8619,x
 	dec a
@@ -434,7 +434,7 @@ func_C262D5:
 	phx
 	jsl.l func_C2785E
 	plx
-	rep #$20
+	rep #$20 ;A->16
 	lda.b wTemp04
 	sta.b wTemp00
 	pha
@@ -448,16 +448,16 @@ func_C262D5:
 	cpy.b #$F0
 	beq @lbl_C2646F
 	sta.b wTemp02
-	sep #$20
+	sep #$20 ;A->8
 	stx.b wTemp00
 	jsl.l func_C2791F
 @lbl_C2646F:
-	sep #$20
+	sep #$20 ;A->8
 	stz.b wTemp00
 	plp
 	rtl
 @lbl_C26475:
-	sep #$20
+	sep #$20 ;A->8
 	tya
 	cmp.l $7E899A
 	bne @lbl_C2646F
@@ -472,7 +472,7 @@ func_C262D5:
 ;death reaper
 
 	php
-	sep #$30
+	sep #$30 ;AXY->8
 	ldx.b wTemp00
 	lda.l $7E8619,x
 	cmp.b #$03
@@ -491,7 +491,7 @@ func_C262D5:
 ;pickpocket
 
 	php
-	sep #$30
+	sep #$30 ;AXY->8
 	ldx.b wTemp00
 	lda.l $7E8781,x
 	cmp.b #$03
@@ -544,7 +544,7 @@ func_C262D5:
 ;thief walrus
 
 	php
-	sep #$30
+	sep #$30 ;AXY->8
 	ldx.b wTemp00
 	lda.l $7E8781,x
 	cmp.b #$03
@@ -618,7 +618,7 @@ func_C262D5:
 	rtl
 
 func_C26757:
-	sep #$30
+	sep #$30 ;AXY->8
 	lda.l $7E85B5,x
 	sta.b wTemp00
 	lda.l $7E85C9,x
@@ -655,7 +655,7 @@ func_C26757:
 
 func_C2679E:
 	php
-	sep #$30
+	sep #$30 ;AXY->8
 	ldx.b wTemp00
 	lda.l $7E8781,x
 	cmp.b #$01
@@ -677,7 +677,7 @@ func_C2679E:
 ;field bandit
 
 	php
-	sep #$30
+	sep #$30 ;AXY->8
 	ldx.b wTemp00
 	lda.l $7E8781,x
 	dec a
@@ -716,12 +716,12 @@ func_C2679E:
 	phx
 	jsl.l func_C27AD2
 	plx
-	rep #$20
+	rep #$20 ;A->16
 	lda.b wTemp00
 	sta.b wTemp02
 	stx.b wTemp00
 	jsl.l func_C2791F
-	sep #$20
+	sep #$20 ;A->8
 	stz.b wTemp00
 	plp
 	rtl
@@ -760,7 +760,7 @@ func_C2679E:
 
 func_C2687B:
 	php
-	sep #$30
+	sep #$30 ;AXY->8
 	ldx.b wTemp00
 	lda.l $7E8795,x
 	beq @lbl_C2689C
@@ -778,7 +778,7 @@ func_C2687B:
 ;fluffy bunny
 
 	php
-	sep #$30
+	sep #$30 ;AXY->8
 	lda.l $7E899A
 	cmp.b #$13
 	bne @lbl_C268FB
@@ -853,14 +853,14 @@ func_C269EE:
 ;skull mage
 
 	php
-	sep #$30
+	sep #$30 ;AXY->8
 	ldx.b wTemp00
 	jmp.w func_C269EE
 
 ;bowboy
 
 	php
-	sep #$30
+	sep #$30 ;AXY->8
 	ldx.b wTemp00
 	jsl.l Random
 	lda.b #$3F
@@ -922,7 +922,7 @@ func_C26A49:
 ;baby tank
 
 	php
-	sep #$30
+	sep #$30 ;AXY->8
 	ldx.b wTemp00
 	phx
 	jsl.l func_C277F8
@@ -953,7 +953,7 @@ func_C26A49:
 @lbl_C26B8C:
 	lda.b wTemp04
 	sta.b wTemp02
-	lda.b w0005
+	lda.b wTemp05
 	sta.b wTemp03
 	stx.b wTemp00
 	jsl.l func_C2791F
@@ -1027,7 +1027,7 @@ func_C26A49:
 ;egg thing
 
 	php
-	sep #$30
+	sep #$30 ;AXY->8
 	ldx.b wTemp00
 	lda.l $7E8619,x
 	cmp.b #$03
@@ -1076,7 +1076,7 @@ func_C26A49:
 ;ghost radish
 
 	php
-	sep #$30
+	sep #$30 ;AXY->8
 	ldx.b wTemp00
 	jsl.l Random
 	lda.b wTemp00
@@ -1149,7 +1149,7 @@ func_C26A49:
 ;dead soldier
 
 	php
-	sep #$30
+	sep #$30 ;AXY->8
 	ldx.b wTemp00
 	lda.l $7E85DC
 	pha
@@ -1191,7 +1191,7 @@ func_C26A49:
 	plx
 	lda.l $7E87F9,x
 	bpl @lbl_C26FB8
-	sep #$20
+	sep #$20 ;A->8
 	pla
 	sta.l $7E87D0
 	pla
@@ -1252,7 +1252,7 @@ func_C26A49:
 	plx
 	pla
 	sta.l $7E88C1,x
-	rep #$20
+	rep #$20 ;A->16
 	lda.b wTemp00
 	bpl @lbl_C26FF4
 	.db $4C,$61,$6F                       ;C26FF1  
@@ -1261,7 +1261,7 @@ func_C26A49:
 	stx.b wTemp00
 	jsl.l func_C2791F
 @lbl_C26FFC:
-	sep #$20
+	sep #$20 ;A->8
 	pla
 	sta.l $7E87D0
 	pla
@@ -1285,7 +1285,7 @@ func_C26A49:
 ;shopkeeper
 
 	php
-	sep #$30
+	sep #$30 ;AXY->8
 	ldx.b wTemp00
 	lda.l $7E8995
 	ora.l $7E8795,x
@@ -1332,12 +1332,12 @@ func_C26A49:
 	phx
 	jsl.l func_C27AD2
 	plx
-	rep #$20
+	rep #$20 ;A->16
 	lda.b wTemp00
 	sta.b wTemp02
 	stx.b wTemp00
 	jsl.l func_C2791F
-	sep #$20
+	sep #$20 ;A->8
 @lbl_C2711D:
 	bra @lbl_C27147
 @lbl_C2711F:
@@ -1347,14 +1347,14 @@ func_C26A49:
 	phx
 	jsl.l func_C27A19
 	plx
-	rep #$20
+	rep #$20 ;A->16
 	lda.b wTemp00
 	sta.b wTemp02
 	stx.b wTemp00
 	phx
 	jsl.l func_C2791F
 	plx
-	sep #$20
+	sep #$20 ;A->8
 	lda.l $7E85DD,x
 	eor.b #$04
 	sta.l $7E85DD,x
@@ -1382,7 +1382,7 @@ func_C26A49:
 ;surala
 
 	php
-	sep #$30
+	sep #$30 ;AXY->8
 	ldx.b wTemp00
 	lda.l $7E8871,x
 	bne @lbl_C271B7
@@ -1409,7 +1409,7 @@ func_C26A49:
 ;strong man/chubby man
 
 	php
-	sep #$30
+	sep #$30 ;AXY->8
 	ldx.b wTemp00
 	lda.l $7E8871,x
 	bmi @lbl_C271FA
@@ -1423,7 +1423,7 @@ func_C26A49:
 
 func_C2721B:
 	php
-	sep #$30
+	sep #$30 ;AXY->8
 	ldx.b wTemp00
 	phx
 	jsl.l func_C277F8
@@ -1440,14 +1440,14 @@ func_C27226:
 
 func_C27238:
 	php
-	sep #$30
+	sep #$30 ;AXY->8
 	ldx.b wTemp00
 	bra func_C27226
 
 ;gaibara
 
 	php
-	sep #$30
+	sep #$30 ;AXY->8
 	ldx.b wTemp00
 	lda.l $7E8871,x
 	cmp.b #$06
@@ -1472,7 +1472,7 @@ func_C27238:
 ;saruyama
 
 	php
-	sep #$30
+	sep #$30 ;AXY->8
 	ldx.b wTemp00
 	lda.l $7E897B
 	beq @lbl_C272A9
@@ -1515,7 +1515,7 @@ func_C27238:
 ;common 2
 
 	php
-	sep #$30
+	sep #$30 ;AXY->8
 	lda.l $7E8978
 	and.b #$01
 	sta.b wTemp00
@@ -1525,7 +1525,7 @@ func_C27238:
 ;oryu
 
 	php
-	sep #$30
+	sep #$30 ;AXY->8
 	ldx.b wTemp00
 	lda.l $7E8871,x
 	cmp.b #$05
@@ -1560,7 +1560,7 @@ func_C27238:
 ;kechi
 
 	php
-	sep #$30
+	sep #$30 ;AXY->8
 	ldx.b wTemp00
 	lda.l $7E8871,x
 	beq @lbl_C274F9
@@ -1598,7 +1598,7 @@ func_C27238:
 ;pekeji
 
 	php
-	sep #$30
+	sep #$30 ;AXY->8
 	ldx.b wTemp00
 	lda.l $7E8871,x
 	bne @lbl_C27594
@@ -1652,7 +1652,7 @@ func_C27238:
 ;naoki
 
 	php
-	sep #$30
+	sep #$30 ;AXY->8
 	ldx.b wTemp00
 	lda.l $7E8871,x
 	cmp.b #$08
@@ -1679,7 +1679,7 @@ func_C27238:
 ;toshio
 
 	php
-	sep #$30
+	sep #$30 ;AXY->8
 	ldx.b wTemp00
 	lda.l $7E8871,x
 	cmp.b #$01
