@@ -5,7 +5,7 @@ ShopkeeperSprites:
 	.dl Data_d3801e
 	.db $08
 	.dl Data_d3816e
-	.db $08                
+	.db $08
 	.dl Data_d382b4
 	.db $08
 	.dl Data_d38406
@@ -23,7 +23,7 @@ ShopkeeperSprites:
 	.dl Data_d38406
 	.db $48
 	.dl Data_d38546
-	.db $48                
+	.db $48
 	.dl Data_d37ec6
 	.db $48
 	.dl Data_d3801e
@@ -37,7 +37,7 @@ ShopkeeperSprites:
 	.dl Data_d38db3
 	.db $08
 	.dl Data_d38f0b
-	.db $08                
+	.db $08
 	.dl Data_d390a2
 	.db $08
 	.dl Data_d39219
@@ -95,4 +95,4 @@ ShopkeeperSprites:
 	.dl Data_d3a2e8
 	.db $48
 	.dl Data_d3a430
-	.db $48   
+	.db $48

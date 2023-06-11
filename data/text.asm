@@ -1758,7 +1758,7 @@ TextPointerTable:
 	.dw Text1749
 	.dw OryuDialogue3Text1
 	.dw OryuDialogue3Text2
-	.dw OryuDialogue3Text3
+	.dw OryuBlindingAttackText
 	.dw Text1753
 	.dw Text1754
 	.dw OryuDialogue4Text1

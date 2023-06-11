@@ -48,29 +48,29 @@ TenguSprites:
 	.dl Data_d2b133
 	.db $08
 	.dl Data_d2b282
-	.db $08                
+	.db $08
 	.dl Data_d2b425
-	.db $08                
+	.db $08
 	.dl Data_d2b5e2
-	.db $08                
+	.db $08
 	.dl Data_d2b797
 	.db $08
 	.dl Data_d2b946
 	.db $08
 	.dl Data_d2bb0b
-	.db $08                
+	.db $08
 	.dl Data_d2bcd2
-	.db $08                
+	.db $08
 	.dl Data_d2be9f
-	.db $08                
+	.db $08
 	.dl Data_d2c052
 	.db $08
 	.dl Data_d2c1d7
 	.db $08
 	.dl Data_d2c340
-	.db $08                
+	.db $08
 	.dl Data_d2c43d
-	.db $08                
+	.db $08
 	.dl Data_d2c5da
 	.db $08
 	.dl Data_d2c75b
@@ -104,9 +104,9 @@ TenguSprites:
 	.dl Data_d2d9f8
 	.db $08
 	.dl Data_d2db5f
-	.db $08                
+	.db $08
 	.dl Data_d2dc27
-	.db $08                
+	.db $08
 	.dl Data_d2ddbc
 	.db $08
 	.dl Data_d2df5d

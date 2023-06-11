@@ -5,3 +5,4 @@
 .include "macros/code.asm"
 .include "macros/data.asm"
 .include "macros/maps.asm"
+.include "macros/music.asm"

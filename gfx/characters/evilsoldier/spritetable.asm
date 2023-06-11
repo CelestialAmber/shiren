@@ -10,9 +10,9 @@ EvilSoldierSprites:
 	.dl Data_cbcaf4
 	.db $08
 	.dl Data_cbcc75
-	.db $08                
+	.db $08
 	.dl Data_cbcde6
-	.db $08                
+	.db $08
 	.dl Data_cbcf73
 	.db $08
 	.dl Data_cbd0ec
@@ -22,25 +22,25 @@ EvilSoldierSprites:
 	.dl Data_cbd3e8
 	.db $08
 	.dl Data_cbd547
-	.db $08                
+	.db $08
 	.dl Data_cbd6c0
 	.db $08
 	.dl Data_cbd812
 	.db $08
 	.dl Data_cbd966
-	.db $08                
+	.db $08
 	.dl Data_cbdaa6
 	.db $08
 	.dl Data_cbdc41
 	.db $08
 	.dl Data_cbddc2
-	.db $08                
+	.db $08
 	.dl Data_cbdf53
 	.db $08
 	.dl Data_cbe0e8
 	.db $08
 	.dl Data_cbe26f
-	.db $08                
+	.db $08
 	.dl Data_cbe3ea
 	.db $08
 	.dl Data_cbe577

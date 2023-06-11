@@ -20,9 +20,9 @@ GazeSprites:
 	.dl Data_cf99c8
 	.db $4A
 	.dl Data_cf9b06
-	.db $4A                
+	.db $4A
 	.dl Data_cf9c5c
-	.db $4A                
+	.db $4A
 	.dl Data_cf95d7
 	.db $4A
 	.dl Data_cf971c
@@ -32,35 +32,35 @@ GazeSprites:
 	.dl Data_cfa16e
 	.db $0A
 	.dl Data_cfa2ac
-	.db $0A                
+	.db $0A
 	.dl Data_cfa404
-	.db $0A                
+	.db $0A
 	.dl Data_cfa55a
 	.db $0A
 	.dl Data_cfa6a2
 	.db $0A
 	.dl Data_cfa7f2
-	.db $0A                
+	.db $0A
 	.dl Data_cfa16e
 	.db $4A
 	.dl Data_cfa2ac
 	.db $4A
 	.dl Data_cfa404
-	.db $4A                
+	.db $4A
 	.dl Data_cfa93e
-	.db $0A                
+	.db $0A
 	.dl Data_cfaa93
 	.db $0A
 	.dl Data_cfabde
 	.db $0A
 	.dl Data_cfaa93
-	.db $4A                
+	.db $4A
 	.dl Data_cfa93e
 	.db $4A
 	.dl Data_cfad1f
 	.db $0A
 	.dl Data_cfae7c
-	.db $0A                
+	.db $0A
 	.dl Data_cfad1f
 	.db $4A
 	.dl Data_cfafc3
@@ -94,7 +94,7 @@ GazeSprites:
 	.dl Data_cfba36
 	.db $4A
 	.dl Data_cfb875
-	.db $4A                
+	.db $4A
 	.dl Data_cfb180
 	.db $4A
 	.dl Data_cfafc3

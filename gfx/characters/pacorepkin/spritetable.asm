@@ -4,13 +4,13 @@ PacorepkinSprites:
 	.dl Data_ce44be
 	.db $08
 	.dl Data_ce461b
-	.db $08                
+	.db $08
 	.dl Data_ce4774
 	.db $08
 	.dl Data_ce48a3
 	.db $08
 	.dl Data_ce49e2
-	.db $08                
+	.db $08
 	.dl Data_ce4b19
 	.db $08
 	.dl Data_ce4c37
@@ -40,7 +40,7 @@ PacorepkinSprites:
 	.dl Data_ce53ae
 	.db $08
 	.dl Data_ce54ed
-	.db $08                
+	.db $08
 	.dl Data_ce4e8c
 	.db $48
 	.dl Data_ce4fd7
@@ -54,15 +54,15 @@ PacorepkinSprites:
 	.dl Data_ce5936
 	.db $08
 	.dl Data_ce57b5
-	.db $48                
+	.db $48
 	.dl Data_ce561e
-	.db $48                
+	.db $48
 	.dl Data_ce5aeb
-	.db $08                
+	.db $08
 	.dl Data_ce5ca2
-	.db $08                
+	.db $08
 	.dl Data_ce5aeb
-	.db $48                
+	.db $48
 	.dl Data_ce5e59
 	.db $08
 	.dl Data_ce5fd8

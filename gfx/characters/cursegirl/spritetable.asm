@@ -4,9 +4,9 @@ CurseGirlSprites:
 	.dl Data_cedbb0
 	.db $0C
 	.dl Data_cedcb4
-	.db $0C                
+	.db $0C
 	.dl Data_ceddc8
-	.db $0C                
+	.db $0C
 	.dl Data_cedec4
 	.db $0C
 	.dl Data_cedfc6
@@ -16,7 +16,7 @@ CurseGirlSprites:
 	.dl Data_cee1cc
 	.db $0C
 	.dl Data_cee2dc
-	.db $0C                
+	.db $0C
 	.dl Data_cee3de
 	.db $0C
 	.dl Data_cee4d6
@@ -30,7 +30,7 @@ CurseGirlSprites:
 	.dl Data_cee8ea
 	.db $0C
 	.dl Data_ceea00
-	.db $0C                
+	.db $0C
 	.dl Data_ceeb16
 	.db $0C
 	.dl Data_ceec2a
@@ -52,7 +52,7 @@ CurseGirlSprites:
 	.dl Data_cef534
 	.db $0C
 	.dl Data_cef660
-	.db $0C                
+	.db $0C
 	.dl Data_cef7c7
 	.db $0C
 	.dl Data_cef8ed
@@ -70,7 +70,7 @@ CurseGirlSprites:
 	.dl Data_cf0070
 	.db $0C
 	.dl Data_cee0b4
-	.db $0C                
+	.db $0C
 	.dl Data_cf01a2
 	.db $0C
 	.dl Data_cf02bc

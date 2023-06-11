@@ -41,7 +41,7 @@ ForeignWandererSprites:
 	.dl Data_d3ce05
 	.db $08
 	.dl Data_d3ce05
-	.db $48                
+	.db $48
 	.dl Data_d3c8bd
 	.db $48
 	.dl Data_d3ca21

@@ -1,7 +1,7 @@
 ;4aa4
 NPC15Sprites:
 	.dl Data_d4d525
-	.db $0C                        
+	.db $0C
 	.dl Data_d4d641
 	.db $0C
 	.dl Data_d4d751
@@ -11,13 +11,13 @@ NPC15Sprites:
 	.dl Data_d4d9ad
 	.db $0C
 	.dl Data_d4dac1
-	.db $0C                
+	.db $0C
 	.dl Data_d4dbfd
 	.db $0C
 	.dl Data_d4dd53
 	.db $0C
 	.dl Data_d4de85
-	.db $0C                
+	.db $0C
 	.dl Data_d4d877
 	.db $4C
 	.dl Data_d4dac1
@@ -35,9 +35,9 @@ NPC15Sprites:
 	.dl Data_d4e4e7
 	.db $0C
 	.dl Data_d4e619
-	.db $0C                
+	.db $0C
 	.dl Data_d4e761
-	.db $0C                
+	.db $0C
 	.dl Data_d4e8bf
 	.db $0C
 	.dl Data_d4e9fb
@@ -127,4 +127,4 @@ NPC15Sprites:
 	.dl Data_d51b15
 	.db $0C
 	.dl Data_d51754
-	.db $4C         
+	.db $4C

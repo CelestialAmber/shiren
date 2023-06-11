@@ -1,11 +1,11 @@
 ;55a4
-NPC26Sprites:      
+NPC26Sprites:
 	.dl Data_d652f1
 	.db $0C
 	.dl Data_d65423
 	.db $0C
 	.dl Data_d65543
-	.db $0C                
+	.db $0C
 	.dl Data_d6566b
 	.db $0C
 	.dl Data_d65797
@@ -72,7 +72,7 @@ NPC26Sprites2:
 	.dl Data_d65423
 	.db $08
 	.dl Data_d65543
-	.db $08                
+	.db $08
 	.dl Data_d6566b
 	.db $08
 	.dl Data_d65797
@@ -102,13 +102,13 @@ NPC26Sprites2:
 	.dl Data_d66563
 	.db $08
 	.dl Data_d6669b
-	.db $08                
+	.db $08
 	.dl Data_d667cd
 	.db $08
 	.dl Data_d66915
 	.db $08
 	.dl Data_d66a55
-	.db $08                
+	.db $08
 	.dl Data_d66b93
 	.db $08
 	.dl Data_d66cd7

@@ -1,5 +1,6 @@
 .bank $1d
 .org $0000 ;$DD0000
+.base $C0
 
 .include "data/debug/build_strings_1.asm"
 	
@@ -15,6 +16,7 @@
 ;dd4000
 SoundDataOffsetTable:
 spcdataheader 0xBB 0x427
+
 
 ;Samples
 audiodata BRRSample_dd4cbc ;0
@@ -135,7 +137,7 @@ audiodata Data_dfd158 ;50
 ;Group 2
 audiodata SoundDataOffsetTable ;no sound
 audiodata SFX_ShirenLevelUp
-audiodata SFX_EnemyLevelUp
+audiodata SFX_MonsterLevelUp
 audiodata Data_dfd304
 audiodata Data_dfd3ba
 audiodata Data_dfd41d
@@ -435,65 +437,65 @@ spcdataheader 0xE3 0x8000
 ;Music data
 
 ;Group 1 (music + condor voice clips)
-.include "audio/music/music_kobamivalley_opening.asm" ;ids 0-1
-.include "audio/music/music_intro.asm" ;id 2
-.include "audio/music/music_intro_koppa.asm" ;id 3
-.include "audio/music/music_intro_dream.asm" ;id 4
-.include "audio/music/music_fileselect_feisproblem.asm" ;ids 5-6
-.include "audio/music/music_mountaintoptown.asm" ;ids 7-8
-.include "audio/music/music_mountaintoptown_variants.asm" ;id 9-10
-.include "audio/music/music_bamboovillage.asm" ;id 11
-.include "audio/music/music_crypticrockvalley.asm" ;id 12
-.include "audio/music/music_goldencity.asm" ;id 13
-.include "audio/music/music_shop.asm" ;id 14
-.include "audio/music/music_gaibara.asm" ;id 15
-.include "audio/music/music_pekeji.asm" ;id 16
-.include "audio/music/music_oldcedarlinedroad.asm" ;id 17
-.include "audio/music/music_pegasusvalley_mountaintopforest.asm" ;ids 18-19
-.include "audio/music/music_20.asm" ;id 20
-.include "audio/music/music_tablemountain4_trials.asm" ;ids 22-23
-.include "audio/music/music_mountainspiritcave1.asm" ;id 24
-.include "audio/music/music_mountainspiritcave2.asm" ;id 25
-.include "audio/music/music_tablemountain1-3.asm" ;ids 26-28
-.include "audio/music/music_neburimine_cliffcavern.asm" ;ids 29-30
-.include "audio/music/music_tablemountain5-6.asm" ;ids 31-32
-.include "audio/music/music_waterfallcave.asm" ;id 33
-.include "audio/music/music_monsterhouse.asm" ;id 34
-.include "audio/music/music_specialmonsterhouse.asm" ;id 35
-.include "audio/music/music_thief.asm" ;id 36
-.include "audio/music/music_ending.asm" ;id 37
-.include "audio/music/music_wind_opening.asm" ;id 38
-.include "audio/music/music_wind_illusionghostvalley.asm" ;ids 39-40
-.include "audio/music/music_stream.asm" ;ids 41-43
-.include "audio/music/music_waterfallmarsh.asm" ;id 44
-.include "audio/music/music_intro_bug_sounds.asm" ;id 45
-.include "audio/music/music_condor_room.asm" ;id 46
-.include "audio/music/music_condor_freed.asm" ;id 47
-.include "audio/music/music_condor_cries.asm" ;ids 48-50
+.include "audio/bgm/music_kobamivalley_opening.asm" ;ids 0-1
+.include "audio/bgm/music_intro.asm" ;id 2
+.include "audio/bgm/music_intro_koppa.asm" ;id 3
+.include "audio/bgm/music_intro_dream.asm" ;id 4
+.include "audio/bgm/music_fileselect_feisproblem.asm" ;ids 5-6
+.include "audio/bgm/music_mountaintoptown.asm" ;ids 7-8
+.include "audio/bgm/music_mountaintoptown_variants.asm" ;id 9-10
+.include "audio/bgm/music_bamboovillage.asm" ;id 11
+.include "audio/bgm/music_crypticrockvalley.asm" ;id 12
+.include "audio/bgm/music_goldencity.asm" ;id 13
+.include "audio/bgm/music_shop.asm" ;id 14
+.include "audio/bgm/music_gaibara.asm" ;id 15
+.include "audio/bgm/music_pekeji.asm" ;id 16
+.include "audio/bgm/music_oldcedarlinedroad.asm" ;id 17
+.include "audio/bgm/music_pegasusvalley_mountaintopforest.asm" ;ids 18-19
+.include "audio/bgm/music_20.asm" ;id 20
+.include "audio/bgm/music_tablemountain4_trials.asm" ;ids 22-23
+.include "audio/bgm/music_mountainspiritcave1.asm" ;id 24
+.include "audio/bgm/music_mountainspiritcave2.asm" ;id 25
+.include "audio/bgm/music_tablemountain1-3.asm" ;ids 26-28
+.include "audio/bgm/music_neburimine_cliffcavern.asm" ;ids 29-30
+.include "audio/bgm/music_tablemountain5-6.asm" ;ids 31-32
+.include "audio/bgm/music_waterfallcave.asm" ;id 33
+.include "audio/bgm/music_monsterhouse.asm" ;id 34
+.include "audio/bgm/music_specialmonsterhouse.asm" ;id 35
+.include "audio/bgm/music_thief.asm" ;id 36
+.include "audio/bgm/music_ending.asm" ;id 37
+.include "audio/bgm/music_wind_opening.asm" ;id 38
+.include "audio/bgm/music_wind_illusionghostvalley.asm" ;ids 39-40
+.include "audio/bgm/music_stream.asm" ;ids 41-43
+.include "audio/bgm/music_waterfallmarsh.asm" ;id 44
+.include "audio/bgm/music_intro_bug_sounds.asm" ;id 45
+.include "audio/bgm/music_condor_room.asm" ;id 46
+.include "audio/bgm/music_condor_freed.asm" ;id 47
+.include "audio/bgm/music_condor_cries.asm" ;ids 48-50
 
-;Group 2 (sfx/jingles, music stops, then resumes)
-.include "audio/sfx/sfx_level_up.asm" ;ids 52-53
-.include "audio/sfx/sfx_inn.asm" ;id 54
-.include "audio/sfx/sfx_partner_joins.asm" ;id 55
-.include "audio/sfx/sfx_leaderboard.asm" ;id 56
-.include "audio/sfx/sfx_suspend_game.asm" ;id 57
-.include "audio/sfx/sfx_wind.asm" ;ids 58-60
+;Group 2 (music effects/sfx, music stops, then resumes)
+.include "audio/me/me_level_up.asm" ;ids 52-53
+.include "audio/me/me_inn.asm" ;id 54
+.include "audio/me/me_partner_joins.asm" ;id 55
+.include "audio/me/me_leaderboard.asm" ;id 56
+.include "audio/me/me_suspend_game.asm" ;id 57
+.include "audio/me/me_wind.asm" ;ids 58-60
 
 ;Group 3 (sfx, music isn't stopped)
-.include "audio/sfx/sfx_group_1.asm" ;ids 62-72
-.include "audio/sfx/sfx_group_2.asm" ;ids 73-76
-.include "audio/sfx/sfx_group_3.asm" ;ids 77-91
-.include "audio/sfx/sfx_group_4.asm" ;ids 92-108
-.include "audio/sfx/sfx_group_5.asm" ;ids 109-111
-.include "audio/sfx/sfx_scrolls.asm" ;ids 112-143
-.include "audio/sfx/sfx_status_effects_herbs.asm" ;ids 144-168
-.include "audio/sfx/sfx_traps.asm" ;ids 169-192
-.include "audio/sfx/sfx_group_9.asm" ;ids 193-200
-.include "audio/sfx/sfx_item_get.asm" ;id 201
-.include "audio/sfx/sfx_enemies.asm" ;ids 202-250
-.include "audio/sfx/sfx_group_11.asm" ;ids 251-282
-.include "audio/sfx/sfx_bird.asm" ;id 283
-.include "audio/sfx/sfx_light_shining.asm" ;id 284
-.include "audio/sfx/sfx_285.asm" ;id 285
-.include "audio/sfx/sfx_condor.asm" ;ids 286-287
-.include "audio/sfx/sfx_group_13.asm" ;ids 288-291
+.include "audio/se/sfx_group_1.asm" ;ids 62-72
+.include "audio/se/sfx_group_2.asm" ;ids 73-76
+.include "audio/se/sfx_group_3.asm" ;ids 77-91
+.include "audio/se/sfx_group_4.asm" ;ids 92-108
+.include "audio/se/sfx_group_5.asm" ;ids 109-111
+.include "audio/se/sfx_scrolls.asm" ;ids 112-143
+.include "audio/se/sfx_status_effects_herbs.asm" ;ids 144-168
+.include "audio/se/sfx_traps.asm" ;ids 169-192
+.include "audio/se/sfx_group_9.asm" ;ids 193-200
+.include "audio/se/sfx_item_get.asm" ;id 201
+.include "audio/se/sfx_enemies.asm" ;ids 202-250
+.include "audio/se/sfx_group_11.asm" ;ids 251-282
+.include "audio/se/sfx_bird.asm" ;id 283
+.include "audio/se/sfx_light_shining.asm" ;id 284
+.include "audio/se/sfx_285.asm" ;id 285
+.include "audio/se/sfx_condor.asm" ;ids 286-287
+.include "audio/se/sfx_group_13.asm" ;ids 288-291

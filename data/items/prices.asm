@@ -206,7 +206,7 @@ DATA8_D9A504:
 	.dw 2000, 750
 	.dw 1000, 400
 	.dw 0, 0
-	.dw 0, 0                
+	.dw 0, 0
 
 ;armband buy/sell prices
 ;d9a538
@@ -225,7 +225,7 @@ ArmbandBuySellPrices:
 	.dw 2400, 1200 ;armband of loss
 	.dw 3600, 1800 ;armband of sight
 	.dw 2400, 1200 ;armband of calm
-	.dw 30000, 15000 ;identity armband             
+	.dw 30000, 15000 ;identity armband
 
 ;staff buy/sell price
 ;d9a574

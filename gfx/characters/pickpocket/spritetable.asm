@@ -48,7 +48,7 @@ PickpocketSprites:
 	.dl Data_c7cb06
 	.db $48
 	.dl Data_c7ce64
-	.db $08                
+	.db $08
 	.dl Data_c7cf77
 	.db $08
 	.dl Data_c7d098

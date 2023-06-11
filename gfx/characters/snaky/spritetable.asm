@@ -4,13 +4,13 @@ SnakySprites:
 	.dl Data_d1ac0a
 	.db $08
 	.dl Data_d1ad63
-	.db $08                
+	.db $08
 	.dl Data_d1aee0
 	.db $08
 	.dl Data_d1b06b
 	.db $08
 	.dl Data_d1b1f0
-	.db $08                
+	.db $08
 	.dl Data_d1b383
 	.db $08
 	.dl Data_d1b534
@@ -44,23 +44,23 @@ SnakySprites:
 	.dl Data_d1b8a2
 	.db $48
 	.dl Data_d1ba37
-	.db $48                
+	.db $48
 	.dl Data_d1bbc0
 	.db $48
 	.dl Data_d1c210
 	.db $08
 	.dl Data_d1c3af
-	.db $08                
+	.db $08
 	.dl Data_d1c54e
-	.db $08                
+	.db $08
 	.dl Data_d1c3af
-	.db $48                
+	.db $48
 	.dl Data_d1c210
-	.db $48                
+	.db $48
 	.dl Data_d1c6f5
-	.db $08                
+	.db $08
 	.dl Data_d1c894
-	.db $08                
+	.db $08
 	.dl Data_d1c6f5
 	.db $48
 	.dl Data_d1ca3f
@@ -78,7 +78,7 @@ SnakySprites:
 	.dl Data_d1ccbb
 	.db $48
 	.dl Data_d1ce50
-	.db $48                
+	.db $48
 	.dl Data_d1ca3f
 	.db $48
 	.dl Data_d1cb6e

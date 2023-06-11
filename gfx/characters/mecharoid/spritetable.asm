@@ -48,11 +48,11 @@ MecharoidSprites:
 	.dl Data_d1393e
 	.db $48
 	.dl Data_d13f2c
-	.db $08                
+	.db $08
 	.dl Data_d140d5
-	.db $08                
+	.db $08
 	.dl Data_d14298
-	.db $08                
+	.db $08
 	.dl Data_d140d5
 	.db $48
 	.dl Data_d13f2c
@@ -74,31 +74,31 @@ MecharoidSprites:
 	.dl Data_d14cdc
 	.db $08
 	.dl Data_d14e47
-	.db $08                
+	.db $08
 	.dl Data_d14f2e
 	.db $08
 	.dl Data_d150c5
 	.db $08
 	.dl Data_d15254
-	.db $08                
+	.db $08
 	.dl Data_d14b85
 	.db $48
 	.dl Data_d14cdc
 	.db $48
 	.dl Data_d14e47
-	.db $48                
+	.db $48
 	.dl Data_d147e1
 	.db $48
 	.dl Data_d14942
 	.db $48
 	.dl Data_d14a9b
-	.db $48                
+	.db $48
 	.dl Data_d15363
 	.db $08
 	.dl Data_d154e0
 	.db $08
 	.dl Data_d1565b
-	.db $08                
+	.db $08
 	.dl Data_d1571b
 	.db $08
 	.dl Data_d158a4

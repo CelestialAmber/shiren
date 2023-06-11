@@ -265,12 +265,14 @@ text "をこがす。\l"
 endtext
 
 ;fe14de
+;"[entity name]'s attack missed."
 Text37:
 strvar TextStrVar_EntityName
 text "の攻撃は、はずれた。\l"
 endtext
 
 ;fe14ed
+;"dodged [entity name]'s attack."
 Text38:
 strvar TextStrVar_EntityName
 text "の攻撃を、かわした。\l"
@@ -1158,6 +1160,7 @@ text "　\l"
 endtext
 
 ;fe1ec0
+;"[entity name] is looking at (something)"
 Text174:
 strvar TextStrVar_EntityName
 text "は様子を見ている。\l"

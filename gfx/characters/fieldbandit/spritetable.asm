@@ -16,9 +16,9 @@ FieldBanditSprites:
 	.dl Data_d1e2d3
 	.db $0C
 	.dl Data_d1e448
-	.db $0C                
+	.db $0C
 	.dl Data_d1dd51
-	.db $4C                
+	.db $4C
 	.dl Data_d1de93
 	.db $4C
 	.dl Data_d1e008
@@ -28,19 +28,19 @@ FieldBanditSprites:
 	.dl Data_d1dad3
 	.db $4C
 	.dl Data_d1dc0c
-	.db $4C                
+	.db $4C
 	.dl Data_d1e5bb
 	.db $0C
 	.dl Data_d1e706
 	.db $0C
 	.dl Data_d1e81c
-	.db $0C                
+	.db $0C
 	.dl Data_d1e95f
 	.db $0C
 	.dl Data_d1eacc
 	.db $0C
 	.dl Data_d1ec1f
-	.db $0C                
+	.db $0C
 	.dl Data_d1e5bb
 	.db $4C
 	.dl Data_d1e706
@@ -54,15 +54,15 @@ FieldBanditSprites:
 	.dl Data_d1f056
 	.db $0C
 	.dl Data_d1eed1
-	.db $4C                
+	.db $4C
 	.dl Data_d1ed82
-	.db $4C                
+	.db $4C
 	.dl Data_d1f1ed
 	.db $0C
 	.dl Data_d1f356
 	.db $0C
 	.dl Data_d1f1ed
-	.db $4C                
+	.db $4C
 	.dl Data_d1f4e1
 	.db $0C
 	.dl Data_d1f630

@@ -1,7 +1,7 @@
 ;5a5c
 NPC31Sprites:
 	.dl Data_d710e6
-	.db $0A                        
+	.db $0A
 	.dl Data_d711d3
 	.db $0A
 	.dl Data_d712ba
@@ -23,25 +23,25 @@ NPC31Sprites:
 	.dl Data_d714af
 	.db $4A
 	.dl Data_d715d5
-	.db $4A                
+	.db $4A
 	.dl Data_d710e6
 	.db $4A
 	.dl Data_d711d3
 	.db $4A
 	.dl Data_d712ba
-	.db $4A                
+	.db $4A
 	.dl Data_d71ac7
 	.db $0A
 	.dl Data_d71bef
 	.db $0A
 	.dl Data_d71d23
-	.db $0A                
+	.db $0A
 	.dl Data_d71e51
 	.db $0A
 	.dl Data_d71f93
 	.db $0A
 	.dl Data_d720e2
-	.db $0A                
+	.db $0A
 	.dl Data_d71ac7
 	.db $4A
 	.dl Data_d71bef

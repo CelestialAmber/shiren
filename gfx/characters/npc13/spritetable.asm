@@ -94,7 +94,7 @@ NPC13Sprites2:
 	.dl Data_d4ac0a
 	.db $4C
 	.dl Data_d4a622
-	.db $4C                
+	.db $4C
 	.dl Data_d4a756
 	.db $4C
 	.dl Data_d4a888

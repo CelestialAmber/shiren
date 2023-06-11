@@ -35,9 +35,9 @@ NPC37Sprites:
 	.dl Data_d7cc6e
 	.db $0A
 	.dl Data_d7cdac
-	.db $0A                
+	.db $0A
 	.dl Data_d7cee9
-	.db $0A                
+	.db $0A
 	.dl Data_d7d03b
 	.db $0A
 	.dl Data_d7d170

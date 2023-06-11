@@ -1,4 +1,4 @@
-FogHermitSprites:            
+FogHermitSprites:
 	.dl Data_c82370
 	.db $08
 	.dl Data_c82492

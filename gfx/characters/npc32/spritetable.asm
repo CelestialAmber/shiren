@@ -35,13 +35,13 @@ NPC32Sprites:
 	.dl Data_d73532
 	.db $0A
 	.dl Data_d7368c
-	.db $0A                
+	.db $0A
 	.dl Data_d737b6
 	.db $0A
 	.dl Data_d73927
 	.db $0A
 	.dl Data_d73a80
-	.db $0A                
+	.db $0A
 	.dl Data_d733d2
 	.db $4A
 	.dl Data_d73532
@@ -102,13 +102,13 @@ NPC32Sprites2:
 	.dl Data_d73532
 	.db $08
 	.dl Data_d7368c
-	.db $08                
+	.db $08
 	.dl Data_d737b6
 	.db $08
 	.dl Data_d73927
 	.db $08
 	.dl Data_d73a80
-	.db $08                
+	.db $08
 	.dl Data_d733d2
 	.db $48
 	.dl Data_d73532

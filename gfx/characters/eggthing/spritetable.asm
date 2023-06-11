@@ -1,6 +1,6 @@
 EggThingSprites:
 	.dl Data_cd4b83
-	.db $08                
+	.db $08
 	.dl Data_cd4c8e
 	.db $08
 	.dl Data_cd4d99
@@ -18,7 +18,7 @@ EggThingSprites:
 	.dl Data_cd53b8
 	.db $08
 	.dl Data_cd54ca
-	.db $08                
+	.db $08
 	.dl Data_cd55cc
 	.db $08
 	.dl Data_cd56c4
@@ -32,7 +32,7 @@ EggThingSprites:
 	.dl Data_cd5b0a
 	.db $08
 	.dl Data_cd5c00
-	.db $08                
+	.db $08
 	.dl Data_cd5d0a
 	.db $08
 	.dl Data_cd5e3b
@@ -58,7 +58,7 @@ EggThingSprites:
 	.dl Data_cd6a2e
 	.db $08
 	.dl Data_cd6bcb
-	.db $08                
+	.db $08
 	.dl Data_cd6d58
 	.db $08
 	.dl Data_cd6eed

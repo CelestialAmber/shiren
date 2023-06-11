@@ -17,13 +17,13 @@ NPC27Sprites:
 	.dl Data_d681c2
 	.db $0C
 	.dl Data_d682f8
-	.db $0C                
+	.db $0C
 	.dl Data_d68432
 	.db $0C
 	.dl Data_d68562
 	.db $0C
 	.dl Data_d68684
-	.db $0C                
+	.db $0C
 	.dl Data_d687cd
 	.db $0C
 	.dl Data_d688f7
@@ -41,15 +41,15 @@ NPC27Sprites:
 	.dl Data_d6911a
 	.db $0C
 	.dl Data_d69267
-	.db $0C                
+	.db $0C
 	.dl Data_d693ae
 	.db $0C
 	.dl Data_d69509
 	.db $0C
 	.dl Data_d69645
-	.db $0C                
+	.db $0C
 	.dl Data_d69798
-	.db $0C                
+	.db $0C
 	.dl Data_d698f5
 	.db $0C
 	.dl Data_d69a70
@@ -107,8 +107,8 @@ NPC27Sprites:
 	.dl Data_d6ba04
 	.db $4C
 	.dl Data_d687cd
-	.db $0C                
+	.db $0C
 	.dl Data_d6bb35
-	.db $0C                
+	.db $0C
 	.dl Data_d6bb35
-	.db $4C        
+	.db $4C

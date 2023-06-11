@@ -1623,7 +1623,7 @@ func_808D3D:
 	.db $08,$C2,$30,$A9,$FF,$01,$A2,$2C,$08,$A0,$2C,$06,$54,$00,$00,$28   ;808D4E
 	.db $6B,$08,$C2,$30,$A2,$2C,$06,$A0,$2C,$08,$46,$00,$90,$08,$A9,$1F   ;808D5E
 	.db $00,$54,$00,$00,$80,$F4,$8A,$18,$69,$20,$00,$AA,$98,$18,$69,$20   ;808D6E
-	.db $00,$A8,$A5,$00,$D0,$E4,$28,$6B   ;808D7E|        |      
+	.db $00,$A8,$A5,$00,$D0,$E4,$28,$6B   ;808D7E|        |
 
 
 func_808D86:
@@ -2031,7 +2031,7 @@ func_8090B0:
 
 DATA8_8090E1:
 	.db $03,$0C,$30,$C0
-    
+
 DATA8_8090E5:
 	.db $01,$04,$10,$40
 
@@ -4438,8 +4438,8 @@ func_80A84E:
 
 ;jumptable
 UNREACH_C0A874:
-	.db $8E,$A8                          
-	.db $8E,$A8                          
+	.db $8E,$A8
+	.db $8E,$A8
 	.db $8E,$A8
 	.db $8E,$A8
 	.db $8E,$A8
@@ -4448,10 +4448,10 @@ UNREACH_C0A874:
 	.db $8E,$A8
 	.db $8E,$A8
 	.db $C2,$A9  
-	.db $C4,$A9                          
+	.db $C4,$A9
 	.db $C2,$A9
-	.db $81,$AA   
-               
+	.db $81,$AA
+
 	ldx.b wTemp02
 	lda.l UNREACH_C4C250,x
 	and.w #$00FF
@@ -7197,7 +7197,7 @@ func_80C227:
 	lda.w $1315,y
 	sta.w $8603,x
 	lda.w $193F,y
-	sta.w $8641,x
+	sta.w wCharExpByte0,x
 	lda.w $1B4D,y
 	sta.w $8643,x
 	lda.w $2177,y
@@ -7211,7 +7211,7 @@ func_80C257:
 	lda.w $0EF9,y
 	sta.w $85C7,x
 	lda.w $1523,y
-	sta.w $8605,x
+	sta.w wCharMaxHP,x
 	lda.w $1731,y
 	sta.w $8607,x
 	lda.w $1D5B,y
@@ -7319,7 +7319,7 @@ func_80C34B:
 
 func_80C37B:
 	lda.w $192F,y
-	sta.w $8641,x
+	sta.w wCharExpByte0,x
 	lda.w $1B3D,y
 	sta.w $8643,x
 	lda.w $1D4B,y
@@ -7331,7 +7331,7 @@ func_80C37B:
 	lda.w $1305,y
 	sta.w $8603,x
 	lda.w $1513,y
-	sta.w $8605,x
+	sta.w wCharMaxHP,x
 	lda.w $1721,y
 	sta.w $8607,x
 	lda.w $3A0F,y
@@ -7380,7 +7380,7 @@ func_80C40C:
 	lda.w $1305,y
 	sta.w $8603,x
 	lda.w $192F,y
-	sta.w $8641,x
+	sta.w wCharExpByte0,x
 	lda.w $1B3D,y
 	sta.w $8643,x
 	lda.w $2167,y
@@ -7448,7 +7448,7 @@ func_80C4CF:
 	lda.w $1305,y
 	sta.w $8603,x
 	lda.w $192F,y
-	sta.w $8641,x
+	sta.w wCharExpByte0,x
 	lda.w $1B3D,y
 	sta.w $8643,x
 	lda.w $299F,y
@@ -8766,7 +8766,7 @@ DATA8_80D013:
 
 DATA8_80D01B:
 	.db $A8,$18,$00,$00,$38,$08,$70,$10   ;80D01B|
-    
+
 DATA8_80D023:
 	.db $00,$00,$00,$00,$01,$00,$01,$00,$40,$00,$40,$00,$41,$00,$41,$00   ;80D023
 	.db $40,$00                           ;80D033
@@ -9167,7 +9167,7 @@ func_80D5F1:
 	inc a
 	asl a
 	asl a
-	sta.w $8641,y
+	sta.w wCharExpByte0,y
 	rep #$20 ;A->16
 	tya
 	asl a
@@ -9842,9 +9842,9 @@ func_80DA93:
 	.db $01,$80,$7F,$40,$00,$01,$81,$7F   ;80DB80
 	.db $40,$00,$01,$80                   ;80DB88
 	.db $7F,$00,$08,$01,$80                   ;80DB8C  
-    
+
 UNREACH_80DB91:
-	.db $FF,$FF                      
+	.db $FF,$FF
 	.db $FF,$FF                           ;80DB93
 	.db $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF   ;80DB95  
 	.db $FF,$FF,$FF,$FF                   ;80DB9D  
@@ -9852,7 +9852,7 @@ UNREACH_80DB91:
 	.db $01,$00                           ;80DBA3  
 	.db $01,$00                           ;80DBA5
 	.db $00,$00,$01,$00                   ;80DBA7|
-    
+
 UNREACH_80DBAB:
 	.db $00
 	.db $00,$00                           ;80DBAC

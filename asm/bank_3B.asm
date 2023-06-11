@@ -1,5 +1,6 @@
 .bank $3b
 .org $0000 ;$FB0000
+.base $C0
 
 ;weapon/staff/shield graphics data
 ;all the graphics are compressed
@@ -1020,1227 +1021,1230 @@ DATA8_FBC34A:
 ;no header byte
 ;these graphics are all together in other_obj/special.bmp in shiren pc
 
+.redef CURR_BANK 0x3B
+.redef CURR_ADDR 0xD701
+
 ;fbd701
 Graphics_FBD701:
-.incbin "gfx/misc/fbd701.4bpp.lz"
+filedata "gfx/misc/fbd701.4bpp.lz"
 
 
 ;fbd9bf
 Graphics_FBD9BF:
-.incbin "gfx/misc/fbd9bf.4bpp.lz"
+filedata "gfx/misc/fbd9bf.4bpp.lz"
 
 
 ;fbdc5f
 Graphics_FBDC5F:
-.incbin "gfx/misc/fbdc5f.4bpp.lz"
+filedata "gfx/misc/fbdc5f.4bpp.lz"
 
 
 ;fbdd25
 Graphics_FBDD25:
-.incbin "gfx/misc/fbdd25.4bpp.lz"
+filedata "gfx/misc/fbdd25.4bpp.lz"
 
 
 ;fbdf55
 Graphics_FBDF55:
-.incbin "gfx/misc/fbdf55.4bpp.lz"
+filedata "gfx/misc/fbdf55.4bpp.lz"
 
 
 ;fbe181
 Graphics_FBE181:
-.incbin "gfx/misc/fbe181.4bpp.lz"
+filedata "gfx/misc/fbe181.4bpp.lz"
 
 
 ;fbe3bb
 Graphics_FBE3BB:
-.incbin "gfx/misc/fbe3bb.4bpp.lz"
+filedata "gfx/misc/fbe3bb.4bpp.lz"
 
 
 ;fbe489
 Graphics_FBE489:
-.incbin "gfx/misc/fbe489.4bpp.lz"
+filedata "gfx/misc/fbe489.4bpp.lz"
 
 
 ;fbe70b
 Graphics_FBE70B:
-.incbin "gfx/misc/fbe70b.4bpp.lz"
+filedata "gfx/misc/fbe70b.4bpp.lz"
 
 
 ;fbe7d1
 Graphics_FBE7D1:
-.incbin "gfx/misc/fbe7d1.4bpp.lz"
+filedata "gfx/misc/fbe7d1.4bpp.lz"
 
 
 ;fbe9fd
 Graphics_FBE9FD:
-.incbin "gfx/misc/fbe9fd.4bpp.lz"
+filedata "gfx/misc/fbe9fd.4bpp.lz"
 
 
 ;fbea79
 Graphics_FBEA79:
-.incbin "gfx/misc/fbea79.4bpp.lz"
+filedata "gfx/misc/fbea79.4bpp.lz"
 
 
 ;fbebdf
 Graphics_FBEBDF:
-.incbin "gfx/misc/fbebdf.4bpp.lz"
+filedata "gfx/misc/fbebdf.4bpp.lz"
 
 
 ;fbec3f
 Graphics_FBEC3F:
-.incbin "gfx/misc/fbec3f.4bpp.lz"
+filedata "gfx/misc/fbec3f.4bpp.lz"
 
 
 ;fbed15
 Graphics_FBED15:
-.incbin "gfx/misc/fbed15.4bpp.lz"
+filedata "gfx/misc/fbed15.4bpp.lz"
 
 
 ;fbed6d
 Graphics_FBED6D:
-.incbin "gfx/misc/fbed6d.4bpp.lz"
+filedata "gfx/misc/fbed6d.4bpp.lz"
 
 
 ;fbeddb
 Graphics_FBEDDB:
-.incbin "gfx/misc/fbeddb.4bpp.lz"
+filedata "gfx/misc/fbeddb.4bpp.lz"
 
 
 ;fbee0d
 Graphics_FBEE0D:
-.incbin "gfx/misc/fbee0d.4bpp.lz"
+filedata "gfx/misc/fbee0d.4bpp.lz"
 
 
 ;fbee31
 Graphics_FBEE31:
-.incbin "gfx/misc/fbee31.4bpp.lz"
+filedata "gfx/misc/fbee31.4bpp.lz"
 
 
 ;fbf061
 Graphics_FBF061:
-.incbin "gfx/misc/fbf061.4bpp.lz"
+filedata "gfx/misc/fbf061.4bpp.lz"
 
 
 ;fbf285
 Graphics_FBF285:
-.incbin "gfx/misc/fbf285.4bpp.lz"
+filedata "gfx/misc/fbf285.4bpp.lz"
 
 
 ;fbf4b9
 Graphics_FBF4B9:
-.incbin "gfx/misc/fbf4b9.4bpp.lz"
+filedata "gfx/misc/fbf4b9.4bpp.lz"
 
 
 ;fbf585
 Graphics_FBF585:
-.incbin "gfx/misc/fbf585.4bpp.lz"
+filedata "gfx/misc/fbf585.4bpp.lz"
 
 
 ;fbf7d1
 Graphics_FBF7D1:
-.incbin "gfx/misc/fbf7d1.4bpp.lz"
+filedata "gfx/misc/fbf7d1.4bpp.lz"
 
 
 ;fbf891
 Graphics_FBF891:
-.incbin "gfx/misc/fbf891.4bpp.lz"
+filedata "gfx/misc/fbf891.4bpp.lz"
 
 
 ;fbfa39
 Graphics_FBFA39:
-.incbin "gfx/misc/fbfa39.4bpp.lz"
+filedata "gfx/misc/fbfa39.4bpp.lz"
 
 
 ;fbfa9b
 Graphics_FBFA9B:
-.incbin "gfx/misc/fbfa9b.4bpp.lz"
+filedata "gfx/misc/fbfa9b.4bpp.lz"
 
 
 ;fbfb3f
 Graphics_FBFB3F:
-.incbin "gfx/misc/fbfb3f.4bpp.lz"
+filedata "gfx/misc/fbfb3f.4bpp.lz"
 
 
 ;fbfe53
 Graphics_FBFE53:
-filedata "gfx/misc/fbfe53.4bpp.lz" 0x3B 0xFE53
+filedata "gfx/misc/fbfe53.4bpp.lz"
 
 
 ;fc019f
 Graphics_FC019F:
-.incbin "gfx/misc/fc019f.4bpp.lz"
+filedata "gfx/misc/fc019f.4bpp.lz"
 
 
 ;fc0445
 Graphics_FC0445:
-.incbin "gfx/misc/fc0445.4bpp.lz"
+filedata "gfx/misc/fc0445.4bpp.lz"
 
 
 ;fc069d
 Graphics_FC069D:
-.incbin "gfx/misc/fc069d.4bpp.lz"
+filedata "gfx/misc/fc069d.4bpp.lz"
 
 
 ;fc0971
 Graphics_FC0971:
-.incbin "gfx/misc/fc0971.4bpp.lz"
+filedata "gfx/misc/fc0971.4bpp.lz"
 
 
 ;fc0ce3
 Graphics_FC0CE3:
-.incbin "gfx/misc/fc0ce3.4bpp.lz"
+filedata "gfx/misc/fc0ce3.4bpp.lz"
 
 
 ;fc0f37
 Graphics_FC0F37:
-.incbin "gfx/misc/fc0f37.4bpp.lz"
+filedata "gfx/misc/fc0f37.4bpp.lz"
 
 
 ;fc1183
 Graphics_FC1183:
-.incbin "gfx/misc/fc1183.4bpp.lz"
+filedata "gfx/misc/fc1183.4bpp.lz"
 
 
 ;fc12cd
 Graphics_FC12CD:
-.incbin "gfx/misc/fc12cd.4bpp.lz"
+filedata "gfx/misc/fc12cd.4bpp.lz"
 
 
 ;fc152f
 Graphics_FC152F:
-.incbin "gfx/misc/fc152f.4bpp.lz"
+filedata "gfx/misc/fc152f.4bpp.lz"
 
 
 ;fc164d
 Graphics_FC164D:
-.incbin "gfx/misc/fc164d.4bpp.lz"
+filedata "gfx/misc/fc164d.4bpp.lz"
 
 
 ;fc1831
 Graphics_FC1831:
-.incbin "gfx/misc/fc1831.4bpp.lz"
+filedata "gfx/misc/fc1831.4bpp.lz"
 
 
 ;fc19e9
 Graphics_FC19E9:
-.incbin "gfx/misc/fc19e9.4bpp.lz"
+filedata "gfx/misc/fc19e9.4bpp.lz"
 
 
 ;fc1c09
 Graphics_FC1C09:
-.incbin "gfx/misc/fc1c09.4bpp.lz"
+filedata "gfx/misc/fc1c09.4bpp.lz"
 
 
 ;fc1dd9
 Graphics_FC1DD9:
-.incbin "gfx/misc/fc1dd9.4bpp.lz"
+filedata "gfx/misc/fc1dd9.4bpp.lz"
 
 
 ;fc1fe3
 Graphics_FC1FE3:
-.incbin "gfx/misc/fc1fe3.4bpp.lz"
+filedata "gfx/misc/fc1fe3.4bpp.lz"
 
 
 ;fc2057
 Graphics_FC2057:
-.incbin "gfx/misc/fc2057.4bpp.lz"
+filedata "gfx/misc/fc2057.4bpp.lz"
 
 
 ;fc22bf
 Graphics_FC22BF:
-.incbin "gfx/misc/fc22bf.4bpp.lz"
+filedata "gfx/misc/fc22bf.4bpp.lz"
 
 
 ;fc22fb
 Graphics_FC22FB:
-.incbin "gfx/misc/fc22fb.4bpp.lz"
+filedata "gfx/misc/fc22fb.4bpp.lz"
 
 
 ;fc2455
 Graphics_FC2455:
-.incbin "gfx/misc/fc2455.4bpp.lz"
+filedata "gfx/misc/fc2455.4bpp.lz"
 
 
 ;fc2583
 Graphics_FC2583:
-.incbin "gfx/misc/fc2583.4bpp.lz"
+filedata "gfx/misc/fc2583.4bpp.lz"
 
 
 ;fc2715
 Graphics_FC2715:
-.incbin "gfx/misc/fc2715.4bpp.lz"
+filedata "gfx/misc/fc2715.4bpp.lz"
 
 
 ;fc2815
 Graphics_FC2815:
-.incbin "gfx/misc/fc2815.4bpp.lz"
+filedata "gfx/misc/fc2815.4bpp.lz"
 
 
 ;fc29c7
 Graphics_FC29C7:
-.incbin "gfx/misc/fc29c7.4bpp.lz"
+filedata "gfx/misc/fc29c7.4bpp.lz"
 
 
 ;fc2a3f
 Graphics_FC2A3F:
-.incbin "gfx/misc/fc2a3f.4bpp.lz"
+filedata "gfx/misc/fc2a3f.4bpp.lz"
 
 
 ;fc2b2f
 Graphics_FC2B2F:
-.incbin "gfx/misc/fc2b2f.4bpp.lz"
+filedata "gfx/misc/fc2b2f.4bpp.lz"
 
 
 ;fc2cff
 Graphics_FC2CFF:
-.incbin "gfx/misc/fc2cff.4bpp.lz"
+filedata "gfx/misc/fc2cff.4bpp.lz"
 
 
 ;fc2eaf
 Graphics_FC2EAF:
-.incbin "gfx/misc/fc2eaf.4bpp.lz"
+filedata "gfx/misc/fc2eaf.4bpp.lz"
 
 
 ;fc30b5
 Graphics_FC30B5:
-.incbin "gfx/misc/fc30b5.4bpp.lz"
+filedata "gfx/misc/fc30b5.4bpp.lz"
 
 
 ;fc3355
 Graphics_FC3355:
-.incbin "gfx/misc/fc3355.4bpp.lz"
+filedata "gfx/misc/fc3355.4bpp.lz"
 
 
 ;fc3537
 Graphics_FC3537:
-.incbin "gfx/misc/fc3537.4bpp.lz"
+filedata "gfx/misc/fc3537.4bpp.lz"
 
 
 ;fc373f
 Graphics_FC373F:
-.incbin "gfx/misc/fc373f.4bpp.lz"
+filedata "gfx/misc/fc373f.4bpp.lz"
 
 
 ;fc3965
 Graphics_FC3965:
-.incbin "gfx/misc/fc3965.4bpp.lz"
+filedata "gfx/misc/fc3965.4bpp.lz"
 
 
 ;fc3c9b
 Graphics_FC3C9B:
-.incbin "gfx/misc/fc3c9b.4bpp.lz"
+filedata "gfx/misc/fc3c9b.4bpp.lz"
 
 
 ;fc3edd
 Graphics_FC3EDD:
-.incbin "gfx/misc/fc3edd.4bpp.lz"
+filedata "gfx/misc/fc3edd.4bpp.lz"
 
 ;fc4231
 Graphics_FC4231:
-.incbin "gfx/misc/fc4231.4bpp.lz"
+filedata "gfx/misc/fc4231.4bpp.lz"
 
 ;fc4383
 Graphics_FC4383:
-.incbin "gfx/misc/fc4383.4bpp.lz"
+filedata "gfx/misc/fc4383.4bpp.lz"
 
 
 ;fc465f
 Graphics_FC465F:
-.incbin "gfx/misc/fc465f.4bpp.lz"
+filedata "gfx/misc/fc465f.4bpp.lz"
 
 
 ;fc49f7
 Graphics_FC49F7:
-.incbin "gfx/misc/fc49f7.4bpp.lz"
+filedata "gfx/misc/fc49f7.4bpp.lz"
 
 
 ;fc4ad5
 Graphics_FC4AD5:
-.incbin "gfx/misc/fc4ad5.4bpp.lz"
+filedata "gfx/misc/fc4ad5.4bpp.lz"
 
 
 ;fc4cdd
 Graphics_FC4CDD:
-.incbin "gfx/misc/fc4cdd.4bpp.lz"
+filedata "gfx/misc/fc4cdd.4bpp.lz"
 
 
 ;fc4f2d
 Graphics_FC4F2D:
-.incbin "gfx/misc/fc4f2d.4bpp.lz"
+filedata "gfx/misc/fc4f2d.4bpp.lz"
 
 
 ;fc5053
 Graphics_FC5053:
-.incbin "gfx/misc/fc5053.4bpp.lz"
+filedata "gfx/misc/fc5053.4bpp.lz"
 
 
 ;fc52eb
 Graphics_FC52EB:
-.incbin "gfx/misc/fc52eb.4bpp.lz"
+filedata "gfx/misc/fc52eb.4bpp.lz"
 
 
 ;fc54b3
 Graphics_FC54B3:
-.incbin "gfx/misc/fc54b3.4bpp.lz"
+filedata "gfx/misc/fc54b3.4bpp.lz"
 
 
 ;fc57f1
 Graphics_FC57F1:
-.incbin "gfx/misc/fc57f1.4bpp.lz"
+filedata "gfx/misc/fc57f1.4bpp.lz"
 
 
 ;fc5983
 Graphics_FC5983:
-.incbin "gfx/misc/fc5983.4bpp.lz"
+filedata "gfx/misc/fc5983.4bpp.lz"
 
 
 ;fc5bb3
 Graphics_FC5BB3:
-.incbin "gfx/misc/fc5bb3.4bpp.lz"
+filedata "gfx/misc/fc5bb3.4bpp.lz"
 
 
 ;fc5c47
 Graphics_FC5C47:
-.incbin "gfx/misc/fc5c47.4bpp.lz"
+filedata "gfx/misc/fc5c47.4bpp.lz"
 
 
 ;fc5e55
 Graphics_FC5E55:
-.incbin "gfx/misc/fc5e55.4bpp.lz"
+filedata "gfx/misc/fc5e55.4bpp.lz"
 
 
 ;fc5e9d
 Graphics_FC5E9D:
-.incbin "gfx/misc/fc5e9d.4bpp.lz"
+filedata "gfx/misc/fc5e9d.4bpp.lz"
 
 
 ;fc6159
 Graphics_FC6159:
-.incbin "gfx/misc/fc6159.4bpp.lz"
+filedata "gfx/misc/fc6159.4bpp.lz"
 
 
 ;fc6491
 Graphics_FC6491:
-.incbin "gfx/misc/fc6491.4bpp.lz"
+filedata "gfx/misc/fc6491.4bpp.lz"
 
 
 ;fc6593
 Graphics_FC6593:
-.incbin "gfx/misc/fc6593.4bpp.lz"
+filedata "gfx/misc/fc6593.4bpp.lz"
 
 
 ;fc667b
 Graphics_FC667B:
-.incbin "gfx/misc/fc667b.4bpp.lz"
+filedata "gfx/misc/fc667b.4bpp.lz"
 
 
 ;fc6769
 Graphics_FC6769:
-.incbin "gfx/misc/fc6769.4bpp.lz"
+filedata "gfx/misc/fc6769.4bpp.lz"
 
 
 ;fc6859
 Graphics_FC6859:
-.incbin "gfx/misc/fc6859.4bpp.lz"
+filedata "gfx/misc/fc6859.4bpp.lz"
 
 
 ;fc6ab1
 Graphics_FC6AB1:
-.incbin "gfx/misc/fc6ab1.4bpp.lz"
+filedata "gfx/misc/fc6ab1.4bpp.lz"
 
 
 ;fc6d67
 Graphics_FC6D67:
-.incbin "gfx/misc/fc6d67.4bpp.lz"
+filedata "gfx/misc/fc6d67.4bpp.lz"
 
 
 ;fc6f4d
 Graphics_FC6F4D:
-.incbin "gfx/misc/fc6f4d.4bpp.lz"
+filedata "gfx/misc/fc6f4d.4bpp.lz"
 
 
 ;fc7295
 Graphics_FC7295:
-.incbin "gfx/misc/fc7295.4bpp.lz"
+filedata "gfx/misc/fc7295.4bpp.lz"
 
 
 ;fc7405
 Graphics_FC7405:
-.incbin "gfx/misc/fc7405.4bpp.lz"
+filedata "gfx/misc/fc7405.4bpp.lz"
 
 
 ;fc74b3
 Graphics_FC74B3:
-.incbin "gfx/misc/fc74b3.4bpp.lz"
+filedata "gfx/misc/fc74b3.4bpp.lz"
 
 
 ;fc75e3
 Graphics_FC75E3:
-.incbin "gfx/misc/fc75e3.4bpp.lz"
+filedata "gfx/misc/fc75e3.4bpp.lz"
 
 
 ;fc77a7
 Graphics_FC77A7:
-.incbin "gfx/misc/fc77a7.4bpp.lz"
+filedata "gfx/misc/fc77a7.4bpp.lz"
 
 
 ;fc78b3
 Graphics_FC78B3:
-.incbin "gfx/misc/fc78b3.4bpp.lz"
+filedata "gfx/misc/fc78b3.4bpp.lz"
 
 
 ;fc7979
 Graphics_FC7979:
-.incbin "gfx/misc/fc7979.4bpp.lz"
+filedata "gfx/misc/fc7979.4bpp.lz"
 
 
 ;fc7a33
 Graphics_FC7A33:
-.incbin "gfx/misc/fc7a33.4bpp.lz"
+filedata "gfx/misc/fc7a33.4bpp.lz"
 
 
 ;fc7b79
 Graphics_FC7B79:
-.incbin "gfx/misc/fc7b79.4bpp.lz"
+filedata "gfx/misc/fc7b79.4bpp.lz"
 
 
 ;fc7e07
 Graphics_FC7E07:
-.incbin "gfx/misc/fc7e07.4bpp.lz"
+filedata "gfx/misc/fc7e07.4bpp.lz"
 
 
 ;fc7fdf
 Graphics_FC7FDF:
-.incbin "gfx/misc/fc7fdf.4bpp.lz"
+filedata "gfx/misc/fc7fdf.4bpp.lz"
 
 
 ;fc80a7
 Graphics_FC80A7:
-.incbin "gfx/misc/fc80a7.4bpp.lz"
+filedata "gfx/misc/fc80a7.4bpp.lz"
 
 
 ;fc8155
 Graphics_FC8155:
-.incbin "gfx/misc/fc8155.4bpp.lz"
+filedata "gfx/misc/fc8155.4bpp.lz"
 
 
 ;fc8233
 Graphics_FC8233:
-.incbin "gfx/misc/fc8233.4bpp.lz"
+filedata "gfx/misc/fc8233.4bpp.lz"
 
 
 ;fc83b3
 Graphics_FC83B3:
-.incbin "gfx/misc/fc83b3.4bpp.lz"
+filedata "gfx/misc/fc83b3.4bpp.lz"
 
 
 ;fc8611
 Graphics_FC8611:
-.incbin "gfx/misc/fc8611.4bpp.lz"
+filedata "gfx/misc/fc8611.4bpp.lz"
 
 
 ;fc8771
 Graphics_FC8771:
-.incbin "gfx/misc/fc8771.4bpp.lz"
+filedata "gfx/misc/fc8771.4bpp.lz"
 
 
 ;fc87e1
 Graphics_FC87E1:
-.incbin "gfx/misc/fc87e1.4bpp.lz"
+filedata "gfx/misc/fc87e1.4bpp.lz"
 
 
 ;fc88d1
 Graphics_FC88D1:
-.incbin "gfx/misc/fc88d1.4bpp.lz"
+filedata "gfx/misc/fc88d1.4bpp.lz"
 
 
 ;fc89e1
 Graphics_FC89E1:
-.incbin "gfx/misc/fc89e1.4bpp.lz"
+filedata "gfx/misc/fc89e1.4bpp.lz"
 
 
 ;fc8b35
 Graphics_FC8B35:
-.incbin "gfx/misc/fc8b35.4bpp.lz"
+filedata "gfx/misc/fc8b35.4bpp.lz"
 
 
 ;fc8bdd
 Graphics_FC8BDD:
-.incbin "gfx/misc/fc8bdd.4bpp.lz"
+filedata "gfx/misc/fc8bdd.4bpp.lz"
 
 
 ;fc8d63
 Graphics_FC8D63:
-.incbin "gfx/misc/fc8d63.4bpp.lz"
+filedata "gfx/misc/fc8d63.4bpp.lz"
 
 
 ;fc8e5d
 Graphics_FC8E5D:
-.incbin "gfx/misc/fc8e5d.4bpp.lz"
+filedata "gfx/misc/fc8e5d.4bpp.lz"
 
 
 ;fc8ffb
 Graphics_FC8FFB:
-.incbin "gfx/misc/fc8ffb.4bpp.lz"
+filedata "gfx/misc/fc8ffb.4bpp.lz"
 
 
 ;fc92b5
 Graphics_FC92B5:
-.incbin "gfx/misc/fc92b5.4bpp.lz"
+filedata "gfx/misc/fc92b5.4bpp.lz"
 
 
 ;fc9549
 Graphics_FC9549:
-.incbin "gfx/misc/fc9549.4bpp.lz"
+filedata "gfx/misc/fc9549.4bpp.lz"
 
 
 ;fc960f
 Graphics_FC960F:
-.incbin "gfx/misc/fc960f.4bpp.lz"
+filedata "gfx/misc/fc960f.4bpp.lz"
 
 
 ;fc97f5
 Graphics_FC97F5:
-.incbin "gfx/misc/fc97f5.4bpp.lz"
+filedata "gfx/misc/fc97f5.4bpp.lz"
 
 
 ;fc99bb
 Graphics_FC99BB:
-.incbin "gfx/misc/fc99bb.4bpp.lz"
+filedata "gfx/misc/fc99bb.4bpp.lz"
 
 
 ;fc9b49
 Graphics_FC9B49:
-.incbin "gfx/misc/fc9b49.4bpp.lz"
+filedata "gfx/misc/fc9b49.4bpp.lz"
 
 
 ;fc9d4b
 Graphics_FC9D4B:
-.incbin "gfx/misc/fc9d4b.4bpp.lz"
+filedata "gfx/misc/fc9d4b.4bpp.lz"
 
 
 ;fc9ff3
 Graphics_FC9FF3:
-.incbin "gfx/misc/fc9ff3.4bpp.lz"
+filedata "gfx/misc/fc9ff3.4bpp.lz"
 
 
 ;fca01d
 Graphics_FCA01D:
-.incbin "gfx/misc/fca01d.4bpp.lz"
+filedata "gfx/misc/fca01d.4bpp.lz"
 
 
 ;fca2e3
 Graphics_FCA2E3:
-.incbin "gfx/misc/fca2e3.4bpp.lz"
+filedata "gfx/misc/fca2e3.4bpp.lz"
 
 
 ;fca2ff
 Graphics_FCA2FF:
-.incbin "gfx/misc/fca2ff.4bpp.lz"
+filedata "gfx/misc/fca2ff.4bpp.lz"
 
 
 ;fca589
 Graphics_FCA589:
-.incbin "gfx/misc/fca589.4bpp.lz"
+filedata "gfx/misc/fca589.4bpp.lz"
 
 
 ;fca705
 Graphics_FCA705:
-.incbin "gfx/misc/fca705.4bpp.lz"
+filedata "gfx/misc/fca705.4bpp.lz"
 
 
 ;fca881
 Graphics_FCA881:
-.incbin "gfx/misc/fca881.4bpp.lz"
+filedata "gfx/misc/fca881.4bpp.lz"
 
 
 ;fcaa11
 Graphics_FCAA11:
-.incbin "gfx/misc/fcaa11.4bpp.lz"
+filedata "gfx/misc/fcaa11.4bpp.lz"
 
 
 ;fcac3f
 Graphics_FCAC3F:
-.incbin "gfx/misc/fcac3f.4bpp.lz"
+filedata "gfx/misc/fcac3f.4bpp.lz"
 
 
 ;fcaea1
 Graphics_FCAEA1:
-.incbin "gfx/misc/fcaea1.4bpp.lz"
+filedata "gfx/misc/fcaea1.4bpp.lz"
 
 
 ;fcb0ad
 Graphics_FCB0AD:
-.incbin "gfx/misc/fcb0ad.4bpp.lz"
+filedata "gfx/misc/fcb0ad.4bpp.lz"
 
 
 ;fcb327
 Graphics_FCB327:
-.incbin "gfx/misc/fcb327.4bpp.lz"
+filedata "gfx/misc/fcb327.4bpp.lz"
 
 
 ;fcb423
 Graphics_FCB423:
-.incbin "gfx/misc/fcb423.4bpp.lz"
+filedata "gfx/misc/fcb423.4bpp.lz"
 
 
 ;fcb603
 Graphics_FCB603:
-.incbin "gfx/misc/fcb603.4bpp.lz"
+filedata "gfx/misc/fcb603.4bpp.lz"
 
 
 ;fcb889
 Graphics_FCB889:
-.incbin "gfx/misc/fcb889.4bpp.lz"
+filedata "gfx/misc/fcb889.4bpp.lz"
 
 
 ;fcba01
 Graphics_FCBA01:
-.incbin "gfx/misc/fcba01.4bpp.lz"
+filedata "gfx/misc/fcba01.4bpp.lz"
 
 
 ;fcbbd1
 Graphics_FCBBD1:
-.incbin "gfx/misc/fcbbd1.4bpp.lz"
+filedata "gfx/misc/fcbbd1.4bpp.lz"
 
 
 ;fcbe95
 Graphics_FCBE95:
-.incbin "gfx/misc/fcbe95.4bpp.lz"
+filedata "gfx/misc/fcbe95.4bpp.lz"
 
 
 ;fcc05d
 Graphics_FCC05D:
-.incbin "gfx/misc/fcc05d.4bpp.lz"
+filedata "gfx/misc/fcc05d.4bpp.lz"
 
 
 ;fcc27d
 Graphics_FCC27D:
-.incbin "gfx/misc/fcc27d.4bpp.lz"
+filedata "gfx/misc/fcc27d.4bpp.lz"
 
 
 ;fcc519
 Graphics_FCC519:
-.incbin "gfx/misc/fcc519.4bpp.lz"
+filedata "gfx/misc/fcc519.4bpp.lz"
 
 
 ;fcc65f
 Graphics_FCC65F:
-.incbin "gfx/misc/fcc65f.4bpp.lz"
+filedata "gfx/misc/fcc65f.4bpp.lz"
 
 
 ;fcc84d
 Graphics_FCC84D:
-.incbin "gfx/misc/fcc84d.4bpp.lz"
+filedata "gfx/misc/fcc84d.4bpp.lz"
 
 
 ;fcca85
 Graphics_FCCA85:
-.incbin "gfx/misc/fcca85.4bpp.lz"
+filedata "gfx/misc/fcca85.4bpp.lz"
 
 
 ;fccbaf
 Graphics_FCCBAF:
-.incbin "gfx/misc/fccbaf.4bpp.lz"
+filedata "gfx/misc/fccbaf.4bpp.lz"
 
 
 ;fccd43
 Graphics_FCCD43:
-.incbin "gfx/misc/fccd43.4bpp.lz"
+filedata "gfx/misc/fccd43.4bpp.lz"
 
 
 ;fccef9
 Graphics_FCCEF9:
-.incbin "gfx/misc/fccef9.4bpp.lz"
+filedata "gfx/misc/fccef9.4bpp.lz"
 
 
 ;fcd029
 Graphics_FCD029:
-.incbin "gfx/misc/fcd029.4bpp.lz"
+filedata "gfx/misc/fcd029.4bpp.lz"
 
 
 ;fcd10b
 Graphics_FCD10B:
-.incbin "gfx/misc/fcd10b.4bpp.lz"
+filedata "gfx/misc/fcd10b.4bpp.lz"
 
 
 ;fcd217
 Graphics_FCD217:
-.incbin "gfx/misc/fcd217.4bpp.lz"
+filedata "gfx/misc/fcd217.4bpp.lz"
 
 
 ;fcd29b
 Graphics_FCD29B:
-.incbin "gfx/misc/fcd29b.4bpp.lz"
+filedata "gfx/misc/fcd29b.4bpp.lz"
 
 
 ;fcd4a9
 Graphics_FCD4A9:
-.incbin "gfx/misc/fcd4a9.4bpp.lz"
+filedata "gfx/misc/fcd4a9.4bpp.lz"
 
 
 ;fcd7e5
 Graphics_FCD7E5:
-.incbin "gfx/misc/fcd7e5.4bpp.lz"
+filedata "gfx/misc/fcd7e5.4bpp.lz"
 
 
 ;fcda5b
 Graphics_FCDA5B:
-.incbin "gfx/misc/fcda5b.4bpp.lz"
+filedata "gfx/misc/fcda5b.4bpp.lz"
 
 
 ;fcdba3
 Graphics_FCDBA3:
-.incbin "gfx/misc/fcdba3.4bpp.lz"
+filedata "gfx/misc/fcdba3.4bpp.lz"
 
 
 ;fcde25
 Graphics_FCDE25:
-.incbin "gfx/misc/fcde25.4bpp.lz"
+filedata "gfx/misc/fcde25.4bpp.lz"
 
 
 ;fcdeb1
 Graphics_FCDEB1:
-.incbin "gfx/misc/fcdeb1.4bpp.lz"
+filedata "gfx/misc/fcdeb1.4bpp.lz"
 
 
 ;fcdf77
 Graphics_FCDF77:
-.incbin "gfx/misc/fcdf77.4bpp.lz"
+filedata "gfx/misc/fcdf77.4bpp.lz"
 
 
 ;fce16b
 Graphics_FCE16B:
-.incbin "gfx/misc/fce16b.4bpp.lz"
+filedata "gfx/misc/fce16b.4bpp.lz"
 
 
 ;fce359
 Graphics_FCE359:
-.incbin "gfx/misc/fce359.4bpp.lz"
+filedata "gfx/misc/fce359.4bpp.lz"
 
 
 ;fce497
 Graphics_FCE497:
-.incbin "gfx/misc/fce497.4bpp.lz"
+filedata "gfx/misc/fce497.4bpp.lz"
 
 
 ;fce641
 Graphics_FCE641:
-.incbin "gfx/misc/fce641.4bpp.lz"
+filedata "gfx/misc/fce641.4bpp.lz"
 
 
 ;fce6d9
 Graphics_FCE6D9:
-.incbin "gfx/misc/fce6d9.4bpp.lz"
+filedata "gfx/misc/fce6d9.4bpp.lz"
 
 
 ;fce823
 Graphics_FCE823:
-.incbin "gfx/misc/fce823.4bpp.lz"
+filedata "gfx/misc/fce823.4bpp.lz"
 
 
 ;fce983
 Graphics_FCE983:
-.incbin "gfx/misc/fce983.4bpp.lz"
+filedata "gfx/misc/fce983.4bpp.lz"
 
 
 ;fce9ed
 Graphics_FCE9ED:
-.incbin "gfx/misc/fce9ed.4bpp.lz"
+filedata "gfx/misc/fce9ed.4bpp.lz"
 
 
 ;fceb0b
 Graphics_FCEB0B:
-.incbin "gfx/misc/fceb0b.4bpp.lz"
+filedata "gfx/misc/fceb0b.4bpp.lz"
 
 
 ;fcebab
 Graphics_FCEBAB:
-.incbin "gfx/misc/fcebab.4bpp.lz"
+filedata "gfx/misc/fcebab.4bpp.lz"
 
 
 ;fced11
 Graphics_FCED11:
-.incbin "gfx/misc/fced11.4bpp.lz"
+filedata "gfx/misc/fced11.4bpp.lz"
 
 
 ;fcee93
 Graphics_FCEE93:
-.incbin "gfx/misc/fcee93.4bpp.lz"
+filedata "gfx/misc/fcee93.4bpp.lz"
 
 
 ;fcf0c5
 Graphics_FCF0C5:
-.incbin "gfx/misc/fcf0c5.4bpp.lz"
+filedata "gfx/misc/fcf0c5.4bpp.lz"
 
 
 ;fcf2af
 Graphics_FCF2AF:
-.incbin "gfx/misc/fcf2af.4bpp.lz"
+filedata "gfx/misc/fcf2af.4bpp.lz"
 
 
 ;fcf3b1
 Graphics_FCF3B1:
-.incbin "gfx/misc/fcf3b1.4bpp.lz"
+filedata "gfx/misc/fcf3b1.4bpp.lz"
 
 
 ;fcf521
 Graphics_FCF521:
-.incbin "gfx/misc/fcf521.4bpp.lz"
+filedata "gfx/misc/fcf521.4bpp.lz"
 
 
 ;fcf6d1
 Graphics_FCF6D1:
-.incbin "gfx/misc/fcf6d1.4bpp.lz"
+filedata "gfx/misc/fcf6d1.4bpp.lz"
 
 
 ;fcf7f9
 Graphics_FCF7F9:
-.incbin "gfx/misc/fcf7f9.4bpp.lz"
+filedata "gfx/misc/fcf7f9.4bpp.lz"
 
 
 ;fcf849
 Graphics_FCF849:
-.incbin "gfx/misc/fcf849.4bpp.lz"
+filedata "gfx/misc/fcf849.4bpp.lz"
 
 
 ;fcf8f9
 Graphics_FCF8F9:
-.incbin "gfx/misc/fcf8f9.4bpp.lz"
+filedata "gfx/misc/fcf8f9.4bpp.lz"
 
 
 ;fcf9cd
 Graphics_FCF9CD:
-.incbin "gfx/misc/fcf9cd.4bpp.lz"
+filedata "gfx/misc/fcf9cd.4bpp.lz"
 
 
 ;fcfa81
 Graphics_FCFA81:
-.incbin "gfx/misc/fcfa81.4bpp.lz"
+filedata "gfx/misc/fcfa81.4bpp.lz"
 
 
 ;fcfb25
 Graphics_FCFB25:
-.incbin "gfx/misc/fcfb25.4bpp.lz"
+filedata "gfx/misc/fcfb25.4bpp.lz"
 
 
 ;fcfbff
 Graphics_FCFBFF:
-.incbin "gfx/misc/fcfbff.4bpp.lz"
+filedata "gfx/misc/fcfbff.4bpp.lz"
 
 
 ;fcfd01
 Graphics_FCFD01:
-.incbin "gfx/misc/fcfd01.4bpp.lz"
+filedata "gfx/misc/fcfd01.4bpp.lz"
 
 
 ;fcfe4d
 Graphics_FCFE4D:
-.incbin "gfx/misc/fcfe4d.4bpp.lz"
+filedata "gfx/misc/fcfe4d.4bpp.lz"
 
 
 ;fcffad
 Graphics_FCFFAD:
-filedata "gfx/misc/fcffad.4bpp.lz" 0x3C 0xFFAD
+filedata "gfx/misc/fcffad.4bpp.lz"
 
 
 ;fd00c5
 Graphics_FD00C5:
-.incbin "gfx/misc/fd00c5.4bpp.lz"
+filedata "gfx/misc/fd00c5.4bpp.lz"
 
 
 ;fd0145
 Graphics_FD0145:
-.incbin "gfx/misc/fd0145.4bpp.lz"
+filedata "gfx/misc/fd0145.4bpp.lz"
 
 
 ;fd0195
 Graphics_FD0195:
-.incbin "gfx/misc/fd0195.4bpp.lz"
+filedata "gfx/misc/fd0195.4bpp.lz"
 
 
 ;fd0403
 Graphics_FD0403:
-.incbin "gfx/misc/fd0403.4bpp.lz"
+filedata "gfx/misc/fd0403.4bpp.lz"
 
 
 ;fd068d
 Graphics_FD068D:
-.incbin "gfx/misc/fd068d.4bpp.lz"
+filedata "gfx/misc/fd068d.4bpp.lz"
 
 
 ;fd0839
 Graphics_FD0839:
-.incbin "gfx/misc/fd0839.4bpp.lz"
+filedata "gfx/misc/fd0839.4bpp.lz"
 
 
 ;fd09e5
 Graphics_FD09E5:
-.incbin "gfx/misc/fd09e5.4bpp.lz"
+filedata "gfx/misc/fd09e5.4bpp.lz"
 
 
 ;fd0b89
 Graphics_FD0B89:
-.incbin "gfx/misc/fd0b89.4bpp.lz"
+filedata "gfx/misc/fd0b89.4bpp.lz"
 
 
 ;fd0d33
 Graphics_FD0D33:
-.incbin "gfx/misc/fd0d33.4bpp.lz"
+filedata "gfx/misc/fd0d33.4bpp.lz"
 
 
 ;fd0f3f
 Graphics_FD0F3F:
-.incbin "gfx/misc/fd0f3f.4bpp.lz"
+filedata "gfx/misc/fd0f3f.4bpp.lz"
 
 
 ;fd111d
 Graphics_FD111D:
-.incbin "gfx/misc/fd111d.4bpp.lz"
+filedata "gfx/misc/fd111d.4bpp.lz"
 
 
 ;fd1193
 Graphics_FD1193:
-.incbin "gfx/misc/fd1193.4bpp.lz"
+filedata "gfx/misc/fd1193.4bpp.lz"
 
 
 ;fd1285
 Graphics_FD1285:
-.incbin "gfx/misc/fd1285.4bpp.lz"
+filedata "gfx/misc/fd1285.4bpp.lz"
 
 
 ;fd1497
 Graphics_FD1497:
-.incbin "gfx/misc/fd1497.4bpp.lz"
+filedata "gfx/misc/fd1497.4bpp.lz"
 
 
 ;fd1601
 Graphics_FD1601:
-.incbin "gfx/misc/fd1601.4bpp.lz"
+filedata "gfx/misc/fd1601.4bpp.lz"
 
 
 ;fd171d
 Graphics_FD171D:
-.incbin "gfx/misc/fd171d.4bpp.lz"
+filedata "gfx/misc/fd171d.4bpp.lz"
 
 
 ;fd17e9
 Graphics_FD17E9:
-.incbin "gfx/misc/fd17e9.4bpp.lz"
+filedata "gfx/misc/fd17e9.4bpp.lz"
 
 
 ;fd1b25
 Graphics_FD1B25:
-.incbin "gfx/misc/fd1b25.4bpp.lz"
+filedata "gfx/misc/fd1b25.4bpp.lz"
 
 
 ;fd1e6b
 Graphics_FD1E6B:
-.incbin "gfx/misc/fd1e6b.4bpp.lz"
+filedata "gfx/misc/fd1e6b.4bpp.lz"
 
 
 ;fd2199
 Graphics_FD2199:
-.incbin "gfx/misc/fd2199.4bpp.lz"
+filedata "gfx/misc/fd2199.4bpp.lz"
 
 
 ;fd24b5
 Graphics_FD24B5:
-.incbin "gfx/misc/fd24b5.4bpp.lz"
+filedata "gfx/misc/fd24b5.4bpp.lz"
 
 
 ;fd27e7
 Graphics_FD27E7:
-.incbin "gfx/misc/fd27e7.4bpp.lz"
+filedata "gfx/misc/fd27e7.4bpp.lz"
 
 
 ;fd2b2b
 Graphics_FD2B2B:
-.incbin "gfx/misc/fd2b2b.4bpp.lz"
+filedata "gfx/misc/fd2b2b.4bpp.lz"
 
 
 ;fd2e5b
 Graphics_FD2E5B:
-.incbin "gfx/misc/fd2e5b.4bpp.lz"
+filedata "gfx/misc/fd2e5b.4bpp.lz"
 
 
 ;fd3179
 Graphics_FD3179:
-.incbin "gfx/misc/fd3179.4bpp.lz"
+filedata "gfx/misc/fd3179.4bpp.lz"
 
 
 ;fd31b3
 Graphics_FD31B3:
-.incbin "gfx/misc/fd31b3.4bpp.lz"
+filedata "gfx/misc/fd31b3.4bpp.lz"
 
 
 ;fd34c7
 Graphics_FD34C7:
-.incbin "gfx/misc/fd34c7.4bpp.lz"
+filedata "gfx/misc/fd34c7.4bpp.lz"
 
 
 ;fd37d9
 Graphics_FD37D9:
-.incbin "gfx/misc/fd37d9.4bpp.lz"
+filedata "gfx/misc/fd37d9.4bpp.lz"
 
 
 ;fd3aed
 Graphics_FD3AED:
-.incbin "gfx/misc/fd3aed.4bpp.lz"
+filedata "gfx/misc/fd3aed.4bpp.lz"
 
 
 ;fd3dfb
 Graphics_FD3DFB:
-.incbin "gfx/misc/fd3dfb.4bpp.lz"
+filedata "gfx/misc/fd3dfb.4bpp.lz"
 
 
 ;fd3ee7
 Graphics_FD3EE7:
-.incbin "gfx/misc/fd3ee7.4bpp.lz"
+filedata "gfx/misc/fd3ee7.4bpp.lz"
 
 
 ;fd3f5d
 Graphics_FD3F5D:
-.incbin "gfx/misc/fd3f5d.4bpp.lz"
+filedata "gfx/misc/fd3f5d.4bpp.lz"
 
 
 ;fd407f
 Graphics_FD407F:
-.incbin "gfx/misc/fd407f.4bpp.lz"
+filedata "gfx/misc/fd407f.4bpp.lz"
 
 
 ;fd4205
 Graphics_FD4205:
-.incbin "gfx/misc/fd4205.4bpp.lz"
+filedata "gfx/misc/fd4205.4bpp.lz"
 
 
 ;fd438b
 Graphics_FD438B:
-.incbin "gfx/misc/fd438b.4bpp.lz"
+filedata "gfx/misc/fd438b.4bpp.lz"
 
 
 ;fd458b
 Graphics_FD458B:
-.incbin "gfx/misc/fd458b.4bpp.lz"
+filedata "gfx/misc/fd458b.4bpp.lz"
 
 
 ;fd468f
 Graphics_FD468F:
-.incbin "gfx/misc/fd468f.4bpp.lz"
+filedata "gfx/misc/fd468f.4bpp.lz"
 
 
 ;fd4745
 Graphics_FD4745:
-.incbin "gfx/misc/fd4745.4bpp.lz"
+filedata "gfx/misc/fd4745.4bpp.lz"
 
 
 ;fd48cf
 Graphics_FD48CF:
-.incbin "gfx/misc/fd48cf.4bpp.lz"
+filedata "gfx/misc/fd48cf.4bpp.lz"
 
 
 ;fd4aab
 Graphics_FD4AAB:
-.incbin "gfx/misc/fd4aab.4bpp.lz"
+filedata "gfx/misc/fd4aab.4bpp.lz"
 
 
 ;fd51e5
 Graphics_FD51E5:
-.incbin "gfx/misc/fd51e5.4bpp.lz"
+filedata "gfx/misc/fd51e5.4bpp.lz"
 
 
 ;fd6893
 Graphics_FD6893:
-.incbin "gfx/misc/fd6893.4bpp.lz"
+filedata "gfx/misc/fd6893.4bpp.lz"
 
 
 ;fd7521
 Graphics_FD7521:
-.incbin "gfx/misc/fd7521.4bpp.lz"
+filedata "gfx/misc/fd7521.4bpp.lz"
 
 
 ;fd778b
 Graphics_FD778B:
-.incbin "gfx/misc/fd778b.4bpp.lz"
+filedata "gfx/misc/fd778b.4bpp.lz"
 
 
 ;fd796f
 Graphics_FD796F:
-.incbin "gfx/misc/fd796f.4bpp.lz"
+filedata "gfx/misc/fd796f.4bpp.lz"
 
 
 ;fd7bb3
 Graphics_FD7BB3:
-.incbin "gfx/misc/fd7bb3.4bpp.lz"
+filedata "gfx/misc/fd7bb3.4bpp.lz"
 
 
 ;fd7ed9
 Graphics_FD7ED9:
-.incbin "gfx/misc/fd7ed9.4bpp.lz"
+filedata "gfx/misc/fd7ed9.4bpp.lz"
 
 
 ;fd812d
 Graphics_FD812D:
-.incbin "gfx/misc/fd812d.4bpp.lz"
+filedata "gfx/misc/fd812d.4bpp.lz"
 
 
 ;fd8389
 Graphics_FD8389:
-.incbin "gfx/misc/fd8389.4bpp.lz"
+filedata "gfx/misc/fd8389.4bpp.lz"
 
 
 ;fd862d
 Graphics_FD862D:
-.incbin "gfx/misc/fd862d.4bpp.lz"
+filedata "gfx/misc/fd862d.4bpp.lz"
 
 
 ;fd88fb
 Graphics_FD88FB:
-.incbin "gfx/misc/fd88fb.4bpp.lz"
+filedata "gfx/misc/fd88fb.4bpp.lz"
 
 
 ;fd8ad7
 Graphics_FD8AD7:
-.incbin "gfx/misc/fd8ad7.4bpp.lz"
+filedata "gfx/misc/fd8ad7.4bpp.lz"
 
 
 ;fd98c3
 Graphics_FD98C3:
-.incbin "gfx/misc/fd98c3.4bpp.lz"
+filedata "gfx/misc/fd98c3.4bpp.lz"
 
 
 ;fdaf1f
 Graphics_FDAF1F:
-.incbin "gfx/misc/fdaf1f.4bpp.lz"
+filedata "gfx/misc/fdaf1f.4bpp.lz"
 
 
 ;fdb55b
 Graphics_FDB55B:
-.incbin "gfx/misc/fdb55b.4bpp.lz"
+filedata "gfx/misc/fdb55b.4bpp.lz"
 
 
 ;fdc53d
 Graphics_FDC53D:
-.incbin "gfx/misc/fdc53d.4bpp.lz"
+filedata "gfx/misc/fdc53d.4bpp.lz"
 
 
 ;fdc655
 Graphics_FDC655:
-.incbin "gfx/misc/fdc655.4bpp.lz"
+filedata "gfx/misc/fdc655.4bpp.lz"
 
 
 ;fdc739
 Graphics_FDC739:
-.incbin "gfx/misc/fdc739.4bpp.lz"
+filedata "gfx/misc/fdc739.4bpp.lz"
 
 
 ;fdc817
 Graphics_FDC817:
-.incbin "gfx/misc/fdc817.4bpp.lz"
+filedata "gfx/misc/fdc817.4bpp.lz"
 
 
 ;fdc8a9
 Graphics_FDC8A9:
-.incbin "gfx/misc/fdc8a9.4bpp.lz"
+filedata "gfx/misc/fdc8a9.4bpp.lz"
 	
 
 ;fdc999

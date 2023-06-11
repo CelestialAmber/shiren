@@ -9,9 +9,9 @@ SFX_ShirenLevelUp:
 
 
 ;dfd1fa
-SFX_EnemyLevelUp:
-.dw SFX_EnemyLevelUp_ba - SFX_ShirenLevelUp
-.dw SFX_EnemyLevelUp_e5 - SFX_ShirenLevelUp
+SFX_MonsterLevelUp:
+.dw SFX_MonsterLevelUp_ba - SFX_ShirenLevelUp
+.dw SFX_MonsterLevelUp_e5 - SFX_ShirenLevelUp
 .dw $0000
 
 ;0x2f = start voice clip
@@ -20,7 +20,8 @@ SFX_ShirenLevelUp_10:
 .db $32,$2F,$33,$32,$31,$32,$33,$32,$27,$32
 .db $30,$2F,$A0,$79,$16,$31,$02,$35,$64,$36,$64,$30,$2F,$34,$02,$2A
 .db $D0,$FC,$64,$30,$30,$31,$34,$1E,$3C,$D0,$B5,$18,$D0,$46,$D0,$B5
-.db $30,$FB,$03,$F4,$FF,$D0,$55,$30,$30,$34,$00,$3D,$2A,$D0,$64,$FF
+.db $30,$FB,$03,$F4,$FF,$D0,$55,$30,$30,$34,$00,$3D,$2A,$D0,$64
+.db $FF
 
 ;voice at end + percussion
 SFX_ShirenLevelUp_4a:
@@ -39,12 +40,12 @@ SFX_ShirenLevelUp_a3:
 .db $31,$05,$4F,$30,$30,$27,$36
 .db $64,$34,$6E,$3C,$CB,$FC,$64,$18,$74,$BA,$FF,$CB,$5F,$74,$00,$00
 
-SFX_EnemyLevelUp_ba:
+SFX_MonsterLevelUp_ba:
 .db $CB,$B5,$30,$FB,$03,$ED,$FF,$4B,$60,$FF,$32,$2F,$33,$32,$27,$32
 .db $36,$32,$30,$2F,$A0,$79,$16,$31,$02,$35,$64,$36,$64,$30,$2F,$34
 .db $46,$2A,$CD,$FC,$58,$30,$30,$27,$CC,$C9,$18
 
-SFX_EnemyLevelUp_e5:
+SFX_MonsterLevelUp_e5:
 .db $0C,$4C,$30,$0C,$30
 .db $30,$34,$00,$0E,$FF,$30,$2F,$36,$64,$34,$82,$74,$CE,$FF,$69,$6C
 .db $2A,$0D,$74,$00,$00,$30,$36,$38,$15,$39,$06,$3A,$10,$3B,$16,$08

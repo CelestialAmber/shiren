@@ -33,18 +33,18 @@ SPC_05dc:
 	cbne $1a,SPC_05e3
 	clrc			
 	ret
-SPC_05e3:      
+SPC_05e3:
 	mov ($08),($f5)	
 	mov ($09),($f6)	
 	mov ($0a),($f7)	
 	mov a,$f4		
 	mov $f4,a		
 	bpl SPC_05f8	
-SPC_05f2:    
+SPC_05f2:
 	mov a,$f4		
 	bne SPC_05f2	
 	mov $f4,a		
-SPC_05f8:    
+SPC_05f8:
 	mov $1a,a		
 	mov a,$08		
 	and a,#$f0	
@@ -309,7 +309,7 @@ SPC_07a1:
 	dec x	  
 	mov a,(x)
 	;this instruction gets modified?
-	cmp a,#$00			;07a3: 68 00     
+	cmp a,#$00			;07a3: 68 00
 	bcc SPC_079f
 	mov $01+x,y	
 	setc		
@@ -466,7 +466,7 @@ SPC_089e:
 SPC_UnknownData_08a4:
 	.db $00,$20,$40,$60,$80,$60,$40,$20
 
-SPC_08ac:    
+SPC_08ac:
 	inc $8f	
 	mov a,$8f	
 	and a,#$07
@@ -647,7 +647,7 @@ SPC_09c4:
 
 SPC_UnknownData_9d7:
 	.db $00
-SPC_UnknownData_9d8:       
+SPC_UnknownData_9d8:
 	.db $80,$9c,$87,$ad,$8f,$38,$98,$45,$a1,$dc,$aa,$05,$b5,$c9,$bf,$30  
 	.db $cb,$45,$d7,$12,$e4,$a2,$f1
 
@@ -655,18 +655,18 @@ SPC_UnknownData_9d8:
 SPC_UnknownData_9ef:
 	.db $00
 SPC_UnknownData_9f0:
-	.db $00,$5e,$02,$bc,$04,$1b,$07,$7a,$09,$d9,$0b,$38,$0e,$98,$10,$f9     
+	.db $00,$5e,$02,$bc,$04,$1b,$07,$7a,$09,$d9,$0b,$38,$0e,$98,$10,$f9
 	.db $12,$59,$15,$ba,$17,$1c,$1a,$7d,$1c,$df,$1e,$42,$21,$a5,$23,$08  
 	.db $26,$6b,$28,$cf,$2a,$33,$2d,$98,$2f,$fd,$31,$62,$34,$c8,$36,$2e
 	.db $39,$94,$3b,$fb,$3d,$62,$40,$c9,$42,$31,$45,$99,$47,$01,$4a,$6a
-	.db $4c,$d3,$4e,$3d,$51,$a7,$53,$11,$56,$7b,$58,$e6,$5a,$52,$5d,$bd        
-	.db $5f,$29,$62,$96,$64,$02,$67,$70,$69,$dd,$6b,$4b,$6e,$b9,$70,$27     
+	.db $4c,$d3,$4e,$3d,$51,$a7,$53,$11,$56,$7b,$58,$e6,$5a,$52,$5d,$bd
+	.db $5f,$29,$62,$96,$64,$02,$67,$70,$69,$dd,$6b,$4b,$6e,$b9,$70,$27
 	.db $73,$96,$75,$06,$78,$75,$7a,$e5,$7c,$56,$7f,$c6,$81,$37,$84,$a9
-	.db $86,$1a,$89,$8d,$8b,$ff,$8d,$72,$90,$e5,$92,$59,$95,$cd,$97,$41        
-	.db $9a,$b6,$9c,$2b,$9f,$a0,$a1,$16,$a4,$8c,$a6,$03,$a9,$79,$ab,$f1     
+	.db $86,$1a,$89,$8d,$8b,$ff,$8d,$72,$90,$e5,$92,$59,$95,$cd,$97,$41
+	.db $9a,$b6,$9c,$2b,$9f,$a0,$a1,$16,$a4,$8c,$a6,$03,$a9,$79,$ab,$f1
 	.db $ad,$68,$b0,$e0,$b2,$58,$b5,$d1,$b7,$4a,$ba,$c4,$bc,$3d,$bf,$b7
 	.db $c1,$32,$c4,$ad,$c6,$28,$c9,$a4,$cb,$20,$ce,$9c,$d0,$19,$d3,$96
-	.db $d5,$13,$d8,$91,$da,$0f,$dd,$8e,$df,$0d,$e2,$8c,$e4,$0c,$e7,$8c     
+	.db $d5,$13,$d8,$91,$da,$0f,$dd,$8e,$df,$0d,$e2,$8c,$e4,$0c,$e7,$8c
 	.db $e9,$0c,$ec,$8d,$ee,$0e,$f1
 	
 SPC_0ab7:	
@@ -815,7 +815,7 @@ SPC_Jumptable_0ba2:
 
 SPC_0bc4:
 	mov $93,a	
-SPC_0bc6:   
+SPC_0bc6:
 	mov a,$92	
 	bra SPC_0bce
 SPC_0bca:
@@ -831,7 +831,7 @@ SPC_0bce:
 	inc a		
 	mov $f3,a	
 	ret
-SPC_0be0:    
+SPC_0be0:
 	mov a,$93	
 	lsr a		
 	mov $f3,a	
@@ -842,7 +842,7 @@ SPC_0be0:
 SPC_0beb:
 	mov $18,a	
 	mov x,#$07
-SPC_0bef:   
+SPC_0bef:
 	mov a,$85+x
 	or a,#$80
 	mov $85+x,a
@@ -892,7 +892,7 @@ SPC_0c24:
 	cmp a,#$c0
 	bne SPC_0c2d
 	mov a,#$9d
-SPC_0c2d:   
+SPC_0c2d:
 	mov !$01c0+y,a
 	ret
 
@@ -946,7 +946,7 @@ SPC_0c77:
 	mov !$0170+y,a
 	inc y		
 	cmp y,$0a	
-	bcc SPC_0c4a   
+	bcc SPC_0c4a
 	ret
 
 SPC_0c82:

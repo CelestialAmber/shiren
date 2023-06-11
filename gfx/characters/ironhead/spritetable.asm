@@ -16,13 +16,13 @@ IronheadSprites:
 	.dl Data_ca11a8
 	.db $0C
 	.dl Data_ca138f
-	.db $0C                
+	.db $0C
 	.dl Data_ca156a
 	.db $0C
 	.dl Data_ca173d
 	.db $0C
 	.dl Data_ca190a
-	.db $0C                
+	.db $0C
 	.dl Data_ca1acb
 	.db $0C
 	.dl Data_ca1c94
@@ -40,7 +40,7 @@ IronheadSprites:
 	.dl Data_ca2790
 	.db $0C
 	.dl Data_ca296b
-	.db $0C                
+	.db $0C
 	.dl Data_ca2b48
 	.db $0C
 	.dl Data_ca2d21
@@ -50,19 +50,19 @@ IronheadSprites:
 	.dl Data_ca30ad
 	.db $0C
 	.dl Data_ca3290
-	.db $0C                
+	.db $0C
 	.dl Data_ca346d
-	.db $0C                
+	.db $0C
 	.dl Data_ca3646
-	.db $0C                
+	.db $0C
 	.dl Data_ca382b
 	.db $0C
 	.dl Data_ca3a06
 	.db $0C
 	.dl Data_ca3be7
-	.db $0C                
+	.db $0C
 	.dl Data_ca3dc6
-	.db $0C                
+	.db $0C
 	.dl Data_ca3f89
 	.db $0C
 	.dl Data_ca4086

@@ -3684,7 +3684,7 @@ Jumptable_81A1D7:
 	.db $8A,$A3
 	.db $A6,$A3
 	.db $BF,$A3
-	.db $BC,$A3                
+	.db $BC,$A3
  
 	lda.b wTemp02
 	sec
@@ -7407,7 +7407,7 @@ func_81C913:
 	pha
 	plb
 	rep #$30 ;AXY->16
-	lda.b [wTemp00]
+	lda.b [wTemp00] ;loads character graphics header byte?
 	tax
 	and.w #$003F
 	bit.w #$0020
@@ -7623,7 +7623,7 @@ func_81CAD2:
 	clc
 	adc.w #$0010
 	sta.b w006c
-	lda.b [wTemp00],y
+	lda.b [wTemp00],y ;loads compressed 4bpp graphics data bytes?
 	iny
 	iny
 	lsr a
@@ -8484,7 +8484,7 @@ func_81D306:
 
 DATA8_81D330:
 	.db $78
-    
+
 DATA8_81D331:
 	.db $4F
 

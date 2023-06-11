@@ -4,37 +4,37 @@ ThiefWalrusSprites:
 	.dl Data_c8cad7
 	.db $0C
 	.dl Data_c8cc24
-	.db $0C                
+	.db $0C
 	.dl Data_c8cd79
 	.db $0C
 	.dl Data_c8ceaa
 	.db $0C
 	.dl Data_c8cfcf
-	.db $0C                
+	.db $0C
 	.dl Data_c8d10a
 	.db $0C
 	.dl Data_c8d231
 	.db $0C
 	.dl Data_c8d356
-	.db $0C                
+	.db $0C
 	.dl Data_c8cd79
 	.db $4C
 	.dl Data_c8ceaa
 	.db $4C
 	.dl Data_c8cfcf
-	.db $4C                
+	.db $4C
 	.dl Data_c8c990
 	.db $4C
 	.dl Data_c8cad7
 	.db $4C
 	.dl Data_c8cc24
-	.db $4C                
+	.db $4C
 	.dl Data_c8d47f
 	.db $0C
 	.dl Data_c8d5dc
 	.db $0C
 	.dl Data_c8d711
-	.db $0C                
+	.db $0C
 	.dl Data_c8d860
 	.db $0C
 	.dl Data_c8d9bd
@@ -48,7 +48,7 @@ ThiefWalrusSprites:
 	.dl Data_c8d711
 	.db $4C
 	.dl Data_c8dc4d
-	.db $0C                
+	.db $0C
 	.dl Data_c8ddd4
 	.db $0C
 	.dl Data_c8df55

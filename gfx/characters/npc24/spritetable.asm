@@ -5,7 +5,7 @@ NPC24Sprites:
 	.dl Data_d6211c
 	.db $08
 	.dl Data_d621df
-	.db $08                
+	.db $08
 	.dl Data_d622a0
 	.db $08
 	.dl Data_d62363
@@ -35,9 +35,9 @@ NPC24Sprites:
 	.dl Data_d62b52
 	.db $08
 	.dl Data_d62c34
-	.db $08                
+	.db $08
 	.dl Data_d62cf9
-	.db $08                
+	.db $08
 	.dl Data_d62de3
 	.db $08
 	.dl Data_d62ea8
@@ -68,7 +68,7 @@ NPC24Sprites:
 ;54a4
 NPC24Sprites2:
 	.dl Data_d62055
-	.db $0C                
+	.db $0C
 	.dl Data_d6211c
 	.db $0C
 	.dl Data_d621df

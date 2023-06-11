@@ -2568,6 +2568,7 @@ func_C62456:
 
 ;prints out the message corresponding to the given id
 ;wTemp00 (16 bit): message id
+;c62525
 DisplayMessage:
 	php
 	sep #$20 ;A->8
@@ -4214,7 +4215,7 @@ func_C636D4:
 	lda.b #$C6
 	sta.b wTemp02
 	rep #$20 ;A->16
-	lda.w #$871D
+	lda.w #wCharAttackTarget
 	sta.b wTemp00
 	jsl.l func_8084D6
 	jsl.l func_80854A
@@ -4414,7 +4415,7 @@ func_C63A17:
 	lda.b #$C6
 	sta.b wTemp02
 	rep #$20 ;A->16
-	lda.w #$871D
+	lda.w #wCharAttackTarget
 	sta.b wTemp00
 	jsl.l func_8084F8
 	plp

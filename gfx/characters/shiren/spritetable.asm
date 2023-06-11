@@ -154,11 +154,11 @@ ShirenSprites:
 	.dl Data_d839e4
 	.db $06
 	.dl Data_d83b3d
-	.db $06                
+	.db $06
 	.dl Data_d84ab2
-	.db $06                
+	.db $06
 	.dl Data_d83cba
-	.db $06                
+	.db $06
 	.dl Data_d83e0f
 	.db $06
 	.dl Data_d84bf8
@@ -180,9 +180,9 @@ ShirenSprites:
 	.dl Data_d845b1
 	.db $06
 	.dl Data_d84ff1
-	.db $06                
+	.db $06
 	.dl Shiren_WalkRight0
-	.db $06                
+	.db $06
 	.dl Shiren_WalkRight1
 	.db $06
 	.dl Shiren_WalkRight2
@@ -192,7 +192,7 @@ ShirenSprites:
 	.dl Shiren_WalkUpRight1
 	.db $06
 	.dl Shiren_WalkUpRight2
-	.db $06                
+	.db $06
 	.dl Shiren_WalkUp0
 	.db $06
 	.dl Data_d80201
@@ -206,13 +206,13 @@ ShirenSprites:
 	.dl Data_d80a05
 	.db $06
 	.dl Data_d80c06
-	.db $06                
+	.db $06
 	.dl Data_d80e07
 	.db $06
 	.dl Data_d81008
 	.db $06
 	.dl Data_d81209
-	.db $06                
+	.db $06
 	.dl Data_d8140a
 	.db $06
 	.dl Data_d8160b
@@ -230,9 +230,9 @@ ShirenSprites:
 	.dl Data_d82211
 	.db $06
 	.dl Data_d85139
-	.db $06                
+	.db $06
 	.dl Data_d852c4
-	.db $06                
+	.db $06
 	.dl Data_d85441
 	.db $06
 	.dl Data_d85591
@@ -270,7 +270,7 @@ ShirenSprites:
 	.dl Data_d86718
 	.db $46
 	.dl Data_d8659d
-	.db $46                
+	.db $46
 	.dl Data_d86a44
 	.db $06
 	.dl Data_d86bd5
@@ -300,6 +300,6 @@ ShirenSprites:
 	.dl Data_d874bf
 	.db $06
 	.dl Data_d87521
-	.db $06                
+	.db $06
 	.dl Data_d87599
 	.db $06 

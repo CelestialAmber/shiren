@@ -1,7 +1,7 @@
 ;49a4
 NPC14Sprites:
 	.dl Data_d4bc48
-	.db $08                        
+	.db $08
 	.dl Data_d4bd80
 	.db $08
 	.dl Data_d4beb2
@@ -35,7 +35,7 @@ NPC14Sprites:
 	.dl Data_d4c850
 	.db $08
 	.dl Data_d4c974
-	.db $08                
+	.db $08
 	.dl Data_d4caae
 	.db $08
 	.dl Data_d4cbfa

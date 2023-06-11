@@ -7981,17 +7981,17 @@ func_C46CAC:
 	asl a
 	asl a
 	tax
-	lda.l DATA8_F40000+3,x
+	lda.l BG1GraphicsTable+3,x
 	pha
-	lda.l DATA8_F40000+5,x
+	lda.l BG1GraphicsTable+5,x
 	xba
 	pha
-	lda.l DATA8_F40000+7,x
+	lda.l BG1GraphicsTable+7,x
 	pha
-	lda.l DATA8_F40000+9,x
+	lda.l BG1GraphicsTable+9,x
 	sta.b wTemp00
 	sep #$20 ;A->8
-	lda.l DATA8_F40000+11,x
+	lda.l BG1GraphicsTable+11,x
 	sta.b wTemp02
 	ora.b wTemp00
 	ora.b wTemp01
@@ -8152,7 +8152,16 @@ func_C46DF4:
 	jmp.w (DATA8_C46E12,x)
 
 DATA8_C46E12:
-	.db $22,$6E,$33,$6E,$18,$71,$DE,$70,$1D,$71,$E3,$70,$22,$71,$E8,$70   ;C46E12
+	.dw func_C46E22
+	.dw func_C46E33
+	.dw $7118
+	.dw $70DE
+	.dw $711D
+	.dw $70E3
+	.dw $7122
+	.dw $70E8
+
+func_C46E22:
 	lsr a
 	lsr a
 	and.b #$06
@@ -8161,7 +8170,12 @@ DATA8_C46E12:
 	jmp.w (DATA8_C46E2B,x)
 
 DATA8_C46E2B:
-	.db $4E,$6E,$30,$70,$49,$70,$62,$70   ;C46E2B
+	.dw $6E4E
+	.dw $7030
+	.dw $7049
+	.dw $7062
+
+func_C46E33:
 	bit.b #$08
 	bne func_C46E8B
 	lsr a
@@ -8209,7 +8223,10 @@ func_C46E72:
 	sta.w $AA38,x
 	plp
 	rtl
-	.db $E2,$20                           ;C46E89
+
+;c46e89
+	sep #$20 ;A->8
+
 func_C46E8B:
 	and.b #$30
 	asl a
@@ -8218,7 +8235,7 @@ func_C46E8B:
 	lda.b [$C2]
 	inc.b w00c2
 	bne @lbl_C46E9B
-	.db $20,$4A,$7A                       ;C46E98  
+	jsr func_C47A4A 
 @lbl_C46E9B:
 	xba
 	rep #$20 ;A->16
@@ -8253,19 +8270,19 @@ func_C46E8B:
 	lda.b [$C2]
 	inc.b w00c2
 	bne @lbl_C46ED9
-	.db $20,$4A,$7A                       ;C46ED6  
+	jsr.w func_C47A4A
 @lbl_C46ED9:
 	sta.w $08C1,y
 	lda.b [$C2]
 	inc.b w00c2
 	bne @lbl_C46EE5
-	.db $20,$4A,$7A                       ;C46EE2  
+	jsr.w func_C47A4A
 @lbl_C46EE5:
 	sta.w $08C2,y
 	lda.b [$C2]
 	inc.b w00c2
 	bne @lbl_C46EF1
-	.db $20,$4A,$7A                       ;C46EEE  
+	jsr.w func_C47A4A
 @lbl_C46EF1:
 	sta.w $08D1,y
 	lda.b [$C2]
@@ -8459,7 +8476,7 @@ func_C46F0B:
 	lda.b [$C2]
 	inc.b w00c2
 	bne @lbl_C47054
-	.db $20,$4A,$7A                       ;C47051  
+	jsr.w func_C47A4A
 @lbl_C47054:
 	pha
 	lda.b w00be
@@ -8473,7 +8490,7 @@ func_C46F0B:
 	lda.b [$C2]
 	inc.b w00c2
 	bne @lbl_C4706D
-	.db $20,$4A,$7A                       ;C4706A  
+	jsr.w func_C47A4A
 @lbl_C4706D:
 	pha
 	lda.b w00be
@@ -8781,6 +8798,7 @@ func_C47258:
 	bpl @lbl_C4725B
 	rts
 
+;does something with condor graphics data
 func_C47271:
 	ldy.w #$0007
 	lda.b [$C2]
@@ -8815,7 +8833,7 @@ func_C472A1:
 	lda.b [$C2]
 	inc.b w00c2
 	bne @lbl_C472AA
-	.db $20,$4A,$7A                       ;C472A7  
+	jsr.w func_C47A4A
 @lbl_C472AA:
 	sta.b w00bf
 	lda.b [$C2]
@@ -8838,7 +8856,7 @@ func_C472A1:
 	lda.b [$C2]
 	inc.b w00c2
 	bne @lbl_C472CF
-	.db $20,$4A,$7A                       ;C472CC  
+	jsr.w func_C47A4A
 @lbl_C472CF:
 	sta.w $AA11,y
 	iny
@@ -8878,7 +8896,7 @@ func_C472FA:
 	lda.b [$C2]
 	inc.b w00c2
 	bne @lbl_C47315
-	.db $20,$4A,$7A                       ;C47312  
+	jsr.w func_C47A4A
 @lbl_C47315:
 	pha
 	and.b #$0F
@@ -8892,7 +8910,7 @@ func_C472FA:
 	lda.b [$C2]
 	inc.b w00c2
 	bne @lbl_C4732C
-	.db $20,$4A,$7A                       ;C47329  
+	jsr.w func_C47A4A
 @lbl_C4732C:
 	pha
 	and.b #$0F
@@ -9034,22 +9052,78 @@ func_C473CD:
 	jmp.w (DATA8_C4740D,x)
 
 DATA8_C4740D:
-	.db $9B,$74,$10,$79,$18,$79,$04,$75,$B0,$74,$B3,$74,$B7,$74,$D9,$74   ;C4740D
-	.db $0C,$76                           ;C4741D  
-	.db $20,$79                           ;C4741F
-	.db $28,$79                           ;C47421
-	.db $2E,$75,$83,$75,$24,$76,$30,$79,$70,$76,$38,$79,$B5,$76,$50,$79   ;C47423
-	.db $74,$76,$40,$79,$B9,$76,$58,$79,$DE,$76,$68,$79,$41,$77,$88,$79   ;C47433
-	.db $A4,$77,$A8,$79,$EC,$77,$C0,$79,$57,$78,$E0,$79,$C2,$78,$00,$7A   ;C47443
-	.db $79,$76,$48,$79,$BE,$76,$60,$79,$F6,$76,$70,$79,$59,$77,$90,$79   ;C47453
-	.db $BC,$77,$B0,$79,$06,$78,$C8,$79,$71,$78,$E8,$79,$DC,$78,$08,$7A   ;C47463
-	.db $0E,$77,$78,$79,$71,$77,$98,$79,$D4,$77,$B8,$79,$20,$78,$D0,$79   ;C47473
-	.db $8B,$78,$F0,$79                   ;C47483
-	.db $F6,$78                           ;C47487  
-	.db $10,$7A,$26,$77,$80,$79           ;C47489
-	.db $89,$77                           ;C4748F
-	.db $A0,$79,$3A,$78,$D8,$79,$A5,$78   ;C47491
-	.db $F8,$79                           ;C47499
+	.dw $749B
+	.dw $7910
+	.dw $7918
+	.dw $7504
+	.dw $74B0
+	.dw $74B3
+	.dw $74B7
+	.dw $74D9
+	.dw $760C
+	.dw $7920
+	.dw $7928
+	.dw $752E
+	.dw $7583
+	.dw $7624
+	.dw $7930
+	.dw $7670
+	.dw $7938
+	.dw $76B5
+	.dw $7950
+	.dw $7674
+	.dw $7940
+	.dw $76B9
+	.dw $7958
+	.dw $76DE
+	.dw $7968
+	.dw $7741
+	.dw $7988
+	.dw $77A4
+	.dw $79A8
+	.dw $77EC
+	.dw $79C0
+	.dw $7857
+	.dw $79E0
+	.dw $78C2
+	.dw $7A00
+	.dw $7679
+	.dw $7948
+	.dw $76BE
+	.dw $7960
+	.dw $76F6
+	.dw $7970
+	.dw $7759
+	.dw $7990
+	.dw $77BC
+	.dw $79B0
+	.dw $7806
+	.dw $79C8
+	.dw $7871
+	.dw $79E8
+	.dw $78DC
+	.dw $7A08
+	.dw $770E
+	.dw $7978
+	.dw $7771
+	.dw $7998
+	.dw $77D4
+	.dw $79B8
+	.dw $7820
+	.dw $79D0
+	.dw $788B
+	.dw $79F0
+	.dw $78F6
+	.dw $7A10
+	.dw $7726
+	.dw $7980
+	.dw $7789
+	.dw $79A0
+	.dw $783A
+	.dw $79D8
+	.dw $78A5
+	.dw $79F8
+
 	ldx.w #$0007
 @lbl_C4749E:
 	lda.b [$C2]
@@ -9076,7 +9150,7 @@ func_C474B7:
 	lda.b [$C2]
 	inc.b w00c2
 	bne func_C474C0
-	.db $20,$4A,$7A                       ;C474BD  
+	jsr.w func_C47A4A
 func_C474C0:
 	sta.w $08C1,y
 	sta.w $08C3,y
@@ -9090,7 +9164,7 @@ func_C474C0:
 	lda.b [$C2]
 	inc.b w00c2
 	bne @lbl_C474E2
-	.db $20,$4A,$7A                       ;C474DF  
+	jsr.w func_C47A4A
 @lbl_C474E2:
 	sta.w $08C1,y
 	sta.w $08C5,y
@@ -9099,7 +9173,7 @@ func_C474C0:
 	lda.b [$C2]
 	inc.b w00c2
 	bne @lbl_C474F7
-	.db $20,$4A,$7A                       ;C474F4  
+	jsr.w func_C47A4A
 @lbl_C474F7:
 	sta.w $08C3,y
 	sta.w $08C7,y
@@ -9135,13 +9209,13 @@ func_C474C0:
 	lda.b [$C2]
 	inc.b w00c2
 	bne @lbl_C47537
-	.db $20,$4A,$7A                       ;C47534  
+	jsr.w func_C47A4A
 @lbl_C47537:
 	sta.b w00bf
 	lda.b [$C2]
 	inc.b w00c2
 	bne @lbl_C47542
-	.db $20,$4A,$7A                       ;C4753F  
+	jsr.w func_C47A4A
 @lbl_C47542:
 	sta.b w00be
 	ldx.w #$0004
@@ -9195,7 +9269,7 @@ func_C474C0:
 	lda.b [$C2]
 	inc.b w00c2
 	bne @lbl_C4759E
-	.db $20,$4A,$7A                       ;C4759B  
+	jsr.w func_C47A4A
 @lbl_C4759E:
 	pha
 	and.b #$0F
@@ -9209,7 +9283,7 @@ func_C474C0:
 	lda.b [$C2]
 	inc.b w00c2
 	bne @lbl_C475B5
-	.db $20,$4A,$7A                       ;C475B2  
+	jsr.w func_C47A4A
 @lbl_C475B5:
 	pha
 	and.b #$0F
@@ -9975,7 +10049,7 @@ func_C47A84:
 	lda.b [$C2]
 	inc.b w00c2
 	bne @lbl_C47AB6
-	.db $20,$4A,$7A                       ;C47AB3  
+	jsr.w func_C47A4A
 @lbl_C47AB6:
 	bit.b #$10
 	beq @lbl_C47ABB
@@ -10044,7 +10118,7 @@ func_C47AE6:
 	lda.b [$C2]
 	inc.b w00c2
 	bne @lbl_C47B2D
-	.db $20,$4A,$7A                       ;C47B2A  
+	jsr.w func_C47A4A
 @lbl_C47B2D:
 	inc a
 	sta.b w00be
@@ -10172,7 +10246,7 @@ func_C47BBE:
 	lda.b [$C2]
 	inc.b w00c2
 	bne @lbl_C47C12
-	.db $20,$4A,$7A                       ;C47C0F  
+	jsr.w func_C47A4A
 @lbl_C47C12:
 	inc a
 	sta.b w00be
@@ -10472,7 +10546,7 @@ func_C47DDF:
 	lda.b [$C2]
 	inc.b w00c2
 	bne @lbl_C47E1E
-	.db $20,$4A,$7A                       ;C47E1B  
+	jsr.w func_C47A4A
 @lbl_C47E1E:
 	sta.b w00bf
 @lbl_C47E20:
@@ -10593,7 +10667,7 @@ func_C47ED0:
 	lda.b [$C2]
 	inc.b w00c2
 	bne @lbl_C47EE1
-	.db $20,$4A,$7A                       ;C47EDE  
+	jsr.w func_C47A4A
 @lbl_C47EE1:
 	sta.b w00cd
 	rts
@@ -10612,7 +10686,7 @@ func_C47EEB:
 	lda.b [$C2]
 	inc.b w00c2
 	bne @lbl_C47EFC
-	.db $20,$4A,$7A                       ;C47EF9  
+	jsr.w func_C47A4A
 @lbl_C47EFC:
 	sta.b w00cd
 	lda.b [$C2]
@@ -10624,7 +10698,7 @@ func_C47EEB:
 	lda.b [$C2]
 	inc.b w00c2
 	bne @lbl_C47F12
-	.db $20,$4A,$7A                       ;C47F0F  
+	jsr.w func_C47A4A
 @lbl_C47F12:
 	sta.b w00cf
 @lbl_C47F14:
@@ -10663,14 +10737,14 @@ func_C47F21:
 	lda.b [$C2]
 	inc.b w00c2
 	bne @lbl_C47F4B
-	.db $20,$4A,$7A                       ;C47F48  
+	jsr.w func_C47A4A
 @lbl_C47F4B:
 	sta.b w00c9
 	tdc
 	lda.b [$C2]
 	inc.b w00c2
 	bne @lbl_C47F57
-	.db $20,$4A,$7A                       ;C47F54  
+	jsr.w func_C47A4A
 @lbl_C47F57:
 	rep #$20 ;A->16
 	asl a
@@ -10699,7 +10773,7 @@ func_C47F21:
 	lda.b [$C2]
 	inc.b w00c2
 	bne @lbl_C47F99
-	.db $20,$4A,$7A                       ;C47F96  
+	jsr.w func_C47A4A
 @lbl_C47F99:
 	bit.b #$80
 	beq @lbl_C47FAE
@@ -10778,7 +10852,7 @@ func_C47F21:
 	lda.b [$C2]
 	inc.b w00c2
 	bne @lbl_C48022
-	.db $20,$4A,$7A                       ;C4801F  
+	jsr.w func_C47A4A
 @lbl_C48022:
 	dec a
 @lbl_C48023:
@@ -10788,7 +10862,7 @@ func_C47F21:
 	lda.b [$C2]
 	inc.b w00c2
 	bne @lbl_C48030
-	.db $20,$4A,$7A                       ;C4802D  
+	jsr.w func_C47A4A
 @lbl_C48030:
 	sta.w $CE5E,y
 	iny
@@ -10813,7 +10887,7 @@ func_C48053:
 	lda.b [$C2]
 	inc.b w00c2
 	bne @lbl_C4807D
-	.db $20,$4A,$7A                       ;C4807A  
+	jsr.w func_C47A4A
 @lbl_C4807D:
 	sta.b w00be
 	bit.b #$C0
@@ -10827,7 +10901,7 @@ func_C48053:
 	lda.b [$C2]
 	inc.b w00c2
 	bne @lbl_C480B3
-	.db $20,$4A,$7A                       ;C480B0  
+	jsr.w func_C47A4A
 @lbl_C480B3:
 	sta.b w00bf
 	inc.b w00bf
@@ -10889,7 +10963,7 @@ func_C48150:
 	lda.b [$C2]
 	inc.b w00c2
 	bne @lbl_C481A5
-	.db $20,$4A,$7A                       ;C481A2  
+	jsr.w func_C47A4A
 @lbl_C481A5:
 	sta.b w00be
 	bit.b #$C0
@@ -10903,7 +10977,7 @@ func_C48150:
 	lda.b [$C2]
 	inc.b w00c2
 	bne @lbl_C481DB
-	.db $20,$4A,$7A                       ;C481D8  
+	jsr.w func_C47A4A
 @lbl_C481DB:
 	sta.b w00bf
 	iny
@@ -10938,9 +11012,9 @@ func_C4828D:
 	asl a
 	asl a
 	tax
-	lda.l DATA8_F40000+6,x
+	lda.l BG1GraphicsTable+6,x
 	sta.b wTemp00
-	lda.l DATA8_F40000+7,x
+	lda.l BG1GraphicsTable+7,x
 	ora.w #$8000
 	sta.b wTemp01
 	jsl.l func_C47A84
@@ -10956,11 +11030,11 @@ func_C482AD:
 	asl a
 	asl a
 	tax
-	lda.l DATA8_F40000+9,x
+	lda.l BG1GraphicsTable+9,x
 	sta.b wTemp00
-	ora.l DATA8_F40000+10,x
+	ora.l BG1GraphicsTable+10,x
 	beq @lbl_C482CE
-	lda.l DATA8_F40000+10,x
+	lda.l BG1GraphicsTable+10,x
 	sta.b wTemp01
 	jsl.l func_C47A84
 @lbl_C482CE:
@@ -11019,10 +11093,10 @@ func_C48339:
 	asl a
 	asl a
 	tax
-	lda.l DATA8_F40000,x
+	lda.l BG1GraphicsTable,x
 	sta.b w00c2
 	sep #$20 ;A->8
-	lda.l DATA8_F40000+2,x
+	lda.l BG1GraphicsTable+2,x
 	sta.b w00c4
 	lda.b #$7F
 	pha
@@ -11030,7 +11104,7 @@ func_C48339:
 	lda.b [$C2]
 	inc.b w00c2
 	bne @lbl_C4835F
-	.db $20,$4A,$7A                       ;C4835C  
+	jsr.w func_C47A4A
 @lbl_C4835F:
 	sta.b w00be
 	sta.b w00bf
@@ -15994,7 +16068,7 @@ DATA8_C4BD14:
 
 ;table
 UnknownTable_C4BDB1:
-	.db $FC,$FF    
+	.db $FC,$FF
 	.db $FB,$FF
 	.db $FA,$FF
 	.db $F9,$FF

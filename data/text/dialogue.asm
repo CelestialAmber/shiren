@@ -1182,7 +1182,7 @@ text "　「ドーーーーーーーーーーーーン！！」\l"
 endtext
 
 ;fe7df8
-OryuDialogue3Text3:
+OryuBlindingAttackText:
 text "\l"
 textfunction $80
 space 2
@@ -5569,6 +5569,7 @@ text "あ" ;this line is split across banks fe-ff
 
 .bank $3f
 .org $0000
+.base $C0
 
 text "あ、早く大きくならないかなあ・・」\l"
 endtext
@@ -6032,36 +6033,27 @@ endtext
 
 ;ff0cab
 Text2330:
-cmdf5 $17
-text "８"
-cmdf5 $18
-text "８"
-cmdf5 $19
-text "８"
+cmdf5 2327
+cmdf5 2328
+cmdf5 2329
 endtext
 
 ;ff0cb5
 Text2331:
-cmdf5 $18
-text "８"
-cmdf5 $19
-text "８"
+cmdf5 2328
+cmdf5 2329
 endtext
 
 ;ff0cbc
 Text2332:
-cmdf5 $17
-text "８"
-cmdf5 $19
-text "８"
+cmdf5 2327
+cmdf5 2329
 endtext
 
 ;ff0cc3
 Text2333:
-cmdf5 $17
-text "８"
-cmdf5 $18
-text "８"
+cmdf5 2327
+cmdf5 2328
 endtext
 
 ;ff0cca

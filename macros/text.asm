@@ -1,12 +1,33 @@
 ;Multiple byte commands list:
-;fb 80: item name?
+
+;FB:
+;fb 00:
+;fb 01:
+;fb 02:
+;fb 80: item name
 ;fb 81: player name
-;fb 86: 
+;fb 82: cause of death?
+;fb 83:
+;fb 84: equipped item
+;fb 86: character name
+;fb 87:
+;fb 88: blank scroll name
+
+;F9:
 ;f9 10: number value (damage, points lowered/increased by…)
+;f9 12: strength
+;f9 13: sword/shield strength, hunger, others
+;f9 25: gitan, number of times
 ;f9 30: exp points
+;f9 36: exp, price
+;f9 54:
+;f9 68:
+
+;FC:
 ;fc 00: (0:)
 ;fc 02:
 ;fc 7f: wait (0: wait time?)
+;fc 80:
 
 .STRINGMAPTABLE mainFontMap "data/mainFontMap.tbl"
 .STRINGMAPTABLE areaTitleFontMap "data/areaTitleFontMap.tbl"
@@ -22,6 +43,9 @@
 		.db 0
 	.endr
 .endm
+
+
+;Main text commands
 
 ;Waits for player input before clearing text window.
 .macro cleartext
@@ -39,9 +63,10 @@
 	.db $FD, \1
 .endm
 
-;1: command id
+;1: message id
 .macro cmdf5
-	.db $F5, \1
+	.db $F5
+	.dw \1
 .endm
 
 ;

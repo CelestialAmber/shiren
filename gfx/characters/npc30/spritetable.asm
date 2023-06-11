@@ -5,13 +5,13 @@ NPC30Sprites:
 	.dl Data_d6f6df
 	.db $0C
 	.dl Data_d6f7f5
-	.db $0C                
+	.db $0C
 	.dl Data_d6f929
 	.db $0C
 	.dl Data_d6fa77
 	.db $0C
 	.dl Data_d6fbc9
-	.db $0C                
+	.db $0C
 	.dl Data_d6fcf5
 	.db $0C
 	.dl Data_d6fe53

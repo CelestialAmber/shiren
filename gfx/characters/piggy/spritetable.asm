@@ -4,7 +4,7 @@ PiggySprites:
 	.dl Data_c7e14e
 	.db $08
 	.dl Data_c7e284
-	.db $08                
+	.db $08
 	.dl Data_c7e3b2
 	.db $08
 	.dl Data_c7e50c
@@ -22,25 +22,25 @@ PiggySprites:
 	.dl Data_c7e50c
 	.db $48
 	.dl Data_c7e659
-	.db $48                
+	.db $48
 	.dl Data_c7e01c
 	.db $48
 	.dl Data_c7e14e
 	.db $48
 	.dl Data_c7e284
-	.db $48                
+	.db $48
 	.dl Data_c7eac5
 	.db $08
 	.dl Data_c7ec60
 	.db $08
 	.dl Data_c7edf5
-	.db $08                
+	.db $08
 	.dl Data_c7ef48
 	.db $08
 	.dl Data_c7f0ed
 	.db $08
 	.dl Data_c7f29a
-	.db $08                
+	.db $08
 	.dl Data_c7eac5
 	.db $48
 	.dl Data_c7ec60
@@ -110,7 +110,7 @@ PiggySprites:
 	.dl Data_c80de7
 	.db $08
 	.dl Data_c80e9a
-	.db $08                
+	.db $08
 	.dl Data_c80f71
 	.db $08
 	.dl Data_c81102
@@ -160,6 +160,6 @@ PiggySprites:
 	.dl Data_c81d20
 	.db $48
 	.dl Data_c81e99
-	.db $48                
+	.db $48
 	.dl Data_c81102
-	.db $48    
+	.db $48

@@ -656,4 +656,4 @@ NPCFlowerSprites:
 	.dl Data_d25114
 	.db $02
 	.dl Data_d25114
-	.db $02   
+	.db $02

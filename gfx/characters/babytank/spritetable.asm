@@ -4,7 +4,7 @@ BabyTankSprites:
 	.dl Data_d217c8
 	.db $0A
 	.dl Data_d21913
-	.db $0A                
+	.db $0A
 	.dl Data_d21a62
 	.db $0A
 	.dl Data_d21bab
@@ -22,25 +22,25 @@ BabyTankSprites:
 	.dl Data_d22361
 	.db $0A
 	.dl Data_d224b0
-	.db $0A                
+	.db $0A
 	.dl Data_d22605
 	.db $0A
 	.dl Data_d2274e
 	.db $0A
 	.dl Data_d22899
-	.db $0A                
+	.db $0A
 	.dl Data_d229ec
 	.db $0A
 	.dl Data_d22b33
 	.db $0A
 	.dl Data_d22c76
-	.db $0A                
+	.db $0A
 	.dl Data_d22dc5
 	.db $0A
 	.dl Data_d22f10
 	.db $0A
 	.dl Data_d23061
-	.db $0A                
+	.db $0A
 	.dl Data_d231b8
 	.db $0A
 	.dl Data_d2330d
@@ -86,9 +86,9 @@ BabyTankSprites:
 	.dl Data_d2457d
 	.db $0A
 	.dl Data_d246b6
-	.db $0A                
+	.db $0A
 	.dl Data_d247eb
-	.db $0A                
+	.db $0A
 	.dl Data_d24932
 	.db $0A
 	.dl Data_d24a7d

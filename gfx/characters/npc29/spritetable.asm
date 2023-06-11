@@ -112,9 +112,9 @@ NPC29Sprites2:
 	.dl Data_d6e2f3
 	.db $08
 	.dl Data_d6e433
-	.db $08                
+	.db $08
 	.dl Data_d6e52d
-	.db $08                
+	.db $08
 	.dl Data_d6e68d
 	.db $08
 	.dl Data_d6e7e3
@@ -195,7 +195,7 @@ NPC29Sprites3:
 	.dl Data_d6e68d
 	.db $0A
 	.dl Data_d6e7e3
-	.db $0A                
+	.db $0A
 	.dl Data_d6e1b3
 	.db $4A
 	.dl Data_d6e2f3

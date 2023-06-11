@@ -11,9 +11,9 @@ NPC34Sprites:
 	.dl Data_d75857
 	.db $0C
 	.dl Data_d75990
-	.db $0C                
+	.db $0C
 	.dl Data_d75a67
-	.db $0C                
+	.db $0C
 	.dl Data_d75b95
 	.db $0C
 	.dl Data_d75b95

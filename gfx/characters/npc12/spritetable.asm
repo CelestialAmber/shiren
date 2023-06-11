@@ -1,11 +1,11 @@
 ;45fc
-NPC12Sprites:   
+NPC12Sprites:
 	.dl Data_d46c99
 	.db $0C
 	.dl Data_d46ddc
 	.db $0C
 	.dl Data_d46f08
-	.db $0C                
+	.db $0C
 	.dl Data_d47040
 	.db $0C
 	.dl Data_d47179
@@ -116,7 +116,7 @@ NPC12Sprites:
 ;46dc
 NPC12Sprites2:
 	.dl Data_d46c99
-	.db $08                        
+	.db $08
 	.dl Data_d46ddc
 	.db $08
 	.dl Data_d46f08
@@ -138,25 +138,25 @@ NPC12Sprites2:
 	.dl Data_d479a5
 	.db $08
 	.dl Data_d47ad7
-	.db $08                
+	.db $08
 	.dl Data_d47c09
 	.db $08
 	.dl Data_d47d4a
 	.db $08
 	.dl Data_d47e93
-	.db $08                
+	.db $08
 	.dl Data_d47fb9
 	.db $08
 	.dl Data_d4812e
 	.db $08
 	.dl Data_d482a5
-	.db $08                
+	.db $08
 	.dl Data_d483ec
 	.db $08
 	.dl Data_d4856b
 	.db $08
 	.dl Data_d486d0
-	.db $08                
+	.db $08
 	.dl Data_d48841
 	.db $08
 	.dl Data_d48996

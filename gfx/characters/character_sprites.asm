@@ -1,5 +1,11 @@
+.include "includes.asm"
+
 .bank $7
 .org $0000
+.base $C0
+
+.redef CURR_BANK 0x7
+.redef CURR_ADDR 0x0
 
 ;Enemy Sprites
 

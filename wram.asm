@@ -1,5 +1,8 @@
 .base $00
 
+.include "rominfo.asm"
+.include "structs/structs.asm"
+
 .ramsection "Low RAM" bank $7e
 
 ;Direct Page
@@ -7,7 +10,7 @@
 ;7e0000
 wTemp00: ds 1
 
-    
+
 ;7e0001
 wTemp01:
     ds 1
@@ -985,7 +988,189 @@ w2000:
 
 .ramsection "Expanded RAM 7E" bank $7e APPENDTO "High RAM"
 w8000:
-	ds 0x93D
+	ds 0x5a1
+
+;character data (20 characters max)
+;shiren is always in slot 13?
+
+;85a1
+wCharType:
+	dsb 20
+
+;85b5
+wCharXPos:
+	dsb 20
+
+;85c9
+wCharYPos:
+	dsb 20
+
+;85dd
+wCharDir:
+	dsb 20
+
+;85f1
+wCharHP:
+	dsb 20
+
+;8605
+wCharMaxHP:
+	dsb 20
+
+;8619
+wCharLevel:
+	dsb 20
+
+;862d
+wCharTrueLevel:
+	dsb 20
+
+;8641
+wCharExpByte0:
+	dsb 20
+
+;8655
+wCharExpByte1:
+	dsb 20
+
+;8669
+wCharExpByte2:
+	dsb 20
+
+;867d
+wCharAttack:
+	dsb 20
+
+;8691
+wCharDefense:
+	dsb 20
+
+;86a5
+wCharRemainingBlindlessTurns:
+	dsb 20
+
+;86b9
+wCharRemainingConfusedTurns:
+	dsb 20
+
+;86cd
+wCharRemainingPuzzledTurns:
+	dsb 20
+
+;86e1
+wCharRemainingSleepTurns:
+	dsb 20
+
+;86f5
+wCharRemaningDoubleSpeedTurns:
+	dsb 20
+
+;8709
+wCharInvisible:
+	dsb 20
+
+;871d
+wCharAttackTarget:
+	dsb 20
+
+;8731
+wCharIsAwake:
+	dsb 20
+
+;8745
+wCharRemainingTigerTrapTurns:
+	dsb 20
+
+;8759
+wCharHeldItem:
+	dsb 20
+
+;876d
+wCharSpeed:
+	dsb 20
+
+;8781
+wCharIsSealed:
+	dsb 20
+
+;8795
+wCharAttackedByShiren:
+	dsb 20
+
+;87a9
+wCharAppearance:
+	dsb 20
+
+;87bd
+wCharUnderfootTerrainType:
+	dsb 20
+
+;87d1
+wCharTargetXPos:
+	dsb 20
+
+;87e5
+wCharTargetYPos:
+	dsb 20
+
+;87f9
+wCharUnk87F9:
+	dsb 20
+
+;880d
+wCharDeadEndWaitingTurn:
+	dsb 20
+
+;8821
+wCharDoubleSpeedExtraAttacksNum:
+	dsb 20
+
+;8835
+wCharNPCFlags:
+	dsb 20
+
+;8849
+wCharOverrideState:
+	dsb 20
+
+;885d
+wCharUnk885D:
+	dsb 20
+
+;8871
+wCharEventFlags:
+	dsb 20
+
+;8885
+wCharAutoDir:
+	dsb 20
+
+;8899
+wCharTrapsActivated:
+	dsb 20
+
+;88ad
+wCharIsKigny:
+	dsb 20
+
+;88c1
+wCharIgnoreShiren:
+	dsb 20
+
+;88d5
+wCharNumOfAttacks:
+	dsb 20
+
+;88e9
+wCharLastAttackedMonsterType:
+	dsb 20
+
+;88fd
+wCharLastAttackedMonsterLevel:
+	dsb 20
+
+;8911
+. ds 0x2c
 
 ;893d
 wShirenStatus INSTANCEOF ShirenStatus

@@ -1,6 +1,6 @@
 RiceChangerSprites:
 	.dl Data_ce9bc2
-	.db $08                        
+	.db $08
 	.dl Data_ce9cc4
 	.db $08
 	.dl Data_ce9db4
@@ -34,13 +34,13 @@ RiceChangerSprites:
 	.dl Data_ceab66
 	.db $08
 	.dl Data_ceac60
-	.db $08                
+	.db $08
 	.dl Data_cead50
 	.db $08
 	.dl Data_ceae4c
 	.db $08
 	.dl Data_ceaf3a
-	.db $08                
+	.db $08
 	.dl Data_ceb028
 	.db $08
 	.dl Data_ceb126
@@ -58,9 +58,9 @@ RiceChangerSprites:
 	.dl Data_ceb6f4
 	.db $08
 	.dl Data_ceb841
-	.db $08                
+	.db $08
 	.dl Data_ceb9a0
-	.db $08                
+	.db $08
 	.dl Data_cebaec
 	.db $08
 	.dl Data_cebc4d
@@ -86,7 +86,7 @@ RiceChangerSprites:
 	.dl Data_cec606
 	.db $08
 	.dl Data_cec710
-	.db $08                
+	.db $08
 	.dl Data_cec819
 	.db $08
 	.dl Data_cec921

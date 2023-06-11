@@ -1,6 +1,6 @@
 FluffyBunnySprites:
 	.dl Data_cb9d12
-	.db $0C                        
+	.db $0C
 	.dl Data_cb9dff
 	.db $0C
 	.dl Data_cb9f40
@@ -10,13 +10,13 @@ FluffyBunnySprites:
 	.dl Data_cba120
 	.db $0C
 	.dl Data_cba235
-	.db $0C                
+	.db $0C
 	.dl Data_cba30e
 	.db $0C
 	.dl Data_cba3f5
 	.db $0C
 	.dl Data_cba514
-	.db $0C                
+	.db $0C
 	.dl Data_cba041
 	.db $4C
 	.dl Data_cba120
@@ -34,7 +34,7 @@ FluffyBunnySprites:
 	.dl Data_cba6e7
 	.db $0C
 	.dl Data_cba824
-	.db $0C                
+	.db $0C
 	.dl Data_cba90a
 	.db $0C
 	.dl Data_cba9ff
@@ -52,7 +52,7 @@ FluffyBunnySprites:
 	.dl Data_cbad44
 	.db $0C
 	.dl Data_cbae43
-	.db $0C                
+	.db $0C
 	.dl Data_cbad44
 	.db $4C
 	.dl Data_cbac45
@@ -110,7 +110,7 @@ FluffyBunnySprites:
 	.dl Data_cbbb74
 	.db $4C
 	.dl Data_cbbc6b
-	.db $4C                
+	.db $4C
 	.dl Data_cbc012
 	.db $0C
 	.dl Data_cbc143

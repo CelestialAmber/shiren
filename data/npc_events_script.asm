@@ -7,7 +7,7 @@
 NPCScript:
 	call_jumpcarry NPCScript_ValidFloor NPCScript_6
 	exit
-NPCScript_6:   
+NPCScript_6:
 	call_jumpcarry NPCScript_InKitchenGodShrine NPCScript_1E
 	;kitchen god shrine
 	call NPCScriptFunction_C16954

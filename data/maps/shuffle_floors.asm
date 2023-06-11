@@ -1,5 +1,6 @@
 .bank $1a
 .org $0000 ;$DA0000
+.base $C0
 
 ;Shuffle floor map data
 

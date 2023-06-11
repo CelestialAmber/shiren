@@ -1,19 +1,19 @@
 ;3e70
-OldLadySprites:             
+OldLadySprites:
 	.dl Data_d3a89b
 	.db $0A
 	.dl Data_d3a9b5
 	.db $0A
 	.dl Data_d3aabf
-	.db $0A                
+	.db $0A
 	.dl Data_d3abc9
 	.db $0A
 	.dl Data_d3acd9
 	.db $0A
 	.dl Data_d3ade9
-	.db $0A                
+	.db $0A
 	.dl Data_d3aef3
-	.db $0A                
+	.db $0A
 	.dl Data_d3b00f
 	.db $0A
 	.dl Data_d3b11d
@@ -23,25 +23,25 @@ OldLadySprites:
 	.dl Data_d3acd9
 	.db $4A
 	.dl Data_d3ade9
-	.db $4A                
+	.db $4A
 	.dl Data_d3a89b
 	.db $4A
 	.dl Data_d3a9b5
 	.db $4A
 	.dl Data_d3aabf
-	.db $4A                
+	.db $4A
 	.dl Data_d3b22b
 	.db $0A
 	.dl Data_d3b32b
 	.db $0A
 	.dl Data_d3b419
-	.db $0A                
+	.db $0A
 	.dl Data_d3b517
 	.db $0A
 	.dl Data_d3b64f
 	.db $0A
 	.dl Data_d3b64f
-	.db $4A                
+	.db $4A
 	.dl Data_d3b22b
 	.db $4A
 	.dl Data_d3b32b

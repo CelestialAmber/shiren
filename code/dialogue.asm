@@ -193,7 +193,7 @@ func_C10189:
 func_C104AB:
 	sep #$20 ;A->8
 	rep #$10 ;XY->16
-	lda.l $7E8871,x
+	lda.l wCharEventFlags,x
 	bne @lbl_C104E0
 	ldy.w #$07EB
 	sty.b wTemp00
@@ -207,7 +207,7 @@ func_C104AB:
 	lda.b wTemp03,s
 	tax
 	lda.b #$01
-	sta.l $7E8871,x
+	sta.l wCharEventFlags,x
 	ldy.w #$07F0
 	sty.b wTemp00
 	jsl.l DisplayMessage
@@ -234,7 +234,7 @@ func_C104AB:
 	.db $22,$25,$25,$C6,$60               ;C105F8  
 	sep #$20 ;A->8
 	rep #$10 ;XY->16
-	lda.l $7E8871,x
+	lda.l wCharEventFlags,x
 	bne @lbl_C10661
 	ldy.w #$06CA
 	sty.b wTemp00
@@ -292,7 +292,7 @@ func_C104AB:
 	bne @lbl_C10754
 	.db $4C,$A9,$07                       ;C10751  
 @lbl_C10754:
-	lda.l $7E8871,x
+	lda.l wCharEventFlags,x
 	dec a
 	bpl @lbl_C10765
 	ldy.w #$06B1
@@ -322,7 +322,7 @@ func_C104AB:
 	bne @lbl_C107CA
 	.db $4C,$1F,$08                       ;C107C7  
 @lbl_C107CA:
-	lda.l $7E8871,x
+	lda.l wCharEventFlags,x
 	dec a
 	bpl @lbl_C107DB
 	ldy.w #$06B2
@@ -374,7 +374,7 @@ func_C108B1:
 	sta.b wTemp01
 	jsr.w func_C1681A
 	plx
-	lda.l $7E8871,x
+	lda.l wCharEventFlags,x
 	beq @lbl_C108D5
 	.db $4C,$6D,$0A                       ;C108D2  
 @lbl_C108D5:
@@ -429,9 +429,9 @@ func_C108B1:
 	lda.b wTemp03,s
 	inc a
 	tax
-	lda.l $7E8871,x
+	lda.l wCharEventFlags,x
 	inc a
-	sta.l $7E8871,x
+	sta.l wCharEventFlags,x
 	clc
 	adc.b #$62
 	sta.b wTemp02
@@ -677,7 +677,7 @@ func_C10E5D:
 func_C111EA:
 	sep #$20 ;A->8
 	rep #$10 ;XY->16
-	lda.l $7E8871,x
+	lda.l wCharEventFlags,x
 	beq @lbl_C111F7
 	.db $4C,$EA,$12                       ;C111F4  
 @lbl_C111F7:
@@ -892,7 +892,7 @@ func_C1173F:
 func_C11946:
 	sep #$20 ;A->8
 	rep #$10 ;XY->16
-	lda.l $7E8871,x
+	lda.l wCharEventFlags,x
 	beq @lbl_C11953
 	.db $4C,$4C,$1B                       ;C11950  
 @lbl_C11953:
@@ -1268,7 +1268,7 @@ DATA8_C122EB:
 func_C124BB:
 	sep #$20 ;A->8
 	rep #$10 ;XY->16
-	lda.l $7E8871,x
+	lda.l wCharEventFlags,x
 	cmp.b #$02
 	bcc @lbl_C124CA
 	.db $4C,$B4,$25                       ;C124C7  
@@ -1719,7 +1719,7 @@ func_C13304:
 	tdc
 	lda.b wTemp03,s
 	tax
-	lda.l $7E8871,x
+	lda.l wCharEventFlags,x
 	beq @lbl_C1333E
 	ldy.w #$07EA
 	sty.b wTemp00
@@ -1837,7 +1837,7 @@ func_C13304:
 	lda.b wTemp04,s
 	tax
 	lda.b #$01
-	sta.l $7E8871,x
+	sta.l wCharEventFlags,x
 	GetEvent Event17
 	bit.b #$01
 	beq @lbl_C1349D
@@ -2042,7 +2042,7 @@ func_C13304:
 	.db $A0,$F7,$08,$84,$00,$22,$25,$25   ;C13A87
 	.db $C6,$60                           ;C13A8F  
 @lbl_C13A91:
-	lda.l $7E8871,x
+	lda.l wCharEventFlags,x
 	beq @lbl_C13AA1
 	.db $A0,$12,$08,$84,$00,$22,$25,$25   ;C13A97
 	.db $C6,$60                           ;C13A9F  
@@ -2051,7 +2051,7 @@ func_C13304:
 	;Both the fortune you get and the tip he gives are completely random. It doesn't
 	;seem like it saves the result for later/influences your luck at all.
 	inc a
-	sta.l $7E8871,x
+	sta.l wCharEventFlags,x
 	ldy.w #$080C
 	sty.b wTemp00
 	jsl.l DisplayMessage1
@@ -2060,38 +2060,38 @@ func_C13304:
 	.db $A0,$0E,$08,$84,$00,$22,$25,$25   ;C13AB3
 	.db $C6,$60                           ;C13ABB  
 @lbl_C13ABD:
-	ldy.w #$080F                
-	sty.b wTemp00                 
-	jsl.l DisplayMessage         
+	ldy.w #$080F
+	sty.b wTemp00
+	jsl.l DisplayMessage
 	jsl.l Random
-	tdc                         
-	lda.b wTemp00                 
+	tdc
+	lda.b wTemp00
 	and.b #$07
-	asl a                       
-	tax                         
-	rep #$20 ;A->16                    
+	asl a
+	tax
+	rep #$20 ;A->16
 	lda.l FortuneTellerResultsText,x
-	sta.b wTemp00                 
-	sep #$20 ;A->8                    
-	jsl.l DisplayMessage         
-	ldy.w #$0810                
-	sty.b wTemp00                 
-	jsl.l DisplayMessage         
+	sta.b wTemp00
+	sep #$20 ;A->8
+	jsl.l DisplayMessage
+	ldy.w #$0810
+	sty.b wTemp00
+	jsl.l DisplayMessage
 	jsl.l Random
-	tdc                         
-	lda.b wTemp00                 
+	tdc
+	lda.b wTemp00
 	and.b #$03
-	asl a                       
-	tax                         
-	rep #$20 ;A->16                    
+	asl a
+	tax
+	rep #$20 ;A->16
 	lda.l FortuneTellerTipsText,x
-	sta.b wTemp00          
-	sep #$20 ;A->8             
+	sta.b wTemp00
+	sep #$20 ;A->8
 	jsl.l DisplayMessage 
-	ldy.w #$0811         
-	sty.b wTemp00          
+	ldy.w #$0811
+	sty.b wTemp00
 	jsl.l DisplayMessage 
-	rts                  
+	rts
 
 FortuneTellerResultsText:
 	.dw $813
@@ -2153,10 +2153,10 @@ FortuneTellerTipsText:
 	.db $00,$22,$25,$25,$C6,$60,$A0,$1F,$08,$84,$00,$22,$25,$25,$C6,$60   ;C13C03
 	sep #$20 ;A->8
 	rep #$10 ;XY->16
-	lda.l $7E8871,x
+	lda.l wCharEventFlags,x
 	bne @lbl_C13C2C
 	inc a
-	sta.l $7E8871,x
+	sta.l wCharEventFlags,x
 	ldy.w #$082A
 	sty.b wTemp00
 	jsl.l DisplayMessage
@@ -2176,13 +2176,13 @@ FortuneTellerTipsText:
 	.db $A0,$D0,$08,$84,$00,$22,$25,$25   ;C13C4A
 	.db $C6,$60                           ;C13C52  
 @lbl_C13C54:
-	lda.l $7E8871,x
+	lda.l wCharEventFlags,x
 	beq @lbl_C13C64
 	.db $A0,$88,$06,$84,$00,$22,$25,$25   ;C13C5A
 	.db $C6,$60                           ;C13C62  
 @lbl_C13C64:
 	inc a
-	sta.l $7E8871,x
+	sta.l wCharEventFlags,x
 	jsr.w NPCScriptFunction_C163C9
 	bcc @lbl_C13C78
 	ldy.w #$0687
@@ -2205,7 +2205,7 @@ FortuneTellerTipsText:
 	.db $A0,$32,$08,$84,$00,$22,$25,$25,$C6,$A0,$D2,$08,$84,$00,$22,$25   ;C13CC6
 	.db $25,$C6,$60                       ;C13CD6  
 @lbl_C13CD9:
-	lda.l $7E8871,x
+	lda.l wCharEventFlags,x
 	bne @lbl_C13D17
 	GetEvent Event95
 	bne @lbl_C13D0D
@@ -2264,7 +2264,7 @@ UNREACH_C13D7C:
 	.db $A0,$D5,$08,$84,$00,$22,$25,$25   ;C13DA0
 	.db $C6,$60                           ;C13DA8  
 @lbl_C13DAA:
-	lda.l $7E8871,x
+	lda.l wCharEventFlags,x
 	bne @lbl_C13E1E
 	GetEvent Event82
 	beq @lbl_C13DC6
@@ -2792,13 +2792,13 @@ NPCScriptFunction_C14479:
 	.db $00,$22,$25,$25,$C6,$60           ;C14811
 	sep #$20 ;A->8
 	rep #$10 ;XY->16
-	lda.l $7E8871,x
+	lda.l wCharEventFlags,x
 	bne @lbl_C1482E
 	jsl.l Random
 	lda.b wTemp00
 	and.b #$01
 	inc a
-	sta.l $7E8871,x
+	sta.l wCharEventFlags,x
 @lbl_C1482E:
 	dec a
 	bne @lbl_C1483B
@@ -2811,7 +2811,7 @@ NPCScriptFunction_C14479:
 	rts
 	sep #$20 ;A->8
 	rep #$10 ;XY->16
-	lda.l $7E8871,x
+	lda.l wCharEventFlags,x
 	bne @lbl_C14860
 @lbl_C1484F:
 	jsl.l Random
@@ -2820,7 +2820,7 @@ NPCScriptFunction_C14479:
 	cmp.b #$03
 	bcs @lbl_C1484F
 	inc a
-	sta.l $7E8871,x
+	sta.l wCharEventFlags,x
 @lbl_C14860:
 	dec a
 	bne @lbl_C1486D

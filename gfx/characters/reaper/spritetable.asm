@@ -41,7 +41,7 @@ DeathReaperSprites:
 	.dl Data_c72e03
 	.db $0C
 	.dl Data_c72f5c
-	.db $0C                
+	.db $0C
 	.dl Data_c730c1
 	.db $0C
 	.dl Data_c731ff
@@ -67,21 +67,21 @@ DeathReaperSprites:
 	.dl Data_c7414f
 	.db $0C
 	.dl Data_c742c6
-	.db $0C                
+	.db $0C
 	.dl Data_c7444f
 	.db $0C
 	.dl Data_c745ae
 	.db $0C
 	.dl Data_c74717
-	.db $0C                
+	.db $0C
 	.dl Data_c74762
 	.db $0C
 	.dl Data_c748c7
 	.db $0C
 	.dl Data_c74a42
-	.db $0C                
+	.db $0C
 	.dl Data_c74a72
-	.db $0C                
+	.db $0C
 	.dl Data_c74bf3
 	.db $0C
 	.dl Data_c74d9e
@@ -91,15 +91,15 @@ DeathReaperSprites:
 	.dl Data_c750a8
 	.db $0C
 	.dl Data_c75213
-	.db $0C                
+	.db $0C
 	.dl Data_c753a6
 	.db $0C
 	.dl Data_c754ff
 	.db $0C
 	.dl Data_c75666
-	.db $0C                
+	.db $0C
 	.dl Data_c757d3
-	.db $0C                
+	.db $0C
 	.dl Data_c7593c
 	.db $0C
 	.dl Data_c75ac7

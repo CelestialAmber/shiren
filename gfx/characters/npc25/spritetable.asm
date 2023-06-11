@@ -35,9 +35,9 @@ NPC25Sprites:
 	.dl Data_d64308
 	.db $0C
 	.dl Data_d64452
-	.db $0C                
+	.db $0C
 	.dl Data_d6459e
-	.db $0C                
+	.db $0C
 	.dl Data_d6471b
 	.db $0C
 	.dl Data_d64888
@@ -63,4 +63,4 @@ NPC25Sprites:
 	.dl Data_d64faf
 	.db $0C
 	.dl Data_d6515c
-	.db $0C          
+	.db $0C

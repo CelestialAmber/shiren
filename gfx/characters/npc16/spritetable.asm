@@ -1,17 +1,17 @@
 ;4ba4
-NPC16Sprites:       
+NPC16Sprites:
 	.dl Data_d51c3d
 	.db $0C
 	.dl Data_d51d81
 	.db $0C
 	.dl Data_d51ecd
-	.db $0C                
+	.db $0C
 	.dl Data_d52029
 	.db $0C
 	.dl Data_d5215d
 	.db $0C
 	.dl Data_d5229f
-	.db $0C                
+	.db $0C
 	.dl Data_d523e1
 	.db $0C
 	.dl Data_d5252a
@@ -41,7 +41,7 @@ NPC16Sprites:
 	.dl Data_d5301f
 	.db $0C
 	.dl Data_d5317b
-	.db $0C                
+	.db $0C
 	.dl Data_d532d7
 	.db $0C
 	.dl Data_d53413
@@ -63,13 +63,13 @@ NPC16Sprites:
 	.dl Data_d53ae3
 	.db $0C
 	.dl Data_d53c05
-	.db $0C                
+	.db $0C
 	.dl Data_d53d2f
 	.db $0C
 	.dl Data_d53e76
 	.db $0C
 	.dl Data_d53fd1
-	.db $0C                
+	.db $0C
 	.dl Data_d53d2f
 	.db $4C
 	.dl Data_d53e76

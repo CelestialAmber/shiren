@@ -1,11 +1,11 @@
 ;4374
-LittleGirlSprites:         
+LittleGirlSprites:
 	.dl Data_d43f24
 	.db $08
 	.dl Data_d43ff7
 	.db $08
 	.dl Data_d440d9
-	.db $08                
+	.db $08
 	.dl Data_d441a8
 	.db $08
 	.dl Data_d442aa
@@ -72,7 +72,7 @@ LittleGirlSprites:
 ;43fc
 LittleGirlSprites2:
 	.dl Data_d43f24
-	.db $0C                
+	.db $0C
 	.dl Data_d43ff7
 	.db $0C
 	.dl Data_d440d9
@@ -82,7 +82,7 @@ LittleGirlSprites2:
 	.dl Data_d442aa
 	.db $0C
 	.dl Data_d443c1
-	.db $0C                
+	.db $0C
 	.dl Data_d444c9
 	.db $0C
 	.dl Data_d445ea
@@ -100,15 +100,15 @@ LittleGirlSprites2:
 	.dl Data_d43ff7
 	.db $4C
 	.dl Data_d440d9
-	.db $4C                
+	.db $4C
 	.dl Data_d44825
 	.db $0C
 	.dl Data_d44925
 	.db $0C
 	.dl Data_d44a27
-	.db $0C                
+	.db $0C
 	.dl Data_d44b11
-	.db $0C                
+	.db $0C
 	.dl Data_d44c3e
 	.db $0C
 	.dl Data_d44d77

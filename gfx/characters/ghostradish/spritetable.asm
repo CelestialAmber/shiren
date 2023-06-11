@@ -8,11 +8,11 @@ GhostRadishSprites:
 	.dl Data_ca6f27
 	.db $08
 	.dl Data_ca7045
-	.db $08                
+	.db $08
 	.dl Data_ca7153
-	.db $08                
+	.db $08
 	.dl Data_ca7265
-	.db $08                
+	.db $08
 	.dl Data_ca7399
 	.db $08
 	.dl Data_ca74c5
@@ -34,15 +34,15 @@ GhostRadishSprites:
 	.dl Data_ca770d
 	.db $08
 	.dl Data_ca7835
-	.db $08                
+	.db $08
 	.dl Data_ca795d
 	.db $08
 	.dl Data_ca7a93
 	.db $08
 	.dl Data_ca7bcb
-	.db $08                
+	.db $08
 	.dl Data_ca75f9
-	.db $48                
+	.db $48
 	.dl Data_ca770d
 	.db $48
 	.dl Data_ca7835
@@ -52,17 +52,17 @@ GhostRadishSprites:
 	.dl Data_ca7d01
 	.db $08
 	.dl Data_ca7d01
-	.db $08                
+	.db $08
 	.dl Data_ca7d01
 	.db $08
 	.dl Data_ca7d01
 	.db $48
 	.dl Data_ca7d01
-	.db $48                
+	.db $48
 	.dl Data_ca7d01
-	.db $48                
+	.db $48
 	.dl Data_ca7d01
-	.db $08                
+	.db $08
 	.dl Data_ca7e3a
 	.db $08
 	.dl Data_ca7ede

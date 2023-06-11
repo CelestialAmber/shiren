@@ -1,2 +1,6 @@
 [objects]
+code.o
+gfx/characters/character_sprites.o
 main.o
+text.o
+wram.o

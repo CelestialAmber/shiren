@@ -3,12 +3,9 @@
 
 ;Thanks to ExHiROM!
 ;Includes data from a file, allowing for bank boundary crossing
-;2: start bank, 3: current address
 .macro filedata
     .fopen \1 FP\@
     .fsize FP\@ SIZE
-	.redef CURR_BANK \2
-	.redef CURR_ADDR \3
     .rept SIZE
         .fread FP\@ DATA
         .db DATA

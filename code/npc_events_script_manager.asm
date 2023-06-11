@@ -2,25 +2,25 @@
 ;Most of this file is special functions called by the script to do different things
 
 func_C150D7:
-	jsl.l func_C16B75     
-	php                   
-	sep #$20 ;A->8              
-	rep #$10 ;XY->16              
-	ldy.w #$0000          
-	bra @lbl_C150EB       
+	jsl.l func_C16B75
+	php
+	sep #$20 ;A->8
+	rep #$10 ;XY->16
+	ldy.w #$0000
+	bra @lbl_C150EB
 @lbl_C150E5:
-	iny                   
-	asl a                 
-	tax                   
+	iny
+	asl a
+	tax
 	jsr.w (DATA8_C150F5,x)
 @lbl_C150EB:
-	phk                   
-	plb                   
-	tdc                   
-	lda.w NPCScript,y     
-	bpl @lbl_C150E5       
-	plp                   
-	rtl                   
+	phk
+	plb
+	tdc
+	lda.w NPCScript,y
+	bpl @lbl_C150E5
+	plp
+	rtl
 
 DATA8_C150F5:
 	.db $16,$51,$23,$51,$30,$51           ;C150F5
@@ -1036,29 +1036,29 @@ NPCScriptFunction_C16336:
 	SetCarryIfEqual
 
 NPCScriptFunction_C1634D:
-	php                  
-	sep #$20 ;A->8             
+	php
+	sep #$20 ;A->8
 	jsl.l GetCurrentFloor
-	lda.b wTemp00          
-	cmp.b #$0C           
-	bcs @lbl_C16383      
-	cmp.b #$08           
-	bcc @lbl_C16383      
+	lda.b wTemp00
+	cmp.b #$0C
+	bcs @lbl_C16383
+	cmp.b #$08
+	bcc @lbl_C16383
 	GetEvent Event0C
-	bne @lbl_C16383      
+	bne @lbl_C16383
 	GetEvent Event_Surala
-	bne @lbl_C16383      
-	jsl.l Random         
-	lda.b wTemp00          
-	cmp.b #$40           
-	bcs @lbl_C16383      
-	plp                  
-	sec                  
-	rts                  
+	bne @lbl_C16383
+	jsl.l Random
+	lda.b wTemp00
+	cmp.b #$40
+	bcs @lbl_C16383
+	plp
+	sec
+	rts
 @lbl_C16383:
-	plp                  
-	clc                  
-	rts                  
+	plp
+	clc
+	rts
 
 NPCScriptFunction_C16386:
 	.db $08,$E2,$20,$A9,$0C,$85,$00,$22,$12,$05,$C6,$A5,$00,$D0,$03,$28   ;C16386
@@ -1092,18 +1092,18 @@ NPCScriptFunction_C163C9:
 	rts
 
 NPCScriptFunction_C163EC:
-	php             
-	sep #$20 ;A->8        
+	php
+	sep #$20 ;A->8
 	GetEvent Event00
-	cmp.b #$02      
+	cmp.b #$02
 	bcs @lbl_C16400 
-	plp             
-	sec             
-	rts             
+	plp
+	sec
+	rts
 @lbl_C16400:
-	plp             
-	clc             
-	rts             
+	plp
+	clc
+	rts
 
 NPCScriptFunction_C16403:
 	php
@@ -1384,26 +1384,26 @@ NPCScriptFunction_C1666F:
 	.db $18,$60                           ;C1669F
 
 NPCScriptFunction_C166A1:
-	php                  
-	sep #$20 ;A->8             
+	php
+	sep #$20 ;A->8
 	jsl.l GetCurrentFloor
-	lda.b wTemp00          
-	cmp.b #$0F           
-	bcs @lbl_C166C3      
-	jsl.l func_C62B37    
-	lda.b wTemp00          
-	beq @lbl_C166C3      
-	jsl.l Random         
-	lda.b wTemp00          
-	cmp.b #$20           
-	bcs @lbl_C166C3      
-	plp                  
-	sec                  
-	rts                  
+	lda.b wTemp00
+	cmp.b #$0F
+	bcs @lbl_C166C3
+	jsl.l func_C62B37
+	lda.b wTemp00
+	beq @lbl_C166C3
+	jsl.l Random
+	lda.b wTemp00
+	cmp.b #$20
+	bcs @lbl_C166C3
+	plp
+	sec
+	rts
 @lbl_C166C3:
-	plp                  
-	clc                  
-	rts                  
+	plp
+	clc
+	rts
 
 NPCScriptFunction_C166C6:
 	.db $08,$22,$1E,$00,$C2,$28,$60

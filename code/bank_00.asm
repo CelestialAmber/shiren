@@ -2,7 +2,7 @@
 .org $0000 ;$C00000
 .base $C0
 
-.include "gfx/characters/character_sprites_pointer_table.asm"              
+.include "gfx/characters/character_sprites_pointer_table.asm"
 
 func_C063B8:
 	jsl.l func_C063BD
@@ -1220,25 +1220,25 @@ func_C06EE5:
 	sty.w $8440
 	lda.w $8448
 	beq @lbl_C06F10
-	.db $20,$85,$6F                       ;C06F0D  
+	.db $20,$85,$6F ;C06F0D
 @lbl_C06F10:
 	ldx.w $8454
 	beq func_C06F2F
 	pea.w $6F70
-	jmp.w (Jumptable_C06F1B-2,x)       ;C06F18
+	jmp.w (Jumptable_C06F1B-2,x)
 
 ;jumptable
 Jumptable_C06F1B:
-	.db $8C,$6F
-	.db $A5,$6F                
-	.db $05,$70
-	.db $2C,$70
-	.db $61,$70
-	.db $F6,$70
-	.db $04,$71
-	.db $32,$71
-	.db $7A,$71
-	.db $D5,$71
+	.dw $6F8C
+	.dw $6FA5
+	.dw $7005
+	.dw $702C
+	.dw $7061
+	.dw $70F6
+	.dw $7104
+	.dw $7132
+	.dw $717A
+	.dw $71D5
 
 func_C06F2F:
 	lda.w $8450
@@ -2153,7 +2153,7 @@ Jumptable_C07989:
 	.db $6F,$78
 	.db $99,$78
 	.db $6F,$78
-	.db $6F,$78        
+	.db $6F,$78
 
 func_C079A7:
 	php

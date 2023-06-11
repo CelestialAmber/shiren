@@ -1,11 +1,11 @@
 ;40f4
-NPC7Sprites:          
+NPC7Sprites:
 	.dl Data_d3f49c
 	.db $0C
 	.dl Data_d3f5e7
 	.db $0C
 	.dl Data_d3f732
-	.db $0C                
+	.db $0C
 	.dl Data_d3f870
 	.db $0C
 	.dl Data_d3f9b0
@@ -35,13 +35,13 @@ NPC7Sprites:
 	.dl Data_d40138
 	.db $0C
 	.dl Data_d4027a
-	.db $0C                
+	.db $0C
 	.dl Data_d403be
 	.db $0C
 	.dl Data_d4050c
 	.db $0C
 	.dl Data_d4050c
-	.db $4C                
+	.db $4C
 	.dl Data_d3fff0
 	.db $4C
 	.dl Data_d4027a
@@ -59,11 +59,11 @@ NPC7Sprites:
 	.dl Data_d40652
 	.db $4C
 	.dl Data_d40b1b
-	.db $0C                
+	.db $0C
 	.dl Data_d40cd4
-	.db $0C                
+	.db $0C
 	.dl Data_d40b1b
-	.db $4C         
+	.db $4C
 
 ;4174
 NPC7Sprites2:
@@ -72,7 +72,7 @@ NPC7Sprites2:
 	.dl Data_d3f5e7
 	.db $08
 	.dl Data_d3f732
-	.db $08                
+	.db $08
 	.dl Data_d3f870
 	.db $08
 	.dl Data_d3f9b0
@@ -102,9 +102,9 @@ NPC7Sprites2:
 	.dl Data_d40138
 	.db $08
 	.dl Data_d4027a
-	.db $08                
+	.db $08
 	.dl Data_d403be
-	.db $08                
+	.db $08
 	.dl Data_d4050c
 	.db $08
 	.dl Data_d4050c
@@ -126,16 +126,16 @@ NPC7Sprites2:
 	.dl Data_d40652
 	.db $48
 	.dl Data_d40b1b
-	.db $08                
+	.db $08
 	.dl Data_d40cd4
-	.db $08                
+	.db $08
 	.dl Data_d40b1b
 	.db $48
 
 ;41f4
 NPC7Sprites3:
 	.dl Data_d3f49c
-	.db $0A                        
+	.db $0A
 	.dl Data_d3f5e7
 	.db $0A
 	.dl Data_d3f732
@@ -157,9 +157,9 @@ NPC7Sprites3:
 	.dl Data_d3faf6
 	.db $4A
 	.dl Data_d3f9b0
-	.db $4A                
+	.db $4A
 	.dl Data_d3f49c
-	.db $4A                
+	.db $4A
 	.dl Data_d3f732
 	.db $4A
 	.dl Data_d3f5e7
@@ -169,9 +169,9 @@ NPC7Sprites3:
 	.dl Data_d40138
 	.db $0A
 	.dl Data_d4027a
-	.db $0A                
+	.db $0A
 	.dl Data_d403be
-	.db $0A                
+	.db $0A
 	.dl Data_d4050c
 	.db $0A
 	.dl Data_d4050c
@@ -193,8 +193,8 @@ NPC7Sprites3:
 	.dl Data_d40652
 	.db $4A
 	.dl Data_d40b1b
-	.db $0A                
+	.db $0A
 	.dl Data_d40cd4
-	.db $0A                
+	.db $0A
 	.dl Data_d40b1b
 	.db $4A

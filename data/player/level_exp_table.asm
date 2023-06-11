@@ -8,13 +8,13 @@ LevelExpLowByteTable:
 	.db $3C
 	.db $64
 	.db $96
-	.db $E6    
+	.db $E6
 	.db $5E
 	.db $F4
 	.db $BC
-	.db $B6                
+	.db $B6
 	.db $B0
-	.db $DC                        
+	.db $DC
 	.db $08
 	.db $FC
 	.db $F0
@@ -24,10 +24,10 @@ LevelExpLowByteTable:
 	.db $70
 	.db $58
 	.db $40
-	.db $10                        
+	.db $10
 	.db $C8
 	.db $80
-	.db $20                    
+	.db $20
 	.db $A8
 	.db $30
 	.db $A0
@@ -83,13 +83,13 @@ LevelExpMiddleByteTable:
 	.db $00
 	.db $00
 	.db $00
-	.db $00    
+	.db $00
 	.db $01
 	.db $01
 	.db $02
-	.db $03                
+	.db $03
 	.db $04
-	.db $05                        
+	.db $05
 	.db $07
 	.db $08
 	.db $0A
@@ -99,10 +99,10 @@ LevelExpMiddleByteTable:
 	.db $17
 	.db $1B
 	.db $1F
-	.db $27                        
+	.db $27
 	.db $32
 	.db $3E
-	.db $4E                    
+	.db $4E
 	.db $61
 	.db $75
 	.db $8C
@@ -158,13 +158,6 @@ LevelExpHighByteTable:
 	.db $00
 	.db $00
 	.db $00
-	.db $00    
-	.db $00
-	.db $00
-	.db $00
-	.db $00                
-	.db $00
-	.db $00                        
 	.db $00
 	.db $00
 	.db $00
@@ -174,10 +167,17 @@ LevelExpHighByteTable:
 	.db $00
 	.db $00
 	.db $00
-	.db $00                        
 	.db $00
 	.db $00
-	.db $00                    
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
+	.db $00
 	.db $00
 	.db $00
 	.db $00

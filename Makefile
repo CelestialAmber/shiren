@@ -22,7 +22,8 @@ endif
 
 PYTHON := python3
 
-OBJS = main.o
+OBJS = code.o gfx/characters/character_sprites.o main.o text.o \
+		wram.o
 
 ### Build targets
 
@@ -49,6 +50,7 @@ tools:
 	$(MAKE) -C tools/
 
 WLAFLAGS =
+WLALINKFLAGS = -S
 
 #Add a debug flag if we're building a debug rom
 ifeq ($(DEBUG),1)
@@ -65,14 +67,14 @@ $(info $(shell $(MAKE) -C tools))
 endif
 
 #Split the tainted insect sprites beforehand
-ifeq (,$(filter clean tidy, $(MAKECMDGOALS)))
-$(info $(shell ./tools/split_images.sh gfx/characters/taintedinsect))
-endif
+#ifeq (,$(filter clean tidy, $(MAKECMDGOALS)))
+#$(info $(shell ./tools/split_images.sh gfx/characters/taintedinsect))
+#endif
 
 
 
 $(rom): $(OBJS)
-	wlalink -S linkfile $@
+	wlalink $(WLALINKFLAGS) linkfile $@
 	$(SHA1SUM) -c shiren.sha1
 
 %.o: dep = $(shell tools/scan_includes $(@D)/$*.asm)
@@ -84,6 +86,25 @@ $(rom): $(OBJS)
 gfx/characters/shiren/walk_%.4bpp : gfx/characters/shiren/walk_%.png
 	@tools/gbagfx/gbagfx $< $@
 
+
+#TODO: find a better way than this
+
+TAINTEDINSECT_PARTS :=\
+gfx/characters/taintedinsect/%_part0.png\
+gfx/characters/taintedinsect/%_part1.png\
+gfx/characters/taintedinsect/%_part2.png\
+gfx/characters/taintedinsect/%_part3.png\
+gfx/characters/taintedinsect/%_part4.png\
+gfx/characters/taintedinsect/%_part5.png\
+gfx/characters/taintedinsect/%_part6.png\
+gfx/characters/taintedinsect/%_part7.png\
+gfx/characters/taintedinsect/%_part8.png\
+gfx/characters/taintedinsect/%_part9.png\
+gfx/characters/taintedinsect/%_part10.png\
+gfx/characters/taintedinsect/%_part11.png\
+
+$(TAINTEDINSECT_PARTS): gfx/characters/taintedinsect/%.png
+	tools/gfx.py split $<
 
 ### General graphics rules
 

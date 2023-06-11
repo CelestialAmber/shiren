@@ -1,7 +1,7 @@
 ;3f74
 NPC6Sprites:
 	.dl Data_d3d566
-	.db $0A                        
+	.db $0A
 	.dl Data_d3d6df
 	.db $0A
 	.dl Data_d3d868
@@ -23,25 +23,25 @@ NPC6Sprites:
 	.dl Data_d3dd01
 	.db $4A
 	.dl Data_d3db66
-	.db $4A                
+	.db $4A
 	.dl Data_d3d566
 	.db $4A
 	.dl Data_d3e166
 	.db $0A
 	.dl Data_d3d6df
-	.db $4A                
+	.db $4A
 	.dl Data_d3e2d5
 	.db $0A
 	.dl Data_d3e484
 	.db $0A
 	.dl Data_d3e60d
-	.db $0A                
+	.db $0A
 	.dl Data_d3e7ba
 	.db $0A
 	.dl Data_d3e99f
 	.db $0A
 	.dl Data_d3e99f
-	.db $4A                
+	.db $4A
 	.dl Data_d3eb58
 	.db $0A
 	.dl Data_d3e60d
@@ -59,15 +59,15 @@ NPC6Sprites:
 	.dl Data_d3ed11
 	.db $4A
 	.dl Data_d3f162
-	.db $0A                
+	.db $0A
 	.dl Data_d3f2f3
-	.db $0A                
+	.db $0A
 	.dl Data_d3f162
 	.db $4A
 ;3ff4
 NPC6Sprites2:
 	.dl Data_d3d566
-	.db $08                        
+	.db $08
 	.dl Data_d3d6df
 	.db $08
 	.dl Data_d3d868
@@ -101,9 +101,9 @@ NPC6Sprites2:
 	.dl Data_d3e484
 	.db $08
 	.dl Data_d3e60d
-	.db $08                
+	.db $08
 	.dl Data_d3e7ba
-	.db $08                
+	.db $08
 	.dl Data_d3e99f
 	.db $08
 	.dl Data_d3e99f
@@ -125,15 +125,15 @@ NPC6Sprites2:
 	.dl Data_d3ed11
 	.db $48
 	.dl Data_d3f162
-	.db $08                
+	.db $08
 	.dl Data_d3f2f3
-	.db $08                
+	.db $08
 	.dl Data_d3f162
-	.db $48          
+	.db $48
 ;4074
 NPC6Sprites3:
 	.dl Data_d3d566
-	.db $0C                
+	.db $0C
 	.dl Data_d3d6df
 	.db $0C
 	.dl Data_d3d868
@@ -167,9 +167,9 @@ NPC6Sprites3:
 	.dl Data_d3e484
 	.db $0C
 	.dl Data_d3e60d
-	.db $0C                
+	.db $0C
 	.dl Data_d3e7ba
-	.db $0C                
+	.db $0C
 	.dl Data_d3e99f
 	.db $0C
 	.dl Data_d3e99f
@@ -191,8 +191,8 @@ NPC6Sprites3:
 	.dl Data_d3ed11
 	.db $4C
 	.dl Data_d3f162
-	.db $0C                
+	.db $0C
 	.dl Data_d3f2f3
-	.db $0C                
+	.db $0C
 	.dl Data_d3f162
-	.db $4C      
+	.db $4C

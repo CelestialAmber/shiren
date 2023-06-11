@@ -5,8 +5,8 @@ func_C25FBB:
 	php
 	sep #$30 ;AXY->8
 	ldx.b wTemp00
-	lda.l $7E8835,x
-	ora.l $7E88C1,x
+	lda.l wCharNPCFlags,x
+	ora.l wCharIgnoreShiren,x
 	lsr a
 	bcs @lbl_C25FFF
 	phx
@@ -16,17 +16,17 @@ func_C25FBB:
 	cmp.b #$01
 	bne @lbl_C25FFF
 	lda.b wTemp01
-	sta.l $7E85DD,x
+	sta.l wCharDir,x
 	stx.b wTemp00
 	phx
 	jsl.l func_C2785E
 	plx
 	lda.b wTemp00
 	bmi @lbl_C25FFF
-	lda.l $7E8835,x
+	lda.l wCharNPCFlags,x
 	bne @lbl_C25FFB
 	lda.b wTemp00
-	sta.l $7E871D,x
+	sta.l wCharAttackTarget,x
 	lda.b #$00
 	sta.l $7E8977
 @lbl_C25FFB:
@@ -50,7 +50,7 @@ func_C25FBB:
 	rtl
 @lbl_C2601B:
 	sep #$20 ;A->8
-	lda.l $7E8835,x
+	lda.l wCharNPCFlags,x
 	bne @lbl_C26046
 	stx.b wTemp00
 	phx
@@ -60,7 +60,7 @@ func_C25FBB:
 	bmi @lbl_C26046
 	txy
 	tax
-	lda.l $7E8835,x
+	lda.l wCharNPCFlags,x
 	tyx
 	bit.b #$80
 	beq @lbl_C26046
@@ -92,7 +92,7 @@ func_C26087:
 	plx
 	lda.b wTemp01
 	eor.b #$04
-	sta.l $7E85DD,x
+	sta.l wCharDir,x
 	pha
 	stx.b wTemp00
 	phx
@@ -101,10 +101,10 @@ func_C26087:
 	pla
 	ldy.b wTemp00
 	bpl @lbl_C260CE
-	sta.l $7E85DD,x
-	lda.l $7E880D,x
+	sta.l wCharDir,x
+	lda.l wCharDeadEndWaitingTurn,x
 	eor.b #$01
-	sta.l $7E880D,x
+	sta.l wCharDeadEndWaitingTurn,x
 @lbl_C260C4:
 	stx.b wTemp00
 	phx
@@ -135,9 +135,9 @@ func_C260DB:
 	bcs @lbl_C260F3
 	.db $A9,$01,$85,$00,$28,$6B           ;C260ED
 @lbl_C260F3:
-	lda.l $7E85DD,x
+	lda.l wCharDir,x
 	and.b #$FE
-	sta.l $7E85DD,x
+	sta.l wCharDir,x
 	jsl.l Random
 	lda.b wTemp00
 	cmp.b #$10
@@ -164,7 +164,7 @@ func_C260DB:
 	lda.b wTemp04
 	sta.b wTemp00
 	sep #$20 ;A->8
-	lda.l $7E85DD,x
+	lda.l wCharDir,x
 	sta.b wTemp02
 	lda.b #$01
 	sta.b wTemp03
@@ -178,11 +178,11 @@ func_C260DB:
 	jsl.l Random
 	lda.b wTemp00
 	and.b #$04
-	eor.l $7E85DD,x
+	eor.l wCharDir,x
 	inc a
 	inc a
 	and.b #$07
-	sta.l $7E85DD,x
+	sta.l wCharDir,x
 	stz.b wTemp00
 	plp
 	rtl
@@ -206,19 +206,19 @@ func_C26208:
 	pha
 	plb
 	ldy.b wTemp00
-	lda.w $85DD,y
+	lda.w wCharDir,y
 	pha
 	ldx.b #$05
-	lda.w $880D,y
+	lda.w wCharDeadEndWaitingTurn,y
 	bit.b #$01
 	beq @lbl_C26220
 	ldx.b #$03
 @lbl_C26220:
 	txa
 	clc
-	adc.w $85DD,y
+	adc.w wCharDir,y
 	and.b #$07
-	sta.w $85DD,y
+	sta.w wCharDir,y
 	sty.b wTemp00
 	phy
 	phb
@@ -226,7 +226,7 @@ func_C26208:
 	plb
 	ply
 	ldx.b #$00
-	lda.w $880D,y
+	lda.w wCharDeadEndWaitingTurn,y
 	bit.b #$01
 	beq @lbl_C2623F
 	ldx.b #$07
@@ -241,7 +241,7 @@ func_C26208:
 	clc
 	adc.b wTemp01,s
 	and.b #$07
-	sta.w $85DD,y
+	sta.w wCharDir,y
 	sty.b wTemp00
 	phx
 	phy
@@ -284,14 +284,14 @@ func_C2628F:
 	jsl.l Random
 	lda.b wTemp00
 	and.b #$07
-	sta.l $7E85DD,x
+	sta.l wCharDir,x
 	stx.b wTemp00
 	phx
 	jsl.l func_C2785E
 	plx
 	lda.b wTemp00
 	bmi @lbl_C262B8
-	sta.l $7E871D,x
+	sta.l wCharAttackTarget,x
 	lda.b #$00
 	sta.l $7E8977
 	plp
@@ -331,7 +331,7 @@ func_C262D5:
 	jsl.l Random
 	lda.b wTemp00
 	and.b #$07
-	sta.l $7E85DD,x
+	sta.l wCharDir,x
 	stx.b wTemp00
 	phx
 	jsl.l func_C27A85
@@ -356,7 +356,7 @@ func_C262D5:
 	php
 	sep #$30 ;AXY->8
 	ldx.b wTemp00
-	lda.l $7E87BD,x
+	lda.l wCharUnderfootTerrainType,x
 	sta.b wTemp00
 	jsl.l func_C366C4
 	lda.b #$01
@@ -381,7 +381,7 @@ func_C262D5:
 	rtl
 @lbl_C2634C:
 	lda.b #$53
-	sta.l $7E871D,x
+	sta.l wCharAttackTarget,x
 	lda.b #$00
 	sta.l $7E8977
 	stz.b wTemp00
@@ -407,7 +407,7 @@ func_C262D5:
 	php
 	sep #$30 ;AXY->8
 	ldx.b wTemp00
-	lda.l $7E8619,x
+	lda.l wCharLevel,x
 	dec a
 	bra @lbl_C26421
 	.db $86,$00,$DA,$22,$F8,$77,$C2,$FA,$A5,$00,$C9,$02,$B0,$14,$BF,$BD   ;C263FF  
@@ -420,7 +420,7 @@ func_C262D5:
 	jsl.l Random
 	lda.b wTemp00
 	and.b #$07
-	sta.l $7E85DD,x
+	sta.l wCharDir,x
 	bra @lbl_C26445
 @lbl_C26437:
 	stx.b wTemp00
@@ -428,7 +428,7 @@ func_C262D5:
 	jsl.l func_C277F8
 	plx
 	lda.b wTemp01
-	sta.l $7E85DD,x
+	sta.l wCharDir,x
 @lbl_C26445:
 	stx.b wTemp00
 	phx
@@ -474,7 +474,7 @@ func_C262D5:
 	php
 	sep #$30 ;AXY->8
 	ldx.b wTemp00
-	lda.l $7E8619,x
+	lda.l wCharLevel,x
 	cmp.b #$03
 	bcc @lbl_C264F5
 	.db $4C,$37,$64                       ;C264F2  
@@ -493,12 +493,12 @@ func_C262D5:
 	php
 	sep #$30 ;AXY->8
 	ldx.b wTemp00
-	lda.l $7E8781,x
+	lda.l wCharIsSealed,x
 	cmp.b #$03
 	bcc @lbl_C26594
-	lda.l $7E8795,x
+	lda.l wCharAttackedByShiren,x
 	bne @lbl_C2658E
-	lda.l $7E87BD,x
+	lda.l wCharUnderfootTerrainType,x
 	bit.b #$10
 	bne @lbl_C26568
 	sta.b wTemp00
@@ -517,7 +517,7 @@ func_C262D5:
 	.db $C9,$08,$D0,$D6,$80,$44           ;C26588
 @lbl_C2658E:
 	lda.b #$02
-	sta.l $7E8781,x
+	sta.l wCharIsSealed,x
 @lbl_C26594:
 	stx.b wTemp00
 	jsl.l func_C2679E
@@ -546,10 +546,10 @@ func_C262D5:
 	php
 	sep #$30 ;AXY->8
 	ldx.b wTemp00
-	lda.l $7E8781,x
+	lda.l wCharIsSealed,x
 	cmp.b #$03
 	bcc @lbl_C266A6
-	lda.l $7E8795,x
+	lda.l wCharAttackedByShiren,x
 	beq @lbl_C266AE
 	.db $A9,$02,$9F,$81,$87,$7E           ;C266A0
 @lbl_C266A6:
@@ -566,10 +566,10 @@ func_C262D5:
 	.db $A5,$01,$CF,$DC,$85,$7E,$F0,$E3   ;C266BB  
 @lbl_C266C3:
 	lda.b wTemp00
-	cmp.l $7E85B5,x
+	cmp.l wCharXPos,x
 	bne @lbl_C266D3
 	lda.b wTemp01
-	cmp.l $7E85C9,x
+	cmp.l wCharYPos,x
 	beq @lbl_C266F9
 @lbl_C266D3:
 	.db $A5,$00,$9F,$D1,$87,$7E,$A5,$01,$9F,$E5,$87,$7E,$86,$00,$DA,$22   ;C266D3  
@@ -577,32 +577,32 @@ func_C262D5:
 	.db $E2,$20,$64,$00,$28,$6B           ;C266F3
 @lbl_C266F9:
 	lda.b #$01
-	sta.l $7E8781,x
-	lda.l $7E8759,x
+	sta.l wCharIsSealed,x
+	lda.l wCharHeldItem,x
 	bmi @lbl_C2670D
 	sta.b wTemp00
 	phx
 	jsl.l func_C306F4
 	plx
 @lbl_C2670D:
-	lda.l $7E85B5,x
+	lda.l wCharXPos,x
 	sta.b wTemp00
-	lda.l $7E85C9,x
+	lda.l wCharYPos,x
 	sta.b wTemp01
 	phx
 	jsl.l func_C359AF
 	plx
 	lda.b wTemp01
-	sta.l $7E8759,x
+	sta.l wCharHeldItem,x
 	sta.b wTemp00
 	lda.b #$00
 	sta.b wTemp01
 	phx
 	jsl.l func_C33AB2
 	plx
-	lda.l $7E85B5,x
+	lda.l wCharXPos,x
 	sta.b wTemp00
-	lda.l $7E85C9,x
+	lda.l wCharYPos,x
 	sta.b wTemp01
 	lda.b #$80
 	sta.b wTemp02
@@ -610,7 +610,7 @@ func_C262D5:
 	jsl.l func_C35BA2
 	plx
 	lda.b #$53
-	sta.l $7E871D,x
+	sta.l wCharAttackTarget,x
 	lda.b #$00
 	sta.l $7E8977
 	stz.b wTemp00
@@ -619,28 +619,28 @@ func_C262D5:
 
 func_C26757:
 	sep #$30 ;AXY->8
-	lda.l $7E85B5,x
+	lda.l wCharXPos,x
 	sta.b wTemp00
-	lda.l $7E85C9,x
+	lda.l wCharYPos,x
 	sta.b wTemp01
 	phx
 	jsl.l func_C359AF
 	plx
 	lda.b wTemp01
 	bmi @lbl_C2677C
-	lda.l $7E85B5,x
+	lda.l wCharXPos,x
 	sta.b wTemp00
-	lda.l $7E85C9,x
+	lda.l wCharYPos,x
 	sta.b wTemp01
 	rts
 @lbl_C2677C:
-	lda.l $7E87BD,x
+	lda.l wCharUnderfootTerrainType,x
 	and.b #$F0
 	beq @lbl_C26788
 	cmp.b #$70
 	bne @lbl_C26797
 @lbl_C26788:
-	lda.l $7E87BD,x
+	lda.l wCharUnderfootTerrainType,x
 	and.b #$0F
 	sta.b wTemp00
 	phx
@@ -657,18 +657,18 @@ func_C2679E:
 	php
 	sep #$30 ;AXY->8
 	ldx.b wTemp00
-	lda.l $7E8781,x
+	lda.l wCharIsSealed,x
 	cmp.b #$01
 	beq @lbl_C267B7
 	lda.b #$00
-	sta.l $7E8795,x
+	sta.l wCharAttackedByShiren,x
 	lda.b #$01
 	sta.b wTemp00
 	plp
 	rtl
 @lbl_C267B7:
 	lda.b #$00
-	sta.l $7E8795,x
+	sta.l wCharAttackedByShiren,x
 	stx.b wTemp00
 	jsl.l func_C2687B
 	plp
@@ -679,12 +679,12 @@ func_C2679E:
 	php
 	sep #$30 ;AXY->8
 	ldx.b wTemp00
-	lda.l $7E8781,x
+	lda.l wCharIsSealed,x
 	dec a
 	beq @lbl_C267EA
-	sta.l $7E8781,x
+	sta.l wCharIsSealed,x
 @lbl_C267D5:
-	lda.l $7E8619,x
+	lda.l wCharLevel,x
 	dec a
 	bne @lbl_C267E2
 	lda.b #$01
@@ -702,16 +702,16 @@ func_C2679E:
 	.db $A5,$01,$CF,$DC,$85,$7E,$F0,$D6   ;C267F7  
 @lbl_C267FF:
 	lda.b wTemp00
-	cmp.l $7E85B5,x
+	cmp.l wCharXPos,x
 	bne @lbl_C2680F
 	lda.b wTemp01
-	cmp.l $7E85C9,x
+	cmp.l wCharYPos,x
 	beq @lbl_C26835
 @lbl_C2680F:
 	lda.b wTemp00
-	sta.l $7E87D1,x
+	sta.l wCharTargetXPos,x
 	lda.b wTemp01
-	sta.l $7E87E5,x
+	sta.l wCharTargetYPos,x
 	stx.b wTemp00
 	phx
 	jsl.l func_C27AD2
@@ -727,10 +727,10 @@ func_C2679E:
 	rtl
 @lbl_C26835:
 	lda.b #$0A
-	sta.l $7E8781,x
-	lda.l $7E85B5,x
+	sta.l wCharIsSealed,x
+	lda.l wCharXPos,x
 	sta.b wTemp00
-	lda.l $7E85C9,x
+	lda.l wCharYPos,x
 	sta.b wTemp01
 	phx
 	jsl.l func_C359AF
@@ -747,9 +747,9 @@ func_C2679E:
 	plx
 	lda.b wTemp00
 	sta.b wTemp02
-	lda.l $7E85B5,x
+	lda.l wCharXPos,x
 	sta.b wTemp00
-	lda.l $7E85C9,x
+	lda.l wCharYPos,x
 	sta.b wTemp01
 	phx
 	jsl.l func_C35BA2
@@ -762,7 +762,7 @@ func_C2687B:
 	php
 	sep #$30 ;AXY->8
 	ldx.b wTemp00
-	lda.l $7E8795,x
+	lda.l wCharAttackedByShiren,x
 	beq @lbl_C2689C
 	.db $A9,$00,$9F,$95,$87,$7E,$A9,$53,$9F,$1D,$87,$7E,$A9,$00,$8F,$77   ;C26886
 	.db $89,$7E,$64,$00,$28,$6B           ;C26896
@@ -786,12 +786,12 @@ func_C2687B:
 @lbl_C268CA:
 	cpx.b wTemp00
 	beq @lbl_C268F8
-	lda.l $7E85F1,x
+	lda.l wCharHP,x
 	beq @lbl_C268F8
-	lda.l $7E8835,x
+	lda.l wCharNPCFlags,x
 	bne @lbl_C268F8
-	lda.l $7E85F1,x
-	cmp.l $7E8605,x
+	lda.l wCharHP,x
+	cmp.l wCharMaxHP,x
 	bcs @lbl_C268F8
 	ldy.b wTemp00
 	stx.b wTemp00
@@ -816,7 +816,7 @@ func_C2687B:
 	txa
 	ora.b #$40
 	ldx.b wTemp00
-	sta.l $7E871D,x
+	sta.l wCharAttackTarget,x
 	lda.b #$00
 	sta.l $7E8977
 	stz.b wTemp00
@@ -884,9 +884,9 @@ func_C26A49:
 	pla
 	ldy.b wTemp00
 	beq @lbl_C26A7B
-	sta.l $7E85DD,x
+	sta.l wCharDir,x
 	lda.b #$53
-	sta.l $7E871D,x
+	sta.l wCharAttackTarget,x
 	lda.b #$00
 	sta.l $7E8977
 	stz.b wTemp00
@@ -941,7 +941,7 @@ func_C26A49:
 	lda.b #$06
 @lbl_C26B76:
 	eor.b wTemp01
-	sta.l $7E85DD,x
+	sta.l wCharDir,x
 	stx.b wTemp00
 	phx
 	jsl.l func_C2785E
@@ -974,7 +974,7 @@ func_C26A49:
 	inc a
 	and.b #$04
 @lbl_C26BB1:
-	sta.l $7E85DD,x
+	sta.l wCharDir,x
 	stx.b wTemp00
 	phx
 	jsl.l func_C2785E
@@ -1029,10 +1029,10 @@ func_C26A49:
 	php
 	sep #$30 ;AXY->8
 	ldx.b wTemp00
-	lda.l $7E8619,x
+	lda.l wCharLevel,x
 	cmp.b #$03
 	bcs @lbl_C26D2C
-	lda.l $7E8731,x
+	lda.l wCharIsAwake,x
 	beq @lbl_C26CFF
 	stx.b wTemp00
 	phx
@@ -1048,9 +1048,9 @@ func_C26A49:
 	cmp.b #$03
 	bcs @lbl_C26D12
 	lda.b #$00
-	sta.l $7E8731,x
+	sta.l wCharIsAwake,x
 @lbl_C26CFF:
-	lda.l $7E8619,x
+	lda.l wCharLevel,x
 	dec a
 	beq @lbl_C26D0C
 	.db $BF,$95,$87,$7E,$D0,$0A           ;C26D06  
@@ -1082,7 +1082,7 @@ func_C26A49:
 	lda.b wTemp00
 	bit.b #$07
 	bne @lbl_C26D8E
-	lda.l $7E8619,x
+	lda.l wCharLevel,x
 	dec a
 	bne @lbl_C26D94
 	stx.b wTemp00
@@ -1103,9 +1103,9 @@ func_C26A49:
 	lda.b wTemp02
 	beq @lbl_C26D8E
 	lda.b wTemp01
-	sta.l $7E85DD,x
+	sta.l wCharDir,x
 	lda.b #$53
-	sta.l $7E871D,x
+	sta.l wCharAttackTarget,x
 	lda.b #$00
 	sta.l $7E8977
 	stz.b wTemp00
@@ -1157,20 +1157,20 @@ func_C26A49:
 	pha
 	lda.l $7E87D0
 	pha
-	lda.l $7E85B5,x
+	lda.l wCharXPos,x
 	sta.l $7E85C8
-	lda.l $7E85C9,x
+	lda.l wCharYPos,x
 	sta.l $7E85DC
-	lda.l $7E87BD,x
+	lda.l wCharUnderfootTerrainType,x
 	sta.l $7E87D0
 	lda.b #$FF
-	sta.l $7E87F9,x
+	sta.l wCharUnk87F9,x
 	phx
 	ldx.b #$00
 @lbl_C26F32:
-	lda.l $7E85F1,x
+	lda.l wCharHP,x
 	beq @lbl_C26F55
-	lda.l $7E85A1,x
+	lda.l wCharType,x
 	cmp.b #$3C
 	bcs @lbl_C26F55
 	cmp.b #$28
@@ -1189,7 +1189,7 @@ func_C26A49:
 	cpx.b #$13
 	bcc @lbl_C26F32
 	plx
-	lda.l $7E87F9,x
+	lda.l wCharUnk87F9,x
 	bpl @lbl_C26FB8
 	sep #$20 ;A->8
 	pla
@@ -1205,7 +1205,7 @@ func_C26A49:
 @lbl_C26F78:
 	txa
 	plx
-	sta.l $7E87F9,x
+	sta.l wCharUnk87F9,x
 	stx.b wTemp00
 	sta.b wTemp01
 	phx
@@ -1215,43 +1215,43 @@ func_C26A49:
 	cmp.b #$01
 	bne @lbl_C26FB0
 	lda.b wTemp01
-	sta.l $7E85DD,x
+	sta.l wCharDir,x
 	stx.b wTemp00
 	phx
 	jsl.l func_C2785E
 	plx
 	lda.b wTemp00
 	bmi @lbl_C26FB0
-	lda.l $7E87F9,x
-	sta.l $7E871D,x
+	lda.l wCharUnk87F9,x
+	sta.l wCharAttackTarget,x
 	lda.b #$00
 	sta.l $7E8977
 	bra @lbl_C26FFC
 @lbl_C26FB0:
 	phx
-	lda.l $7E87F9,x
+	lda.l wCharUnk87F9,x
 	tax
 	bra @lbl_C26F55
 @lbl_C26FB8:
 	phx
 	tax
-	lda.l $7E85B5,x
+	lda.l wCharXPos,x
 	sta.l $7E85C8
-	lda.l $7E85C9,x
+	lda.l wCharYPos,x
 	sta.l $7E85DC
-	lda.l $7E87BD,x
+	lda.l wCharUnderfootTerrainType,x
 	sta.l $7E87D0
 	plx
-	lda.l $7E88C1,x
+	lda.l wCharIgnoreShiren,x
 	pha
 	lda.b #$00
-	sta.l $7E88C1,x
+	sta.l wCharIgnoreShiren,x
 	stx.b wTemp00
 	phx
 	jsl.l func_C27CA8
 	plx
 	pla
-	sta.l $7E88C1,x
+	sta.l wCharIgnoreShiren,x
 	rep #$20 ;A->16
 	lda.b wTemp00
 	bpl @lbl_C26FF4
@@ -1288,14 +1288,14 @@ func_C26A49:
 	sep #$30 ;AXY->8
 	ldx.b wTemp00
 	lda.l $7E8995
-	ora.l $7E8795,x
+	ora.l wCharAttackedByShiren,x
 	beq @lbl_C27095
 	.db $A9,$00,$9F,$35,$88,$7E,$9F,$81,$87,$7E,$A9,$01,$85,$00,$28,$6B   ;C27085
 @lbl_C27095:
 	lda.l $7E87D0
 	cmp.l $7E898F
 	beq @lbl_C270C5
-	cmp.l $7E87BD,x
+	cmp.l wCharUnderfootTerrainType,x
 	bne @lbl_C270C5
 	sta.l $7E898F
 	lda.b #$0E
@@ -1313,17 +1313,17 @@ func_C26A49:
 	jsl.l DisplayMessage
 	plx
 @lbl_C270C5:
-	lda.l $7E8781,x
+	lda.l wCharIsSealed,x
 	cmp.b #$02
 	bne @lbl_C270ED
 	.db $BF,$B5,$85,$7E,$DF,$D1,$87,$7E,$D0,$30,$BF,$C9,$85,$7E,$DF,$E5   ;C270CD  
 	.db $87,$7E,$D0,$26,$A9,$01,$9F,$81,$87,$7E,$A9,$01,$9F,$6D,$87,$7E   ;C270DD  
 @lbl_C270ED:
-	lda.l $7E85B5,x
-	cmp.l $7E87D1,x
+	lda.l wCharXPos,x
+	cmp.l wCharTargetXPos,x
 	bne @lbl_C27101
-	lda.l $7E85C9,x
-	cmp.l $7E87E5,x
+	lda.l wCharYPos,x
+	cmp.l wCharTargetYPos,x
 	beq @lbl_C2711F
 @lbl_C27101:
 	lda.l $7E8990
@@ -1355,9 +1355,9 @@ func_C26A49:
 	jsl.l func_C2791F
 	plx
 	sep #$20 ;A->8
-	lda.l $7E85DD,x
+	lda.l wCharDir,x
 	eor.b #$04
-	sta.l $7E85DD,x
+	sta.l wCharDir,x
 @lbl_C27147:
 	stz.b wTemp00
 	plp
@@ -1384,7 +1384,7 @@ func_C26A49:
 	php
 	sep #$30 ;AXY->8
 	ldx.b wTemp00
-	lda.l $7E8871,x
+	lda.l wCharEventFlags,x
 	bne @lbl_C271B7
 	lda.l $7E8978
 	and.b #$01
@@ -1395,7 +1395,7 @@ func_C26A49:
 	cmp.b #$02
 	bcs @lbl_C271C7
 	lda.b #$88
-	sta.l $7E8835,x
+	sta.l wCharNPCFlags,x
 	lda.b #$01
 	sta.b wTemp00
 	plp
@@ -1411,7 +1411,7 @@ func_C26A49:
 	php
 	sep #$30 ;AXY->8
 	ldx.b wTemp00
-	lda.l $7E8871,x
+	lda.l wCharEventFlags,x
 	bmi @lbl_C271FA
 	stz.b wTemp00
 	plp
@@ -1430,7 +1430,7 @@ func_C2721B:
 	plx
 func_C27226:
 	lda.b wTemp01
-	sta.l $7E85DD,x
+	sta.l wCharDir,x
 	stx.b wTemp00
 	lda.b #$01
 	sta.b wTemp02
@@ -1449,7 +1449,7 @@ func_C27238:
 	php
 	sep #$30 ;AXY->8
 	ldx.b wTemp00
-	lda.l $7E8871,x
+	lda.l wCharEventFlags,x
 	cmp.b #$06
 	bcs @lbl_C2726E
 	lda.l $7E897B
@@ -1461,7 +1461,7 @@ func_C27238:
 	cmp.b #$21
 	bne @lbl_C2726E
 	lda.b #$13
-	sta.l $7E871D,x
+	sta.l wCharAttackTarget,x
 	lda.b #$00
 	sta.l $7E8977
 @lbl_C2726E:
@@ -1527,7 +1527,7 @@ func_C27238:
 	php
 	sep #$30 ;AXY->8
 	ldx.b wTemp00
-	lda.l $7E8871,x
+	lda.l wCharEventFlags,x
 	cmp.b #$05
 	beq @lbl_C273DE
 	cmp.b #$03
@@ -1562,7 +1562,7 @@ func_C27238:
 	php
 	sep #$30 ;AXY->8
 	ldx.b wTemp00
-	lda.l $7E8871,x
+	lda.l wCharEventFlags,x
 	beq @lbl_C274F9
 	cmp.b #$04
 	beq @lbl_C27511
@@ -1571,7 +1571,7 @@ func_C27238:
 	.db $C9,$03,$F0,$10,$64,$00,$28,$6B   ;C274F1
 @lbl_C274F9:
 	lda.b #$00
-	sta.l $7E876D,x
+	sta.l wCharSpeed,x
 	jsl.l func_C262D5
 	plp
 	rtl
@@ -1600,7 +1600,7 @@ func_C27238:
 	php
 	sep #$30 ;AXY->8
 	ldx.b wTemp00
-	lda.l $7E8871,x
+	lda.l wCharEventFlags,x
 	bne @lbl_C27594
 	lda.l $7E85C8
 	cmp.b #$30
@@ -1612,7 +1612,7 @@ func_C27238:
 	cmp.b #$01
 	bne @lbl_C27598
 	lda.b #$53
-	sta.l $7E871D,x
+	sta.l wCharAttackTarget,x
 	lda.b #$00
 	sta.l $7E8977
 	stz.b wTemp00
@@ -1654,16 +1654,16 @@ func_C27238:
 	php
 	sep #$30 ;AXY->8
 	ldx.b wTemp00
-	lda.l $7E8871,x
+	lda.l wCharEventFlags,x
 	cmp.b #$08
 	bcs @lbl_C2766C
 	cmp.b #$03
 	bcs @lbl_C2767E
 @lbl_C2766C:
 	lda.b #$09
-	sta.l $7E8835,x
+	sta.l wCharNPCFlags,x
 	lda.b #$00
-	sta.l $7E876D,x
+	sta.l wCharSpeed,x
 	lda.b #$01
 	sta.b wTemp00
 	plp
@@ -1681,7 +1681,7 @@ func_C27238:
 	php
 	sep #$30 ;AXY->8
 	ldx.b wTemp00
-	lda.l $7E8871,x
+	lda.l wCharEventFlags,x
 	cmp.b #$01
 	bne @lbl_C27713
 	GetEventPushX Event88

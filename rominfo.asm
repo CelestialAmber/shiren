@@ -11,3 +11,6 @@
 
 .banksize $10000
 .rombanks 64
+
+;empty areas are filled with ff
+.EMPTYFILL $FF

@@ -1,7 +1,7 @@
 ;42f4
 NPC9Sprites:
 	.dl Data_d42542
-	.db $08                        
+	.db $08
 	.dl Data_d4264e
 	.db $08
 	.dl Data_d42750
@@ -11,9 +11,9 @@ NPC9Sprites:
 	.dl Data_d429cc
 	.db $08
 	.dl Data_d42b0e
-	.db $08                
+	.db $08
 	.dl Data_d42c55
-	.db $08                
+	.db $08
 	.dl Data_d42da5
 	.db $08
 	.dl Data_d42da5
@@ -23,13 +23,13 @@ NPC9Sprites:
 	.dl Data_d42b0e
 	.db $48
 	.dl Data_d429cc
-	.db $48                
+	.db $48
 	.dl Data_d42542
 	.db $48
 	.dl Data_d42750
 	.db $48
 	.dl Data_d4264e
-	.db $48                
+	.db $48
 	.dl Data_d43031
 	.db $08
 	.dl Data_d43179
@@ -63,4 +63,4 @@ NPC9Sprites:
 	.dl Data_d43d79
 	.db $08
 	.dl Data_d43c02
-	.db $48       
+	.db $48

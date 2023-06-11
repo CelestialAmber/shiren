@@ -32,9 +32,9 @@ InfernoSprites:
 	.dl Data_c875a3
 	.db $08
 	.dl Data_c87762
-	.db $08                
+	.db $08
 	.dl Data_c8790f
-	.db $08                
+	.db $08
 	.dl Data_c87aac
 	.db $08
 	.dl Data_c87c85
@@ -44,73 +44,73 @@ InfernoSprites:
 	.dl Data_c8800d
 	.db $08
 	.dl Data_c881ba
-	.db $08                
+	.db $08
 	.dl Data_c88361
-	.db $08                
+	.db $08
 	.dl Data_c884fa
-	.db $08                
+	.db $08
 	.dl Data_c88613
-	.db $08                
+	.db $08
 	.dl Data_c88740
-	.db $08                
+	.db $08
 	.dl Data_c88613
-	.db $48                
+	.db $48
 	.dl Data_c884fa
 	.db $48
 	.dl Data_c88887
 	.db $08
 	.dl Data_c889b4
-	.db $08                
+	.db $08
 	.dl Data_c88887
-	.db $48                
+	.db $48
 	.dl Data_c88af5
 	.db $08
 	.dl Data_c88c3a
 	.db $08
 	.dl Data_c88d84
-	.db $08                
+	.db $08
 	.dl Data_c88eaf
 	.db $08
 	.dl Data_c89050
 	.db $08
 	.dl Data_c8921f
-	.db $08                
+	.db $08
 	.dl Data_c8933c
 	.db $08
 	.dl Data_c894d3
 	.db $08
 	.dl Data_c8969c
-	.db $08                
+	.db $08
 	.dl Data_c88eaf
 	.db $48
 	.dl Data_c897e9
 	.db $08
 	.dl Data_c899b4
-	.db $08                
+	.db $08
 	.dl Data_c88af5
 	.db $48
 	.dl Data_c89ae5
 	.db $08
 	.dl Data_c89c39
-	.db $08                
+	.db $08
 	.dl Data_c89db6
 	.db $08
 	.dl Data_c89f27
 	.db $08
 	.dl Data_c8a0c2
-	.db $08                
+	.db $08
 	.dl Data_c8a1ef
 	.db $08
 	.dl Data_c8a38a
 	.db $08
 	.dl Data_c8a575
-	.db $08                
+	.db $08
 	.dl Data_c89db6
 	.db $48
 	.dl Data_c8a65c
 	.db $08
 	.dl Data_c8a7d9
-	.db $08                
+	.db $08
 	.dl Data_c89ae5
 	.db $48
 	.dl Data_c89c39

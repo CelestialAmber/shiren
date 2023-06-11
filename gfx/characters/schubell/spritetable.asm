@@ -8,7 +8,7 @@ SchubellSprites:
 	.dl Data_cdcbe5
 	.db $0A
 	.dl Data_cdccd7
-	.db $0A                
+	.db $0A
 	.dl Data_cdcdbd
 	.db $0A
 	.dl Data_cdcec8
@@ -46,7 +46,7 @@ SchubellSprites:
 	.dl Data_cdde76
 	.db $0A
 	.dl Data_cddf7b
-	.db $0A                
+	.db $0A
 	.dl Data_cde061
 	.db $0A
 	.dl Data_cde179

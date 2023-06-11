@@ -1,5 +1,5 @@
 ;5784
-NPC28Sprites:        
+NPC28Sprites:
 	.dl Data_d6bc74
 	.db $08
 	.dl Data_d6bd6f
@@ -17,31 +17,31 @@ NPC28Sprites:
 	.dl Data_d6c3ba
 	.db $08
 	.dl Data_d6c500
-	.db $08                
+	.db $08
 	.dl Data_d6bf4d
 	.db $48
 	.dl Data_d6c055
 	.db $48
 	.dl Data_d6c173
-	.db $48                
+	.db $48
 	.dl Data_d6bc74
 	.db $48
 	.dl Data_d6bd6f
 	.db $48
 	.dl Data_d6be60
-	.db $48                
+	.db $48
 	.dl Data_d6c644
 	.db $08
 	.dl Data_d6c784
 	.db $08
 	.dl Data_d6c8c0
-	.db $08                
+	.db $08
 	.dl Data_d6c9ad
 	.db $08
 	.dl Data_d6cb03
 	.db $08
 	.dl Data_d6cc55
-	.db $08                
+	.db $08
 	.dl Data_d6c644
 	.db $48
 	.dl Data_d6c784

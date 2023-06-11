@@ -4,7 +4,7 @@ SkullMageSprites:
 	.dl Data_cf2930
 	.db $0C
 	.dl Data_cf2ac9
-	.db $0C                
+	.db $0C
 	.dl Data_cf2c4c
 	.db $0C
 	.dl Data_cf2ded
@@ -22,19 +22,19 @@ SkullMageSprites:
 	.dl Data_cf380b
 	.db $0C
 	.dl Data_cf39ce
-	.db $0C                
+	.db $0C
 	.dl Data_cf3b97
 	.db $0C
 	.dl Data_cf3cf2
 	.db $0C
 	.dl Data_cf3e5f
-	.db $0C                
+	.db $0C
 	.dl Data_cf3fb2
 	.db $0C
 	.dl Data_cf4157
 	.db $0C
 	.dl Data_cf42f6
-	.db $0C                
+	.db $0C
 	.dl Data_cf4483
 	.db $0C
 	.dl Data_cf4626

@@ -1,12 +1,12 @@
 DarkOwlSprites:
 	.dl Data_ccbe2f
-	.db $0C                        
+	.db $0C
 	.dl Data_ccbf94
 	.db $0C
 	.dl Data_ccc0e9
 	.db $0C
 	.dl Data_ccc24c
-	.db $0C                
+	.db $0C
 	.dl Data_ccc3ab
 	.db $0C
 	.dl Data_ccc4ea
@@ -40,7 +40,7 @@ DarkOwlSprites:
 	.dl Data_ccce9b
 	.db $0C
 	.dl Data_ccd010
-	.db $0C                
+	.db $0C
 	.dl Data_ccc8ed
 	.db $4C
 	.dl Data_ccca4a
@@ -58,9 +58,9 @@ DarkOwlSprites:
 	.dl Data_ccd187
 	.db $4C
 	.dl Data_ccd64a
-	.db $0C                
+	.db $0C
 	.dl Data_ccd7dd
-	.db $0C                
+	.db $0C
 	.dl Data_ccd64a
 	.db $4C
 	.dl Data_ccd97e
@@ -86,7 +86,7 @@ DarkOwlSprites:
 	.dl Data_cce1f2
 	.db $0C
 	.dl Data_cce357
-	.db $0C                
+	.db $0C
 	.dl Data_cce4e4
 	.db $0C
 	.dl Data_cce653

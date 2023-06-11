@@ -1,7 +1,7 @@
 ;5df8
 NPC35Sprites:
 	.dl Data_d78889
-	.db $0C                        
+	.db $0C
 	.dl Data_d789b9
 	.db $0C
 	.dl Data_d78aeb
@@ -35,13 +35,13 @@ NPC35Sprites:
 	.dl Data_d7933f
 	.db $0C
 	.dl Data_d79467
-	.db $0C                
+	.db $0C
 	.dl Data_d7958f
 	.db $0C
 	.dl Data_d796bf
 	.db $0C
 	.dl Data_d797eb
-	.db $0C                
+	.db $0C
 	.dl Data_d79219
 	.db $4C
 	.dl Data_d7933f

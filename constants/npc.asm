@@ -8,6 +8,9 @@ DirDownLeft = 5
 DirDown = 6
 DirDownRight = 7
 
+;character data array constant indices
+CharDataShirenIndex = 19
+
 ;character ids
 Char_00 = $00 ;(主人公の名前)
 Char_Mamel = $01 ;マムル

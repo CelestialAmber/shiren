@@ -17,13 +17,13 @@ NPC17Sprites:
 	.dl Data_d54cbc
 	.db $0C
 	.dl Data_d54e19
-	.db $0C                
+	.db $0C
 	.dl Data_d5478b
 	.db $4C
 	.dl Data_d548d5
 	.db $4C
 	.dl Data_d54a1b
-	.db $4C                
+	.db $4C
 	.dl Data_d54392
 	.db $4C
 	.dl Data_d544e2
@@ -37,7 +37,7 @@ NPC17Sprites:
 	.dl Data_d551d8
 	.db $0C
 	.dl Data_d55314
-	.db $0C                
+	.db $0C
 	.dl Data_d5547d
 	.db $0C
 	.dl Data_d555d2
@@ -47,7 +47,7 @@ NPC17Sprites:
 	.dl Data_d550a6
 	.db $4C
 	.dl Data_d551d8
-	.db $4C                
+	.db $4C
 	.dl Data_d55725
 	.db $0C
 	.dl Data_d5587c

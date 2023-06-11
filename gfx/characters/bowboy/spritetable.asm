@@ -16,9 +16,9 @@ BowboySprites:
 	.dl Data_c7ace3
 	.db $0C
 	.dl Data_c7add1
-	.db $0C                
+	.db $0C
 	.dl Data_c7a973
-	.db $4C                
+	.db $4C
 	.dl Data_c7aa45
 	.db $4C
 	.dl Data_c7ab29
@@ -40,7 +40,7 @@ BowboySprites:
 	.dl Data_c7b223
 	.db $0C
 	.dl Data_c7b309
-	.db $0C                
+	.db $0C
 	.dl Data_c7aea9
 	.db $4C
 	.dl Data_c7af7b
@@ -50,7 +50,7 @@ BowboySprites:
 	.dl Data_c7b3d7
 	.db $0C
 	.dl Data_c7b4a6
-	.db $0C                
+	.db $0C
 	.dl Data_c7b571
 	.db $0C
 	.dl Data_c7b4a6
@@ -60,9 +60,9 @@ BowboySprites:
 	.dl Data_c7b642
 	.db $0C
 	.dl Data_c7b719
-	.db $0C                
+	.db $0C
 	.dl Data_c7b642
-	.db $4C                
+	.db $4C
 	.dl Data_c7b7f0
 	.db $0C
 	.dl Data_c7b8d2

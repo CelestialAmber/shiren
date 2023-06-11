@@ -1,5 +1,6 @@
 .bank $1c
 .org $0000 ;$DC0000
+.base $C0
 
 ;dc0000
 ;compressed ui tilesets

@@ -188,4 +188,4 @@ FloorDragonSprites:
 	.dl Data_ce3f04
 	.db $08
 	.dl Data_ce3f40
-	.db $08     
+	.db $08

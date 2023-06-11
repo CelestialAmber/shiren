@@ -5,7 +5,7 @@ NPC22Sprites:
 	.dl Data_d5de80
 	.db $0C
 	.dl Data_d5df96
-	.db $0C                
+	.db $0C
 	.dl Data_d5e0c8
 	.db $0C
 	.dl Data_d5e21d
@@ -19,7 +19,7 @@ NPC22Sprites:
 	.dl Data_d5e786
 	.db $0C
 	.dl Data_d5e0c8
-	.db $4C                
+	.db $4C
 	.dl Data_d5e357
 	.db $4C
 	.dl Data_d5e21d
@@ -68,7 +68,7 @@ NPC22Sprites:
 ;5198
 NPC22Sprites2:
 	.dl Data_d5dd66
-	.db $0A                        
+	.db $0A
 	.dl Data_d5de80
 	.db $0A
 	.dl Data_d5df96
@@ -78,13 +78,13 @@ NPC22Sprites2:
 	.dl Data_d5e21d
 	.db $0A
 	.dl Data_d5e357
-	.db $0A                
+	.db $0A
 	.dl Data_d5e4a4
 	.db $0A
 	.dl Data_d5e61d
 	.db $0A
 	.dl Data_d5e786
-	.db $0A                
+	.db $0A
 	.dl Data_d5e0c8
 	.db $4A
 	.dl Data_d5e357
@@ -102,13 +102,13 @@ NPC22Sprites2:
 	.dl Data_d5ea58
 	.db $0A
 	.dl Data_d5ebd3
-	.db $0A                
+	.db $0A
 	.dl Data_d5ed19
 	.db $0A
 	.dl Data_d5ee9c
 	.db $0A
 	.dl Data_d5f01b
-	.db $0A                
+	.db $0A
 	.dl Data_d5e8ed
 	.db $4A
 	.dl Data_d5ebd3

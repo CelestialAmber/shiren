@@ -2,27 +2,27 @@
 
 Shiren_WalkRight0:
 .db $00
-.incbin "gfx/characters/shiren/walk_right_0.4bpp"
+filedata "gfx/characters/shiren/walk_right_0.4bpp"
 
 Shiren_WalkRight1:
 .db $00
-.incbin "gfx/characters/shiren/walk_right_1.4bpp"
+filedata "gfx/characters/shiren/walk_right_1.4bpp"
 
 Shiren_WalkRight2:
 .db $00
-.incbin "gfx/characters/shiren/walk_right_2.4bpp"
+filedata "gfx/characters/shiren/walk_right_2.4bpp"
 
 Shiren_WalkUpRight0:
 .db $00
-.incbin "gfx/characters/shiren/walk_upright_0.4bpp"
+filedata "gfx/characters/shiren/walk_upright_0.4bpp"
 
 Shiren_WalkUpRight1:
 .db $00
-.incbin "gfx/characters/shiren/walk_upright_1.4bpp"
+filedata "gfx/characters/shiren/walk_upright_1.4bpp"
 
 Shiren_WalkUpRight2:
 .db $00
-.incbin "gfx/characters/shiren/walk_upright_2.4bpp"
+filedata "gfx/characters/shiren/walk_upright_2.4bpp"
 
 .bank $18
 .org $0000 ;$D80000

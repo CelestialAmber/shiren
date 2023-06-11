@@ -1,4 +1,4 @@
-MiniRobberSprites:         
+MiniRobberSprites:
 	.dl Data_d25197
 	.db $08
 	.dl Data_d252db
@@ -12,7 +12,7 @@ MiniRobberSprites:
 	.dl Data_d257d7
 	.db $08
 	.dl Data_d25915
-	.db $08                
+	.db $08
 	.dl Data_d25a86
 	.db $08
 	.dl Data_d25bd0
@@ -58,7 +58,7 @@ MiniRobberSprites:
 	.dl Data_d27618
 	.db $08
 	.dl Data_d27787
-	.db $08                
+	.db $08
 	.dl Data_d278e4
 	.db $08
 	.dl Data_d27a61

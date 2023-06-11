@@ -41,13 +41,13 @@ KoppaSprites:
 	.dl Data_d7ef1a
 	.db $0A
 	.dl Data_d7efa8
-	.db $0A                
+	.db $0A
 	.dl Data_d7f03e
 	.db $0A
 	.dl Data_d7f0cc
 	.db $0A
 	.dl Data_d7f168
-	.db $0A                
+	.db $0A
 	.dl Data_d7f20c
 	.db $0A
 	.dl Data_d7f2c7
@@ -61,15 +61,15 @@ KoppaSprites:
 	.dl Data_d7e41e
 	.db $4A
 	.dl Data_d7e4b9
-	.db $4A                
+	.db $4A
 	.dl Data_d7e550
-	.db $4A                
+	.db $4A
 	.dl Data_d7e5f7
 	.db $4A
 	.dl Data_d7e6a6
 	.db $4A
 	.dl Data_d7e767
-	.db $4A                
+	.db $4A
 	.dl Data_d7e818
 	.db $4A
 	.dl Data_d7e8d3
@@ -95,7 +95,7 @@ KoppaSprites:
 	.dl Data_d7ef1a
 	.db $4A
 	.dl Data_d7efa8
-	.db $4A                
+	.db $4A
 	.dl Data_d7f03e
 	.db $4A
 	.dl Data_d7f0cc

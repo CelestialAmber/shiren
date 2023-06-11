@@ -1,7 +1,7 @@
 ;4ecc
 NPC20Sprites:
 	.dl Data_d59d26
-	.db $0C                
+	.db $0C
 	.dl Data_d59e3c
 	.db $0C
 	.dl Data_d59f60
@@ -35,13 +35,13 @@ NPC20Sprites:
 	.dl Data_d5a86a
 	.db $0C
 	.dl Data_d5a9a2
-	.db $0C                
+	.db $0C
 	.dl Data_d5aac2
 	.db $0C
 	.dl Data_d5ac18
 	.db $0C
 	.dl Data_d5ad5a
-	.db $0C                
+	.db $0C
 	.dl Data_d5a72a
 	.db $4C
 	.dl Data_d5a86a
@@ -59,9 +59,9 @@ NPC20Sprites:
 	.dl Data_d5aea4
 	.db $4C
 	.dl Data_d5b1d2
-	.db $0C                
+	.db $0C
 	.dl Data_d5b2ee
-	.db $0C                
+	.db $0C
 	.dl Data_d5b1d2
 	.db $4C
 	.dl Data_d5b416
@@ -74,7 +74,7 @@ NPC20Sprites2:
 	.dl Data_d59e3c
 	.db $08
 	.dl Data_d59f60
-	.db $08                
+	.db $08
 	.dl Data_d5a07e
 	.db $08
 	.dl Data_d5a186
@@ -92,21 +92,21 @@ NPC20Sprites2:
 	.dl Data_d5a186
 	.db $48
 	.dl Data_d5a2aa
-	.db $48                
+	.db $48
 	.dl Data_d59d26
 	.db $48
 	.dl Data_d59e3c
 	.db $48
 	.dl Data_d59f60
-	.db $48                
+	.db $48
 	.dl Data_d5a72a
 	.db $08
 	.dl Data_d5a86a
 	.db $08
 	.dl Data_d5a9a2
-	.db $08                
+	.db $08
 	.dl Data_d5aac2
-	.db $08                
+	.db $08
 	.dl Data_d5ac18
 	.db $08
 	.dl Data_d5ad5a
@@ -128,9 +128,9 @@ NPC20Sprites2:
 	.dl Data_d5aea4
 	.db $48
 	.dl Data_d5b1d2
-	.db $08                
+	.db $08
 	.dl Data_d5b2ee
-	.db $08                
+	.db $08
 	.dl Data_d5b1d2
 	.db $48
 	.dl Data_d5b416
@@ -143,7 +143,7 @@ NPC20Sprites3:
 	.dl Data_d59e3c
 	.db $0A
 	.dl Data_d59f60
-	.db $0A                
+	.db $0A
 	.dl Data_d5a07e
 	.db $0A
 	.dl Data_d5a186
@@ -161,25 +161,25 @@ NPC20Sprites3:
 	.dl Data_d5a186
 	.db $4A
 	.dl Data_d5a2aa
-	.db $4A                
+	.db $4A
 	.dl Data_d59d26
 	.db $4A
 	.dl Data_d59e3c
 	.db $4A
 	.dl Data_d59f60
-	.db $4A                
+	.db $4A
 	.dl Data_d5a72a
 	.db $0A
 	.dl Data_d5a86a
 	.db $0A
 	.dl Data_d5a9a2
-	.db $0A                
+	.db $0A
 	.dl Data_d5aac2
 	.db $0A
 	.dl Data_d5ac18
 	.db $0A
 	.dl Data_d5ad5a
-	.db $0A                
+	.db $0A
 	.dl Data_d5a72a
 	.db $4A
 	.dl Data_d5a86a
@@ -197,9 +197,9 @@ NPC20Sprites3:
 	.dl Data_d5aea4
 	.db $4A
 	.dl Data_d5b1d2
-	.db $0A                
+	.db $0A
 	.dl Data_d5b2ee
-	.db $0A                
+	.db $0A
 	.dl Data_d5b1d2
 	.db $4A
 	.dl Data_d5b416

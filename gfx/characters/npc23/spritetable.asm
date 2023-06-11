@@ -1,7 +1,7 @@
 ;5298
 NPC23Sprites:
 	.dl Data_d5f883
-	.db $0C                        
+	.db $0C
 	.dl Data_d5f9c3
 	.db $0C
 	.dl Data_d5faf9
@@ -35,13 +35,13 @@ NPC23Sprites:
 	.dl Data_d60b91
 	.db $0C
 	.dl Data_d60ce6
-	.db $0C                
+	.db $0C
 	.dl Data_d60e29
 	.db $0C
 	.dl Data_d60f69
 	.db $0C
 	.dl Data_d6109f
-	.db $0C                
+	.db $0C
 	.dl Data_d611cb
 	.db $0C
 	.dl Data_d612ed
@@ -139,7 +139,7 @@ NPC23Sprites2:
 ;53a0
 NPC23Sprites3:
 	.dl Data_d5f883
-	.db $0A                        
+	.db $0A
 	.dl Data_d5f9c3
 	.db $0A
 	.dl Data_d5faf9
@@ -161,25 +161,25 @@ NPC23Sprites3:
 	.dl Data_d6045f
 	.db $0A
 	.dl Data_d6057d
-	.db $0A                
+	.db $0A
 	.dl Data_d60699
 	.db $0A
 	.dl Data_d607cd
 	.db $0A
 	.dl Data_d60904
-	.db $0A                
+	.db $0A
 	.dl Data_d60a3e
 	.db $0A
 	.dl Data_d60b91
 	.db $0A
 	.dl Data_d60ce6
-	.db $0A                
+	.db $0A
 	.dl Data_d60e29
 	.db $0A
 	.dl Data_d60f69
 	.db $0A
 	.dl Data_d6109f
-	.db $0A                
+	.db $0A
 	.dl Data_d611cb
 	.db $0A
 	.dl Data_d612ed
