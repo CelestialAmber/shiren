@@ -14,8 +14,7 @@ func_C150D7:
 	tax
 	jsr.w (DATA8_C150F5,x)
 @lbl_C150EB:
-	phk
-	plb
+	restorebank
 	tdc
 	lda.w NPCScript,y
 	bpl @lbl_C150E5
@@ -57,8 +56,7 @@ DATA8_C150F5:
 	rts
 @lbl_C15130:
 	tyx
-	phk
-	plb
+	restorebank
 	ldy.w NPCScript,x
 	rts
 	.db $BB,$C8,$C8,$5A,$FC,$40,$52,$80,$05,$B9,$40,$52,$C8,$5A,$20,$09   ;C15137
@@ -269,11 +267,12 @@ NPCScriptFunction_C15B07:
 	bne @lbl_C15B2A
 	GetEvent Event_Oryu
 	beq @lbl_C15B39
-	.db $C9,$02,$F0,$13,$C9,$04,$F0,$03   ;C15B22
+;C15B22
+	.db $C9,$02,$F0,$13,$C9,$04,$F0,$03
 @lbl_C15B2A:
 	plp
 	clc
-	rts                                  ;C15B2C
+	rts
 	.db $22,$71,$27,$C6,$A5,$00,$C9,$11   ;C15B2D  
 	.db $B0,$F3,$80,$1F                   ;C15B35  
 @lbl_C15B39:
@@ -665,7 +664,8 @@ NPCScriptFunction_C15EDC:
 	jsr.w NPCScriptFunction_C15EC7
 	cmp.b #$04
 	bcc @lbl_C15EE9
-	.db $28,$18,$60                       ;C15EE6
+;C15EE6
+	.db $28,$18,$60
 @lbl_C15EE9:
 	plp
 	sec
@@ -746,7 +746,8 @@ NPCScriptFunction_C15FE0:
 	bne @lbl_C15FFF
 	GetEvent Event05
 	beq @lbl_C1600E
-	.db $C9,$03,$F0,$03                   ;C15FFB
+;C15FFB
+	.db $C9,$03,$F0,$03
 @lbl_C15FFF:
 	plp
 	clc
@@ -1136,7 +1137,7 @@ NPCScriptFunction_C16457:
 	SetCarryIfEqual
 
 NPCScriptFunction_C1646C: 
-	php                                  ;C1646C
+	php
 	sep #$20 ;A->8
 	GetEvent Event15
 	SetCarryIfNotEqual 
@@ -1203,7 +1204,7 @@ NPCScriptFunction_C164CA:
 	plp
 	rts
 @lbl_C1650D:
-	.db $A9,$FF,$28,$60                   ;C1650D
+	.db $A9,$FF,$28,$60
 @lbl_C16511:
 	.db $20,$7C,$5B,$B0,$B7,$A9,$66,$28   ;C16511  
 	.db $60                               ;C16519
@@ -1336,7 +1337,8 @@ NPCScriptFunction_C16623:
 	lda.b wTemp00
 	cmp.b #$20
 	bcs @lbl_C16633
-	.db $28,$18,$60                       ;C16630
+;C16630
+	.db $28,$18,$60
 @lbl_C16633:
 	plp
 	sec
@@ -1371,7 +1373,8 @@ NPCScriptFunction_C1665C:
 	lda.b wTemp00
 	cmp.b #$80
 	bcc @lbl_C1666C
-	.db $28,$18,$60                       ;C16669
+;C16669
+	.db $28,$18,$60
 @lbl_C1666C:
 	plp
 	sec
@@ -1783,7 +1786,8 @@ func_C16B75:
 	pla
 	cpx.b #$03
 	bcc @lbl_C16BAD
-	.db $A2,$7A,$C9,$0C,$F0,$02           ;C16BA7
+;C16BA7
+	.db $A2,$7A,$C9,$0C,$F0,$02
 @lbl_C16BAD:
 	plp
 	rtl
@@ -1861,7 +1865,8 @@ func_C16C7D:
 	pla
 	cpx.b #$03
 	bcc @lbl_C16CB5
-	.db $A2,$7A,$C9,$0C,$F0,$02           ;C16CAF
+;C16CAF
+	.db $A2,$7A,$C9,$0C,$F0,$02
 @lbl_C16CB5:
 	plp
 	rtl

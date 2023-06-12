@@ -133,7 +133,8 @@ func_C260DB:
 	lda.b wTemp00
 	cmp.b #$02
 	bcs @lbl_C260F3
-	.db $A9,$01,$85,$00,$28,$6B           ;C260ED
+;C260ED
+	.db $A9,$01,$85,$00,$28,$6B
 @lbl_C260F3:
 	lda.l wCharDir,x
 	and.b #$FE
@@ -202,9 +203,7 @@ func_C260DB:
 func_C26208:
 	php
 	sep #$30 ;AXY->8
-	lda.b #$7E
-	pha
-	plb
+	bankswitch 0x7E
 	ldy.b wTemp00
 	lda.w wCharDir,y
 	pha
@@ -477,7 +476,8 @@ func_C262D5:
 	lda.l wCharLevel,x
 	cmp.b #$03
 	bcc @lbl_C264F5
-	.db $4C,$37,$64                       ;C264F2  
+;C264F2  
+	.db $4C,$37,$64
 @lbl_C264F5:
 	lda.b #$01
 	sta.b wTemp00
@@ -551,7 +551,8 @@ func_C262D5:
 	bcc @lbl_C266A6
 	lda.l wCharAttackedByShiren,x
 	beq @lbl_C266AE
-	.db $A9,$02,$9F,$81,$87,$7E           ;C266A0
+;C266A0
+	.db $A9,$02,$9F,$81,$87,$7E
 @lbl_C266A6:
 	stx.b wTemp00
 	jsl.l func_C2679E
@@ -563,7 +564,8 @@ func_C262D5:
 	bmi @lbl_C266A6
 	cmp.l $7E85C8
 	bne @lbl_C266C3
-	.db $A5,$01,$CF,$DC,$85,$7E,$F0,$E3   ;C266BB  
+;C266BB  
+	.db $A5,$01,$CF,$DC,$85,$7E,$F0,$E3
 @lbl_C266C3:
 	lda.b wTemp00
 	cmp.l wCharXPos,x
@@ -692,14 +694,15 @@ func_C2679E:
 	plp
 	rtl
 @lbl_C267E2:
-	.db $86,$00,$22,$3C,$6A,$C2,$28,$6B   ;C267E2  
+	.db $86,$00,$22,$3C,$6A,$C2,$28,$6B
 @lbl_C267EA:
 	jsr.w func_C26757
 	lda.b wTemp00
 	bmi @lbl_C267D5
 	cmp.l $7E85C8
 	bne @lbl_C267FF
-	.db $A5,$01,$CF,$DC,$85,$7E,$F0,$D6   ;C267F7  
+;C267F7  
+	.db $A5,$01,$CF,$DC,$85,$7E,$F0,$D6
 @lbl_C267FF:
 	lda.b wTemp00
 	cmp.l wCharXPos,x
@@ -985,7 +988,7 @@ func_C26A49:
 	bmi @lbl_C26BC7
 	bra @lbl_C26B8C
 @lbl_C26BC7:
-	.db $80,$14                           ;C26BC7  
+	.db $80,$14
 @lbl_C26BC9:
 	jsl.l Random
 	lda.b wTemp00
@@ -1053,7 +1056,8 @@ func_C26A49:
 	lda.l wCharLevel,x
 	dec a
 	beq @lbl_C26D0C
-	.db $BF,$95,$87,$7E,$D0,$0A           ;C26D06  
+;C26D06  
+	.db $BF,$95,$87,$7E,$D0,$0A
 @lbl_C26D0C:
 	stx.b wTemp00
 	jsl.l func_C26087
@@ -1255,7 +1259,8 @@ func_C26A49:
 	rep #$20 ;A->16
 	lda.b wTemp00
 	bpl @lbl_C26FF4
-	.db $4C,$61,$6F                       ;C26FF1  
+;C26FF1  
+	.db $4C,$61,$6F
 @lbl_C26FF4:
 	sta.b wTemp02
 	stx.b wTemp00
@@ -1290,7 +1295,8 @@ func_C26A49:
 	lda.l $7E8995
 	ora.l wCharAttackedByShiren,x
 	beq @lbl_C27095
-	.db $A9,$00,$9F,$35,$88,$7E,$9F,$81,$87,$7E,$A9,$01,$85,$00,$28,$6B   ;C27085
+;C27085
+	.db $A9,$00,$9F,$35,$88,$7E,$9F,$81,$87,$7E,$A9,$01,$85,$00,$28,$6B
 @lbl_C27095:
 	lda.l $7E87D0
 	cmp.l $7E898F
@@ -1532,7 +1538,8 @@ func_C27238:
 	beq @lbl_C273DE
 	cmp.b #$03
 	bne @lbl_C273D4
-	.db $64,$00,$28,$6B                   ;C273D0  
+;C273D0  
+	.db $64,$00,$28,$6B
 @lbl_C273D4:
 	lda.l $7E8978
 	and.b #$01
@@ -1568,7 +1575,8 @@ func_C27238:
 	beq @lbl_C27511
 	cmp.b #$01
 	beq @lbl_C27526
-	.db $C9,$03,$F0,$10,$64,$00,$28,$6B   ;C274F1
+;C274F1
+	.db $C9,$03,$F0,$10,$64,$00,$28,$6B
 @lbl_C274F9:
 	lda.b #$00
 	sta.l wCharSpeed,x

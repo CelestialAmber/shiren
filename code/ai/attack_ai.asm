@@ -545,7 +545,8 @@ func_C215AB:
 	lda.b wTemp01
 	bit.b #$40
 	bne @lbl_C217FF
-	.db $A9,$01,$85,$00,$28,$6B           ;C217F9
+;C217F9
+	.db $A9,$01,$85,$00,$28,$6B
 @lbl_C217FF:
 	and.b #$3F
 	tax
@@ -627,9 +628,7 @@ func_C215AB:
 	;sep #$30
 	;ldx.b wTemp00
 	;ldy.b wTemp01
-	;lda.b #$7E
-	;pha
-	;plb
+	;bankswitch $7E
 	;lda wCharDir,x
 	;eor #$04
 	;sta wCharDir,x
@@ -982,8 +981,7 @@ func_C21A99:
 	rep #$20 ;A->16
 	lda.l DATA8_C21B97,x
 	pha
-	phk
-	plb
+	restorebank
 	sep #$20 ;A->8
 	lda.b ($01,s),y
 	cmp.l $7E8996
@@ -2396,9 +2394,7 @@ DATA8_C21B97:
 	;plx
 	;cpy.b #$00
 	;bmi @lbl_C22590
-	;lda.b #$7E
-	;pha
-	;plb
+	;bankswitch 0x7E
 	;lda wCharAppearance,y
 	;cmp.b #$08
 	;beq @lbl_C22594

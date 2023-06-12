@@ -41,18 +41,68 @@ _B6 = $26
 ;27?
 _C7 = $28
 
+noteType = 0
 
+;bits 0-2: note
+;bits 3-5: octave
+;bits 6-7: note type
+;note types 1-3 (40/80/c0) always have an additional byte probably specifying delay
+;type 3 notes may have more
+
+;1: note
+;2: note type (0-3, optional for 0)
+;3: type 1: delay, types 2/3: unknown percentage value (required if note type is 1-3)
+;4: note type 2/3 delay value (required if note type is 2-3 and the percentage value is more than 100)
 .macro note
-	.db \1
+	.redef noteType 0
+
+	.ifdefm \2
+		.redef noteType \2
+	.endif
+
+	.db ((noteType << 6) | \1)
+
+	.if noteType == 1
+		.db \3 ;delay
+	.elif noteType == 2 || noteType == 3
+		.db \3 ;percentage
+		.if \3 > 100
+			.db \4 ;delay
+		.endif
+	.endif
+.endm
+
+.macro quarterrest
+	.db $0F
+.endm
+
+;Makes the next note a sharp note
+.macro sharp
+	.db $2A
+.endm
+
+.macro tempo
+	.db $2F,\1
 .endm
 
 ;1: amount of time to rest for
 .macro rest
-	.db $4F
-	.db \1
+	.db $4F,\1
 .endm
 
-.macro endtrack
+.macro tracksub_ret
+	.db $FC
+.endm
+
+.macro tracksub_call
+	.db $FD,\1
+.endm
+
+.macro track_jump
+	.db $FE,\1
+.endm
+
+.macro track_end
 	.db $FF
 .endm
 

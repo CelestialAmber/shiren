@@ -1,127 +1,121 @@
 
 ;df2f87
 Data_df2f87:
-.dw $001A
-.dw $009F
-.dw $0148
-.dw $01DD
-.dw $0272
+.dw BGM_FileSelect_1a - Data_df2f87
+.dw BGM_FileSelect_9f - Data_df2f87
+.dw BGM_FileSelect_148 - Data_df2f87
+.dw BGM_FileSelect_1dd - Data_df2f87
+.dw BGM_FileSelect_272 - Data_df2f87
 .dw $0000
 
 
 ;df2f93
 Data_df2f93:
-.dw $02FA
-.dw $0315
-.dw $0326
-.dw $0337
-.dw $0343
-.dw $0350
+.dw BGM_FeysProblem_2fa - Data_df2f87
+.dw BGM_FeysProblem_315 - Data_df2f87
+.dw BGM_FeysProblem_326 - Data_df2f87
+.dw BGM_FeysProblem_337 - Data_df2f87
+.dw BGM_FeysProblem_343 - Data_df2f87
+.dw BGM_FeysProblem_350 - Data_df2f87
 .dw $0000
 
 ;main melody
 BGM_FileSelect_1a:
 .db $32,$1E
 .db $32,$1F
-.db $33,$79,$2A,$34,$37,$31,$02,$2F,$78,$36,$64,$30,$1E,$3B
-.db $12,$8F,$B0,$18
+.db $33
+.db $79,$2A
+.db $34,$37
+.db $31,$02
+tempo 120
+.db $36,$64
+.db $30,$1E
+.db $3B,$12
 ;Start
-note (_C5 | 0xC0)
-.db $63
-note (_D5 | 0xC0)
-.db $50
+.db $8F,$B0,$18
+note _C5 3 0x63
+note _D5 3 0x50
 note _E5
 note _G5
 note _A5
 note _B5
-note (_A5 | 0xC0)
-.db $63
-rest $78
-note (_B5 | 0xC0)
-.db $B5
-note _C5
-.db $0F,$20
+note _A5 3 0x63
+rest 0x78
+note _B5 3 0xB5 0x18
+quarterrest
+note _C6
 note _A5
 note _B5
-.db $0F,$20
+quarterrest
+note _C6
 note _A5
 note _G5
 note _A5
-note (_E5 | 0xC0)
-.db $63
-rest $90
-note (_D5 | 0xC0)
-.db $B5,$18
+note _E5 3 0x63
+rest 0x90
+note _D5 3 0xB5 0x18
 note _C5
-note (_D5 | 0x40)
-.db $18
-rest $60
-note (_G5 | 0x40)
-.db $18
+note _D5 1 0x18
+rest 0x60
+note _G5 1 0x18
 note _A5
 note _G5
-note (_E5 | 0x40)
-.db $18
-rest $60
-note (_D5 | 0x40)
-note _C5
-.db $0F,$18
-note _D5
-.db $15
-.db $0F,$FC
-note _C5
-.db $0F
-.db $16
+note _E5 1 0x18
+rest 0x60
+note _D5 1 0x18
+quarterrest
 note _C5
 note _D5
-note (_E5 | 0xC0)
-.db $63
-note (_E5 | 0xC0)
-.db $50
+note _A4
+quarterrest
+tracksub_ret
+note _C5
+quarterrest
+note _B4
+note _C5
+note _D5
+note _E5 3 0x63
+note _E5 3 0x50
 note _E5
-note (_D5 | 0xC0)
-.db $63
-rest $60
-.db $FD,$B8
-.db $FF
+note _D5 3 0x63
+rest 0x60
+tracksub_call 0xB8 ;repeat one more time
+track_end
 
 note _C5
-.db $16
+note _B4
 note _C5
 note _D5
 note _E5
-note (_C5 | 0xC0)
+note _C5 3 0x50
+rest 0xA8
+rest 0x18
 
-.db $50
-.db $4F,$A8
-.db $4F,$18
-.db $D5,$50
-.db $18
+note _A4 3 0x50
+note _C5
 note _A5
 note _G5
-.db $0F
+quarterrest
 note _E5
 note _D5
 note _C5
-.db $15
+note _A4
 note _C5
-.db $FC
+tracksub_ret
 note _E5
-.db $4F,$60
-.db $FD
-.db $EC
-.db $FF
+rest 0x60
+tracksub_call 0xEC ;repeat one more time
+track_end
 
-.db $DC
-.db $63,$0F
-note (_B5 | 0xC0)
-.db $50
-note (_G5 | 0xC0)
-.db $37,$2A
-note (_C5 | 0xC0)
-.db $14
-.db $FE,$8E
-.db $FF
+note _G5 3 0x63
+quarterrest
+note _B5 3 0x50
+note _G5 3 0x37
+sharp
+note _C5 3 0x14
+track_jump 0x8E ;jump back to the start
+track_end
+
 
 ;df3026
 BGM_FileSelect_9f:

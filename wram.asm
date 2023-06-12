@@ -351,16 +351,8 @@ w0050:
     ds 1
 
 ;7e0051
-w0051:
-    ds 1
-
-;7e0052
-w0052:
-    ds 1
-
-;7e0053
-w0053:
-    ds 1
+wAudioTrackPointer:
+    dl
 
 ;7e0054
 w0054:
@@ -396,15 +388,7 @@ w005b:
 
 ;7e005c
 w005c:
-    ds 1
-
-;7e005d
-w005d:
-    ds 1
-
-;7e005e
-w005e:
-    ds 1
+    dl
 
 ;7e005f
 w005f:
@@ -977,7 +961,29 @@ w00f0:
 ;end of direct page
 
 w0100:
-	ds 0x1F00
+	ds 0xb52
+
+;c52
+wAudioTrackRemainingTicksBeforeNextCommand:
+	dsb 16
+
+;c62
+wAudioTrackRemainingTicksBeforeNoteEnd:
+	dsb 16
+
+;c72
+wAudioTrackDelayTemp:
+	dsb 16
+
+;c82
+w0c82:
+	dsb 16
+
+;c92
+w0c92:
+	dsb 16
+
+.	ds 0x2000 - 0xca2
 
 .ends
 

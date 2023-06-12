@@ -290,7 +290,8 @@ func_C104AB:
 	plx
 	cmp.b #$08
 	bne @lbl_C10754
-	.db $4C,$A9,$07                       ;C10751  
+;C10751  
+	.db $4C,$A9,$07
 @lbl_C10754:
 	lda.l wCharEventFlags,x
 	dec a
@@ -320,7 +321,8 @@ func_C104AB:
 	plx
 	cmp.b #$08
 	bne @lbl_C107CA
-	.db $4C,$1F,$08                       ;C107C7  
+;C107C7  
+	.db $4C,$1F,$08
 @lbl_C107CA:
 	lda.l wCharEventFlags,x
 	dec a
@@ -364,7 +366,8 @@ func_C108B1:
 	lda.b wTemp00
 	cmp.b #$03
 	bne @lbl_C108BE
-	.db $4C,$D0,$0E                       ;C108BB  
+;C108BB  
+	.db $4C,$D0,$0E
 @lbl_C108BE:
 	phx
 	txa
@@ -376,11 +379,13 @@ func_C108B1:
 	plx
 	lda.l wCharEventFlags,x
 	beq @lbl_C108D5
-	.db $4C,$6D,$0A                       ;C108D2  
+;C108D2  
+	.db $4C,$6D,$0A
 @lbl_C108D5:
 	GetEvent Event84
 	beq @lbl_C108E4
-	.db $4C,$63,$0A                       ;C108E1  
+;C108E1  
+	.db $4C,$63,$0A
 @lbl_C108E4:
 	lda.b wTemp03,s
 	inc a
@@ -679,7 +684,8 @@ func_C111EA:
 	rep #$10 ;XY->16
 	lda.l wCharEventFlags,x
 	beq @lbl_C111F7
-	.db $4C,$EA,$12                       ;C111F4  
+;C111F4  
+	.db $4C,$EA,$12
 @lbl_C111F7:
 	GetEvent Event85
 	cmp.b #$02
@@ -894,7 +900,8 @@ func_C11946:
 	rep #$10 ;XY->16
 	lda.l wCharEventFlags,x
 	beq @lbl_C11953
-	.db $4C,$4C,$1B                       ;C11950  
+;C11950  
+	.db $4C,$4C,$1B
 @lbl_C11953:
 	GetEvent Event86
 	cmp.b #$02
@@ -1271,7 +1278,8 @@ func_C124BB:
 	lda.l wCharEventFlags,x
 	cmp.b #$02
 	bcc @lbl_C124CA
-	.db $4C,$B4,$25                       ;C124C7  
+;C124C7  
+	.db $4C,$B4,$25
 @lbl_C124CA:
 	phx
 	GetEvent Event88
@@ -1304,7 +1312,8 @@ func_C124BB:
 @lbl_C1251A:
 	cmp.b #$03
 	bcc @lbl_C12521
-	.db $4C,$A9,$25                       ;C1251E  
+;C1251E  
+	.db $4C,$A9,$25
 @lbl_C12521:
 	jsr.w func_C12ABD
 	bcs @lbl_C12531
@@ -1350,7 +1359,7 @@ func_C124BB:
 	ldy.w #$076F
 	sty.b wTemp00
 	jsl.l DisplayMessage
-	rts                                  ;C125A8
+	rts
 
 
 	.db $FA,$A0,$70,$07,$84,$00,$22,$25,$25,$C6,$60,$C9,$03,$B0,$5E,$A9   ;C125A9
@@ -1466,7 +1475,7 @@ func_C12ABD:
 	sta.b wTemp00
 	jsl.l func_C306F4
 	sec
-	rts                                  ;C12AF2
+	rts
 
 
 	.db $E2,$20,$C2,$10,$8A,$48,$20,$FE,$2A,$68,$60,$E2,$20,$C2,$10,$A3   ;C12AF3
@@ -1791,7 +1800,8 @@ func_C13304:
 	lda.b wTemp02
 	cmp.b #$63
 	bne @lbl_C1341F
-	.db $A5,$01,$C9,$1C,$F0,$18           ;C13419  
+;C13419  
+	.db $A5,$01,$C9,$1C,$F0,$18
 @lbl_C1341F:
 	lda.b wTemp00
 	cmp.b #$03
@@ -1831,7 +1841,8 @@ func_C13304:
 	jsl.l func_C23C4D
 	lda.b wTemp00
 	bne @lbl_C13474
-	.db $68,$4C,$DB,$33                   ;C13470
+;C13470
+	.db $68,$4C,$DB,$33
 @lbl_C13474:
 	tdc
 	lda.b wTemp04,s
@@ -2066,7 +2077,7 @@ func_C13304:
 	jsl.l Random
 	tdc
 	lda.b wTemp00
-	and.b #$07
+	and.b #$07 ;8 possible messages
 	asl a
 	tax
 	rep #$20 ;A->16
@@ -2080,7 +2091,7 @@ func_C13304:
 	jsl.l Random
 	tdc
 	lda.b wTemp00
-	and.b #$03
+	and.b #$03 ;4 possible messages
 	asl a
 	tax
 	rep #$20 ;A->16
@@ -2480,7 +2491,8 @@ UNREACH_C13D7C:
 	jsr.w func_C1681A
 	GetEvent Event8E
 	beq @lbl_C14056
-	.db $4C,$FC,$41                       ;C14053  
+;C14053  
+	.db $4C,$FC,$41
 @lbl_C14056:
 	GetEvent Event8A
 	beq @lbl_C14065
@@ -2490,7 +2502,8 @@ UNREACH_C13D7C:
 	and.b #$17
 	cmp.b #$17
 	bne @lbl_C14078
-	.db $4C,$88,$41                       ;C14075  
+;C14075  
+	.db $4C,$88,$41
 @lbl_C14078:
 	GetEvent Event14
 	beq @lbl_C14091
@@ -3021,8 +3034,7 @@ func_C14D64:
 	plx
 	lda.l DATA8_C14E92,x
 	sta.b wTemp00
-	phk
-	plb
+	restorebank
 	lda.b ($00),y
 	cmp.w #$8000
 	beq @lbl_C14DC1

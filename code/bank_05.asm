@@ -32,9 +32,7 @@ func_C5CBFD:
 DisplayAreaTitle:
 	php
 	sep #$20 ;A->8
-	lda.b #$7F
-	pha
-	plb
+	bankswitch 0x7F
 	rep #$30 ;AXY->16
 	ldy.w #$01BE
 	lda.w #$FF00
@@ -200,7 +198,8 @@ DisplayAreaTitle:
 	and.w #$00FF
 	cmp.w #$001D
 	bne @lbl_C5CD74
-	.db $A9,$00,$00                       ;C5CD71
+;C5CD71
+	.db $A9,$00,$00
 @lbl_C5CD74:
 	pha
 	jsl.l func_C62B37
@@ -432,9 +431,7 @@ UNREACH_C5CEFA:
 func_C5CF82:
 	php
 	sep #$20 ;A->8
-	lda.b #$7F
-	pha
-	plb
+	bankswitch 0x7F
 	rep #$10 ;XY->16
 	ldx.w #$057E
 @lbl_C5CF8E:
@@ -504,9 +501,7 @@ func_C5CFFB:
 func_C5D009:
 	php
 	sep #$20 ;A->8
-	lda.b #$7F
-	pha
-	plb
+	bankswitch 0x7F
 	rep #$30 ;AXY->16
 	ldy.w #$01BE
 	lda.w #$00FF
@@ -561,9 +556,7 @@ func_C5D05D:
 func_C5D082:
 	php
 	sep #$20 ;A->8
-	lda.b #$7F
-	pha
-	plb
+	bankswitch 0x7F
 	rep #$30 ;AXY->16
 	stz.w $DDE6
 	stz.w $DDE8
@@ -588,22 +581,31 @@ func_C5D082:
 func_C5D0BB:
 	php
 	sep #$20 ;A->8
-	lda.b #$7F
-	pha
-	plb
+	bankswitch 0x7F
 	rep #$30 ;AXY->16
 	ldx.w $DDE4
-	jmp.w (DATA8_C5D0CA,x)
+	jmp.w (Jumptable_C5D0CA,x)
 
-DATA8_C5D0CA:
-	.db $EC,$D0                           ;C5D0CA
-	.db $33,$D1,$4A,$D1,$D2,$D3,$C9,$D4   ;C5D0CC  
-	.db $FA,$D5,$0A,$D7,$AC,$D7           ;C5D0D4
-	.db $AF,$D7                           ;C5D0DA
-	.db $AF,$D7                           ;C5D0DC  
-	.db $3B,$D8                           ;C5D0DE
-	.db $E9,$D8,$06,$DA,$1A,$DB,$2B,$DB   ;C5D0E0
-	.db $33,$D1,$4A,$D1                   ;C5D0E8  
+Jumptable_C5D0CA:
+	.dw func_C5D0EC
+	.dw $D133
+	.dw $D14A
+	.dw $D3D2
+	.dw $D4C9
+	.dw $D5FA
+	.dw $D70A
+	.dw $D7AC
+	.dw $D7AF
+	.dw $D7AF
+	.dw $D83B
+	.dw $D8E9
+	.dw $DA06
+	.dw $DB1A
+	.dw $DB2B
+	.dw $D133
+	.dw $D14A
+
+func_C5D0EC:
 	stz.b wTemp00
 	plp
 	clc
@@ -736,11 +738,16 @@ func_C5D0FC:
 	lda.w $DDE6
 	asl a
 	tax
-	jmp.w (DATA8_C5D7BD,x)
+	jmp.w (Jumptable_C5D7BD,x)
 
-DATA8_C5D7BD:
-	.db $C7,$D7,$D9,$D7,$E1,$D7,$EC,$D7   ;C5D7BD
-	.db $F4,$D7                           ;C5D7C5
+Jumptable_C5D7BD:
+	.dw func_C5D7C7
+	.dw $D7D9
+	.dw $D7E1
+	.dw $D7EC
+	.dw $D7F4
+
+func_C5D7C7:
 	jsr.w func_C5DB2E
 	lda.w #$0008
 	sta.w $DDEA
@@ -793,11 +800,16 @@ DATA8_C5D7BD:
 	lda.w $DDE6
 	asl a
 	tax
-	jmp.w (DATA8_C5D849,x)
+	jmp.w (Jumptable_C5D849,x)
 
-DATA8_C5D849:
-	.db $53,$D8,$73,$D8,$8D,$D8,$97,$D8   ;C5D849
-	.db $9E,$D8                           ;C5D851
+Jumptable_C5D849:
+	.dw func_C5D853
+	.dw $D873
+	.dw $D88D
+	.dw $D897
+	.dw $D89E
+
+func_C5D853:
 	jsr.w func_C5DB2E
 	stz.w $DDE8
 	lda.w #$0007
@@ -861,6 +873,7 @@ DATA8_C5D849:
 	lda.w #$000A
 	sta.w $DDE0
 	jmp.w func_C5D0F1
+
 	.db $AD,$E6,$DD,$0A,$AA,$7C,$F1,$D8,$FD,$D8,$14,$D9,$25,$D9,$8B,$D9   ;C5D8E9  
 	.db $A2,$D9,$FB,$D9,$20,$2E,$DB,$A9,$80,$00,$8D,$EC,$DD,$A9,$78,$00   ;C5D8F9
 	.db $8D,$EE,$DD,$A9,$10,$00,$8D,$E0,$DD,$80,$20,$AD,$EC,$DD,$38,$E9   ;C5D909  
@@ -987,7 +1000,8 @@ func_C5DB49:
 @lbl_C5DBC3:
 	cmp.w #$0080
 	bcc @lbl_C5DBCD
-	.db $A9,$00,$FF,$80,$0B               ;C5DBC8
+;C5DBC8
+	.db $A9,$00,$FF,$80,$0B
 @lbl_C5DBCD:
 	sep #$20 ;A->8
 	adc.b #$7F
@@ -1120,9 +1134,7 @@ func_C5DDB0:
 @lbl_C5E112:
 	php
 	sep #$20 ;A->8
-	lda.b #$7F
-	pha
-	plb
+	bankswitch 0x7F
 	rep #$30 ;AXY->16
 	lda.w $DDDE
 	beq @lbl_C5E135
@@ -1142,9 +1154,7 @@ func_C5DDB0:
 func_C5E137:
 	php
 	sep #$20 ;A->8
-	lda.b #$7F
-	pha
-	plb
+	bankswitch 0x7F
 	rep #$30 ;AXY->16
 	jsr.w func_C5DB2E
 	lda.b wTemp00
@@ -1176,8 +1186,7 @@ func_C5E14A:
 
 func_C5E171:
 	php
-	phk
-	plb
+	restorebank
 	rep #$30 ;AXY->16
 	lda.w #$F630
 	sta.b wTemp00
@@ -1207,8 +1216,7 @@ func_C5E18E:
 
 func_C5E1A9:
 	php
-	phk
-	plb
+	restorebank
 	sep #$30 ;AXY->8
 	tdc
 	lda.b wTemp03
@@ -1246,9 +1254,7 @@ func_C5E1A9:
 func_C5E258:
 	php
 	sep #$20 ;A->8
-	lda.b #$7F
-	pha
-	plb
+	bankswitch 0x7F
 	rep #$30 ;AXY->16
 	ldy.w #$01BE
 	lda.w #$00FF
@@ -1423,9 +1429,7 @@ UNREACH_C5E3E1:
 func_C5E3E5:
 	php
 	sep #$20 ;A->8
-	lda.b #$7F
-	pha
-	plb
+	bankswitch 0x7F
 	rep #$30 ;AXY->16
 	ldx.w #$000A
 @lbl_C5E3F1:
@@ -1434,7 +1438,8 @@ func_C5E3E5:
 	dex
 	dex
 	bpl @lbl_C5E3F1
-	.db $A9,$FF,$FF,$85,$00,$28,$6B       ;C5E3FA
+;C5E3FA
+	.db $A9,$FF,$FF,$85,$00,$28,$6B
 @lbl_C5E401:
 	phx
 	lda.w #$0001
@@ -1569,9 +1574,7 @@ func_C5E52B:
 	php
 	sep #$30 ;AXY->8
 	jsr.w func_C5E4CE
-	lda.b #$7F
-	pha
-	plb
+	bankswitch 0x7F
 	rep #$20 ;A->16
 	jsr.w func_C5E561
 	phb
@@ -1714,9 +1717,7 @@ func_C5E650:
 	php
 	sep #$30 ;AXY->8
 	jsr.w func_C5E4CE
-	lda.b #$7F
-	pha
-	plb
+	bankswitch 0x7F
 	rep #$30 ;AXY->16
 	txy
 	lda.w $DE2D,y
@@ -1872,9 +1873,7 @@ func_C5E7A8:
 func_C5E7DE:
 	php
 	sep #$20 ;A->8
-	lda.b #$7F
-	pha
-	plb
+	bankswitch 0x7F
 	rep #$30 ;AXY->16
 	ldy.b w00ed
 	lda.w $DE6A,y
@@ -1930,7 +1929,8 @@ func_C5E837:
 	plb
 	stz.b wTemp01
 	bra @lbl_C5E857
-	.db $08,$C2,$30,$64,$01,$80,$0C       ;C5E844
+;C5E844
+	.db $08,$C2,$30,$64,$01,$80,$0C
 @lbl_C5E84B:
 	ldy.b wTemp00
 	lda.b ($06)
@@ -1943,7 +1943,8 @@ func_C5E837:
 	bne @lbl_C5E86A
 	dec.b wTemp00
 	bne @lbl_C5E84B
-	.db $E6,$00,$F4,$02,$00,$80,$03       ;C5E863  
+;C5E863  
+	.db $E6,$00,$F4,$02,$00,$80,$03
 @lbl_C5E86A:
 	inc a
 	asl a
@@ -1986,9 +1987,7 @@ func_C5E8A3:
 	jsl.l func_C4B94F
 	php
 	sep #$20 ;A->8
-	lda.b #$7F
-	pha
-	plb
+	bankswitch 0x7F
 	rep #$30 ;AXY->16
 @lbl_C5E8B0:
 	ldy.w #$DF66
@@ -2024,9 +2023,7 @@ func_C5E8E3:
 	jsl.l func_C4B94F
 	php
 	sep #$20 ;A->8
-	lda.b #$7F
-	pha
-	plb
+	bankswitch 0x7F
 	rep #$30 ;AXY->16
 @lbl_C5E8F0:
 	ldy.w #$DF66
@@ -2056,7 +2053,8 @@ func_C5E8E3:
 	dec a
 	cmp.w $DECA,x
 	bcc @lbl_C5E92E
-	.db $8B,$22,$1A,$E8,$C5,$AB           ;C5E928
+;C5E928
+	.db $8B,$22,$1A,$E8,$C5,$AB
 @lbl_C5E92E:
 	phb
 	phk
@@ -2243,9 +2241,7 @@ func_C5E9FD:
 func_C5EB42:
 	php
 	sep #$20 ;A->8
-	lda.b #$7F
-	pha
-	plb
+	bankswitch 0x7F
 	rep #$30 ;AXY->16
 	ldy.b w00ed
 	ldx.w $DF2A,y
@@ -2570,9 +2566,7 @@ func_C5EDB1:
 func_C5EDDC:
 	php
 	sep #$20 ;A->8
-	lda.b #$7F
-	pha
-	plb
+	bankswitch 0x7F
 	rep #$30 ;AXY->16
 	ldy.w #$057E
 	lda.w #$20D0
@@ -2744,9 +2738,7 @@ func_C5EE9C:
 func_C5EF0E:
 	php
 	sep #$20 ;A->8
-	lda.b #$7F
-	pha
-	plb
+	bankswitch 0x7F
 	rep #$30 ;AXY->16
 	lda.w $DE2A
 	cmp.w #$FFFF
@@ -2894,9 +2886,7 @@ DATA8_C5F041:
 @lbl_C5F04A:
 	php
 	sep #$20 ;A->8
-	lda.b #$7F
-	pha
-	plb
+	bankswitch 0x7F
 	rep #$30 ;AXY->16
 	ldx.w $DDDE
 	stz.w $DDDE

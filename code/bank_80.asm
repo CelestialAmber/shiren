@@ -82,7 +82,11 @@ func_808009:
 	jsl.l func_C60000
 	plp
 	jsl.l func_81CD61
-	.db $DB,$8F,$FF,$FF,$FF,$40           ;808080
+	stp
+
+func_808081:
+	sta $FFFFFF
+	rti
 
 func_808086:
 	php
@@ -118,8 +122,7 @@ func_8080AF:
 	dec a
 	sta.l $00420B
 	sta.l $00420C
-	phk
-	plb
+	restorebank
 	lda.b #$01
 	sta.l $004200
 	lda.b #$8F
@@ -140,7 +143,7 @@ func_8080AF:
 	ldx.w #$0000
 	stx.w $0100
 	stx.w $0102
-	jsl.l func_808103
+	jsl.l InitRegisters
 	stz.b wTemp00
 	stz.b wTemp01
 	jsl.l func_8081E4
@@ -148,12 +151,11 @@ func_8080AF:
 	cli
 	rtl
 
-func_808103:
+InitRegisters:
 	php
 	sep #$20 ;A->8
 	rep #$10 ;XY->16
-	phk
-	plb
+	restorebank
 	lda.b #$01
 	sta.l $004200
 	lda.b #$8F
@@ -253,8 +255,7 @@ func_8081E4:
 
 func_8081FA: 
 	php
-	phk
-	plb
+	restorebank
 	sep #$20 ;A->8
 	rep #$10 ;XY->16
 	ldx.w #$0055
@@ -379,8 +380,7 @@ func_8081FA:
 func_808451:
 	php
 	rep #$30 ;AXY->16
-	phk
-	plb
+	restorebank
 	ldx.w #$01FC
 	lda.w #$E7FF
 @lbl_80845C:
@@ -423,8 +423,7 @@ func_808474:
 func_808496:
 	php
 	phb
-	phk
-	plb
+	restorebank
 	rep #$20 ;A->16
 	sep #$10 ;XY->8
 	ldx.b w0017
@@ -483,8 +482,7 @@ func_8084D6:
 func_8084F8:
 	php
 	phb
-	phk
-	plb
+	restorebank
 	rep #$20 ;A->16
 	sep #$10 ;XY->8
 	ldx.b w0019
@@ -499,7 +497,7 @@ func_8084F8:
 	cpy.b wTemp02
 	beq @lbl_80852D
 @lbl_C08517:
-	.db $CA,$CA,$D0,$F0,$A6,$1D,$80,$14   ;808517
+	.db $CA,$CA,$D0,$F0,$A6,$1D,$80,$14
 @lbl_C0851F:
 	.db $BD,$F9,$03,$9D,$F7,$03,$BD,$01   ;80851F  
 	.db $04,$9D,$FF,$03,$E8,$E8           ;808527  
@@ -918,8 +916,7 @@ func_8087FF:
 
 func_808811:
 	php
-	phk
-	plb
+	restorebank
 	rep #$30 ;AXY->16
 	lda.b wTemp01
 	and.w #$00FF
@@ -942,8 +939,7 @@ func_808811:
 
 func_808833:
 	php
-	phk
-	plb
+	restorebank
 	rep #$30 ;AXY->16
 	lda.b wTemp00
 	and.w #$00FF
@@ -980,8 +976,7 @@ func_808833:
 
 func_80886F:
 	php
-	phk
-	plb
+	restorebank
 	rep #$30 ;AXY->16
 	lda.b wTemp00
 	and.w #$00FF
@@ -1016,8 +1011,7 @@ func_80886F:
 func_8088A4:
 	php
 	sep #$30 ;AXY->8
-	phk
-	plb
+	restorebank
 	lda.b wTemp06
 	sta.w WRMPYA
 	tdc
@@ -1081,8 +1075,7 @@ func_8088A4:
 
 func_80891D:
 	php
-	phk
-	plb
+	restorebank
 	rep #$30 ;AXY->16
 	lda.b wTemp01
 	and.w #$00FF
@@ -1177,8 +1170,7 @@ func_808A07:
 func_808A10:
 	php
 	rep #$20 ;A->16
-	phk
-	plb
+	restorebank
 	lda.b wTemp04
 	and.w #$7C1F
 	pha
@@ -1217,12 +1209,11 @@ func_808A10:
 	ora.b w001d
 	sta.b wTemp04
 	plp
-	rtl                                  ;808A5B
+	rtl
 
 func_808A5C:
 	php
-	phk
-	plb
+	restorebank
 	rep #$30 ;AXY->16
 	lda.b wTemp00
 	and.w #$00FF
@@ -1585,7 +1576,8 @@ func_808A5C:
 @lbl_808D04:
 	bit.w #$03E0
 	beq @lbl_808D0C
-	.db $09,$1F,$00                       ;808D09
+;808D09
+	.db $09,$1F,$00
 @lbl_808D0C:
 	lsr a
 	and.w #$3C0F
@@ -1596,12 +1588,13 @@ func_808A5C:
 	adc.b w001f
 	bit.w #$FC00
 	beq @lbl_808D23
-	.db $A9,$E0,$03                       ;808D20
+;808D20
+	.db $A9,$E0,$03
 @lbl_808D23:
 	lsr a
 	and.w #$01E0
 	ora.b wTemp06
-	bra @lbl_808CEE                      ;808D29
+	bra @lbl_808CEE
 
 DATA8_808D2B:
 	.db $76,$8C,$7F,$8C                   ;808D2B
@@ -1618,12 +1611,12 @@ func_808D3D:
 	ldy.w #$082C
 	mvn $00,$00
 	plp
-	rtl                                  ;808D4D
+	rtl
 
 	.db $08,$C2,$30,$A9,$FF,$01,$A2,$2C,$08,$A0,$2C,$06,$54,$00,$00,$28   ;808D4E
 	.db $6B,$08,$C2,$30,$A2,$2C,$06,$A0,$2C,$08,$46,$00,$90,$08,$A9,$1F   ;808D5E
 	.db $00,$54,$00,$00,$80,$F4,$8A,$18,$69,$20,$00,$AA,$98,$18,$69,$20   ;808D6E
-	.db $00,$A8,$A5,$00,$D0,$E4,$28,$6B   ;808D7E|        |
+	.db $00,$A8,$A5,$00,$D0,$E4,$28,$6B   ;808D7E
 
 
 func_808D86:
@@ -1772,7 +1765,7 @@ func_808EBA:
 	lda.l $00040A
 	sta.b wTemp00
 	plp
-	rtl                                  ;808EC4
+	rtl
 
 func_808EC5:
 	php
@@ -1848,7 +1841,7 @@ func_808F6E:
 	rep #$20 ;A->16
 	jsl.l func_8085C3
 	plp
-	rtl                                  ;808F84
+	rtl
 
 func_808F85:  
 	php
@@ -1930,8 +1923,7 @@ func_80901D:
 func_809028:
 	php
 	rep #$30 ;AXY->16
-	phk
-	plb
+	restorebank
 	lda.b wTemp00
 	and.w #$007F
 	asl a
@@ -2027,7 +2019,7 @@ func_8090B0:
 	ora.w $060C,x
 	sta.w $060C,x
 	plp
-	rtl                                  ;8090E0
+	rtl
 
 DATA8_8090E1:
 	.db $03,$0C,$30,$C0
@@ -2066,8 +2058,7 @@ func_8090ED:
 func_80911A:
 	php
 	rep #$30 ;AXY->16
-	phk
-	plb
+	restorebank
 	lda.b wTemp00
 	and.w #$007F
 	asl a
@@ -2094,8 +2085,7 @@ func_80911A:
 func_80914D:
 	php
 	rep #$30 ;AXY->16
-	phk
-	plb
+	restorebank
 	lda.b wTemp00
 	and.w #$007F
 	asl a
@@ -2122,8 +2112,7 @@ func_80914D:
 func_809180:
 	php
 	sep #$30 ;AXY->8
-	phk
-	plb
+	restorebank
 	tdc
 	lda.b wTemp00
 	and.b #$1F
@@ -2146,8 +2135,7 @@ func_809180:
 func_8091A6:
 	php
 	rep #$30 ;AXY->16
-	phk
-	plb
+	restorebank
 	lda.b wTemp00
 	and.w #$001F
 	tay
@@ -2296,8 +2284,7 @@ func_C092D7:
 func_809305:
 	php
 	rep #$30 ;AXY->16
-	phk
-	plb
+	restorebank
 	lda.b wTemp00
 	and.w #$001F
 	tay
@@ -2433,8 +2420,7 @@ func_809305:
 func_80941E:
 	php
 	rep #$30 ;AXY->16
-	phk
-	plb
+	restorebank
 	lda.b wTemp00
 	and.w #$001F
 	tay
@@ -2514,8 +2500,7 @@ func_80941E:
 func_8094C3:
 	php
 	rep #$30 ;AXY->16
-	phk
-	plb
+	restorebank
 	lda.b wTemp00
 	and.w #$001F
 	tay
@@ -2538,7 +2523,8 @@ func_8094C3:
 	bpl @lbl_8094F2
 	cmp.w #$0100
 	bmi @lbl_80950F
-	.db $38,$E9,$10,$00,$9D,$0C,$04,$9D,$14,$04,$E6,$1F,$E6,$1F,$80,$17   ;8094FF
+;8094FF
+	.db $38,$E9,$10,$00,$9D,$0C,$04,$9D,$14,$04,$E6,$1F,$E6,$1F,$80,$17
 @lbl_80950F:
 	sta.w $0410,x
 	sta.w $0418,x
@@ -2547,7 +2533,8 @@ func_8094C3:
 	sta.w $040C,x
 	sta.w $0414,x
 	bpl @lbl_809526
-	.db $A9,$11,$00,$04,$1D               ;809521
+;809521
+	.db $A9,$11,$00,$04,$1D
 @lbl_809526:
 	lda.b wTemp04
 	bpl @lbl_809545
@@ -2599,8 +2586,7 @@ func_8095BE:
 	stz.b w001d
 
 func_8095C3:
-	phk
-	plb
+	restorebank
 	lda.b wTemp00
 	and.w #$001F
 	tay
@@ -2686,7 +2672,7 @@ func_809650:
 	pla
 	tsb.b w0008
 	plp
-	rtl                                  ;809663
+	rtl
 
 func_809664: 
 	php
@@ -2709,7 +2695,7 @@ func_80967A:
 	lda.w #$0400
 	tsb.b w0008
 	plp
-	rtl                                  ;809683
+	rtl
 
 func_809684:  
 	php
@@ -2745,7 +2731,7 @@ func_80969A:
 	.db $B9,$0C,$06,$8D,$04,$21,$B9,$0D   ;80972A  
 	.db $06,$8D,$04,$21,$28,$6B           ;809732  
 
-func_809738:
+NativeIRQ:
 	rep #$30 ;AXY->16
 	phb
 	phd
@@ -2775,7 +2761,7 @@ func_809738:
 	stz.w $020B
 	jmp.w func_809B10
 @lbl_C09768:
-	.db $4C,$04,$9B                       ;809768  
+	.db $4C,$04,$9B
 @lbl_80976B:
 	inc.b w000a
 	lsr.b w0023
@@ -2838,7 +2824,7 @@ func_8097DE:
 	dec a
 	beq @lbl_8097F8
 	ldx.w $01AB,y
-	jmp.w (DATA8_C09D06,x)
+	jmp.w (Jumptable_809D06,x)
 @lbl_8097F8:
 	lda.b #$19
 	bra @lbl_8097FE
@@ -2855,7 +2841,7 @@ func_8097DE:
 	ldx.w $01AB,y
 	stx.w DAS0L
 	lda.b #$01
-	sta.w MDMAEN                          ;80981B
+	sta.w MDMAEN
 func_80981E:
 	iny
 	iny
@@ -3038,7 +3024,8 @@ func_8099C0:
 	ldy.w #$0000
 	lda.w $0162
 	bmi @lbl_8099E4
-	.db $A0,$FF,$0F                       ;8099E1
+;8099E1
+	.db $A0,$FF,$0F
 @lbl_8099E4:
 	sty.w $015F
 	stz.w $0161
@@ -3123,8 +3110,7 @@ func_809A62:
 	stx.w $040A
 @lbl_809AB1:
 	jsl.l func_809B5B
-	phk
-	plb
+	restorebank
 	lda.l debugMode
 	bne @lbl_809AE9
 	.db $80,$06,$AD,$12,$42,$4A,$90,$FA,$AD,$12,$42,$4A,$B0,$FA,$AE,$1A   ;809ABD  
@@ -3159,7 +3145,8 @@ func_809B10:
 	stx.w A1T0L
 	lda.w $0214
 	beq @lbl_809B25
-	.db $A9,$19,$80,$02                   ;809B21
+;809B21
+	.db $A9,$19,$80,$02
 @lbl_809B25:
 	lda.b #$18
 	sta.w BBAD0
@@ -3339,9 +3326,12 @@ func_809B5B:
 	.db $21,$A2,$00,$02,$8E,$05,$43,$A9   ;809CF7  
 	.db $01,$8D,$0B,$42,$4C,$1E,$98       ;809CFF  
 
-DATA8_C09D06:
-	.db $6E,$9B,$E9,$9B,$2B,$9C,$6D,$9C   ;809D06
-	.db $CF,$9C                           ;809D0E  
+Jumptable_809D06:
+	.dw $9B6E
+	.dw $9BE9
+	.dw $9C2B
+	.dw $9C6D
+	.dw $9CCF
 
 func_809D10:
 	php
@@ -3351,8 +3341,7 @@ func_809D10:
 	jsr.w func_809D44
 	lda.w #$0001
 	tsb.b w002b
-	phk
-	plb
+	restorebank
 	ldx.w #$DB18
 	stx.b wTemp00
 	jsl.l func_808795
@@ -3369,9 +3358,7 @@ func_809D10:
 func_809D44:
 	php
 	sep #$20 ;A->8
-	lda.b #$7F
-	pha
-	plb
+	bankswitch 0x7F
 	rep #$30 ;AXY->16
 	stz.w wTemp02
 	stz.w w000a
@@ -3406,8 +3393,7 @@ func_809D84:
 	lda.w #$0080
 	sta.b wTemp02
 	jsl.l func_8084F8
-	phk
-	plb
+	restorebank
 	lda.w #$DB18
 	sta.b wTemp00
 	jsl.l func_8087E9
@@ -3434,8 +3420,7 @@ func_809DBC:
 	tax
 	lda.l UNREACH_80DB91,x
 	sta.b w002d
-	phk
-	plb
+	restorebank
 	cpx.w #$0018
 	bne @lbl_809E11
 	.db $7B,$8F,$4C,$04,$7F,$8F,$54,$04,$7F,$A9,$FF,$00,$8F,$4E,$04,$7F   ;809DDB
@@ -3452,9 +3437,7 @@ func_809DBC:
 	jsl.l func_8085F7
 	jsl.l func_80854A
 	sep #$20 ;A->8
-	lda.b #$7F
-	pha
-	plb
+	bankswitch 0x7F
 	rep #$20 ;A->16
 	stz.w $045E
 	stz.w $0460
@@ -3477,17 +3460,24 @@ func_809DBC:
 	lda.l UNREACH_80DBAB,x
 	sta.w $046E
 	ldx.b w002f
-	jmp.w (UNREACH_C09E71,x)
+	jmp.w (Jumptable_C09E71,x)
 
-UNREACH_C09E71:
-	.db $8B,$9E                           ;809E71
-	.db $8B,$9E                           ;809E73
-	.db $8B,$9E,$8B,$9E,$8B,$9E,$8B,$9E   ;809E75
-	.db $8B,$9E,$8B,$9E                   ;809E7D
-	.db $8B,$9E                           ;809E81
-	.db $9D,$9F                           ;809E83  
-	.db $15,$A0                           ;809E85
-	.db $9D,$9F,$4C,$A0                   ;809E87  
+Jumptable_C09E71:
+	.dw func_C09E8B
+	.dw func_C09E8B
+	.dw func_C09E8B
+	.dw func_C09E8B
+	.dw func_C09E8B
+	.dw func_C09E8B
+	.dw func_C09E8B
+	.dw func_C09E8B
+	.dw func_C09E8B
+	.dw $9F9D
+	.dw $A015
+	.dw $9F9D
+	.dw $A04C
+
+func_C09E8B:
 	jsl.l GetStairsDirection
 	stz.b wTemp01
 	lda.b wTemp00
@@ -3519,9 +3509,7 @@ UNREACH_C09E71:
 	sta.b wTemp04
 	jsl.l func_C46D4B
 	sep #$20 ;A->8
-	lda.b #$7F
-	pha
-	plb
+	bankswitch 0x7F
 	rep #$20 ;A->16
 	tdc
 	tax
@@ -3614,7 +3602,8 @@ UNREACH_C09E71:
 	stz.b wTemp01
 	dec.b wTemp00
 	bpl @lbl_80A028
-	.db $64,$00                           ;80A026  
+;80A026  
+	.db $64,$00
 @lbl_80A028:
 	lda.b wTemp00
 	clc
@@ -3649,19 +3638,20 @@ func_80A122:
 
 func_80A126:
 	sep #$20 ;A->8
-	lda.b #$7F
-	pha
-	plb
+	bankswitch 0x7F
 	rep #$20 ;A->16
 	lda.w $046E
 	and.w #$0003
 	asl a
 	tax
-	jmp.w (DATA8_C0A139,x)
+	jmp.w (Jumptable_c0a139,x)
 
-DATA8_C0A139:
-	.db $3F,$A1,$64,$A1                   ;80A139
-	.db $81,$A1                           ;80A13D  
+Jumptable_c0a139:
+	.dw func_C0A13F
+	.dw $A164
+	.dw $A181
+
+func_C0A13F:
 	ldx.w #$1ED6
 	lda.w #$0A63
 	sta.b wTemp02
@@ -3702,9 +3692,7 @@ DATA8_C0A139:
 	jsl.l func_80ABD8
 	jsl.l func_C3E097
 	sep #$30 ;AXY->8
-	lda.b #$7F
-	pha
-	plb
+	bankswitch 0x7F
 	ldy.b #$05
 @lbl_80A195:
 	ldx.b wTemp00,y
@@ -3733,11 +3721,14 @@ DATA8_C0A139:
 	and.w #$0003
 	asl a
 	tax
-	jmp.w (DATA8_C0A1C8,x)
+	jmp.w (Jumptable_c0a1c8,x)
 
-DATA8_C0A1C8:
-	.db $CE,$A1,$FD,$A1                   ;80A1C8
-	.db $66,$A2                           ;80A1CC  
+Jumptable_c0a1c8:
+	.dw func_C0A1CE
+	.dw $A1FD
+	.dw $A266
+
+func_C0A1CE:
 	ldx.w #$DB5E
 	lda.l $7F046E
 	bit.w #$0008
@@ -4186,9 +4177,7 @@ func_80A60E:
 	php
 	sep #$20 ;A->8
 	rep #$10 ;XY->16
-	lda.b #$7F
-	pha
-	plb
+	bankswitch 0x7F
 @lbl_80A617:
 	lda.b wTemp00
 	sta.b wTemp02
@@ -4254,14 +4243,20 @@ func_80A66D:
 	asl a
 	tax
 	sep #$20 ;A->8
-	jmp.w (DATA8_C0A68D,x)               ;80A684
+	jmp.w (Jumptable_c0a68d,x)
 
 DATA8_80A687:
 	.db $01,$06,$0A,$0B,$14,$30           ;80A687
 
-DATA8_C0A68D:
-	.db $99,$A6,$BD,$A6,$E7,$A6           ;80A68D
-	.db $E7,$A6,$35,$A7,$37,$A7           ;80A693  
+Jumptable_c0a68d:
+	.dw func_C0A699
+	.dw func_C0A6BD
+	.dw func_C0A6E7
+	.dw func_C0A6E7
+	.dw func_C0A735
+	.dw func_C0A737
+
+func_C0A699:
 	GetEvent Event15
 	bne @lbl_80A6AB
 	lda.b #$01
@@ -4272,6 +4267,8 @@ DATA8_C0A68D:
 	sta.l $7F06BB
 	plp
 	rts
+
+func_C0A6BD:
 	GetEvent Event15
 	cmp.b #$06
 	bcs @lbl_80A6D1
@@ -4286,6 +4283,8 @@ DATA8_C0A68D:
 @lbl_80A6E5:
 	plp
 	rts
+
+func_C0A6E7:
 	GetEvent Event09
 	beq @lbl_80A719
 	GetEvent Event_Gaibara
@@ -4299,11 +4298,17 @@ DATA8_C0A68D:
 	GetEvent Event_Gaibara
 	cmp.b #$06
 	bcc @lbl_80A733
-	.db $A9,$01,$8F,$BB,$06,$7F           ;80A72D
+;80A72D
+	.db $A9,$01,$8F,$BB,$06,$7F
 @lbl_80A733:
 	plp
 	rts
-	.db $28,$60,$A9,$17,$85,$00,$22,$12,$05,$C6,$A5,$00,$29,$01,$F0,$06   ;80A735
+
+func_C0A735:
+	.db $28,$60
+	
+func_C0A737:
+	.db $A9,$17,$85,$00,$22,$12,$05,$C6,$A5,$00,$29,$01,$F0,$06   ;80A735
 	.db $A9,$01,$8F,$B9,$06,$7F,$28,$60   ;80A745
 
 func_80A74D:
@@ -4322,14 +4327,20 @@ func_80A74D:
 	txa
 	asl a
 	tax
-	jmp.w (DATA8_C0A76B,x)
+	jmp.w (Jumptable_C0A76B,x)
 
 DATA8_80A765:
-	.db $01,$06,$0A,$0B,$14,$30           ;80A765
+	.db $01,$06,$0A,$0B,$14,$30
 
-DATA8_C0A76B:
-	.db $77,$A7,$AC,$A7,$D4,$A7,$E9,$A7   ;80A76B
-	.db $FE,$A7,$1E,$A8                   ;80A773  
+Jumptable_C0A76B:
+	.dw $A777
+	.dw $A7AC
+	.dw $A7D4
+	.dw $A7E9
+	.dw $A7FE
+	.dw $A81E
+
+func_80A777:
 	lda.w $06B9
 	beq @lbl_80A78A
 	lda.w #$0102
@@ -4345,15 +4356,18 @@ DATA8_C0A76B:
 	sta.b wTemp00
 	lda.b #$03
 	bcc @lbl_80A79A
-	.db $8D,$20,$4F                       ;80A797  
+;80A797  
+	.db $8D,$20,$4F
 @lbl_80A79A:
 	lsr.b wTemp00
 	bcc @lbl_80A7A1
-	.db $8D,$21,$4F                       ;80A79E  
+;80A79E  
+	.db $8D,$21,$4F
 @lbl_80A7A1:
 	lsr.b wTemp00
 	bcc @lbl_80A7A8
-	.db $8D,$22,$4F                       ;80A7A5  
+;80A7A5  
+	.db $8D,$22,$4F
 @lbl_80A7A8:
 	plp
 	rts
@@ -4434,30 +4448,31 @@ func_80A84E:
 	xba
 	and.w #$00FF
 	sta.b wTemp00
-	jmp.w (UNREACH_C0A874,x)
+	jmp.w (Jumptable_C0A874,x)
 
 ;jumptable
-UNREACH_C0A874:
-	.db $8E,$A8
-	.db $8E,$A8
-	.db $8E,$A8
-	.db $8E,$A8
-	.db $8E,$A8
-	.db $8E,$A8  
-	.db $8E,$A8
-	.db $8E,$A8
-	.db $8E,$A8
-	.db $C2,$A9  
-	.db $C4,$A9
-	.db $C2,$A9
-	.db $81,$AA
+Jumptable_C0A874:
+	.dw $A88E
+	.dw $A88E
+	.dw $A88E
+	.dw $A88E
+	.dw $A88E
+	.dw $A88E
+	.dw $A88E
+	.dw $A88E
+	.dw $A88E
+	.dw $A9C2
+	.dw $A9C4
+	.dw $A9C2
+	.dw $AA81
 
 	ldx.b wTemp02
 	lda.l UNREACH_C4C250,x
 	and.w #$00FF
 	cmp.w #$00FF
 	bne @lbl_80A89E
-	.db $A5,$00                           ;80A89C  
+;80A89C  
+	.db $A5,$00
 @lbl_80A89E:
 	pha
 	sta.l $7F045C
@@ -4539,9 +4554,7 @@ UNREACH_C0A874:
 	sta.b wTemp06
 	jsl.l func_80AD59
 	sep #$20 ;A->8
-	lda.b #$7F
-	pha
-	plb
+	bankswitch 0x7F
 	ldx.w #$0A7F
 @lbl_80A95F:
 	lda.b #$E5
@@ -4598,7 +4611,8 @@ UNREACH_C0A874:
 	.db $28,$6B                           ;80A9C2
 	dec.b wTemp00
 	bpl @lbl_80A9CA
-	.db $64,$00                           ;80A9C8  
+;80A9C8  
+	.db $64,$00
 @lbl_80A9CA:
 	lda.b wTemp00
 	pha
@@ -4652,9 +4666,7 @@ func_80AA28:
 	sty.b wTemp02
 	jsl.l func_80C087
 	sep #$20 ;A->8
-	lda.b #$7F
-	pha
-	plb
+	bankswitch 0x7F
 	rep #$20 ;A->16
 	ldy.w #$0000
 	tyx
@@ -4686,11 +4698,10 @@ func_80AA28:
 	stx.b wTemp00
 	jsl.l func_808619
 	plp
-	rtl                                  ;80AA80
+	rtl
 
 	.db $A9,$00,$00,$85,$00,$22,$D0,$D5,$80,$A9,$00,$00,$85,$00,$64,$02   ;80AA81
-	.db $22,$39,$83,$C4,$A9,$30,$50,$85   ;80AA91  
-	.db $00,$A9,$61,$07,$85,$02,$A9,$7F	 ;80AA99
+	.db $22,$39,$83,$C4,$A9,$30,$50,$85,$00,$A9,$61,$07,$85,$02,$A9,$7F   ;80AA91
 	.db $00,$85,$04,$22,$11,$88,$80,$20,$EA,$A5,$E2,$20,$A9,$7F,$48,$AB   ;80AAA1
 	.db $C2,$20,$A2,$3E,$00,$A9,$02,$02,$9D,$81,$6E,$9D,$01,$4E,$CA,$CA   ;80AAB1
 	.db $10,$F6,$E2,$30,$A9,$03,$8D,$0F,$4E,$8D,$22,$4E,$C2,$20,$AD,$BF   ;80AAC1  
@@ -4715,15 +4726,14 @@ func_80AA28:
 func_80ABD8:
 	php
 	sep #$20 ;A->8
-	lda.b #$7F
-	pha
-	plb
+	bankswitch 0x7F
 	rep #$30 ;AXY->16
 	lda.w $046E
 	and.w #$0003
 	cmp.w #$0002
 	bcc @lbl_80ABEE
-	.db $28,$6B                           ;80ABEC
+;80ABEC
+	.db $28,$6B
 @lbl_80ABEE:
 	lda.w #$0400
 	ldx.b w002d
@@ -4767,8 +4777,8 @@ func_80ABD8:
 	lda.w #$0A98
 	jsr.w func_80AC80
 	iny
-	iny                                  ;80AC39
-	dex                                  ;80AC3A
+	iny
+	dex
 	bne @lbl_80AC32
 	plp
 	rtl
@@ -4836,9 +4846,7 @@ func_80AC80:
 func_80ACA1:
 	php
 	sep #$20 ;A->8
-	lda.b #$7F
-	pha
-	plb
+	bankswitch 0x7F
 	lda.b wTemp06
 	sta.b w0032
 	stz.b w0031
@@ -4888,7 +4896,8 @@ func_80ACA1:
 	adc.b wTemp00
 	sta.b wTemp00
 	bcc @lbl_80ACF4
-	.db $E6,$02                           ;80ACF2  
+;80ACF2  
+	.db $E6,$02
 @lbl_80ACF4:
 	plp
 	rtl
@@ -4896,9 +4905,7 @@ func_80ACA1:
 func_80ACF6:
 	php
 	sep #$20 ;A->8
-	lda.b #$7F
-	pha
-	plb
+	bankswitch 0x7F
 	lda.b wTemp06
 	sta.b w0032
 	stz.b w0031
@@ -4948,7 +4955,8 @@ func_80ACF6:
 	adc.b wTemp00
 	sta.b wTemp00
 	bcc @lbl_80AD49
-	.db $E6,$02                           ;80AD47  
+;80AD47  
+	.db $E6,$02
 @lbl_80AD49:
 	plp
 	rtl
@@ -4965,9 +4973,7 @@ func_80AD4B:
 func_80AD59:
 	php
 	sep #$20 ;A->8
-	lda.b #$7F
-	pha
-	plb
+	bankswitch 0x7F
 	rep #$30 ;AXY->16
 	lda.w #$1ED2
 	sec
@@ -4987,9 +4993,7 @@ func_80AD59:
 func_80AD9D:
 	php
 	sep #$20 ;A->8
-	lda.b #$7F
-	pha
-	plb
+	bankswitch 0x7F
 	rep #$30 ;AXY->16
 	ldx.w #$01FE
 @lbl_80ADA9:
@@ -5011,9 +5015,7 @@ func_80AD9D:
 func_80ADC2:
 	php
 	sep #$20 ;A->8
-	lda.b #$7F
-	pha
-	plb
+	bankswitch 0x7F
 	rep #$30 ;AXY->16
 	lda.w wTemp04
 	bne @lbl_80ADFB
@@ -5148,11 +5150,13 @@ func_80ADC2:
 	cmp.b wTemp06
 	beq @lbl_80AED7
 	bcs @lbl_80AE80
-	.db $80,$18                           ;80AED5  
+;80AED5  
+	.db $80,$18
 @lbl_80AED7:
 	cmp.w #$0080
 	bcc @lbl_80AEE1
-	.db $A9,$00,$FF,$80,$0B               ;80AEDC
+;80AEDC
+	.db $A9,$00,$FF,$80,$0B
 @lbl_80AEE1:
 	sep #$20 ;A->8
 	adc.b #$7F
@@ -5463,9 +5467,7 @@ func_80B15F:
 func_80B161:
 	php
 	sep #$20 ;A->8
-	lda.b #$7F
-	pha
-	plb
+	bankswitch 0x7F
 	rep #$30 ;AXY->16
 	lda.b wTemp00
 	sta.w $041A
@@ -5476,9 +5478,7 @@ func_80B161:
 func_80B177:
 	php
 	sep #$20 ;A->8
-	lda.b #$7F
-	pha
-	plb
+	bankswitch 0x7F
 	rep #$30 ;AXY->16
 	lda.w $041A
 	sta.w $0418
@@ -5559,21 +5559,26 @@ func_80B20D:
 	php
 	sep #$20 ;A->8
 	rep #$10 ;XY->16
-	lda.b #$7F
-	pha
-	plb
+	bankswitch 0x7F
 	ldx.b w002f
-	jmp.w (UNREACH_C0B21B,x)
+	jmp.w (Jumptable_C0B21B,x)
 
-UNREACH_C0B21B:
-	.db $35,$B2                           ;80B21B  
-	.db $35,$B2                           ;80B21D
-	.db $35,$B2,$35,$B2,$35,$B2,$35,$B2   ;80B21F  
-	.db $35,$B2,$35,$B2                   ;80B227  
-	.db $35,$B2                           ;80B22B
-	.db $AD,$B3                           ;80B22D  
-	.db $8C,$B4                           ;80B22F
-	.db $AD,$B3,$77,$B4                   ;80B231  
+Jumptable_C0B21B:
+	.dw func_C0B235
+	.dw func_C0B235
+	.dw func_C0B235
+	.dw func_C0B235
+	.dw func_C0B235
+	.dw func_C0B235
+	.dw func_C0B235
+	.dw func_C0B235
+	.dw func_C0B235
+	.dw $B3AD
+	.dw $B48C
+	.dw $B3AD
+	.dw $B477
+
+func_C0B235:
 	ldy.w #$0A7F
 	lda.b #$29
 	sta.b w0032
@@ -5844,12 +5849,14 @@ func_80B4DE:
 	beq @lbl_80B540
 	cmp.b #$86
 	beq @lbl_80B54A
-	.db $80,$4D                           ;80B500  
+;80B500  
+	.db $80,$4D
 @lbl_80B502:
 	xba
 	lda.l $7E894A
 	beq @lbl_80B54F
-	.db $EB,$80,$25                       ;80B509
+;80B509
+	.db $EB,$80,$25
 @lbl_80B50C:
 	sta.b wTemp00
 	phx
@@ -5870,7 +5877,7 @@ func_80B4DE:
 	adc.b #$E6
 	bra @lbl_80B54C
 @lbl_C0B52D:
-	.db $A9,$F2,$80,$1B                   ;80B52D
+	.db $A9,$F2,$80,$1B
 @lbl_C0B531:
 	.db $EB,$A9,$00,$EB,$29,$1F,$A8,$B9   ;80B531
 	.db $8E,$06,$18,$69,$E5,$80,$0C       ;80B539  
@@ -5924,7 +5931,8 @@ func_80B569:
 	xba
 	lda.l $7E894A
 	beq @lbl_80B5C8
-	.db $EB,$80,$25                       ;80B590
+;80B590
+	.db $EB,$80,$25
 @lbl_80B593:
 	sta.b wTemp00
 	phx
@@ -5945,7 +5953,7 @@ func_80B569:
 	adc.b #$E6
 	bra @lbl_80B5C5
 @lbl_C0B5B4:
-	.db $A9,$F2,$80,$94                   ;80B5B4
+	.db $A9,$F2,$80,$94
 @lbl_80B5B8:
 	xba
 	lda.b #$00
@@ -5966,7 +5974,7 @@ func_80B569:
 	jmp.w func_80B569
 @lbl_80B5D4:
 	plp
-	rts                                  ;80B5D5
+	rts
 
 func_80B5D6:
 	php
@@ -5978,9 +5986,7 @@ func_80B5D6:
 func_80B5DD:
 	php
 	sep #$20 ;A->8
-	lda.b #$7F
-	pha
-	plb
+	bankswitch 0x7F
 	rep #$30 ;AXY->16
 	ldy.b w0045
 	bne @lbl_80B5ED
@@ -6268,7 +6274,8 @@ func_80B815:
 	beq @lbl_80B827
 	dex
 	bpl @lbl_80B81C
-	.db $28,$6B                           ;80B825
+;80B825
+	.db $28,$6B
 @lbl_80B827:
 	txa
 	clc
@@ -6282,9 +6289,7 @@ func_80B830:
 	lda.b w002d
 	beq @lbl_80B857
 	rep #$10 ;XY->16
-	lda.b #$7F
-	pha
-	plb
+	bankswitch 0x7F
 	ldx.b wTemp04
 	lda.b wTemp02
 	bit.b #$80
@@ -6305,7 +6310,7 @@ func_80B830:
 	pea.w $B8E8
 	txy
 	ldx.b w002f
-	jmp.w (UNREACH_C0B967,x)
+	jmp.w (Jumptable_C0B967,x)
 @lbl_80B869:
 	lda.w $6B41,x
 	cmp.b #$E5
@@ -6349,13 +6354,14 @@ func_80B830:
 	stx.b w0045
 	plp
 	rtl
-	.db $E2,$20                           ;80B8B8
+;80B8B8
+	.db $E2,$20
 @lbl_80B8BA:
 	lda.b #$E5
 	pea.w $B8C4
 	txy
 	ldx.b w002f
-	jmp.w (UNREACH_C0B99B,x)
+	jmp.w (Jumptable_C0B99B,x)
 	lda.b wTemp00
 	ldy.b w002d
 	bpl @lbl_C0B8E3
@@ -6365,10 +6371,10 @@ func_80B830:
 	sta.w $5581,x
 	bra @lbl_80B8E6
 @lbl_C0B8D7:
-	.db $A4,$01,$84,$31,$20,$FE,$B8,$9D   ;80B8D7  
-	.db $81,$55,$A5,$31                   ;80B8DF  
+	.db $A4,$01,$84,$31,$20,$FE,$B8,$9D
+	.db $81,$55,$A5,$31
 @lbl_C0B8E3:
-	.db $20,$FE,$B8                       ;80B8E3  
+	.db $20,$FE,$B8
 @lbl_80B8E6:
 	sta.w $4AC1,x
 	rep #$20 ;A->16
@@ -6381,7 +6387,8 @@ func_80B830:
 	stx.b w0045
 	plp
 	rtl
-	.db $E2,$20,$C2,$10                   ;80B8FA
+;80B8FA
+	.db $E2,$20,$C2,$10
 
 func_80B8FE:
 	cmp.b #$80
@@ -6400,7 +6407,8 @@ func_80B8FE:
 	xba
 	lda.l $7E894A
 	beq @lbl_80B963
-	.db $EB,$80,$23                       ;80B91D
+;80B91D
+	.db $EB,$80,$23
 @lbl_80B920:
 	sta.b wTemp00
 	phx
@@ -6421,7 +6429,7 @@ func_80B8FE:
 	adc.b #$E6
 	rts
 @lbl_C0B940:
-	.db $A9,$F2,$60                       ;80B940
+	.db $A9,$F2,$60
 @lbl_80B943:
 	xba
 	lda.b #$00
@@ -6449,25 +6457,59 @@ func_80B8FE:
 	lda.w $6B41,x
 	rts
 
-UNREACH_C0B967:
-	.db $BE,$B9,$BE,$B9,$BE,$B9,$BE,$B9,$BE,$B9,$BE,$B9,$BE,$B9,$BE,$B9   ;80B967  
-	.db $BE,$B9,$B5,$B9                   ;80B977  
-	.db $B5,$B9                           ;80B97B
-	.db $B5,$B9,$B5,$B9,$52,$BB,$52,$BB,$52,$BB,$52,$BB,$52,$BB,$52,$BB   ;80B97D  
-	.db $52,$BB,$52,$BB,$52,$BB,$B5,$B9   ;80B98D  
-	.db $B5,$B9,$B5,$B9,$B5,$B9           ;80B995  
+Jumptable_C0B967:
+	.dw func_C0B9BE
+	.dw func_C0B9BE
+	.dw func_C0B9BE
+	.dw func_C0B9BE
+	.dw func_C0B9BE
+	.dw func_C0B9BE
+	.dw func_C0B9BE
+	.dw func_C0B9BE
+	.dw func_C0B9BE
+	.dw func_C0B9B5
+	.dw func_C0B9B5
+	.dw func_C0B9B5
+	.dw func_C0B9B5
+	.dw $BB52
+	.dw $BB52
+	.dw $BB52
+	.dw $BB52
+	.dw $BB52
+	.dw $BB52
+	.dw $BB52
+	.dw $BB52
+	.dw $BB52
+	.dw func_C0B9B5
+	.dw func_C0B9B5
+	.dw func_C0B9B5
+	.dw func_C0B9B5
 
-UNREACH_C0B99B:
-	.db $BE,$B9                           ;80B99B  
-	.db $BE,$B9                           ;80B99D
-	.db $BE,$B9,$BE,$B9,$BE,$B9,$BE,$B9,$BE,$B9,$BE,$B9,$BE,$B9,$B5,$B9   ;80B99F  
-	.db $B5,$B9                           ;80B9AF
-	.db $B5,$B9,$B5,$B9                   ;80B9B1  
+Jumptable_C0B99B:
+	.dw func_C0B9BE
+	.dw func_C0B9BE
+	.dw func_C0B9BE
+	.dw func_C0B9BE
+	.dw func_C0B9BE
+	.dw func_C0B9BE
+	.dw func_C0B9BE
+	.dw func_C0B9BE
+	.dw func_C0B9BE
+	.dw func_C0B9B5
+	.dw func_C0B9B5
+	.dw func_C0B9B5
+	.dw func_C0B9B5
+
+func_C0B9B5:
 	rep #$20 ;A->16
 	pla
 	plp
 	rtl
-	.db $E2,$20,$C2,$10                   ;80B9BA
+
+;80B9BA
+	.db $E2,$20,$C2,$10
+
+func_C0B9BE:
 	tyx
 	sta.w $6B41,x
 	sta.w $4AC1,x
@@ -6543,7 +6585,8 @@ UNREACH_C0B99B:
 @lbl_80BA9B:
 	lda.w $6BC1,x
 	beq @lbl_80BAA4
-	.db $C8,$C8,$C8,$C8                   ;80BAA0
+;80BAA0
+	.db $C8,$C8,$C8,$C8
 @lbl_80BAA4:
 	lda.w $6B82,x
 	beq @lbl_80BAAB
@@ -6565,7 +6608,8 @@ UNREACH_C0B99B:
 	ldy.w #$0004
 	lda.w $6B3F,x
 	beq @lbl_80BAE7
-	.db $A0,$0C,$00                       ;80BAE4
+;80BAE4
+	.db $A0,$0C,$00
 @lbl_80BAE7:
 	lda.w $6B80,x
 	beq @lbl_80BAF0
@@ -6586,7 +6630,8 @@ UNREACH_C0B99B:
 	bne @lbl_80BB11
 	lda.w $6B00,x
 	beq @lbl_80BB09
-	.db $A9,$DF                           ;80BB07
+;80BB07
+	.db $A9,$DF
 @lbl_80BB09:
 	inc a
 	inc a
@@ -6597,7 +6642,8 @@ UNREACH_C0B99B:
 	bne @lbl_80BB25
 	lda.w $6B02,x
 	beq @lbl_80BB1D
-	.db $A9,$DF                           ;80BB1B
+;80BB1B
+	.db $A9,$DF
 @lbl_80BB1D:
 	inc a
 	inc a
@@ -6608,7 +6654,8 @@ UNREACH_C0B99B:
 	bne @lbl_80BB39
 	lda.w $6B80,x
 	beq @lbl_80BB31
-	.db $A9,$DF                           ;80BB2F
+;80BB2F
+	.db $A9,$DF
 @lbl_80BB31:
 	inc a
 	inc a
@@ -6619,7 +6666,8 @@ UNREACH_C0B99B:
 	bne @lbl_80BB4D
 	lda.w $6B82,x
 	beq @lbl_80BB45
-	.db $A9,$DF                           ;80BB43
+;80BB43
+	.db $A9,$DF
 @lbl_80BB45:
 	inc a
 	inc a
@@ -6721,9 +6769,7 @@ func_80BE23:
 func_80BE5F:
 	php
 	sep #$30 ;AXY->8
-	lda.b #$7F
-	pha
-	plb                                  ;80BE65
+	bankswitch 0x7F
 	ldx.w $046A
 	beq func_80BE72
 	.db $AD,$68,$04,$D0,$0A               ;80BE6B  
@@ -6733,7 +6779,8 @@ UNREACH_00BE70:
 func_80BE72:
 	lda.w $0468
 	beq @lbl_80BE7A
-	.db $8D,$6A,$04                       ;80BE77  
+;80BE77  
+	.db $8D,$6A,$04
 @lbl_80BE7A:
 	jsl.l GetStairsDirection
 	tdc
@@ -6762,7 +6809,8 @@ func_80BE72:
 	beq @lbl_80BED6
 	lda.b wTemp00
 	bne @lbl_80BEDE
-	.db $80,$04                           ;80BED4  
+;80BED4  
+	.db $80,$04
 @lbl_80BED6:
 	lda.b wTemp00
 	beq @lbl_80BEDE
@@ -6775,7 +6823,8 @@ func_80BE72:
 	beq @lbl_80BEED
 	lda.b wTemp01
 	bne @lbl_80BEF5
-	.db $80,$04                           ;80BEEB  
+;80BEEB  
+	.db $80,$04
 @lbl_80BEED:
 	lda.b wTemp01
 	beq @lbl_80BEF5
@@ -6786,7 +6835,8 @@ func_80BE72:
 	beq @lbl_80BF00
 	lda.b wTemp02
 	bne @lbl_80BF08
-	.db $80,$04                           ;80BEFE  
+;80BEFE  
+	.db $80,$04
 @lbl_80BF00:
 	lda.b wTemp02
 	beq @lbl_80BF08
@@ -6901,9 +6951,7 @@ func_80C00A:
 	rep #$10 ;XY->16
 	lda.b w002d
 	bpl @lbl_80C038
-	lda.b #$7F
-	pha
-	plb
+	bankswitch 0x7F
 	lda.b #$20
 	sta.b wTemp00
 	lda.w $045E
@@ -6961,9 +7009,7 @@ func_80C03A:
 func_80C087:
 	php
 	sep #$20 ;A->8
-	lda.b #$7F
-	pha
-	plb
+	bankswitch 0x7F
 	rep #$30 ;AXY->16
 	stz.w $043E
 	lda.w #$0004
@@ -7066,13 +7112,13 @@ func_80C0E1:
 	lda.b ($31),y
 	and.w #$00FF
 	beq @lbl_80C156
-	asl a                                ;80C151
+	asl a
 	tay
 	jsr.w func_80C288
 @lbl_80C156:
 	lda.b w0033
 	clc
-	adc.w #$00C0                         ;80C159
+	adc.w #$00C0
 	tax
 	lda.b w0031
 	clc
@@ -7512,9 +7558,7 @@ func_80C562:
 func_80C593:
 	php
 	sep #$20 ;A->8
-	lda.b #$7F
-	pha
-	plb
+	bankswitch 0x7F
 	rep #$30 ;AXY->16
 	stz.b w003d
 	lda.b wTemp02
@@ -7681,10 +7725,15 @@ func_80C6C2:
 	asl a
 	pha
 	ldx.w $043E
-	jmp.w (DATA8_C0C6F5,x)
+	jmp.w (Jumptable_C0C6F5,x)
 
-DATA8_C0C6F5:
-	.db $FD,$C6,$74,$C7,$07,$C8,$0D,$C9   ;80C6F5
+Jumptable_C0C6F5:
+	.dw $C6FD
+	.dw $C774
+	.dw $C807
+	.dw $C90D
+
+func_C0C6FD:
 	tax
 	lda.w #$0008
 	sta.b w0031
@@ -8194,7 +8243,7 @@ func_80CB12:
 	asl a
 	pha
 	ldx.w $043E
-	jmp.w (DATA8_C0C6F5,x)
+	jmp.w (Jumptable_C0C6F5,x)
 	lda.w #$7CC1
 	sta.b wTemp02
 	lda.w $0442
@@ -8211,8 +8260,7 @@ func_80CB12:
 	ldx.w #$DB82
 	stx.b wTemp00
 	phb
-	phk
-	plb
+	restorebank
 	jsl.l func_808674
 	lda.w #$7D01
 	sta.b wTemp02
@@ -8281,17 +8329,22 @@ func_80CBC3:
 	and.w #$003E
 	pha
 	ldx.w $043C
-	jmp.w (DATA8_C0CC0A,x)
+	jmp.w (Jumptable_C0CC0A,x)
 @lbl_80CBFA:
 	lda.w $0442
 	and.w #$003E
 	ora.w #$0040
 	pha
 	ldx.w $043C
-	jmp.w (DATA8_C0CC0A,x)
+	jmp.w (Jumptable_C0CC0A,x)
 
-DATA8_C0CC0A:
-	.db $12,$CC,$87,$CC,$43,$CD,$B6,$CD   ;80CC0A
+Jumptable_C0CC0A:
+	.dw func_C0CC12
+	.dw $CC87
+	.dw $CD43
+	.dw $CDB6
+
+func_C0CC12:
 	tax
 	lda.w #$0008
 	sta.b w0031
@@ -8710,14 +8763,14 @@ func_80CF65:
 	and.w #$003E
 	pha
 	ldx.w $043C
-	jmp.w (DATA8_C0CC0A,x)
+	jmp.w (Jumptable_C0CC0A,x)
 @lbl_80CFA0:
 	lda.w $0442
 	and.w #$003E
 	ora.w #$0040
 	pha
 	ldx.w $043C
-	jmp.w (DATA8_C0CC0A,x)
+	jmp.w (Jumptable_C0CC0A,x)
 	lda.w #$7D41
 	sta.b wTemp02
 	lda.w $0442
@@ -8727,8 +8780,7 @@ func_80CF65:
 	ldx.w #$DB87
 	stx.b wTemp00
 	phb
-	phk
-	plb
+	restorebank
 	jsl.l func_808674
 	lda.w #$7D81
 	sta.b wTemp02
@@ -8753,7 +8805,7 @@ func_80CF65:
 	jsl.l func_808674
 	jsl.l func_8085EE
 	plb
-	rts                                  ;80D002
+	rts
 
 DATA8_80D003: 
 	.db $00,$00,$0E,$02,$1C,$04,$2A,$06   ;80D003
@@ -8806,9 +8858,7 @@ func_80D19F:
 	jsl.l func_808A07
 	lda.b wTemp00
 	bne @lbl_80D1BF
-	lda.b #$7F
-	pha
-	plb
+	bankswitch 0x7F
 	rep #$30 ;AXY->16
 	lda.w $047C
 	sec
@@ -8823,59 +8873,153 @@ func_80D19F:
 	lda.w $047A
 	asl a
 	tax
-	jmp.w (UNREACH_C0D1C9,x)
+	jmp.w (Jumptable_C0D1C9,x)
 
-UNREACH_C0D1C9:
-	.db $03,$D5,$03,$D5,$03,$D5,$03,$D5   ;80D1C9  
-	.db $03,$D5                           ;80D1D1  
-	.db $03,$D5                           ;80D1D3
-	.db $03,$D5,$03,$D5,$03,$D5           ;80D1D5  
-	.db $03,$D5                           ;80D1DB
-	.db $03,$D5,$03,$D5,$03,$D5           ;80D1DD  
-	.db $03,$D5                           ;80D1E3
-	.db $03,$D5,$03,$D5,$03,$D5,$03,$D5   ;80D1E5  
-	.db $D6,$D4,$03,$D5,$03,$D5           ;80D1ED  
-	.db $03,$D5,$03,$D5                   ;80D1F3
-	.db $03,$D5                           ;80D1F7  
-	.db $80,$D3                           ;80D1F9
-	.db $80,$D3                           ;80D1FB  
-	.db $03,$D5                           ;80D1FD
-	.db $03,$D5,$03,$D5,$03,$D5           ;80D1FF  
-	.db $E3,$D2,$03,$D5                   ;80D205
-	.db $03,$D5,$03,$D5,$03,$D5           ;80D209  
-	.db $0E,$D3                           ;80D20F
-	.db $03,$D5,$03,$D5,$03,$D5,$9B,$D3,$03,$D5,$03,$D5,$03,$D5,$03,$D5   ;80D211  
-	.db $03,$D5,$03,$D5,$80,$D3,$80,$D3,$80,$D3,$80,$D3,$80,$D3,$03,$D5   ;80D221  
-	.db $03,$D5,$03,$D5                   ;80D231  
-	.db $03,$D5                           ;80D235
-	.db $03,$D5,$03,$D5,$03,$D5,$03,$D5,$03,$D5,$03,$D5,$03,$D5,$03,$D5   ;80D237  
-	.db $03,$D5,$03,$D5,$03,$D5           ;80D247  
-	.db $03,$D5,$03,$D5                   ;80D24D
-	.db $D4,$D3                           ;80D251  
-	.db $03,$D5,$72,$D4                   ;80D253
-	.db $03,$D5,$03,$D5,$03,$D5,$03,$D5,$03,$D5,$03,$D5,$03,$D5,$03,$D5   ;80D257  
-	.db $03,$D5,$03,$D5,$03,$D5,$03,$D5,$03,$D5,$03,$D5,$03,$D5,$03,$D5   ;80D267  
-	.db $03,$D5,$03,$D5,$80,$D3,$80,$D3   ;80D277  
-	.db $80,$D3,$80,$D3,$80,$D3           ;80D27F  
-	.db $80,$D3                           ;80D285
-	.db $80,$D3,$80,$D3,$80,$D3,$80,$D3,$80,$D3,$80,$D3,$80,$D3,$03,$D5   ;80D287  
-	.db $03,$D5                           ;80D297  
-	.db $03,$D5                           ;80D299
-	.db $03,$D5,$03,$D5,$03,$D5,$03,$D5   ;80D29B  
-	.db $03,$D5,$03,$D5                   ;80D2A3  
-	.db $03,$D5                           ;80D2A7
-	.db $03,$D5,$03,$D5,$03,$D5,$03,$D5,$03,$D5,$03,$D5,$03,$D5,$03,$D5   ;80D2A9  
-	.db $03,$D5,$03,$D5,$03,$D5,$03,$D5   ;80D2B9  
-	.db $03,$D5,$72,$D4                   ;80D2C1  
-	.db $03,$D5                           ;80D2C5
-	.db $03,$D5                           ;80D2C7  
-	.db $03,$D5,$03,$D5,$03,$D5           ;80D2C9
-	.db $39,$D3                           ;80D2CF  
-	.db $39,$D3                           ;80D2D1
-	.db $03,$D5                           ;80D2D3  
-	.db $9D,$D4                           ;80D2D5
-	.db $03,$D5,$03,$D5,$03,$D5,$03,$D5   ;80D2D7  
-	.db $03,$D5,$03,$D5                   ;80D2DF  
+Jumptable_C0D1C9:
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw $D4D6
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw $D380
+	.dw $D380
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D2E3
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw $D30E
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw $D39B
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw $D380
+	.dw $D380
+	.dw $D380
+	.dw $D380
+	.dw $D380
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw $D3D4
+	.dw func_80D503
+	.dw $D472
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw $D380
+	.dw $D380
+	.dw $D380
+	.dw $D380
+	.dw $D380
+	.dw $D380
+	.dw $D380
+	.dw $D380
+	.dw $D380
+	.dw $D380
+	.dw $D380
+	.dw $D380
+	.dw $D380
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw $D472
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw $D339
+	.dw $D339
+	.dw func_80D503
+	.dw $D49D
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+	.dw func_80D503
+
+
+func_80D2E3:
 	lda.w #$0005
 	sta.w $047C
 	dec.w $0480
@@ -9006,6 +9150,8 @@ UNREACH_C0D1C9:
 	.db $57,$03,$85,$00,$22,$D1,$89,$80,$A9,$6C,$03,$85,$00,$22,$D1,$89   ;80D4E6  
 	.db $80,$A9,$7C,$03,$85,$00,$22,$D1   ;80D4F6  
 	.db $89,$80,$4C,$09,$D5               ;80D4FE
+
+func_80D503:
 	lda.w #$0100
 	sta.w $047C
 
@@ -9092,9 +9238,7 @@ func_80D580:
 func_80D5AF:
 	php
 	sep #$20 ;A->8
-	lda.b #$7F
-	pha
-	plb
+	bankswitch 0x7F
 	rep #$30 ;AXY->16
 	lda.b wTemp00
 	asl a
@@ -9376,8 +9520,7 @@ func_80D6F7:
 	asl a
 	sta.b wTemp06
 	phb
-	phk
-	plb
+	restorebank
 	jsl.l func_808741
 	plb
 	lda.b w0045
@@ -9522,7 +9665,8 @@ func_80D8A2:
 	dey
 	dey
 	bne @lbl_80D8E2
-	.db $7A,$FA,$7B                       ;80D8EB
+;80D8EB
+	.db $7A,$FA,$7B
 @lbl_80D8EE:
 	lsr.b w0043
 	lsr.b w0043
@@ -9679,12 +9823,16 @@ func_80D9F5:
 	bcs func_80DA1F
 	phx
 	tax
-	jmp.w (UNREACH_C0DA02,x)
+	jmp.w (Jumptable_C0DA02,x)
 
-UNREACH_C0DA02:
-	.db $08,$DA                           ;80DA02
-	.db $21,$DA,$53,$DA                   ;80DA04
-	.db $FA,$A9,$3F,$05,$85,$3F,$18,$B7,$3A,$69,$01,$01,$9D,$C1,$4A,$C8   ;80DA08
+Jumptable_C0DA02:
+	.dw func_C0DA08
+	.dw $DA21
+	.dw $DA53
+
+func_C0DA08:
+	.db $FA,$A9,$3F,$05,$85,$3F,$18,$B7
+	.db $3A,$69,$01,$01,$9D,$C1,$4A,$C8   ;80DA08
 	.db $C8,$E8,$E8,$C6,$3F,$10,$F0       ;80DA18
 func_80DA1F:
 	plp
@@ -9779,8 +9927,7 @@ func_80DA93:
 	adc.w #$0800
 	sta.b w0043
 	phb
-	phk
-	plb
+	restorebank
 	jsl.l func_8086FD
 	plb
 	rts
@@ -9871,8 +10018,7 @@ func_80DBD1:
 	php
 	sep #$20 ;A->8
 	rep #$10 ;XY->16
-	phk
-	plb
+	restorebank
 	ldx.w #$001B
 @lbl_80DBDB:
 	stz.w $0BCA,x
@@ -9905,8 +10051,7 @@ func_80DC0C:
 	php
 	rep #$20 ;A->16
 	sep #$10 ;XY->8
-	phk
-	plb
+	restorebank
 	ldx.b wTemp00
 	lda.w $0BCA,x
 	beq @lbl_80DC62
@@ -9967,8 +10112,7 @@ func_80DC69:
 	phx
 	jsl.l func_80DC0C
 	plx
-	phk
-	plb
+	restorebank
 	lda.w $0BDE,x
 	and.w $0BDA,x
 	eor.w #$FFFF
@@ -9988,8 +10132,7 @@ func_80DC8F:
 	phx
 	jsl.l func_80DC0C
 	plx
-	phk
-	plb
+	restorebank
 	lda.w $0BDE,x
 	sta.b wTemp00
 	eor.w $0BDA,x
@@ -10017,8 +10160,7 @@ func_80DCC6:
 	phx
 	jsl.l func_80DC0C
 	plx
-	phk
-	plb
+	restorebank
 	lda.w $0BE2,x
 	eor.w #$FFFF
 	and.w $0BDA,x
@@ -10160,8 +10302,7 @@ func_80DDC5:
 	php
 	sep #$20 ;A->8
 	rep #$10 ;XY->16
-	phk
-	plb
+	restorebank
 	ldx.w #$0001
 	stx.w $0BCA
 	lda.w $0BD6
@@ -10183,7 +10324,8 @@ func_80DDC5:
 	lda.w JOYSER0
 	lsr a
 	bcs @lbl_80DE3B
-	.db $9C,$CE,$0B,$9C,$CF,$0B           ;80DE35  
+;80DE35  
+	.db $9C,$CE,$0B,$9C,$CF,$0B
 @lbl_80DE3B:
 	lda.w JOYSER1
 	lsr a
@@ -10199,7 +10341,7 @@ func_80DDC5:
 	and.w $0BD0
 	sta.w $0BD4
 	plp
-	rtl                                  ;80DE5C
+	rtl
 
 DATA8_80DE5D:
 	.db $40,$00,$00,$40,$20,$00,$10,$00,$08,$00,$04,$00,$02,$00,$01,$00   ;80DE5D
@@ -10246,8 +10388,7 @@ func_80DECB:
 	lda.w #$0080
 	sta.b wTemp02
 	jsl.l func_808496
-	phk
-	plb
+	restorebank
 	ldx.w #$FB67
 	stx.b wTemp00
 	jsl.l func_8087E9
@@ -10268,9 +10409,7 @@ func_80DECB:
 func_80DF10:
 	php
 	sep #$20 ;A->8
-	lda.b #$7F
-	pha
-	plb
+	bankswitch 0x7F
 	rep #$30 ;AXY->16
 	jsl.l func_80E81B
 	jsl.l func_80854A
@@ -10294,7 +10433,7 @@ func_80DF35:
 	jsl.l func_80E5F5
 	jsl.l func_80F45E
 	plp
-	rtl                                  ;80DF4F
+	rtl
 
 func_80DF50:  
 	php
@@ -10307,7 +10446,7 @@ func_80DF50:
 	jsl.l func_808F85
 	jsl.l func_80854A
 	plp
-	rtl                                  ;80DF6A
+	rtl
 
 func_80DF6B:
 	php
@@ -10324,19 +10463,17 @@ func_80DF6B:
 	beq @lbl_C0DF88
 	bra @lbl_80DF8B
 @lbl_C0DF88:
-	.db $1A                               ;80DF88
+	.db $1A
 @lbl_C0DF89:
 	.db $1A                               ;80DF89
 @lbl_C0DF8A:
-	.db $1A                               ;80DF8A
+	.db $1A
 @lbl_80DF8B:
 	sta.l $7F8E50
 	lda.w #$0000
 	sta.l $7F8E70
 	sep #$20 ;A->8
-	lda.b #$7F
-	pha
-	plb
+	bankswitch 0x7F
 	lda.b #$00
 	ldx.w #$043F
 @lbl_80DFA1:
@@ -10380,9 +10517,7 @@ func_80DF6B:
 func_80DFF8:
 	php
 	sep #$20 ;A->8
-	lda.b #$7F
-	pha
-	plb
+	bankswitch 0x7F
 	rep #$30 ;AXY->16
 	lda.w #$0002
 	sta.w $8E54
@@ -10570,8 +10705,7 @@ func_80DFF8:
 	sta.l $7F91E0
 	sta.l $7F91E2
 	sta.l $7F91E4
-	phk
-	plb
+	restorebank
 	ldx.w #$FB67
 	stx.b wTemp00
 	jsl.l func_808795
@@ -10644,9 +10778,7 @@ func_80E247:
 func_80E287:
 	php
 	sep #$20 ;A->8
-	lda.b #$7F
-	pha
-	plb
+	bankswitch 0x7F
 	rep #$30 ;AXY->16
 	lda.w #$0008
 	sta.b wTemp00
@@ -10882,9 +11014,7 @@ func_80E46B:
 	php
 	phb
 	sep #$20 ;A->8
-	lda.b #$7F
-	pha
-	plb
+	bankswitch 0x7F
 	rep #$30 ;AXY->16
 	phx
 	phy
@@ -10935,9 +11065,7 @@ func_80E4C9:
 	php
 	phb
 	sep #$20 ;A->8
-	lda.b #$7F
-	pha
-	plb
+	bankswitch 0x7F
 	rep #$30 ;AXY->16
 	phx
 	phy
@@ -10997,19 +11125,23 @@ func_80E543:
 	rep #$30 ;AXY->16
 	lda.l $7F8E52
 	tax
-	jmp.w (DATA8_C0E54E,x)
+	jmp.w (Jumptable_C0E54E,x)
 
-DATA8_C0E54E:
-	.db $5C,$E5                           ;80E54E
-	.db $6E,$E5                           ;80E550  
-	.db $85,$E5,$9C,$E5                   ;80E552
-	.db $B7,$E5                           ;80E556  
-	.db $BE,$E5                           ;80E558
-	.db $CC,$E5                           ;80E55A  
+Jumptable_C0E54E:
+	.dw func_C0E55C
+	.dw $E56E
+	.dw $E585
+	.dw $E59C
+	.dw $E5B7
+	.dw $E5BE
+	.dw $E5CC
+
+func_C0E55C:
 	lda.w #$4000
 	and.b w0047
 	bne @lbl_80E567
-	.db $22,$6B,$E4,$80                   ;80E563  
+;80E563  
+	.db $22,$6B,$E4,$80
 @lbl_80E567:
 	lda.w #$C002
 	tsb.b w0047
@@ -11091,15 +11223,24 @@ func_80E5F5:
 	rtl
 @lbl_80E61B:
 	plx
-	jmp.w (UNREACH_C0E61F,x)
+	jmp.w (Jumptable_C0E61F,x)
 
-UNREACH_C0E61F:
-	.db $2D,$E6                           ;80E61F  
-	.db $34,$E6,$40,$E6,$53,$E6           ;80E621
-	.db $6A,$E6                           ;80E627
-	.db $71,$E6                           ;80E629
-	.db $7F,$E6,$A9,$02,$C0,$04,$47,$80   ;80E62B  
-	.db $4B                               ;80E633
+Jumptable_C0E61F:
+	.dw func_C0E62D
+	.dw func_C0E634
+	.dw $E640
+	.dw $E653
+	.dw $E66A
+	.dw $E671
+	.dw $E67F
+
+func_C0E62D:
+	.db $A9,$02
+	.db $C0,$04
+	.db $47,$80
+	.db $4B
+
+func_C0E634:
 	lda.w #$8000
 	tsb.b w0047
 	lda.w #$4002
@@ -11133,7 +11274,8 @@ UNREACH_C0E61F:
 	sta.b w0047
 	lsr a
 	bcs @lbl_80E640
-	.db $80,$D4                           ;80E67D  
+;80E67D  
+	.db $80,$D4
 @lbl_80E67F:
 	plp
 	rtl
@@ -11444,9 +11586,7 @@ func_80E8ED:
 	lda.b #$13
 	sta.b wTemp00
 	jsl.l func_C21128
-	lda.b #$7F
-	pha
-	plb
+	bankswitch 0x7F
 	lda.b #$01
 	sta.w $8E42
 	sta.w $8E44
@@ -11577,7 +11717,7 @@ func_80E8ED:
 	cmp.b #$A0
 	bcc @lbl_80EA1B
 @lbl_C0EA19:
-	.db $A9,$9F                           ;80EA19
+	.db $A9,$9F
 @lbl_80EA1B:
 	jsr.w func_80EA84
 @lbl_80EA1E:
@@ -11591,14 +11731,15 @@ func_80E8ED:
 	cmp.b #$A0
 	bcc @lbl_80EA35
 @lbl_C0EA33:
-	.db $A9,$9F                           ;80EA33
+	.db $A9,$9F
 @lbl_80EA35:
 	jsr.w func_80EAE6
 	lda.w $8E49
 	inc a
 	cmp.b #$A0
 	bcc @lbl_80EA42
-	.db $A9,$9F                           ;80EA40
+;80EA40
+	.db $A9,$9F
 @lbl_80EA42:
 	inc a
 	jsr.w func_80EB3F
@@ -11815,8 +11956,7 @@ func_80EB3F:
 
 func_80EB95:
 	php
-	phk
-	plb
+	restorebank
 	rep #$30 ;AXY->16
 	lda.b wTemp00
 	and.w #$00FF
@@ -11855,8 +11995,7 @@ func_80EB95:
 
 func_80EBD2:
 	php
-	phk
-	plb
+	restorebank
 	rep #$30 ;AXY->16
 	lda.b wTemp00
 	and.w #$00FF
@@ -11899,9 +12038,7 @@ func_80EBFE:
 func_80EC2C:
 	php
 	sep #$20 ;A->8
-	lda.b #$7F
-	pha
-	plb
+	bankswitch 0x7F
 	lda.w $91F4
 	beq @lbl_C0ECB2
 	rep #$30 ;AXY->16
@@ -11911,7 +12048,8 @@ func_80EC2C:
 	bne @lbl_80EC57
 	bit.w #$0004
 	beq @lbl_80EC50
-	.db $89,$02,$00,$F0,$09,$80,$59       ;80EC49
+;80EC49
+	.db $89,$02,$00,$F0,$09,$80,$59
 @lbl_80EC50:
 	lda.b w0047
 	bit.w #$0004
@@ -11988,24 +12126,38 @@ func_80ECFF:
 	dex
 	dex
 	bpl @lbl_80ED28
-	.db $60                               ;80ED32
+;80ED32
+	.db $60
 @lbl_80ED33:
-	jmp.w (DATA8_C0ED4E,x)               ;80ED33
+	jmp.w (Jumptable_C0ED4E,x)
 
 DATA8_80ED36:
 	.db $FF,$FF,$FE,$FF,$FD,$FF,$FC,$FF,$FB,$FF,$FA,$FF,$F9,$FF,$F8,$FF   ;80ED36
 	.db $F7,$FF,$00,$FD,$00,$FC,$F6,$FF   ;80ED46
 
-DATA8_C0ED4E:
-	.db $66,$ED,$F9,$ED,$11,$EE,$0C,$EE,$07,$EE,$FE,$ED,$02,$EE,$F4,$ED   ;80ED4E
-	.db $EF,$ED                           ;80ED5E  
-	.db $28,$EE,$2F,$EE,$18,$EE           ;80ED60
+Jumptable_C0ED4E:
+	.dw func_C0ED66
+	.dw $EDF9
+	.dw $EE11
+	.dw $EE0C
+	.dw $EE07
+	.dw $EDFE
+	.dw $EE02
+	.dw $EDF4
+	.dw $EDEF
+	.dw $EE28
+	.dw $EE2F
+	.dw $EE18
+
+
+func_C0ED66:
 	pla
 	pla
 	plb
 	lda.w $9218
 	beq @lbl_80ED75
-	.db $9C,$18,$92,$22,$4A,$85,$80       ;80ED6E  
+;80ED6E  
+	.db $9C,$18,$92,$22,$4A,$85,$80
 @lbl_80ED75:
 	plp
 	rtl
@@ -12102,9 +12254,7 @@ func_80EE4F:
 	php
 	sep #$20 ;A->8
 	rep #$10 ;XY->16
-	lda.b #$7F
-	pha
-	plb
+	bankswitch 0x7F
 	tdc
 	lda.b wTemp05
 	asl a
@@ -12265,8 +12415,7 @@ func_80EF56:
 	sta.b wTemp00
 	jsl.l func_818049
 @lbl_80EF7D:
-	phk
-	plb
+	restorebank
 	lda.l $7F8E54
 	beq @lbl_80EFA5
 	lda.w #$FB27
@@ -12365,8 +12514,7 @@ func_80F031:
 	dec a
 	dec a
 	phb
-	phk
-	plb
+	restorebank
 @lbl_80F048:
 	pha
 	lda.b wTemp06
@@ -12400,9 +12548,7 @@ func_80F072:
 	jsl.l func_80EF56
 	php
 	sep #$20 ;A->8
-	lda.b #$7F
-	pha
-	plb
+	bankswitch 0x7F
 	rep #$30 ;AXY->16
 	lda.w $9206
 	clc
@@ -12458,9 +12604,7 @@ func_80F13A:
 func_80F14B:
 	php
 	sep #$20 ;A->8
-	lda.b #$7F
-	pha
-	plb
+	bankswitch 0x7F
 	rep #$30 ;AXY->16
 	lda.w $921A
 	beq @lbl_C0F173
@@ -12478,7 +12622,7 @@ func_80F14B:
 	plp
 	rtl
 @lbl_C0F173:
-	.db $EE,$1A,$92                       ;80F173  
+	.db $EE,$1A,$92
 @lbl_80F176:
 	lda.w $9210
 	sta.w $9212
@@ -12683,7 +12827,8 @@ func_80F335:
 	asl a
 	sta.l $7F8E56
 	bra @lbl_80F351
-	.db $08,$C2,$20                       ;80F34E
+;80F34E
+	.db $08,$C2,$20
 @lbl_80F351:
 	lda.b w0047
 	bit.w #$0004
@@ -12727,7 +12872,8 @@ func_80F383:
 	lda.l $7F91F4
 	dec a
 	bne @lbl_80F3AA
-	.db $A2,$03,$00,$80,$03               ;80F3A2
+;80F3A2
+	.db $A2,$03,$00,$80,$03
 @lbl_80F3A7:
 	ldx.w #$0001
 @lbl_80F3AA:
@@ -12755,7 +12901,8 @@ func_80F3AE:
 	lda.b wTemp00
 	ora.b wTemp01
 	beq @lbl_80F3DB
-	.db $22,$0B,$86,$80                   ;80F3D7  
+;80F3D7  
+	.db $22,$0B,$86,$80
 @lbl_80F3DB:
 	jsl.l func_80854A
 @lbl_80F3DF:
@@ -12812,8 +12959,9 @@ func_80F414:
 	plp
 	clc
 	rtl
-	.db $08,$E2,$20,$AF,$1E,$92,$7F,$85   ;80F439
-	.db $00,$22,$AE,$F3,$80,$28,$6B       ;80F441
+;80F439
+	.db $08,$E2,$20,$AF,$1E,$92,$7F,$85
+	.db $00,$22,$AE,$F3,$80,$28,$6B
 
 func_80F448:
 	lda.l $7F91F4
@@ -12839,8 +12987,8 @@ func_80F45E:
 	tsb.b w0049
 	plp
 	rtl
-	.db $08,$C2,$20,$A9,$C0,$02,$14,$49   ;80F46D
-	.db $A9,$80,$02,$04,$49,$28,$6B       ;80F475
+	.db $08,$C2,$20,$A9,$C0,$02,$14,$49
+	.db $A9,$80,$02,$04,$49,$28,$6B
 
 func_80F47C:
 	php
@@ -12962,9 +13110,7 @@ func_80F57C:
 	rtl
 	php
 	sep #$20 ;A->8
-	lda.b #$7F
-	pha
-	plb
+	bankswitch 0x7F
 	rep #$30 ;AXY->16
 	bcs @lbl_80F5A0
 	jmp.w func_80F800
@@ -13013,8 +13159,8 @@ func_80F57C:
 	lda.w #$0006
 	bra @lbl_80F60F
 @lbl_C0F604:
-	.db $A9,$20,$00,$14,$47,$A2,$EF,$00   ;80F604
-	.db $AD,$F2,$91                       ;80F60C  
+	.db $A9,$20,$00,$14,$47,$A2,$EF,$00
+	.db $AD,$F2,$91
 @lbl_80F60F:
 	stx.w $8EB0
 	sta.w $91E0
@@ -13522,87 +13668,100 @@ DATA8_80FA8F:
 	.db $01                               ;80FC0C
 
 DATA8_80FC0D:
-	.db $00,$00,$08,$00,$10,$00
-	.db $18,$00                           ;80FC13
-	.db $20,$00                           ;80FC15
+	.db $00,$00
+	.db $08,$00
+	.db $10,$00
+	.db $18,$00
+	.db $20,$00
 
 DATA8_80FC17:
-	.db $58,$00,$4C,$00,$44,$00
-	.db $3C,$00                           ;80FC1D  
-	.db $34,$00                           ;80FC1F
+	.db $58,$00
+	.db $4C,$00
+	.db $44,$00
+	.db $3C,$00
+	.db $34,$00
 
 DATA8_80FC21:
-	.db $10
-	.db $00                               ;80FC22
-	.db $1E                               ;80FC23
-	.db $00                               ;80FC24
-	.db $2E                               ;80FC25
-	.db $00,$3E,$00                       ;80FC26
-	.db $4E                               ;80FC29
-	.db $00                               ;80FC2A
+	.db $10,$00
+	.db $1E,$00
+	.db $2E,$00
+	.db $3E,$00
+	.db $4E,$00
 
 DATA8_80FC2B:
-	.db $0C                               ;80FC2B
-	.db $00                               ;80FC2C
-	.db $1C                               ;80FC2D
-	.db $00                               ;80FC2E
-	.db $2C                               ;80FC2F
-	.db $00,$3C,$00                       ;80FC30
-	.db $4C                               ;80FC33
-	.db $00,$B0,$02,$50,$02,$10,$02,$D0   ;80FC34
-	.db $01,$90,$01                       ;80FC3C
+	.db $0C,$00
+	.db $1C,$00
+	.db $2C,$00
+	.db $3C,$00
+	.db $4C,$00
+	.db $B0,$02
+	.db $50,$02
+	.db $10,$02
+	.db $D0,$01
+	.db $90,$01
 
 DATA8_80FC3F:
-	.db $BE,$02                           ;80FC3F
-	.db $5E,$02,$1E,$02,$DE,$01,$9E,$01   ;80FC41
+	.db $BE,$02
+	.db $5E,$02
+	.db $1E,$02
+	.db $DE,$01
+	.db $9E,$01
 
 UNREACH_80FC49:
-	.db $A8,$00,$A8,$00                   ;80FC49
-	.db $84                               ;80FC4D
-	.db $00,$84,$00                       ;80FC4E
-	.db $84                               ;80FC51
-	.db $00                               ;80FC52
+	.db $A8,$00
+	.db $A8,$00
+	.db $84,$00
+	.db $84,$00
+	.db $84,$00
 
 UNREACH_80FC53:
-	.db $A8,$00,$90,$00
-	.db $A4                               ;80FC57
-	.db $00,$94,$00                       ;80FC58
-	.db $84                               ;80FC5B
-	.db $00                               ;80FC5C
+	.db $A8,$00
+	.db $90,$00
+	.db $A4,$00
+	.db $94,$00
+	.db $84,$00
 
 DATA8_80FC5D:
-	.db $50,$00,$38                       ;80FC5D
-	.db $00                               ;80FC60
-	.db $28                               ;80FC61
-	.db $00,$18,$00                       ;80FC62
-	.db $08                               ;80FC65
-	.db $00                               ;80FC66
+	.db $50,$00
+	.db $38,$00
+	.db $28,$00
+	.db $18,$00
+	.db $08,$00
 
 DATA8_80FC67:
-	.db $D0,$00                           ;80FC67
-	.db $B8,$00,$A8,$00,$98,$00,$88,$00   ;80FC69
+	.db $D0,$00
+	.db $B8,$00
+	.db $A8,$00
+	.db $98,$00
+	.db $88,$00
 
 UNREACH_80FC71:
-	.db $DA,$90,$DA,$90                   ;80FC71
-	.db $4A,$90                           ;80FC75
-	.db $4A,$90                           ;80FC77
-	.db $4A,$90                           ;80FC79
+	.dw $90DA
+	.dw $90DA
+	.dw $904A
+	.dw $904A
+	.dw $904A
 
 DATA8_80FC7B:
-	.db $2F,$01,$3F,$01,$4F,$01
-	.db $5F,$01                           ;80FC81
-	.db $6F,$01                           ;80FC83
+	.dw $012F
+	.dw $013F
+	.dw $014F
+	.dw $015F
+	.dw $016F
 
 DATA8_80FC85:
-	.db $37,$01,$47,$01,$57,$01
-	.db $67,$01                           ;80FC8B  
-	.db $77,$01                           ;80FC8D
+	.dw $0137
+	.dw $0147
+	.dw $0157
+	.dw $0167
+	.dw $0177
 
 UNREACH_80FC8F:
-	.db $9F,$01,$AF,$01                   ;80FC8F  
-	.db $BF,$01                           ;80FC93
-	.db $CF,$01                           ;80FC95  
-	.db $DF,$01                           ;80FC97|
+	.dw $019F
+	.dw $01AF
+	.dw $01BF
+	.dw $01CF
+	.dw $01DF
 
 
 .org $FFB0 ;$80FFB0
@@ -13625,28 +13784,56 @@ UNREACH_80FC8F:
 .dw $1A35 ;checksum complement
 .dw $E5CA ;checksum
 
-jml.l func_809738
+
+;vectors
+;80ffe0
+
+;Native mode
+
+;uses the space from the first two unused native vectors
+_NativeIRQ:
+	jml NativeIRQ
 
 Native_COP:
-	.dw $8081                    ;80FFE4  
+	.dw func_808081
 
 Native_BRK:
-	.dw $8081                    ;80FFE6  
-	.dw $8081                    ;80FFE8  
+	.dw func_808081
+
+Native_ABORT:
+	.dw func_808081
 
 Native_NMI:
-	.dw $8081                    ;80FFEA  
-	.dw $8081                    ;80FFEC  
-	.db $E0,$FF                           ;80FFEE
-	.dw Start                             ;80FFF0  
-	.dw Start                             ;80FFF2  
+	.dw func_808081 ;80FFEA
+
+Native_Unused3:
+	.dw func_808081 ;80FFEC  
 
 Native_IRQ:
-	.dw $8081                    ;80FFF4  
-	.dw $8081                    ;80FFF6  
-	.dw $8081                    ;80FFF8  
-	.dw $8081                    ;80FFFA  
-	.dw Start                             ;80FFFC  
+	.dw _NativeIRQ ;80FFEE
+
+;Emulation mode (6502)
+
+Emulation_Unused1:
+	.dw Start
+
+Emulation_Unused2:
+	.dw Start
+
+Emulation_COP:
+	.dw func_808081
+
+Emulation_Unused3:
+	.dw func_808081
+
+Emulation_ABORT:
+	.dw func_808081
+
+Emulation_NMI:
+	.dw func_808081
 
 Emulation_RESET:
-	.dw $8081                    ;80FFFE  
+	.dw Start
+
+Emulation_IRQBRK:
+	.dw func_808081

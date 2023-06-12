@@ -5,9 +5,7 @@ LoadKointaiFontTiles:
 	php
 	sep #$20 ;A->8
 	rep #$10 ;XY->16
-	lda.b #$7F
-	pha
-	plb
+	bankswitch 0x7F
 	lda.b [wTemp00]
 	ldy.w #$0001
 @lbl_C5F0A2:
@@ -88,7 +86,8 @@ func_C5F118:
 	clc
 	adc.b wTemp00
 	bcc @lbl_C5F122
-	.db $E6,$02                           ;C5F120  
+;C5F120  
+	.db $E6,$02
 @lbl_C5F122:
 	tay
 	sep #$20 ;A->8
@@ -180,9 +179,7 @@ func_C5F1AB:
 func_C5F1CE:
 	php
 	sep #$20 ;A->8
-	lda.b #$7F
-	pha
-	plb
+	bankswitch 0x7F
 	rep #$30 ;AXY->16
 	lda.b [wTemp00]
 	and.w #$00FF
@@ -253,7 +250,8 @@ func_C5F24B:
 	clc
 	adc.b wTemp00
 	bcc @lbl_C5F253
-	.db $E6,$02                           ;C5F251  
+;C5F251  
+	.db $E6,$02
 @lbl_C5F253:
 	tay
 	phb
