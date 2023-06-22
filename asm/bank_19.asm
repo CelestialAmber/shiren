@@ -1,3 +1,5 @@
+.include "includes.asm"
+
 .bank $19
 .org $0000 ;$D90000
 .base $C0

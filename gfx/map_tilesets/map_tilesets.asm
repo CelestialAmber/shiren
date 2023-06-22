@@ -1,3 +1,5 @@
+.include "includes.asm"
+
 .bank $20
 .org $0000 ;$E00000
 .base $C0
@@ -129,9 +131,9 @@ MapPalettes:
 .redef CURR_BANK 0x20
 .redef CURR_ADDR 0x150C
 	
-;map tileset graphics data
+;map tileset atlas graphics data
 ;e0150c
-filedata "gfx/map_tilesets/tilesets.4bpp"
+filedata "gfx/map_tilesets/atlas.4bpp"
 	
 ;end of map tileset graphics data?
 

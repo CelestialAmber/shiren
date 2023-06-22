@@ -353,7 +353,7 @@ func_818251:
 	sta.w $0C04,x
 	lda.b #$64
 	sta.w $0C1D,x
-	lda.b #bank(SoundDataOffsetTable)  ;set bank to dd
+	lda.b #bank(SoundDataOffsetTable)
 	sta.b w0061
 	rep #$30 ;AXY->16
 	lda.w #loword(SoundDataOffsetTable)
@@ -403,28 +403,28 @@ func_818251:
 	lda.b wTemp02,s
 	clc
 	adc.b w005f
-	sta.w $0CC2,x
+	sta.w w0cc2,x
 	lda.b wTemp01,s
 	adc.b w0060
-	sta.w $0CD2,x
+	sta.w w0cd2,x
 	lda.b #$00
 	adc.b w0061
-	sta.w $0CE2,x
+	sta.w w0ce2,x
 	lda.b #$01
 	sta.w wAudioTrackRemainingTicksBeforeNextCommand,x
 	lda.b #$64
 	sta.w w0c82,x
 	lda.b #$00
 	sta.w wAudioTrackRemainingTicksBeforeNoteEnd,x
-	sta.w $0CA2,x
-	sta.w $0CB2,x
-	sta.w $0DA2,x
-	sta.w $0D82,x
-	sta.w $0D92,x
-	sta.w $0DB2,x
-	sta.w $0DC2,x
-	sta.w $0DD2,x
-	sta.w $0E42,x
+	sta.w w0ca2,x
+	sta.w w0cb2,x
+	sta.w w0da2,x
+	sta.w w0d82,x
+	sta.w w0d92,x
+	sta.w w0db2,x
+	sta.w w0dc2,x
+	sta.w w0dd2,x
+	sta.w w0e42,x
 	lda.b #$32
 	sta.w w0c92,x
 	lda.b #$64
@@ -586,31 +586,31 @@ func_8183C6:
 	stz.b w0059
 	jsr.w SendSPCData
 @lbl_818424:
-	lda.w $0DD2,x
+	lda.w w0dd2,x
 	beq @lbl_818480
 	rep #$10 ;XY->16
 	dec a
-	sta.w $0DD2,x
-	lda.w $0E22,x
+	sta.w w0dd2,x
+	lda.w w0e22,x
 	xba
-	lda.w $0E12,x
+	lda.w w0e12,x
 	tay
-	lda.w $0DF2,x
+	lda.w w0df2,x
 	clc
-	adc.w $0E02,x
+	adc.w w0e02,x
 	bcc @lbl_818444
-	sbc.w $0E32,x
+	sbc.w w0e32,x
 	iny
 @lbl_818444:
-	sta.w $0DF2,x
+	sta.w w0df2,x
 	cpy.w #$0000
 	beq @lbl_81847E
 	sty.b w0058
-	lda.w $0DC2,x
+	lda.w w0dc2,x
 	xba
-	lda.w $0DE2,x
+	lda.w w0de2,x
 	bmi @lbl_818463
-	lda.w $0DB2,x
+	lda.w w0db2,x
 	rep #$20 ;A->16
 	clc
 	adc.b w0058
@@ -618,16 +618,16 @@ func_8183C6:
 ;818461
 	sep #$20
 @lbl_818463:
-	lda.w $0DB2,x
+	lda.w w0db2,x
 	rep #$20 ;A->16
 	sec
 	sbc.b w0058
 @lbl_81846B:
 	sta.b w0058
 	sep #$20 ;A->8
-	sta.w $0DB2,x
+	sta.w w0db2,x
 	xba
-	sta.w $0DC2,x
+	sta.w w0dc2,x
 	txa
 	ora.b #$30
 	sta.b w0057
@@ -635,23 +635,23 @@ func_8183C6:
 @lbl_81847E:
 	sep #$30 ;AXY->8
 @lbl_818480:
-	lda.w $0E42,x
+	lda.w w0e42,x
 	beq @lbl_8184BD
 	dec a
-	sta.w $0E42,x
-	lda.w $0E82,x
+	sta.w w0e42,x
+	lda.w w0e82,x
 	tay
-	lda.w $0E62,x
+	lda.w w0e62,x
 	clc
-	adc.w $0E72,x
+	adc.w w0e72,x
 	bcc @lbl_81849A
-	sbc.w $0E92,x
+	sbc.w w0e92,x
 	iny
 @lbl_81849A:
-	sta.w $0E62,x
+	sta.w w0e62,x
 	cpy.b #$00
 	beq @lbl_8184BD
-	lda.w $0E52,x
+	lda.w w0e52,x
 	bmi @lbl_8184AD
 	tya
 	clc
@@ -674,11 +674,11 @@ func_8183C6:
 	dec a
 	sta.w wAudioTrackRemainingTicksBeforeNextCommand,x
 	bne MusicCommandFF
-	lda.w $0CC2,x
+	lda.w w0cc2,x
 	sta.b wAudioTrackPointer
-	lda.w $0CD2,x
+	lda.w w0cd2,x
 	sta.b wAudioTrackPointer+1
-	lda.w $0CE2,x
+	lda.w w0ce2,x
 	sta.b wAudioTrackPointer+2
 	lda.b #$80
 	sta.w $0EA2
@@ -730,14 +730,14 @@ ReadNextMusicCommandByte:
 	beq MusicCommandFF ;yes
 	tay
 	and.b #$3F ;Only keep the lower 6 bits of the byte
-	cmp.b #$29 ;Is the current command byte a note?
-	bcs ExecuteCommandByteFunction
-	lda.w $0CA2,x
+	cmp.b #$29 ;Is the current command byte not a note (>= 0x29)?
+	bcs ExecuteCommandByteFunction ;yes
+	lda.w w0ca2,x
 	beq @lbl_818530
 	phy
 	txa
 	sec
-	sbc.w $0CA2,x
+	sbc.w w0ca2,x
 	tay
 	lda.w wAudioTrackDelayTemp,y
 	sta.w wAudioTrackDelayTemp,x
@@ -745,12 +745,12 @@ ReadNextMusicCommandByte:
 	sta.w w0c82,x
 	ply
 @lbl_818530:
-	lda.w $0CB2,x
+	lda.w w0cb2,x
 	beq @lbl_818543
 	phy
 	txa
 	sec
-	sbc.w $0CB2,x
+	sbc.w w0cb2,x
 	tay
 	lda.w w0c92,y
 	sta.w w0c92,x
@@ -876,7 +876,7 @@ ReadNextMusicCommandByte:
 	adc.w $0EA2
 	plx
 	clc
-	adc.w $0DA2,x
+	adc.w w0da2,x
 	sta.w $0C42,x
 	sta.b w0058
 	lda.w w0c92,x
@@ -893,11 +893,11 @@ ReadNextMusicCommandByte:
 	sta.w wAudioTrackRemainingTicksBeforeNoteEnd,x
 @lbl_818684:
 	lda.b wAudioTrackPointer
-	sta.w $0CC2,x
+	sta.w w0cc2,x
 	lda.b wAudioTrackPointer+1
-	sta.w $0CD2,x
+	sta.w w0cd2,x
 	lda.b wAudioTrackPointer+2
-	sta.w $0CE2,x
+	sta.w w0ce2,x
 	jmp.w func_8183B4
 
 DATA8_818696:
@@ -1129,11 +1129,11 @@ MusicCommand33:
 	lda.b #$01
 	sta.w wAudioTrackRemainingTicksBeforeNextCommand,x
 	lda.b wAudioTrackPointer
-	sta.w $0CC2,x
+	sta.w w0cc2,x
 	lda.b wAudioTrackPointer+1
-	sta.w $0CD2,x
+	sta.w w0cd2,x
 	lda.b wAudioTrackPointer+2
-	sta.w $0CE2,x
+	sta.w w0ce2,x
 	ldx.w $0EA3
 	lda.b #$01
 	sta.w $0C13,x
@@ -1226,11 +1226,11 @@ MusicCommand79:
 MusicCommand74:
 	lda.b [wAudioTrackPointer]
 	inc24 wAudioTrackPointer
-	sta.w $0DB2,x
+	sta.w w0db2,x
 	sta.b w0058
 	lda.b [wAudioTrackPointer]
 	inc24 wAudioTrackPointer
-	sta.w $0DC2,x
+	sta.w w0dc2,x
 	sta.b w0059
 	txa
 	ora.b #$30
@@ -1252,11 +1252,11 @@ MusicCommand75:
 	inc24 wAudioTrackPointer
 	inc24 wAudioTrackPointer
 	tya
-	sta.w $0DE2,x
+	sta.w w0de2,x
 	lda.b [wAudioTrackPointer]
 	inc24 wAudioTrackPointer
-	sta.w $0E32,x
-	sta.w $0DD2,x
+	sta.w w0e32,x
+	sta.w w0dd2,x
 	tay
 	rep #$30 ;AXY->16
 	pla
@@ -1268,20 +1268,20 @@ MusicCommand75:
 	bcs @lbl_818A00
 	adc.b wTemp01,s
 	sep #$20 ;A->8
-	sta.w $0E02,x
+	sta.w w0e02,x
 	rep #$20 ;A->16
 	tya
 	sep #$30 ;AXY->8
-	sta.w $0E12,x
+	sta.w w0e12,x
 	xba
-	sta.w $0E22,x
+	sta.w w0e22,x
 	pla
 	ply
 	lsr a
 	adc.b #$00
 	eor.b #$FF
 	inc a
-	sta.w $0DF2,x
+	sta.w w0df2,x
 	rts
 
 MusicCommand76:
@@ -1297,11 +1297,11 @@ MusicCommand76:
 	pha
 	inc24 wAudioTrackPointer
 	tya
-	sta.w $0E52,x
+	sta.w w0e52,x
 	lda.b [wAudioTrackPointer]
 	inc24 wAudioTrackPointer
-	sta.w $0E92,x
-	sta.w $0E42,x
+	sta.w w0e92,x
+	sta.w w0e42,x
 	tay
 	pla
 	phy
@@ -1313,15 +1313,15 @@ MusicCommand76:
 @lbl_818A5D:
 	cmp.b wTemp01,s
 	bcs @lbl_818A5A
-	sta.w $0E72,x
+	sta.w w0e72,x
 	tya
-	sta.w $0E82,x
+	sta.w w0e82,x
 	pla
 	lsr a
 	adc.b #$00
 	eor.b #$FF
 	inc a
-	sta.w $0E62,x
+	sta.w w0e62,x
 	rts
 
 MusicCommand3C:
@@ -1366,56 +1366,56 @@ MusicCommand78:
 MusicCommand6F:
 	lda.b [wAudioTrackPointer]
 	inc24 wAudioTrackPointer
-	sta.w $0DA2,x
+	sta.w w0da2,x
 	rts
 
 MusicCommand69:
 	lda.b #$01
-	sta.w $0CA2,x
+	sta.w w0ca2,x
 	rts
 
 MusicCommand6A:
 	lda.b [wAudioTrackPointer]
 	inc24 wAudioTrackPointer
-	sta.w $0CA2,x
+	sta.w w0ca2,x
 	rts
 
 MusicCommand6B:
 	lda.b #$00
-	sta.w $0CA2,x
+	sta.w w0ca2,x
 	rts
 
 MusicCommand6C:
 	lda.b #$01
-	sta.w $0CB2,x
+	sta.w w0cb2,x
 	rts
 
 MusicCommand6D:
 	lda.b [wAudioTrackPointer]
 	inc24 wAudioTrackPointer
-	sta.w $0CB2,X
+	sta.w w0cb2,X
 	rts
 
 MusicCommand6E:
 	lda.b #$00
-	sta.w $0CB2,x
+	sta.w w0cb2,x
 	rts
 
 MusicCommandFC:
-	lda.w $0D82,x
+	lda.w w0d82,x
 	beq @lbl_818B1C
 	sec
 	sbc.b #$10
-	sta.w $0D82,x
+	sta.w w0d82,x
 	txa
 	clc
-	adc.w $0D82,x
+	adc.w w0d82,x
 	tay
-	lda.w $0CF2,y
+	lda.w w0cf2,y
 	sta.b wAudioTrackPointer
-	lda.w $0D22,y
+	lda.w w0d22,y
 	sta.b wAudioTrackPointer+1
-	lda.w $0D52,y
+	lda.w w0d52,y
 	sta.b wAudioTrackPointer+2
 	inc24 wAudioTrackPointer
 	inc24 wAudioTrackPointer
@@ -1431,19 +1431,22 @@ MusicCommandFB:
 	inc24 wAudioTrackPointer
 	tay
 func_818B2E:
-	lda.w $0D92,x
+	lda.w w0d92,x
 	bne @lbl_818B34
 	tya
 @lbl_818B34:
 	dec a
-	sta.w $0D92,x
+	sta.w w0d92,x
 	bne MusicCommandFE
 	inc24 wAudioTrackPointer
 	inc24 wAudioTrackPointer
 	rts
 
+;call subroutine
+;0x0: offset (16 bit)
 MusicCommandFD:
-	lda.w $0D82,x
+	lda.w w0d82,x
+	;if w0d82[x] > 0x30, then skip to the next instruction
 	cmp.b #$30
 	bcc @lbl_818B6B
 	inc24 wAudioTrackPointer
@@ -1452,20 +1455,24 @@ MusicCommandFD:
 @lbl_818B6B:
 	txa
 	clc
-	adc.w $0D82,x
+	adc.w w0d82,x
 	tay
+	;save the current track pointer
 	lda.b wAudioTrackPointer
-	sta.w $0CF2,y
+	sta.w w0cf2,y
 	lda.b wAudioTrackPointer+1
-	sta.w $0D22,y
+	sta.w w0d22,y
 	lda.b wAudioTrackPointer+2
-	sta.w $0D52,y
-	lda.w $0D82,x
+	sta.w w0d52,y
+	lda.w w0d82,x
 	clc
 	adc.b #$10
-	sta.w $0D82,x
+	sta.w w0d82,x
 	;fallthrough
 
+;jump to an offset
+;0x0: offset (16 bit)
+;offset is relative
 MusicCommandFE:
 	lda.b [wAudioTrackPointer]
 	inc24 wAudioTrackPointer
@@ -1474,20 +1481,22 @@ MusicCommandFE:
 	inc24 wAudioTrackPointer
 	pha
 	ldy.b #$00
+	;if the offset is negative, change the top byte to FF
 	cmp.b #$00
-	bpl @lbl_818BAB
+	bpl @positive
 	ldy.b #$FF
-@lbl_818BAB:
+@positive:
+	;Add the offset from the stack to the pointer
 	phy
 	lda.b wAudioTrackPointer
 	clc
-	adc.b wTemp03,s
+	adc.b $03,s
 	sta.b wAudioTrackPointer
 	lda.b wAudioTrackPointer+1
-	adc.b wTemp02,s
+	adc.b $02,s
 	sta.b wAudioTrackPointer+1
 	lda.b wAudioTrackPointer+2
-	adc.b wTemp01,s
+	adc.b $01,s
 	sta.b wAudioTrackPointer+2
 	pla
 	pla
@@ -1992,5 +2001,67 @@ func_818F0F:
 	bne @lbl_818F54
 	txa
 	sta.w $103A
+	plp
+	rts
+
+
+func_818F66:
+	php
+	sep #$20 ;A->8
+	lda.b #$FF
+	sta.l $000EA4
+	stz.b wTemp00
+	lda.l $B36000
+	cmp.b #$4D
+	bne @lbl_818F83
+	.db $AF,$01,$60,$B3,$C9,$4F,$D0,$02   ;818F79  
+	.db $85,$00                           ;818F81  
+@lbl_818F83:
+	jsl.l func_8180DD
+	plp
+	rts
+
+func_818F89:
+	php
+	sep #$20 ;A->8
+	lda.b w005b
+	eor.b #$FF
+	xba
+	lda.b #$00
+	sta.b w005b
+	rep #$20 ;A->16
+	asl a
+	bcs @lbl_818F9C
+	adc.b w005a
+@lbl_818F9C:
+	asl a
+	bcs @lbl_818FA1
+	adc.b w005a
+@lbl_818FA1:
+	asl a
+	bcs @lbl_818FA6
+	adc.b w005a
+@lbl_818FA6:
+	asl a
+	bcs @lbl_818FAB
+	adc.b w005a
+@lbl_818FAB:
+	asl a
+	bcs @lbl_818FB0
+	adc.b w005a
+@lbl_818FB0:
+	asl a
+	bcs @lbl_818FB5
+	adc.b w005a
+@lbl_818FB5:
+	asl a
+	bcs @lbl_818FBA
+	adc.b w005a
+@lbl_818FBA:
+	asl a
+	bcs @lbl_818FBF
+	adc.b w005a
+@lbl_818FBF:
+	sta.b w005a
 	plp
 	rts

@@ -798,9 +798,7 @@ func_C06B49:
 	sta.w $833C,x
 	sep #$20 ;A->8
 	phx
-	phb
-	jsl.l func_C30710
-	plb
+	call_savebank func_C30710
 	plx
 	lda.b wTemp05
 	cmp.b #$E6
@@ -1185,9 +1183,7 @@ func_C06E70:
 	bne @lbl_C06EAF
 	lda.w $8466,x
 	sta.b wTemp00
-	phb
-	jsl.l func_80EC2C
-	plb
+	call_savebank func_80EC2C
 @lbl_C06EAF:
 	lda.w $8464
 	tax
@@ -1355,9 +1351,7 @@ func_C06F2F:
 	bpl @lbl_C070E6
 	lda.w $8456
 	sta.b wTemp06
-	phb
-	jsl.l func_808A10
-	plb
+	call_savebank func_808A10
 	bra @lbl_C070E6
 @lbl_C070CC:
 	lda.l UNREACH_C072C5,x
@@ -1371,9 +1365,7 @@ func_C06F2F:
 	.db $A9,$10,$00,$38,$ED,$56,$84,$85   ;C070DD
 	.db $04                               ;C070E5  
 @lbl_C070E6:
-	phb
-	jsl.l func_808A5C
-	plb
+	call_savebank func_808A5C
 	bra func_C070F1
 
 func_C070EE:
@@ -1893,9 +1885,7 @@ func_C076E9:
 	sta.b wTemp05
 @lbl_C07754:
 	phy
-	phb
-	jsl.l func_81C322
-	plb
+	call_savebank func_81C322
 	ply
 	sty.b wTemp00
 	lda.w $8112,y
@@ -1959,9 +1949,7 @@ func_C076E9:
 	sta.w $80D4
 	stx.b wTemp02
 	sty.b wTemp04
-	phb
-	jsl.l func_80B177
-	plb
+	call_savebank func_80B177
 	lda.w $80C4
 	sec
 	sbc.w $80C0
@@ -1997,9 +1985,7 @@ func_C07819:
 	adc.w $80CA
 	sta.w $80CA
 	sta.b wTemp02
-	phb
-	jsl.l func_80C593
-	plb
+	call_savebank func_80C593
 	lda.w $80BE
 	cmp.w #$000F
 	beq @lbl_C078A0
@@ -2118,9 +2104,7 @@ func_C07819:
 	sta.b wTemp02
 	stx.b wTemp00
 	phx
-	phb
-	jsl.l func_81C4C6
-	plb
+	call_savebank func_81C4C6
 	plx
 	bra @lbl_C0797E
 @lbl_C07952:
@@ -2140,9 +2124,7 @@ func_C07819:
 	sta.b wTemp05
 @lbl_C07973:
 	phx
-	phb
-	jsl.l func_81C322
-	plb
+	call_savebank func_81C322
 	plx
 @lbl_C0797B:
 	stz.w $80EA,x
@@ -2191,15 +2173,11 @@ func_C079A7:
 	sta.b wTemp00
 	lda.w $80CE
 	sta.b wTemp02
-	phb
-	jsl.l func_81A104
-	plb
+	call_savebank func_81A104
 	jsl.l func_80854A
 	lda.w #$0000
 	sta.b wTemp00
-	phb
-	jsl.l func_80DCC6
-	plb
+	call_savebank func_80DCC6
 	lda.b wTemp00
 	bit.w #$F0FF
 	beq @lbl_C079BD
@@ -2340,9 +2318,7 @@ func_C07A9C:
 @lbl_C07AFA:
 	lda.b #$13
 	sta.b wTemp00
-	phb
-	jsl.l func_81C322
-	plb
+	call_savebank func_81C322
 	lda.b #$13
 	sta.b wTemp00
 	lda.w $8125
@@ -2395,9 +2371,7 @@ func_C07A9C:
 	beq @lbl_C07B9B
 	lda.w #$0000
 	sta.b wTemp00
-	phb
-	jsl.l func_80DC69
-	plb
+	call_savebank func_80DC69
 	lda.b wTemp00
 	bit.w #$F0FF
 	beq @lbl_C07B49
@@ -2664,9 +2638,7 @@ func_C07DB7:
 	sta.b wTemp01
 	lda.b #$13
 	sta.b wTemp00
-	phb
-	jsl.l func_81C322
-	plb
+	call_savebank func_81C322
 	lda.b #$13
 	sta.b wTemp00
 	jsl.l func_C28E94

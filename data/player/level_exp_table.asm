@@ -1,225 +1,77 @@
+
+
 ;c2ca04
-;level exp table (low byte)
-;level 0-70
-LevelExpLowByteTable:
-	.db $00
-	.db $0A
-	.db $1E
-	.db $3C
-	.db $64
-	.db $96
-	.db $E6
-	.db $5E
-	.db $F4
-	.db $BC
-	.db $B6
-	.db $B0
-	.db $DC
-	.db $08
-	.db $FC
-	.db $F0
-	.db $AC
-	.db $68
-	.db $88
-	.db $70
-	.db $58
-	.db $40
-	.db $10
-	.db $C8
-	.db $80
-	.db $20
-	.db $A8
-	.db $30
-	.db $A0
-	.db $10
-	.db $80
-	.db $F0
-	.db $60
-	.db $70
-	.db $80
-	.db $90
-	.db $A0
-	.db $38
-	.db $D0
-	.db $68
-	.db $00
-	.db $98
-	.db $40
-	.db $70
-	.db $A0
-	.db $D0
-	.db $00
-	.db $30
-	.db $60
-	.db $90
-	.db $C0
-	.db $F0
-	.db $20
-	.db $50
-	.db $80
-	.db $B0
-	.db $E0
-	.db $10
-	.db $40
-	.db $70
-	.db $A0
-	.db $D0
-	.db $00
-	.db $30
-	.db $60
-	.db $90
-	.db $C0
-	.db $F0
-	.db $20
-	.db $3F
-UNREACH_C2CA4A:
-	.db $40 ;level 70
-
-;level exp table (middle byte)
-LevelExpMiddleByteTable:
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $01
-	.db $01
-	.db $02
-	.db $03
-	.db $04
-	.db $05
-	.db $07
-	.db $08
-	.db $0A
-	.db $0D
-	.db $10
-	.db $13
-	.db $17
-	.db $1B
-	.db $1F
-	.db $27
-	.db $32
-	.db $3E
-	.db $4E
-	.db $61
-	.db $75
-	.db $8C
-	.db $A4
-	.db $BB
-	.db $D2
-	.db $EA
-	.db $11
-	.db $38
-	.db $5F
-	.db $86
-	.db $C1
-	.db $FB
-	.db $36
-	.db $71
-	.db $AB
-	.db $0D
-	.db $82
-	.db $F7
-	.db $6C
-	.db $E2
-	.db $57
-	.db $CC
-	.db $41
-	.db $B6
-	.db $2B
-	.db $A1
-	.db $16
-	.db $8B
-	.db $00
-	.db $75
-	.db $EB
-	.db $60
-	.db $D5
-	.db $4A
-	.db $BF
-	.db $35
-	.db $AA
-	.db $1F
-	.db $94
-	.db $09
-	.db $7E
-	.db $F4
-	.db $42
-UNREACH_C2CA91:
-	.db $42 ;level 70
-
-;level exp table (high byte)
-LevelExpHighByteTable:
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $00
-	.db $01
-	.db $01
-	.db $01
-	.db $01
-	.db $01
-	.db $01
-	.db $02
-	.db $02
-	.db $02
-	.db $03
-	.db $03
-	.db $03
-	.db $04
-	.db $04
-	.db $05
-	.db $05
-	.db $06
-	.db $06
-	.db $07
-	.db $07
-	.db $08
-	.db $08
-	.db $09
-	.db $09
-	.db $09
-	.db $0A
-	.db $0A
-	.db $0B
-	.db $0B
-	.db $0C
-	.db $0C
-	.db $0D
-	.db $0D
-	.db $0E
-	.db $0E
-	.db $0E
-	.db $0F
-	.db $0F ;level 70
+;level exp table
+.arraydef LevelExpTable 71
+.arrayin LevelExpTable 0 0
+.arrayin LevelExpTable 1 10
+.arrayin LevelExpTable 2 30
+.arrayin LevelExpTable 3 60
+.arrayin LevelExpTable 4 100
+.arrayin LevelExpTable 5 150
+.arrayin LevelExpTable 6 230
+.arrayin LevelExpTable 7 350
+.arrayin LevelExpTable 8 500
+.arrayin LevelExpTable 9 700
+.arrayin LevelExpTable 10 950
+.arrayin LevelExpTable 11 1200
+.arrayin LevelExpTable 12 1500
+.arrayin LevelExpTable 13 1800
+.arrayin LevelExpTable 14 2300
+.arrayin LevelExpTable 15 2800
+.arrayin LevelExpTable 16 3500
+.arrayin LevelExpTable 17 4200
+.arrayin LevelExpTable 18 5000
+.arrayin LevelExpTable 19 6000
+.arrayin LevelExpTable 20 7000
+.arrayin LevelExpTable 21 8000
+.arrayin LevelExpTable 22 10000
+.arrayin LevelExpTable 23 13000
+.arrayin LevelExpTable 24 16000
+.arrayin LevelExpTable 25 20000
+.arrayin LevelExpTable 26 25000
+.arrayin LevelExpTable 27 30000
+.arrayin LevelExpTable 28 36000
+.arrayin LevelExpTable 29 42000
+.arrayin LevelExpTable 30 48000
+.arrayin LevelExpTable 31 54000
+.arrayin LevelExpTable 32 60000
+.arrayin LevelExpTable 33 70000
+.arrayin LevelExpTable 34 80000
+.arrayin LevelExpTable 35 90000
+.arrayin LevelExpTable 36 100000
+.arrayin LevelExpTable 37 115000
+.arrayin LevelExpTable 38 130000
+.arrayin LevelExpTable 39 145000
+.arrayin LevelExpTable 40 160000
+.arrayin LevelExpTable 41 175000
+.arrayin LevelExpTable 42 200000
+.arrayin LevelExpTable 43 230000
+.arrayin LevelExpTable 44 260000
+.arrayin LevelExpTable 45 290000
+.arrayin LevelExpTable 46 320000
+.arrayin LevelExpTable 47 350000
+.arrayin LevelExpTable 48 380000
+.arrayin LevelExpTable 49 410000
+.arrayin LevelExpTable 50 440000
+.arrayin LevelExpTable 51 470000
+.arrayin LevelExpTable 52 500000
+.arrayin LevelExpTable 53 530000
+.arrayin LevelExpTable 54 560000
+.arrayin LevelExpTable 55 590000
+.arrayin LevelExpTable 56 620000
+.arrayin LevelExpTable 57 650000
+.arrayin LevelExpTable 58 680000
+.arrayin LevelExpTable 59 710000
+.arrayin LevelExpTable 60 740000
+.arrayin LevelExpTable 61 770000
+.arrayin LevelExpTable 62 800000
+.arrayin LevelExpTable 63 830000
+.arrayin LevelExpTable 64 860000
+.arrayin LevelExpTable 65 890000
+.arrayin LevelExpTable 66 920000
+.arrayin LevelExpTable 67 950000
+.arrayin LevelExpTable 68 980000
+.arrayin LevelExpTable 69 999999 ;level 70
+.arrayin LevelExpTable 70 1000000
+array24 LevelExpTable 71

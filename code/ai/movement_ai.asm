@@ -220,9 +220,7 @@ func_C26208:
 	sta.w wCharDir,y
 	sty.b wTemp00
 	phy
-	phb
-	jsl.l func_C2785E
-	plb
+	call_savebank func_C2785E
 	ply
 	ldx.b #$00
 	lda.w wCharDeadEndWaitingTurn,y
@@ -244,9 +242,7 @@ func_C26208:
 	sty.b wTemp00
 	phx
 	phy
-	phb
-	jsl.l func_C2785E
-	plb
+	call_savebank func_C2785E
 	ply
 	plx
 	lda.b wTemp00
@@ -1407,7 +1403,9 @@ func_C26A49:
 	plp
 	rtl
 @lbl_C271C7:
-	.db $C9,$03,$B0,$1C,$A9,$89,$85,$00,$DA,$22,$12,$05,$C6,$FA,$A5,$00   ;C271C7
+	.db $C9,$03,$B0,$1C,$A9,$89,$85,$00,$DA
+	jsl.l _GetEvent
+	.db $FA,$A5,$00   ;C271C7
 	.db $C9,$01,$D0,$0C,$A9,$13,$9F,$1D,$87,$7E,$A9,$00,$8F,$77,$89,$7E   ;C271D7
 	.db $64,$00,$28,$6B                   ;C271E7
 
@@ -1595,7 +1593,9 @@ func_C27238:
 	lda.l $7E85DC
 	cmp.b #$19
 	bcc @lbl_C27555
-	.db $C9,$1D,$B0,$1B,$A9,$85,$85,$00,$DA,$22,$12,$05,$C6,$FA,$A5,$00   ;C27536
+	.db $C9,$1D,$B0,$1B,$A9,$85,$85,$00,$DA
+	jsl.l _GetEvent
+	.db $FA,$A5,$00   ;C27536
 	.db $3A,$D0,$0C,$A9,$53,$9F,$1D,$87   ;C27546
 	.db $7E,$A9,$00,$8F,$77,$89,$7E       ;C2754E  
 @lbl_C27555:
@@ -1616,7 +1616,7 @@ func_C27238:
 	lda.l $7E85DC
 	cmp.b #$07
 	bne @lbl_C27598
-	GetEventPushX Event86
+	GetEventPushX Event_Pekeji_86
 	cmp.b #$01
 	bne @lbl_C27598
 	lda.b #$53
@@ -1636,10 +1636,12 @@ func_C27238:
 	lda.l $7E85DC
 	cmp.b #$1F
 	bne @lbl_C275D2
-	GetEventPushX Event86
+	GetEventPushX Event_Pekeji_86
 	cmp.b #$02
 	bne @lbl_C275D2
-	.db $A9,$03,$85,$02,$A9,$86,$85,$00,$DA,$22,$79,$04,$C6,$FA,$A9,$53   ;C275B8
+	.db $A9,$03,$85,$02,$A9,$86,$85,$00,$DA
+	jsl.l _SetEvent
+	.db $FA,$A9,$53   ;C275B8
 	.db $9F,$1D,$87,$7E,$A9,$00,$8F,$77   ;C275C8  
 	.db $89,$7E                           ;C275D0
 @lbl_C275D2:
@@ -1679,7 +1681,9 @@ func_C27238:
 @lbl_C2767E:
 	.db $C9,$04,$B0,$18,$A9,$88,$9F,$35,$88,$7E,$BF,$6D,$87,$7E,$D0,$06   ;C2767E
 	.db $A9,$01,$9F,$6D,$87,$7E,$A9,$01,$85,$00,$28,$6B,$C9,$05,$90,$04   ;C2768E
-	.db $64,$00,$28,$6B,$A9,$88,$85,$00,$DA,$22,$12,$05,$C6,$FA,$A5,$00   ;C2769E  
+	.db $64,$00,$28,$6B,$A9,$88,$85,$00,$DA
+	jsl.l _GetEvent
+	.db $FA,$A5,$00   ;C2769E  
 	.db $C9,$01,$D0,$10,$A9,$53,$9F,$1D,$87,$7E,$A9,$00,$8F,$77,$89,$7E   ;C276AE
 	.db $64,$00,$28,$6B,$C9,$02,$D0,$F8,$AF,$C8,$85,$7E,$C9,$36,$D0,$F0   ;C276BE  
 	.db $AF,$DC,$85,$7E,$C9,$05,$90,$E8,$C9,$09,$B0,$E4,$80,$D6
@@ -1692,7 +1696,7 @@ func_C27238:
 	lda.l wCharEventFlags,x
 	cmp.b #$01
 	bne @lbl_C27713
-	GetEventPushX Event88
+	GetEventPushX Event_Naoki_88
 	bne @lbl_C27713
 	lda.l $7E85C8
 	cmp.b #$19

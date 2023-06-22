@@ -6,7 +6,7 @@ LoadKointaiFontTiles:
 	sep #$20 ;A->8
 	rep #$10 ;XY->16
 	bankswitch 0x7F
-	lda.b [wTemp00]
+	lda.b [w7f0000]
 	ldy.w #$0001
 @lbl_C5F0A2:
 	pha
@@ -17,19 +17,19 @@ LoadKointaiFontTiles:
 	plp
 	rtl
 
-;wTemp00: source address
-;wTemp04: destination address
+;w7f0000: source address
+;w7f0004: destination address
 ;c5f0ac
 DecompressGraphics:
-	ldx.b wTemp04
+	ldx.b w7f0004
 	txa
 	clc
 	adc.b #$10
-	sta.b wTemp04
+	sta.b w7f0004
 	bcc @lbl_C5F0B8
 	inc.b wTemp05
 @lbl_C5F0B8:
-	lda.b [wTemp00],y
+	lda.b [w7f0000],y
 	iny
 	pea.w $F0D6
 	pea.w $F0D6

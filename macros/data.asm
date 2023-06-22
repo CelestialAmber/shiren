@@ -21,3 +21,29 @@
     .undef SIZE
     .undef DATA
 .endm
+
+;Outputs the given array as 3 separate arrays for each byte
+;1: array, 2: array length
+.macro array24
+	\1LowByte:
+	.define i\@ 0
+	.rept \2
+		.arrayout \1 i\@ arrayOut
+		.db (arrayOut & 0xFF)
+		.redef i\@ i\@ + 1
+	.endr
+	\1MiddleByte:
+	.redef i\@ 0
+	.rept \2
+		.arrayout \1 i\@ arrayOut
+		.db ((arrayOut >> 8) & 0xFF)
+		.redef i\@ i\@ + 1
+	.endr
+	\1HighByte:
+	.redef i\@ 0
+	.rept \2
+		.arrayout \1 i\@ arrayOut
+		.db ((arrayOut >> 16) & 0xFF)
+		.redef i\@ i\@ + 1
+	.endr
+.endm

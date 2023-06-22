@@ -44,30 +44,30 @@ DisplayAreaTitle:
 	bpl @lbl_C5CC2D
 	phb
 	lda.w #$22A0
-	sta.b wTemp00
+	sta.b w7f0000
 	lda.w #$0004
-	sta.b wTemp02
+	sta.b w7f0002
 	lda.w #$3302
-	sta.b wTemp03
-	stz.b wTemp05
+	sta.b w7f0002+1
+	stz.b w7f0004+1
 	lda.w #$0006
-	sta.b wTemp06
+	sta.b w7f0006
 	jsl.l func_80F47C
-	stz.b wTemp00
+	stz.b w7f0000
 	jsl.l func_80F3AE
-	stz.b wTemp00
-	stz.b wTemp02
+	stz.b w7f0000
+	stz.b w7f0002
 	jsl.l func_80F55F
 	ldx.w #$0280
-	stx.b wTemp00
+	stx.b w7f0000
 	lda.w #$00DC
-	sta.b wTemp02
+	sta.b w7f0002
 	ldx.w #$B05E
-	stx.b wTemp04
+	stx.b w7f0004
 	;decompress the old style font numbers graphics
 	jsl.l LoadKointaiFontTiles
 	ldx.w #$F5D4
-	stx.b wTemp00
+	stx.b w7f0000
 	jsl.l func_808619
 	plb
 	ldx.w #$057E
@@ -78,14 +78,14 @@ DisplayAreaTitle:
 	dex
 	bpl @lbl_C5CC83
 	jsl.l func_C62792
-	stz.b wTemp01
-	ldx.b wTemp00
+	stz.b w7f0000+1
+	ldx.b w7f0000
 	lda.l UNREACH_C5CEFA,x
 	and.w #$00FF
-	sta.b wTemp02
+	sta.b w7f0002
 	asl a
 	asl a
-	adc.b wTemp02
+	adc.b w7f0002
 	asl a
 	tax
 	jsl.l func_C62B37
@@ -97,16 +97,16 @@ DisplayAreaTitle:
 	phx
 	pha
 	sec
-	sbc.b wTemp06
-	stz.b wTemp01
-	ldx.b wTemp00
+	sbc.b w7f0006
+	stz.b w7f0000+1
+	ldx.b w7f0000
 	beq @lbl_C5CCEB
 	pha
 	jsl.l GetCurrentFloor
 	tdc
 	tay
-	stz.b wTemp01
-	lda.b wTemp00
+	stz.b w7f0000+1
+	lda.b w7f0000
 	cmp.w #$000A
 	bcs @lbl_C5CCCF
 	plx
@@ -136,8 +136,8 @@ DisplayAreaTitle:
 	ply
 	plx
 	lda.w #$B05E
-	sta.b wTemp04
-	stz.b wTemp06
+	sta.b w7f0004
+	stz.b w7f0006
 @lbl_C5CCF4:
 	lda.l AreaNames,x
 	and.w #$00FF
@@ -146,8 +146,8 @@ DisplayAreaTitle:
 	eor.w #$00FF
 	inc a
 	asl a
-	sty.b wTemp00
-	adc.b wTemp00
+	sty.b w7f0000
+	adc.b w7f0000
 	tay
 	bra @lbl_C5CD37
 @lbl_C5CD0C:
@@ -157,23 +157,21 @@ DisplayAreaTitle:
 	lda.l KointaiFontCharacters,x
 	pha
 	tyx
-	lda.b wTemp06
+	lda.b w7f0006
 	jsr.w func_C5CD80
-	inc.b wTemp06
+	inc.b w7f0006
 	pla
 	phx
-	sta.b wTemp00
+	sta.b w7f0000
 	lda.w #$00DC
-	sta.b wTemp02
-	lda.b wTemp04
+	sta.b w7f0002
+	lda.b w7f0004
 	pha
-	phb
-	jsl.l LoadKointaiFontTiles
-	plb
+	call_savebank LoadKointaiFontTiles
 	pla
 	clc
 	adc.w #$0090
-	sta.b wTemp04
+	sta.b w7f0004
 	ply
 	plx
 @lbl_C5CD37:
@@ -181,19 +179,19 @@ DisplayAreaTitle:
 	cpy.w #$013C
 	bcc @lbl_C5CCF4
 	lda.w #$7FFF
-	sta.b wTemp00
+	sta.b w7f0000
 	lda.w #$0001
-	sta.b wTemp02
+	sta.b w7f0002
 	jsl.l func_8087FF
 	ldx.w #$F5DD
-	stx.b wTemp00
+	stx.b w7f0000
 	jsl.l func_808619
 	ldx.w #$F5CB
-	stx.b wTemp00
+	stx.b w7f0000
 	jsl.l func_808619
 	jsl.l func_C62792
-	stz.b wTemp01
-	ldx.b wTemp00
+	stz.b w7f0000+1
+	ldx.b w7f0000
 	lda.l UNREACH_C5CEFA,x
 	and.w #$00FF
 	cmp.w #$001D
@@ -204,8 +202,8 @@ DisplayAreaTitle:
 	pha
 	jsl.l func_C62B37
 	pla
-	tsb.b wTemp00
-	sta.b wTemp01
+	tsb.b w7f0000
+	sta.b w7f0000+1
 	plp
 	rtl
 
@@ -356,7 +354,7 @@ AreaNames:
 	areaname "幻魔の試練"
 	.db $FD,$FD,$F8,$F8
 	
-	;dragoncry trials
+	;dragoncry trial
 	.db $0A
 	areaname "竜哭の試練"
 	.db $FD,$FD,$F8,$F8
@@ -451,12 +449,12 @@ func_C5CF82:
 	dex
 	bpl @lbl_C5CF9D
 	ldx.w #$B05E
-	stx.b wTemp00
+	stx.b w7f0000
 	lda.b #$7F
-	sta.b wTemp02
+	sta.b w7f0002
 	jsl.l func_80F57C
 	ldx.w #$F5CB
-	stx.b wTemp00
+	stx.b w7f0000
 	jsl.l func_808619
 	rep #$20 ;A->16
 	ldx.w #$000F
@@ -465,19 +463,19 @@ func_C5CF82:
 	jsl.l func_808D3D
 	plx
 	lda.w #$000A
-	sta.b wTemp00
+	sta.b w7f0000
 	lda.w #$0101
-	sta.b wTemp02
-	stx.b wTemp04
+	sta.b w7f0002
+	stx.b w7f0004
 	phx
 	jsl.l func_808A5C
 	jsl.l func_8085B1
 	jsl.l func_80854A
 	lda.w #$0000
-	sta.b wTemp00
+	sta.b w7f0000
 	jsl.l func_80DC69
 	plx
-	lda.b wTemp00
+	lda.b w7f0000
 	bne @lbl_C5CFF4
 	dex
 	bpl @lbl_C5CFC4
@@ -512,26 +510,24 @@ func_C5D009:
 	dey
 	bpl @lbl_C5D018
 	lda.w #$22A0
-	sta.b wTemp00
+	sta.b w7f0000
 	lda.w #$0004
-	sta.b wTemp02
+	sta.b w7f0002
 	lda.w #$3312
-	sta.b wTemp03
+	sta.b w7f0002+1
 	lda.w #$00E0
-	sta.b wTemp05
+	sta.b w7f0004+1
 	lda.w #$0006
-	sta.b wTemp06
-	phb
-	jsl.l func_80F47C
-	plb
+	sta.b w7f0006
+	call_savebank func_80F47C
 	jsr.w func_C5DDB0
 	tdc
 	sta.l $7FDDDE
 	sta.l $7FDDE0
 	lda.w #$E10F
-	sta.b wTemp00
+	sta.b w7f0000
 	lda.w #$00C5
-	sta.b wTemp02
+	sta.b w7f0002
 	jsl.l func_808474
 	plp
 	rtl
@@ -565,7 +561,7 @@ func_C5D082:
 	stz.w $DDEE
 	stz.w $DDF0
 	stz.w $DDE0
-	ldx.b wTemp00
+	ldx.b w7f0000
 	stx.w $DDE4
 	lda.w $DDE2
 	stx.w $DDE2
@@ -1157,7 +1153,7 @@ func_C5E137:
 	bankswitch 0x7F
 	rep #$30 ;AXY->16
 	jsr.w func_C5DB2E
-	lda.b wTemp00
+	lda.b w7f0000
 	jsr.w func_C5DB49
 	plp
 	rtl
@@ -1277,13 +1273,13 @@ func_C5E258:
 	dex
 	bpl @lbl_C5E27F
 	lda.w #$0011
-	sta.b wTemp00
+	sta.b w7f0000
 	tdc
 	tax
 	tay
 @lbl_C5E297:
 	lda.w #$0008
-	sta.b wTemp02
+	sta.b w7f0002
 @lbl_C5E29C:
 	lda.l DATA8_DC0070,x
 	sta.w $B05E,y
@@ -1293,34 +1289,34 @@ func_C5E258:
 	inx
 	iny
 	iny
-	dec.b wTemp02
+	dec.b w7f0002
 	bne @lbl_C5E29C
 	tya
 	clc
 	adc.w #$0010
 	tay
-	dec.b wTemp00
+	dec.b w7f0000
 	bne @lbl_C5E297
 	phb
 	ldx.w #$F556
-	stx.b wTemp00
+	stx.b w7f0000
 	jsl.l func_80860B
 	ldx.w #$F55F
-	stx.b wTemp00
+	stx.b w7f0000
 	jsl.l func_80862D
 	ldx.w #$F568
-	stx.b wTemp00
+	stx.b w7f0000
 	jsl.l func_80862D
 	lda.w #$20D0
-	sta.b wTemp00
+	sta.b w7f0000
 	lda.w #$0004
-	sta.b wTemp02
+	sta.b w7f0002
 	lda.w #$7310
-	sta.b wTemp03
+	sta.b w7f0002+1
 	lda.w #$0086
-	sta.b wTemp05
+	sta.b w7f0004+1
 	lda.w #$0005
-	sta.b wTemp06
+	sta.b w7f0006
 	jsl.l func_80F47C
 	plb
 	ldy.w #$057E
@@ -1331,42 +1327,42 @@ func_C5E258:
 	dey
 	bpl @lbl_C5E2F9
 	lda.w #$0F00
-	sta.b wTemp00
+	sta.b w7f0000
 	jsl.l func_808DCF
 	lda.w #$0004
-	sta.b wTemp00
+	sta.b w7f0000
 	ldx.w #$0034
-	stx.b wTemp02
+	stx.b w7f0002
 	lda.w #$00DC
-	sta.b wTemp04
+	sta.b w7f0004
 	jsl.l func_808833
 	lda.w #$8103
-	sta.b wTemp00
+	sta.b w7f0000
 	ldx.w #$0064
-	stx.b wTemp02
+	stx.b w7f0002
 	jsl.l func_808811
 	lda.w #$9103
-	sta.b wTemp00
+	sta.b w7f0000
 	ldx.w #$006A
-	stx.b wTemp02
+	stx.b w7f0002
 	jsl.l func_808811
 	lda.w #$000E
-	sta.b wTemp00
+	sta.b w7f0000
 	lda.w #$A020
-	sta.b wTemp02
+	sta.b w7f0002
 	lda.w #$1800
-	sta.b wTemp04
+	sta.b w7f0004
 	jsl.l func_808A5C
 	jsl.l func_8085B1
 	lda.w #$00E8
-	sta.b wTemp00
+	sta.b w7f0000
 	jsl.l func_80901D
 	tdc
 	sta.l $7FDDDE
 	lda.w #$F047
-	sta.b wTemp00
+	sta.b w7f0000
 	lda.w #$00C5
-	sta.b wTemp02
+	sta.b w7f0002
 	jsl.l func_808474
 	jsl.l func_80854A
 	plp
@@ -1447,10 +1443,10 @@ func_C5E3E5:
 	sta.w $DE2E,x
 	lda.w #$8000
 	sta.w $DE3A,x
-	lda.b wTemp04
+	lda.b w7f0004
 	and.w #$00FF
 	sta.w $DE46,x
-	lda.b wTemp05
+	lda.b w7f0004+1
 	and.w #$00FF
 	sta.w $DE52,x
 	lda.b [wTemp00]
@@ -1482,7 +1478,7 @@ func_C5E3E5:
 	sta.w $DF5A,x
 	jsr.w func_C5E468
 	pla
-	sta.b wTemp00
+	sta.b w7f0000
 	plp
 	rtl
 
@@ -1583,8 +1579,8 @@ func_C5E52B:
 	plx
 	lda.w #$0000
 	sta.l $7FDF5A,x
-	stx.b wTemp00
-	stz.b wTemp02
+	stx.b w7f0000
+	stz.b w7f0002
 	phx
 	jsl.l func_C5ED1F
 	plx
@@ -1734,14 +1730,14 @@ func_C5E650:
 	ora.b w00e5
 	sta.w $D85C,x
 	lda.w $DE5E,y
-	sta.b wTemp02
+	sta.b w7f0002
 	lda.w #$20D3
 	ora.b w00e5
 @lbl_C5E684:
 	sta.w $D85E,x
 	inx
 	inx
-	dec.b wTemp02
+	dec.b w7f0002
 	bne @lbl_C5E684
 	lda.w #$20D4
 	ora.b w00e5
@@ -1753,9 +1749,9 @@ func_C5E650:
 	adc.w $DE46,y
 	adc.w #$2560
 	ora.b w00e5
-	sta.b wTemp06
+	sta.b w7f0006
 	lda.w $DE6A,y
-	sta.b wTemp04
+	sta.b w7f0004
 	plx
 @lbl_C5E6AB:
 	phx
@@ -1763,16 +1759,16 @@ func_C5E650:
 	ora.b w00e5
 	sta.w $D89C,x
 	lda.w $DE5E,y
-	sta.b wTemp02
-	lda.b wTemp06
-	sta.b wTemp00
+	sta.b w7f0002
+	lda.b w7f0006
+	sta.b w7f0000
 @lbl_C5E6BD:
-	lda.b wTemp00
+	lda.b w7f0000
 	sta.w $D89E,x
 	inx
 	inx
-	inc.b wTemp00
-	dec.b wTemp02
+	inc.b w7f0000
+	dec.b w7f0002
 	bne @lbl_C5E6BD
 	lda.w #$20DB
 	ora.b w00e5
@@ -1781,39 +1777,39 @@ func_C5E650:
 	clc
 	adc.w #$0040
 	tax
-	lda.b wTemp06
+	lda.b w7f0006
 	clc
 	adc.w #$0020
-	sta.b wTemp06
-	dec.b wTemp04
+	sta.b w7f0006
+	dec.b w7f0004
 	bne @lbl_C5E6AB
 	lda.w #$20DC
 	ora.b w00e5
 	sta.w $D89C,x
 	lda.w $DE5E,y
-	sta.b wTemp02
+	sta.b w7f0002
 	lda.w #$20DE
 	ora.b w00e5
 @lbl_C5E6F6:
 	sta.w $D89E,x
 	inx
 	inx
-	dec.b wTemp02
+	dec.b w7f0002
 	bne @lbl_C5E6F6
 	lda.w #$20DF
 	ora.b w00e5
 	sta.w $D89E,x
 	pla
-	sta.b wTemp00
+	sta.b w7f0000
 	pla
-	sta.b wTemp04
+	sta.b w7f0004
 	beq @lbl_C5E73C
 	.db $0A,$18,$79,$BE,$DE,$AA,$A9,$D2,$20,$05,$E5,$9D,$5C,$D8,$B9,$6A   ;C5E70F
 	.db $DE,$85,$02,$A9,$DA,$20,$05,$E5,$9D,$9C,$D8,$8A,$18,$69,$40,$00   ;C5E71F  
 	.db $AA,$C6,$02,$D0,$EE,$A9,$DD,$20   ;C5E72F
 	.db $05,$E5,$9D,$9C,$D8               ;C5E737  
 @lbl_C5E73C:
-	lda.b wTemp00
+	lda.b w7f0000
 	and.w #$FF00
 	beq @lbl_C5E780
 	.db $4A,$4A,$18,$79,$BE,$DE,$AA,$85,$06,$A9,$D5,$20,$05,$E5,$9D,$5C   ;C5E743
@@ -1827,7 +1823,7 @@ func_C5E650:
 	adc.w $DE6A,y
 	tax
 	lda.l func_C5E793,x
-	sta.b wTemp00
+	sta.b w7f0000
 	jsl.l func_80F414
 	plp
 
@@ -1877,30 +1873,30 @@ func_C5E7DE:
 	rep #$30 ;AXY->16
 	ldy.b w00ed
 	lda.w $DE6A,y
-	sta.b wTemp02
+	sta.b w7f0002
 	lda.w $DECA,y
 	asl a
 	dec a
 	dec a
 	dec a
-	sta.b wTemp04
+	sta.b w7f0004
 	lda.w $DEE2,y
 	clc
 	adc.w #$B05E
-	sta.b wTemp00
+	sta.b w7f0000
 @lbl_C5E800:
 	tax
 	txy
 	iny
 	iny
-	stz.w wTemp00,x
-	lda.b wTemp04
+	stz.w w7f0000,x
+	lda.b w7f0004
 	mvn $7F,$7F
-	lda.b wTemp00
+	lda.b w7f0000
 	clc
 	adc.w #$0200
-	sta.b wTemp00
-	dec.b wTemp02
+	sta.b w7f0000
+	dec.b w7f0002
 	bne @lbl_C5E800
 	plp
 	rtl
@@ -1924,9 +1920,7 @@ func_C5E81A:
 func_C5E837:
 	php
 	rep #$30 ;AXY->16
-	phb
-	jsl.l func_C4C1AA
-	plb
+	call_savebank func_C4C1AA
 	stz.b wTemp01
 	bra @lbl_C5E857
 ;C5E844
@@ -1951,9 +1945,7 @@ func_C5E837:
 	pha
 	lda.b ($06)
 	sta.b wTemp04
-	phb
-	jsl.l func_C5EB42
-	plb
+	call_savebank func_C5EB42
 	ply
 	bra @lbl_C5E883
 @lbl_C5E87A:
@@ -1971,9 +1963,7 @@ func_C5E837:
 	pha
 	lda.b wTemp06
 	pha
-	phb
-	jsl.l func_C5E97B
-	plb
+	call_savebank func_C5E97B
 	pla
 	sta.b wTemp06
 	pla
@@ -1991,20 +1981,18 @@ func_C5E8A3:
 	rep #$30 ;AXY->16
 @lbl_C5E8B0:
 	ldy.w #$DF66
-	sty.b wTemp02
+	sty.b w7f0002
 	jsl.l func_C4BF88
 	bcc @lbl_C5E8CF
-	lda.b wTemp02
+	lda.b w7f0002
 	cmp.w #$FFFF
 	beq @lbl_C5E8E1
 	cmp.w #$FFFE
 	bne @lbl_C5E8B0
-	phb
-	jsl.l func_C5E81A
-	plb
+	call_savebank func_C5E81A
 	bra @lbl_C5E8B0
 @lbl_C5E8CF:
-	lda.b wTemp00
+	lda.b w7f0000
 	pha
 	phb
 	phk
@@ -2013,7 +2001,7 @@ func_C5E8A3:
 	jmp.w func_C5E99B
 	plb
 	pla
-	sta.b wTemp00
+	sta.b w7f0000
 	bra @lbl_C5E8B0
 @lbl_C5E8E1:
 	plp
@@ -2027,23 +2015,21 @@ func_C5E8E3:
 	rep #$30 ;AXY->16
 @lbl_C5E8F0:
 	ldy.w #$DF66
-	sty.b wTemp02
+	sty.b w7f0002
 	jsl.l func_C4BF88
 	bcc @lbl_C5E90F
-	lda.b wTemp02
+	lda.b w7f0002
 	cmp.w #$FFFF
 	beq @lbl_C5E93D
 	cmp.w #$FFFE
 	bne @lbl_C5E8F0
-	phb
-	jsl.l func_C5E81A
-	plb
+	call_savebank func_C5E81A
 	bra @lbl_C5E8F0
 @lbl_C5E90F:
-	lda.b wTemp00
+	lda.b w7f0000
 	pha
 	ldx.b w00ed
-	lda.b wTemp04
+	lda.b w7f0004
 	and.w #$00FF
 	clc
 	adc.w $DF12,x
@@ -2063,7 +2049,7 @@ func_C5E8E3:
 	jmp.w func_C5E99B
 	plb
 	pla
-	sta.b wTemp00
+	sta.b w7f0000
 	bra @lbl_C5E8F0
 @lbl_C5E93D:
 	plp
@@ -2258,9 +2244,9 @@ func_C5EB42:
 	lda.w $DF1E,y
 	and.w #$0007
 	sta.b w00e7
-	lda.b wTemp05
+	lda.b w7f0004+1
 	and.w #$00FF
-	sta.b wTemp04
+	sta.b w7f0004
 	lda.w $DF12,y
 	and.w #$0007
 	tay
@@ -2295,7 +2281,7 @@ func_C5EB42:
 	bpl @lbl_C5EB99
 	plx
 @lbl_C5EBA5:
-	dec.b wTemp04
+	dec.b w7f0004
 	beq @lbl_C5EBBA
 	dec.b w00e7
 	bpl @lbl_C5EB89
@@ -2603,9 +2589,7 @@ func_C5EE15:
 func_C5EE1C:
 	stx.b wTemp00
 	phx
-	phb
-	jsl.l func_C5E650
-	plb
+	call_savebank func_C5E650
 	plx
 	lda.w $DE2C
 	ora.w $DE3A,x
@@ -2614,9 +2598,7 @@ func_C5EE1C:
 	sta.w $DE3A,x
 	stx.b wTemp00
 	phx
-	phb
-	jsl.l func_C5E7A8
-	plb
+	call_savebank func_C5E7A8
 	plx
 @lbl_C5EE3E:
 	lda.w $DE46,x
@@ -2628,9 +2610,7 @@ func_C5EE1C:
 	sta.b wTemp06
 	stx.b wTemp00
 	phx
-	phb
-	jsl.l func_C5EDB1
-	plb
+	call_savebank func_C5EDB1
 	plx
 	phx
 	lda.w $DF5A,x
@@ -2663,9 +2643,7 @@ func_C5EE1C:
 	lda.b wTemp01,s
 	sta.b wTemp00
 	stz.b wTemp02
-	phb
-	jsl.l func_C5ED1F
-	plb
+	call_savebank func_C5ED1F
 @lbl_C5EE98:
 	plx
 	jmp.w func_C5EE15
@@ -2679,9 +2657,7 @@ func_C5EE9C:
 	beq @lbl_C5EF02
 	stx.b wTemp00
 	phx
-	phb
-	jsl.l func_C5EC8B
-	plb
+	call_savebank func_C5EC8B
 	plx
 	lda.w $DF42,x
 	clc
@@ -2716,9 +2692,7 @@ func_C5EE9C:
 	bpl @lbl_C5EEFD
 	lda.b wTemp01,s
 	sta.b wTemp00
-	phb
-	jsl.l func_C5ECF0
-	plb
+	call_savebank func_C5ECF0
 	bra @lbl_C5EF01
 @lbl_C5EEFD:
 	dex
@@ -2743,15 +2717,13 @@ func_C5EF0E:
 	lda.w $DE2A
 	cmp.w #$FFFF
 	beq @lbl_C5EF2D
-	sta.b wTemp00
-	phb
-	jsl.l func_818049
-	plb
+	sta.b w7f0000
+	call_savebank func_818049
 	lda.w #$FFFF
 	sta.w $DE2A
 @lbl_C5EF2D:
 	jsl.l func_80F448
-	lda.b wTemp00
+	lda.b w7f0000
 	sta.w $DE28
 	ldy.w #$0170
 	lda.w #$00FF
@@ -2773,25 +2745,25 @@ func_C5EF0E:
 	lda.w $DEA6,x
 	sec
 	sbc.b #$07
-	sta.b wTemp00
+	sta.b w7f0000
 	clc
 	adc.w $DECA,x
 	adc.b #$0D
-	sta.b wTemp01
+	sta.b w7f0000+1
 	tdc
 	lda.w $DED6,x
 	clc
 	adc.b #$0E
 	phx
 	tax
-	lda.b wTemp00
+	lda.b w7f0000
 	cmp.w $AE9A,y
 	bcs @lbl_C5EF79
 	sta.w $AE9A,y
 @lbl_C5EF79:
 	dec a
 	xba
-	lda.b wTemp01
+	lda.b w7f0000+1
 	cmp.w $AE9B,y
 	bcc @lbl_C5EF85
 	sta.w $AE9B,y
@@ -2812,12 +2784,12 @@ func_C5EF0E:
 	iny
 	dex
 	bne @lbl_C5EF86
-	lda.b wTemp00
+	lda.b w7f0000
 	cmp.w $AE9C,y
 	bcs @lbl_C5EFA7
 	sta.w $AE9C,y
 @lbl_C5EFA7:
-	lda.b wTemp01
+	lda.b w7f0000+1
 	cmp.w $AE9D,y
 	bcc @lbl_C5EFB1
 	sta.w $AE9D,y
@@ -2829,10 +2801,10 @@ func_C5EF0E:
 	bpl @lbl_C5EF48
 	rep #$30 ;AXY->16
 	ldx.w #$F595
-	stx.b wTemp00
+	stx.b w7f0000
 	jsl.l func_80860B
 	ldx.w #$F57A
-	stx.b wTemp00
+	stx.b w7f0000
 	jsl.l func_80862D
 	lda.w #$0002
 	sta.l $7FDDDE
@@ -2843,13 +2815,13 @@ func_C5EF0E:
 	bne @lbl_C5EFE4
 	ldx.w #$F5A7
 @lbl_C5EFE4:
-	stx.b wTemp00
+	stx.b w7f0000
 	jsl.l func_80860B
 	ldx.w #$F583
-	stx.b wTemp00
+	stx.b w7f0000
 	jsl.l func_80862D
 	lda.w #$0C00
-	sta.b wTemp00
+	sta.b w7f0000
 	lda.l $7FDABC
 	cmp.w #$20D0
 	beq @lbl_C5F007
@@ -2870,11 +2842,11 @@ func_C5EF0E:
 	asl a
 	tax
 	lda.l DATA8_C5F041,x
-	sta.b wTemp00
+	sta.b w7f0000
 	jsl.l func_80860B
 @lbl_C5F036:
 	ldx.w #$F58C
-	stx.b wTemp00
+	stx.b w7f0000
 	jsl.l func_808619
 	plp
 	rtl

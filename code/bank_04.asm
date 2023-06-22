@@ -28,140 +28,96 @@ func_C4000B:
 	sta.w $A9BE
 	lda.b #$0F
 	sta.w $A9BD
-	stz.b wTemp00
-	phb
-	jsl.l func_C43453
-	plb
-	phb
-	jsl.l func_C433A8
-	plb
+	stz.b w7f0000
+	call_savebank func_C43453
+	call_savebank func_C433A8
 	lda.b #$09
-	sta.b wTemp00
-	phb
-	jsl.l func_C460FA
-	plb
+	sta.b w7f0000
+	call_savebank func_C460FA
 	lda.b #$04
-	sta.b wTemp00
-	lda.b wTemp00
+	sta.b w7f0000
+	lda.b w7f0000
 	pha
-	phb
-	jsl.l func_C460FA
-	plb
+	call_savebank func_C460FA
 	pla
-	sta.b wTemp00
-	inc.b wTemp00
-	lda.b wTemp00
+	sta.b w7f0000
+	inc.b w7f0000
+	lda.b w7f0000
 	pha
-	phb
-	jsl.l func_C460FA
-	plb
+	call_savebank func_C460FA
 	pla
-	sta.b wTemp00
-	inc.b wTemp00
-	phb
-	jsl.l func_C460FA
-	plb
-	phb
-	jsl.l func_C44069
-	plb
-	phb
-	jsl.l func_C44A3E
-	plb
-	phb
-	jsl.l func_C4412D
-	plb
+	sta.b w7f0000
+	inc.b w7f0000
+	call_savebank func_C460FA
+	call_savebank func_C44069
+	call_savebank func_C44A3E
+	call_savebank func_C4412D
 	lda.b #$07
-	sta.b wTemp00
-	stz.b wTemp02
-	phb
-	jsl.l func_C44154
-	plb
+	sta.b w7f0000
+	stz.b w7f0002
+	call_savebank func_C44154
 	lda.b #$08
-	sta.b wTemp00
-	stz.b wTemp02
-	phb
-	jsl.l func_C44154
-	plb
+	sta.b w7f0000
+	stz.b w7f0002
+	call_savebank func_C44154
 	lda.b #$13
-	sta.b wTemp00
+	sta.b w7f0000
 	jsl.l func_808F59
 	ldx.w #$0008
-	stx.b wTemp00
+	stx.b w7f0000
 	ldx.w #$0000
-	stx.b wTemp02
+	stx.b w7f0002
 	ldx.w #$FFFF
-	stx.b wTemp04
+	stx.b w7f0004
 	jsl.l func_808ED0
-	stz.b wTemp06
-	phb
-	jsl.l func_C46083
-	plb
+	stz.b w7f0006
+	call_savebank func_C46083
 	ldx.w #$0004
-	stx.b wTemp00
+	stx.b w7f0000
 	ldx.w #$0000
-	stx.b wTemp02
+	stx.b w7f0002
 	ldx.w #$0025
-	stx.b wTemp04
+	stx.b w7f0004
 	jsl.l func_808ED0
 	lda.b #$31
-	sta.b wTemp06
+	sta.b w7f0006
 	lda.b #$18
-	sta.b wTemp07
-	phb
-	jsl.l func_C45FA5
-	plb
+	sta.b w7f0006+1
+	call_savebank func_C45FA5
 	lda.b #$03
-	sta.b wTemp06
-	phb
-	jsl.l func_C46083
-	plb
+	sta.b w7f0006
+	call_savebank func_C46083
 	lda.b #$0A
 	sta.w $A9C1
-	phb
-	jsl.l func_C44A96
-	plb
+	call_savebank func_C44A96
 	bcc @lbl_C400FD
 	brl @lbl_C40145
 @lbl_C400FD:
 	ldy.w #$00FF
-	sty.b wTemp00
+	sty.b w7f0000
 	jsl.l func_809664
-	phb
-	jsl.l func_C43F17
-	plb
+	call_savebank func_C43F17
 	ldx.w #$0000
-	stx.b wTemp00
-	phb
-	jsl.l func_818049
-	plb
-	phb
-	jsl.l func_C44A53
-	plb
+	stx.b w7f0000
+	call_savebank func_818049
+	call_savebank func_C44A53
 	lda.b #$0F
 	sta.w $A9BD
-	phb
-	jsl.l func_C4095B
-	plb
+	call_savebank func_C4095B
 	bcs @lbl_C40145
 	ldx.w #$0003
 @lbl_C4012D:
 	phx
-	phb
-	jsl.l func_C45BCE
-	plb
+	call_savebank func_C45BCE
 	plx
 	bcs @lbl_C40145
 	dex
 	bne @lbl_C4012D
-	phb
-	jsl.l func_C6324C
-	plb
+	call_savebank func_C6324C
 	bcs @lbl_C40145
 	brl func_C4000B
 @lbl_C40145:
-	phb
-	jsl.l func_C44A53
-	plb
+	call_savebank func_C44A53
 	plp
 	rtl
 
@@ -184,86 +140,46 @@ func_C4014D:
 	bankswitch 0x7F
 	lda.b #$01
 	sta.w $A9BE
-	phb
-	jsl.l func_C40317
-	plb
+	call_savebank func_C40317
 	bcc @lbl_C40197
 	brl @lbl_C40205
 @lbl_C40197:
-	phb
-	jsl.l func_C44A53
-	plb
-	phb
-	jsl.l func_C404EF
-	plb
+	call_savebank func_C44A53
+	call_savebank func_C404EF
 	bcs @lbl_C40205
-	phb
-	jsl.l func_C44A53
-	plb
-	phb
-	jsl.l func_C40709
-	plb
+	call_savebank func_C44A53
+	call_savebank func_C40709
 	bcs @lbl_C40205
-	phb
-	jsl.l func_C44A53
-	plb
-	phb
-	jsl.l func_C40CB8
-	plb
+	call_savebank func_C44A53
+	call_savebank func_C40CB8
 	bcs @lbl_C40205
-	phb
-	jsl.l func_C40E4C
-	plb
+	call_savebank func_C40E4C
 	bcs @lbl_C40205
-	phb
-	jsl.l func_C410A0
-	plb
+	call_savebank func_C410A0
 	bcs @lbl_C40205
-	phb
-	jsl.l func_C44A53
-	plb
-	phb
-	jsl.l func_C411FB
-	plb
+	call_savebank func_C44A53
+	call_savebank func_C411FB
 	bcs @lbl_C40205
-	phb
-	jsl.l func_C412CA
-	plb
+	call_savebank func_C412CA
 	bcs @lbl_C40205
-	phb
-	jsl.l func_C413A0
-	plb
+	call_savebank func_C413A0
 	bcs @lbl_C40205
-	phb
-	jsl.l func_C44A53
-	plb
-	phb
-	jsl.l func_C41628
-	plb
+	call_savebank func_C44A53
+	call_savebank func_C41628
 	bcs @lbl_C40205
-	phb
-	jsl.l func_C41767
-	plb
+	call_savebank func_C41767
 	bcs @lbl_C40205
 @lbl_C40205:
-	phb
-	jsl.l func_808451
-	plb
+	call_savebank func_808451
 	ldx.w #$0100
-	stx.b wTemp00
+	stx.b w7f0000
 	jsl.l func_809664
 	jsl.l func_809684
 	jsl.l func_808A00
 	jsl.l func_8085B1
-	phb
-	jsl.l func_C44A53
-	plb
-	phb
-	jsl.l func_80DE75
-	plb
-	phb
-	jsl.l func_809D10
-	plb
+	call_savebank func_C44A53
+	call_savebank func_80DE75
+	call_savebank func_809D10
 	plp
 	rtl
 	.db $08,$E2,$20,$C2,$10,$22,$84,$9D,$80,$22,$CB,$DE,$80,$A9,$7F,$48   ;C40234
@@ -288,70 +204,52 @@ func_C40317:
 	rep #$10 ;XY->16
 	bankswitch 0x7F
 	ldx.w #$0002
-	stx.b wTemp00
-	phb
-	jsl.l func_818049
-	plb
+	stx.b w7f0000
+	call_savebank func_818049
 	lda.b #$03
-	sta.b wTemp00
-	phb
-	jsl.l func_C43453
-	plb
-	phb
-	jsl.l func_C433A8
-	plb
+	sta.b w7f0000
+	call_savebank func_C43453
+	call_savebank func_C433A8
 	lda.b #$0F
 	sta.w $A9BD
-	phb
-	jsl.l func_C43537
-	plb
+	call_savebank func_C43537
 	ldx.w #$6000
 	stx.w $9D08
 	ldx.w #$6400
 	stx.w $9D0A
-	phb
-	jsl.l func_C46178
-	plb
-	phb
-	jsl.l func_C46269
-	plb
+	call_savebank func_C46178
+	call_savebank func_C46269
 	lda.b #$07
-	sta.b wTemp00
-	phb
-	jsl.l func_C460FA
-	plb
+	sta.b w7f0000
+	call_savebank func_C460FA
 	stz.w $A57A
-	phb
-	jsl.l func_C4493E
-	plb
+	call_savebank func_C4493E
 	lda.b #$07
-	sta.b wTemp06
-	phb
-	jsl.l func_C46083
-	plb
+	sta.b w7f0006
+	call_savebank func_C46083
 	lda.b #$07
-	sta.b wTemp00
+	sta.b w7f0000
 	jsl.l func_808F59
 	lda.b #$07
-	sta.b wTemp00
+	sta.b w7f0000
 	jsl.l func_808F85
 	lda.b #$00
-	sta.b wTemp00
+	sta.b w7f0000
 	lda.b #$00
-	sta.b wTemp02
+	sta.b w7f0002
 	lda.b #$FE
-	sta.b wTemp03
+	sta.b w7f0002+1
 	jsl.l func_808FEC
 	ldx.w #$0008
-	stx.b wTemp00
+	stx.b w7f0000
 	ldx.w #$003C
-	stx.b wTemp02
+	stx.b w7f0002
 	stx.w $9CE8
 	ldx.w #$0000
-	stx.b wTemp04
+	stx.b w7f0004
 	jsl.l func_808ED0
 	ldx.w #$0028
-	stx.b wTemp00
+	stx.b w7f0000
 	jsl.l func_809650
 	jsl.l func_80854A
 	ldy.w #$0001
@@ -362,9 +260,7 @@ func_C403C1:
 	lda.b #$01
 	sta.b wTemp03
 	phy
-	phb
-	jsl.l func_C482D0
-	plb
+	call_savebank func_C482D0
 	ply
 @lbl_C403D2:
 	lda.b #$01
@@ -372,16 +268,12 @@ func_C403C1:
 	ldx.w #$6800
 	stx.b wTemp04
 	phy
-	phb
-	jsl.l func_C484CB
-	plb
+	call_savebank func_C484CB
 	ply
 	ldx.w #$0001
 	stx.b wTemp00
 	phy
-	phb
-	jsl.l func_C43F40
-	plb
+	call_savebank func_C43F40
 	ply
 	bcc @lbl_C403F5
 	brl @lbl_C404EC
@@ -394,9 +286,7 @@ func_C403C1:
 	lda.b #$01
 	sta.b wTemp03
 	phy
-	phb
-	jsl.l func_C482AD
-	plb
+	call_savebank func_C482AD
 	ply
 	ldy.w #$0000
 @lbl_C4040F:
@@ -421,9 +311,7 @@ func_C403C1:
 	lda.b #$01
 	sta.b wTemp02
 	phy
-	phb
-	jsl.l func_C44154
-	plb
+	call_savebank func_C44154
 	ply
 @lbl_C40444:
 	ldx.w $9CE8
@@ -433,18 +321,14 @@ func_C403C1:
 @lbl_C4044F:
 	ldx.w #$0080
 	stx.b wTemp00
-	phb
-	jsl.l func_C43F40
-	plb
+	call_savebank func_C43F40
 	bcc @lbl_C4045F
 ;C4045C  
 	.db $82,$8D,$00
 @lbl_C4045F:
 	ldx.w #$0002
 	stx.b wTemp00
-	phb
-	jsl.l func_818049
-	plb
+	call_savebank func_818049
 @lbl_C4046A:
 	ldx.w $9CF4
 	inx
@@ -459,26 +343,20 @@ func_C403C1:
 	lda.b #$01
 	sta.b wTemp00
 	phy
-	phb
-	jsl.l func_C4677C
-	plb
+	call_savebank func_C4677C
 	ply
 	jsl.l func_808600
 	ldx.w #$0003
 	stx.b wTemp00
 	phy
-	phb
-	jsl.l func_C43F40
-	plb
+	call_savebank func_C43F40
 	ply
 	bcs @lbl_C404EC
 	jsl.l func_8085F7
 	ldx.w #$0003
 	stx.b wTemp00
 	phy
-	phb
-	jsl.l func_C43F40
-	plb
+	call_savebank func_C43F40
 	ply
 	bcs @lbl_C404EC
 	ldx.w $9CF4
@@ -486,16 +364,12 @@ func_C403C1:
 	bne @lbl_C4046A
 	ldx.w #$01A0
 	stx.b wTemp00
-	phb
-	jsl.l func_C43F40
-	plb
+	call_savebank func_C43F40
 	bcs @lbl_C404EC
 	ldx.w #$0020
 	stx.b wTemp00
 	jsl.l func_809664
-	phb
-	jsl.l func_C43F17
-	plb
+	call_savebank func_C43F17
 	bcs @lbl_C404EC
 	ldx.w #$493E
 	stx.b wTemp00
@@ -516,96 +390,72 @@ func_C404EF:
 	rep #$10 ;XY->16
 	bankswitch 0x7F
 	ldx.w #$03E7
-	stx.b wTemp00
-	phb
-	jsl.l func_818049
-	plb
+	stx.b w7f0000
+	call_savebank func_818049
 	lda.b #$02
-	sta.b wTemp00
-	phb
-	jsl.l func_C43453
-	plb
-	phb
-	jsl.l func_C433A8
-	plb
+	sta.b w7f0000
+	call_savebank func_C43453
+	call_savebank func_C433A8
 	lda.b #$0F
 	sta.w $A9BD
-	phb
-	jsl.l func_C435D9
-	plb
+	call_savebank func_C435D9
 	ldx.w #$3000
 	stx.w $9D08
 	ldx.w #$3400
 	stx.w $9D0A
-	phb
-	jsl.l func_C46178
-	plb
-	phb
-	jsl.l func_C46269
-	plb
+	call_savebank func_C46178
+	call_savebank func_C46269
 	lda.b #$07
-	sta.b wTemp00
-	phb
-	jsl.l func_C460FA
-	plb
+	sta.b w7f0000
+	call_savebank func_C460FA
 	ldx.w #$0080
 	stx.w $9CE8
 	stx.w $9CF4
 	ldx.w #$0004
-	stx.b wTemp00
+	stx.b w7f0000
 	ldx.w $9CF4
-	stx.b wTemp02
+	stx.b w7f0002
 	ldx.w #$0000
-	stx.b wTemp04
+	stx.b w7f0004
 	jsl.l func_808ED0
 	ldx.w #$0008
-	stx.b wTemp00
+	stx.b w7f0000
 	ldx.w $9CE8
-	stx.b wTemp02
+	stx.b w7f0002
 	ldx.w #$0000
-	stx.b wTemp04
+	stx.b w7f0004
 	jsl.l func_808ED0
 	lda.b #$16
-	sta.b wTemp00
+	sta.b w7f0000
 	jsl.l func_808F59
-	phb
-	jsl.l func_C063D1
-	plb
+	call_savebank func_C063D1
 	ldx.w #$0013
-	stx.b wTemp00
+	stx.b w7f0000
 	ldx.w #$00D8
-	stx.b wTemp02
+	stx.b w7f0002
 	ldx.w #$0500
-	stx.b wTemp04
-	stx.b wTemp06
-	phb
-	jsl.l func_C06C80
-	plb
+	stx.b w7f0004
+	stx.b w7f0006
+	call_savebank func_C06C80
 	ldx.w #$C700
-	stx.b wTemp00
+	stx.b w7f0000
 	ldx.w #$06C0
-	stx.b wTemp02
+	stx.b w7f0002
 	ldx.w #$0506
-	stx.b wTemp04
-	stx.b wTemp06
-	phb
-	jsl.l func_C06C80
-	plb
-	phb
-	jsl.l func_C07663
-	plb
+	stx.b w7f0004
+	stx.b w7f0006
+	call_savebank func_C06C80
+	call_savebank func_C07663
 	stz.w $A9BF
 	ldx.w #$0028
-	stx.b wTemp00
+	stx.b w7f0000
 	jsl.l func_809650
-	phb
-	jsl.l func_C43F17
-	plb
+	call_savebank func_C43F17
 	bcc @lbl_C405C8
 ;C405C5  
 	.db $82,$3E,$01
 @lbl_C405C8:
-	stz.b wTemp06
+	stz.b w7f0006
 	stz.w $9CF0
 	stz.w $9CFE
 
@@ -643,9 +493,7 @@ func_C405D0:
 	stx.b wTemp00
 	lda.b wTemp06
 	pha
-	phb
-	jsl.l func_C4677C
-	plb
+	call_savebank func_C4677C
 	pla
 	sta.b wTemp06
 @lbl_C40629:
@@ -653,9 +501,7 @@ func_C405D0:
 	stx.b wTemp00
 	lda.b wTemp06
 	pha
-	phb
-	jsl.l func_C43F67
-	plb
+	call_savebank func_C43F67
 	pla
 	sta.b wTemp06
 	bcc @lbl_C4063F
@@ -717,9 +563,7 @@ func_C4065F:
 @lbl_C406B6:
 	ldx.w #$0002
 	stx.b wTemp00
-	phb
-	jsl.l func_C4677C
-	plb
+	call_savebank func_C4677C
 @lbl_C406C1:
 	lda.w $9CFE
 	beq @lbl_C406CD
@@ -729,9 +573,7 @@ func_C4065F:
 @lbl_C406CD:
 	ldx.w #$0001
 	stx.b wTemp00
-	phb
-	jsl.l func_C43F67
-	plb
+	call_savebank func_C43F67
 	bcs @lbl_C40706
 	ldx.w $9CF0
 	cpx.w #$03D0
@@ -740,22 +582,18 @@ func_C4065F:
 @lbl_C406E5:
 	ldx.w #$0010
 	stx.b wTemp00
-	phb
-	jsl.l func_C43F40
-	plb
+	call_savebank func_C43F40
 	bcs @lbl_C40706
 	ldx.w #$00FF
 	stx.b wTemp00
 	jsl.l func_809664
-	phb
-	jsl.l func_C43F17
-	plb
+	call_savebank func_C43F17
 	bcs @lbl_C40706
 	plp
 	clc
 	rtl
 @lbl_C40706:
-	.db $28,$38,$6B                       ;C40706
+	.db $28,$38,$6B
 
 func_C40709:
 	php
@@ -763,18 +601,12 @@ func_C40709:
 	rep #$10 ;XY->16
 	bankswitch 0x7F
 	lda.b #$04
-	sta.b wTemp00
-	phb
-	jsl.l func_C43453
-	plb
-	phb
-	jsl.l func_C433A8
-	plb
+	sta.b w7f0000
+	call_savebank func_C43453
+	call_savebank func_C433A8
 	lda.b #$0F
 	sta.w $A9BD
-	phb
-	jsl.l func_C43627
-	plb
+	call_savebank func_C43627
 	ldx.w #$005F
 	stx.w $9CEC
 	ldx.w #$FF9C
@@ -787,122 +619,86 @@ func_C40709:
 	stx.w $9CFC
 	ldx.w #$0000
 	stx.w $9CFE
-	phb
-	jsl.l func_C444CC
-	plb
+	call_savebank func_C444CC
 	lda.b #$05
-	sta.b wTemp06
-	phb
-	jsl.l func_C46083
-	plb
-	phb
-	jsl.l func_C445D1
-	plb
+	sta.b w7f0006
+	call_savebank func_C46083
+	call_savebank func_C445D1
 	lda.b #$06
-	sta.b wTemp06
-	phb
-	jsl.l func_C46083
-	plb
+	sta.b w7f0006
+	call_savebank func_C46083
 	lda.b #$13
-	sta.b wTemp04
+	sta.b w7f0004
 	lda.b #$04
-	sta.b wTemp05
+	sta.b w7f0004+1
 	lda.b #$41
-	sta.b wTemp06
+	sta.b w7f0006
 	lda.b #$20
-	sta.b wTemp07
-	phb
-	jsl.l func_C46015
-	plb
+	sta.b w7f0006+1
+	call_savebank func_C46015
 	lda.b #$03
-	sta.b wTemp06
-	phb
-	jsl.l func_C46083
-	plb
+	sta.b w7f0006
+	call_savebank func_C46083
 	ldx.w #$3000
 	stx.w $9D08
 	ldx.w #$3400
 	stx.w $9D0A
-	phb
-	jsl.l func_C46178
-	plb
-	phb
-	jsl.l func_C46269
-	plb
+	call_savebank func_C46178
+	call_savebank func_C46269
 	lda.b #$07
-	sta.b wTemp00
-	phb
-	jsl.l func_C460FA
-	plb
+	sta.b w7f0000
+	call_savebank func_C460FA
 	lda.b #$13
-	sta.b wTemp00
+	sta.b w7f0000
 	jsl.l func_808F59
-	phb
-	jsl.l func_C063D1
-	plb
+	call_savebank func_C063D1
 	ldx.w #$0013
-	stx.b wTemp00
+	stx.b w7f0000
 	ldx.w #$00D9
-	stx.b wTemp02
+	stx.b w7f0002
 	ldx.w #$0507
-	stx.b wTemp04
-	stx.b wTemp06
-	phb
-	jsl.l func_C06C80
-	plb
+	stx.b w7f0004
+	stx.b w7f0006
+	call_savebank func_C06C80
 	ldx.w #$C700
-	stx.b wTemp00
+	stx.b w7f0000
 	ldx.w #$06C1
-	stx.b wTemp02
+	stx.b w7f0002
 	ldx.w #$0508
-	stx.b wTemp04
-	stx.b wTemp06
-	phb
-	jsl.l func_C06C80
-	plb
-	phb
-	jsl.l func_C07663
-	plb
+	stx.b w7f0004
+	stx.b w7f0006
+	call_savebank func_C06C80
+	call_savebank func_C07663
 	stz.w $A9BF
 	ldx.w #$0002
-	stx.b wTemp00
-	phb
-	jsl.l func_C43F67
-	plb
+	stx.b w7f0000
+	call_savebank func_C43F67
 	bcc @lbl_C40808
 ;C40805  
 	.db $82,$50,$01
 @lbl_C40808:
 	ldx.w #$0026
-	stx.b wTemp00
-	phb
-	jsl.l func_818049
-	plb
+	stx.b w7f0000
+	call_savebank func_818049
 	ldx.w #$00FF
-	stx.b wTemp00
+	stx.b w7f0000
 	jsl.l func_809650
-	phb
-	jsl.l func_C43F17
-	plb
+	call_savebank func_C43F17
 	ldy.w #$00FF
 @lbl_C40825:
 	tya
 	bit.b #$01
 	bne @lbl_C40837
 	ldx.w #$0003
-	stx.b wTemp00
+	stx.b w7f0000
 	phy
-	phb
-	jsl.l func_C4677C
-	plb
+	call_savebank func_C4677C
 	ply
 @lbl_C40837:
 	ldx.w #$0001
-	stx.b wTemp00
+	stx.b w7f0000
 	phy
-	phb
-	jsl.l func_C43F67
-	plb
+	call_savebank func_C43F67
 	ply
 	bcc @lbl_C40849
 ;C40846  
@@ -910,8 +706,8 @@ func_C40709:
 @lbl_C40849:
 	dey
 	bne @lbl_C40825
-	stz.b wTemp02
-	stz.b wTemp04
+	stz.b w7f0002
+	stz.b w7f0004
 
 func_C40850:
 	inc.b wTemp02
@@ -946,9 +742,7 @@ func_C40850:
 	pha
 	lda.b wTemp04
 	pha
-	phb
-	jsl.l func_C444CC
-	plb
+	call_savebank func_C444CC
 	pla
 	sta.b wTemp04
 	pla
@@ -983,9 +777,7 @@ func_C40850:
 	pha
 	lda.b wTemp04
 	pha
-	phb
-	jsl.l func_C445D1
-	plb
+	call_savebank func_C445D1
 	pla
 	sta.b wTemp04
 	pla
@@ -1000,9 +792,7 @@ func_C40850:
 	pha
 	lda.b wTemp04
 	pha
-	phb
-	jsl.l func_C4677C
-	plb
+	call_savebank func_C4677C
 	pla
 	sta.b wTemp04
 	pla
@@ -1014,9 +804,7 @@ func_C40850:
 	pha
 	lda.b wTemp04
 	pha
-	phb
-	jsl.l func_C43F67
-	plb
+	call_savebank func_C43F67
 	pla
 	sta.b wTemp04
 	pla
@@ -1035,17 +823,13 @@ func_C40850:
 	ldx.w #$0003
 	stx.b wTemp00
 	phy
-	phb
-	jsl.l func_C4677C
-	plb
+	call_savebank func_C4677C
 	ply
 @lbl_C40932:
 	ldx.w #$0001
 	stx.b wTemp00
 	phy
-	phb
-	jsl.l func_C43F67
-	plb
+	call_savebank func_C43F67
 	ply
 	bcs @lbl_C40958
 	dey
@@ -1053,9 +837,7 @@ func_C40850:
 	ldx.w #$00FF
 	stx.b wTemp00
 	jsl.l func_809664
-	phb
-	jsl.l func_C43F17
-	plb
+	call_savebank func_C43F17
 	bcs @lbl_C40958
 	plp
 	clc
@@ -1069,13 +851,9 @@ func_C4095B:
 	rep #$10 ;XY->16
 	bankswitch 0x7F
 	lda.b #$04
-	sta.b wTemp00
-	phb
-	jsl.l func_C43453
-	plb
-	phb
-	jsl.l func_C433A8
-	plb
+	sta.b w7f0000
+	call_savebank func_C43453
+	call_savebank func_C433A8
 	ldx.w #$0047
 	stx.w $9CEC
 	ldx.w #$FF94
@@ -1088,65 +866,43 @@ func_C4095B:
 	stx.w $9CFC
 	ldx.w #$0000
 	stx.w $9CFE
-	phb
-	jsl.l func_C4473F
-	plb
+	call_savebank func_C4473F
 	lda.b #$05
-	sta.b wTemp06
-	phb
-	jsl.l func_C46083
-	plb
-	phb
-	jsl.l func_C44844
-	plb
+	sta.b w7f0006
+	call_savebank func_C46083
+	call_savebank func_C44844
 	lda.b #$06
-	sta.b wTemp06
-	phb
-	jsl.l func_C46083
-	plb
+	sta.b w7f0006
+	call_savebank func_C46083
 	lda.b #$13
-	sta.b wTemp04
+	sta.b w7f0004
 	lda.b #$04
-	sta.b wTemp05
+	sta.b w7f0004+1
 	lda.b #$31
-	sta.b wTemp06
+	sta.b w7f0006
 	lda.b #$18
-	sta.b wTemp07
-	phb
-	jsl.l func_C46015
-	plb
+	sta.b w7f0006+1
+	call_savebank func_C46015
 	lda.b #$03
-	sta.b wTemp06
-	phb
-	jsl.l func_C46083
-	plb
+	sta.b w7f0006
+	call_savebank func_C46083
 	ldx.w #$3000
 	stx.w $9D08
 	ldx.w #$3400
 	stx.w $9D0A
-	phb
-	jsl.l func_C46178
-	plb
-	phb
-	jsl.l func_C46269
-	plb
+	call_savebank func_C46178
+	call_savebank func_C46269
 	lda.b #$07
-	sta.b wTemp00
-	phb
-	jsl.l func_C460FA
-	plb
-	phb
-	jsl.l func_C43627
-	plb
+	sta.b w7f0000
+	call_savebank func_C460FA
+	call_savebank func_C43627
 	lda.b #$03
-	sta.b wTemp00
+	sta.b w7f0000
 	jsl.l func_808F59
 	ldx.w #$001E
-	stx.b wTemp00
+	stx.b w7f0000
 	jsl.l func_809650
-	phb
-	jsl.l func_C43F17
-	plb
+	call_savebank func_C43F17
 	bcc @lbl_C40A1C
 ;C40A19  
 	.db $82,$8C,$02
@@ -1157,19 +913,15 @@ func_C4095B:
 	bit.b #$01
 	bne @lbl_C40A31
 	ldx.w #$0000
-	stx.b wTemp00
+	stx.b w7f0000
 	phy
-	phb
-	jsl.l func_C4677C
-	plb
+	call_savebank func_C4677C
 	ply
 @lbl_C40A31:
 	ldx.w #$0001
-	stx.b wTemp00
+	stx.b w7f0000
 	phy
-	phb
-	jsl.l func_C43F40
-	plb
+	call_savebank func_C43F40
 	ply
 	bcc @lbl_C40A43
 ;C40A40  
@@ -1177,8 +929,8 @@ func_C4095B:
 @lbl_C40A43:
 	dey
 	bne @lbl_C40A1F
-	stz.b wTemp02
-	stz.b wTemp04
+	stz.b w7f0002
+	stz.b w7f0004
 
 func_C40A4A:
 	inc.b wTemp02
@@ -1213,9 +965,7 @@ func_C40A4A:
 	pha
 	lda.b wTemp04
 	pha
-	phb
-	jsl.l func_C4473F
-	plb
+	call_savebank func_C4473F
 	pla
 	sta.b wTemp04
 	pla
@@ -1250,9 +1000,7 @@ func_C40A4A:
 	pha
 	lda.b wTemp04
 	pha
-	phb
-	jsl.l func_C44844
-	plb
+	call_savebank func_C44844
 	pla
 	sta.b wTemp04
 	pla
@@ -1265,9 +1013,7 @@ func_C40A4A:
 	pha
 	lda.b wTemp04
 	pha
-	phb
-	jsl.l func_C4677C
-	plb
+	call_savebank func_C4677C
 	pla
 	sta.b wTemp04
 	pla
@@ -1279,9 +1025,7 @@ func_C40A4A:
 	pha
 	lda.b wTemp04
 	pha
-	phb
-	jsl.l func_C43F40
-	plb
+	call_savebank func_C43F40
 	pla
 	sta.b wTemp04
 	pla
@@ -1301,17 +1045,13 @@ func_C40A4A:
 	bit.b #$01
 	bne @lbl_C40B25
 	phy
-	phb
-	jsl.l func_C4677C
-	plb
+	call_savebank func_C4677C
 	ply
 @lbl_C40B25:
 	ldx.w #$0001
 	stx.b wTemp00
 	phy
-	phb
-	jsl.l func_C43F40
-	plb
+	call_savebank func_C43F40
 	ply
 	bcc @lbl_C40B37
 ;C40B34  
@@ -1321,9 +1061,7 @@ func_C40A4A:
 	bne @lbl_C40B18
 	ldx.w #$0020
 	stx.b wTemp00
-	phb
-	jsl.l func_C43F40
-	plb
+	call_savebank func_C43F40
 	bcc @lbl_C40B4A
 ;C40B47  
 	.db $82,$5E,$01
@@ -1349,9 +1087,7 @@ func_C40A4A:
 	pha
 	lda.b wTemp06
 	pha
-	phb
-	jsl.l func_C46015
-	plb
+	call_savebank func_C46015
 	pla
 	sta.b wTemp06
 	pla
@@ -1362,9 +1098,7 @@ func_C40A4A:
 	pha
 	lda.b wTemp06
 	pha
-	phb
-	jsl.l func_C43F40
-	plb
+	call_savebank func_C43F40
 	pla
 	sta.b wTemp06
 	pla
@@ -1378,59 +1112,39 @@ func_C40A4A:
 	bne @lbl_C40B5F
 	lda.b #$03
 	sta.b wTemp06
-	phb
-	jsl.l func_C46066
-	plb
+	call_savebank func_C46066
 	ldx.w #$0020
 	stx.b wTemp00
-	phb
-	jsl.l func_C43F40
-	plb
+	call_savebank func_C43F40
 	bcc @lbl_C40BB7
 ;C40BB4  
 	.db $82,$F1,$00
 @lbl_C40BB7:
 	lda.b #$0F
 	sta.w $A9BD
-	phb
-	jsl.l func_C440E8
-	plb
+	call_savebank func_C440E8
 	stz.b wTemp06
 	lda.b wTemp06
 	pha
-	phb
-	jsl.l func_C4594C
-	plb
+	call_savebank func_C4594C
 	pla
 	sta.b wTemp06
-	phb
-	jsl.l func_C45EAD
-	plb
+	call_savebank func_C45EAD
 	lda.b #$03
 	sta.b wTemp00
-	phb
-	jsl.l func_C460FA
-	plb
-	phb
-	jsl.l func_C457C1
-	plb
-	phb
-	jsl.l func_C45668
-	plb
+	call_savebank func_C460FA
+	call_savebank func_C457C1
+	call_savebank func_C45668
 	ldy.w #$0000
 @lbl_C40BEF:
 	sty.b wTemp06
 	phy
-	phb
-	jsl.l func_C457FE
-	plb
+	call_savebank func_C457FE
 	ply
 	ldx.w #$0004
 	stx.b wTemp00
 	phy
-	phb
-	jsl.l func_C43F40
-	plb
+	call_savebank func_C43F40
 	ply
 	bcc @lbl_C40C0B
 ;C40C08  
@@ -1443,16 +1157,12 @@ func_C40A4A:
 @lbl_C40C14:
 	sty.b wTemp06
 	phy
-	phb
-	jsl.l func_C4594C
-	plb
+	call_savebank func_C4594C
 	ply
 	ldx.w #$0001
 	stx.b wTemp00
 	phy
-	phb
-	jsl.l func_C43F40
-	plb
+	call_savebank func_C43F40
 	ply
 	bcs @lbl_C40CA8
 	iny
@@ -1462,16 +1172,12 @@ func_C40A4A:
 @lbl_C40C36:
 	sty.b wTemp06
 	phy
-	phb
-	jsl.l func_C45EAD
-	plb
+	call_savebank func_C45EAD
 	ply
 	ldx.w #$0001
 	stx.b wTemp00
 	phy
-	phb
-	jsl.l func_C43F40
-	plb
+	call_savebank func_C43F40
 	ply
 	bcs @lbl_C40CA8
 	iny
@@ -1479,28 +1185,20 @@ func_C40A4A:
 	bne @lbl_C40C36
 	ldx.w #$0100
 	stx.b wTemp00
-	phb
-	jsl.l func_C43F40
-	plb
+	call_savebank func_C43F40
 	bcs @lbl_C40CA8
 	ldy.w #$0390
 @lbl_C40C65:
 	phy
-	phb
-	jsl.l func_C4572D
-	plb
+	call_savebank func_C4572D
 	ply
 	phy
-	phb
-	jsl.l func_C456CD
-	plb
+	call_savebank func_C456CD
 	ply
 	ldx.w #$0001
 	stx.b wTemp00
 	phy
-	phb
-	jsl.l func_C43F40
-	plb
+	call_savebank func_C43F40
 	ply
 	bcs @lbl_C40CA8
 	dey
@@ -1508,9 +1206,7 @@ func_C40A4A:
 	ldx.w #$0028
 	stx.b wTemp00
 	jsl.l func_809664
-	phb
-	jsl.l func_C43F17
-	plb
+	call_savebank func_C43F17
 	bcs @lbl_C40CA8
 	ldx.w #$01FF
 	stx.b wTemp00
@@ -1528,107 +1224,79 @@ func_C40CB8:
 	rep #$10 ;XY->16
 	bankswitch 0x7F
 	ldx.w #$03E7
-	stx.b wTemp00
-	phb
-	jsl.l func_818049
-	plb
+	stx.b w7f0000
+	call_savebank func_818049
 	lda.b #$0E
-	sta.b wTemp00
-	phb
-	jsl.l func_C43453
-	plb
-	phb
-	jsl.l func_C433A8
-	plb
+	sta.b w7f0000
+	call_savebank func_C43453
+	call_savebank func_C433A8
 	lda.b #$0F
 	sta.w $A9BD
 	ldx.w #$00A0
-	stx.b wTemp00
-	phb
-	jsl.l func_C5E137
-	plb
-	phb
-	jsl.l func_C45C37
-	plb
+	stx.b w7f0000
+	call_savebank func_C5E137
+	call_savebank func_C45C37
 	lda.b #$09
-	sta.b wTemp06
-	phb
-	jsl.l func_C46083
-	plb
-	phb
-	jsl.l func_C435D9
-	plb
+	sta.b w7f0006
+	call_savebank func_C46083
+	call_savebank func_C435D9
 	ldx.w #$0164
 	stx.w $9CE8
 	stx.w $9CF4
 	ldx.w #$0004
-	stx.b wTemp00
+	stx.b w7f0000
 	ldx.w $9CF4
-	stx.b wTemp02
+	stx.b w7f0002
 	ldx.w #$0000
-	stx.b wTemp04
+	stx.b w7f0004
 	jsl.l func_808ED0
 	ldx.w #$0008
-	stx.b wTemp00
+	stx.b w7f0000
 	ldx.w $9CE8
-	stx.b wTemp02
+	stx.b w7f0002
 	ldx.w #$0000
-	stx.b wTemp04
+	stx.b w7f0004
 	jsl.l func_808ED0
 	lda.b #$02
-	sta.b wTemp00
+	sta.b w7f0000
 	jsl.l func_808F59
-	phb
-	jsl.l func_C063D1
-	plb
+	call_savebank func_C063D1
 	ldx.w #$0013
-	stx.b wTemp00
+	stx.b w7f0000
 	ldx.w #$00DA
-	stx.b wTemp02
+	stx.b w7f0002
 	ldx.w #$0503
-	stx.b wTemp04
-	stx.b wTemp06
-	phb
-	jsl.l func_C06C80
-	plb
+	stx.b w7f0004
+	stx.b w7f0006
+	call_savebank func_C06C80
 	ldx.w #$C700
-	stx.b wTemp00
+	stx.b w7f0000
 	ldx.w #$06C2
-	stx.b wTemp02
+	stx.b w7f0002
 	ldx.w #$0504
-	stx.b wTemp04
-	stx.b wTemp06
-	phb
-	jsl.l func_C06C80
-	plb
-	phb
-	jsl.l func_C07663
-	plb
+	stx.b w7f0004
+	stx.b w7f0006
+	call_savebank func_C06C80
+	call_savebank func_C07663
 	stz.w $A9BF
 	ldx.w #$0002
-	stx.b wTemp00
-	phb
-	jsl.l func_C43F67
-	plb
+	stx.b w7f0000
+	call_savebank func_C43F67
 	bcc @lbl_C40D86
 ;C40D83  
 	.db $82,$C3,$00
 @lbl_C40D86:
 	ldx.w #$00FF
-	stx.b wTemp00
+	stx.b w7f0000
 	jsl.l func_809650
-	phb
-	jsl.l func_C43F17
-	plb
+	call_savebank func_C43F17
 	bcc @lbl_C40DAA
 	.db $82,$AF,$00,$A2,$20,$00,$86,$00,$8B,$22,$40,$3F,$C4,$AB,$90,$03   ;C40D97  
 	.db $82,$9F,$00                       ;C40DA7  
 @lbl_C40DAA:
 	ldx.w #$0054
-	stx.b wTemp00
-	phb
-	jsl.l func_C43F67
-	plb
+	stx.b w7f0000
+	call_savebank func_C43F67
 	bcc @lbl_C40DBA
 ;C40DB7  
 	.db $82,$8F,$00
@@ -1650,48 +1318,40 @@ func_C40CB8:
 	inx
 	stx.w $9CE8
 	ldx.w #$0004
-	stx.b wTemp00
+	stx.b w7f0000
 	ldx.w $9CF4
-	stx.b wTemp02
+	stx.b w7f0002
 	ldx.w #$0000
-	stx.b wTemp04
+	stx.b w7f0004
 	jsl.l func_808ED0
 	ldx.w #$0008
-	stx.b wTemp00
+	stx.b w7f0000
 	ldx.w $9CE8
-	stx.b wTemp02
+	stx.b w7f0002
 	ldx.w #$0000
-	stx.b wTemp04
+	stx.b w7f0004
 	jsl.l func_808ED0
 @lbl_C40E05:
 	ldx.w #$0001
-	stx.b wTemp00
-	phb
-	jsl.l func_C43F67
-	plb
+	stx.b w7f0000
+	call_savebank func_C43F67
 	bcs @lbl_C40E49
 	ldx.w $9CF0
 	cpx.w #$00A0
 	bne @lbl_C40DC3
 	ldx.w #$00A0
 @lbl_C40E1D:
-	stx.b wTemp00
+	stx.b w7f0000
 	phx
-	phb
-	jsl.l func_C5E137
-	plb
+	call_savebank func_C5E137
 	plx
 	phx
-	phb
-	jsl.l func_C45C37
-	plb
+	call_savebank func_C45C37
 	plx
 	ldy.w #$0001
-	sty.b wTemp00
+	sty.b w7f0000
 	phx
-	phb
-	jsl.l func_C43F40
-	plb
+	call_savebank func_C43F40
 	plx
 	bcs @lbl_C40E49
 	dex
@@ -1703,7 +1363,7 @@ func_C40CB8:
 	clc
 	rtl
 @lbl_C40E49:
-	.db $28,$38,$6B                       ;C40E49
+	.db $28,$38,$6B
 
 func_C40E4C:
 	php
@@ -1715,87 +1375,75 @@ func_C40E4C:
 	ldx.w #$FFBF
 	stx.w $9CEC
 	ldx.w #$0008
-	stx.b wTemp00
+	stx.b w7f0000
 	ldx.w $9CE8
-	stx.b wTemp02
+	stx.b w7f0002
 	ldx.w $9CEC
-	stx.b wTemp04
+	stx.b w7f0004
 	jsl.l func_808ED0
-	phb
-	jsl.l func_C436C2
-	plb
+	call_savebank func_C436C2
 	ldx.w #$3000
 	stx.w $9D08
 	ldx.w #$3400
 	stx.w $9D0A
-	phb
-	jsl.l func_C46178
-	plb
-	phb
-	jsl.l func_C46269
-	plb
+	call_savebank func_C46178
+	call_savebank func_C46269
 	lda.b #$07
-	sta.b wTemp00
-	phb
-	jsl.l func_C460FA
-	plb
+	sta.b w7f0000
+	call_savebank func_C460FA
 	lda.b #$07
-	sta.b wTemp00
+	sta.b w7f0000
 	jsl.l func_808F59
 	ldx.w #$0003
-	stx.b wTemp00
-	phb
-	jsl.l func_818049
-	plb
+	stx.b w7f0000
+	call_savebank func_818049
 	rep #$20 ;A->16
 	ldx.w #$0000
 @lbl_C40EB4:
 	lda.l DATA8_C4107A,x
 	cmp.w #$0050
 	beq @lbl_C40F1D
-	sta.b wTemp00
+	sta.b w7f0000
 	lda.l DATA8_C4107C,x
-	sta.b wTemp02
+	sta.b w7f0002
 	lda.l DATA8_C4107E,x
-	sta.b wTemp04
+	sta.b w7f0004
 @lbl_C40ECB:
 	lda.w $9CE8
 	clc
-	adc.b wTemp00
+	adc.b w7f0000
 	sta.w $9CE8
 	lda.w $9CEC
 	clc
-	adc.b wTemp02
+	adc.b w7f0002
 	sta.w $9CEC
-	lda.b wTemp00
+	lda.b w7f0000
 	pha
-	lda.b wTemp02
+	lda.b w7f0002
 	pha
-	lda.b wTemp04
+	lda.b w7f0004
 	pha
 	lda.w #$0008
-	sta.b wTemp00
+	sta.b w7f0000
 	lda.w $9CE8
-	sta.b wTemp02
+	sta.b w7f0002
 	lda.w $9CEC
-	sta.b wTemp04
+	sta.b w7f0004
 	phx
 	jsl.l func_808ED0
 	plx
 	lda.w #$0001
-	sta.b wTemp00
+	sta.b w7f0000
 	phx
-	phb
-	jsl.l func_C43F67
-	plb
+	call_savebank func_C43F67
 	plx
 	pla
-	sta.b wTemp04
+	sta.b w7f0004
 	pla
-	sta.b wTemp02
+	sta.b w7f0002
 	pla
-	sta.b wTemp00
-	dec.b wTemp04
+	sta.b w7f0000
+	dec.b w7f0004
 	bne @lbl_C40ECB
 	inx
 	inx
@@ -1818,22 +1466,18 @@ func_C40E4C:
 	bit.w #$0001
 	bne @lbl_C40F3F
 	lda.w #$0005
-	sta.b wTemp00
+	sta.b w7f0000
 	phx
 	phy
-	phb
-	jsl.l func_C4677C
-	plb
+	call_savebank func_C4677C
 	ply
 	plx
 @lbl_C40F3F:
 	lda.w #$0001
-	sta.b wTemp00
+	sta.b w7f0000
 	phx
 	phy
-	phb
-	jsl.l func_C43F67
-	plb
+	call_savebank func_C43F67
 	ply
 	plx
 	bcc @lbl_C40F53
@@ -1844,27 +1488,21 @@ func_C40E4C:
 	bne @lbl_C40F2A
 	sep #$20 ;A->8
 	lda.b #$01
-	sta.b wTemp03
+	sta.b w7f0002+1
 	phy
-	phb
-	jsl.l func_C482D0
-	plb
+	call_savebank func_C482D0
 	ply
 	lda.b #$01
-	sta.b wTemp03
+	sta.b w7f0002+1
 	phy
-	phb
-	jsl.l func_C482ED
-	plb
+	call_savebank func_C482ED
 	ply
 	lda.b #$01
-	sta.b wTemp03
+	sta.b w7f0002+1
 	ldx.w #$3800
-	stx.b wTemp04
+	stx.b w7f0004
 	phy
-	phb
-	jsl.l func_C484CB
-	plb
+	call_savebank func_C484CB
 	ply
 	iny
 	cpy.w #$000C
@@ -1872,53 +1510,41 @@ func_C40E4C:
 	ldx.w #$0107
 	stx.w $9CE8
 	ldx.w #$0008
-	stx.b wTemp00
+	stx.b w7f0000
 	ldx.w $9CE8
-	stx.b wTemp02
+	stx.b w7f0002
 	ldx.w $9CEC
-	stx.b wTemp04
+	stx.b w7f0004
 	jsl.l func_808ED0
 	ldx.w #$000A
-	stx.b wTemp00
-	phb
-	jsl.l func_C43F40
-	plb
+	stx.b w7f0000
+	call_savebank func_C43F40
 	bcc @lbl_C40FB0
 ;C40FAD  
 	.db $82,$AD,$00
 @lbl_C40FB0:
-	phb
-	jsl.l func_C063D1
-	plb
+	call_savebank func_C063D1
 	ldx.w #$0013
-	stx.b wTemp00
+	stx.b w7f0000
 	ldx.w #$00DB
-	stx.b wTemp02
+	stx.b w7f0002
 	ldx.w #$050B
-	stx.b wTemp04
-	stx.b wTemp06
-	phb
-	jsl.l func_C06C80
-	plb
+	stx.b w7f0004
+	stx.b w7f0006
+	call_savebank func_C06C80
 	ldx.w #$C700
-	stx.b wTemp00
+	stx.b w7f0000
 	ldx.w #$06C3
-	stx.b wTemp02
+	stx.b w7f0002
 	ldx.w #$0506
-	stx.b wTemp04
-	stx.b wTemp06
-	phb
-	jsl.l func_C06C80
-	plb
-	phb
-	jsl.l func_C07663
-	plb
+	stx.b w7f0004
+	stx.b w7f0006
+	call_savebank func_C06C80
+	call_savebank func_C07663
 	stz.w $A9BF
 	ldx.w #$0002
-	stx.b wTemp00
-	phb
-	jsl.l func_C43F67
-	plb
+	stx.b w7f0000
+	call_savebank func_C43F67
 	bcs @lbl_C4105D
 	ldx.w #$0000
 	stx.w $9CF0
@@ -1938,24 +1564,22 @@ func_C40E4C:
 	inx
 	stx.w $9CE8
 	ldx.w #$0004
-	stx.b wTemp00
+	stx.b w7f0000
 	ldx.w $9CF4
-	stx.b wTemp02
+	stx.b w7f0002
 	ldx.w #$0000
-	stx.b wTemp04
+	stx.b w7f0004
 	jsl.l func_808ED0
 	ldx.w #$0008
-	stx.b wTemp00
+	stx.b w7f0000
 	ldx.w $9CE8
-	stx.b wTemp02
+	stx.b w7f0002
 	ldx.w #$FFF5
-	stx.b wTemp04
+	stx.b w7f0004
 	jsl.l func_808ED0
 	ldx.w #$0001
-	stx.b wTemp00
-	phb
-	jsl.l func_C43F67
-	plb
+	stx.b w7f0000
+	call_savebank func_C43F67
 	bcs @lbl_C4105D
 	ldx.w $9CFE
 	cpx.w #$0060
@@ -2016,48 +1640,34 @@ func_C410A0:
 	lda.b #$0F
 	sta.w $A9BD
 	lda.b #$01
-	sta.b wTemp00
+	sta.b w7f0000
 	jsl.l func_808F6E
-	phb
-	jsl.l func_C43720
-	plb
+	call_savebank func_C43720
 	ldx.w #$3000
 	stx.w $9D08
 	ldx.w #$3400
 	stx.w $9D0A
-	phb
-	jsl.l func_C46178
-	plb
-	phb
-	jsl.l func_C46269
-	plb
+	call_savebank func_C46178
+	call_savebank func_C46269
 	lda.b #$07
-	sta.b wTemp00
-	phb
-	jsl.l func_C460FA
-	plb
+	sta.b w7f0000
+	call_savebank func_C460FA
 	lda.b #$16
-	sta.b wTemp00
+	sta.b w7f0000
 	jsl.l func_808F59
 	ldx.w #$0020
 @lbl_C41135:
-	stx.b wTemp00
+	stx.b w7f0000
 	phx
-	phb
-	jsl.l func_C5E137
-	plb
+	call_savebank func_C5E137
 	plx
 	phx
-	phb
-	jsl.l func_C45C37
-	plb
+	call_savebank func_C45C37
 	plx
 	ldy.w #$0001
-	sty.b wTemp00
+	sty.b w7f0000
 	phx
-	phb
-	jsl.l func_C43F40
-	plb
+	call_savebank func_C43F40
 	plx
 	bcc @lbl_C41159
 ;C41156  
@@ -2069,10 +1679,8 @@ func_C410A0:
 	cpx.w #$00A0
 	bcc @lbl_C41135
 	ldx.w #$0060
-	stx.b wTemp00
-	phb
-	jsl.l func_C43F67
-	plb
+	stx.b w7f0000
+	call_savebank func_C43F67
 	bcc @lbl_C41171
 ;C4116E  
 	.db $82,$87,$00
@@ -2094,41 +1702,37 @@ func_C410A0:
 	cpx.w #$0100
 	bcs @lbl_C411BD
 	ldx.w #$0004
-	stx.b wTemp00
+	stx.b w7f0000
 	ldx.w $9CF4
-	stx.b wTemp02
+	stx.b w7f0002
 	ldx.w #$0000
-	stx.b wTemp04
+	stx.b w7f0004
 	jsl.l func_808ED0
 	ldx.w #$0008
-	stx.b wTemp00
+	stx.b w7f0000
 	ldx.w $9CE8
-	stx.b wTemp02
+	stx.b w7f0002
 	ldx.w #$0000
-	stx.b wTemp04
+	stx.b w7f0004
 	jsl.l func_808ED0
 @lbl_C411BD:
 	ldx.w $9CF0
 	cpx.w #$00A0
 	bne @lbl_C411CE
 	ldx.w #$0040
-	stx.b wTemp00
+	stx.b w7f0000
 	jsl.l func_809664
 @lbl_C411CE:
 	ldx.w $9CF0
 	bit.b #$01
 	bne @lbl_C411E0
 	ldx.w #$0006
-	stx.b wTemp00
-	phb
-	jsl.l func_C4677C
-	plb
+	stx.b w7f0000
+	call_savebank func_C4677C
 @lbl_C411E0:
 	ldx.w #$0001
-	stx.b wTemp00
-	phb
-	jsl.l func_C43F67
-	plb
+	stx.b w7f0000
+	call_savebank func_C43F67
 	bcs @lbl_C411F8
 	ldx.w $9CF0
 	cpx.w #$0130
@@ -2146,63 +1750,43 @@ func_C411FB:
 	rep #$10 ;XY->16
 	bankswitch 0x7F
 	ldx.w #$002D
-	stx.b wTemp00
-	phb
-	jsl.l func_818049
-	plb
+	stx.b w7f0000
+	call_savebank func_818049
 	lda.b #$0D
-	sta.b wTemp00
-	phb
-	jsl.l func_C43453
-	plb
-	phb
-	jsl.l func_C433A8
-	plb
+	sta.b w7f0000
+	call_savebank func_C43453
+	call_savebank func_C433A8
 	lda.b #$0F
 	sta.w $A9BD
 	lda.b #$01
-	sta.b wTemp06
-	phb
-	jsl.l func_C4376E
-	plb
+	sta.b w7f0006
+	call_savebank func_C4376E
 	lda.b #$03
-	sta.b wTemp00
+	sta.b w7f0000
 	jsl.l func_808F59
-	phb
-	jsl.l func_C063D1
-	plb
+	call_savebank func_C063D1
 	ldx.w #$C700
-	stx.b wTemp00
+	stx.b w7f0000
 	ldx.w #$06C4
-	stx.b wTemp02
+	stx.b w7f0002
 	ldx.w #$0407
-	stx.b wTemp04
-	stx.b wTemp06
-	phb
-	jsl.l func_C06C80
-	plb
-	phb
-	jsl.l func_C07663
-	plb
+	stx.b w7f0004
+	stx.b w7f0006
+	call_savebank func_C06C80
+	call_savebank func_C07663
 	stz.w $A9BF
 	ldx.w #$0F01
-	stx.b wTemp00
+	stx.b w7f0000
 	lda.b #$1C
-	sta.b wTemp02
-	phb
-	jsl.l func_81CC29
-	plb
+	sta.b w7f0002
+	call_savebank func_81CC29
 	ldx.w #$0002
-	stx.b wTemp00
-	phb
-	jsl.l func_C43F67
-	plb
+	stx.b w7f0000
+	call_savebank func_C43F67
 	ldx.w #$00FF
-	stx.b wTemp00
+	stx.b w7f0000
 	jsl.l func_809650
-	phb
-	jsl.l func_C43F17
-	plb
+	call_savebank func_C43F17
 	bcs @lbl_C412C7
 	ldy.w #$0140
 @lbl_C4128A:
@@ -2210,30 +1794,26 @@ func_C411FB:
 	bit.b #$07
 	bne @lbl_C412A1
 	lda.b #$49
-	sta.b wTemp00
+	sta.b w7f0000
 	lda.b #$06
-	sta.b wTemp01
+	sta.b w7f0000+1
 	phy
 	jsl.l func_8089AA
 	ply
 	jsl.l func_8085B1
 @lbl_C412A1:
 	ldx.w #$0001
-	stx.b wTemp00
+	stx.b w7f0000
 	phy
-	phb
-	jsl.l func_C43F67
-	plb
+	call_savebank func_C43F67
 	ply
 	bcs @lbl_C412C7
 	dey
 	bne @lbl_C4128A
 	ldx.w #$00FF
-	stx.b wTemp00
+	stx.b w7f0000
 	jsl.l func_809664
-	phb
-	jsl.l func_C43F17
-	plb
+	call_savebank func_C43F17
 	bcs @lbl_C412C7
 	plp
 	clc
@@ -2248,90 +1828,66 @@ func_C412CA:
 	rep #$10 ;XY->16
 	bankswitch 0x7F
 	lda.b #$0D
-	sta.b wTemp00
-	phb
-	jsl.l func_C43453
-	plb
-	phb
-	jsl.l func_C433A8
-	plb
+	sta.b w7f0000
+	call_savebank func_C43453
+	call_savebank func_C433A8
 	lda.b #$0F
 	sta.w $A9BD
 	lda.b #$01
-	sta.b wTemp06
-	phb
-	jsl.l func_C437FD
-	plb
+	sta.b w7f0006
+	call_savebank func_C437FD
 	lda.b #$03
-	sta.b wTemp00
+	sta.b w7f0000
 	jsl.l func_808F59
 	lda.b #$04
-	sta.b wTemp00
+	sta.b w7f0000
 	jsl.l func_808F85
 	lda.b #$13
-	sta.b wTemp00
+	sta.b w7f0000
 	jsl.l func_808FC0
 	lda.b #$02
-	sta.b wTemp00
+	sta.b w7f0000
 	jsl.l func_808FB1
-	phb
-	jsl.l func_C063D1
-	plb
+	call_savebank func_C063D1
 	ldx.w #$0013
-	stx.b wTemp00
+	stx.b w7f0000
 	ldx.w #$00DC
-	stx.b wTemp02
+	stx.b w7f0002
 	ldx.w #$0505
-	stx.b wTemp04
-	stx.b wTemp06
-	phb
-	jsl.l func_C06C80
-	plb
+	stx.b w7f0004
+	stx.b w7f0006
+	call_savebank func_C06C80
 	ldx.w #$C700
-	stx.b wTemp00
+	stx.b w7f0000
 	ldx.w #$06C5
-	stx.b wTemp02
+	stx.b w7f0002
 	ldx.w #$0506
-	stx.b wTemp04
-	stx.b wTemp06
-	phb
-	jsl.l func_C06C80
-	plb
+	stx.b w7f0004
+	stx.b w7f0006
+	call_savebank func_C06C80
 	jsl.l func_C0693A
-	phb
-	jsl.l func_C07663
-	plb
+	call_savebank func_C07663
 	stz.w $A9BF
 	ldx.w #$0D03
-	stx.b wTemp00
+	stx.b w7f0000
 	lda.b #$1D
-	sta.b wTemp02
-	phb
-	jsl.l func_81CC29
-	plb
+	sta.b w7f0002
+	call_savebank func_81CC29
 	ldx.w #$0002
-	stx.b wTemp00
-	phb
-	jsl.l func_C43F67
-	plb
+	stx.b w7f0000
+	call_savebank func_C43F67
 	ldx.w #$00FF
-	stx.b wTemp00
+	stx.b w7f0000
 	jsl.l func_809650
-	phb
-	jsl.l func_C43F17
-	plb
+	call_savebank func_C43F17
 	ldx.w #$00FF
-	stx.b wTemp00
-	phb
-	jsl.l func_C43F67
-	plb
+	stx.b w7f0000
+	call_savebank func_C43F67
 	bcs @lbl_C4139D
 	ldx.w #$00FF
-	stx.b wTemp00
+	stx.b w7f0000
 	jsl.l func_809664
-	phb
-	jsl.l func_C43F17
-	plb
+	call_savebank func_C43F17
 	bcs @lbl_C4139D
 	plp
 	clc
@@ -2346,94 +1902,68 @@ func_C413A0:
 	rep #$10 ;XY->16
 	bankswitch 0x7F
 	ldx.w #$0004
-	stx.b wTemp00
-	phb
-	jsl.l func_818049
-	plb
+	stx.b w7f0000
+	call_savebank func_818049
 	lda.b #$0D
-	sta.b wTemp00
-	phb
-	jsl.l func_C43453
-	plb
-	phb
-	jsl.l func_C433A8
-	plb
+	sta.b w7f0000
+	call_savebank func_C43453
+	call_savebank func_C433A8
 	lda.b #$0F
 	sta.w $A9BD
 	lda.b #$01
-	sta.b wTemp06
-	phb
-	jsl.l func_C438AC
-	plb
+	sta.b w7f0006
+	call_savebank func_C438AC
 	lda.b #$02
-	sta.b wTemp00
+	sta.b w7f0000
 	jsl.l func_808F59
 	lda.b #$42
-	sta.b wTemp00
+	sta.b w7f0000
 	jsl.l func_808FC0
 	lda.b #$02
-	sta.b wTemp00
+	sta.b w7f0000
 	jsl.l func_808FB1
 	ldx.w #$FF80
 	stx.w $9CE8
 	ldx.w #$0080
 	stx.w $9CF4
-	phb
-	jsl.l func_C45C6D
-	plb
+	call_savebank func_C45C6D
 	lda.b #$02
-	sta.b wTemp06
-	phb
-	jsl.l func_C46083
-	plb
-	phb
-	jsl.l func_C45D5E
-	plb
+	sta.b w7f0006
+	call_savebank func_C46083
+	call_savebank func_C45D5E
 	lda.b #$01
-	sta.b wTemp06
-	phb
-	jsl.l func_C46083
-	plb
+	sta.b w7f0006
+	call_savebank func_C46083
 	ldx.w #$0008
-	stx.b wTemp00
+	stx.b w7f0000
 	ldx.w $9CE8
-	stx.b wTemp02
+	stx.b w7f0002
 	ldx.w #$0000
-	stx.b wTemp04
+	stx.b w7f0004
 	jsl.l func_808ED0
 	ldx.w #$0004
-	stx.b wTemp00
+	stx.b w7f0000
 	ldx.w $9CF4
-	stx.b wTemp02
+	stx.b w7f0002
 	ldx.w #$0000
-	stx.b wTemp04
+	stx.b w7f0004
 	jsl.l func_808ED0
 	jsl.l func_8089F6
-	phb
-	jsl.l func_808D3D
-	plb
+	call_savebank func_808D3D
 	lda.b #$0A
-	sta.b wTemp00
+	sta.b w7f0000
 	ldy.w #$FF80
-	sty.b wTemp02
+	sty.b w7f0002
 	ldx.w #$0000
-	stx.b wTemp04
-	phb
-	jsl.l func_808A5C
-	plb
+	stx.b w7f0004
+	call_savebank func_808A5C
 	jsl.l func_8085B1
-	phb
-	jsl.l func_C45C6D
-	plb
-	phb
-	jsl.l func_C45D5E
-	plb
+	call_savebank func_C45C6D
+	call_savebank func_C45D5E
 	ldx.w #$0400
-	stx.b wTemp00
+	stx.b w7f0000
 	jsl.l func_809650
-	phb
-	jsl.l func_C43F17
-	plb
+	call_savebank func_C43F17
 	bcc @lbl_C4147F
 ;C4147C  
 	.db $82,$9E,$01
@@ -2444,39 +1974,31 @@ func_C413A0:
 	bit.b #$07
 	bne @lbl_C414A6
 	lda.b #$0A
-	sta.b wTemp00
+	sta.b w7f0000
 	ldy.w #$7F80
-	sty.b wTemp02
+	sty.b w7f0002
 	rep #$20 ;A->16
 	txa
 	lsr a
 	lsr a
 	lsr a
-	sta.b wTemp04
+	sta.b w7f0004
 	sep #$20 ;A->8
 	phx
-	phb
-	jsl.l func_808A5C
-	plb
+	call_savebank func_808A5C
 	plx
 	jsl.l func_8085B1
 @lbl_C414A6:
 	phx
-	phb
-	jsl.l func_C45C6D
-	plb
+	call_savebank func_C45C6D
 	plx
 	phx
-	phb
-	jsl.l func_C45D5E
-	plb
+	call_savebank func_C45D5E
 	plx
 	ldy.w #$0001
-	sty.b wTemp00
+	sty.b w7f0000
 	phx
-	phb
-	jsl.l func_C43F40
-	plb
+	call_savebank func_C43F40
 	plx
 	bcc @lbl_C414C8
 ;C414C5  
@@ -2486,7 +2008,7 @@ func_C413A0:
 	cpx.w #$0070
 	bne @lbl_C41482
 	lda.b #$03
-	sta.b wTemp00
+	sta.b w7f0000
 	jsl.l func_808F85
 	sep #$20 ;A->8
 	ldx.w #$0000
@@ -2495,39 +2017,31 @@ func_C413A0:
 	bit.b #$07
 	bne @lbl_C414FF
 	lda.b #$0A
-	sta.b wTemp00
+	sta.b w7f0000
 	ldy.w #$8080
-	sty.b wTemp02
+	sty.b w7f0002
 	rep #$20 ;A->16
 	txa
 	lsr a
 	lsr a
 	lsr a
-	sta.b wTemp04
+	sta.b w7f0004
 	sep #$20 ;A->8
 	phx
-	phb
-	jsl.l func_808A5C
-	plb
+	call_savebank func_808A5C
 	plx
 	jsl.l func_8085B1
 @lbl_C414FF:
 	phx
-	phb
-	jsl.l func_C45C6D
-	plb
+	call_savebank func_C45C6D
 	plx
 	phx
-	phb
-	jsl.l func_C45D5E
-	plb
+	call_savebank func_C45D5E
 	plx
 	ldy.w #$0001
-	sty.b wTemp00
+	sty.b w7f0000
 	phx
-	phb
-	jsl.l func_C43F40
-	plb
+	call_savebank func_C43F40
 	plx
 	bcc @lbl_C41521
 ;C4151E  
@@ -2552,31 +2066,25 @@ func_C413A0:
 	inx
 	stx.w $9CE8
 	ldx.w #$0008
-	stx.b wTemp00
+	stx.b w7f0000
 	ldx.w $9CE8
-	stx.b wTemp02
+	stx.b w7f0002
 	ldx.w #$0000
-	stx.b wTemp04
+	stx.b w7f0004
 	jsl.l func_808ED0
 	ldx.w #$0004
-	stx.b wTemp00
+	stx.b w7f0000
 	ldx.w $9CF4
-	stx.b wTemp02
+	stx.b w7f0002
 	ldx.w #$0000
-	stx.b wTemp04
+	stx.b w7f0004
 	jsl.l func_808ED0
 @lbl_C41571:
-	phb
-	jsl.l func_C45C6D
-	plb
-	phb
-	jsl.l func_C45D5E
-	plb
+	call_savebank func_C45C6D
+	call_savebank func_C45D5E
 	ldx.w #$0001
-	stx.b wTemp00
-	phb
-	jsl.l func_C43F40
-	plb
+	stx.b w7f0000
+	call_savebank func_C43F40
 	bcc @lbl_C4158D
 ;C4158A  
 	.db $82,$90,$00
@@ -2588,30 +2096,22 @@ func_C413A0:
 	ldy.w #$0080
 @lbl_C4159A:
 	phy
-	phb
-	jsl.l func_C45C6D
-	plb
+	call_savebank func_C45C6D
 	ply
 	phy
-	phb
-	jsl.l func_C45D5E
-	plb
+	call_savebank func_C45D5E
 	ply
 	ldx.w #$0001
-	stx.b wTemp00
+	stx.b w7f0000
 	phy
-	phb
-	jsl.l func_C43F40
-	plb
+	call_savebank func_C43F40
 	ply
 	bcs @lbl_C4161D
 	dey
 	bne @lbl_C4159A
 	ldx.w #$011C
-	stx.b wTemp00
-	phb
-	jsl.l func_818049
-	plb
+	stx.b w7f0000
+	call_savebank func_818049
 	sep #$20 ;A->8
 	ldx.w #$0069
 @lbl_C415CC:
@@ -2619,41 +2119,33 @@ func_C413A0:
 	bit.b #$07
 	bne @lbl_C415F5
 	lda.b #$0C
-	sta.b wTemp00
+	sta.b w7f0000
 	ldy.w #$FF80
-	sty.b wTemp02
+	sty.b w7f0002
 	ldy.w #$7FFF
-	sty.b wTemp04
+	sty.b w7f0004
 	rep #$20 ;A->16
 	txa
 	lsr a
 	lsr a
 	lsr a
-	sta.b wTemp06
+	sta.b w7f0006
 	sep #$20 ;A->8
 	phx
-	phb
-	jsl.l func_808A5C
-	plb
+	call_savebank func_808A5C
 	plx
 	jsl.l func_8085B1
 @lbl_C415F5:
 	phx
-	phb
-	jsl.l func_C45C6D
-	plb
+	call_savebank func_C45C6D
 	plx
 	phx
-	phb
-	jsl.l func_C45D5E
-	plb
+	call_savebank func_C45D5E
 	plx
 	ldy.w #$0001
-	sty.b wTemp00
+	sty.b w7f0000
 	phx
-	phb
-	jsl.l func_C43F40
-	plb
+	call_savebank func_C43F40
 	plx
 	bcc @lbl_C41617
 ;C41614  
@@ -2674,113 +2166,87 @@ func_C41628:
 	sep #$20 ;A->8
 	rep #$10 ;XY->16
 	bankswitch 0x7F
-	phb
-	jsl.l func_C433A8
-	plb
+	call_savebank func_C433A8
 	lda.b #$0F
 	sta.w $A9BD
-	stz.b wTemp06
-	phb
-	jsl.l func_C437FD
-	plb
+	stz.b w7f0006
+	call_savebank func_C437FD
 	lda.b #$03
-	sta.b wTemp00
+	sta.b w7f0000
 	jsl.l func_808F59
 	lda.b #$04
-	sta.b wTemp00
+	sta.b w7f0000
 	jsl.l func_808F85
 	lda.b #$03
-	sta.b wTemp00
+	sta.b w7f0000
 	jsl.l func_808F9A
 	lda.b #$13
-	sta.b wTemp00
+	sta.b w7f0000
 	jsl.l func_808FC0
 	lda.b #$40
-	sta.b wTemp00
+	sta.b w7f0000
 	jsl.l func_808FD5
 	lda.b #$02
-	sta.b wTemp00
+	sta.b w7f0000
 	jsl.l func_808FB1
-	phb
-	jsl.l func_808D3D
-	plb
-	phb
-	jsl.l func_808DAD
-	plb
+	call_savebank func_808D3D
+	call_savebank func_808DAD
 	jsl.l func_8089F6
 	lda.b #$0C
-	sta.b wTemp00
+	sta.b w7f0000
 	ldy.w #$FFC0
-	sty.b wTemp02
+	sty.b w7f0002
 	ldx.w #$7FFF
-	stx.b wTemp04
+	stx.b w7f0004
 	ldx.w #$0000
-	stx.b wTemp06
-	phb
-	jsl.l func_808A5C
-	plb
+	stx.b w7f0006
+	call_savebank func_808A5C
 	jsl.l func_8085B1
-	phb
-	jsl.l func_C063D1
-	plb
+	call_savebank func_C063D1
 	ldx.w #$0013
-	stx.b wTemp00
+	stx.b w7f0000
 	ldx.w #$00DD
-	stx.b wTemp02
+	stx.b w7f0002
 	ldx.w #$0505
-	stx.b wTemp04
-	stx.b wTemp06
-	phb
-	jsl.l func_C06C80
-	plb
+	stx.b w7f0004
+	stx.b w7f0006
+	call_savebank func_C06C80
 	ldx.w #$C700
-	stx.b wTemp00
+	stx.b w7f0000
 	ldx.w #$06C6
-	stx.b wTemp02
+	stx.b w7f0002
 	ldx.w #$0506
-	stx.b wTemp04
-	stx.b wTemp06
-	phb
-	jsl.l func_C06C80
-	plb
+	stx.b w7f0004
+	stx.b w7f0006
+	call_savebank func_C06C80
 	jsl.l func_C0693A
-	phb
-	jsl.l func_C07663
-	plb
+	call_savebank func_C07663
 	stz.w $A9BF
 	ldx.w #$0F01
-	stx.b wTemp00
+	stx.b w7f0000
 	lda.b #$20
-	sta.b wTemp02
-	phb
-	jsl.l func_81CC29
-	plb
+	sta.b w7f0002
+	call_savebank func_81CC29
 	ldx.w #$0002
-	stx.b wTemp00
-	phb
-	jsl.l func_C43F67
-	plb
+	stx.b w7f0000
+	call_savebank func_C43F67
 	ldx.w #$0000
 @lbl_C416FF:
 	lda.b #$0C
-	sta.b wTemp00
+	sta.b w7f0000
 	ldy.w #$FFC0
-	sty.b wTemp02
+	sty.b w7f0002
 	ldy.w #$7FFF
-	sty.b wTemp04
-	stx.b wTemp06
+	sty.b w7f0004
+	stx.b w7f0006
 	phx
-	phb
-	jsl.l func_808A5C
-	plb
+	call_savebank func_808A5C
 	plx
 	jsl.l func_8085B1
 	ldy.w #$0006
-	sty.b wTemp00
+	sty.b w7f0000
 	phx
-	phb
-	jsl.l func_C43F67
-	plb
+	call_savebank func_C43F67
 	plx
 	bcs @lbl_C41764
 	inx
@@ -2791,22 +2257,18 @@ func_C41628:
 	ldy.w #$0000
 @lbl_C4173B:
 	ldx.w #$0001
-	stx.b wTemp00
+	stx.b w7f0000
 	phy
-	phb
-	jsl.l func_C43F67
-	plb
+	call_savebank func_C43F67
 	ply
 	bcs @lbl_C41764
 	iny
 	cpy.w #$02B8
 	bne @lbl_C4173B
 	ldx.w #$00FF
-	stx.b wTemp00
+	stx.b w7f0000
 	jsl.l func_809664
-	phb
-	jsl.l func_C43F17
-	plb
+	call_savebank func_C43F17
 	bcs @lbl_C41764
 	plp
 	clc
@@ -2821,106 +2283,74 @@ func_C41767:
 	rep #$10 ;XY->16
 	bankswitch 0x7F
 	ldx.w #$0029
-	stx.b wTemp00
-	phb
-	jsl.l func_818049
-	plb
+	stx.b w7f0000
+	call_savebank func_818049
 	lda.b #$0D
-	sta.b wTemp00
-	phb
-	jsl.l func_C43453
-	plb
-	phb
-	jsl.l func_C433A8
-	plb
+	sta.b w7f0000
+	call_savebank func_C43453
+	call_savebank func_C433A8
 	lda.b #$0F
 	sta.w $A9BD
-	stz.b wTemp06
-	phb
-	jsl.l func_C4376E
-	plb
+	stz.b w7f0006
+	call_savebank func_C4376E
 	ldx.w #$3000
 	stx.w $9D08
 	ldx.w #$3400
 	stx.w $9D0A
-	phb
-	jsl.l func_C46178
-	plb
-	phb
-	jsl.l func_C46269
-	plb
+	call_savebank func_C46178
+	call_savebank func_C46269
 	lda.b #$07
-	sta.b wTemp00
-	phb
-	jsl.l func_C460FA
-	plb
+	sta.b w7f0000
+	call_savebank func_C460FA
 	lda.b #$07
-	sta.b wTemp00
+	sta.b w7f0000
 	jsl.l func_808F59
-	phb
-	jsl.l func_C063D1
-	plb
+	call_savebank func_C063D1
 	ldx.w #$C700
-	stx.b wTemp00
+	stx.b w7f0000
 	ldx.w #$06C7
-	stx.b wTemp02
+	stx.b w7f0002
 	ldx.w #$0405
-	stx.b wTemp04
-	stx.b wTemp06
-	phb
-	jsl.l func_C06C80
-	plb
+	stx.b w7f0004
+	stx.b w7f0006
+	call_savebank func_C06C80
 	ldx.w #$0013
-	stx.b wTemp00
+	stx.b w7f0000
 	ldx.w #$00DE
-	stx.b wTemp02
+	stx.b w7f0002
 	ldx.w #$0405
-	stx.b wTemp04
-	stx.b wTemp06
-	phb
-	jsl.l func_C06C80
-	plb
+	stx.b w7f0004
+	stx.b w7f0006
+	call_savebank func_C06C80
 	ldx.w #$C701
-	stx.b wTemp00
+	stx.b w7f0000
 	ldx.w #$06C8
-	stx.b wTemp02
+	stx.b w7f0002
 	ldx.w #$0407
-	stx.b wTemp04
-	stx.b wTemp06
-	phb
-	jsl.l func_C06C80
-	plb
+	stx.b w7f0004
+	stx.b w7f0006
+	call_savebank func_C06C80
 	jsl.l func_C0693A
-	phb
-	jsl.l func_C07663
-	plb
+	call_savebank func_C07663
 	stz.w $A9BF
 	ldx.w #$0F01
-	stx.b wTemp00
+	stx.b w7f0000
 	lda.b #$21
-	sta.b wTemp02
-	phb
-	jsl.l func_81CC29
-	plb
+	sta.b w7f0002
+	call_savebank func_81CC29
 	ldx.w #$0002
-	stx.b wTemp00
-	phb
-	jsl.l func_C43F67
-	plb
+	stx.b w7f0000
+	call_savebank func_C43F67
 	bcc @lbl_C41839
 ;C41836  
 	.db $82,$D1,$00
 @lbl_C41839:
 	jsl.l func_8089F6
-	phb
-	jsl.l func_808D3D
-	plb
+	call_savebank func_808D3D
 	ldx.w #$00FF
-	stx.b wTemp00
+	stx.b w7f0000
 	jsl.l func_809650
-	phb
-	jsl.l func_C43F17
-	plb
+	call_savebank func_C43F17
 	bcc @lbl_C41857
 ;C41854  
 	.db $82,$B3,$00
@@ -2931,9 +2361,7 @@ func_C4185A:
 	ldx.w #$000C
 	stx.b wTemp00
 	phy
-	phb
-	jsl.l func_C4677C
-	plb
+	call_savebank func_C4677C
 	ply
 	tya
 	bit.b #$03
@@ -2946,9 +2374,7 @@ func_C4185A:
 	jsl.l func_8089AA
 	ply
 	phy
-	phb
-	jsl.l func_808D3D
-	plb
+	call_savebank func_808D3D
 	ply
 	jsl.l func_8085B1
 @lbl_C41886:
@@ -2957,9 +2383,7 @@ func_C4185A:
 	ldx.w #$0001
 	stx.b wTemp00
 	phy
-	phb
-	jsl.l func_818049
-	plb
+	call_savebank func_818049
 	ply
 @lbl_C41898:
 	cpy.w #$0032
@@ -3000,18 +2424,14 @@ func_C4185A:
 	lda.b #$0A
 	sta.b wTemp00
 	phy
-	phb
-	jsl.l func_808A5C
-	plb
+	call_savebank func_808A5C
 	ply
 	jsl.l func_8085B1
 @lbl_C418F2:
 	ldx.w #$0002
 	stx.b wTemp00
 	phy
-	phb
-	jsl.l func_C43F67
-	plb
+	call_savebank func_C43F67
 	ply
 	bcs @lbl_C4190A
 	dey
@@ -3089,7 +2509,8 @@ func_C4185A:
 	.db $8B,$22,$53,$4A,$C4,$AB,$28,$6B,$08,$E2,$20,$C2,$10,$A9,$7F,$48   ;C41D0A
 	.db $AB,$A9,$06,$85,$00,$8B,$22,$53,$34,$C4,$AB,$8B,$22,$A8,$33,$C4   ;C41D1A
 	.db $AB,$A9,$0F,$8D,$BD,$A9,$8B,$22,$E2,$3A,$C4,$AB,$A9,$91,$85,$00   ;C41D2A
-	.db $22,$12,$05,$C6,$A5,$00,$8D,$CF,$A9,$8B,$22,$D1,$63,$C0,$AB,$A2   ;C41D3A  
+	jsl.l _GetEvent
+	.db $A5,$00,$8D,$CF,$A9,$8B,$22,$D1,$63,$C0,$AB,$A2   ;C41D3A  
 	.db $13,$00,$86,$00,$A2,$3A,$02,$86,$02,$A2,$06,$07,$86,$04,$86,$06   ;C41D4A  
 	.db $8B,$22,$80,$6C,$C0,$AB,$AD,$CF,$A9,$89,$01,$F0,$17,$A2,$00,$61   ;C41D5A
 	.db $86,$00,$A2,$3A,$02,$86,$02,$A2,$06,$07,$86,$04,$86,$06,$8B,$22   ;C41D6A  
@@ -3502,12 +2923,12 @@ func_C433A8:
 	lda.w #$0008
 	ora.w #$0004
 	ora.w #$0002
-	sta.b wTemp00
-	stz.b wTemp02
-	stz.b wTemp04
+	sta.b w7f0000
+	stz.b w7f0002
+	stz.b w7f0004
 	jsl.l func_808ED0
 	lda.w #$0000
-	sta.b wTemp00
+	sta.b w7f0000
 	jsl.l func_80DD40
 	plp
 	rtl
@@ -3718,9 +3139,7 @@ func_C436C2:
 	jsl.l func_C46D0F
 	lda.b #$01
 	sta.b wTemp03
-	phb
-	jsl.l func_C482ED
-	plb
+	call_savebank func_C482ED
 	lda.b #$01
 	sta.b wTemp03
 	ldx.w #$3800
@@ -3728,9 +3147,7 @@ func_C436C2:
 	jsl.l func_C484CB
 	lda.b #$00
 	sta.b wTemp03
-	phb
-	jsl.l func_C482ED
-	plb
+	call_savebank func_C482ED
 	lda.b #$00
 	sta.b wTemp03
 	ldx.w #$3C00
@@ -3808,9 +3225,7 @@ func_C4376E:
 	lda.b #$00
 	sta.b wTemp03
 	phy
-	phb
-	jsl.l func_C482ED
-	plb
+	call_savebank func_C482ED
 	ply
 	lda.b #$00
 	sta.b wTemp03
@@ -4433,9 +3848,7 @@ func_C4421C:
 	pha
 	phx
 	phy
-	phb
-	jsl.l func_80911A
-	plb
+	call_savebank func_80911A
 	ply
 	plx
 	pla
@@ -4515,9 +3928,7 @@ func_C4421C:
 	pha
 	phx
 	phy
-	phb
-	jsl.l func_C43FAD
-	plb
+	call_savebank func_C43FAD
 	ply
 	plx
 	pla
@@ -4569,9 +3980,7 @@ func_C44320:
 	lda.b wTemp06
 	pha
 	phx
-	phb
-	jsl.l func_C4404A
-	plb
+	call_savebank func_C4404A
 	plx
 	pla
 	sta.b wTemp06
@@ -4603,15 +4012,15 @@ func_C44386:
 	php
 	sep #$30 ;AXY->8
 	bankswitch 0x7F
-	lda.b wTemp00
+	lda.b w7f0000
 	asl a
 	tax
 	lda.l DATA8_C46AF3,x
-	sta.b wTemp00
+	sta.b w7f0000
 	lda.l DATA8_C46AF4,x
-	sta.b wTemp01
+	sta.b w7f0000+1
 	lda.b #$C4
-	sta.b wTemp02
+	sta.b w7f0002
 	ldy.b #$00
 	ldx.b #$00
 @lbl_C443A5:
@@ -4630,9 +4039,7 @@ func_C44386:
 	bra @lbl_C443A5
 @lbl_C443BE:
 	stx.w $A178
-	phb
-	jsl.l func_C44443
-	plb
+	call_savebank func_C44443
 	plp
 	rtl
 
@@ -4641,16 +4048,16 @@ func_C443C9:
 	sep #$30 ;AXY->8
 	bankswitch 0x7F
 	lda.b #$18
-	sta.b wTemp00
+	sta.b w7f0000
 	ldx.b #$00
 @lbl_C443D6:
 	lda.w $A123,x
 	bmi @lbl_C443E8
-	lda.b wTemp00
+	lda.b w7f0000
 	sta.w $A163,x
 	clc
 	adc.b #$03
-	sta.b wTemp00
+	sta.b w7f0000
 	inx
 	bra @lbl_C443D6
 @lbl_C443E8:
@@ -4673,34 +4080,30 @@ func_C443C9:
 	inx
 	bra @lbl_C443EA
 @lbl_C44409:
-	stz.b wTemp00
+	stz.b w7f0000
 	phx
-	phb
-	jsl.l func_C4420A
-	plb
+	call_savebank func_C4420A
 	plx
 	ldy.b #$01
-	sty.b wTemp00
-	stz.b wTemp01
+	sty.b w7f0000
+	stz.b w7f0000+1
 	phx
-	phb
-	jsl.l func_C43F40
-	plb
+	call_savebank func_C43F40
 	plx
 	bcs @lbl_C44440
 	ldx.b #$00
-	stz.b wTemp00
+	stz.b w7f0000
 @lbl_C44427:
 	lda.w $A123,x
 	bmi @lbl_C44436
 	lda.w $A163,x
 	beq @lbl_C44433
-	inc.b wTemp00
+	inc.b w7f0000
 @lbl_C44433:
 	inx
 	bra @lbl_C44427
 @lbl_C44436:
-	lda.b wTemp00
+	lda.b w7f0000
 	beq @lbl_C4443D
 	brl @lbl_C443E8
 @lbl_C4443D:
@@ -4719,14 +4122,14 @@ func_C44443:
 	lda.b #$F0
 	sta.l $7EC1A1
 	ldx.b #$00
-	stx.b wTemp00
+	stx.b w7f0000
 @lbl_C44454:
 	cpx.w $A14E
 	bne @lbl_C4445D
 	lda.b #$02
-	sta.b wTemp00
+	sta.b w7f0000
 @lbl_C4445D:
-	lda.b wTemp00
+	lda.b w7f0000
 	sta.l $7EC1A2,x
 	inx
 	cpx.b #$70
@@ -4737,9 +4140,9 @@ func_C44443:
 	cpx.w $A14E
 	bne @lbl_C44477
 	lda.b #$02
-	sta.b wTemp00
+	sta.b w7f0000
 @lbl_C44477:
-	lda.b wTemp00
+	lda.b w7f0000
 	sta.l $7EC1A3,x
 	inx
 	cpx.b #$E0
@@ -5375,21 +4778,15 @@ func_C44A96:
 	rep #$10 ;XY->16
 	lda.b #$08
 	sta.b wTemp00
-	phb
-	jsl.l func_C460FA
-	plb
+	call_savebank func_C460FA
 	lda.b #$05
 	sta.b wTemp00
 	stz.b wTemp02
-	phb
-	jsl.l func_C44154
-	plb
+	call_savebank func_C44154
 	lda.b #$06
 	sta.b wTemp00
 	stz.b wTemp02
-	phb
-	jsl.l func_C44154
-	plb
+	call_savebank func_C44154
 	ldy.w #$00FF
 	sty.b wTemp00
 	jsl.l func_809650
@@ -5411,9 +4808,7 @@ func_C44AD4:
 	lda.b wTemp00
 	pha
 	phx
-	phb
-	jsl.l func_C460FA
-	plb
+	call_savebank func_C460FA
 	plx
 	pla
 	sta.b wTemp00
@@ -5421,9 +4816,7 @@ func_C44AD4:
 	lda.b wTemp00
 	pha
 	phx
-	phb
-	jsl.l func_C460FA
-	plb
+	call_savebank func_C460FA
 	plx
 	pla
 	sta.b wTemp00
@@ -5595,16 +4988,14 @@ func_C44C3D:
 	sta.w $9D10,x
 	inx
 	lda.b #$05
-	sta.b wTemp00
+	sta.b w7f0000
 	lda.b #$08
-	sta.b wTemp01
+	sta.b w7f0000+1
 	rep #$20 ;A->16
 	phx
-	phb
-	jsl.l func_C4404A
-	plb
+	call_savebank func_C4404A
 	plx
-	lda.b wTemp02
+	lda.b w7f0002
 	sta.w $9D10,x
 	inx
 	inx
@@ -5626,28 +5017,24 @@ func_C44C3D:
 	adc.w #$0017
 	sta.w $9D0E
 	inc.w $9D0C
-	phb
-	jsl.l func_C43FAD
-	plb
+	call_savebank func_C43FAD
 	jsl.l func_8085CC
 	jsl.l func_8089F6
-	phb
-	jsl.l func_808D3D
-	plb
+	call_savebank func_808D3D
 	tdc
 	tax
 @lbl_C44CA2:
 	lda.w #$000A
-	sta.b wTemp00
+	sta.b w7f0000
 	lda.w #$0480
-	sta.b wTemp02
-	stx.b wTemp04
+	sta.b w7f0002
+	stx.b w7f0004
 	phx
 	jsl.l func_808A5C
 	plx
 	jsl.l func_8085B1
 	ldy.w #$0001
-	sty.b wTemp00
+	sty.b w7f0000
 	phx
 	phy
 	jsl.l func_C43F40
@@ -5856,9 +5243,7 @@ func_C45676:
 	pha
 	phx
 	phy
-	phb
-	jsl.l func_809028
-	plb
+	call_savebank func_809028
 	ply
 	plx
 	pla
@@ -5909,9 +5294,7 @@ func_C456DD:
 	pha
 	phx
 	phy
-	phb
-	jsl.l func_809028
-	plb
+	call_savebank func_809028
 	ply
 	plx
 	pla
@@ -6042,38 +5425,34 @@ func_C457FE:
 	ldx.b wTemp06
 	bne @lbl_C45840
 	lda.b #$03
-	sta.b wTemp00
+	sta.b w7f0000
 	jsl.l func_808F59
 	lda.b #$10
-	sta.b wTemp00
+	sta.b w7f0000
 	jsl.l func_808F85
 	lda.b #$03
-	sta.b wTemp00
+	sta.b w7f0000
 	jsl.l func_808FC0
 	lda.b #$02
-	sta.b wTemp00
+	sta.b w7f0000
 	jsl.l func_808FB1
 	ldy.w #$0000
-	sty.b wTemp00
+	sty.b w7f0000
 	jsl.l func_809622
 	phx
-	phb
-	jsl.l func_808D3D
-	plb
+	call_savebank func_808D3D
 	plx
 	jsl.l func_8089F6
 @lbl_C45840:
 	cpx.w #$0010
 	bcs @lbl_C4585F
 	lda.b #$0A
-	sta.b wTemp00
+	sta.b w7f0000
 	ldy.w #$03A0
-	sty.b wTemp02
-	stx.b wTemp04
+	sty.b w7f0002
+	stx.b w7f0004
 	phx
-	phb
-	jsl.l func_808A5C
-	plb
+	call_savebank func_808A5C
 	plx
 	jsl.l func_8085B1
 	brl func_C4592C
@@ -6081,62 +5460,52 @@ func_C457FE:
 	cpx.w #$0010
 	bne @lbl_C458A6
 	phx
-	phb
-	jsl.l func_808D3D
-	plb
+	call_savebank func_808D3D
 	plx
 	phx
-	phb
-	jsl.l func_808DAD
-	plb
+	call_savebank func_808DAD
 	plx
 	lda.b #$01
-	sta.b wTemp00
+	sta.b w7f0000
 	lda.b #$08
-	sta.b wTemp01
+	sta.b w7f0000+1
 	ldy.w #$592E
-	sty.b wTemp02
+	sty.b w7f0002
 	lda.b #$C4
-	sta.b wTemp04
+	sta.b w7f0004
 	phx
-	phb
-	jsl.l func_80886F
-	plb
+	call_savebank func_80886F
 	plx
 	lda.b #$01
-	sta.b wTemp00
+	sta.b w7f0000
 	lda.b #$09
-	sta.b wTemp01
+	sta.b w7f0000+1
 	ldy.w #$592E
-	sty.b wTemp02
+	sty.b w7f0002
 	lda.b #$C4
-	sta.b wTemp04
+	sta.b w7f0004
 	phx
-	phb
-	jsl.l func_80886F
-	plb
+	call_savebank func_80886F
 	plx
 @lbl_C458A6:
 	cpx.w #$0020
 	bcs @lbl_C458D6
 	lda.b #$08
-	sta.b wTemp00
+	sta.b w7f0000
 	ldy.w #$03A0
-	sty.b wTemp02
+	sty.b w7f0002
 	rep #$20 ;A->16
 	txa
 	sec
 	sbc.w #$0010
-	sta.b wTemp04
+	sta.b w7f0004
 	lda.w #$000F
 	sec
-	sbc.b wTemp04
-	sta.b wTemp04
+	sbc.b w7f0004
+	sta.b w7f0004
 	sep #$20 ;A->8
 	phx
-	phb
-	jsl.l func_808A5C
-	plb
+	call_savebank func_808A5C
 	plx
 	jsl.l func_8085B1
 	brl func_C4592C
@@ -6144,41 +5513,37 @@ func_C457FE:
 	cpx.w #$0020
 	bne @lbl_C458E3
 	lda.b #$10
-	sta.b wTemp00
+	sta.b w7f0000
 	jsl.l func_808F59
 @lbl_C458E3:
 	cpx.w #$002F
 	bcs @lbl_C4590B
 	lda.b #$08
-	sta.b wTemp00
+	sta.b w7f0000
 	ldy.w #$03A0
-	sty.b wTemp02
+	sty.b w7f0002
 	rep #$20 ;A->16
 	txa
 	sec
 	sbc.w #$0020
-	sta.b wTemp04
+	sta.b w7f0004
 	sep #$20 ;A->8
 	phx
-	phb
-	jsl.l func_808A5C
-	plb
+	call_savebank func_808A5C
 	plx
 	jsl.l func_8085B1
 	brl func_C4592C
 @lbl_C4590B:
 	lda.b #$02
-	sta.b wTemp00
+	sta.b w7f0000
 	lda.b #$08
-	sta.b wTemp01
+	sta.b w7f0000+1
 	ldy.w #$012C
-	sty.b wTemp02
+	sty.b w7f0002
 	lda.b #$D9
-	sta.b wTemp04
+	sta.b w7f0004
 	phx
-	phb
-	jsl.l func_80886F
-	plb
+	call_savebank func_80886F
 	plx
 	jsl.l func_808A00
 	jsl.l func_8085B1
@@ -6204,14 +5569,14 @@ func_C4594C:
 	asl a
 	tax
 	lda.l DATA8_C46BB6,x
-	sta.b wTemp00
+	sta.b w7f0000
 	lda.l DATA8_C46BB7,x
-	sta.b wTemp01
+	sta.b w7f0000+1
 	lda.b #$C4
-	sta.b wTemp02
-	lda.b wTemp06
+	sta.b w7f0002
+	lda.b w7f0006
 	asl a
-	sta.b wTemp06
+	sta.b w7f0006
 	rep #$30 ;AXY->16
 	ldx.w #$0000
 	lda.w #$0000
@@ -6223,7 +5588,7 @@ func_C4594C:
 	bne @lbl_C45982
 	ldx.w #$0000
 	sep #$20 ;A->8
-	lda.b wTemp06
+	lda.b w7f0006
 	cmp.b #$10
 	bcs @lbl_C4599A
 	brl func_C45BA1
@@ -6247,21 +5612,21 @@ func_C4594C:
 	bra @lbl_C459A7
 @lbl_C459BE:
 	sep #$30 ;AXY->8
-	lda.b wTemp06
+	lda.b w7f0006
 	and.b #$07
-	sta.b wTemp07
+	sta.b w7f0006+1
 	lda.b #$08
 	sec
-	sbc.b wTemp07
-	sta.b wTemp05
-	lda.b wTemp06
+	sbc.b w7f0006+1
+	sta.b w7f0004+1
+	lda.b w7f0006
 	rep #$20 ;A->16
 	and.w #$00F8
 	asl a
 	asl a
 	sta.w $A57D
 	sep #$20 ;A->8
-	stz.b wTemp03
+	stz.b w7f0002+1
 
 func_C459DD:
 	sep #$30 ;AXY->8
@@ -6478,9 +5843,7 @@ func_C459DD:
 	beq func_C45BA1
 	brl func_C459DD
 func_C45BA1:
-	phb
-	jsl.l func_C45BA9
-	plb
+	call_savebank func_C45BA9
 	plp
 	rtl
 
@@ -6490,7 +5853,7 @@ func_C45BA9:
 	rep #$10 ;XY->16
 	bankswitch 0x7F
 	ldx.w #$5BC5
-	stx.b wTemp00
+	stx.b w7f0000
 	bankswitch 0xC4
 	jsl.l func_80862D
 	jsl.l func_8085EE
@@ -6807,9 +6170,7 @@ func_C45EAD:
 	dec.b wTemp04
 	bne @lbl_C45F13
 @lbl_C45F50:
-	phb
-	jsl.l func_C45F58
-	plb
+	call_savebank func_C45F58
 	plp
 	rtl
 
@@ -7042,7 +6403,7 @@ func_C46178:
 	lda.l DATA8_C46258
 	sta.w $A11F
 	lda.w #$A11A
-	sta.b wTemp00
+	sta.b w7f0000
 	ldy.b #$7F
 	phy
 	plb
@@ -7063,7 +6424,7 @@ func_C46178:
 	lda.l DATA8_C46263
 	sta.w $A11F
 	lda.w #$A11A
-	sta.b wTemp00
+	sta.b w7f0000
 	ldy.b #$7F
 	phy
 	plb
@@ -7076,16 +6437,14 @@ func_C46178:
 	sta.w $9D10,x
 	inx
 	lda.b #$00
-	sta.b wTemp00
+	sta.b w7f0000
 	lda.b #$16
-	sta.b wTemp01
+	sta.b w7f0000+1
 	rep #$20 ;A->16
 	phx
-	phb
-	jsl.l func_C4404A
-	plb
+	call_savebank func_C4404A
 	plx
-	lda.b wTemp02
+	lda.b w7f0002
 	clc
 	adc.w $9D0A
 	sta.w $9D10,x
@@ -7109,9 +6468,7 @@ func_C46178:
 	adc.w #$0105
 	sta.w $9D0E
 	inc.w $9D0C
-	phb
-	jsl.l func_C43FAD
-	plb
+	call_savebank func_C43FAD
 	jsl.l func_8085CC
 	plp
 	rtl
@@ -7207,16 +6564,12 @@ func_C4628E:
 	stx.b wTemp05
 	lda.b wTemp06
 	pha
-	phb
-	jsl.l func_C466CE
-	plb
+	call_savebank func_C466CE
 	pla
 	sta.b wTemp06
 	lda.b wTemp06
 	sta.b wTemp00
-	phb
-	jsl.l func_C4B94F
-	plb
+	call_savebank func_C4B94F
 	lda.b wTemp00
 	sta.l $7FA585
 	phb
@@ -7295,9 +6648,7 @@ func_C4630C:
 	pha
 	phx
 	phy
-	phb
-	jsl.l func_C46269
-	plb
+	call_savebank func_C46269
 	ply
 	plx
 	pla
@@ -7326,9 +6677,7 @@ func_C463B7:
 	pha
 	phx
 	phy
-	phb
-	jsl.l func_C4643F
-	plb
+	call_savebank func_C4643F
 	ply
 	plx
 	pla
@@ -7346,7 +6695,7 @@ func_C463B7:
 	bankswitch 0x7F
 	rep #$20 ;A->16
 	lda.w #$A11A
-	sta.b wTemp00
+	sta.b w7f0000
 	pha
 	phx
 	phy
@@ -7364,7 +6713,7 @@ func_C463B7:
 	bankswitch 0x7F
 	rep #$20 ;A->16
 	lda.w #$A11A
-	sta.b wTemp00
+	sta.b w7f0000
 	pha
 	phx
 	phy
@@ -7743,16 +7092,12 @@ func_C4677C:
 	bne @lbl_C467F3
 	lda.b wTemp00
 	pha
-	phb
-	jsl.l func_C46269
-	plb
+	call_savebank func_C46269
 	pla
 	sta.b wTemp00
 	lda.b wTemp00
 	pha
-	phb
-	jsl.l func_C46178
-	plb
+	call_savebank func_C46178
 	pla
 	sta.b wTemp00
 @lbl_C467AE:
@@ -7790,9 +7135,7 @@ func_C4677C:
 	inc.w $A583
 	rep #$20 ;A->16
 @lbl_C467ED:
-	phb
-	jsl.l func_C4628E
-	plb
+	call_savebank func_C4628E
 @lbl_C467F3:
 	plp
 	rtl
@@ -8023,7 +7366,7 @@ func_C46D6D:
 	asl a
 	tax
 	rep #$30 ;AXY->16
-	lda.b wTemp04
+	lda.b w7f0004
 	sta.w $AA4C
 	lda.w #$007E
 	bra @lbl_C46D94
@@ -8047,9 +7390,9 @@ func_C46D6D:
 	bpl @lbl_C46DAB
 	stx.b w00c5
 	sep #$20 ;A->8
-	lda.b wTemp02
+	lda.b w7f0002
 	sta.b w00c4
-	ldy.b wTemp00
+	ldy.b w7f0000
 	sty.b w00c2
 	tdc
 	tax
@@ -9986,7 +9329,7 @@ func_C47A84:
 	lda.b wTemp02
 	sta.b w00c4
 	bankswitch 0x7F
-	ldx.b wTemp00
+	ldx.b w7f0000
 	stx.b w00c2
 	ldy.b w00c5
 	ldx.w #$0000
@@ -10674,7 +10017,7 @@ func_C47F21:
 	lda.b wTemp02
 	sta.b w00c4
 	bankswitch 0x7F
-	ldx.b wTemp00
+	ldx.b w7f0000
 	stx.b w00c2
 	lda.b [$C2]
 	inc.b w00c2
@@ -11048,8 +10391,8 @@ func_C48339:
 @lbl_C4835F:
 	sta.b w00be
 	sta.b w00bf
-	stz.b wTemp03
-	ldy.b wTemp02
+	stz.b w7f0002+1
+	ldy.b w7f0002
 	beq @lbl_C48397
 	ldx.w #$0000
 @lbl_C4836C:
@@ -11121,7 +10464,7 @@ func_C48339:
 	lda.b w00bf
 	bne @lbl_C4839A
 	lda.b w00be
-	sta.b wTemp00
+	sta.b w7f0000
 	plp
 	rtl
 
@@ -11225,7 +10568,7 @@ func_C4854E:
 	beq @lbl_C4856C
 	tax
 	sep #$20 ;A->8
-	stz.w wTemp00,x
+	stz.w w7f0000,x
 	rep #$20 ;A->16
 	iny
 	iny
@@ -11251,12 +10594,12 @@ func_C48589:
 	tdc
 	tax
 @lbl_C48595:
-	stx.b wTemp00
+	stx.b w7f0000
 	phx
 	jsl.l func_C23B7C
 	plx
-	stz.b wTemp01
-	lda.b wTemp00
+	stz.b w7f0000+1
+	lda.b w7f0000
 	cmp.b #$FF
 	beq @lbl_C485AF
 	sta.w $AC3B,x
@@ -11270,18 +10613,16 @@ func_C48589:
 	jsl.l func_C23B89
 	ldx.b #$03
 @lbl_C485BB:
-	lda.b wTemp00,x
+	lda.b w7f0000,x
 	sta.w $AC79,x
 	dex
 	bpl @lbl_C485BB
 	stz.w $AC19
 	lda.b #$13
-	sta.b wTemp00
-	phb
-	jsl.l func_C210AC
-	plb
+	sta.b w7f0000
+	call_savebank func_C210AC
 	jsl.l func_C359AF
-	lda.b wTemp01
+	lda.b w7f0000+1
 	bmi @lbl_C485FA
 	ldx.w $AC3A
 	beq @lbl_C485E7
@@ -11308,16 +10649,14 @@ func_C485FC:
 	php
 	sep #$30 ;AXY->8
 	bankswitch 0x7F
-	ldy.b wTemp00
+	ldy.b w7f0000
 	phy
-	phb
-	jsl.l func_C30710
-	plb
+	call_savebank func_C30710
 	ply
-	lda.b wTemp02
+	lda.b w7f0002
 	pha
 	lda.b #$01
-	ldx.b wTemp01
+	ldx.b w7f0000+1
 	cpx.b #$B4
 	beq @lbl_C4861C
 	cpx.b #$BC
@@ -11337,12 +10676,12 @@ func_C485FC:
 	.db $A9,$01,$8D,$F4,$AB
 @lbl_C48635:
 	ldx.b #$00
-	sty.b wTemp00
+	sty.b w7f0000
 	phx
 	jsl.l func_C33AE2
 	plx
-	stz.b wTemp01
-	lda.b wTemp00
+	stz.b w7f0000+1
+	lda.b w7f0000
 	cmp.b #$FF
 	beq @lbl_C48652
 	.db $A8,$9D,$3B,$AC,$8A,$9D,$5A,$AC   ;C48647
@@ -11352,7 +10691,7 @@ func_C485FC:
 	stx.w $AC3A
 	txa
 	clc
-	adc.b wTemp01,s
+	adc.b w7f0000+1,s
 	bne @lbl_C48663
 ;C4865E  
 	.db $9C,$F4,$AB,$A9,$01
@@ -11374,12 +10713,10 @@ func_C48674:
 	sep #$30 ;AXY->8
 	bankswitch 0x7F
 	lda.b #$13
-	sta.b wTemp00
-	phb
-	jsl.l func_C210AC
-	plb
+	sta.b w7f0000
+	call_savebank func_C210AC
 	jsl.l func_C359AF
-	lda.b wTemp01
+	lda.b w7f0000+1
 	sta.w $AC3B
 	stz.w $AC5A
 	lda.b #$FF
@@ -11400,7 +10737,7 @@ func_C486A7:
 	sep #$30 ;AXY->8
 	bankswitch 0x7F
 	tdc
-	ldx.b wTemp01
+	ldx.b w7f0000+1
 	stx.w $AA82
 	beq @lbl_C486BB
 	cpx.b #$07
@@ -11416,7 +10753,7 @@ func_C486A7:
 	asl a
 	tax
 	ldy.b #$00
-	lda.b wTemp00
+	lda.b w7f0000
 @lbl_C486C7:
 	cmp.l DATA8_C4882C,x
 	beq @lbl_C486D5
@@ -11428,18 +10765,16 @@ func_C486A7:
 @lbl_C486D5:
 	sty.w $AA81
 	lda.b #$C4
-	sta.b wTemp02
+	sta.b w7f0002
 	ldx.w $AA83
 	rep #$20 ;A->16
 	lda.l DATA8_C4881A,x
-	sta.b wTemp00
+	sta.b w7f0000
 	lda.w #$0003
-	sta.b wTemp04
-	phb
-	jsl.l func_C5E3E5
-	plb
+	sta.b w7f0004
+	call_savebank func_C5E3E5
 	sep #$20 ;A->8
-	lda.b wTemp00
+	lda.b w7f0000
 	sta.w $AA80
 
 func_C486F9:
@@ -11502,14 +10837,10 @@ Jumptable_C48766:
 	.dw $8780
 
 func_C48776:
-	phb
-	jsl.l func_C48BF6
-	plb
+	call_savebank func_C48BF6
 	bcs @lbl_C48788
 	bra @lbl_C487B0
-	phb
-	jsl.l func_C48D07
-	plb
+	call_savebank func_C48D07
 	bcc @lbl_C487BA
 @lbl_C48788:
 	jmp.w func_C486F9
@@ -11517,9 +10848,7 @@ func_C48776:
 	lda.w $AA82
 	eor.b #$07
 	sta.b wTemp00
-	phb
-	jsl.l func_C48844
-	plb
+	call_savebank func_C48844
 	bcs @lbl_C48788
 	bra @lbl_C487B0
 	inc a
@@ -11528,9 +10857,7 @@ func_C48776:
 	sta.b wTemp02
 	lda.w $AA82
 	sta.b wTemp00
-	phb
-	jsl.l func_C48942
-	plb
+	call_savebank func_C48942
 	bcs @lbl_C48788
 @lbl_C487B0:
 	lda.b wTemp00
@@ -11540,9 +10867,7 @@ func_C48776:
 @lbl_C487BA:
 	lda.w $AA80
 	sta.b wTemp00
-	phb
-	jsl.l func_C5E52B
-	plb
+	call_savebank func_C5E52B
 	lda.w $AA84
 	sta.b wTemp00
 	lda.w $AA85
@@ -11626,17 +10951,15 @@ func_C48844:
 	asl a
 	tax
 	lda.b #$C4
-	sta.b wTemp02
+	sta.b w7f0002
 	rep #$20 ;A->16
 	lda.l @lbl_C48934,x
-	sta.b wTemp00
+	sta.b w7f0000
 	lda.w #$0A0A
-	sta.b wTemp04
+	sta.b w7f0004
 	sep #$20 ;A->8
-	phb
-	jsl.l func_C5E3E5
-	plb
-	lda.b wTemp00
+	call_savebank func_C5E3E5
+	lda.b w7f0000
 	sta.w $AA87
 	phb
 	jsl.l func_C5EDDC
@@ -11645,40 +10968,38 @@ func_C48844:
 	plb
 @lbl_C48894:
 	lda.w $AA87
-	sta.b wTemp00
-	stz.b wTemp02
+	sta.b w7f0000
+	stz.b w7f0002
 	lda.w $AA88
-	sta.b wTemp03
+	sta.b w7f0002+1
 	lda.b #$02
-	sta.b wTemp04
+	sta.b w7f0004
 	jsl.l func_C4A634
 	jsl.l func_80854A
 	jsl.l func_C4A93A
-	lda.b wTemp02
+	lda.b w7f0002
 	dec a
 	beq @lbl_C488D3
 	dec a
 	beq @lbl_C488E9
-	stz.b wTemp02
+	stz.b w7f0002
 	lda.w $AA88
-	sta.b wTemp04
+	sta.b w7f0004
 	lda.w $AA89
-	sta.b wTemp07
+	sta.b w7f0006+1
 	lda.b #$01
-	sta.b wTemp06
+	sta.b w7f0006
 	jsl.l func_C4A191
-	lda.b wTemp04
+	lda.b w7f0004
 	sta.w $AA88
 	bra @lbl_C48894
 @lbl_C488D3:
 	lda.w $AA87
-	sta.b wTemp00
-	phb
-	jsl.l func_C5E52B
-	plb
+	sta.b w7f0000
+	call_savebank func_C5E52B
 	ldx.w $AA88
 	lda.w $AA8A,x
-	sta.b wTemp00
+	sta.b w7f0000
 	plp
 	clc
 	rtl
@@ -11692,30 +11013,28 @@ func_C48844:
 	cmp.l $7FAA89
 	beq @lbl_C48934
 @lbl_C48902:
-	sta.b wTemp03
+	sta.b w7f0002+1
 	pha
 	lda.b #$02
-	sta.b wTemp02
+	sta.b w7f0002
 	jsl.l func_C4A627
 	rep #$20 ;A->16
 	lda.w #$017C
-	sta.b wTemp00
+	sta.b w7f0000
 	sep #$20 ;A->8
 	lda.l $7FAA8A,x
 	inc a
-	sta.b wTemp02
+	sta.b w7f0002
 	phx
-	phb
-	jsl.l func_C5E8A3
-	plb
+	call_savebank func_C5E8A3
 	plx
 	lda.l $7FAA89
-	sta.b wTemp00
+	sta.b w7f0000
 	pla
 	clc
 	adc.b #$10
 	inx
-	cpx.b wTemp00
+	cpx.b w7f0000
 	bne @lbl_C48902
 @lbl_C48934:
 	plp
@@ -11751,23 +11070,21 @@ func_C48942:
 	asl a
 	tax
 	lda.b #$C4
-	sta.b wTemp02
+	sta.b w7f0002
 	rep #$20 ;A->16
 	lda.l func_C48BE3,x
-	sta.b wTemp00
+	sta.b w7f0000
 	lda.w #$0205
-	sta.b wTemp04
+	sta.b w7f0004
 	sep #$20 ;A->8
-	phb
-	jsl.l func_C5E3E5
-	plb
-	lda.b wTemp00
+	call_savebank func_C5E3E5
+	lda.b w7f0000
 	sta.w $AA8D
 	phb
 	lda.w $AA8D
-	sta.b wTemp00
+	sta.b w7f0000
 	lda.b #$01
-	sta.b wTemp01
+	sta.b w7f0000+1
 	jsl.l func_C5E5CE
 	jsl.l func_C5EDDC
 	jsl.l func_C5EF0E
@@ -11778,25 +11095,25 @@ func_C48942:
 	jsr.w func_C48A95
 	jsl.l func_80854A
 	jsl.l func_C4A93A
-	lda.b wTemp02
+	lda.b w7f0002
 	dec a
 	beq @lbl_C489E8
 	dec a
 	beq @lbl_C489DC
-	stz.b wTemp02
+	stz.b w7f0002
 	lda.w $AA8F
-	sta.b wTemp04
+	sta.b w7f0004
 	lda.w $AA90
-	sta.b wTemp07
+	sta.b w7f0006+1
 	lda.b #$01
-	sta.b wTemp06
+	sta.b w7f0006
 	jsl.l func_C4A191
-	lda.b wTemp04
+	lda.b w7f0004
 	sta.w $AA8F
 	bra @lbl_C489AC
 @lbl_C489DC:
 	lda.w $AA8D
-	sta.b wTemp00
+	sta.b w7f0000
 	jsl.l func_C5E52B
 	plp
 	sec
@@ -11830,9 +11147,7 @@ func_C489FE:
 	sep #$20 ;A->8
 	lda.b #$C4
 	sta.b wTemp02
-	phb
-	jsl.l func_C48E3D
-	plb
+	call_savebank func_C48E3D
 	lda.b wTemp00
 	bmi @lbl_C48A72
 	bra @lbl_C48A77
@@ -11841,9 +11156,7 @@ func_C489FE:
 	sta.b wTemp02
 	ldx.w #$B718
 	stx.b wTemp00
-	phb
-	jsl.l func_C5E4A1
-	plb
+	call_savebank func_C5E4A1
 	lda.b wTemp00
 	pha
 	ldx.w #$010E
@@ -11851,24 +11164,18 @@ func_C489FE:
 	lda.b #$01
 	sta.b wTemp02
 	sep #$10 ;XY->8
-	phb
-	jsl.l func_C48FB2
-	plb
+	call_savebank func_C48FB2
 	pla
 	sta.b wTemp00
 	php
-	phb
-	jsl.l func_C5E52B
-	plb
+	call_savebank func_C5E52B
 	plp
 	bcs @lbl_C48A72
 	bra @lbl_C48A7A
 	lda.w $AA91
 	eor.b #$07
 	sta.b wTemp00
-	phb
-	jsl.l func_C48844
-	plb
+	call_savebank func_C48844
 	bcc @lbl_C48A75
 @lbl_C48A72:
 	.db $4C,$91,$89
@@ -11879,9 +11186,7 @@ func_C489FE:
 @lbl_C48A7A:
 	lda.w $AA8D
 	sta.b wTemp00
-	phb
-	jsl.l func_C5E52B
-	plb
+	call_savebank func_C5E52B
 	ldx.w $AA8F
 	lda.w $AA93,x
 	sta.b wTemp00
@@ -12060,12 +11365,12 @@ func_C48BF6:
 	jsl.l func_C659DE
 	bankswitch 0x7F
 	stz.w $AA9D
-	lda.b wTemp00
+	lda.b w7f0000
 	sta.w $AA97
 	tdc
 	tax
 @lbl_C48C0B:
-	lsr.b wTemp00
+	lsr.b w7f0000
 	bcc @lbl_C48C13
 	sta.w $AA99,x
 	inx
@@ -12081,7 +11386,7 @@ func_C48BF6:
 @lbl_C48C21:
 	cmp.b #$01
 	bne @lbl_C48C2A
-	stz.b wTemp00
+	stz.b w7f0000
 	plp
 	clc
 	rtl
@@ -12139,9 +11444,7 @@ func_C48D3C:
 	sta.b wTemp03
 	lda.b #$02
 	sta.b wTemp04
-	phb
-	jsl.l func_C5EC25
-	plb
+	call_savebank func_C5EC25
 	jsl.l func_80854A
 	jsl.l func_C4A93A
 	lda.b wTemp02
@@ -12465,9 +11768,7 @@ func_C48FEC:
 	sta.l $7FAAB1
 	lda.w #$0190
 	sta.b wTemp00
-	phb
-	jsl.l func_C4B94F
-	plb
+	call_savebank func_C4B94F
 	lda.b wTemp00
 	lda.w #$ABDC
 	sta.b wTemp02
@@ -12475,9 +11776,7 @@ func_C48FEC:
 	sta.b wTemp04
 	lda.w #$002A
 	sta.b wTemp05
-	phb
-	jsl.l func_C4C084
-	plb
+	call_savebank func_C4C084
 	sep #$20 ;A->8
 	bankswitch 0x7F
 	rep #$30 ;AXY->16
@@ -12506,10 +11805,8 @@ func_C48FEC:
 	bpl @lbl_C4908E
 	rep #$20 ;A->16
 	lda.w #$01C1
-	sta.b wTemp00
-	phb
-	jsl.l func_C4C0CC
-	plb
+	sta.b w7f0000
+	call_savebank func_C4C0CC
 	sep #$30 ;AXY->8
 	bra @lbl_C4909B
 @lbl_C4908E:
@@ -12523,7 +11820,7 @@ func_C48FEC:
 	asl a
 	pha
 	tyx
-	lda.b wTemp00,x
+	lda.b w7f0000,x
 	plx
 	cmp.b #$FF
 	beq @lbl_C490C1
@@ -12553,22 +11850,18 @@ func_C48FEC:
 @lbl_C490D8:
 	rep #$30 ;AXY->16
 	lda.w #$B746
-	sta.b wTemp00
+	sta.b w7f0000
 	lda.w #$00C4
-	sta.b wTemp02
-	phb
-	jsl.l func_C5E4A1
-	plb
-	lda.b wTemp00
+	sta.b w7f0002
+	call_savebank func_C5E4A1
+	lda.b w7f0000
 	sta.w $AAB4
 	lda.w #$B74F
-	sta.b wTemp00
+	sta.b w7f0000
 	lda.w #$00C4
-	sta.b wTemp02
-	phb
-	jsl.l func_C5E4A1
-	plb
-	lda.b wTemp00
+	sta.b w7f0002
+	call_savebank func_C5E4A1
+	lda.b w7f0000
 	sta.w $AAB6
 	phb
 	jsl.l func_C5EDDC
@@ -12578,9 +11871,7 @@ func_C48FEC:
 func_C4910F:
 	lda.w $AAB6
 	sta.b wTemp00
-	phb
-	jsl.l func_C5E7A8
-	plb
+	call_savebank func_C5E7A8
 
 func_C4911A:
 	lda.w $AAB4
@@ -12613,15 +11904,11 @@ func_C4912C:
 	sta.b wTemp03
 	lda.w #$0002
 	sta.b wTemp04
-	phb
-	jsl.l func_C5EC25
-	plb
+	call_savebank func_C5EC25
 	jsl.l func_80854A
 	lda.w #$0000
 	sta.b wTemp00
-	phb
-	jsl.l func_80DD10
-	plb
+	call_savebank func_80DD10
 	bit.w #$0080
 	beq @lbl_C49171
 	jmp.w func_C4923F
@@ -12726,9 +12013,7 @@ func_C4920B:
 	sta.w $AAB8
 	lda.w #$0049
 	sta.b wTemp00
-	phb
-	jsl.l func_818049
-	plb
+	call_savebank func_818049
 func_C4923C:
 	jmp.w func_C4912C
 
@@ -12766,9 +12051,7 @@ func_C49268:
 func_C49277:
 	lda.w #$0040
 	sta.b wTemp00
-	phb
-	jsl.l func_818049
-	plb
+	call_savebank func_818049
 	jmp.w func_C4911A
 func_C49285:
 	lda.w $AABE
@@ -12858,9 +12141,7 @@ func_C49326:
 	sta.w $AABC
 	lda.w #$0040
 	sta.b wTemp00
-	phb
-	jsl.l func_818049
-	plb
+	call_savebank func_818049
 	jmp.w func_C4910F
 
 func_C4933D:
@@ -12894,9 +12175,7 @@ func_C4933D:
 func_C49368:
 	lda.w #$0040
 	sta.b wTemp00
-	phb
-	jsl.l func_818049
-	plb
+	call_savebank func_818049
 	jmp.w func_C4911A
 func_C49376:
 	lda.w $ABDC
@@ -12907,9 +12186,7 @@ func_C49376:
 @lbl_C49381:
 	lda.w $AAB4
 	sta.b wTemp00
-	phb
-	jsl.l func_C5E52B
-	plb
+	call_savebank func_C5E52B
 	lda.w $AAB6
 	sta.b wTemp00
 	jsl.l func_C5E52B
@@ -12941,14 +12218,10 @@ func_C49398:
 @lbl_C493B8:
 	lda.w $AAB4
 	sta.b wTemp00
-	phb
-	jsl.l func_C5E52B
-	plb
+	call_savebank func_C5E52B
 	lda.w $AAB6
 	sta.b wTemp00
-	phb
-	jsl.l func_C5E52B
-	plb
+	call_savebank func_C5E52B
 	tdc
 	tax
 	ldy.w $AAAE
@@ -13004,39 +12277,35 @@ func_C493F8:
 	bankswitch 0x7F
 	rep #$30 ;AXY->16
 	lda.w $AAB1
-	sta.b wTemp02
+	sta.b w7f0002
 	lda.w #$000C
-	sta.b wTemp03
+	sta.b w7f0002+1
 	jsl.l func_C4A627
 	lda.w #$0193
-	sta.b wTemp00
+	sta.b w7f0000
 	lda.w #$AACA
-	sta.b wTemp02
+	sta.b w7f0002
 	lda.w #$007F
-	sta.b wTemp04
-	phb
-	jsl.l func_C4B94F
-	plb
+	sta.b w7f0004
+	call_savebank func_C4B94F
 @lbl_C49453:
 	lda.w #$AA60
-	sta.b wTemp02
+	sta.b w7f0002
 	jsl.l func_C4BF88
 	bcs @lbl_C49480
-	lda.b wTemp00
+	lda.b w7f0000
 	pha
 	ldx.w #$AA60
-	stx.b wTemp02
+	stx.b w7f0002
 	lda.w #$0003
-	sta.b wTemp06
-	lda.b wTemp04
+	sta.b w7f0006
+	lda.b w7f0004
 	and.w #$FF00
 	ora.w #$000E
-	sta.b wTemp04
-	phb
-	jsl.l func_C5E97B
-	plb
+	sta.b w7f0004
+	call_savebank func_C5E97B
 	pla
-	sta.b wTemp00
+	sta.b w7f0000
 	bra @lbl_C49453
 @lbl_C49480:
 	plp
@@ -13048,11 +12317,9 @@ func_C493F8:
 	lda.w #$018E
 	clc
 	adc.w $AABC
-	sta.b wTemp00
-	phb
-	jsl.l func_C4B94F
-	plb
-	ldy.b wTemp00
+	sta.b w7f0000
+	call_savebank func_C4B94F
+	ldy.b w7f0000
 	lda.w #$001D
 	sta.w $AAC4
 	stz.w $AAC0
@@ -13063,38 +12330,36 @@ func_C493F8:
 	sta.w $AAC6
 @lbl_C494B1:
 	ldx.w #$AA60
-	stx.b wTemp02
-	sty.b wTemp00
+	stx.b w7f0002
+	sty.b w7f0000
 	jsl.l func_C4BF88
-	ldy.b wTemp00
+	ldy.b w7f0000
 	bcs @lbl_C49522
-	lda.b wTemp02
+	lda.b w7f0002
 	ldx.w $AAC0
 	sta.w $AADC,x
 	inx
 	inx
 	stx.w $AAC0
-	lda.b wTemp04
+	lda.b w7f0004
 	and.w #$00FF
 	lsr a
-	sta.b wTemp02
+	sta.b w7f0002
 	lda.w $AAC2
 	sec
-	sbc.b wTemp02
-	sta.b wTemp02
+	sbc.b w7f0002
+	sta.b w7f0002
 	lda.w $AAC4
-	sta.b wTemp03
+	sta.b w7f0002+1
 	jsl.l func_C5EBBD
 	lda.w $AAB6
-	sta.b wTemp00
+	sta.b w7f0000
 	ldx.w #$AA60
-	stx.b wTemp02
+	stx.b w7f0002
 	lda.w #$0003
-	sta.b wTemp06
+	sta.b w7f0006
 	phy
-	phb
-	jsl.l func_C5E97B
-	plb
+	call_savebank func_C5E97B
 	ply
 	lda.w $AAC2
 	clc
@@ -13113,40 +12378,40 @@ func_C493F8:
 	bra @lbl_C494A5
 @lbl_C49522:
 	lda.w #$0007
-	sta.b wTemp02
+	sta.b w7f0002
 	lda.w #$000D
-	sta.b wTemp03
+	sta.b w7f0002+1
 	jsl.l func_C5EBBD
 	ldx.w #$0017
 	lda.l $7FAABC
 	beq @lbl_C4953C
 	ldx.w #$0016
 @lbl_C4953C:
-	stx.b wTemp00
+	stx.b w7f0000
 	jsl.l func_C4A6E9
 	lda.w #$0043
-	sta.b wTemp02
+	sta.b w7f0002
 	lda.w #$000D
-	sta.b wTemp03
+	sta.b w7f0002+1
 	jsl.l func_C5EBBD
 	lda.w #$0014
-	sta.b wTemp00
+	sta.b w7f0000
 	jsl.l func_C4A6E9
 	lda.w #$007F
-	sta.b wTemp02
+	sta.b w7f0002
 	lda.w #$000D
-	sta.b wTemp03
+	sta.b w7f0002+1
 	jsl.l func_C5EBBD
 	lda.w #$0015
-	sta.b wTemp00
+	sta.b w7f0000
 	jsl.l func_C4A6E9
 	lda.w #$00BB
-	sta.b wTemp02
+	sta.b w7f0002
 	lda.w #$000D
-	sta.b wTemp03
+	sta.b w7f0002+1
 	jsl.l func_C5EBBD
 	lda.w #$0018
-	sta.b wTemp00
+	sta.b w7f0000
 	jsl.l func_C4A6E9
 	plp
 	rtl
@@ -13224,16 +12489,14 @@ func_C49602:
 	rep #$10 ;XY->16
 	bankswitch 0x7F
 	lda.b #$13
-	sta.b wTemp00
-	phb
-	jsl.l func_C210AC
-	plb
+	sta.b w7f0000
+	call_savebank func_C210AC
 	jsl.l func_C359AF
-	lda.b wTemp01
+	lda.b w7f0000+1
 	sta.w $ABEB
 	stz.w $AC1E
 	jsl.l func_C62B42
-	lda.b wTemp00
+	lda.b w7f0000
 	beq @lbl_C49636
 	lda.b #$03
 	pha
@@ -13254,38 +12517,30 @@ func_C49602:
 	phx
 @lbl_C49643:
 	lda.b #$13
-	sta.b wTemp00
-	phb
-	jsl.l func_C21128
-	plb
-	stz.b wTemp02
+	sta.b w7f0000
+	call_savebank func_C21128
+	stz.b w7f0002
 	tdc
-	lda.b wTemp00
+	lda.b w7f0000
 	rep #$20 ;A->16
-	sta.b wTemp04
+	sta.b w7f0004
 	asl a
 	clc
-	adc.b wTemp04
-	cmp.b wTemp01
+	adc.b w7f0004
+	cmp.b w7f0000+1
 	beq @lbl_C49660
 	bcs @lbl_C4966B
 @lbl_C49660:
 	lda.w #$0002
-	sta.b wTemp00
-	phb
-	jsl.l func_C5E3BD
-	plb
+	sta.b w7f0000
+	call_savebank func_C5E3BD
 @lbl_C4966B:
 	sep #$20 ;A->8
-	phb
-	jsl.l func_C48589
-	plb
+	call_savebank func_C48589
 	ldx.w #$0D03
-	stx.b wTemp00
-	phb
-	jsl.l func_C4A565
-	plb
-	ldx.b wTemp00
+	stx.b w7f0000
+	call_savebank func_C4A565
+	ldx.b w7f0000
 	stx.w $ABEC
 	bra @lbl_C496B7
 	.db $A9,$13,$85,$00,$8B,$22,$AC,$10,$C2,$AB,$A9,$00,$EB,$A5,$02,$AA   ;C49685
@@ -13294,15 +12549,13 @@ func_C49602:
 	.db $C4,$AB                           ;C496B5  
 @lbl_C496B7:
 	rep #$20 ;A->16
-	lda.b wTemp01,s
-	sta.b wTemp00
+	lda.b w7f0000+1,s
+	sta.b w7f0000
 	sep #$20 ;A->8
 	lda.b #$C4
-	sta.b wTemp02
-	phb
-	jsl.l func_C5E4A1
-	plb
-	lda.b wTemp00
+	sta.b w7f0002
+	call_savebank func_C5E4A1
+	lda.b w7f0000
 	sta.w $ABE8
 
 func_C496CE:
@@ -13331,9 +12584,7 @@ func_C496CE:
 	lda.b #$02
 	sta.b wTemp04
 	jsl.l func_C4A634
-	phb
-	jsl.l func_C07C89
-	plb
+	call_savebank func_C07C89
 	jsl.l func_C4A93A
 	lda.b wTemp02
 	dec a
@@ -13416,9 +12667,7 @@ func_C496CE:
 	.db $AD,$1C,$AC,$85,$00,$22,$CE,$E5   ;C497BC  
 	.db $C5                               ;C497C4  
 @lbl_C497C5:
-	phb
-	jsl.l func_C4A98D
-	plb
+	call_savebank func_C4A98D
 	bcc @lbl_C4981C
 ;C497CD  
 	.db $82,$FE,$FE
@@ -13642,13 +12891,11 @@ func_C49B5D:
 	lda.b #$C4
 	sta.w $AC85
 	ldx.w #$AC7D
-	stx.b wTemp00
+	stx.b w7f0000
 	lda.b #$7F
-	sta.b wTemp02
-	phb
-	jsl.l func_C5E4A1
-	plb
-	lda.b wTemp00
+	sta.b w7f0002
+	call_savebank func_C5E4A1
+	lda.b w7f0000
 	sta.w $ABED
 	sta.w $AC0E
 	sta.w $AC0F
@@ -13657,6 +12904,8 @@ func_C49B5D:
 	cmp.b #$02
 	bne func_C49BA4
 	jmp.w func_C49BF7
+
+
 func_C49BA4:
 	lda.l $7FABFA
 	cmp.b #$02
@@ -13669,9 +12918,7 @@ func_C49BAC:
 	sta.b wTemp02
 	lda.w $ABF0
 	sta.b wTemp03
-	phb
-	jsl.l func_C4A2E3
-	plb
+	call_savebank func_C4A2E3
 	lda.b wTemp02
 	sta.w $ABEF
 	lda.b wTemp03
@@ -13702,19 +12949,17 @@ func_C49BD9:
 func_C49BF7:
 	lda.w $AC3B,x
 	sta.w $ABF3
-	sta.b wTemp00
+	sta.b w7f0000
 	phx
-	phb
-	jsl.l func_C30710
-	plb
-	lda.b wTemp05
+	call_savebank func_C30710
+	lda.b w7f0004+1
 	sta.w $ABF7
-	lda.b wTemp06
+	lda.b w7f0006
 	and.b #$02
 	sta.w $ABF6
-	lda.b wTemp00
+	lda.b w7f0000
 	sta.w $ABF5
-	lda.b wTemp01
+	lda.b w7f0000+1
 	sta.w $ABF9
 	cmp.b #$E7
 	bne @lbl_C49C25
@@ -13723,14 +12968,14 @@ func_C49BF7:
 @lbl_C49C25:
 	stz.w $ABFD
 	stz.w $ABF8
-	lda.b wTemp06
+	lda.b w7f0006
 	bit.b #$04
 	bne @lbl_C49C42
-	lda.b wTemp01
+	lda.b w7f0000+1
 	cmp.b #$68
 	beq @lbl_C49C42
 	jsl.l func_C301CE
-	lda.b wTemp00
+	lda.b w7f0000
 	bpl @lbl_C49C42
 ;C49C3F  
 	.db $EE,$F8,$AB
@@ -13775,11 +13020,9 @@ func_C49BF7:
 	cmp.b #$68
 	bne @lbl_C49CAD
 	lda.w $ABF3
-	sta.b wTemp00
-	phb
-	jsl.l func_C30710
-	plb
-	lda.b wTemp02
+	sta.b w7f0000
+	call_savebank func_C30710
+	lda.b w7f0002
 	cmp.b #$FF
 	bne @lbl_C49CAD
 	lda.b #$1F
@@ -13866,9 +13109,9 @@ func_C49BF7:
 	lda.b #$C4
 	sta.w $AC85
 	ldx.w #$AC7D
-	stx.b wTemp00
+	stx.b w7f0000
 	lda.b #$7F
-	sta.b wTemp02
+	sta.b w7f0002
 	stz.w $ABF1
 	phb
 	jsl.l func_C5E4A1
@@ -13892,9 +13135,7 @@ func_C49D77:
 func_C49D8C:
 	lda.w $ABEE
 	sta.b wTemp00
-	phb
-	jsl.l func_C5E52B
-	plb
+	call_savebank func_C5E52B
 	jmp.w func_C49BA4
 func_C49D9A:
 	stz.b wTemp02
@@ -14048,20 +13289,18 @@ func_C49EEF:
 	sta.w $AC06,y
 	iny
 	lda.b #$02
-	sta.b wTemp02
-	lda.b wTemp01,s
-	sta.b wTemp03
+	sta.b w7f0002
+	lda.b w7f0000+1,s
+	sta.b w7f0002+1
 	clc
 	adc.b #$10
-	sta.b wTemp01,s
+	sta.b w7f0000+1,s
 	jsl.l func_C4A627
 	lda.w $ABFE,x
-	sta.b wTemp00
+	sta.b w7f0000
 	phx
 	phy
-	phb
-	jsl.l func_C4A6E9
-	plb
+	call_savebank func_C4A6E9
 	ply
 	plx
 @lbl_C49F42:
@@ -14166,59 +13405,49 @@ func_C4A0B1:
 	rep #$10 ;XY->16
 	bankswitch 0x7F
 	ldx.w #$B797
-	stx.b wTemp00
+	stx.b w7f0000
 	lda.b #$C4
-	sta.b wTemp02
-	phb
-	jsl.l func_C5E4A1
-	plb
-	lda.b wTemp00
+	sta.b w7f0002
+	call_savebank func_C5E4A1
+	lda.b w7f0000
 	sta.w $AC0E
 	ldx.w #$B7A0
-	stx.b wTemp00
+	stx.b w7f0000
 	lda.b #$C4
-	sta.b wTemp02
-	phb
-	jsl.l func_C5E4A1
-	plb
-	lda.b wTemp00
+	sta.b w7f0002
+	call_savebank func_C5E4A1
+	lda.b w7f0000
 	sta.w $AC0F
 	lda.w $AC0F
-	sta.b wTemp00
+	sta.b w7f0000
 	lda.w $AC10
-	sta.b wTemp02
+	sta.b w7f0002
 	lda.w $AC11
-	sta.b wTemp03
+	sta.b w7f0002+1
 	stz.w $AC13
 	stz.w $AC18
-	phb
-	jsl.l func_C4A2E3
-	plb
-	lda.b wTemp02
+	call_savebank func_C4A2E3
+	lda.b w7f0002
 	sta.w $AC10
-	lda.b wTemp03
+	lda.b w7f0002+1
 	sta.w $AC11
 	bcc @lbl_C4A139
 	lda.w $AC0E
-	sta.b wTemp00
+	sta.b w7f0000
 	jsl.l func_C5E52B
 	lda.l $7FAC0F
-	sta.b wTemp00
+	sta.b w7f0000
 	jsl.l func_C5E52B
 	plp
 	sec
 	rtl
 @lbl_C4A139:
 	lda.w $AC0E
-	sta.b wTemp00
-	phb
-	jsl.l func_C5E52B
-	plb
+	sta.b w7f0000
+	call_savebank func_C5E52B
 	lda.w $AC0F
-	sta.b wTemp00
-	phb
-	jsl.l func_C5E52B
-	plb
+	sta.b w7f0000
+	call_savebank func_C5E52B
 	sep #$30 ;AXY->8
 	tdc
 	ldx.w $AC10
@@ -14230,19 +13459,19 @@ func_C4A0B1:
 	adc.w $AC11
 	tax
 	lda.w $AC5A,x
-	sta.b wTemp00
-	stz.b wTemp01
+	sta.b w7f0000
+	stz.b w7f0000+1
 	plp
 	clc
 	rtl
 	php
 	sep #$20 ;A->8
-	stz.b wTemp02
+	stz.b w7f0002
 	lda.b #$0D
-	sta.b wTemp03
+	sta.b w7f0002+1
 	jsl.l func_C4A627
 	lda.b #$0A
-	sta.b wTemp00
+	sta.b w7f0000
 	lda.l $7FAC14
 	cmp.l $7FAC16
 	bne @lbl_C4A18B
@@ -14327,9 +13556,7 @@ func_C4A191:
 	lda.b wTemp06
 	pha
 	phx
-	phb
-	jsl.l func_818049
-	plb
+	call_savebank func_818049
 	plx
 	pla
 	sta.b wTemp06
@@ -14427,11 +13654,11 @@ func_C4A2E3:
 	php
 	sep #$30 ;AXY->8
 	bankswitch 0x7F
-	lda.b wTemp00
+	lda.b w7f0000
 	sta.w $AC12
-	lda.b wTemp02
+	lda.b w7f0002
 	sta.w $AC14
-	lda.b wTemp03
+	lda.b w7f0002+1
 	sta.w $AC15
 	lda.w $AC3A
 	ora.w $AC19
@@ -14461,12 +13688,8 @@ func_C4A320:
 	.db $A9,$14,$85,$02,$AD,$0F,$AC,$85,$00,$8B,$22,$F3,$E5,$C5,$AB,$AD   ;C4A335
 	.db $0E,$AC,$85,$00,$22,$C8,$ED,$C5   ;C4A345  
 @lbl_C4A34D:
-	phb
-	jsl.l func_C5EDDC
-	plb
-	phb
-	jsl.l func_C5EF0E
-	plb
+	call_savebank func_C5EDDC
+	call_savebank func_C5EF0E
 	lda.w $ABFB
 	beq @lbl_C4A361
 ;C4A35E  
@@ -14664,9 +13887,7 @@ func_C4A440:
 	sta.b wTemp00
 	phx
 	phy
-	phb
-	jsl.l func_C4A7C2
-	plb
+	call_savebank func_C4A7C2
 	ply
 	plx
 	inx
@@ -14819,9 +14040,7 @@ func_C4A634:
 	sta.b wTemp03
 	phx
 	phy
-	phb
-	jsl.l func_C5EC25
-	plb
+	call_savebank func_C5EC25
 	ply
 	plx
 	plp
@@ -14832,33 +14051,33 @@ func_C4A65A:
 	sep #$20 ;A->8
 	bankswitch 0x7F
 	rep #$30 ;AXY->16
-	ldx.b wTemp00
-	lda.b wTemp02
+	ldx.b w7f0000
+	lda.b w7f0002
 	and.w #$00FF
 	sta.w $AA56
-	lda.b wTemp03
+	lda.b w7f0002+1
 	and.w #$00FF
 	sta.w $AA58
-	lda.b wTemp05
+	lda.b w7f0004+1
 	and.w #$00FF
 	sta.w $AA5A
-	lda.b wTemp04
+	lda.b w7f0004
 	and.w #$00FF
 	sta.w $AA5C
 @lbl_C4A685:
 	lda.w $AA5A
 	sta.w $AA5E
 @lbl_C4A68B:
-	sta.b wTemp04
+	sta.b w7f0004
 	lda.l DATA8_C4B813,x
 	inx
 	and.w #$00FF
 	beq @lbl_C4A6D8
 	pha
 	lda.w $AA5C
-	sta.b wTemp02
+	sta.b w7f0002
 	lda.w $AA5E
-	sta.b wTemp03
+	sta.b w7f0002+1
 	phx
 	jsl.l func_C5EBBD
 	plx
@@ -14868,20 +14087,16 @@ func_C4A65A:
 	and.w #$007F
 	clc
 	adc.w #$0171
-	sta.b wTemp00
+	sta.b w7f0000
 	phx
-	phb
-	jsl.l func_C5E8A3
-	plb
+	call_savebank func_C5E8A3
 	plx
 	bra @lbl_C4A6CC
 @lbl_C4A6C1:
 	dec a
-	sta.b wTemp00
+	sta.b w7f0000
 	phx
-	phb
-	jsl.l func_C4A6E9
-	plb
+	call_savebank func_C4A6E9
 	plx
 @lbl_C4A6CC:
 	lda.w $AA5E
@@ -14904,7 +14119,7 @@ func_C4A6E9:
 	sep #$20 ;A->8
 	bankswitch 0x7F
 	tdc
-	lda.b wTemp00
+	lda.b w7f0000
 	rep #$30 ;AXY->16
 	asl a
 	tax
@@ -14934,12 +14149,10 @@ func_C4A6E9:
 	adc.w #$000D
 	pha
 	lda.w #$AA60
-	sta.b wTemp02
+	sta.b w7f0002
 	lda.w #$0D10
-	sta.b wTemp04
-	phb
-	jsl.l func_C5E97B
-	plb
+	sta.b w7f0004
+	call_savebank func_C5E97B
 	plx
 	pla
 	dec a
@@ -14958,12 +14171,10 @@ func_C4A6E9:
 	cpy.w #$001A
 	bne @lbl_C4A744
 	lda.w #$AA60
-	sta.b wTemp02
+	sta.b w7f0002
 	lda.w #$0D08
-	sta.b wTemp04
-	phb
-	jsl.l func_C5E97B
-	plb
+	sta.b w7f0004
+	call_savebank func_C5E97B
 	plp
 	rtl
 	.db $08,$E2,$30,$A9,$7F,$48,$AB,$A9,$0D,$85,$05,$7B,$A5,$00,$A0,$00   ;C4A768
@@ -15754,12 +14965,19 @@ func_C4BA53:
 	jmp.w (func_C4B9F6,x)
 
 UNREACH_C4BAF0:
-	.db $C3,$01                           ;C4BAF0  
-	.db $FC,$02,$4F,$05,$28,$BB,$28,$BD   ;C4BAF2
-	.db $63,$BD,$23,$BB,$20,$BB           ;C4BAFA
-	.db $08,$BB                           ;C4BB00
-	.db $AB,$BC                           ;C4BB02
-	.db $1C,$BD,$15,$BB,$20,$46,$BF,$20,$1F,$BC,$FA,$20,$3E,$BC,$4C,$CD   ;C4BB04  
+	.db $C3,$01
+	.db $FC,$02
+	.db $4F,$05
+	.db $28,$BB
+	.db $28,$BD
+	.db $63,$BD
+	.db $23,$BB
+	.db $20,$BB
+	.db $08,$BB
+	.db $AB,$BC
+	.db $1C,$BD
+	.db $15,$BB
+	.db $20,$46,$BF,$20,$1F,$BC,$FA,$20,$3E,$BC,$4C,$CD   ;C4BB04  
 	.db $B9,$20,$46,$BF,$20,$1F,$BC,$EE   ;C4BB14  
 	.db $68,$D2,$80,$EE                   ;C4BB1C
 	tdc
@@ -15886,9 +15104,7 @@ func_C4BC1F:
 	sta.b wTemp00
 	stz.w $D268
 	phy
-	phb
-	jsl.l func_C30710
-	plb
+	call_savebank func_C30710
 	ply
 	ldx.w #$0006
 @lbl_C4BC33:
@@ -16148,9 +15364,7 @@ func_C4BE29:
 	.db $7B,$38,$E5,$02,$85,$02
 @lbl_C4BE42:
 	stz.b wTemp03
-	phb
-	jsl.l func_C4C1E9
-	plb
+	call_savebank func_C4C1E9
 	pla
 	sta.b wTemp02
 	tdc
@@ -16204,9 +15418,7 @@ func_C4BEC0:
 func_C4BEC2:
 	phy
 	phx
-	phb
-	jsl.l func_C4C1E9
-	plb
+	call_savebank func_C4C1E9
 	bra func_C4BEEE
 
 func_C4BECC:
@@ -16226,9 +15438,7 @@ func_C4BECC:
 @lbl_C4BEE6:
 	phy
 	phx
-	phb
-	jsl.l func_C4C1AA
-	plb
+	call_savebank func_C4C1AA
 func_C4BEEE:
 	tdc
 	lda.b wTemp06
@@ -16832,9 +16042,7 @@ func_C4C472:
 	sta.b wTemp00
 	phx
 	phy
-	phb
-	jsl.l func_80DC0C
-	plb
+	call_savebank func_80DC0C
 	ply
 	plx
 	ldy.b wTemp00
@@ -16844,9 +16052,7 @@ func_C4C472:
 	sta.b wTemp00
 	phx
 	phy
-	phb
-	jsl.l func_80DC69
-	plb
+	call_savebank func_80DC69
 	ply
 	plx
 @lbl_C4C499:

@@ -360,17 +360,17 @@ text "右下@"
 Text442:
 text "レベル"
 textfunction $0 $4
-numvar $12
+numvar TextNumVar_Strength
 text "@"
 
 ;fe3733
 Text443:
-strvar $87
+strvar TextStrVar_87
 text "@"
 
 ;fe3736
 Text444:
-strvar $0
+strvar TextStrVar_0
 text "から\l@"
 
 ;fe373c
@@ -378,25 +378,26 @@ FreeLookDebugInfoText:
 cmdf6
 text "Ｘ座標"
 textfunction $0 $4
-numvar $12
+numvar TextNumVar_Strength
 textfunction $0 $10
 text "Ｙ座標"
 textfunction $0 $4
-numvar $12
+numvar TextNumVar_Strength
 text "\lマップ番号"
 textfunction $0 $4
-numvar $13
+numvar TextNumVar_Stat
 textfunction $0 $4
-numvar $13
+numvar TextNumVar_Stat
 textfunction $0 $C
 text "属性"
 textfunction $0 $4
-numvar $12
+numvar TextNumVar_Strength
 textfunction $0 $4
-numvar $12
+numvar TextNumVar_Strength
 text "\l@"
 
 ;fe377a
+;"Window number error"
 Text446:
 text "ウインドウ番号エラー\l@"
 

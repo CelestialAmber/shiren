@@ -9,17 +9,21 @@
 ;fb 82: cause of death?
 ;fb 83:
 ;fb 84: equipped item
+;fb 85:
 ;fb 86: character name
 ;fb 87:
 ;fb 88: blank scroll name
 
 ;F9:
 ;f9 10: number value (damage, points lowered/increased by…)
+;f9 11:
 ;f9 12: strength
 ;f9 13: sword/shield strength, hunger, others
-;f9 25: gitan, number of times
-;f9 30: exp points
+;f9 20: gitan (amount)
+;f9 25: gitan (hud), number of times
+;f9 30: gitan (amount)/exp points
 ;f9 36: exp, price
+;f9 40:
 ;f9 54:
 ;f9 68:
 
@@ -72,11 +76,6 @@
 ;
 .macro cmdf6
 	.db $F6
-.endm
-
-;1: command id
-.macro cmdf8
-	.db $F8, \1
 .endm
 
 ;1: command id

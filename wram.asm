@@ -963,6 +963,9 @@ w00f0:
 w0100:
 	ds 0xb52
 
+
+;Sound engine variables
+
 ;c52
 wAudioTrackRemainingTicksBeforeNextCommand:
 	dsb 16
@@ -983,7 +986,361 @@ w0c82:
 w0c92:
 	dsb 16
 
-.	ds 0x2000 - 0xca2
+;ca2
+w0ca2:
+	dsb 16
+
+;cb2
+w0cb2:
+	dsb 16
+
+;cc2
+w0cc2:
+	dsb 16
+
+;cd2
+w0cd2:
+	dsb 16
+
+;ce2
+w0ce2:
+	dsb 16
+
+;cf2
+w0cf2:
+	dsb 16*3
+
+;d22
+w0d22:
+	dsb 16*3
+
+;d52
+w0d52:
+	dsb 16*3
+
+;d82
+w0d82:
+	dsb 16
+
+;d92
+w0d92:
+	dsb 16
+
+;da2
+w0da2:
+	dsb 16
+
+;db2
+w0db2:
+	dsb 16
+
+;dc2
+w0dc2:
+	dsb 16
+
+;dd2
+w0dd2:
+	dsb 16
+
+;de2
+w0de2:
+	dsb 16
+
+;df2
+w0df2:
+	dsb 16
+
+;e02
+w0e02:
+	dsb 16
+
+;e12
+w0e12:
+	dsb 16
+
+;e22
+w0e22:
+	dsb 16
+
+;e32
+w0e32:
+	dsb 16
+
+;e42
+w0e42:
+	dsb 16
+
+;e52
+w0e52:
+	dsb 16
+
+;e62
+w0e62:
+	dsb 16
+
+;e72
+w0e72:
+	dsb 16
+
+;e82
+w0e82:
+	dsb 16
+
+;e92
+w0e92:
+	dsb 16
+
+;ea2
+wNextNoteType:
+	db
+
+;ea3
+w0ea3:
+	db
+
+;ea4
+w0ea4:
+	db
+
+;ea5
+w0ea5:
+	db
+
+;ea6
+w0ea6:
+	db
+
+;ea7
+w0ea7:
+	db
+
+;ea8
+w0ea8:
+	db
+
+;ea9
+w0ea9:
+	db
+
+;eaa
+w0eaa:
+	db
+
+;eab
+w0eab:
+	db
+
+;eac
+w0eac:
+	db
+
+;ead
+w0ead:
+	db
+
+;eae
+w0eae:
+	dw
+
+;eb0
+w0eb0:
+	db
+
+;eb1
+w0eb1:
+	db
+
+;eb2
+w0eb2:
+	dsb 55
+
+;ee9
+w0ee9:
+	dsb 9
+
+;ef2
+w0ef2:
+	db
+
+;ef3
+w0ef3:
+	db
+
+;ef4
+w0ef4:
+	dsb 2
+
+;ef6
+w0ef6:
+	dsb 3
+
+;ef9
+w0ef9:
+	dsb 123
+
+;f74
+w0f74:
+	dsb 16*4
+
+;fb4
+w0fb4:
+	db
+
+;fb5
+w0fb5:
+	db
+
+;fb6
+w0fb6:
+	dsb 2
+
+;fb8
+w0fb8:
+	dsb 0x7e
+
+;1036
+w1036:
+	db
+
+;1037
+w1037:
+	db
+
+;1038
+w1038:
+	db
+
+;1039
+w1039:
+	db
+
+;103a
+w103a:
+	db
+
+;103b
+w103b:
+	dw
+
+;103d
+w103d:
+	dw
+
+;103f
+w103f:
+	db
+
+;1040
+w1040:
+	db
+
+;1041
+w1041:
+	dw
+
+;1043
+w1043:
+	dsb 0x80
+
+;10c3
+w10c3:
+	dsb 4
+
+;10c7
+w10c7:
+	dsb 0x30
+
+;10f7
+w10f7:
+	dsb 0x10
+
+;1107
+w1107:
+	dsb 13
+
+;1114
+w1114:
+	dsb 0x2F
+
+;1143
+w1143:
+	dsb 0x1c2
+
+;1305
+w1305:
+	dsb 0x10
+
+;1315
+w1315:
+	dsb 2
+
+;1317
+w1317:
+	dsb 0x1fc
+
+;1513
+w1513:
+	dsb 0x10
+
+;1523
+w1523:
+	dw
+
+;1525
+w1525:
+	dsb 0x1fc
+
+;1721
+w1721:
+	dsb 0x10
+
+;1731
+w1731:
+	dsb 0x1fe
+
+;192f
+w192f:
+	dsb 0x10
+
+;193f
+w193f:
+	dsb 0x1fe
+
+;1b3d
+w1b3d:
+	dsb 0x10
+
+;1b4d
+w1b4d:
+	dw
+
+;1b4f
+w1b4f:
+	dsb 0x1fc
+
+;1d4b
+w1d4b:
+	dsb 0x10
+
+;1d5b
+w1d5b:
+	dw
+
+;1d5d
+w1d5d:
+	dsb 0x1fc
+
+;1f59
+w1f59:
+	dsb 0x10
+
+;1f69
+w1f69:
+	dsb 0x95
+
+;1ffe
+w1ffe:
+	dw
 
 .ends
 
@@ -1191,7 +1548,59 @@ wMapNum:
 wTrapSpawnList:
 	dsw 5
 
-. ds 0x1452
+. ds 0xd294 - 0xc1a0
+
+;d294
+wEventStateArray:
+	dsb 256
+
+;d394
+wd394:
+	dsb 100
+
+;d3f8
+wd3f8:
+	dsb 100
+
+;d45c
+wd45c:
+	dsb 100
+
+;d4c0
+wd4c0:
+	dsb 100
+
+;d524
+wd524:
+	dsb 100
+
+;d588
+wd588:
+	dsb 100
+
+;d5ec
+wd5ec:
+	db
+
+;d5ed
+wd5ed:
+	db
+
+;d5ee
+wd5ee:
+	db
+
+;d5ef
+wd5ef:
+	db
+
+;d5f0
+wd5f0:
+	db
+
+;d5f1
+wd5f1:
+	db
 
 ;d5f2
 wFloorNum:
@@ -1297,6 +1706,283 @@ wd60b:
 .ends
 
 .ramsection "Expanded RAM 7F" bank $7f
+
 w7f0000:
-	ds 0x10000
+	dw
+
+w7f0002:
+	dw
+
+w7f0004:
+	dw
+
+w7f0006:
+	dw
+
+w7f0008:
+	dw
+
+w7f000a:
+	dsb 0x14
+
+w7f001e:
+	db
+
+w7f001f:
+	dw
+
+w7f0021:
+	db
+
+w7f0022:
+	dw
+
+w7f0024:
+	dsb 3
+
+w7f0027:
+	db
+
+w7f0028:
+	dsb 2
+
+w7f002a:
+	dsb 3
+
+w7f002d:
+	dsb 5
+
+w7f0032:
+	dsb 2
+
+w7f0034:
+	dsb 0xe0
+
+w7f0114:
+	dsb 0xe0
+
+w7f01f4:
+	dsb 0xe0
+
+w7f02d4:
+	dsb 0xe0
+
+w7f03b4:
+	dsb 2
+
+w7f03b6:
+	dsb 2
+
+w7f03b8:
+	dsb 0x60
+
+w7f0418:
+	dsb 2
+
+w7f041a:
+	dsb 2
+
+w7f041c:
+	dsb 2
+
+w7f041e:
+	dsb 2
+
+w7f0420:
+	dsb 2
+
+w7f0422:
+	dsb 2
+
+w7f0424:
+	dsb 2
+
+w7f0426:
+	dsb 2
+
+w7f0428:
+	dsb 2
+
+w7f042a:
+	dsb 2
+
+w7f042c:
+	dw
+
+w7f042e:
+	dw
+
+w7f0430:
+	dw
+
+w7f0432:
+	dw
+
+w7f0434:
+	dw
+
+w7f0436:
+	dw
+
+w7f0438:
+	dw
+
+w7f043a:
+	dw
+
+w7f043c:
+	dw
+
+w7f043e:
+	dw
+
+w7f0440:
+	dw
+
+w7f0442:
+	dw
+
+w7f0444:
+	dw
+
+w7f0446:
+	dw
+
+w7f0448:
+	dsb 2
+
+w7f044a:
+	dsb 2
+
+w7f044c:
+	dsb 2
+
+w7f044e:
+	dsb 2
+
+w7f0450:
+	dw
+
+w7f0452:
+	dw
+
+w7f0454:
+	dw
+
+w7f0456:
+	dw
+
+w7f0458:
+	dsb 2
+
+w7f045a:
+	dsb 2
+
+w7f045c:
+	dw
+
+w7f045e:
+	dw
+
+w7f0460:
+	dw
+
+w7f0462:
+	dw
+
+w7f0464:
+	dw
+
+w7f0466:
+	dw
+
+w7f0468:
+	dw
+
+w7f046a:
+	dw
+
+w7f046c:
+	dw
+
+w7f046e:
+	dw
+
+w7f0470:
+	dw
+
+w7f0472:
+	dw
+
+w7f0474:
+	dw
+
+w7f0476:
+	dw
+
+w7f0478:
+	dw
+
+w7f047a:
+	dw
+
+w7f047c:
+	dw
+
+w7f047e:
+	dw
+
+w7f0480:
+	dw
+
+w7f0482:
+	dw
+
+w7f0484:
+	dw
+
+w7f0486:
+	dw
+
+w7f0488:
+	dw
+
+w7f048a:
+	dw
+
+w7f048c:
+	dw
+
+w7f048e:
+	dsb 0x400
+
+.	ds 0x8bf - 0x88e
+
+w7f08bf:
+	dsb 0x20e0
+
+w7f299f:
+	dsb 0x20e0
+
+.	ds 0x42
+
+w7f4ac1:
+	dsb 0xac0
+
+w7f5581:
+	dsb 0xac0
+
+w7f6041:
+	dsb 0xb00
+
+w7f6b41:
+	dsb 0xa80
+
+w7f75c1:
+	dsb 0x700
+
+w7f7cc1:
+	dsb 0x1100
+
+
 .ends

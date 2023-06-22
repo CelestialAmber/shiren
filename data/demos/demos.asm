@@ -1,3 +1,10 @@
+.include "includes.asm"
+
+.bank $1b
+.org $1000 ;$DB0000
+.base $C0
+
+
 ;demo recording files
 
 ;db1000

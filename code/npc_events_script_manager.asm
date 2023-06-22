@@ -400,8 +400,12 @@ NPCScriptFunction_C15BF0:
 	rts
 
 NPCScriptFunction_C15C0D:
-	.db $08,$E2,$30,$A9,$94,$85,$00,$22,$12,$05,$C6,$A5,$00,$D0,$14,$A9   ;C15C0D
-	.db $94,$85,$00,$A9,$01,$85,$02,$22,$79,$04,$C6,$A9,$02,$85,$00,$22   ;C15C1D  
+	.db $08,$E2,$30,$A9,$94,$85,$00
+	jsl.l _GetEvent
+	.db $A5,$00,$D0,$14,$A9   ;C15C0D
+	.db $94,$85,$00,$A9,$01,$85,$02
+	jsl.l _SetEvent
+	.db $A9,$02,$85,$00,$22   ;C15C1D  
 	.db $F2,$2B,$C6,$28,$60
 	
 NPCScriptFunction_C15C32:
@@ -412,24 +416,28 @@ NPCScriptFunction_C15C32:
 NPCScriptFunction_C15C3F:
 	php
 	sep #$20 ;A->8
-	GetEvent Event8B
+	GetEvent Event_Condor
 	cmp.b #$01
 	SetCarryIfEqual
 
 NPCScriptFunction_C15C56:
-	.db $08,$E2,$30,$A9,$8B,$85,$00,$A9,$00,$85,$02,$22,$79,$04,$C6,$22   ;C15C56
+	.db $08,$E2,$30,$A9,$8B,$85,$00,$A9,$00,$85,$02
+	jsl.l _SetEvent
+	.db $22   ;C15C56
 	.db $F1,$27,$C6,$A5,$00,$F0,$04,$22,$0B,$2C,$C6,$A9,$03,$85,$00,$22   ;C15C66  
 	.db $F2,$2B,$C6,$20,$9A,$01,$28,$60   ;C15C76  
 
 NPCScriptFunction_C15C7E:
 	php
 	sep #$20 ;A->8
-	GetEvent Event8B
+	GetEvent Event_Condor
 	cmp.b #$02
 	SetCarryIfEqual
 
 NPCScriptFunction_C15C95:
-	.db $08,$E2,$30,$A9,$8B,$85,$00,$A9,$00,$85,$02,$22,$79,$04,$C6,$A9   ;C15C95
+	.db $08,$E2,$30,$A9,$8B,$85,$00,$A9,$00,$85,$02
+	jsl.l _SetEvent
+	.db $A9   ;C15C95
 	.db $04,$85,$00,$22,$F2,$2B,$C6,$20   ;C15CA5  
 	.db $9A,$01,$28,$60                   ;C15CAD
 
@@ -440,7 +448,9 @@ NPCScriptFunction_C15CB1:
 	SetCarryIfNotEqual
 
 NPCScriptFunction_C15CC6:
-	.db $08,$E2,$30,$A9,$8C,$85,$00,$A9,$00,$85,$02,$22,$79,$04,$C6,$A9   ;C15CC6
+	.db $08,$E2,$30,$A9,$8C,$85,$00,$A9,$00,$85,$02
+	jsl.l _SetEvent
+	.db $A9   ;C15CC6
 	.db $08,$85,$00,$22,$F2,$2B,$C6,$20   ;C15CD6
 	.db $9A,$01,$28,$60                   ;C15CDE
 
@@ -451,7 +461,9 @@ NPCScriptFunction_C15CE2:
 	SetCarryIfNotEqual
 
 NPCScriptFunction_C15CF7:
-	.db $08,$E2,$30,$A9,$8D,$85,$00,$A9,$00,$85,$02,$22,$79,$04,$C6,$A9   ;C15CF7
+	.db $08,$E2,$30,$A9,$8D,$85,$00,$A9,$00,$85,$02
+	jsl.l _SetEvent
+	.db $A9   ;C15CF7
 	.db $09,$85,$00,$22,$F2,$2B,$C6,$20   ;C15D07
 	.db $9A,$01,$28,$60                   ;C15D0F
 
@@ -462,9 +474,14 @@ NPCScriptFunction_C15D13:
 	SetCarryIfNotEqual
 
 NPCScriptFunction_C15D28:
-	.db $08,$E2,$30,$A9,$17,$85,$00,$22,$12,$05,$C6,$A5,$00,$09,$08,$85   ;C15D28
-	.db $02,$A9,$17,$85,$00,$22,$79,$04,$C6,$A9,$0A,$85,$00,$22,$F2,$2B   ;C15D38
-	.db $C6,$20,$9A,$01,$A9,$8E,$85,$00,$A9,$01,$85,$02,$22,$79,$04,$C6   ;C15D48  
+	.db $08,$E2,$30,$A9,$17,$85,$00
+	jsl.l _GetEvent
+	.db $A5,$00,$09,$08,$85   ;C15D28
+	.db $02,$A9,$17,$85,$00
+	jsl.l _SetEvent
+	.db $A9,$0A,$85,$00,$22,$F2,$2B   ;C15D38
+	.db $C6,$20,$9A,$01,$A9,$8E,$85,$00,$A9,$01,$85,$02
+	jsl.l _SetEvent
 	.db $22,$07,$09,$C6,$22,$18,$8B,$C2   ;C15D58  
 	.db $28,$60                           ;C15D60
 
@@ -571,7 +588,8 @@ NPCScriptFunction_C15DF3:
 NPCScriptFunction_C15E10:
 	.db $08,$E2,$20   ;C15E0B
 	.db $A9,$8E,$85,$00,$A9,$01,$85,$02   ;C15E13
-	.db $22,$79,$04,$C6,$28,$60           ;C15E1B  
+	jsl.l _SetEvent
+	.db $28,$60           ;C15E1B  
 
 NPCScriptFunction_C15E21:
 	php
@@ -644,7 +662,9 @@ NPCScriptFunction_C15E90:
 	GetEvent Event_Gaibara
 	cmp.b #$03
 	bcc @lbl_C15EC4
-	.db $A9,$87,$85,$00,$22,$12,$05,$C6,$A5,$00,$D0,$0D,$22,$5F,$F6,$C3   ;C15EAB
+	.db $A9,$87,$85,$00
+	jsl.l _GetEvent
+	.db $A5,$00,$D0,$0D,$22,$5F,$F6,$C3   ;C15EAB
 	.db $A5,$00,$C9,$10,$B0,$03,$28,$38   ;C15EBB  
 	.db $60                               ;C15EC3
 @lbl_C15EC4:
@@ -694,8 +714,9 @@ NPCScriptFunction_C15EFC:
 	
 NPCScriptFunction_C15F1E:
 	.db $08,$E2,$20,$A9,$04   ;C15F1B
-	.db $85,$00,$A9,$06,$85,$02,$22,$79   ;C15F23  
-	.db $04,$C6,$28,$60                   ;C15F2B  
+	.db $85,$00,$A9,$06,$85,$02
+	jsl.l _SetEvent
+	.db $28,$60                   ;C15F2B  
 
 NPCScriptFunction_C15F2F:
 	php
@@ -723,8 +744,9 @@ NPCScriptFunction_C15F52:
 NPCScriptFunction_C15F79:
 	.db $08,$E2,$20   ;C15F74
 	.db $C2,$10,$A0,$0F,$05,$84,$00,$5A,$22,$55,$00,$C2,$7A,$A5,$00,$85   ;C15F7C
-	.db $02,$84,$00,$22,$7A,$5B,$C3,$A9,$19,$85,$00,$A9,$00,$85,$02,$22   ;C15F8C
-	.db $79,$04,$C6,$28,$60
+	.db $02,$84,$00,$22,$7A,$5B,$C3,$A9,$19,$85,$00,$A9,$00,$85,$02
+	jsl.l _SetEvent
+	.db $28,$60
 	
 NPCScriptFunction_C15FA1:
 	.db $08,$E2,$20   ;C15F9C  
@@ -742,9 +764,9 @@ NPCScriptFunction_C15FC9:
 NPCScriptFunction_C15FE0:
 	php
 	sep #$20 ;A->8
-	GetEvent Event85
+	GetEvent Event_Kechi_85
 	bne @lbl_C15FFF
-	GetEvent Event05
+	GetEvent Event_Kechi
 	beq @lbl_C1600E
 ;C15FFB
 	.db $C9,$03,$F0,$03
@@ -782,36 +804,39 @@ NPCScriptFunction_C15FE0:
 NPCScriptFunction_C16048:
 	php
 	sep #$20 ;A->8
-	GetEvent Event05
+	GetEvent Event_Kechi
 	cmp.b #$01
 	ClearCarryIfNotEqual
 
 NPCScriptFunction_C1605F:
 	php
 	sep #$20 ;A->8
-	GetEvent Event05
+	GetEvent Event_Kechi
 	cmp.b #$02
 	ClearCarryIfNotEqual
 
 NPCScriptFunction_C16076:
 	php
 	sep #$20 ;A->8
-	GetEvent Event05
+	GetEvent Event_Kechi
 	cmp.b #$04
 	SetCarryIfEqual
 
 NPCScriptFunction_C1608D:
 	php
 	sep #$20 ;A->8
-	GetEvent Event06
+	GetEvent Event_Pekeji
 	beq @lbl_C160DC
 	cmp.b #$01
 	beq @lbl_C160DC
-	.db $C9,$03,$F0,$38,$C9,$02,$D0,$19,$A9,$07,$85,$00,$22,$12,$05,$C6   ;C160A0
-	.db $A5,$00,$1A,$C9,$03,$B0,$0D,$85,$02,$A9,$07,$85,$00,$22,$79,$04   ;C160B0  
-	.db $C6,$28,$18,$60,$A9,$06,$85,$00,$A9,$03,$85,$02,$22,$79,$04,$C6   ;C160C0  
+	.db $C9,$03,$F0,$38,$C9,$02,$D0,$19,$A9,$07,$85,$00
+	jsl.l _GetEvent
+	.db $A5,$00,$1A,$C9,$03,$B0,$0D,$85,$02,$A9,$07,$85,$00
+	jsl.l _SetEvent
+	.db $28,$18,$60,$A9,$06,$85,$00,$A9,$03,$85,$02
+	jsl.l _SetEvent
 	.db $A9,$07,$85,$00,$A9,$00,$85,$02   ;C160D0
-	.db $22,$79,$04,$C6                   ;C160D8  
+	jsl.l _SetEvent
 @lbl_C160DC:
 	plp
 	sec
@@ -821,20 +846,20 @@ NPCScriptFunction_C1608D:
 NPCScriptFunction_C160DF:
 	php
 	sep #$20 ;A->8
-	GetEvent Event06
+	GetEvent Event_Pekeji
 	cmp.b #$04
 	ClearCarryIfNotEqual
 
 NPCScriptFunction_C160F6:
 	php
 	sep #$20 ;A->8
-	GetEvent Event86
+	GetEvent Event_Pekeji_86
 	bne @lbl_C1611D
 	jsl.l GetCurrentFloor
 	lda.b wTemp00
 	cmp.b #$11
 	bcs @lbl_C1611D
-	GetEvent Event06
+	GetEvent Event_Pekeji
 	cmp.b #$05
 	beq @lbl_C16120
 @lbl_C1611D:
@@ -852,16 +877,16 @@ NPCScriptFunction_C160F6:
 NPCScriptFunction_C1612D:
 	php
 	sep #$20 ;A->8
-	GetEvent Event06
+	GetEvent Event_Pekeji
 	cmp.b #$06
 	ClearCarryIfNotEqual
 
 NPCScriptFunction_C16144:
 	php
 	sep #$20 ;A->8
-	GetEvent Event09
+	GetEvent Event_Naoki
 	bne @lbl_C1617E
-	GetEvent Event88
+	GetEvent Event_Naoki_88
 	bne @lbl_C1617E
 	jsl.l GetCurrentFloor
 	lda.b wTemp00
@@ -885,12 +910,16 @@ NPCScriptFunction_C16144:
 NPCScriptFunction_C16181:
 	php
 	sep #$20 ;A->8
-	GetEvent Event09
+	GetEvent Event_Naoki
 	beq @lbl_C161B9
 	GetEvent Event_Gaibara
 	beq @lbl_C161B9
-	.db $A9,$09,$85,$00,$22,$12,$05,$C6,$A5,$00,$C9,$01,$D0,$0C,$A9,$88   ;C1619C
-	.db $85,$00,$22,$12,$05,$C6,$A5,$00   ;C161AC  
+	.db $A9,$09,$85,$00
+	jsl.l _GetEvent
+	.db $A5,$00,$C9,$01,$D0,$0C,$A9,$88   ;C1619C
+	.db $85,$00
+	jsl.l _GetEvent
+	.db $A5,$00   ;C161AC  
 	.db $D0,$03,$28,$18,$60               ;C161B4  
 @lbl_C161B9:
 	plp
@@ -900,10 +929,10 @@ NPCScriptFunction_C16181:
 NPCScriptFunction_C161BC:
 	php
 	sep #$20 ;A->8
-	GetEvent Event09
+	GetEvent Event_Naoki
 	cmp.b #$01
 	bne @lbl_C161E8
-	GetEvent Event88
+	GetEvent Event_Naoki_88
 	bne @lbl_C161E8
 	GetEvent Event_Gaibara
 	beq @lbl_C161E8
@@ -918,10 +947,12 @@ NPCScriptFunction_C161BC:
 NPCScriptFunction_C161EB:
 	php
 	sep #$20 ;A->8
-	GetEvent Event09
+	GetEvent Event_Naoki
 	cmp.b #$02
 	bne @lbl_C1621F
-	.db $A9,$88,$85,$00,$22,$12,$05,$C6,$A5,$00,$D0,$17,$22,$71,$27,$C6   ;C161FC
+	.db $A9,$88,$85,$00
+	jsl.l _GetEvent
+	.db $A5,$00,$D0,$17,$22,$71,$27,$C6   ;C161FC
 	.db $A5,$00,$C9,$07,$B0,$0D,$22,$5F,$F6,$C3,$A5,$00,$C9,$15,$B0,$03   ;C1620C  
 	;C1621C
 	plp
@@ -935,28 +966,28 @@ NPCScriptFunction_C161EB:
 NPCScriptFunction_C16222:
 	php
 	sep #$20 ;A->8
-	GetEvent Event09
+	GetEvent Event_Naoki
 	cmp.b #$03
 	SetCarryIfEqual
 
 NPCScriptFunction_C16239:
 	php
 	sep #$20 ;A->8
-	GetEvent Event09
+	GetEvent Event_Naoki
 	cmp.b #$05
 	SetCarryIfEqual
 
 NPCScriptFunction_C16250:
 	php
 	sep #$20 ;A->8
-	GetEvent Event09
+	GetEvent Event_Naoki
 	cmp.b #$06
 	SetCarryIfEqual
 
 NPCScriptFunction_C16267:
 	php
 	sep #$20 ;A->8
-	GetEvent Event09
+	GetEvent Event_Naoki
 	cmp.b #$07
 	bcc @lbl_C1627B
 	plp
@@ -981,7 +1012,9 @@ NPCScriptFunction_C16297:
 	GetEvent Event17
 	bit.b #$01
 	beq @lbl_C162BA
-	.db $A9,$09,$85,$00,$22,$12,$05,$C6,$A5,$00,$C9,$07,$F0,$07,$C9,$08   ;C162A8
+	.db $A9,$09,$85,$00
+	jsl.l _GetEvent
+	.db $A5,$00,$C9,$07,$F0,$07,$C9,$08   ;C162A8
 	.db $F0,$03                           ;C162B8  
 @lbl_C162BA:
 	plp
@@ -995,7 +1028,7 @@ NPCScriptFunction_C16297:
 NPCScriptFunction_C162C0:
 	php
 	sep #$20 ;A->8
-	GetEvent Event09
+	GetEvent Event_Naoki
 	cmp.b #$08
 	bcs @lbl_C162D4
 	plp
@@ -1006,8 +1039,9 @@ NPCScriptFunction_C162C0:
 	
 NPCScriptFunction_C162D7:
 	.db $08,$E2,$20,$A9,$09   ;C162D4
-	.db $85,$00,$A9,$08,$85,$02,$22,$79   ;C162DC  
-	.db $04,$C6,$28,$60
+	.db $85,$00,$A9,$08,$85,$02
+	jsl.l _SetEvent
+	.db $28,$60
 	
 NPCScriptFunction_C162E8:
 	.db $08,$E2,$20,$22   ;C162E4  
@@ -1016,13 +1050,16 @@ NPCScriptFunction_C162E8:
 	
 NPCScriptFunction_C162FB:
 	.db $08   ;C162F4  
-	.db $E2,$20,$A9,$09,$85,$00,$A9,$04,$85,$02,$22,$79,$04,$C6,$22,$0D   ;C162FC
+	.db $E2,$20,$A9,$09,$85,$00,$A9,$04,$85,$02
+	jsl.l _SetEvent
+	.db $22,$0D   ;C162FC
 	.db $8B,$C2,$28,$60
 	
 NPCScriptFunction_C16310:
 	.db $08,$E2,$20,$A9   ;C1630C
-	.db $09,$85,$00,$A9,$02,$85,$02,$22   ;C16314
-	.db $79,$04,$C6,$28,$60
+	.db $09,$85,$00,$A9,$02,$85,$02
+	jsl.l _SetEvent
+	.db $28,$60
 	
 NPCScriptFunction_C16321:
 	.db $08,$E2,$20   ;C1631C  
@@ -1032,7 +1069,7 @@ NPCScriptFunction_C16321:
 NPCScriptFunction_C16336:
 	php
 	sep #$20 ;A->8
-	GetEvent Event09
+	GetEvent Event_Naoki
 	cmp.b #$02
 	SetCarryIfEqual
 
@@ -1045,9 +1082,9 @@ NPCScriptFunction_C1634D:
 	bcs @lbl_C16383
 	cmp.b #$08
 	bcc @lbl_C16383
-	GetEvent Event0C
-	bne @lbl_C16383
 	GetEvent Event_Surala
+	bne @lbl_C16383
+	GetEvent Event_Surala_89
 	bne @lbl_C16383
 	jsl.l Random
 	lda.b wTemp00
@@ -1062,18 +1099,22 @@ NPCScriptFunction_C1634D:
 	rts
 
 NPCScriptFunction_C16386:
-	.db $08,$E2,$20,$A9,$0C,$85,$00,$22,$12,$05,$C6,$A5,$00,$D0,$03,$28   ;C16386
+	.db $08,$E2,$20,$A9,$0C,$85,$00
+	jsl.l _GetEvent
+	.db $A5,$00,$D0,$03,$28   ;C16386
 	.db $38,$60,$28,$18,$60               ;C16396
 
 NPCScriptFunction_C1639B:
 	php
 	sep #$20 ;A->8
-	GetEvent Event0C
+	GetEvent Event_Surala
 	cmp.b #$01
 	SetCarryIfEqual
 
 NPCScriptFunction_C163B2:
-	.db $08,$E2,$20,$A9,$0C,$85,$00,$22,$12,$05,$C6,$A5,$00,$C9,$03,$D0   ;C163B2
+	.db $08,$E2,$20,$A9,$0C,$85,$00
+	jsl.l _GetEvent
+	.db $A5,$00,$C9,$03,$D0   ;C163B2
 	.db $03,$28,$38,$60,$28,$18,$60       ;C163C2  
 
 NPCScriptFunction_C163C9:
@@ -1157,7 +1198,9 @@ NPCScriptFunction_C16481:
 	rts
 
 NPCScriptFunction_C16498:
-	.db $08,$E2,$20,$A9,$0C,$85,$00,$A9,$02,$85,$02,$22,$79,$04,$C6,$22   ;C16498
+	.db $08,$E2,$20,$A9,$0C,$85,$00,$A9,$02,$85,$02
+	jsl.l _SetEvent
+	.db $22   ;C16498
 	.db $0D,$8B,$C2,$28,$60               ;C164A8  
 
 NPCScriptFunction_C164AD:
@@ -1190,7 +1233,9 @@ NPCScriptFunction_C164CA:
 	beq @lbl_C164CD
 	dec a
 	bpl @lbl_C164F3
-	.db $20,$D3,$5B,$B0,$EC,$A9,$0C,$85,$00,$22,$12,$05,$C6,$A5,$00,$C9   ;C164DC  
+	.db $20,$D3,$5B,$B0,$EC,$A9,$0C,$85,$00
+	jsl.l _GetEvent
+	.db $A5,$00,$C9   ;C164DC  
 	.db $03,$90,$DE,$A9,$64,$28,$60       ;C164EC  
 @lbl_C164F3:
 	dec a
@@ -1286,8 +1331,9 @@ NPCScriptFunction_C1657D:
 	
 NPCScriptFunction_C16594:
 	.db $08,$E2,$20,$A9,$1A   ;C16591
-	.db $85,$00,$A9,$08,$85,$02,$22,$79   ;C16599  
-	.db $04,$C6,$28,$60                   ;C165A1  
+	.db $85,$00,$A9,$08,$85,$02
+	jsl.l _SetEvent
+	.db $28,$60                   ;C165A1  
 
 NPCScriptFunction_C165A5:
 	php
@@ -1323,7 +1369,9 @@ NPCScriptFunction_C165F9:
 	ClearCarryIfNotEqual
 
 NPCScriptFunction_C1660E:
-	.db $08,$E2,$20,$A9,$1D,$85,$00,$22,$12,$05,$C6,$A5,$00,$F0,$03,$28   ;C1660E
+	.db $08,$E2,$20,$A9,$1D,$85,$00
+	jsl.l _GetEvent
+	.db $A5,$00,$F0,$03,$28   ;C1660E
 	.db $18,$60
 	;C16620
 	plp
@@ -1382,8 +1430,11 @@ NPCScriptFunction_C1665C:
 
 NPCScriptFunction_C1666F:
 	.db $08,$E2,$20,$C2,$10,$22,$5F,$F6,$C3,$A5,$00,$C9,$40,$B0,$20,$A9   ;C1666F
-	.db $0D,$85,$00,$22,$12,$05,$C6,$A5,$00,$48,$A9,$0E,$85,$00,$22,$12   ;C1667F  
-	.db $05,$C6,$A5,$00,$EB,$68,$A8,$C0,$32,$00,$90,$03,$28,$38,$60,$28   ;C1668F  
+	.db $0D,$85,$00
+	jsl.l _GetEvent
+	.db $A5,$00,$48,$A9,$0E,$85,$00
+	jsl.l _GetEvent
+	.db $A5,$00,$EB,$68,$A8,$C0,$32,$00,$90,$03,$28,$38,$60,$28   ;C1668F  
 	.db $18,$60                           ;C1669F
 
 NPCScriptFunction_C166A1:
@@ -1413,14 +1464,32 @@ NPCScriptFunction_C166C6:
 	
 NPCScriptFunction_C166CD:
 	.db $08   ;C166C6
-	.db $E2,$20,$A9,$03,$85,$00,$22,$12,$05,$C6,$A5,$00,$C9,$05,$D0,$0B   ;C166CE
-	.db $3A,$85,$02,$A9,$03,$85,$00,$22,$79,$04,$C6,$A9,$05,$85,$00,$22   ;C166DE
-	.db $12,$05,$C6,$A5,$00,$C9,$04,$D0,$0B,$3A,$85,$02,$A9,$05,$85,$00   ;C166EE  
-	.db $22,$79,$04,$C6,$A9,$06,$85,$00,$22,$12,$05,$C6,$A5,$00,$C9,$06   ;C166FE  
-	.db $D0,$0B,$3A,$85,$02,$A9,$06,$85,$00,$22,$79,$04,$C6,$A9,$09,$85   ;C1670E  
-	.db $00,$22,$12,$05,$C6,$A5,$00,$C9,$03,$D0,$0B,$3A,$85,$02,$A9,$09   ;C1671E
-	.db $85,$00,$22,$79,$04,$C6,$A9,$0C,$85,$00,$22,$12,$05,$C6,$A5,$00   ;C1672E  
-	.db $C9,$01,$D0,$0B,$3A,$85,$02,$A9,$0C,$85,$00,$22,$79,$04,$C6,$28   ;C1673E
+	.db $E2,$20,$A9,$03,$85,$00
+	jsl.l _GetEvent
+	.db $A5,$00,$C9,$05,$D0,$0B   ;C166CE
+	.db $3A,$85,$02,$A9,$03,$85,$00
+	jsl.l _SetEvent
+	.db $A9,$05,$85,$00
+	jsl.l _GetEvent
+	.db $A5,$00,$C9,$04,$D0,$0B,$3A,$85,$02,$A9,$05,$85,$00   ;C166EE  
+	jsl.l _SetEvent
+	.db $A9,$06,$85,$00
+	jsl.l _GetEvent
+	.db $A5,$00,$C9,$06   ;C166FE  
+	.db $D0,$0B,$3A,$85,$02,$A9,$06,$85,$00
+	jsl.l _SetEvent
+	.db $A9,$09,$85   ;C1670E  
+	.db $00
+	jsl.l _GetEvent
+	.db $A5,$00,$C9,$03,$D0,$0B,$3A,$85,$02,$A9,$09   ;C1671E
+	.db $85,$00
+	jsl.l _SetEvent
+	.db $A9,$0C,$85,$00
+	jsl.l _GetEvent
+	.db $A5,$00   ;C1672E  
+	.db $C9,$01,$D0,$0B,$3A,$85,$02,$A9,$0C,$85,$00
+	jsl.l _SetEvent
+	.db $28   ;C1673E
 	.db $60                               ;C1674E
 
 NPCScriptFunction_C1674F:
@@ -1429,13 +1498,13 @@ NPCScriptFunction_C1674F:
 	rep #$10 ;XY->16
 	lda.b #$00
 	pha
-	GetEvent Event06
+	GetEvent Event_Pekeji
 	inc a
 	cmp.b #$07
 	pla
 	rol a
 	pha
-	GetEvent Event05
+	GetEvent Event_Kechi
 	cmp.b #$04
 	pla
 	rol a
@@ -1479,10 +1548,13 @@ NPCScriptFunction_C16790:
 	rts
 
 NPCScriptFunction_C167BC:
-	.db $08,$E2,$30,$A9,$92,$85,$00,$22,$12,$05,$C6,$A5,$00,$A2,$63,$86   ;C167BC
+	.db $08,$E2,$30,$A9,$92,$85,$00
+	jsl.l _GetEvent
+	.db $A5,$00,$A2,$63,$86   ;C167BC
 	.db $06,$48,$DA,$22,$1F,$05,$C6,$FA,$68,$45,$00,$45,$01,$45,$02,$45   ;C167CC  
 	.db $03,$45,$04,$45,$05,$CA,$10,$E7,$C9,$00,$D0,$0C,$A9,$1E,$85,$00   ;C167DC  
-	.db $A9,$01,$85,$02,$22,$79,$04,$C6   ;C167EC
+	.db $A9,$01,$85,$02
+	jsl.l _SetEvent
 	.db $28,$60                           ;C167F4
 
 NPCScriptFunction_C167F6:
@@ -1541,7 +1613,9 @@ func_C1681A:
 	plp
 	rts
 @lbl_C1685B:
-	.db $C2,$10,$68,$85,$02,$A0,$EB,$08,$84,$00,$22,$25,$25,$C6,$22,$37   ;C1685B
+	.db $C2,$10,$68,$85,$02,$A0,$EB,$08,$84,$00
+	jsl.l DisplayMessage
+	.db $22,$37   ;C1685B
 	.db $24,$C6,$C2,$20,$AF,$9F,$85,$7E   ;C1686B  
 	.db $1B,$28,$6B                       ;C16873
 
@@ -1553,12 +1627,16 @@ NPCScriptFunction_C16876:
 	rts
 
 NPCScriptFunction_C16887:
-	.db $08,$E2,$20,$A9,$93,$85,$00,$A9,$09,$85,$02,$22,$79,$04,$C6,$28   ;C16887
+	.db $08,$E2,$20,$A9,$93,$85,$00,$A9,$09,$85,$02
+	jsl.l _SetEvent
+	.db $28   ;C16887
 	.db $60
 	
 NPCScriptFunction_C16898:
 	.db $08,$E2,$20,$A9,$93,$85,$00   ;C16897
-	.db $A9,$0A,$85,$02,$22,$79,$04,$C6,$28,$60,$08,$E2,$20,$C2,$10,$64   ;C1689F
+	.db $A9,$0A,$85,$02
+	jsl.l _SetEvent
+	.db $28,$60,$08,$E2,$20,$C2,$10,$64   ;C1689F
 	.db $00,$A9,$04,$85,$01,$22,$9F,$F6,$C3,$64,$01,$A6,$00,$BF,$C2,$68   ;C168AF
 	.db $C1,$28,$60,$A0,$A1,$A2,$A3,$A6   ;C168BF  
 
@@ -1577,9 +1655,7 @@ NPCScriptFunction_C168C7:
 	rts
 	
 UNREACH_C168E0:
-	.db $A7                               ;C168E0  
-	.db $A8                               ;C168E1
-	.db $A9,$AA,$AB,$AC,$AD,$BD           ;C168E2
+	.db $A7,$A8,$A9,$AA,$AB,$AC,$AD,$BD
 
 NPCScriptFunction_C168E8:
 	php
@@ -1610,13 +1686,17 @@ NPCScriptFunction_C168E8:
 
 NPCScript_SetMusic:
 	.db $08,$E2,$20,$22,$5F,$F6,$C3,$A5,$00,$29,$1F,$C9,$14,$B0,$F4,$85   ;C16939
-	.db $02,$A9,$8F,$85,$00,$22,$79,$04   ;C16949
-	.db $C6,$28,$60
+	.db $02,$A9,$8F,$85,$00
+	jsl.l _SetEvent
+	.db $28,$60
 	
 NPCScriptFunction_C16954:
 	.db $08,$E2,$30,$22,$71   ;C16951  
-	.db $27,$C6,$A5,$00,$C9,$01,$D0,$43,$A9,$18,$85,$00,$22,$12,$05,$C6   ;C16959  
-	.db $A5,$00,$09,$02,$85,$02,$A9,$18,$85,$00,$22,$79,$04,$C6,$20,$89   ;C16969  
+	.db $27,$C6,$A5,$00,$C9,$01,$D0,$43,$A9,$18,$85,$00
+	jsl.l _GetEvent
+	.db $A5,$00,$09,$02,$85,$02,$A9,$18,$85,$00
+	jsl.l _SetEvent
+	.db $20,$89   ;C16969  
 	.db $01,$A9,$02,$85,$00,$64,$01,$64,$02,$22,$95,$02,$C3,$22,$57,$01   ;C16979  
 	.db $C1,$A9,$AF,$85,$00,$22,$5D,$03,$C3,$22,$57,$01,$C1,$22,$3A,$25   ;C16989  
 	.db $C6,$64,$00,$22,$91,$3C,$C2,$22   ;C16999  
@@ -1624,14 +1704,20 @@ NPCScriptFunction_C16954:
 	
 NPCScriptFunction_C169A6:
 	.db $08,$E2,$20   ;C169A1  
-	.db $A9,$09,$85,$00,$22,$12,$05,$C6,$A5,$00,$C9,$09,$B0,$0C,$A9,$09   ;C169A9
-	.db $85,$00,$A9,$09,$85,$02,$22,$79   ;C169B9  
-	.db $04,$C6,$28,$60
+	.db $A9,$09,$85,$00
+	jsl.l _GetEvent
+	.db $A5,$00,$C9,$09,$B0,$0C,$A9,$09   ;C169A9
+	.db $85,$00,$A9,$09,$85,$02
+	jsl.l _SetEvent
+	.db $28,$60
 	
 NPCScriptFunction_C169C5:
 	.db $08,$E2,$30,$22   ;C169C1  
-	.db $71,$27,$C6,$A5,$00,$C9,$01,$D0,$4D,$A9,$18,$85,$00,$22,$12,$05   ;C169C9  
-	.db $C6,$A5,$00,$09,$04,$85,$02,$A9,$18,$85,$00,$22,$79,$04,$C6,$20   ;C169D9  
+	.db $71,$27,$C6,$A5,$00,$C9,$01,$D0,$4D,$A9,$18,$85,$00
+	jsl.l _GetEvent
+	.db $A5,$00,$09,$04,$85,$02,$A9,$18,$85,$00
+	jsl.l _SetEvent
+	.db $20   ;C169D9  
 	.db $89,$01,$A9,$95,$85,$00,$64,$01,$64,$02,$22,$95,$02,$C3,$A5,$00   ;C169E9
 	.db $48,$22,$92,$01,$C3,$68,$85,$00,$22,$57,$01,$C1,$A9,$AF,$85,$00   ;C169F9
 	.db $22,$5D,$03,$C3,$22,$57,$01,$C1,$22,$3A,$25,$C6,$64,$00,$22,$91   ;C16A09  
@@ -1639,8 +1725,11 @@ NPCScriptFunction_C169C5:
 
 NPCScriptFunction_C16A21:
 	.db $08,$E2,$30,$22,$71,$27,$C6,$A5,$00,$C9,$01,$D0,$25,$A9,$18,$85   ;C16A21
-	.db $00,$22,$12,$05,$C6,$A5,$00,$09,$08,$85,$02,$A9,$18,$85,$00,$22   ;C16A31
-	.db $79,$04,$C6,$20,$89,$01,$A9,$AF,$85,$00,$22,$5D,$03,$C3,$22,$57   ;C16A41  
+	.db $00
+	jsl.l _GetEvent
+	.db $A5,$00,$09,$08,$85,$02,$A9,$18,$85,$00
+	jsl.l _SetEvent
+	.db $20,$89,$01,$A9,$AF,$85,$00,$22,$5D,$03,$C3,$22,$57   ;C16A41  
 	.db $01,$C1,$28,$60                   ;C16A51  
 
 NPCScriptFunction_C16A55:
@@ -1781,7 +1870,7 @@ func_C16B75:
 	cmp.b #$0A
 	beq @lbl_C16BAF
 	pha
-	GetEvent Event0C
+	GetEvent Event_Surala
 	tax
 	pla
 	cpx.b #$03
@@ -1860,7 +1949,7 @@ func_C16C7D:
 	cmp.b #$0A
 	beq @lbl_C16CB7
 	pha
-	GetEvent Event0C
+	GetEvent Event_Surala
 	tax
 	pla
 	cpx.b #$03
@@ -1927,9 +2016,12 @@ func_C16C7D:
 	plp
 	rtl
 	.db $08,$E2,$30,$AF,$62,$89,$7E,$30,$0E,$A9,$88,$85,$00,$A9,$00,$85   ;C16D28
-	.db $01,$22,$25,$25,$C6,$28,$6B,$A9,$3E,$85,$00,$A9,$09,$85,$01,$22   ;C16D38  
-	.db $7E,$2B,$C6,$A5,$00,$10,$0E,$A9,$7F,$85,$00,$A9,$06,$85,$01,$22   ;C16D48  
-	.db $25,$25,$C6,$28,$6B,$A8,$0A,$AA,$BF,$FD,$6D,$C1,$85,$00,$BF,$FE   ;C16D58  
+	.db $01
+	jsl.l DisplayMessage
+	.db $28,$6B,$A9,$3E,$85,$00,$A9,$09,$85,$01,$22   ;C16D38  
+	.db $7E,$2B,$C6,$A5,$00,$10,$0E,$A9,$7F,$85,$00,$A9,$06,$85,$01
+	jsl.l DisplayMessage
+	.db $28,$6B,$A8,$0A,$AA,$BF,$FD,$6D,$C1,$85,$00,$BF,$FE   ;C16D58  
 	.db $6D,$C1,$85,$01,$5A,$22,$7E,$2B,$C6,$7A,$A6,$00,$10,$06,$22,$05   ;C16D68  
 	.db $24,$C6,$80,$C3,$C0,$02,$F0,$1F,$C0,$03,$F0,$1B,$C0,$05,$F0,$17   ;C16D78  
 	.db $C0,$06,$F0,$13,$C0,$08,$F0,$0F,$C0,$09,$F0,$06,$A9,$80,$85,$01   ;C16D88

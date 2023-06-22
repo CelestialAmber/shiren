@@ -4,7 +4,8 @@ text "\l"
 endtext
 
 ;fe129a
-Text1:
+;"Waved [item name]."
+WavedItemText:
 strvar TextStrVar_ItemName
 text "をふった。\l"
 endtext
@@ -16,67 +17,77 @@ text "\l"
 endtext
 
 ;fe12a7
+;"[entity] warped."
 Text3:
 strvar TextStrVar_EntityName
 text "はワープした。"
-playsound $42
+playsound SFX_66
 text "　\l"
 endtext
 
 ;fe12b5
+;"[entity] became confused."
 Text4:
 strvar TextStrVar_EntityName
 text "は混乱した。"
-playsound $B7
+playsound SFX_183
 text "　\l"
 endtext
 
 ;fe12c4
+;"All the monsters around [entity] became confused."
 Text5:
-playsound $B7
+playsound SFX_183
 text "　"
 strvar TextStrVar_EntityName
 text "と、そのまわりの\lモンスターは混乱した。\l"
 endtext
 
 ;fe12e1
+;"All the monsters around became confused."
 Text6:
 text "まわりのモンスターは混乱した。"
-playsound $B7
+playsound SFX_183
 text "　\l"
 endtext
 
 ;fe12f7
+;"Gained [amount] exp points."
 Text7:
-numvar $30
+numvar TextNumVar_Gitan_Exp_Amount
 text "ポイントの経験値を得た。\l"
 endtext
 
 ;fe130b
+;"Took [amount] damage."
 Text8:
-numvar $10
+numvar TextNumVar_Number
 text "ポイントのダメージを受けた。\l"
 endtext
 
 ;fe131e
+;"Dealt [amount] damage."
 Text9:
-numvar $10
+numvar TextNumVar_Number
 text "ポイントのダメージを与えた。\l"
 endtext
 
 ;fe1331
+;"fell by [amount] points"
 Text10:
-numvar $10
+numvar TextNumVar_Number
 text "ポイント下がった。\l"
 endtext
 
 ;fe133e
+;"rose by [amount] points."
 Text11:
-numvar $10
+numvar TextNumVar_Number
 text "ポイント上がった。\l"
 endtext
 
 ;fe134b
+;"Swapped [item] for [item]."
 Text12:
 strvar TextStrVar_ItemName
 text "が\l"
@@ -85,64 +96,72 @@ text "にすりかわった。\l"
 endtext
 
 ;fe135b
+;"[item] is cursed, so you couldn't remove it."
 Text13:
 strvar TextStrVar_ItemName
 text "は\l呪われていて、はずれなかった。"
-playsound $5B
+playsound SFX_91
 text "　\l"
 endtext
 
 ;fe1374
+;"[item] disappeared."
 Text14:
 strvar TextStrVar_ItemName
 text "が消えてしまった。\l"
 endtext
 
 ;fe1382
+;"[item] helped."
 Text15:
 strvar TextStrVar_ItemName
 text "が役にたった。\l"
 endtext
 
 ;fe138e
+;"was [item]."
 Text16:
 strvar TextStrVar_ItemName
 text "だった。\l"
 endtext
 
 ;fe1396
+;"[item]'s uses increased by [amount] points."
 Text17:
-playsound $7C
+playsound SFX_124
 text "　"
 textfunction $5
 textfunction $2
 cmdf6
 strvar TextStrVar_ItemName
 text "の回数が\l"
-numvar $10
+numvar TextNumVar_Number
 text "ポイントふえた。\l"
 endtext
 
 ;fe13b3
+;"[item]'s size increased by [amount] points."
 Text18:
-playsound $7C
+playsound SFX_124
 text "　"
 textfunction $5
 textfunction $2
 cmdf6
 strvar TextStrVar_ItemName
 text "の大きさが"
-numvar $10
+numvar TextNumVar_Number
 text "ふえた。\l"
 endtext
 
 ;fe13ca
+;"Walked over [item]."
 Text19:
 strvar TextStrVar_ItemName
 text "の上に乗った。\l"
 endtext
 
 ;fe13d6
+;"[item] hit [entity]."
 Text20:
 strvar TextStrVar_ItemName
 text "は\l"
@@ -151,8 +170,9 @@ text "に当たった。\l"
 endtext
 
 ;fe13e5
+;"[item] turned into a large onigiri."
 Text21:
-playsound $7B
+playsound SFX_123
 text "　"
 textfunction $5
 textfunction $2
@@ -162,102 +182,117 @@ text "は\l大きいおにぎりに変わった。\l"
 endtext
 
 ;fe1401
+;"[item] fell to the ground."
 Text22:
 strvar TextStrVar_ItemName
 text "は地面に落ちた。\l"
 endtext
 
 ;fe140f
+;"[item] fell to the ground and was lost."
 Text23:
 strvar TextStrVar_ItemName
 text "は地面に落ちて\l使いものにならなくなった。\l"
 endtext
 
 ;fe142b
+;"Drank [item] as medicine."
 Text24:
 strvar TextStrVar_ItemName
 text "を薬にして飲んだ。\l"
 endtext
 
 ;fe143a
+;"Equipped [equipment]."
 Text25:
-strvar $84
+strvar TextStrVar_EquippedItem
 text "を装備した。"
-playsound $55
+playsound SFX_85
 text "　\l"
 endtext
 
 ;fe1447
+;"Read [item]."
 Text26:
 strvar TextStrVar_ItemName
 text "を読んだ。\l"
 endtext
 
 ;fe1451
+;"Put on [item]."
 Text27:
 strvar TextStrVar_ItemName
 text "をはめた。"
-playsound $57
+playsound SFX_87
 text "　\l"
 endtext
 
 ;fe145d
+;"Picked up [item]."
 Text28:
 strvar TextStrVar_ItemName
 text "を拾った。"
-playsound $4F
+playsound SFX_79
 text "　\l"
 endtext
 
 ;fe146a
+;"Dropped [item] and picked up [item]."
 Text29:
 strvar TextStrVar_ItemName
 text "を足元に置いて\l"
 strvar TextStrVar_ItemName
 text "を拾った。"
-playsound $4F
+playsound SFX_79
 text "　\l"
 endtext
 
 ;fe1484
+;"Picked up [item]."
 Text30:
 strvar TextStrVar_ItemName
 text "を拾った。"
-playsound $50
+playsound SFX_80
 text "　\l"
 endtext
 
 ;fe1491
+;"Dropped [item]."
 Text31:
 strvar TextStrVar_ItemName
 text "を足元に置いた。\l"
 endtext
 
 ;fe14a0
+;"from [entity]"
 Text32:
 strvar TextStrVar_EntityName
 text "から\l"
 endtext
 
 ;fe14a6
+;"was [entity]"
 Text33:
 strvar TextStrVar_EntityName
 text "だった。\l"
 endtext
 
 ;fe14ae
+;"Grabbed by the legs by [entity] and can't move!"
 Text34:
 strvar TextStrVar_EntityName
 text "に足をつかまれて\l動けない！\l"
 endtext
 
 ;fe14c2
+;"All of [entity]'s status"
 Text35:
 strvar TextStrVar_EntityName
 text "のステイタスが、すべて\l"
 endtext
 
 ;fe14d1
+;"The flames burn [entity]."
 Text36:
 text "炎が、"
 strvar TextStrVar_EntityName
@@ -279,18 +314,21 @@ text "の攻撃を、かわした。\l"
 endtext
 
 ;fe14fc
+;"[entity] absorbed Strength."
 Text39:
 strvar TextStrVar_EntityName
 text "は、ちからを吸いとった。\l"
 endtext
 
 ;fe150d
+;"[entity] did a twisting dance."
 Text40:
 strvar TextStrVar_EntityName
 text "はクネクネーをおどった。\l"
 endtext
 
 ;fe151d
+;"[entity] sold [item]."
 Text41:
 strvar TextStrVar_EntityName
 text "は、"
@@ -299,6 +337,7 @@ text "をうってきた。\l"
 endtext
 
 ;fe152c
+;"[entity] ate [item]."
 Text42:
 strvar TextStrVar_EntityName
 text "は"
@@ -307,6 +346,7 @@ text "を食べた。\l"
 endtext
 
 ;fe1538
+;"[entity] stole [item] from [entity]."
 Text43:
 strvar TextStrVar_EntityName
 text "は、"
@@ -317,6 +357,7 @@ text "を、ぬすんだ。\l"
 endtext
 
 ;fe154c
+;"[entity] (did...) to [entity]"
 Text44:
 strvar TextStrVar_EntityName
 text "は、"
@@ -325,14 +366,16 @@ text "に\l"
 endtext
 
 ;fe1555
+;"[strvar TextStrVar_85] (did...) to [entity]"
 Text45:
-strvar $85
+strvar TextStrVar_85
 text "は、"
 strvar TextStrVar_EntityName
 text "に\l"
 endtext
 
 ;fe155e
+;"[entity] grabbed [entity]'s legs."
 Text46:
 strvar TextStrVar_EntityName
 text "は"
@@ -341,83 +384,95 @@ text "の\l足をつかんだ。\l"
 endtext
 
 ;fe156f
+;"[entity] used hypnosis."
 Text47:
 strvar TextStrVar_EntityName
 text "は催眠術をかけた。\l"
 endtext
 
 ;fe157f
+;"[entity] chanted a weird spell."
 Text48:
 strvar TextStrVar_EntityName
 text "は、へんな呪文を唱えた。\l"
 endtext
 
 ;fe1592
+;"HP began to be restored again."
 Text49:
 text "ＨＰが回復するようになった。\l"
 endtext
 
 ;fe15a6
+;"[entity] spat out sleeping fluid."
 Text50:
 strvar TextStrVar_EntityName
 text "は、睡眠液を吐いた。\l"
 endtext
 
 ;fe15b8
+;"[entity] spat out poison."
 Text51:
 strvar TextStrVar_EntityName
 text "は毒をはいた。\l"
 endtext
 
 ;fe15c4
+;"[entity] vomited rotten liquid."
 Text52:
 strvar TextStrVar_EntityName
 text "は、くさった液をはいた。\l"
 endtext
 
 ;fe15d5
+;"[entity] became scared."
 Text53:
 strvar TextStrVar_EntityName
 text "はおびえだした。"
-playsound $B8
+playsound SFX_184
 text "　\l"
 endtext
 
 ;fe15e4
+;"All the monsters around [entity] became scared."
 Text54:
-playsound $B8
+playsound SFX_184
 text "　"
 strvar TextStrVar_EntityName
 text "と、そのまわりの\lモンスターはおびえだした。\l"
 endtext
 
 ;fe1601
+;"[entity] fell to level [level]."
 Text55:
-playsound $9E
+playsound SFX_158
 text "　"
 strvar TextStrVar_EntityName
 text "はレベル"
-numvar $10
+numvar TextNumVar_Number
 text "に下がった。\l"
 endtext
 
 ;fe1614
+;"[entity name] grew to level [level]."
 Text56:
 strvar TextStrVar_EntityName
 text "はレベル"
-numvar $10
+numvar TextNumVar_Number
 text "に上がった。"
-playsound $34
+playsound SFX_SHIREN_LEVEL_UP
 text "　\l"
 endtext
 
 ;fe1627
+;"[entity] ran out of energy."
 Text57:
 strvar TextStrVar_EntityName
 text "はちからつきた。\l"
 endtext
 
 ;fe1633
+;"[entity] ran out of energy. But, they used [item] and revived themself."
 Text58:
 strvar TextStrVar_EntityName
 text "はちからつきた。\l"
@@ -429,16 +484,18 @@ text "を使って復活した。\l"
 endtext
 
 ;fe1655
+;"[entity] fell asleep."
 Text59:
 strvar TextStrVar_EntityName
 text "は眠ってしまった。"
-playsound $96
+playsound SFX_150
 text "　\l"
 endtext
 
 ;fe1666
+;"[entity] and the nearby monsters fell asleep."
 Text60:
-playsound $96
+playsound SFX_150
 text "　"
 strvar TextStrVar_EntityName
 text "と、そのまわりの\lモンスターは眠ってしまった。\l"
@@ -451,127 +508,145 @@ text "をやっつけた。\l"
 endtext
 
 ;fe1690
+;"...asleep and can't do anything."
 Text62:
 text "・・・眠くてなにもできない。\l"
 endtext
 
 ;fe16a1
+;"HP fell by [amount] points."
 Text63:
 text "ＨＰが"
-numvar $10
+numvar TextNumVar_Number
 text "ポイント下がった。\l"
 endtext
 
 ;fe16b3
+;"HP rose by [amount] points."
 Text64:
 text "ＨＰが"
-numvar $10
+numvar TextNumVar_Number
 text "ポイント上がった。"
-playsound $90
+playsound SFX_144
 text "　\l"
 endtext
 
 ;fe16c8
+;"Restores a lot of HP."
 Text65:
 text "ＨＰがたくさん回復するぞ。\l"
 endtext
 
 ;fe16db
+;"Restores a little bit of HP."
 Text66:
 text "ＨＰがすこし回復するぞ。\l"
 endtext
 
 ;fe16ed
+;"Lowers (if by accident?) HP and Strength."
 Text67:
 text "ＨＰや、ちからが下がってしまうぞ。\l"
 endtext
 
 ;fe1702
-Text68:
+;"Getting hungry..."
+HungerWarning1Text:
 text "おなかが、へってきた・・・"
-playsound $B5
+playsound SFX_181
 text "　\l"
 endtext
 
 ;fe1714
-Text69:
+;"Getting dizzy from hunger..."
+HungerWarning2Text:
 text "ハラペコで目が回ってきた・・・"
-playsound $B5
+playsound SFX_181
 text "　\l"
 endtext
 
 ;fe1729
-Text70:
+;"Oh no! You feel like you're collapsing!"
+HungerWarning3Text:
 text "だめだ！　もう倒れそうだ！"
-playsound $B5
+playsound SFX_181
 text "　\l"
 endtext
 
 ;fe173c
-Text71:
+;"Hurry...If you don't eat something..."
+HungerWarning4Text:
 text "早く・・・なにか食べないと・・・"
-playsound $B5
+playsound SFX_181
 text "　\l"
 endtext
 
 ;fe1752
-Text72:
+;"You'll starve to death!"
+HungerWarning5Text:
 text "飢え死にしてしまう！"
-playsound $B5
+playsound SFX_181
 text "　\l"
 endtext
 
 ;fe1763
-Text73:
+;"It's...over..."
+HungerWarning6Text:
 text "もう・・・だめだ・・・"
-playsound $B5
+playsound SFX_181
 text "　\l"
 endtext
 
 ;fe1773
-Text74:
+HungerWarning7Text:
 text "・・・・・・・・・・・・・・"
-playsound $B5
+playsound SFX_181
 text "　\l"
 endtext
 
 ;fe1786
-Text75:
+;"You became full."
+BecameFullText:
 text "おなかが、いっぱいになった。\l"
 endtext
 
 ;fe1796
+;"Your belly was filled, but"
 Text76:
 text "おなかはふくれたが\l"
 endtext
 
 ;fe17a1
+;"Your belly filled up a little."
 Text77:
 text "すこし、おなかがふくれた。\l"
 endtext
 
 ;fe17b0
+;"Maximum hunger became [amount]%."
 Text78:
 text "満腹度の最大値が"
-numvar $10
+numvar TextNumVar_Number
 text "％になった。"
-playsound $A5
+playsound SFX_165
 text "　\l"
 endtext
 
 ;fe17cb
+;"Maximum hunger became [amount]%."
 Text79:
 text "満腹度の最大値が"
-numvar $10
+numvar TextNumVar_Number
 text "％になった。"
-playsound $A6
+playsound SFX_166
 text "　\l"
 endtext
 
 ;fe17e6
+;"Hunger became [amount]%"
 Text80:
 text "満腹度が"
-numvar $10
+numvar TextNumVar_Number
 text "％になった。\l"
 endtext
 
@@ -583,25 +658,27 @@ endtext
 ;fe180b
 Text82:
 text "かかっていた呪いも解けた。"
-playsound $8F
+playsound SFX_143
 text "　\l"
 endtext
 
 ;fe181f
+;"You can't use your mouth!"
 Text83:
 text "口が使えない！"
-playsound $7E
+playsound SFX_126
 text "　\l"
 endtext
 
 ;fe182d
+;"Can't place it here."
 Text84:
 text "ここには置けない。\l"
 endtext
 
 ;fe1839
 Text85:
-playsound $76
+playsound SFX_118
 text "　"
 textfunction $2
 cmdf6
@@ -614,6 +691,7 @@ text "これには毒をはね返す力があるぞ。\l"
 endtext
 
 ;fe187c
+;"This is [item]."
 Text87:
 text "これは"
 strvar TextStrVar_ItemName
@@ -702,14 +780,14 @@ endtext
 ;fe1963
 Text101:
 text "ふだんの倍の速さになった！"
-playsound $94
+playsound SFX_148
 text "　\l"
 endtext
 
 ;fe1977
 Text102:
 text "まっすぐ歩けなくなった！"
-playsound $B7
+playsound SFX_183
 text "　\l"
 endtext
 
@@ -721,7 +799,7 @@ endtext
 ;fe199a
 Text104:
 text "まわりのモンスターの動きが止まった。"
-playsound $75
+playsound SFX_117
 text "　\l"
 endtext
 
@@ -733,14 +811,14 @@ endtext
 ;fe19c7
 Text106:
 text "もうれつに眠くなってきた・・・"
-playsound $96
+playsound SFX_150
 text "　\l"
 endtext
 
 ;fe19dc
 Text107:
 text "ものがちゃんと見えなくなった！"
-playsound $B8
+playsound SFX_184
 text "　\l"
 endtext
 
@@ -771,7 +849,7 @@ endtext
 
 ;fe1a34
 Text113:
-playsound $82
+playsound SFX_130
 text "　"
 textfunction $5
 textfunction $2
@@ -786,25 +864,25 @@ endtext
 
 ;fe1a6c
 Text115:
-playsound $79
+playsound SFX_121
 text "　アイテムの位置がわかった。\l"
 endtext
 
 ;fe1a80
 Text116:
-playsound $7A
+playsound SFX_122
 text "　モンスターの位置がわかった。\l"
 endtext
 
 ;fe1a95
 Text117:
-playsound $A0
+playsound SFX_160
 text "　見えないものが見えるようになった！\l"
 endtext
 
 ;fe1aab
 Text118:
-playsound $82
+playsound SFX_130
 text "　"
 textfunction $5
 textfunction $2
@@ -814,7 +892,7 @@ endtext
 
 ;fe1ac3
 Text119:
-playsound $82
+playsound SFX_130
 text "　"
 textfunction $5
 textfunction $2
@@ -824,7 +902,7 @@ endtext
 
 ;fe1ae7
 Text120:
-playsound $82
+playsound SFX_130
 text "　モンスターが、すべて死んでしまった！\l"
 endtext
 
@@ -846,7 +924,7 @@ endtext
 ;fe1b3a
 Text124:
 text "モンスターを呼び寄せてしまった。"
-playsound $78
+playsound SFX_120
 text "　\l"
 endtext
 
@@ -868,15 +946,15 @@ endtext
 ;fe1b88
 Text128:
 text "トラばさみがはずれない！"
-playsound $AC
+playsound SFX_172
 text "　\l"
 endtext
 
 ;fe1b99
 Text129:
-playsound $82
+playsound SFX_130
 text "　一気に"
-numvar $10
+numvar TextNumVar_Number
 text "階まで下りてしまった。\l"
 endtext
 
@@ -903,16 +981,16 @@ endtext
 ;fe1bec
 Text134:
 text "最大ＨＰが"
-numvar $10
+numvar TextNumVar_Number
 text "ポイント下がった。\l"
 endtext
 
 ;fe1c01
 Text135:
 text "最大ＨＰが"
-numvar $10
+numvar TextNumVar_Number
 text "ポイント上がった。"
-playsound $A4
+playsound SFX_164
 text "　\l"
 endtext
 
@@ -929,7 +1007,7 @@ endtext
 ;fe1c38
 Text138:
 text "呪われていた！"
-playsound $5B
+playsound SFX_91
 text "　\l"
 endtext
 
@@ -941,19 +1019,19 @@ endtext
 ;fe1c51
 Text140:
 text "床にワナがたくさんできてしまった！"
-playsound $80
+playsound SFX_128
 text "　\l"
 endtext
 
 ;fe1c68
 Text141:
-playsound $5B
+playsound SFX_91
 text "　"
 textfunction $5
 textfunction $2
 cmdf6
 text "装備していた"
-strvar $84
+strvar TextStrVar_EquippedItem
 text "が\l呪われてしまった！\l"
 endtext
 
@@ -968,7 +1046,7 @@ textfunction $5
 textfunction $2
 cmdf6
 text "装備していた"
-strvar $84
+strvar TextStrVar_EquippedItem
 text "の\l呪いが解けた！\l"
 endtext
 
@@ -1011,7 +1089,7 @@ endtext
 AlarmTrapText:
 textfunction $2
 cmdf6
-playsound $77
+playsound SFX_119
 text "　眠っているモンスターの\l目をさましてしまった！\l"
 endtext
 
@@ -1023,7 +1101,7 @@ endtext
 ;fe1d56
 Text153:
 text "目が見えなくなった！"
-playsound $A2
+playsound SFX_162
 text "　\l"
 endtext
 
@@ -1045,43 +1123,43 @@ endtext
 ;fe1d8b
 Text157:
 text "ちからが回復した。"
-playsound $91
+playsound SFX_145
 text "　\l"
 endtext
 
 ;fe1d9b
 Text158:
 text "ちからが"
-numvar $10
+numvar TextNumVar_Number
 text "ポイント上がった。"
-playsound $92
+playsound SFX_146
 text "　\l"
 endtext
 
 ;fe1daf
 Text159:
 text "ちからの限界が"
-numvar $10
+numvar TextNumVar_Number
 text "ポイント上がった。"
-playsound $93
+playsound SFX_147
 text "　\l"
 endtext
 
 ;fe1dc8
 Text160:
 text "ちからが"
-numvar $10
+numvar TextNumVar_Number
 text "ポイント下がった。"
-playsound $97
+playsound SFX_151
 text "　\l"
 endtext
 
 ;fe1ddc
 Text161:
 text "ちからの限界が"
-numvar $10
+numvar TextNumVar_Number
 text "ポイント下がった。"
-playsound $98
+playsound SFX_152
 text "　\l"
 endtext
 
@@ -1133,7 +1211,7 @@ textfunction $5
 textfunction $2
 cmdf6
 text "装備していた"
-strvar $84
+strvar TextStrVar_EquippedItem
 text "が\l"
 endtext
 
@@ -1145,17 +1223,17 @@ endtext
 
 ;fe1ea0
 Text172:
-strvar $84
+strvar TextStrVar_EquippedItem
 text "の装備をはずした。"
-playsound $56
+playsound SFX_86
 text "　\l"
 endtext
 
 ;fe1eb0
 Text173:
-strvar $84
+strvar TextStrVar_EquippedItem
 text "の装備をはずした。"
-playsound $58
+playsound SFX_88
 text "　\l"
 endtext
 
@@ -1197,7 +1275,7 @@ endtext
 Text180:
 textfunction $2
 cmdf6
-playsound $73
+playsound SFX_115
 text "　ラッキー！　この識別の巻物は\lアイテムすべてを識別できた！\l"
 endtext
 
@@ -1241,7 +1319,7 @@ endtext
 
 ;fe2021
 Text188:
-playsound $A2
+playsound SFX_162
 text "　"
 textfunction $5
 textfunction $2
@@ -1252,7 +1330,7 @@ endtext
 
 ;fe2039
 Text189:
-playsound $A2
+playsound SFX_162
 text "　"
 strvar TextStrVar_EntityName
 text "と、そのまわりの\lモンスターの目が見えなくなった。\l"
@@ -1288,7 +1366,7 @@ endtext
 
 ;fe20ac
 Text195:
-playsound $82
+playsound SFX_130
 text "　"
 textfunction $5
 textfunction $2
@@ -1298,7 +1376,7 @@ endtext
 
 ;fe20cc
 Text196:
-playsound $82
+playsound SFX_130
 text "　すべてのステイタスが回復した。\l"
 endtext
 
@@ -1316,6 +1394,7 @@ text "は地面にはりついている。\l"
 endtext
 
 ;fe2114
+;"Wow! It was a [item]."
 Text199:
 textfunction $2
 cmdf6
@@ -1325,9 +1404,10 @@ text "だった。\l"
 endtext
 
 ;fe2124
+;"But, [strvar TextStrVar_0] disappeared!"
 Text200:
 text "しかし、"
-strvar $0
+strvar TextStrVar_0
 text "は消えてしまった！\l"
 endtext
 
@@ -1439,7 +1519,7 @@ endtext
 Text218:
 strvar TextStrVar_ItemName
 text "は、こわれてなくなった。"
-playsound $59
+playsound SFX_89
 text "　\l"
 endtext
 
@@ -1471,7 +1551,7 @@ endtext
 
 ;fe22df
 Text224:
-playsound $5A
+playsound SFX_STEP_ON_TRAP
 text "　時限爆弾だ！\l"
 endtext
 
@@ -1521,7 +1601,7 @@ endtext
 ;fe2357
 Text232:
 text "まわりのものが崩れ落ち\l見晴らしがよくなった！"
-playsound $88
+playsound SFX_136
 text "　\l"
 endtext
 
@@ -1529,7 +1609,7 @@ endtext
 Text233:
 strvar TextStrVar_EntityName
 text "はモンスターに囲まれた！"
-playsound $B1
+playsound SFX_177
 text "　\l"
 endtext
 
@@ -1580,7 +1660,7 @@ endtext
 ;fe2426
 Text242:
 text "地面にワナがたくさんできてしまった！"
-playsound $80
+playsound SFX_128
 text "　\l"
 endtext
 
@@ -1600,7 +1680,7 @@ endtext
 ;fe2464
 Text245:
 text "無敵状態になった。"
-playsound $A8
+playsound SFX_168
 text "　\l"
 endtext
 
@@ -1659,7 +1739,7 @@ endtext
 
 ;fe250f
 Text256:
-playsound $9F
+playsound SFX_159
 text "　"
 strvar TextStrVar_EntityName
 text "は勝手に動き出した。\l"
@@ -1683,7 +1763,7 @@ endtext
 
 ;fe2550
 Text260:
-playsound $A3
+playsound SFX_163
 text "　識別したものを忘れてしまった！\l"
 endtext
 
@@ -1701,7 +1781,7 @@ endtext
 Text263:
 strvar TextStrVar_EntityName
 text "は呪いの呪文を唱えた。\l装備中の盾が呪われた！"
-playsound $5B
+playsound SFX_91
 text "　\l"
 endtext
 
@@ -1709,7 +1789,7 @@ endtext
 Text264:
 strvar TextStrVar_EntityName
 text "は呪いの呪文を唱えた。\l装備中のアイテムがすべて呪われた！"
-playsound $5B
+playsound SFX_91
 text "　\l"
 endtext
 
@@ -1717,7 +1797,7 @@ endtext
 Text265:
 strvar TextStrVar_EntityName
 text "は呪いの呪文を唱えた。\l持っていたアイテムがすべて呪われた！"
-playsound $5B
+playsound SFX_91
 text "　\l"
 endtext
 
@@ -1748,20 +1828,22 @@ text "の中に、\l雑草が入ってしまった！\l"
 endtext
 
 ;fe2656
+;"The curse on the equipment was lifted!"
 Text270:
-playsound $8F
+playsound SFX_143
 text "　"
 textfunction $5
 textfunction $2
 cmdf6
 text "装備していた"
-strvar $84
+strvar TextStrVar_EquippedItem
 text "の\l呪いが解けた！\l"
 endtext
 
 ;fe2673
+;"The curse on the item was lifted!"
 Text271:
-playsound $8F
+playsound SFX_143
 text "　"
 textfunction $5
 textfunction $2
@@ -1770,23 +1852,27 @@ text "持っていたアイテムの\l呪いが解けた！\l"
 endtext
 
 ;fe2691
+;"The sword rusted!"
 Text272:
 text "剣がさびてしまった！\l"
 endtext
 
 ;fe269e
+;"However, it was plated so it didn't rust."
 Text273:
 text "しかし、メッキされた剣はさびなかった。\l"
 endtext
 
 ;fe26b4
+;"[entity] ran out of energy."
+;"However, [strvar TextStrVar_0] revived them."
 Text274:
 strvar TextStrVar_EntityName
 text "はちからつきた。\l"
 textfunction $2
 cmdf6
 text "しかし、"
-strvar $0
+strvar TextStrVar_0
 text "になって復活した。\l"
 endtext
 
@@ -1934,7 +2020,7 @@ endtext
 
 ;fe2978
 Text300:
-playsound $35
+playsound SFX_MONSTER_LEVEL_UP
 text "　"
 strvar TextStrVar_EntityName
 text "は、レベルが上がって\l"
@@ -1948,7 +2034,7 @@ endtext
 
 ;fe2992
 Text302:
-playsound $9E
+playsound SFX_158
 text "　"
 strvar TextStrVar_EntityName
 text "は、レベルが下がって\l"
@@ -1970,7 +2056,7 @@ Text305:
 textfunction $2
 cmdf6
 text "『"
-strvar $88
+strvar TextStrVar_BlankScrollName
 text "・・・』\lと、むなしくこだました。\l"
 endtext
 
@@ -2077,14 +2163,14 @@ endtext
 ;fe2ae7
 Text325:
 text "スイッチを踏む音がした！"
-playsound $5A
+playsound SFX_STEP_ON_TRAP
 text "　\l"
 endtext
 
 ;fe2afa
 Text326:
 text "地雷を踏んでしまった！"
-playsound $5A
+playsound SFX_STEP_ON_TRAP
 text "　\l"
 endtext
 
@@ -2096,7 +2182,7 @@ endtext
 ;fe2b1b
 Text328:
 text "警報スイッチを踏んでしまった！"
-playsound $5A
+playsound SFX_STEP_ON_TRAP
 text "　\l"
 endtext
 
@@ -2104,14 +2190,14 @@ endtext
 ;fe2b32
 Text329:
 text "召喚スイッチを踏んでしまった！"
-playsound $5A
+playsound SFX_STEP_ON_TRAP
 text "　\l"
 endtext
 
 ;fe2b49
 Text330:
 text "大部屋スイッチを踏んでしまった！"
-playsound $5A
+playsound SFX_STEP_ON_TRAP
 text "　\l"
 endtext
 
@@ -2128,14 +2214,14 @@ endtext
 ;fe2b82
 Text333:
 text "へんなスイッチを踏んでしまった！"
-playsound $5A
+playsound SFX_STEP_ON_TRAP
 text "　\l"
 endtext
 
 ;fe2b98
 Text334:
 text "大型地雷を踏んでしまった！"
-playsound $5A
+playsound SFX_STEP_ON_TRAP
 text "　\l"
 endtext
 
@@ -2185,7 +2271,7 @@ text "－－－－小話その１－－－－\lそこで、妖刀かまいたち
 textfunction $2
 cmdf6
 text "鎌井達？"
-playsound $A7
+playsound SFX_167
 text "　\l"
 endtext
 
@@ -2201,7 +2287,7 @@ endtext
 Text345:
 textfunction $2
 cmdf6
-playsound $75
+playsound SFX_117
 text "　"
 strvar TextStrVar_EntityName
 text "は固まった。\l"
@@ -2217,7 +2303,7 @@ endtext
 
 ;fe2ca3
 Text347:
-playsound $A8
+playsound SFX_168
 text "　"
 strvar TextStrVar_EntityName
 text "は無敵になった。\l"
@@ -2225,7 +2311,7 @@ endtext
 
 ;fe2cb4
 Text348:
-playsound $9C
+playsound SFX_156
 text "　"
 strvar TextStrVar_EntityName
 text "は生き返った。\l"
@@ -2233,7 +2319,7 @@ endtext
 
 ;fe2cc3
 Text349:
-playsound $9D
+playsound SFX_157
 text "　"
 strvar TextStrVar_EntityName
 text "の姿が見えなくなった。\l"
@@ -2241,7 +2327,7 @@ endtext
 
 ;fe2cd6
 Text350:
-playsound $9F
+playsound SFX_159
 text "　"
 strvar TextStrVar_EntityName
 text "は\lバーサーカー状態になった。\l"
@@ -2249,7 +2335,7 @@ endtext
 
 ;fe2cee
 Text351:
-playsound $A3
+playsound SFX_163
 text "　識別したものを忘れてしまった。\l"
 endtext
 
@@ -2273,7 +2359,7 @@ endtext
 
 ;fe2d4d
 Text355:
-playsound $83
+playsound SFX_131
 text "　モンスターの速さが２倍になった。\l"
 endtext
 

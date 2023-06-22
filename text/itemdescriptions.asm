@@ -1,3 +1,92 @@
+
+;fe506e
+Text1338:
+text "ＰＰＵ　５Ｃ７７　ｖｅｒ"
+numvar TextNumVar_Strength
+text "\lＰＰＵ　５Ｃ７８　ｖｅｒ"
+numvar TextNumVar_Strength
+text "\l@"
+
+;fe509b
+Text1339:
+text "ドラゴン系モンスターに強い。@"
+
+;fe50ab
+Text1340:
+text "ゴースト系モンスターに強い。@"
+
+;fe50bb
+Text1341:
+text "１ツ目モンスターに強い。@"
+
+;fe50c8
+Text1342:
+text "ステータスを吸い取るモンスターに強い。@"
+
+;fe50de
+Text1343:
+text "モンスターを肉にできる。@"
+
+;fe50ec
+Text1344:
+text "かべを掘れる。@"
+
+;fe50f5
+Text1345:
+text "必ず攻撃が当たる。@"
+
+;fe5102
+Text1346:
+text "会心の一撃がでる。@"
+
+;fe510f
+Text1347:
+text "前方３方向１度に攻撃できる。@"
+
+;fe5124
+Text1348:
+text "おなかがへりにくい。@"
+
+;fe512f
+Text1349:
+text "おなかがへりやすい。@"
+
+;fe513a
+Text1350:
+text "さびない。@"
+
+;fe5140
+Text1351:
+text "毒をはねかえす。@"
+
+;fe514a
+Text1352:
+text "ドラゴンの炎のちからを弱める。@"
+
+;fe515c
+Text1353:
+text "受けたダメージを相手に半分返す。@"
+
+;fe5173
+Text1354:
+text "魔法攻撃を跳ね返す。@"
+
+;fe5183
+Text1355:
+text "敵の攻撃が当たりにくい。@"
+
+;fe5193
+Text1356:
+text "攻撃を受けるたびに性能が下がる。@"
+
+;fe51a8
+Text1357:
+text "爆発のダメージを少なくする。@"
+
+;fe51b9
+Text1358:
+text "ぬすまれない。@"
+
 ;fe51c1
 Text1359:
 text "装備すると攻撃力が上がるぞ。"
@@ -174,11 +263,13 @@ text "高防御だが、攻撃を受けるたびに\l性能が下がっていく
 endtext
 
 ;fe5597
+;"Reduces explosion damage."
 Text1394:
 text "爆発のダメージを少なくするぞ。"
 endtext
 
 ;fe55a9
+;"Items and money can't be stolen."
 Text1395:
 text "アイテムやお金を盗まれないぞ。"
 endtext
@@ -189,6 +280,7 @@ text "風魔の盾をきたえぬいて\lできた盾だ。"
 endtext
 
 ;fe55ce
+;"In development"
 Text1397:
 text "開発中"
 endtext
@@ -199,36 +291,43 @@ text "開発中"
 endtext
 
 ;fe55d8
+;"Restores HP by a little."
 Text1399:
 text "ＨＰが少し回復するぞ。"
 endtext
 
 ;fe55e9
+;"Restores HP by a lot."
 Text1400:
 text "ＨＰがたくさん回復するぞ。"
 endtext
 
 ;fe55fb
+;"Raises your level by 1."
 Text1401:
 text "レベルが上がるぞ。"
 endtext
 
 ;fe5605
+;"Lets you see invisible monsters and traps."
 Text1402:
 text "見えないモンスターやワナが\l発見できるぞ。"
 endtext
 
 ;fe561b
+;"You will breathe fire. It reaches far."
 Text1403:
 text "口から火をふくぞ。\l遠くまで届くぞ。"
 endtext
 
 ;fe5632
+;"Makes you invincible for a short time."
 Text1404:
 text "しばらく無敵になるぞ。"
 endtext
 
 ;fe5640
+;"Raises your level by 5."
 Text1405:
 text "レベルが５つ上がるぞ。"
 endtext
@@ -239,26 +338,31 @@ text "持っていると、一度だけ生き返る\lことができるぞ。\l�
 endtext
 
 ;fe5678
+;"Makes you transparent for a short time."
 Text1407:
 text "しばらく透明になれるぞ。"
 endtext
 
 ;fe5687
+;"Reduces your level by 1."
 Text1408:
 text "レベルが下がってしまうぞ。"
 endtext
 
 ;fe5695
+;"Reduces your level by 3."
 Text1409:
 text "レベルが３つ下がってしまうぞ。"
 endtext
 
 ;fe56a5
+;"Reduces your level and HP to 1."
 Text1410:
 text "レベルもＨＰも１になってしまうぞ。"
 endtext
 
 ;fe56b9
+;"Makes you act wildly for a short time."
 Text1411:
 text "しばらくめちゃくちゃ暴れるぞ。"
 endtext
@@ -274,16 +378,19 @@ text "置いたところにモンスターが集まるぞ。"
 endtext
 
 ;fe56f0
+;"Increases max HP."
 Text1414:
 text "最大ＨＰが上がるぞ。"
 endtext
 
 ;fe56fe
+;"Increases max hunger."
 Text1415:
 text "最大満腹度が上がるぞ。"
 endtext
 
 ;fe570e
+;"Decreases max hunger."
 Text1416:
 text "最大満腹度が下がるぞ。"
 endtext
@@ -869,16 +976,19 @@ text "\l"
 endtext
 
 ;fe5d24
+;"Restores hunger by a little."
 Text1533:
 text "少しおなかがふくれるぞ。"
 endtext
 
 ;fe5d32
+;"Restores hunger."
 Text1534:
 text "おなかがふくれるぞ。"
 endtext
 
 ;fe5d3d
+;"Restores hunger, but poisons you."
 Text1535:
 text "おなかがすこしふくれるが、\l毒でからだをこわしてしまうぞ。"
 endtext
@@ -899,6 +1009,7 @@ text "開発中"
 endtext
 
 ;fe5daa
+;"You can put in and take items out."
 Text1539:
 text "アイテムを\l出し入れできるぞ。"
 endtext
@@ -924,6 +1035,7 @@ text "壺に入れたアイテムを\l識別できるぞ。"
 endtext
 
 ;fe5e16
+;"Restores your status."
 Text1544:
 text "ステータスが回復するぞ。"
 endtext
@@ -944,21 +1056,25 @@ text "手が抜けなくなるぞ。"
 endtext
 
 ;fe5e75
+;"Makes an item disappear."
 Text1548:
 text "アイテムがなくなるぞ。"
 endtext
 
 ;fe5e81
+;"This is a monster!!"
 Text1549:
 text "これはモンスターだ！！"
 endtext
 
 ;fe5e8d
+;"Changes items."
 Text1550:
 text "アイテムが変化するぞ。"
 endtext
 
 ;fe5e9b
+;"Lets you create new swords, shields, and staffs. Be careful about the order you put them in."
 Text1551:
 text "剣、盾、杖を合成出来るぞ。\l入れる順番に気をつけろ。"
 endtext
@@ -1119,11 +1235,14 @@ text "開発中"
 endtext
 
 ;fe5fb6
+;"If you eat this, you can transform into a monster."
 Text1583:
 text "これを食べれば、モンスターに変身\lできるぞ。"
 endtext
 
 ;fe5fcf
+;Unused from Torneko
+;"If you present this to the king, you can go adventure in a mystery dungeon."
 Text1584:
 text "これを王様にわたせば\l不思議のダンジョンで冒険ができるぞ。"
 endtext
@@ -1139,11 +1258,13 @@ text "なんかヘンなにおいがするぞ。"
 endtext
 
 ;fe601f
+;"Meant for a new item."
 Text1587:
 text "新規アイテム目的物だ。"
 endtext
 
 ;fe602c
+;"This is money."
 Text1588:
 text "これはお金だ。"
 endtext

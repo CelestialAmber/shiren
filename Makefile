@@ -22,8 +22,9 @@ endif
 
 PYTHON := python3
 
-OBJS = code.o gfx/characters/character_sprites.o main.o text.o \
-		wram.o
+OBJS = code.o gfx/characters/character_sprites.o asm/bank_19.o data/maps/shuffle_floors.o \
+		data/demos/demos.o asm/bank_1C.o audio/sound_data.o gfx/map_tilesets/map_tilesets.o \
+		asm/bank_32.o asm/bank_34.o asm/bank_3B.o text.o wram.o
 
 ### Build targets
 
@@ -50,7 +51,7 @@ tools:
 	$(MAKE) -C tools/
 
 WLAFLAGS =
-WLALINKFLAGS = -S
+WLALINKFLAGS = -S -d
 
 #Add a debug flag if we're building a debug rom
 ifeq ($(DEBUG),1)
@@ -65,11 +66,6 @@ endif
 ifeq (,$(filter clean tools,$(MAKECMDGOALS)))
 $(info $(shell $(MAKE) -C tools))
 endif
-
-#Split the tainted insect sprites beforehand
-#ifeq (,$(filter clean tidy, $(MAKECMDGOALS)))
-#$(info $(shell ./tools/split_images.sh gfx/characters/taintedinsect))
-#endif
 
 
 

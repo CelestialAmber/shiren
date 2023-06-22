@@ -36,3 +36,9 @@
 	phk
 	plb
 .endm
+
+.macro call_savebank
+	phb
+	jsl.l \1
+	plb
+.endm

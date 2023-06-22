@@ -41,6 +41,9 @@ _B6 = $26
 ;27?
 _C7 = $28
 
+
+;Music commands
+
 noteType = 0
 
 ;bits 0-2: note
@@ -76,18 +79,117 @@ noteType = 0
 	.db $0F
 .endm
 
+;double sharp?
+.macro musiccmd_29
+	.db $29
+.endm
+
 ;Makes the next note a sharp note
-.macro sharp
+.macro sharp_note
 	.db $2A
+.endm
+
+;natural note?
+.macro musiccmd_2b
+	.db $2B
+.endm
+
+;flat?
+.macro musiccmd_2c
+	.db $2C
+.endm
+
+;double flat?
+.macro musiccmd_2d
+	.db $2D
+.endm
+
+.macro musiccmd_2e
+	.db $2E
 .endm
 
 .macro tempo
 	.db $2F,\1
 .endm
 
+;1: sample id?
+.macro musiccmd_30
+	.db $30,\1
+.endm
+
+.macro musiccmd_31
+	.db $31,\1
+.endm
+
+;1: sample id
+.macro musiccmd_32
+	.db $32,\1
+.endm
+
+.macro musiccmd_33
+	.db $33
+.endm
+
+.macro musiccmd_34
+	.db $34,\1
+.endm
+
+.macro musiccmd_35
+	.db $35,\1
+.endm
+
+.macro musiccmd_36
+	.db $36,\1
+.endm
+
+.macro musiccmd_37
+	.db $37,\1
+.endm
+
+.macro musiccmd_38
+	.db $38,\1
+.endm
+
+.macro musiccmd_39
+	.db $39,\1
+.endm
+
+.macro musiccmd_3a
+	.db $3A,\1
+.endm
+
+.macro musiccmd_3b
+	.db $3B,\1
+.endm
+
+.macro musiccmd_3c
+	.db $3C,\1
+.endm
+
+.macro musiccmd_3d
+	.db $3D,\1
+.endm
+
+.macro musiccmd_3e
+	.db $3E,\1
+.endm
+
+.macro musiccmd_3f
+	.db $3F,\1
+.endm
+
+
 ;1: amount of time to rest for
 .macro rest
 	.db $4F,\1
+.endm
+
+.macro musiccmd_6c
+	.db $6C
+.endm
+
+.macro musiccmd_6e
+	.db $6E
 .endm
 
 .macro tracksub_ret
@@ -95,11 +197,13 @@ noteType = 0
 .endm
 
 .macro tracksub_call
-	.db $FD,\1
+	.db $FD
+	.dw \1 - (CADDR + 2)
 .endm
 
 .macro track_jump
-	.db $FE,\1
+	.db $FE
+	.dw \1 - (CADDR + 2)
 .endm
 
 .macro track_end
