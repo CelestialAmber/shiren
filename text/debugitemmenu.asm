@@ -1,78 +1,141 @@
-;ff0fc3
-;"Prepares items for debugging. Please choose an item type."
-DebugItemMenuText:
-text "デバッグ用にアイテムを用意します。\lアイテム種別を選んで下さい。\l@"
 
-;ff0fea
-;"Which herb?"
-DebugItemMenuChooseHerbText:
-text "どの草ですか？\l@"
+;fff063
+Text_FFF063:
+text "Preparing Item for Debugging.\lPlease pick an Item Type.\l"
+endtext
 
-;ff0ff3
-;"Which scroll?"
-DebugItemMenuChooseScrollText:
-text "どの巻物ですか？\l@"
+;fff09c
+Text_FFF09C:
+text "Which Herb?\l"
+endtext
 
-;ff0ffd
-;"Which staff?"
-DebugItemMenuChooseStaffText:
-text "どの杖ですか？\l@"
+;fff0a9
+Text_FFF0A9:
+text "Which Scroll?\l"
+endtext
 
-;ff1006
-;"Which jar?"
-DebugItemMenuChooseJarText:
-text "どの壺ですか？\l@"
+;fff0b8
+Text_FFF0B8:
+text "Which Staff?\l"
+endtext
 
-;ff100f
-;"Which onigiri?"
-DebugItemMenuChooseRiceballText:
-text "どの食糧ですか？\l@"
+;fff0c6
+Text_FFF0C6:
+text "Which Pot?\l"
+endtext
 
-;ff101a
-;"Which weapon?"
-DebugItemMenuChooseWeaponText:
-text "どの武器ですか？\l@"
+;fff0d2
+Text_FFF0D2:
+text "Which Food?\l"
+endtext
 
-;ff1026
-;"Which shield?"
-DebugItemMenuChooseShieldText:
-text "どの盾ですか？\l@"
+;fff0df
+Text_FFF0DF:
+text "Which Weapon?\l"
+endtext
 
-;ff102f
-;"Which armband?"
-DebugItemMenuChooseArmbandText:
-text "どの腕輪ですか？\l@"
+;fff0ee
+Text_FFF0EE:
+text "Which Shield?\l"
+endtext
 
-;ff1039
-;"Which arrow?"
-DebugItemMenuChooseArrowText:
-text "どの矢ですか？\l@"
+;fff0fd
+Text_FFF0FD:
+text "Which bracer?\l"
+endtext
 
-;ff1043
-;"Which item?"
-DebugItemMenuChooseMiscText:
-text "どのアイテムですか？\l@"
+;fff10c
+Text_FFF10C:
+text "Which arrow?\l"
+endtext
 
-;ff104f
-;"What value? (automatically set if cancelled)"
-DebugItemMenuSetValueText:
+;fff11a
+Text_FFF11A:
+text "Which Item?\l"
+endtext
+
+;fff127
+Text_FFF127:
 cmdf6
-text "値は？（キャンセルすると自動設定）\l@"
+text "What value?(Cancel for auto-pricing)\l"
+endtext
 
-;ff1068
-;"What monster?"
-Text2378:
+;fff14e
+Text_FFF14E:
 cmdf6
-text "モンスターは？\l@"
+text "What monster?\l"
+endtext
 
-;ff1072
-Text2379:
+;fff15e
+Text_FFF15E:
 textfunction $5
-text "@"
+text ""
+endtext
 
-;ff1075
-Text_FF1075:
-text "今７@"
+;fff161
+Text_FFF161:
+text "(Cancel for auto-pricing)\l"
+endtext
 
-;ff1078
-.db $FF
+;fff17c
+Text_FFF17C:
+cmdf6
+text "What monster?\l"
+endtext
+
+;fff18c
+Text_FFF18C:
+textfunction $5
+text ""
+endtext
+
+;fff18f
+Text_FFF18F:
+text " bracer?\l"
+endtext
+
+;fff199
+Text_FFF199:
+text "Which arrow?\l"
+endtext
+
+;fff1a7
+Text_FFF1A7:
+text "Which Item?\l"
+endtext
+
+;fff1b4
+Text_FFF1B4:
+cmdf6
+text "What value?(Cancel for auto-pricing)\l"
+endtext
+
+;fff1db
+Text_FFF1DB:
+cmdf6
+text "What monster?\l"
+endtext
+
+;fff1eb
+Text_FFF1EB:
+textfunction $5
+text ""
+endtext
+
+;fff1ee
+Text_FFF1EE:
+text " auto-pricing)\l"
+endtext
+
+;fff1fe
+Text_FFF1FE:
+cmdf6
+text "What monster?\l"
+endtext
+
+;fff20e
+Text_FFF20E:
+textfunction $5
+text ""
+endtext
+

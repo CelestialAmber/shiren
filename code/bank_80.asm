@@ -667,13 +667,13 @@ func_80862E:
 	ldy.b wTemp00
 	lda.w DATA8_C50000,y
 	sta.l $0001CB,x
-	lda.w DATA8_C50001,y
+	lda.w DATA8_C50000+1,y
 	sta.l $00018B,x
-	lda.w DATA8_C50003,y
+	lda.w DATA8_C50000+3,y
 	sta.l $00016B,x
-	lda.w UNREACH_C50005,y
+	lda.w DATA8_C50000+5,y
 	sta.l $0001AB,x
-	lda.w DATA8_C50007,y
+	lda.w DATA8_C50000+7,y
 	tay
 	and.w #$8FFF
 	sta.l $0001EB,x
@@ -4211,7 +4211,7 @@ func_80A645:
 	lda.b wTemp00
 	cmp.w #$000A
 	bne @lbl_80A66B
-	jsl.l func_C62766
+	jsl.l GetShuffleDungeonIndex
 	lda.b wTemp00
 	jsr.w func_80A66D
 @lbl_80A66B:
@@ -12073,13 +12073,47 @@ func_80EC2C:
 	sta.w $9216
 	jmp.w func_80ECFF
 @lbl_C0ECB2:
-	.db $28,$6B,$22,$4F,$B9,$C4,$08,$E2,$20,$A9,$7F,$48,$AB,$AD,$F4,$91   ;80ECB2
-	.db $D0,$02,$28,$6B,$C2,$30,$9C,$18,$92,$A5,$49,$89,$08,$00,$D0,$13   ;80ECC2  
-	.db $89,$04,$00,$F0,$07,$89,$02,$00,$F0,$09,$80,$1E,$A5,$47,$89,$04   ;80ECD2
-	.db $00,$D0,$17,$A5,$00,$48,$8B,$22,$AE,$EE,$80,$AB,$68,$85,$00,$A9   ;80ECE2
-	.db $06,$00,$04,$49,$A9,$01,$00,$8D   ;80ECF2  
-	.db $18,$92,$9C,$16,$92               ;80ECFA
+	plp
+	rtl
 
+func_80ECB4:
+	jsl.l func_C4B94F
+	php
+	sep #$20 ;A->8
+	bankswitch 0x7F
+	lda.w $91F4
+	bne @lbl_80ECC6
+	plp
+	rtl
+@lbl_80ECC6:
+	rep #$30 ;AXY->16
+	stz.w $9218
+	lda.b $49
+	bit.w #$0008
+	bne @lbl_80ECE5
+	bit.w #$0004
+	beq @lbl_80ECDE
+	bit.w #$0002
+	beq @lbl_80ECE5
+	bra @lbl_80ECFC
+@lbl_80ECDE:
+	lda.b $47
+	bit.w #$0004
+	bne @lbl_80ECFC
+@lbl_80ECE5:
+	lda.b wTemp00
+	pha
+	phb
+	jsl.l func_80EEAE
+	plb
+	pla
+	sta.b wTemp00
+	lda.w #$0006
+	tsb.b $49
+	lda.w #$0001
+	sta.w $9218
+@lbl_80ECFC:
+	stz.w $9216
 func_80ECFF:
 	stz.w $9220
 	stz.w $9222
@@ -12790,14 +12824,17 @@ func_80F335:
 	lda.b wTemp02
 	and.w #$00FF
 	cmp.l $7F91F4
-	bcs @lbl_80F351
+	bcs func_80F351
 	sta.l $7F8E54
 	asl a
 	sta.l $7F8E56
-	bra @lbl_80F351
-;80F34E
-	.db $08,$C2,$20
-@lbl_80F351:
+	bra func_80F351
+
+
+func_80F34E:
+	php
+	rep #$20 ;A->16
+func_80F351:
 	lda.b w0047
 	bit.w #$0004
 	beq @lbl_80F373
@@ -12927,9 +12964,16 @@ func_80F414:
 	plp
 	clc
 	rtl
-;80F439
-	.db $08,$E2,$20,$AF,$1E,$92,$7F,$85
-	.db $00,$22,$AE,$F3,$80,$28,$6B
+
+
+func_80F439:
+	php
+	sep #$20 ;A->8
+	lda.l $7F921E
+	sta.b wTemp00
+	jsl.l func_80F3AE
+	plp
+	rtl
 
 func_80F448:
 	lda.l $7F91F4

@@ -1,2404 +1,2353 @@
+
 ;fe1298
-Text0:
+Text_FE1298:
 text "\l"
 endtext
 
 ;fe129a
-;"Waved [item name]."
-WavedItemText:
-strvar TextStrVar_ItemName
-text "をふった。\l"
+Text_FE129A:
+strvar $80
+text " was waved!\l"
 endtext
 
-;fe12a3
-Text2:
-strvar TextStrVar_ItemName
+;fe12a9
+Text_FE12A9:
+strvar $80
 text "\l"
 endtext
 
-;fe12a7
-;"[entity] warped."
-Text3:
-strvar TextStrVar_EntityName
-text "はワープした。"
-playsound SFX_66
-text "　\l"
+;fe12ad
+Text_FE12AD:
+strvar $86
+text " warped away."
+playsound 66
+text " \l"
 endtext
 
-;fe12b5
-;"[entity] became confused."
-Text4:
-strvar TextStrVar_EntityName
-text "は混乱した。"
-playsound SFX_183
-text "　\l"
+;fe12c1
+Text_FE12C1:
+strvar $86
+text " was confused."
+playsound 183
+text " \l"
 endtext
 
-;fe12c4
-;"All the monsters around [entity] became confused."
-Text5:
-playsound SFX_183
-text "　"
-strvar TextStrVar_EntityName
-text "と、そのまわりの\lモンスターは混乱した。\l"
+;fe12d6
+Text_FE12D6:
+playsound 183
+text " "
+strvar $86
+text " and the nearby\lmonsters were confused.\l"
 endtext
 
-;fe12e1
-;"All the monsters around became confused."
-Text6:
-text "まわりのモンスターは混乱した。"
-playsound SFX_183
-text "　\l"
+;fe1304
+Text_FE1304:
+text "The nearby monsters were\lconfused."
+playsound 183
+text " \l"
 endtext
 
-;fe12f7
-;"Gained [amount] exp points."
-Text7:
-numvar TextNumVar_Gitan_Exp_Amount
-text "ポイントの経験値を得た。\l"
+;fe132b
+Text_FE132B:
+text "Got "
+numvar $30
+text " experience points.\l"
 endtext
 
-;fe130b
-;"Took [amount] damage."
-Text8:
-numvar TextNumVar_Number
-text "ポイントのダメージを受けた。\l"
+;fe1346
+Text_FE1346:
+text "Took "
+numvar $10
+text " points of damage.\l"
 endtext
 
-;fe131e
-;"Dealt [amount] damage."
-Text9:
-numvar TextNumVar_Number
-text "ポイントのダメージを与えた。\l"
+;fe1361
+Text_FE1361:
+text "Took "
+numvar $10
+text " points of damage.\l"
 endtext
 
-;fe1331
-;"fell by [amount] points"
-Text10:
-numvar TextNumVar_Number
-text "ポイント下がった。\l"
+;fe137c
+Text_FE137C:
+text "Dropped "
+numvar $10
+text " points.\l"
 endtext
 
-;fe133e
-;"rose by [amount] points."
-Text11:
-numvar TextNumVar_Number
-text "ポイント上がった。\l"
+;fe1390
+Text_FE1390:
+text "Raised "
+numvar $10
+text " points.\l"
 endtext
 
-;fe134b
-;"Swapped [item] for [item]."
-Text12:
-strvar TextStrVar_ItemName
-text "が\l"
-strvar TextStrVar_ItemName
-text "にすりかわった。\l"
+;fe13a3
+Text_FE13A3:
+text "Swapped "
+strvar $80
+text "\lwith "
+strvar $80
+text ".\l"
 endtext
 
-;fe135b
-;"[item] is cursed, so you couldn't remove it."
-Text13:
-strvar TextStrVar_ItemName
-text "は\l呪われていて、はずれなかった。"
-playsound SFX_91
-text "　\l"
+;fe13b8
+Text_FE13B8:
+text "The "
+strvar $80
+text " was cursed,\lso you couldn't remove it."
+playsound 91
+text " \l"
 endtext
 
-;fe1374
-;"[item] disappeared."
-Text14:
-strvar TextStrVar_ItemName
-text "が消えてしまった。\l"
+;fe13ea
+Text_FE13EA:
+text "The "
+strvar $80
+text " disappeared.\l"
 endtext
 
-;fe1382
-;"[item] helped."
-Text15:
-strvar TextStrVar_ItemName
-text "が役にたった。\l"
+;fe13ff
+Text_FE13FF:
+text "The "
+strvar $80
+text " was useful.\l"
 endtext
 
-;fe138e
-;"was [item]."
-Text16:
-strvar TextStrVar_ItemName
-text "だった。\l"
+;fe1413
+Text_FE1413:
+text "It was "
+strvar $80
+text ".\l"
 endtext
 
-;fe1396
-;"[item]'s uses increased by [amount] points."
-Text17:
-playsound SFX_124
-text "　"
+;fe141f
+Text_FE141F:
+playsound 124
+text " "
 textfunction $5
 textfunction $2
 cmdf6
-strvar TextStrVar_ItemName
-text "の回数が\l"
-numvar TextNumVar_Number
-text "ポイントふえた。\l"
+strvar $80
+text "'s charges\lraised by "
+numvar $10
+text " points.\l"
 endtext
 
-;fe13b3
-;"[item]'s size increased by [amount] points."
-Text18:
-playsound SFX_124
-text "　"
+;fe144a
+Text_FE144A:
+playsound 124
+text " "
 textfunction $5
 textfunction $2
 cmdf6
-strvar TextStrVar_ItemName
-text "の大きさが"
-numvar TextNumVar_Number
-text "ふえた。\l"
+strvar $80
+text "'s size\lincreased by "
+numvar $10
+text ".\l"
 endtext
 
-;fe13ca
-;"Walked over [item]."
-Text19:
-strvar TextStrVar_ItemName
-text "の上に乗った。\l"
+;fe146e
+Text_FE146E:
+text "You walked on top\lof "
+strvar $80
+text ".\l"
 endtext
 
-;fe13d6
-;"[item] hit [entity]."
-Text20:
-strvar TextStrVar_ItemName
-text "は\l"
-strvar TextStrVar_EntityName
-text "に当たった。\l"
+;fe1488
+Text_FE1488:
+strvar $80
+text " hit\l"
+strvar $86
+text ".\l"
 endtext
 
-;fe13e5
-;"[item] turned into a large onigiri."
-Text21:
-playsound SFX_123
-text "　"
+;fe1494
+Text_FE1494:
+playsound 123
+text " "
 textfunction $5
 textfunction $2
 cmdf6
-strvar TextStrVar_ItemName
-text "は\l大きいおにぎりに変わった。\l"
+strvar $80
+text " changed\linto a Big Rice Ball."
 endtext
 
-;fe1401
-;"[item] fell to the ground."
-Text22:
-strvar TextStrVar_ItemName
-text "は地面に落ちた。\l"
+;fe14bd
+Text_FE14BD:
+strvar $80
+text " dropped."
 endtext
 
-;fe140f
-;"[item] fell to the ground and was lost."
-Text23:
-strvar TextStrVar_ItemName
-text "は地面に落ちて\l使いものにならなくなった。\l"
+;fe14c9
+Text_FE14C9:
+strvar $80
+text " fell to\lthe ground and disappeared.\l"
 endtext
 
-;fe142b
-;"Drank [item] as medicine."
-Text24:
-strvar TextStrVar_ItemName
-text "を薬にして飲んだ。\l"
+;fe14f1
+Text_FE14F1:
+text "You took "
+strvar $80
+text " as medicine.\l"
 endtext
 
-;fe143a
-;"Equipped [equipment]."
-Text25:
-strvar TextStrVar_EquippedItem
-text "を装備した。"
-playsound SFX_85
-text "　\l"
+;fe150b
+Text_FE150B:
+text "You equipped the "
+strvar $84
+text "."
+playsound 85
+text " \l"
 endtext
 
-;fe1447
-;"Read [item]."
-Text26:
-strvar TextStrVar_ItemName
-text "を読んだ。\l"
+;fe1524
+Text_FE1524:
+text "You read the "
+strvar $80
+text ".\l"
 endtext
 
-;fe1451
-;"Put on [item]."
-Text27:
-strvar TextStrVar_ItemName
-text "をはめた。"
-playsound SFX_87
-text "　\l"
+;fe1536
+Text_FE1536:
+text "You put on the "
+strvar $80
+text "."
+playsound 87
+text " \l"
 endtext
 
-;fe145d
-;"Picked up [item]."
-Text28:
-strvar TextStrVar_ItemName
-text "を拾った。"
-playsound SFX_79
-text "　\l"
+;fe154d
+Text_FE154D:
+text "You picked up "
+strvar $80
+text "."
+playsound 79
+text " \l"
 endtext
 
-;fe146a
-;"Dropped [item] and picked up [item]."
-Text29:
-strvar TextStrVar_ItemName
-text "を足元に置いて\l"
-strvar TextStrVar_ItemName
-text "を拾った。"
-playsound SFX_79
-text "　\l"
+;fe1563
+Text_FE1563:
+text "You dropped "
+strvar $80
+text "\land picked up "
+strvar $80
+text "."
+playsound 79
+text " \l"
 endtext
 
-;fe1484
-;"Picked up [item]."
-Text30:
-strvar TextStrVar_ItemName
-text "を拾った。"
-playsound SFX_80
-text "　\l"
+;fe1588
+Text_FE1588:
+text "You picked up "
+strvar $80
+text "."
+playsound 80
+text " \l"
 endtext
 
-;fe1491
-;"Dropped [item]."
-Text31:
-strvar TextStrVar_ItemName
-text "を足元に置いた。\l"
+;fe159e
+Text_FE159E:
+text "You put "
+strvar $80
+text " on\lthe ground.\l"
 endtext
 
-;fe14a0
-;"from [entity]"
-Text32:
-strvar TextStrVar_EntityName
-text "から\l"
+;fe15b9
+Text_FE15B9:
+strvar $86
+text " attacked "
+strvar $81
+text "!\l"
 endtext
 
-;fe14a6
-;"was [entity]"
-Text33:
-strvar TextStrVar_EntityName
-text "だった。\l"
-endtext
-
-;fe14ae
-;"Grabbed by the legs by [entity] and can't move!"
-Text34:
-strvar TextStrVar_EntityName
-text "に足をつかまれて\l動けない！\l"
-endtext
-
-;fe14c2
-;"All of [entity]'s status"
-Text35:
-strvar TextStrVar_EntityName
-text "のステイタスが、すべて\l"
-endtext
-
-;fe14d1
-;"The flames burn [entity]."
-Text36:
-text "炎が、"
-strvar TextStrVar_EntityName
-text "をこがす。\l"
-endtext
-
-;fe14de
-;"[entity name]'s attack missed."
-Text37:
-strvar TextStrVar_EntityName
-text "の攻撃は、はずれた。\l"
-endtext
-
-;fe14ed
-;"dodged [entity name]'s attack."
-Text38:
-strvar TextStrVar_EntityName
-text "の攻撃を、かわした。\l"
-endtext
-
-;fe14fc
-;"[entity] absorbed Strength."
-Text39:
-strvar TextStrVar_EntityName
-text "は、ちからを吸いとった。\l"
-endtext
-
-;fe150d
-;"[entity] did a twisting dance."
-Text40:
-strvar TextStrVar_EntityName
-text "はクネクネーをおどった。\l"
-endtext
-
-;fe151d
-;"[entity] sold [item]."
-Text41:
-strvar TextStrVar_EntityName
-text "は、"
-strvar TextStrVar_ItemName
-text "をうってきた。\l"
-endtext
-
-;fe152c
-;"[entity] ate [item]."
-Text42:
-strvar TextStrVar_EntityName
-text "は"
-strvar TextStrVar_ItemName
-text "を食べた。\l"
-endtext
-
-;fe1538
-;"[entity] stole [item] from [entity]."
-Text43:
-strvar TextStrVar_EntityName
-text "は、"
-strvar TextStrVar_EntityName
-text "から\l"
-strvar TextStrVar_ItemName
-text "を、ぬすんだ。\l"
-endtext
-
-;fe154c
-;"[entity] (did...) to [entity]"
-Text44:
-strvar TextStrVar_EntityName
-text "は、"
-strvar TextStrVar_EntityName
-text "に\l"
-endtext
-
-;fe1555
-;"[strvar TextStrVar_85] (did...) to [entity]"
-Text45:
-strvar TextStrVar_85
-text "は、"
-strvar TextStrVar_EntityName
-text "に\l"
-endtext
-
-;fe155e
-;"[entity] grabbed [entity]'s legs."
-Text46:
-strvar TextStrVar_EntityName
-text "は"
-strvar TextStrVar_EntityName
-text "の\l足をつかんだ。\l"
-endtext
-
-;fe156f
-;"[entity] used hypnosis."
-Text47:
-strvar TextStrVar_EntityName
-text "は催眠術をかけた。\l"
-endtext
-
-;fe157f
-;"[entity] chanted a weird spell."
-Text48:
-strvar TextStrVar_EntityName
-text "は、へんな呪文を唱えた。\l"
-endtext
-
-;fe1592
-;"HP began to be restored again."
-Text49:
-text "ＨＰが回復するようになった。\l"
-endtext
-
-;fe15a6
-;"[entity] spat out sleeping fluid."
-Text50:
-strvar TextStrVar_EntityName
-text "は、睡眠液を吐いた。\l"
-endtext
-
-;fe15b8
-;"[entity] spat out poison."
-Text51:
-strvar TextStrVar_EntityName
-text "は毒をはいた。\l"
-endtext
-
-;fe15c4
-;"[entity] vomited rotten liquid."
-Text52:
-strvar TextStrVar_EntityName
-text "は、くさった液をはいた。\l"
+;fe15ca
+Text_FE15CA:
+text "It was "
+strvar $86
+text "\l"
 endtext
 
 ;fe15d5
-;"[entity] became scared."
-Text53:
-strvar TextStrVar_EntityName
-text "はおびえだした。"
-playsound SFX_184
-text "　\l"
+Text_FE15D5:
+strvar $86
+text "'s legs are\ltrapped and cannot move!"
 endtext
 
-;fe15e4
-;"All the monsters around [entity] became scared."
-Text54:
-playsound SFX_184
-text "　"
-strvar TextStrVar_EntityName
-text "と、そのまわりの\lモンスターはおびえだした。\l"
+;fe15fc
+Text_FE15FC:
+text "All of "
+strvar $86
+text "'s status\l"
 endtext
 
-;fe1601
-;"[entity] fell to level [level]."
-Text55:
-playsound SFX_158
-text "　"
-strvar TextStrVar_EntityName
-text "はレベル"
-numvar TextNumVar_Number
-text "に下がった。\l"
+;fe1610
+Text_FE1610:
+text "Flames sear "
+strvar $86
+text ".\l"
 endtext
 
-;fe1614
-;"[entity name] grew to level [level]."
-Text56:
-strvar TextStrVar_EntityName
-text "はレベル"
-numvar TextNumVar_Number
-text "に上がった。"
-playsound SFX_SHIREN_LEVEL_UP
-text "　\l"
+;fe1621
+Text_FE1621:
+strvar $86
+text "'s attack missed.\l"
 endtext
 
-;fe1627
-;"[entity] ran out of energy."
-Text57:
-strvar TextStrVar_EntityName
-text "はちからつきた。\l"
+;fe1636
+Text_FE1636:
+text "Dodged "
+strvar $86
+text "'s attack.\l"
 endtext
 
-;fe1633
-;"[entity] ran out of energy. But, they used [item] and revived themself."
-Text58:
-strvar TextStrVar_EntityName
-text "はちからつきた。\l"
-textfunction $2
-cmdf6
-text "しかし、"
-strvar TextStrVar_ItemName
-text "を使って復活した。\l"
+;fe164b
+Text_FE164B:
+strvar $86
+text " absorbed power.\l"
 endtext
 
-;fe1655
-;"[entity] fell asleep."
-Text59:
-strvar TextStrVar_EntityName
-text "は眠ってしまった。"
-playsound SFX_150
-text "　\l"
+;fe165f
+Text_FE165F:
+strvar $86
+text " danced the\lKunekunay."
 endtext
 
-;fe1666
-;"[entity] and the nearby monsters fell asleep."
-Text60:
-playsound SFX_150
-text "　"
-strvar TextStrVar_EntityName
-text "と、そのまわりの\lモンスターは眠ってしまった。\l"
+;fe1678
+Text_FE1678:
+strvar $86
+text " sold "
+strvar $80
+text ".\l"
 endtext
 
 ;fe1685
-Text61:
-strvar TextStrVar_EntityName
-text "をやっつけた。\l"
+Text_FE1685:
+strvar $86
+text " ate "
+strvar $80
+text ".\l"
 endtext
 
-;fe1690
-;"...asleep and can't do anything."
-Text62:
-text "・・・眠くてなにもできない。\l"
+;fe1691
+Text_FE1691:
+strvar $86
+text " stole\l"
+strvar $80
+text "!\l"
 endtext
 
-;fe16a1
-;"HP fell by [amount] points."
-Text63:
-text "ＨＰが"
-numvar TextNumVar_Number
-text "ポイント下がった。\l"
+;fe169f
+Text_FE169F:
+strvar $86
+text " attacks "
+strvar $86
+text "!\l"
 endtext
 
-;fe16b3
-;"HP rose by [amount] points."
-Text64:
-text "ＨＰが"
-numvar TextNumVar_Number
-text "ポイント上がった。"
-playsound SFX_144
-text "　\l"
+;fe16af
+Text_FE16AF:
+strvar $85
+text " attacks "
+strvar $86
+text "!\l"
 endtext
 
-;fe16c8
-;"Restores a lot of HP."
-Text65:
-text "ＨＰがたくさん回復するぞ。\l"
+;fe16bf
+Text_FE16BF:
+strvar $86
+text " grabbed onto\l"
+strvar $86
+text "'s legs.\l"
 endtext
 
 ;fe16db
-;"Restores a little bit of HP."
-Text66:
-text "ＨＰがすこし回復するぞ。\l"
+Text_FE16DB:
+strvar $86
+text " used hypnosis.\l"
 endtext
 
-;fe16ed
-;"Lowers (if by accident?) HP and Strength."
-Text67:
-text "ＨＰや、ちからが下がってしまうぞ。\l"
+;fe16ee
+Text_FE16EE:
+strvar $86
+text " cast a strange\lspell.\l"
 endtext
 
-;fe1702
-;"Getting hungry..."
-HungerWarning1Text:
-text "おなかが、へってきた・・・"
-playsound SFX_181
-text "　\l"
+;fe1708
+Text_FE1708:
+text "Your HP can now heal again.\l"
 endtext
 
-;fe1714
-;"Getting dizzy from hunger..."
-HungerWarning2Text:
-text "ハラペコで目が回ってきた・・・"
-playsound SFX_181
-text "　\l"
+;fe1725
+Text_FE1725:
+strvar $86
+text " vomited\lsleeping fluid."
 endtext
 
-;fe1729
-;"Oh no! You feel like you're collapsing!"
-HungerWarning3Text:
-text "だめだ！　もう倒れそうだ！"
-playsound SFX_181
-text "　\l"
+;fe1740
+Text_FE1740:
+strvar $86
+text " spat poison.\l"
 endtext
 
-;fe173c
-;"Hurry...If you don't eat something..."
-HungerWarning4Text:
-text "早く・・・なにか食べないと・・・"
-playsound SFX_181
-text "　\l"
+;fe1751
+Text_FE1751:
+strvar $86
+text " vomited\lrotten liquid.\l"
 endtext
 
-;fe1752
-;"You'll starve to death!"
-HungerWarning5Text:
-text "飢え死にしてしまう！"
-playsound SFX_181
-text "　\l"
+;fe176c
+Text_FE176C:
+strvar $86
+text " was frightened."
+playsound 184
+text " \l"
 endtext
 
-;fe1763
-;"It's...over..."
-HungerWarning6Text:
-text "もう・・・だめだ・・・"
-playsound SFX_181
-text "　\l"
+;fe1783
+Text_FE1783:
+playsound 184
+text " "
+strvar $86
+text " and the nearby\lmonsters were frightened.\l"
 endtext
 
-;fe1773
-HungerWarning7Text:
-text "・・・・・・・・・・・・・・"
-playsound SFX_181
-text "　\l"
+;fe17b3
+Text_FE17B3:
+playsound 158
+text " "
+strvar $86
+text " dropped to\lLevel "
+numvar $10
+text ".\l"
 endtext
 
-;fe1786
-;"You became full."
-BecameFullText:
-text "おなかが、いっぱいになった。\l"
+;fe17cf
+Text_FE17CF:
+strvar $86
+text " raised to\lLevel "
+numvar $10
+text "."
+playsound 52
+text " \l"
 endtext
 
-;fe1796
-;"Your belly was filled, but"
-Text76:
-text "おなかはふくれたが\l"
+;fe17ea
+Text_FE17EA:
+strvar $86
+text " ran out\lof energy.\l"
 endtext
 
-;fe17a1
-;"Your belly filled up a little."
-Text77:
-text "すこし、おなかがふくれた。\l"
-endtext
-
-;fe17b0
-;"Maximum hunger became [amount]%."
-Text78:
-text "満腹度の最大値が"
-numvar TextNumVar_Number
-text "％になった。"
-playsound SFX_165
-text "　\l"
-endtext
-
-;fe17cb
-;"Maximum hunger became [amount]%."
-Text79:
-text "満腹度の最大値が"
-numvar TextNumVar_Number
-text "％になった。"
-playsound SFX_166
-text "　\l"
-endtext
-
-;fe17e6
-;"Hunger became [amount]%"
-Text80:
-text "満腹度が"
-numvar TextNumVar_Number
-text "％になった。\l"
-endtext
-
-;fe17f8
-Text81:
-text "グウッ！・・・お腹がなっている！\l"
-endtext
-
-;fe180b
-Text82:
-text "かかっていた呪いも解けた。"
-playsound SFX_143
-text "　\l"
-endtext
-
-;fe181f
-;"You can't use your mouth!"
-Text83:
-text "口が使えない！"
-playsound SFX_126
-text "　\l"
-endtext
-
-;fe182d
-;"Can't place it here."
-Text84:
-text "ここには置けない。\l"
-endtext
-
-;fe1839
-Text85:
-playsound SFX_118
-text "　"
+;fe1801
+Text_FE1801:
+strvar $86
+text " ran out of energy.\l"
 textfunction $2
 cmdf6
-text "この巻物は読まずに足元に置くこと\lすると敵の攻撃を受けなくなる。\l"
+text "But he used the "
+strvar $80
+text "\lto revive himself.\l"
 endtext
 
-;fe1868
-Text86:
-text "これには毒をはね返す力があるぞ。\l"
+;fe1841
+Text_FE1841:
+strvar $86
+text " fell asleep."
+playsound 150
+text " \l"
 endtext
 
-;fe187c
-;"This is [item]."
-Text87:
-text "これは"
-strvar TextStrVar_ItemName
-text "だ。\l"
+;fe1855
+Text_FE1855:
+playsound 150
+text " "
+strvar $86
+text " and the nearby\lmonsters fell asleep.\l"
 endtext
 
-;fe1885
-Text88:
+;fe1881
+Text_FE1881:
+text "Defeated the "
+strvar $86
+text ".\l"
+endtext
+
+;fe1893
+Text_FE1893:
+text "...You are asleep and\lcannot do anything.\l"
+endtext
+
+;fe18be
+Text_FE18BE:
+text "Your HP dropped\lby "
+numvar $10
+text " points.\l"
+endtext
+
+;fe18dd
+Text_FE18DD:
+text "Your HP raised\lby "
+numvar $10
+text " points."
+playsound 144
+text " \l"
+endtext
+
+;fe18fe
+Text_FE18FE:
+text "This'll heal a lot of HP!\l"
+endtext
+
+;fe1919
+Text_FE1919:
+text "This'll heal some HP.\l"
+endtext
+
+;fe1930
+Text_FE1930:
+text "This will reduce\lyour HP and Power.\l"
+endtext
+
+;fe1955
+Text_FE1955:
+text "You're starting to get\lhungry...."
+playsound 181
+text " \l"
+endtext
+
+;fe197b
+Text_FE197B:
+text "You are dizzy with\lhunger..."
+playsound 181
+text " \l"
+endtext
+
+;fe199c
+Text_FE199C:
+text "You're starving! You feel\llike you're about to drop!"
+playsound 181
+text " \l"
+endtext
+
+;fe19d5
+Text_FE19D5:
+text "Hurry...if you don't\leat something..."
+playsound 181
+text " \l"
+endtext
+
+;fe19ff
+Text_FE19FF:
+text "You're going to\lstarve to death!"
+playsound 181
+text " \l"
+endtext
+
+;fe1a24
+Text_FE1A24:
+text "You're....finished...."
+playsound 181
+text " \l"
+endtext
+
+;fe1a3f
+Text_FE1A3F:
+text ".............."
+playsound 181
+text " \l"
+endtext
+
+;fe1a52
+Text_FE1A52:
+text "You're totally full.\l"
+endtext
+
+;fe1a68
+Text_FE1A68:
+text "You feel less hungry, but\l"
+endtext
+
+;fe1a83
+Text_FE1A83:
+text "You feel a bit less hungry.\l"
+endtext
+
+;fe1aa0
+Text_FE1AA0:
+text "Your maximum satiation\llevel became "
+numvar $10
+text "%."
+playsound 165
+text " \l"
+endtext
+
+;fe1acd
+Text_FE1ACD:
+text "Your maximum satiation\llevel became "
+numvar $10
+text "%."
+playsound 166
+text " \l"
+endtext
+
+;fe1afa
+Text_FE1AFA:
+text "Your satiation level\lbecame "
+numvar $10
+text "%."
+endtext
+
+;fe1b1b
+Text_FE1B1B:
+text "Ugh! ....Your stomach's growling!"
+endtext
+
+;fe1b3d
+Text_FE1B3D:
+text "Your curse was lifted."
+playsound 143
+text " \l"
+endtext
+
+;fe1b58
+Text_FE1B58:
+text "You can't use your mouth!"
+playsound 126
+text " \l"
+endtext
+
+;fe1b76
+Text_FE1B76:
+text "You can't put that here.\l"
+endtext
+
+;fe1b90
+Text_FE1B90:
+playsound 118
+text " "
 textfunction $2
 cmdf6
-text "これは腐らないし、軽いから\lおなかも、へりにくいだろう。\l"
+text "If you drop this scroll at\lyour feet without reading it,\lyour enemies will no longer\lbe able to hit you.\l"
 endtext
 
-;fe18a8
-Text89:
+;fe1c00
+Text_FE1C00:
+text "This has the power\lto block poison.\l"
+endtext
+
+;fe1c25
+Text_FE1C25:
+text "This is "
+strvar $80
+text ".\l"
+endtext
+
+;fe1c32
+Text_FE1C32:
 textfunction $2
 cmdf6
-text "これを薬にして飲むと\l"
+text "This won't rust and is light,\lso you won't get hungry as\lfast using it.\l"
 endtext
 
-;fe18b9
-Text90:
+;fe1c7e
+Text_FE1C7E:
 textfunction $2
 cmdf6
-text "これをふると\l"
+text "If you take this as medicine,\l"
 endtext
 
-;fe18c4
-Text91:
+;fe1ca0
+Text_FE1CA0:
 textfunction $2
 cmdf6
-text "これを読むと\l"
+text "If you wave this,\l"
 endtext
 
-;fe18d0
-Text92:
-text "しかし、なにも起きなかった。\l"
-endtext
-
-;fe18e1
-Text93:
-text "普通の速さに戻った。\l"
-endtext
-
-;fe18f1
-Text94:
-text "普通の姿に戻った。\l"
-endtext
-
-;fe1900
-Text95:
-text "つまずいて転んでしまった！\l"
-endtext
-
-;fe1910
-Text96:
-text "どこにアイテムがあるかわかるぞ。\l"
-endtext
-
-;fe1922
-Text97:
-text "ダンジョンが見渡せるようになるぞ。\l"
-endtext
-
-;fe1936
-Text98:
+;fe1cb6
+Text_FE1CB6:
 textfunction $2
 cmdf6
-text "なんと！　"
-strvar TextStrVar_ItemName
-text "は\l"
+text "If you read this,\l"
 endtext
 
-;fe1943
-Text99:
-text "なんと！　"
-strvar TextStrVar_EntityName
-text "は\l"
+;fe1ccc
+Text_FE1CCC:
+text "But nothing happened.\l"
 endtext
 
-;fe194d
-Text100:
-text "なんと！　アイテムは\lモンスターだった！\l"
+;fe1ce3
+Text_FE1CE3:
+text "Speed returned to normal.\l"
 endtext
 
-;fe1963
-Text101:
-text "ふだんの倍の速さになった！"
-playsound SFX_148
-text "　\l"
+;fe1cfe
+Text_FE1CFE:
+text "Returned to normal.\l"
 endtext
 
-;fe1977
-Text102:
-text "まっすぐ歩けなくなった！"
-playsound SFX_183
-text "　\l"
-endtext
-
-;fe1989
-Text103:
-text "まっすぐ歩けるようになった！\l"
-endtext
-
-;fe199a
-Text104:
-text "まわりのモンスターの動きが止まった。"
-playsound SFX_117
-text "　\l"
-endtext
-
-;fe19b3
-Text105:
-text "まわりのモンスターを止められるぞ。\l"
-endtext
-
-;fe19c7
-Text106:
-text "もうれつに眠くなってきた・・・"
-playsound SFX_150
-text "　\l"
-endtext
-
-;fe19dc
-Text107:
-text "ものがちゃんと見えなくなった！"
-playsound SFX_184
-text "　\l"
-endtext
-
-;fe19f0
-Text108:
-text "ものがちゃんと見えるようになった！\l"
-endtext
-
-;fe1a03
-Text109:
-text "やっと目がさめた！\l"
-endtext
-
-;fe1a0e
-Text110:
-text "やっと目が見えるようになった！\l"
-endtext
-
-;fe1a1f
-Text111:
-text "やっとはずれた！\l"
-endtext
-
-;fe1a29
-Text112:
-text "やっと目がさめた！\l"
-endtext
-
-;fe1a34
-Text113:
-playsound SFX_130
-text "　"
-textfunction $5
-textfunction $2
-cmdf6
-text "アイテムが、すべて\lモンスターに変わってしまった。\l"
-endtext
-
-;fe1a58
-Text114:
-text "ダンジョンが見わたせるようになった。\l"
-endtext
-
-;fe1a6c
-Text115:
-playsound SFX_121
-text "　アイテムの位置がわかった。\l"
-endtext
-
-;fe1a80
-Text116:
-playsound SFX_122
-text "　モンスターの位置がわかった。\l"
-endtext
-
-;fe1a95
-Text117:
-playsound SFX_160
-text "　見えないものが見えるようになった！\l"
-endtext
-
-;fe1aab
-Text118:
-playsound SFX_130
-text "　"
-textfunction $5
-textfunction $2
-cmdf6
-text "アイテムの効果が、すべて\l"
-endtext
-
-;fe1ac3
-Text119:
-playsound SFX_130
-text "　"
-textfunction $5
-textfunction $2
-cmdf6
-text "モンスターが、すべて\lアイテムに変わってしまった！\l"
-endtext
-
-;fe1ae7
-Text120:
-playsound SFX_130
-text "　モンスターが、すべて死んでしまった！\l"
-endtext
-
-;fe1aff
-Text121:
-text "モンスターをワープさせられるぞ。\l"
-endtext
-
-;fe1b11
-Text122:
-text "モンスターを遠くから攻撃できるぞ。\l"
-endtext
-
-;fe1b26
-Text123:
-text "モンスターを呼び寄せてしまうぞ。\l"
-endtext
-
-;fe1b3a
-Text124:
-text "モンスターを呼び寄せてしまった。"
-playsound SFX_120
-text "　\l"
-endtext
-
-;fe1b51
-Text125:
-text "モンスターを分裂させられるぞ。\l"
-endtext
-
-;fe1b64
-Text126:
-text "モンスターを変身させられるぞ。\l"
-endtext
-
-;fe1b77
-Text127:
-text "モンスターを眠らせられるぞ。\l"
-endtext
-
-;fe1b88
-Text128:
-text "トラばさみがはずれない！"
-playsound SFX_172
-text "　\l"
-endtext
-
-;fe1b99
-Text129:
-playsound SFX_130
-text "　一気に"
-numvar TextNumVar_Number
-text "階まで下りてしまった。\l"
-endtext
-
-;fe1bb0
-Text130:
-text "見えないので読めない。\l"
-endtext
-
-;fe1bbe
-Text131:
-text "口から火をふけるぞ。\l"
-endtext
-
-;fe1bcc
-Text132:
-text "口が使えなくなった！\l"
-endtext
-
-;fe1bda
-Text133:
-text "口が使えなくなってしまうぞ。\l"
-endtext
-
-;fe1bec
-Text134:
-text "最大ＨＰが"
-numvar TextNumVar_Number
-text "ポイント下がった。\l"
-endtext
-
-;fe1c01
-Text135:
-text "最大ＨＰが"
-numvar TextNumVar_Number
-text "ポイント上がった。"
-playsound SFX_164
-text "　\l"
-endtext
-
-;fe1c19
-Text136:
-text "持ち物が、いっぱいで持てない。\l"
-endtext
-
-;fe1c2a
-Text137:
-text "時間が逆もどりした！\l"
-endtext
-
-;fe1c38
-Text138:
-text "呪われていた！"
-playsound SFX_91
-text "　\l"
-endtext
-
-;fe1c45
-Text139:
-text "盾がさびてしまった！\l"
-endtext
-
-;fe1c51
-Text140:
-text "床にワナがたくさんできてしまった！"
-playsound SFX_128
-text "　\l"
-endtext
-
-;fe1c68
-Text141:
-playsound SFX_91
-text "　"
-textfunction $5
-textfunction $2
-cmdf6
-text "装備していた"
-strvar TextStrVar_EquippedItem
-text "が\l呪われてしまった！\l"
-endtext
-
-;fe1c86
-Text142:
-text "装備品に金のメッキが、なされた！\l"
-endtext
-
-;fe1c99
-Text143:
-textfunction $5
-textfunction $2
-cmdf6
-text "装備していた"
-strvar TextStrVar_EquippedItem
-text "の\l呪いが解けた！\l"
-endtext
-
-;fe1cb3
-Text144:
-text "装備しているものの呪いがとけるぞ。\l"
-endtext
-
-;fe1cc7
-Text145:
-text "装備している盾の性能が上がるぞ。\l"
-endtext
-
-;fe1cdb
-Text146:
-text "装備している武器の性能が上がるぞ。\l"
-endtext
-
-;fe1cf2
-Text147:
-text "大爆発をおこせるぞ。\l"
-endtext
-
-;fe1cff
-Text148:
-text "毒矢が飛んできた！\l"
-endtext
-
-;fe1d0d
-Text149:
-text "別の場所にワープした！\l"
-endtext
-
-;fe1d1b
-Text150:
-text "別の場所にワープできるぞ。\l"
+;fe1d13
+Text_FE1D13:
+text "tripped and fell over!\l"
 endtext
 
 ;fe1d2b
-AlarmTrapText:
+Text_FE1D2B:
+text "you will know where the\litems are on this level.\l"
+endtext
+
+;fe1d5d
+Text_FE1D5D:
+text "You'll be able to see the\llayout of the dungeon."
+endtext
+
+;fe1d8e
+Text_FE1D8E:
 textfunction $2
 cmdf6
-playsound SFX_119
-text "　眠っているモンスターの\l目をさましてしまった！\l"
+text "Oh! The "
+strvar $80
+text "...\l"
 endtext
 
-;fe1d4b
-Text152:
-text "眠ってしまうぞ。\l"
-endtext
-
-;fe1d56
-Text153:
-text "目が見えなくなった！"
-playsound SFX_162
-text "　\l"
-endtext
-
-;fe1d65
-Text154:
-text "目が見えなくなるぞ。\l"
-endtext
-
-;fe1d71
-Text155:
-text "目が見えるようになった！\l"
-endtext
-
-;fe1d7f
-Text156:
-text "矢が飛んできた！\l"
-endtext
-
-;fe1d8b
-Text157:
-text "ちからが回復した。"
-playsound SFX_145
-text "　\l"
-endtext
-
-;fe1d9b
-Text158:
-text "ちからが"
-numvar TextNumVar_Number
-text "ポイント上がった。"
-playsound SFX_146
-text "　\l"
+;fe1da0
+Text_FE1DA0:
+text "Oh! "
+strvar $86
+text " was...\l"
 endtext
 
 ;fe1daf
-Text159:
-text "ちからの限界が"
-numvar TextNumVar_Number
-text "ポイント上がった。"
-playsound SFX_147
-text "　\l"
+Text_FE1DAF:
+text "Oh! The item was a monster!"
 endtext
 
-;fe1dc8
-Text160:
-text "ちからが"
-numvar TextNumVar_Number
-text "ポイント下がった。"
-playsound SFX_151
-text "　\l"
+;fe1dcb
+Text_FE1DCB:
+text "Speed doubled!"
+playsound 148
+text " \l"
 endtext
 
-;fe1ddc
-Text161:
-text "ちからの限界が"
-numvar TextNumVar_Number
-text "ポイント下がった。"
-playsound SFX_152
-text "　\l"
+;fe1dde
+Text_FE1DDE:
+text "Can no longer walk\lstraight!"
+playsound 183
+text " \l"
 endtext
 
-;fe1df5
-Text162:
-text "ちからが回復するぞ。\l"
+;fe1dff
+Text_FE1DFF:
+text "Can walk straight now!\l"
 endtext
 
-;fe1e03
-Text163:
-text "ちからが上がるぞ。\l"
+;fe1e17
+Text_FE1E17:
+text "The nearby monsters all\lstopped moving."
+playsound 117
+text " \l"
 endtext
 
-;fe1e0e
-Text164:
-text "しかし、ワープしなかった。\l"
+;fe1e43
+Text_FE1E43:
+text "you can stop the monsters\lnear you from moving.\l"
 endtext
 
-;fe1e1d
-Text165:
-text "しかし、おにぎりの効果で毒は消えた。\l"
-endtext
-
-;fe1e35
-Text166:
-text "しかし、おにぎりの効果で眠らなかった。\l"
-endtext
-
-;fe1e4d
-Text167:
-text "しかし、腕輪の魔力がはねかえした。\l"
-endtext
-
-;fe1e61
-Text168:
-text "しかし、メッキされた盾はさびなかった。\l"
-endtext
-
-;fe1e76
-Text169:
-text "しかし、"
-strvar TextStrVar_ItemName
-text "はさびない。\l"
-endtext
-
-;fe1e84
-Text170:
-textfunction $5
-textfunction $2
-cmdf6
-text "装備していた"
-strvar TextStrVar_EquippedItem
-text "が\l"
+;fe1e74
+Text_FE1E74:
+text "became extremely sleepy...."
+playsound 150
+text " \l"
 endtext
 
 ;fe1e94
-Text171:
-strvar TextStrVar_ItemName
-text "に強化された。\l"
+Text_FE1E94:
+text "You can no longer see\lthings clearly!"
+playsound 184
+text " \l"
 endtext
 
-;fe1ea0
-Text172:
-strvar TextStrVar_EquippedItem
-text "の装備をはずした。"
-playsound SFX_86
-text "　\l"
+;fe1ebe
+Text_FE1EBE:
+text "You can now see clearly!\l"
 endtext
 
-;fe1eb0
-Text173:
-strvar TextStrVar_EquippedItem
-text "の装備をはずした。"
-playsound SFX_88
-text "　\l"
+;fe1ed8
+Text_FE1ED8:
+text "You finally woke up!\l"
 endtext
 
-;fe1ec0
-;"[entity name] is looking at (something)"
-Text174:
-strvar TextStrVar_EntityName
-text "は様子を見ている。\l"
+;fe1eee
+Text_FE1EEE:
+text "You can finally see again!\l"
 endtext
 
-;fe1ece
-Text175:
-text "突風だ！\l"
+;fe1f0a
+Text_FE1F0A:
+text "You finally escaped!\l"
 endtext
 
-;fe1ed5
-Text176:
-text "・・・・・・風はおさまった。\l"
+;fe1f20
+Text_FE1F20:
+text "You finally woke up!\l"
 endtext
 
-;fe1ee5
-Text177:
-text "・・・・・・さっきより強いぞ。\l"
-endtext
-
-;fe1ef6
-Text178:
-cmdf6
-text "体を支えきれない！\l"
-endtext
-
-;fe1f04
-Text179:
-strvar TextStrVar_PlayerName
-text "は、風に飛ばされた。\l"
-endtext
-
-;fe1f13
-Text180:
-textfunction $2
-cmdf6
-playsound SFX_115
-text "　ラッキー！　この識別の巻物は\lアイテムすべてを識別できた！\l"
-endtext
-
-;fe1f3a
-Text181:
-text "矢を装備していない。\l"
-endtext
-
-;fe1f47
-Text182:
-text "このままスイッチを切って下さい。\l"
-textfunction $2
-cmdf6
-text "次に「冒険に出る」を選ぶと\lこの続きから始められます。\l"
-endtext
-
-;fe1f7f
-Text183:
-text "このままスイッチを切って下さい。\l次に「ぼうけんをする」をえらぶと\lこのつづきからはじめられます。\l"
-endtext
-
-;fe1fb4
-Text184:
-text "なんと！　階段は\lモンスターだった！\l"
-endtext
-
-;fe1fca
-Text185:
-text "しかし、今は目が見えない。\l"
-endtext
-
-;fe1fd9
-Text186:
-text "これで遠くの敵を攻撃できる。\lあらかじめ装備しておけば\lＬボタンでうつこともできるぞ。\l"
-endtext
-
-;fe200a
-Text187:
-text "しかしオボロ銀の盾は毒をはねかえした。\l"
-endtext
-
-;fe2021
-Text188:
-playsound SFX_162
-text "　"
+;fe1f36
+Text_FE1F36:
+playsound 130
+text " "
 textfunction $5
 textfunction $2
 cmdf6
-strvar TextStrVar_EntityName
-text "の目が\l見えなくなった。\l"
+text "The items were all\ltransformed into monsters!\l"
 endtext
 
-;fe2039
-Text189:
-playsound SFX_162
-text "　"
-strvar TextStrVar_EntityName
-text "と、そのまわりの\lモンスターの目が見えなくなった。\l"
+;fe1f6d
+Text_FE1F6D:
+text "You can now see the\llayout of the dungeon.\l"
 endtext
 
-;fe2059
-Text190:
-strvar TextStrVar_ItemName
-text "は"
-strvar TextStrVar_EntityName
-text "に当たった。\l"
+;fe1f99
+Text_FE1F99:
+playsound 121
+text " You now know where the\litems on this floor are.\l"
 endtext
 
-;fe2067
-Text191:
-text "モンスターの位置がわかるぞ。\l"
+;fe1fcd
+Text_FE1FCD:
+playsound 122
+text " You now know where the\lmonsters are.\l"
 endtext
 
-;fe2079
-Text192:
-text "食べるとおなかがふくれるぞ。\l"
+;fe1ff6
+Text_FE1FF6:
+playsound 160
+text " You can now see invisible things!\l"
 endtext
 
-;fe2089
-Text193:
-text "装備すると攻撃力が上がるぞ。\l"
-endtext
-
-;fe209a
-Text194:
-text "装備すると防御力が上がるぞ。\l"
-endtext
-
-;fe20ac
-Text195:
-playsound SFX_130
-text "　"
+;fe201c
+Text_FE201C:
+playsound 130
+text " "
 textfunction $5
 textfunction $2
 cmdf6
-text "すべてのモンスターが\lはぐれメタルになった。\l"
+text "All the effects of the items\l"
 endtext
 
-;fe20cc
-Text196:
-playsound SFX_130
-text "　すべてのステイタスが回復した。\l"
-endtext
-
-;fe20e2
-Text197:
+;fe2042
+Text_FE2042:
+playsound 130
+text " "
+textfunction $5
 textfunction $2
 cmdf6
-text "しあわせの箱を持っていると\lリレミトの巻物はきかない！\l"
+text "All of the monsters\ltransformed into items!\l"
 endtext
 
-;fe2103
-Text198:
-strvar TextStrVar_ItemName
-text "は地面にはりついている。\l"
+;fe2077
+Text_FE2077:
+playsound 130
+text " All of the monsters died!\l"
 endtext
 
-;fe2114
-;"Wow! It was a [item]."
-Text199:
+;fe2095
+Text_FE2095:
+text "you can warp monsters away.\l"
+endtext
+
+;fe20b2
+Text_FE20B2:
+text "you can attack from afar.\l"
+endtext
+
+;fe20cd
+Text_FE20CD:
+text "you'll summon hostile monsters.\l"
+endtext
+
+;fe20ee
+Text_FE20EE:
+text "You summoned monsters!"
+playsound 120
+text " \l"
+endtext
+
+;fe2109
+Text_FE2109:
+text "You can split a\lmonster into two.\l"
+endtext
+
+;fe212c
+Text_FE212C:
+text "you can transform monsters\linto something else."
+endtext
+
+;fe215c
+Text_FE215C:
+text "you can put monsters to sleep.\l"
+endtext
+
+;fe217c
+Text_FE217C:
+text "Can't escape the tiger trap!"
+playsound 172
+text " \l"
+endtext
+
+;fe219d
+Text_FE219D:
+playsound 130
+text " Dropped down "
+numvar $10
+text " floors.\l"
+endtext
+
+;fe21b9
+Text_FE21B9:
+text "You can't see so you can't\lread it."
+endtext
+
+;fe21dd
+Text_FE21DD:
+text "You can breathe fire.\l"
+endtext
+
+;fe21f4
+Text_FE21F4:
+text "Mouth was sealed shut!\l"
+endtext
+
+;fe220c
+Text_FE220C:
+text "your mouth will disappear.\l"
+endtext
+
+;fe2228
+Text_FE2228:
+text "Your max HP dropped by "
+numvar $10
+text " points."
+endtext
+
+;fe224a
+Text_FE224A:
+text "Your max HP raised by "
+numvar $10
+text " points."
+playsound 164
+text " \l"
+endtext
+
+;fe226f
+Text_FE226F:
+text "You can't carry anything more.\l"
+endtext
+
+;fe228f
+Text_FE228F:
+text "Time flowed in reverse!\l"
+endtext
+
+;fe22a8
+Text_FE22A8:
+text "cursed!"
+playsound 91
+text " \l"
+endtext
+
+;fe22b4
+Text_FE22B4:
+text "Your shield rusted!\l"
+endtext
+
+;fe22c9
+Text_FE22C9:
+text "Many traps materialized\lon the ground!"
+playsound 128
+text " \l"
+endtext
+
+;fe22f4
+Text_FE22F4:
+playsound 91
+text " "
+textfunction $5
 textfunction $2
 cmdf6
-text "なんと！　"
-strvar TextStrVar_ItemName
-text "だった。\l"
+text "The "
+strvar $84
+text " you were\lequipping was cursed!\l"
 endtext
 
-;fe2124
-;"But, [strvar TextStrVar_0] disappeared!"
-Text200:
-text "しかし、"
-strvar TextStrVar_0
-text "は消えてしまった！\l"
+;fe2323
+Text_FE2323:
+text "Your equipment was covered\lin a chrome coating!"
 endtext
 
-;fe2136
-Text201:
+;fe2353
+Text_FE2353:
+textfunction $5
 textfunction $2
 cmdf6
-text "モンスターに投げて飲ませると\lおどろいて、にげていくぞ。\l"
+text "The curse on the "
+strvar $84
+text "\lyou were equipping was broken!\l"
 endtext
 
-;fe2159
-Text202:
-text "なにも落ちていない。\l"
+;fe238c
+Text_FE238C:
+text "the curses on any of your\lequipped items will be broken.\l"
 endtext
 
-;fe2166
-Text203:
-strvar TextStrVar_ItemName
-text "の中に、\l"
-strvar TextStrVar_ItemName
-text "を入れた。\l"
+;fe23c6
+Text_FE23C6:
+text "the shield you are equipping\lwill become stronger."
 endtext
 
-;fe2176
-Text204:
-strvar TextStrVar_ItemName
-text "の中から、\l"
-strvar TextStrVar_ItemName
-text "を取り出した。\l"
+;fe23f9
+Text_FE23F9:
+text "the weapon you are equipping\lwill become more powerful."
 endtext
 
-;fe218a
-Text205:
-text "壺の中に壺は入れられない。\l"
+;fe2431
+Text_FE2431:
+text "you can cause a huge explosion.\l"
 endtext
 
-;fe2199
-Text206:
-strvar TextStrVar_ItemName
-text "が割れた。\l"
+;fe2452
+Text_FE2452:
+text "A poison arrow shot out at you! Hit\l"
 endtext
 
-;fe21a3
-Text207:
-text "壺の中にはもう入らない。\l"
+;fe2477
+Text_FE2477:
+text "You warped to another place!\l"
 endtext
 
-;fe21b1
-Text208:
-text "なんと！　"
-strvar TextStrVar_ItemName
-text "だった。\l"
-endtext
-
-;fe21be
-Text209:
-strvar TextStrVar_ItemName
-text "を押した。\l"
-endtext
-
-;fe21c8
-Text210:
-text "アイテムエラー\l"
-endtext
-
-;fe21d1
-Text211:
-strvar TextStrVar_EntityName
-text "はハラヘリーを唱えた。\l"
-endtext
-
-;fe21e1
-Text212:
-strvar TextStrVar_EntityName
-text "は呪いの呪文を唱えた。\lしかし、腕輪の魔力で呪われなかった。\l"
-endtext
-
-;fe2209
-Text213:
-strvar TextStrVar_EntityName
-text "は仲間を呼んだ。\l"
-endtext
-
-;fe2218
-Text214:
-strvar TextStrVar_EntityName
-text "は"
-strvar TextStrVar_EntityName
-text "に\l回復の呪文を唱えた。\l"
-endtext
-
-;fe2230
-Text215:
-text "しかし、腕輪の魔力でさびなかった。\l"
-endtext
-
-;fe2244
-Text216:
-text "しかし、腕輪の魔力で混乱しなかった。\l"
-endtext
-
-;fe225b
-Text217:
-strvar TextStrVar_ItemName
-text "を落してしまった。\l"
-endtext
-
-;fe2269
-Text218:
-strvar TextStrVar_ItemName
-text "は、こわれてなくなった。"
-playsound SFX_89
-text "　\l"
-endtext
-
-;fe227c
-Text219:
-strvar TextStrVar_EntityName
-text "は目つぶしの呪文を唱えた。\l"
-endtext
-
-;fe2290
-Text220:
-text "ぬるま湯が吹き出してきた\l"
-endtext
-
-;fe22a0
-Text221:
-text "おにぎりがぬるま湯をあびて\lデロデロになってしまった！\l"
-endtext
-
-;fe22be
-Text222:
-text "すべての装備がはずれてしまった！\l"
-endtext
-
-;fe22d0
-Text223:
-text "姿が見えるようになった。\l"
-endtext
-
-;fe22df
-Text224:
-playsound SFX_STEP_ON_TRAP
-text "　時限爆弾だ！\l"
-endtext
-
-;fe22ed
-Text225:
-text "会心の一撃！　"
-strvar TextStrVar_EntityName
-text "に\l"
-endtext
-
-;fe22fc
-Text226:
-text "痛恨の一撃！　"
-strvar TextStrVar_EntityName
-text "から\l"
-endtext
-
-;fe230c
-Text227:
-text "復讐の一撃！　"
-strvar TextStrVar_EntityName
-text "から\l"
-endtext
-
-;fe231c
-Text228:
-text "巨大な岩石が落ちてきた！\l"
-endtext
-
-;fe232e
-Text229:
-strvar TextStrVar_EntityName
-text "は動きが遅くなった！\l"
-endtext
-
-;fe233e
-Text230:
-strvar TextStrVar_ItemName
-text "の中に入った。\l"
-endtext
-
-;fe2349
-Text231:
-text "壁が崩れてしまった！\l"
-endtext
-
-;fe2357
-Text232:
-text "まわりのものが崩れ落ち\l見晴らしがよくなった！"
-playsound SFX_136
-text "　\l"
-endtext
-
-;fe2376
-Text233:
-strvar TextStrVar_EntityName
-text "はモンスターに囲まれた！"
-playsound SFX_177
-text "　\l"
-endtext
-
-;fe238a
-Text234:
-text "光をあびた"
-strvar TextStrVar_EntityName
-text "は\lおにぎりになってしまった！\l"
-endtext
-
-;fe23a3
-Text235:
-strvar TextStrVar_EntityName
-text "は目が回った！\l"
-endtext
-
-;fe23af
-Text236:
-text "ものがちゃんと見えなくなった！\l"
-endtext
-
-;fe23c0
-Text237:
-strvar TextStrVar_EntityName
-text "は眠ってしまった！\l"
-endtext
-
-;fe23ce
-Text238:
-text "地面から白いガスが噴き出した！\l"
-endtext
-
-;fe23e2
-Text239:
-text "しかし、なにも装備していなかった。\l"
-endtext
-
-;fe23f5
-Text240:
-text "しかし、これ以上\l見晴らしはよくならなかった。\l"
-endtext
-
-;fe2410
-Text241:
-text "寝てるモンスターを起こしてしまった！\l"
-endtext
-
-;fe2426
-Text242:
-text "地面にワナがたくさんできてしまった！"
-playsound SFX_128
-text "　\l"
-endtext
-
-;fe243e
-Text243:
-text "身代りの霊は"
-strvar TextStrVar_EntityName
-text "を呼び寄せた。\l"
-endtext
-
-;fe2454
-Text244:
-strvar TextStrVar_ItemName
-text "の中身を吸い出した。\l"
-endtext
-
-;fe2464
-Text245:
-text "無敵状態になった。"
-playsound SFX_168
-text "　\l"
-endtext
-
-;fe2476
-Text246:
-text "無敵状態ではなくなった。\l"
-endtext
-
-;fe2488
-Text247:
-strvar TextStrVar_EntityName
-text "は、おにぎりを食べている。\l"
-endtext
-
-;fe2499
-Text248:
-text "やっと食べ終えた。\l"
-endtext
-
-;fe24a5
-Text249:
-text "毒を受けつけなくなった！\l"
+;fe2495
+Text_FE2495:
+text "you can warp to another place.\l"
 endtext
 
 ;fe24b5
-Text250:
-text "不眠状態になった！\l"
+Text_FE24B5:
+textfunction $2
+cmdf6
+playsound 119
+text " All the sleeping\lmonsters woke up!\l"
 endtext
 
-;fe24c4
-Text251:
-text "腹がへらなくなった！\l"
+;fe24df
+Text_FE24DF:
+text "you'll fall asleep.\l"
 endtext
 
-;fe24d1
-Text252:
-text "モンスターを起こさなくなった！\l"
+;fe24f4
+Text_FE24F4:
+text "You're blinded!"
+playsound 162
+text " \l"
 endtext
 
-;fe24e3
-Text253:
-text "足元にワナを作った。\l"
+;fe2508
+Text_FE2508:
+text "you will go blind.\l"
 endtext
 
-;fe24f2
-Text254:
-text "ここにはワナを作れない。\l"
+;fe251c
+Text_FE251C:
+text "You can see again!\l"
 endtext
 
-;fe2501
-Text255:
-text "杖の効果で、"
-strvar TextStrVar_EntityName
-text "に、\l"
+;fe2530
+Text_FE2530:
+text "An arrow shot out at you!\l"
 endtext
 
-;fe250f
-Text256:
-playsound SFX_159
-text "　"
-strvar TextStrVar_EntityName
-text "は勝手に動き出した。\l"
+;fe254b
+Text_FE254B:
+text "Your Power is back to normal."
+playsound 145
+text " \l"
 endtext
 
-;fe2523
-Text257:
-text "普通に動けるようになった。\l"
+;fe256d
+Text_FE256D:
+text "Your Power raised "
+numvar $10
+text " points."
+playsound 146
+text " \l"
 endtext
 
-;fe2535
-Text258:
-strvar TextStrVar_ItemName
-text "をぬすんだ。\l"
+;fe258e
+Text_FE258E:
+text "Your maximum Power\lraised "
+numvar $10
+text " points."
+playsound 147
+text " \l"
 endtext
 
-;fe253f
-Text259:
-text "しかし、なにもぬすめなかった。\l"
+;fe25b7
+Text_FE25B7:
+text "Your Power dropped by "
+numvar $10
+text " points."
+playsound 151
+text " \l"
 endtext
 
-;fe2550
-Text260:
-playsound SFX_163
-text "　識別したものを忘れてしまった！\l"
+;fe25dc
+Text_FE25DC:
+text "Your maximum Power\ldropped "
+numvar $10
+text " points."
+playsound 152
+text " \l"
 endtext
 
-;fe2566
-Text261:
-text "アイテムを拾えなくなってしまった！\l"
+;fe2606
+Text_FE2606:
+text "your strength will heal.\l"
 endtext
 
-;fe257a
-Text262:
-text "アイテムを拾えるようになった。\l"
+;fe2620
+Text_FE2620:
+text "your strength will raise.\l"
 endtext
 
-;fe258c
-Text263:
-strvar TextStrVar_EntityName
-text "は呪いの呪文を唱えた。\l装備中の盾が呪われた！"
-playsound SFX_91
-text "　\l"
+;fe263b
+Text_FE263B:
+text "But didn't warp.\l"
 endtext
 
-;fe25af
-Text264:
-strvar TextStrVar_EntityName
-text "は呪いの呪文を唱えた。\l装備中のアイテムがすべて呪われた！"
-playsound SFX_91
-text "　\l"
+;fe264d
+Text_FE264D:
+text "But with the power of your\lRice Ball, the poison faded.\l"
 endtext
 
-;fe25d8
-Text265:
-strvar TextStrVar_EntityName
-text "は呪いの呪文を唱えた。\l持っていたアイテムがすべて呪われた！"
-playsound SFX_91
-text "　\l"
+;fe2686
+Text_FE2686:
+text "But with the power of your Rice\lBall, you didn't fall asleep.\l"
 endtext
 
-;fe2602
-Text266:
-strvar TextStrVar_EntityName
-text "は"
-strvar TextStrVar_EntityName
-text "に、\lのりうつった！\l"
+;fe26c5
+Text_FE26C5:
+text "But your bracer reflected\lthe magic.\l"
 endtext
 
-;fe2613
-Text267:
-strvar TextStrVar_ItemName
-text "が、\l大きいおにぎりに変わってしまった！\l"
+;fe26eb
+Text_FE26EB:
+text "But the chrome-plated\lshield did not rust.\l"
 endtext
 
-;fe262c
-Text268:
-strvar TextStrVar_ItemName
-text "が、\l雑草に変わってしまった！\l"
+;fe2717
+Text_FE2717:
+text "But "
+strvar $80
+text " cannot rust.\l"
 endtext
 
-;fe2641
-Text269:
-strvar TextStrVar_ItemName
-text "の中に、\l雑草が入ってしまった！\l"
-endtext
-
-;fe2656
-;"The curse on the equipment was lifted!"
-Text270:
-playsound SFX_143
-text "　"
+;fe272c
+Text_FE272C:
 textfunction $5
 textfunction $2
 cmdf6
-text "装備していた"
-strvar TextStrVar_EquippedItem
-text "の\l呪いが解けた！\l"
+text "The "
+strvar $84
+text " you were\lequipping\l"
 endtext
 
-;fe2673
-;"The curse on the item was lifted!"
-Text271:
-playsound SFX_143
-text "　"
+;fe274c
+Text_FE274C:
+text "strengthened into "
+strvar $80
+text ".\l"
+endtext
+
+;fe2763
+Text_FE2763:
+text "Removed "
+strvar $84
+text "."
+playsound 86
+text " \l"
+endtext
+
+;fe2773
+Text_FE2773:
+text "Removed "
+strvar $84
+text "."
+playsound 88
+text " \l"
+endtext
+
+;fe2783
+Text_FE2783:
+strvar $86
+text " is watching\lto see what happens.\l"
+endtext
+
+;fe27a8
+Text_FE27A8:
+text "A sudden gust of wind!\l"
+endtext
+
+;fe27c0
+Text_FE27C0:
+text ".....The wind died down.\l"
+endtext
+
+;fe27da
+Text_FE27DA:
+text "...It's stronger than\lit was last time!\l"
+endtext
+
+;fe2803
+Text_FE2803:
+cmdf6
+text "You can't resist it!\l"
+endtext
+
+;fe281a
+Text_FE281A:
+strvar $81
+text " was blown away\lby the wind.\l"
+endtext
+
+;fe283a
+Text_FE283A:
+textfunction $2
+cmdf6
+playsound 115
+text " Lucky! This Identify Scroll\lidentified all your items!\l"
+endtext
+
+;fe2878
+Text_FE2878:
+text "You're not equipping\lany arrows.\l"
+endtext
+
+;fe289a
+Text_FE289A:
+text "Please turn off the power.\l"
+textfunction $2
+cmdf6
+text "The next time you pick \"Adventure\""
+text "\lyou can continue where you\lleft off.\l"
+endtext
+
+;fe2901
+Text_FE2901:
+text "Please turn off the power.\lThe next time you pick \"Adventure\""
+text "\lyou can continue where you\lleft off.\l"
+endtext
+
+;fe2965
+Text_FE2965:
+text "Oh! The staircase\lwas a monster!"
+endtext
+
+;fe2986
+Text_FE2986:
+text "But you can't see\lanything right now."
+endtext
+
+;fe29ac
+Text_FE29AC:
+text "You can attack enemies from\lfar away with this.\lIf you equip it beforehand,\lyou can fire it with\lthe L button."
+endtext
+
+;fe2a1b
+Text_FE2A1B:
+text "But the Oboro-Eye shield\lblocked the poison.\l"
+endtext
+
+;fe2a49
+Text_FE2A49:
+playsound 162
+text " "
 textfunction $5
 textfunction $2
 cmdf6
-text "持っていたアイテムの\l呪いが解けた！\l"
+strvar $86
+text " was blinded.\l"
 endtext
 
-;fe2691
-;"The sword rusted!"
-Text272:
-text "剣がさびてしまった！\l"
+;fe2a62
+Text_FE2A62:
+playsound 162
+text " "
+strvar $86
+text " and the nearby\lmonsters were blinded.\l"
 endtext
 
-;fe269e
-;"However, it was plated so it didn't rust."
-Text273:
-text "しかし、メッキされた剣はさびなかった。\l"
+;fe2a8f
+Text_FE2A8F:
+strvar $80
+text " hit "
+strvar $86
+text ".\l"
 endtext
 
-;fe26b4
-;"[entity] ran out of energy."
-;"However, [strvar TextStrVar_0] revived them."
-Text274:
-strvar TextStrVar_EntityName
-text "はちからつきた。\l"
-textfunction $2
-cmdf6
-text "しかし、"
-strvar TextStrVar_0
-text "になって復活した。\l"
+;fe2a9b
+Text_FE2A9B:
+text "you can know where\lthe monsters are.\l"
 endtext
 
-;fe26d5
-Text275:
-text "剣のメッキがはげてしまった！\l"
+;fe2ac1
+Text_FE2AC1:
+text "If you eat this it'll fill you.\l"
 endtext
 
-;fe26e6
-Text276:
-text "剣の合成が解けてしまった！\l"
+;fe2ae2
+Text_FE2AE2:
+text "If you equip this, your\lattack power will increase.\l"
 endtext
 
-;fe26f9
-Text277:
-cleartext
-text "剣の『ドラゴン系モンスターに強い』\l能力が解けてしまった！\l"
-endtext
-
-;fe271d
-Text278:
-cleartext
-text "剣の『ゴースト系モンスターに強い』\l能力が解けてしまった！\l"
-endtext
-
-;fe2741
-Text279:
-cleartext
-text "剣の『１ツ目モンスターに強い』\l能力が解けてしまった！\l"
-endtext
-
-;fe2762
-Text280:
-cleartext
-text "剣の『ステータスを吸い取る\lモンスターに強い』\l能力が解けてしまった！\l"
-endtext
-
-;fe278d
-Text281:
-cleartext
-text "剣の『モンスターを肉にできる』\l能力が解けてしまった！\l"
-endtext
-
-;fe27af
-Text282:
-cleartext
-text "剣の『かべを掘れる』\l能力が解けてしまった！\l"
-endtext
-
-;fe27cc
-Text283:
-cleartext
-text "剣の『必ず攻撃が当たる』\l能力が解けてしまった！\l"
-endtext
-
-;fe27ed
-Text284:
-cleartext
-text "剣の『会心の一撃がでる』\l能力が解けてしまった！\l"
-endtext
-
-;fe280e
-Text285:
-cleartext
-text "剣の『前方３方向１度に攻撃できる』\l能力が解けてしまった！\l"
-endtext
-
-;fe2837
-Text286:
-text "盾のメッキがはげてしまった！\l"
-endtext
-
-;fe2847
-Text287:
-text "盾の合成が解けてしまった！\l"
-endtext
-
-;fe2859
-Text288:
-cleartext
-text "盾の『おなかがへりにくい』\l能力が解けてしまった！\l"
-endtext
-
-;fe2877
-Text289:
-text "\l"
-endtext
-
-;fe2879
-Text290:
-cleartext
-text "盾の『さびない』\l能力が解けてしまった！\l"
-endtext
-
-;fe2892
-Text291:
-text "\l"
-endtext
-
-;fe2894
-Text292:
-cleartext
-text "盾の『ドラゴンの炎のちからを弱める』\l能力が解けてしまった！\l"
-endtext
-
-;fe28b9
-Text293:
-cleartext
-text "盾の『受けたダメージを\l相手に半分返す』\l能力が解けてしまった！\l"
-endtext
-
-;fe28e4
-Text294:
-cleartext
-text "盾の『魔法攻撃を跳ね返す』\l能力が解けてしまった！\l"
-endtext
-
-;fe2907
-Text295:
-cleartext
-text "盾の『敵の攻撃が当たりにくい』\l能力が解けてしまった！\l"
-endtext
-
-;fe292a
-Text296:
-text "\l"
-endtext
-
-;fe292c
-Text297:
-cleartext
-text "盾の『爆発のダメージを少なくする』\l能力が解けてしまった！\l"
-endtext
-
-;fe2950
-Text298:
-cleartext
-text "盾の『ぬすまれない』\l能力が解けてしまった！\l"
-endtext
-
-;fe296b
-Text299:
-text "アイテムが拾えない！\l"
-endtext
-
-;fe2978
-Text300:
-playsound SFX_MONSTER_LEVEL_UP
-text "　"
-strvar TextStrVar_EntityName
-text "は、レベルが上がって\l"
-endtext
-
-;fe2989
-Text301:
-strvar TextStrVar_EntityName
-text "になった。\l"
-endtext
-
-;fe2992
-Text302:
-playsound SFX_158
-text "　"
-strvar TextStrVar_EntityName
-text "は、レベルが下がって\l"
-endtext
-
-;fe29a3
-Text303:
-textfunction $5
-textfunction $2
-endtext
-
-;fe29a8
-Text304:
-text "拾うだけで識別できるようになった！\l"
-endtext
-
-;fe29bd
-Text305:
-textfunction $2
-cmdf6
-text "『"
-strvar TextStrVar_BlankScrollName
-text "・・・』\lと、むなしくこだました。\l"
-endtext
-
-;fe29d6
-Text306:
-text "しかし、巻物は白紙だった。\l"
-endtext
-
-;fe29e7
-Text307:
-strvar TextStrVar_EntityName
-text "は、眠っている。\l"
-endtext
-
-;fe29f4
-Text308:
-strvar TextStrVar_EntityName
-text "の守備力が下がった。\l"
-endtext
-
-;fe2a03
-Text309:
-strvar TextStrVar_EntityName
-text "の守備力が０になった。\l"
-endtext
-
-;fe2a13
-Text310:
-strvar TextStrVar_EntityName
-text "の特技は封印された。\l"
-endtext
-
-;fe2a25
-Text311:
-text "ここは、掘れない。\l"
-endtext
-
-;fe2a31
-Text312:
-strvar TextStrVar_EntityName
-text "は、特技が封印された。\l"
-endtext
-
-;fe2a44
-Text313:
-text "サビるものを装備していなかった。\l"
-endtext
-
-;fe2a56
-Text314:
-text "モンスターハウスだ！！\l"
-endtext
-
-;fe2a63
-Text315:
-text "どろぼうハウスだ！！\l"
-endtext
-
-;fe2a6f
-Text316:
-text "ドレインハウスだ！！\l"
-endtext
-
-;fe2a7b
-Text317:
-text "１ッ目ハウスだ！！\l"
-endtext
-
-;fe2a86
-Text318:
-text "ゴーストハウスだ！！\l"
-endtext
-
-;fe2a92
-Text319:
-text "パワーハウスだ！！\l"
-endtext
-
-;fe2a9d
-Text320:
-text "番犬隊だ！！\l"
-endtext
-
-;fe2aa7
-Text321:
-text "落し穴に足を踏み入れた！\l"
-endtext
-
-;fe2ab9
-Text322:
-text "トラばさみにひっかかった！\l"
-endtext
-
-;fe2ac8
-Text323:
-text "バネの上に乗った！\l"
-endtext
-
-;fe2ad4
-Text324:
-text "毒矢の罠を踏んでしまった！\l"
-endtext
-
-;fe2ae7
-Text325:
-text "スイッチを踏む音がした！"
-playsound SFX_STEP_ON_TRAP
-text "　\l"
-endtext
-
-;fe2afa
-Text326:
-text "地雷を踏んでしまった！"
-playsound SFX_STEP_ON_TRAP
-text "　\l"
-endtext
-
-;fe2b0c
-Text327:
-text "地面にデッパリがあった！\l"
-endtext
-
-;fe2b1b
-Text328:
-text "警報スイッチを踏んでしまった！"
-playsound SFX_STEP_ON_TRAP
-text "　\l"
-endtext
-
-
-;fe2b32
-Text329:
-text "召喚スイッチを踏んでしまった！"
-playsound SFX_STEP_ON_TRAP
-text "　\l"
+;fe2b17
+Text_FE2B17:
+text "If you equip this, your\ldefense power will rise.\l"
 endtext
 
 ;fe2b49
-Text330:
-text "大部屋スイッチを踏んでしまった！"
-playsound SFX_STEP_ON_TRAP
-text "　\l"
-endtext
-
-;fe2b60
-Text331:
-text "回転盤の上に乗った！\l"
-endtext
-
-;fe2b70
-Text332:
-text "へんな装置を踏んでしまった！\l"
-endtext
-
-;fe2b82
-Text333:
-text "へんなスイッチを踏んでしまった！"
-playsound SFX_STEP_ON_TRAP
-text "　\l"
-endtext
-
-;fe2b98
-Text334:
-text "大型地雷を踏んでしまった！"
-playsound SFX_STEP_ON_TRAP
-text "　\l"
-endtext
-
-;fe2bad
-Text335:
-text "しかし、落ちずにすんだ。\l"
-endtext
-
-;fe2bbc
-Text336:
-text "しかし、スルリと抜けた。\l"
-endtext
-
-;fe2bcb
-Text337:
-text "しかし、仕掛けは動かなかった。\l"
-endtext
-
-;fe2bdf
-Text338:
-text "しかし、うまくかわした。\l"
-endtext
-
-;fe2bed
-Text339:
-text "しかし、地雷は爆発しなかった。\l"
-endtext
-
-;fe2c00
-Text340:
-text "しかし、たいしたことはなかった。\l"
-endtext
-
-;fe2c12
-Text341:
-text "しかし、特にかわりはないようだ。\l"
-endtext
-
-;fe2c25
-Text342:
-text "しかし、大型地雷は爆発しなかった。\l"
-endtext
-
-;fe2c3b
-Text343:
-text "－－－－小話その１－－－－\lそこで、妖刀かまいたちを\l装備してるのって・・・\l"
+Text_FE2B49:
+playsound 130
+text " "
+textfunction $5
 textfunction $2
 cmdf6
-text "鎌井達？"
-playsound SFX_167
-text "　\l"
+text "All the monsters became\lLone Metals!\l"
 endtext
 
-;fe2c75
-Text344:
+;fe2b77
+Text_FE2B77:
+playsound 130
+text " All your status ailments\lwere cured.\l"
+endtext
+
+;fe2ba0
+Text_FE2BA0:
 textfunction $2
 cmdf6
-strvar TextStrVar_EntityName
-text "はずっこけた。\l"
+text "While you're carrying the\lBox of Happiness, the Riremit\lscroll won't work!\l"
 endtext
 
-;fe2c83
-Text345:
+;fe2bef
+Text_FE2BEF:
+strvar $80
+text " is stuck to\lthe ground.\l"
+endtext
+
+;fe2c0b
+Text_FE2C0B:
 textfunction $2
 cmdf6
-playsound SFX_117
-text "　"
-strvar TextStrVar_EntityName
-text "は固まった。\l"
+text "Oh! It was "
+strvar $80
+text ".\l"
 endtext
 
-;fe2c94
-Text346:
+;fe2c1e
+Text_FE2C1E:
+text "But "
+strvar $0
+text " vanished!\l"
+endtext
+
+;fe2c30
+Text_FE2C30:
 textfunction $2
 cmdf6
-strvar TextStrVar_EntityName
-text "は怒りだした。\l"
+text "If you throw this at a monster\lit'll become surprised and flee.\l"
 endtext
 
-;fe2ca3
-Text347:
-playsound SFX_168
-text "　"
-strvar TextStrVar_EntityName
-text "は無敵になった。\l"
+;fe2c74
+Text_FE2C74:
+text "Nothing is on the ground.\l"
+endtext
+
+;fe2c8f
+Text_FE2C8F:
+text "You took out "
+strvar $80
+text "\land put "
+strvar $80
+text " into it.\l"
 endtext
 
 ;fe2cb4
-Text348:
-playsound SFX_156
-text "　"
-strvar TextStrVar_EntityName
-text "は生き返った。\l"
+Text_FE2CB4:
+text "You looked into the "
+strvar $80
+text "\land pulled out "
+strvar $80
+text "\l"
 endtext
 
-;fe2cc3
-Text349:
-playsound SFX_157
-text "　"
-strvar TextStrVar_EntityName
-text "の姿が見えなくなった。\l"
+;fe2cde
+Text_FE2CDE:
+text "You can't put a pot in another pot.\l"
 endtext
 
-;fe2cd6
-Text350:
-playsound SFX_159
-text "　"
-strvar TextStrVar_EntityName
-text "は\lバーサーカー状態になった。\l"
+;fe2d03
+Text_FE2D03:
+text "The "
+strvar $80
+text " shattered.\l"
 endtext
 
-;fe2cee
-Text351:
-playsound SFX_163
-text "　識別したものを忘れてしまった。\l"
+;fe2d16
+Text_FE2D16:
+text "You can't put anything\lelse into the pot.\l"
 endtext
 
-;fe2d04
-Text352:
-text "マップを忘れてしまった。\l"
+;fe2d41
+Text_FE2D41:
+text "Oh! It was "
+strvar $80
+text ".\l"
 endtext
 
-;fe2d13
-Text353:
-strvar TextStrVar_EntityName
-text "の存在が封じられた。\l"
+;fe2d51
+Text_FE2D51:
+text "Reached into "
+strvar $80
+text ".\l"
 endtext
 
-;fe2d24
-Text354:
+;fe2d63
+Text_FE2D63:
+text "Item Error\l"
+endtext
+
+;fe2d6f
+Text_FE2D6F:
+strvar $86
+text " cast Haraheree.\l"
+endtext
+
+;fe2d83
+Text_FE2D83:
+strvar $86
+text " cast a curse spell.\lBut the power of your bracer\lnegated it.\l"
+endtext
+
+;fe2dc4
+Text_FE2DC4:
+strvar $86
+text " called an ally.\l"
+endtext
+
+;fe2dd8
+Text_FE2DD8:
+strvar $86
+text " touched "
+strvar $86
+text "\land cast a healing spell.\l"
+endtext
+
+;fe2e01
+Text_FE2E01:
+text "But the power of your\lbracer prevented any rusting.\l"
+endtext
+
+;fe2e36
+Text_FE2E36:
+text "But the power of your bracer\lprotected you from confusion.\l"
+endtext
+
+;fe2e72
+Text_FE2E72:
+text "Dropped "
+strvar $80
+text ".\l"
+endtext
+
+;fe2e7f
+Text_FE2E7F:
+strvar $80
+text " broke and became\luseless."
+playsound 89
+text " \l"
+endtext
+
+;fe2ea0
+Text_FE2EA0:
+strvar $86
+text " cast a blinding\lspell.\l"
+endtext
+
+;fe2ebb
+Text_FE2EBB:
+text "Lukewarm water came\lblasting out!\l"
+endtext
+
+;fe2ede
+Text_FE2EDE:
+text "Your Rice Balls got\ldrenched and rotted!\l"
+endtext
+
+;fe2f08
+Text_FE2F08:
+text "All of your equipment\lwas removed!\l"
+endtext
+
+;fe2f2c
+Text_FE2F2C:
+text "you can see its form now.\l"
+endtext
+
+;fe2f47
+Text_FE2F47:
+playsound 90
+text " A time bomb!\l"
+endtext
+
+;fe2f58
+Text_FE2F58:
+text "Critical Hit! "
+strvar $86
+text "\l"
+endtext
+
+;fe2f6a
+Text_FE2F6A:
+text "Critical hit! "
+strvar $86
+text "\l"
+endtext
+
+;fe2f7c
+Text_FE2F7C:
+text "A vengeful blow! "
+strvar $86
+text "\l"
+endtext
+
+;fe2f91
+Text_FE2F91:
+text "A huge boulder fell from above!\l"
+endtext
+
+;fe2fb2
+Text_FE2FB2:
+strvar $86
+text "'s movement was\lslowed!\l"
+endtext
+
+;fe2fcd
+Text_FE2FCD:
+text "Went inside "
+strvar $80
+text ".\l"
+endtext
+
+;fe2fde
+Text_FE2FDE:
+text "The wall crumbled!\l"
+endtext
+
+;fe2ff2
+Text_FE2FF2:
+text "Everything around you crumbled,\land your view improved!"
+playsound 136
+text " \l"
+endtext
+
+;fe302e
+Text_FE302E:
+strvar $86
+text " was surrounded\lby monsters!"
+playsound 177
+text " \l"
+endtext
+
+;fe3051
+Text_FE3051:
+strvar $86
+text " was bathed in light\land turned into a Rice Ball!\l"
+endtext
+
+;fe3086
+Text_FE3086:
+strvar $86
+text " was dizzied!\l"
+endtext
+
+;fe3097
+Text_FE3097:
+text "Everything looks strange!\l"
+endtext
+
+;fe30b2
+Text_FE30B2:
+strvar $86
+text " fell asleep!\l"
+endtext
+
+;fe30c3
+Text_FE30C3:
+text "A white gas puffed up from\lholes in the floor!\l"
+endtext
+
+;fe30f3
+Text_FE30F3:
+text "But you weren't equipping\lanything.\l"
+endtext
+
+;fe3118
+Text_FE3118:
+text "But your view didn't\limprove any more.\l"
+endtext
+
+;fe3140
+Text_FE3140:
+text "You woke up all the\lsleeping monsters!\l"
+endtext
+
+;fe3168
+Text_FE3168:
+text "Traps popped up all over\lthe ground!"
+playsound 128
+text " \l"
+endtext
+
+;fe3191
+Text_FE3191:
+text "The Guardian Spirit summoned\l"
+strvar $86
+text ".\l"
+endtext
+
+;fe31b3
+Text_FE31B3:
+text "You pulled out the contents\lof "
+strvar $80
+text ".\l"
+endtext
+
+;fe31d7
+Text_FE31D7:
+text "You became invincible."
+playsound 168
+text " \l"
+endtext
+
+;fe31f2
+Text_FE31F2:
+text "You are no longer invincible.\l"
+endtext
+
+;fe3211
+Text_FE3211:
+strvar $86
+text " is eating a\lRice Ball.\l"
+endtext
+
+;fe322c
+Text_FE322C:
+text "Finally stopped eating!\l"
+endtext
+
+;fe3245
+Text_FE3245:
+text "You no longer can be\laffected by poison!\l"
+endtext
+
+;fe326f
+Text_FE326F:
+text "You are in a state of\linsomnia!"
+endtext
+
+;fe328f
+Text_FE328F:
+text "You became immune to hunger!\l"
+endtext
+
+;fe32ad
+Text_FE32AD:
+text "You will no longer\lwake up monsters!\l"
+endtext
+
+;fe32d3
+Text_FE32D3:
+text "You created a trap at your feet.\l"
+endtext
+
+;fe32f5
+Text_FE32F5:
+text "You can't create a trap here.\l"
+endtext
+
+;fe3314
+Text_FE3314:
+strvar $86
+text " is bound by the staff!"
+endtext
+
+;fe332e
+Text_FE332E:
+playsound 159
+text " "
+strvar $86
+text " moved involuntarily!\l"
+endtext
+
+;fe334a
+Text_FE334A:
+text "You can move normally now.\l"
+endtext
+
+;fe3366
+Text_FE3366:
+text "Stole "
+strvar $80
+text ".\l"
+endtext
+
+;fe3371
+Text_FE3371:
+text "Couldn't steal anything.\l"
+endtext
+
+;fe338b
+Text_FE338B:
+playsound 163
+text " You forgot everything that\lyou've identified!\l"
+endtext
+
+;fe33bd
+Text_FE33BD:
+text "You can't pick up\litems any more!\l"
+endtext
+
+;fe33e0
+Text_FE33E0:
+text "You can now pick\lup items again.\l"
+endtext
+
+;fe3402
+Text_FE3402:
+strvar $86
+text " cast a curse spell.\lYour shield was cursed!"
+playsound 91
+text " \l"
+endtext
+
+;fe3435
+Text_FE3435:
+strvar $86
+text " cast a curse spell.\lYour equipment was cursed!"
+playsound 91
+text " \l"
+endtext
+
+;fe346b
+Text_FE346B:
+strvar $86
+text " cast a curse spell.\lAll of your items were cursed!"
+playsound 91
+text " \l"
+endtext
+
+;fe34a5
+Text_FE34A5:
+strvar $86
+text " possessed\l"
+strvar $86
+text "!\l"
+endtext
+
+;fe34b7
+Text_FE34B7:
+strvar $80
+text " transformed into\la Large Rice Ball!\l"
+endtext
+
+;fe34df
+Text_FE34DF:
+strvar $80
+text " transformed\linto a Weed!\l"
+endtext
+
+;fe34fc
+Text_FE34FC:
+text "The weed entered your\l"
+strvar $80
+text "!\l"
+endtext
+
+;fe3517
+Text_FE3517:
+playsound 143
+text " "
+textfunction $5
 textfunction $2
 cmdf6
-text "この巻物は読まずに敵に投げること\lするとその敵が出て来なくなる。\l"
+text "The curse on your\l"
+strvar $84
+text " was broken!\l"
 endtext
 
-;fe2d4d
-Text355:
-playsound SFX_131
-text "　モンスターの速さが２倍になった。\l"
+;fe3541
+Text_FE3541:
+playsound 143
+text " "
+textfunction $5
+textfunction $2
+cmdf6
+text "All your cursed items\lwere uncursed!\l"
 endtext
 
-;fe2d64
-Text356:
-text "動きが遅くなってしまった。\l"
+;fe356f
+Text_FE356F:
+text "Your sword rusted!\l"
 endtext
 
-;fe2d75
-Text357:
-text "十字キーで８方向に移動する。\lＡボタンでモンスターに攻撃できる。\l"
+;fe3583
+Text_FE3583:
+text "But your chrome-covered\lsword can't rust.\l"
 endtext
 
-;fe2d9f
-Text358:
-text "Ｒボタンを押しながらだと、十字キーで\lナナメだけに動ける。\l"
+;fe35ae
+Text_FE35AE:
+strvar $86
+text " ran out of energy.\l"
+textfunction $2
+cmdf6
+text "But revived as a "
+strvar $0
+text ".\l"
 endtext
 
-;fe2dc3
-Text359:
-text "Ｘボタンでウインドウが開く。\lＡボタンで決定、Ｂボタンでキャンセル。\l"
+;fe35dd
+Text_FE35DD:
+text "Your sword's chrome covering\ldissolved!\l"
 endtext
 
-;fe2ded
-Text360:
-text "Ｂボタンで速く移動する。\l同時にＡボタンで速く回復する。\l"
+;fe3606
+Text_FE3606:
+text "Your sword lost its\lfusion powers!\l"
 endtext
 
-;fe2e14
-Text361:
-text "Ｙボタンを押しながらだと、十字キーで\l動かずに向きだけをかえられる。\l"
+;fe362a
+Text_FE362A:
+cleartext
+text "Your sword lost its \"Strong\lAgainst Dragons\" power!\l"
 endtext
 
-;fe2e3e
-Text362:
-text "セレクトボタンをおしているあいだ、\lマップだけを見ることができる。\l"
+;fe3660
+Text_FE3660:
+cleartext
+text "Your sword lost its \"Strong\lagainst Ghosts\" power!\l"
 endtext
 
-;fe2e61
-Text363:
-text "Ｌボタンで装備している矢をうてる。\lＹボタンで持ち物を整頓できる。\l"
+;fe3695
+Text_FE3695:
+cleartext
+text "Your sword lost its \"Strong\lagainst one-eyed monsters\" power!\l"
 endtext
+
+;fe36d5
+Text_FE36D5:
+cleartext
+text "Your sword lost its \"Strong\lagainst Status-drainers\" power!\l"
+endtext
+
+;fe3713
+Text_FE3713:
+cleartext
+text "Your sword lost its \"Turn\lmonsters into meat\" power!\l"
+endtext
+
+;fe374a
+Text_FE374A:
+cleartext
+text "Your sword lost its\l\"Dig in walls\" power!\l"
+endtext
+
+;fe3776
+Text_FE3776:
+cleartext
+text "Your sword lost its\l\"Always hits\" power!\l"
+endtext
+
+;fe37a1
+Text_FE37A1:
+cleartext
+text "Your sword lost its\l\"Critical hit\" power!\l"
+endtext
+
+;fe37cd
+Text_FE37CD:
+cleartext
+text "Your sword lost its \"three-\lpace-wide attack!\" power!\l"
+endtext
+
+;fe3805
+Text_FE3805:
+text "Your shield's chrome\lcovering dissolved!\l"
+endtext
+
+;fe382f
+Text_FE382F:
+text "Your shield lost\lits fusion powers!\l"
+endtext
+
+;fe3854
+Text_FE3854:
+cleartext
+text "Your shield lost its\l\"Slows Hunger\" power!\l"
+endtext
+
+;fe3881
+Text_FE3881:
+text "\l"
+endtext
+
+;fe3883
+Text_FE3883:
+cleartext
+text "Your shield lost its\l\"Rust-proof\" power!\l"
+endtext
+
+;fe38ae
+Text_FE38AE:
+text "\l"
+endtext
+
+;fe38b0
+Text_FE38B0:
+cleartext
+text "Your shield lost its \"Strong\lto Dragon flame\" power!\l"
+endtext
+
+;fe38e7
+Text_FE38E7:
+cleartext
+text "Your shield lost its\l\"Reflect 50%\" power!\l"
+endtext
+
+;fe3913
+Text_FE3913:
+cleartext
+text "Your shield lost its \"Reflect\lattack magic\" power!\l"
+endtext
+
+;fe3948
+Text_FE3948:
+cleartext
+text "Your shield lost its \"Reduces\lenemy accuracy\" power!\l"
+endtext
+
+;fe397f
+Text_FE397F:
+text "\l"
+endtext
+
+;fe3981
+Text_FE3981:
+cleartext
+text "Your shield lost its \"Strong\lto explosions\" power!\l"
+endtext
+
+;fe39b6
+Text_FE39B6:
+cleartext
+text "Your shield lost its\l\"Thieving Immunity\" power!\l"
+endtext
+
+;fe39e8
+Text_FE39E8:
+text "You can't pick up items!\l"
+endtext
+
+;fe3a02
+Text_FE3A02:
+playsound 53
+text " "
+strvar $86
+text " raised its\llevel and became a\l"
+endtext
+
+;fe3a27
+Text_FE3A27:
+strvar $86
+text ".\l"
+endtext
+
+;fe3a2c
+Text_FE3A2C:
+playsound 158
+text " "
+strvar $86
+text "'s level dropped!\lBecame a\l"
+endtext
+
+;fe3a4d
+Text_FE3A4D:
+textfunction $5
+textfunction $2
+text ""
+endtext
+
+;fe3a52
+Text_FE3A52:
+text "You can identify things\ljust by picking them up!\l"
+endtext
+
+;fe3a84
+Text_FE3A84:
+textfunction $2
+cmdf6
+text "\""
+strvar $88
+text "...\""
+text "\lvainly echoed.\l"
+endtext
+
+;fe3a9f
+Text_FE3A9F:
+text "But the scroll was blank.\l"
+endtext
+
+;fe3aba
+Text_FE3ABA:
+strvar $86
+text " is sleeping.\l"
+endtext
+
+;fe3acb
+Text_FE3ACB:
+strvar $86
+text "'s defense\lpower dropped.\l"
+endtext
+
+;fe3ae8
+Text_FE3AE8:
+strvar $86
+text "'s defense\lpower dropped to 0.\l"
+endtext
+
+;fe3b0a
+Text_FE3B0A:
+strvar $86
+text "'s special\lpower was sealed!\l"
+endtext
+
+;fe3b2a
+Text_FE3B2A:
+text "You can't dig here.\l"
+endtext
+
+;fe3b3f
+Text_FE3B3F:
+strvar $86
+text "'s special\lpower was sealed!\l"
+endtext
+
+;fe3b5f
+Text_FE3B5F:
+text "You're not equipping anything\lthat can rust.\l"
+endtext
+
+;fe3b8d
+Text_FE3B8D:
+text "A Monster House!!\l"
+endtext
+
+;fe3ba0
+Text_FE3BA0:
+text "A Thief House!!\l"
+endtext
+
+;fe3bb1
+Text_FE3BB1:
+text "A Drainer House!!\l"
+endtext
+
+;fe3bc4
+Text_FE3BC4:
+text "A One-eye House!!\l"
+endtext
+
+;fe3bd7
+Text_FE3BD7:
+text "A Ghost House!!\l"
+endtext
+
+;fe3be8
+Text_FE3BE8:
+text "A Power House!!\l"
+endtext
+
+;fe3bf9
+Text_FE3BF9:
+text "An army of guard dogs!!\l"
+endtext
+
+;fe3c12
+Text_FE3C12:
+text "You stepped on a pit trap!\l"
+endtext
+
+;fe3c2e
+Text_FE3C2E:
+text "You got caught by a tiger trap!\l"
+endtext
+
+;fe3c4f
+Text_FE3C4F:
+text "You stepped on a spring!\l"
+endtext
+
+;fe3c69
+Text_FE3C69:
+text "You stepped on a\lpoison arrow trap!\l"
+endtext
+
+;fe3c8e
+Text_FE3C8E:
+text "You heard the \"click\""
+text "\lof a switch!"
+playsound 90
+text " \l"
+endtext
+
+;fe3cb5
+Text_FE3CB5:
+text "You stepped on a mine!"
+playsound 90
+text " \l"
+endtext
+
+;fe3cd0
+Text_FE3CD0:
+text "There was a protusion on\lthe ground!\l"
+endtext
+
+;fe3cf6
+Text_FE3CF6:
+text "You stepped on an alarm switch!"
+playsound 90
+text " \l"
+endtext
+
+;fe3d1a
+Text_FE3D1A:
+text "You stepped on a summoning switch!"
+playsound 90
+text " \l"
+endtext
+
+;fe3d41
+Text_FE3D41:
+text "You stepped on a Big Room switch!"
+playsound 90
+text " \l"
+endtext
+
+;fe3d67
+Text_FE3D67:
+text "You stepped on a spin trap!\l"
+endtext
+
+;fe3d84
+Text_FE3D84:
+text "You stepped on a weird device!\l"
+endtext
+
+;fe3da4
+Text_FE3DA4:
+text "You stepped on a weird switch!"
+playsound 90
+text " \l"
+endtext
+
+;fe3dc7
+Text_FE3DC7:
+text "You stepped on a huge mine!"
+playsound 90
+text " \l"
+endtext
+
+;fe3de7
+Text_FE3DE7:
+text "But you didn't fall\lthrough the pit.\l"
+endtext
+
+;fe3e0d
+Text_FE3E0D:
+text "But you stepped around it.\l"
+endtext
+
+;fe3e29
+Text_FE3E29:
+text "But the trap didn't go off.\l"
+endtext
+
+;fe3e46
+Text_FE3E46:
+text "But you dodged it successfully.\l"
+endtext
+
+;fe3e67
+Text_FE3E67:
+text "But the mine didn't go off.\l"
+endtext
+
+;fe3e84
+Text_FE3E84:
+text "But nothing happened.\l"
+endtext
+
+;fe3e9b
+Text_FE3E9B:
+text "But it doesn't seem like\lanything changed.\l"
+endtext
+
+;fe3ec7
+Text_FE3EC7:
+text "But the giant mine\ldidn't explode.\l"
+endtext
+
+;fe3eeb
+Text_FE3EEB:
+text "----Anecdote 1----\lIf you equip a Yoto\lKamaitachi...\l"
+textfunction $2
+cmdf6
+text "Kamaitachi?"
+playsound 167
+text " \l"
+endtext
+
+;fe3f33
+Text_FE3F33:
+textfunction $2
+cmdf6
+strvar $86
+text " tripped.\l"
+endtext
+
+;fe3f43
+Text_FE3F43:
+textfunction $2
+cmdf6
+playsound 117
+text " "
+strvar $86
+text " became stiff.\l"
+endtext
+
+;fe3f5b
+Text_FE3F5B:
+textfunction $2
+cmdf6
+strvar $86
+text " got angry.\l"
+endtext
+
+;fe3f6d
+Text_FE3F6D:
+playsound 168
+text " "
+strvar $86
+text " became invincible.\l"
+endtext
+
+;fe3f87
+Text_FE3F87:
+playsound 156
+text " "
+strvar $86
+text " came back to life.\l"
+endtext
+
+;fe3fa1
+Text_FE3FA1:
+playsound 157
+text " "
+strvar $86
+text " became invisible.\l"
+endtext
+
+;fe3fba
+Text_FE3FBA:
+playsound 159
+text " "
+strvar $86
+text " went berserk.\l"
+endtext
+
+;fe3fcf
+Text_FE3FCF:
+playsound 163
+text " You forgot the items\lyou've identified.\l"
+endtext
+
+;fe3ffb
+Text_FE3FFB:
+text "You forgot the map.\l"
+endtext
+
+;fe4010
+Text_FE4010:
+text "All "
+strvar $86
+text "s were sealed\loff from the world.\l"
+endtext
+
+;fe4039
+Text_FE4039:
+textfunction $2
+cmdf6
+text "If you throw this scroll at an\lenemy, that enemy type will no\llonger appear.\l"
+endtext
+
+;fe408a
+Text_FE408A:
+playsound 131
+text " The monster's speed was doubled.\l"
+endtext
+
+;fe40af
+Text_FE40AF:
+text "Movement became slower.\l"
+endtext
+
+;fe40c8
+Text_FE40C8:
+text "Move in 8 directions with the\lpad. Attack monsters with the\lA button.\l"
+endtext
+
+;fe410f
+Text_FE410F:
+text "If you hold down the R button\lwhile moving, you'll only move\lin diagonal directions.\l"
+endtext
+
+;fe4165
+Text_FE4165:
+text "Open the window with the X\lbutton. A button confirms,\lB button cancels.\l"
+endtext
+
+;fe41ae
+Text_FE41AE:
+text "You can walk fast with the B\lbutton. Hold it down with the\lA button and you'll heal fast.\l"
+endtext
+
+;fe4209
+Text_FE4209:
+text "If you move the pad while holding\ldown the Y button, you'll change\ldirection without actually moving.\l"
+endtext
+
+;fe4270
+Text_FE4270:
+text "While you're holding the Select\lbutton, you'll see only the map.\l"
+endtext
+
+;fe42b2
+Text_FE42B2:
+text "You can fire any equipped arrows\lwith the L button. The Y button\lwill rearrange your inventory.\l@"

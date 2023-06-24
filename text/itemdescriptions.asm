@@ -1,1275 +1,1264 @@
 
-;fe506e
-Text1338:
-text "ＰＰＵ　５Ｃ７７　ｖｅｒ"
-numvar TextNumVar_Strength
-text "\lＰＰＵ　５Ｃ７８　ｖｅｒ"
-numvar TextNumVar_Strength
-text "\l@"
-
-;fe509b
-Text1339:
-text "ドラゴン系モンスターに強い。@"
-
-;fe50ab
-Text1340:
-text "ゴースト系モンスターに強い。@"
-
-;fe50bb
-Text1341:
-text "１ツ目モンスターに強い。@"
-
-;fe50c8
-Text1342:
-text "ステータスを吸い取るモンスターに強い。@"
-
-;fe50de
-Text1343:
-text "モンスターを肉にできる。@"
-
-;fe50ec
-Text1344:
-text "かべを掘れる。@"
-
-;fe50f5
-Text1345:
-text "必ず攻撃が当たる。@"
-
-;fe5102
-Text1346:
-text "会心の一撃がでる。@"
-
-;fe510f
-Text1347:
-text "前方３方向１度に攻撃できる。@"
-
-;fe5124
-Text1348:
-text "おなかがへりにくい。@"
-
-;fe512f
-Text1349:
-text "おなかがへりやすい。@"
-
-;fe513a
-Text1350:
-text "さびない。@"
-
-;fe5140
-Text1351:
-text "毒をはねかえす。@"
-
-;fe514a
-Text1352:
-text "ドラゴンの炎のちからを弱める。@"
-
-;fe515c
-Text1353:
-text "受けたダメージを相手に半分返す。@"
-
-;fe5173
-Text1354:
-text "魔法攻撃を跳ね返す。@"
-
-;fe5183
-Text1355:
-text "敵の攻撃が当たりにくい。@"
-
-;fe5193
-Text1356:
-text "攻撃を受けるたびに性能が下がる。@"
-
-;fe51a8
-Text1357:
-text "爆発のダメージを少なくする。@"
-
-;fe51b9
-Text1358:
-text "ぬすまれない。@"
-
-;fe51c1
-Text1359:
-text "装備すると攻撃力が上がるぞ。"
-endtext
-
-;fe51d1
-Text1360:
-text "つかの長いなぎなたのような剣だ。\l装備すると攻撃力が上がるぞ。"
-endtext
-
-;fe51f4
-Text1361:
-text "倒した時に肉を得られることがあるぞ。"
-endtext
-
-;fe520a
-Text1362:
-text "風来人に、ひろく愛用されている剣。\l装備すると攻撃力が上がるぞ。"
-endtext
-
-;fe522f
-Text1363:
-text "装備すると攻撃力が上がるぞ。\lドラゴン系モンスターに\l大きなダメージをあたえるぞ。"
-endtext
-
-;fe525b
-Text1364:
-text "天下の名刀。どうたぬき源馬作。"
-endtext
-
-;fe5271
-Text1365:
-text "天才刀工師カブラが作った、\l幻ともいわれる希代の剛剣。"
-endtext
-
-;fe5298
-Text1366:
-text "ゴースト系モンスターに大きな\lダメージをあたえるぞ。"
-endtext
-
-;fe52b4
-Text1367:
-text "装備してかべを掘ることができる。\l攻撃力も上がるぞ。"
-endtext
-
-;fe52d1
-Text1368:
-text "必ず攻撃が当たるぞ。"
-endtext
-
-;fe52df
-Text1369:
-text "会心の一撃がでるぞ。"
-endtext
-
-;fe52ed
-Text1370:
-text "前方３方向１度に攻撃できるぞ。"
-endtext
-
-;fe5303
-Text1371:
-text "１ツ目のモンスターに大きな\lダメージを与えるぞ。"
-endtext
-
-;fe531d
-Text1372:
-text "ステータスを吸い取るモンスターに\l大きなダメージを与えるぞ。"
-endtext
-
-;fe533f
-Text1373:
-text "カタナをきたえぬいてできた剣だ。"
-endtext
-
-;fe5351
-Text1374:
-text "剛剣マンジカブラをきたえぬいて\lできた剣だ。"
-endtext
-
-;fe536b
-Text1375:
-text "遠くからモンスターを攻撃できるぞ。\l装備するとＬボタンでうてるぞ。"
-endtext
-
-;fe5390
-Text1376:
-text "遠くからモンスターを攻撃できるぞ。\l装備するとＬボタンでうてるぞ。"
-endtext
-
-;fe53b5
-Text1377:
-text "遠くからモンスターを貫通攻撃できるぞ。\l装備するとＬボタンでうてるぞ。"
-endtext
-
-;fe53de
-Text1378:
-text "開発中"
-endtext
-
-;fe53e3
-Text1379:
-text "開発中"
-endtext
-
-;fe53e8
-Text1380:
-text "開発中"
-endtext
-
-;fe53ed
-Text1381:
-text "サビないし、おなかがへりにくい。\l装備すると防御力が上がるぞ。"
-endtext
-
-;fe540f
-Text1382:
-text "青銅で作られた盾。\l装備すると防御力が上がるぞ。"
-endtext
-
-;fe542d
-Text1383:
-text "装備すると防御力が上がるぞ。\l毒大将の毒をはねかえすぞ。"
-endtext
-
-;fe544f
-Text1384:
-text "装備すると防御力が上がるぞ。\lさびないぞ。"
-endtext
-
-;fe5467
-Text1385:
-text "はがねでつくられた盾。\l装備すると防御力が上がるぞ。"
-endtext
-
-;fe5484
-Text1386:
-text "装備すると防御力が上がるぞ。\lドラゴンの炎から受けるダメージが\lすくなくなるぞ。"
-endtext
-
-;fe54b1
-Text1387:
-text "風魔鉄から作られた防御力の高い盾。"
-endtext
-
-;fe54c9
-Text1388:
-text "モンスターからの攻撃を\lカウンターではね返す盾。\l装備すると防御力が上がるぞ。"
-endtext
-
-;fe54f5
-Text1389:
-text "防御力は高いが、重いせいか\lおなかがへりやすい。\l装備すると防御力が上がるぞ。"
-endtext
-
-;fe5523
-Text1390:
-text "魔法攻撃を跳ね返すぞ。"
-endtext
-
-;fe5534
-Text1391:
-text "敵の攻撃が当たりにくくなるぞ。"
-endtext
-
-;fe5547
-Text1392:
-text "強そうに見える盾だが、弱いぞ。\l値段が高いぞ。"
-endtext
-
-;fe5563
-Text1393:
-text "高防御だが、攻撃を受けるたびに\l性能が下がっていく盾。\l装備すると防御力が上がるぞ。"
-endtext
-
-;fe5597
-;"Reduces explosion damage."
-Text1394:
-text "爆発のダメージを少なくするぞ。"
-endtext
-
-;fe55a9
-;"Items and money can't be stolen."
-Text1395:
-text "アイテムやお金を盗まれないぞ。"
-endtext
-
-;fe55ba
-Text1396:
-text "風魔の盾をきたえぬいて\lできた盾だ。"
-endtext
-
-;fe55ce
-;"In development"
-Text1397:
-text "開発中"
-endtext
-
-;fe55d3
-Text1398:
-text "開発中"
-endtext
-
-;fe55d8
-;"Restores HP by a little."
-Text1399:
-text "ＨＰが少し回復するぞ。"
-endtext
-
-;fe55e9
-;"Restores HP by a lot."
-Text1400:
-text "ＨＰがたくさん回復するぞ。"
-endtext
-
-;fe55fb
-;"Raises your level by 1."
-Text1401:
-text "レベルが上がるぞ。"
-endtext
-
-;fe5605
-;"Lets you see invisible monsters and traps."
-Text1402:
-text "見えないモンスターやワナが\l発見できるぞ。"
-endtext
-
-;fe561b
-;"You will breathe fire. It reaches far."
-Text1403:
-text "口から火をふくぞ。\l遠くまで届くぞ。"
-endtext
-
-;fe5632
-;"Makes you invincible for a short time."
-Text1404:
-text "しばらく無敵になるぞ。"
-endtext
-
-;fe5640
-;"Raises your level by 5."
-Text1405:
-text "レベルが５つ上がるぞ。"
-endtext
-
-;fe564c
-Text1406:
-text "持っていると、一度だけ生き返る\lことができるぞ。\l壺の中に入れているとだめだぞ。"
-endtext
-
-;fe5678
-;"Makes you transparent for a short time."
-Text1407:
-text "しばらく透明になれるぞ。"
-endtext
-
-;fe5687
-;"Reduces your level by 1."
-Text1408:
-text "レベルが下がってしまうぞ。"
-endtext
-
-;fe5695
-;"Reduces your level by 3."
-Text1409:
-text "レベルが３つ下がってしまうぞ。"
-endtext
-
-;fe56a5
-;"Reduces your level and HP to 1."
-Text1410:
-text "レベルもＨＰも１になってしまうぞ。"
-endtext
-
-;fe56b9
-;"Makes you act wildly for a short time."
-Text1411:
-text "しばらくめちゃくちゃ暴れるぞ。"
-endtext
-
-;fe56ca
-Text1412:
-text "識別した物を忘れてしまうぞ。"
-endtext
-
-;fe56db
-Text1413:
-text "置いたところにモンスターが集まるぞ。"
-endtext
-
-;fe56f0
-;"Increases max HP."
-Text1414:
-text "最大ＨＰが上がるぞ。"
-endtext
-
-;fe56fe
-;"Increases max hunger."
-Text1415:
-text "最大満腹度が上がるぞ。"
-endtext
-
-;fe570e
-;"Decreases max hunger."
-Text1416:
-text "最大満腹度が下がるぞ。"
-endtext
-
-;fe571e
-Text1417:
-text "小話を一つ言うぞ。"
-endtext
-
-;fe572c
-Text1418:
-text "ちからが１ポイント増えるぞ。"
-endtext
-
-;fe573c
-Text1419:
-text "ちからが最大値まで回復するぞ。"
-endtext
-
-;fe5750
-Text1420:
-text "ちからとＨＰが下がってしまうぞ。\l動きが遅くなってしまうぞ。"
-endtext
-
-;fe5773
-Text1421:
-text "混乱してしまうぞ。"
-endtext
-
-;fe577f
-Text1422:
-text "しばらく眠ってしまうぞ。"
-endtext
-
-;fe578d
-Text1423:
-text "ただの雑草だぞ。"
-endtext
-
-;fe5797
-Text1424:
+;fe74f9
+Text_FE74F9:
+text "PPU 5C77 Ver"
+numvar $12
+text "\lPPU 5C78 Ver"
+numvar $12
 text "\l"
 endtext
 
-;fe5799
-Text1425:
+;fe7518
+Text_FE7518:
+text "Strong against dragons"
+endtext
+
+;fe752f
+Text_FE752F:
+text "Strong against ghosts"
+endtext
+
+;fe7545
+Text_FE7545:
+text "Strong against one-eyed monsters"
+endtext
+
+;fe7566
+Text_FE7566:
+text "Strong against status-draining monsters"
+endtext
+
+;fe758e
+Text_FE758E:
+text "Can change monsters to meat."
+endtext
+
+;fe75ab
+Text_FE75AB:
+text "Can dig in walls."
+endtext
+
+;fe75bd
+Text_FE75BD:
+text "Always hits its target"
+endtext
+
+;fe75d4
+Text_FE75D4:
+text "Can make critical hits"
+endtext
+
+;fe75eb
+Text_FE75EB:
+text "Attacks 3-paces wide in front of you"
+endtext
+
+;fe7610
+Text_FE7610:
+text "Slows hunger"
+endtext
+
+;fe761d
+Text_FE761D:
+text "Speeds hunger"
+endtext
+
+;fe762b
+Text_FE762B:
+text "Won't rust."
+endtext
+
+;fe7637
+Text_FE7637:
+text "Blocks poison."
+endtext
+
+;fe7646
+Text_FE7646:
+text "Weakens dragonfire."
+endtext
+
+;fe765a
+Text_FE765A:
+text "Sends half the damage you\ltake to your enemy."
+endtext
+
+;fe7688
+Text_FE7688:
+text "Reflects magic."
+endtext
+
+;fe7698
+Text_FE7698:
+text "Hard for enemies to hit."
+endtext
+
+;fe76b1
+Text_FE76B1:
+text "Gets worse with every hit."
+endtext
+
+;fe76cc
+Text_FE76CC:
+text "Reduces explosion damage."
+endtext
+
+;fe76e6
+Text_FE76E6:
+text "Prevents theivery."
+endtext
+
+;fe76f9
+Text_FE76F9:
+text "Equip this and your attack\lpower will rise."
+endtext
+
+;fe7725
+Text_FE7725:
+text "A sword with a long handle like\la naginata. If you equip it your\lattack power will rise."
+endtext
+
+;fe777e
+Text_FE777E:
+text "When you defeat an enemy you\lmight receive its meat."
+endtext
+
+;fe77b3
+Text_FE77B3:
+text "A favorite sword among Wanderers.\lEquip it and your attack power\lwill rise."
+endtext
+
+;fe77ff
+Text_FE77FF:
+text "Equip this and your attack power\lwill rise. Does lots of damage to\ldragon-like monsters."
+endtext
+
+;fe7858
+Text_FE7858:
+text "A world-famous sword.\lForged by Dotanuki."
+endtext
+
+;fe7882
+Text_FE7882:
+text "A miraculous, extremely rare sword\lforged by the genius swordsmith\lKabura."
+endtext
+
+;fe78cd
+Text_FE78CD:
+text "Does lots of damage to Ghost-like\lmonsters."
+endtext
+
+;fe78f9
+Text_FE78F9:
+text "If you equip this, you can dig\lin walls. It raises your attack\lpower too."
+endtext
+
+;fe7943
+Text_FE7943:
+text "With this, you'll never miss."
+endtext
+
+;fe7961
+Text_FE7961:
+text "You can deal critical hits with it."
+endtext
+
+;fe7985
+Text_FE7985:
+text "You can attack in a 3-pace wide\larc with it."
+endtext
+
+;fe79b2
+Text_FE79B2:
+text "Does lots of damage to monsters with\lonly one eye."
+endtext
+
+;fe79e5
+Text_FE79E5:
+text "Does lots of damage to monsters\lthat drain your status."
+endtext
+
+;fe7a1d
+Text_FE7A1D:
+text "A sword made from a tempered katana."
+endtext
+
+;fe7a42
+Text_FE7A42:
+text "A sword made from a tempered Goken\lManjikabura."
+endtext
+
+;fe7a72
+Text_FE7A72:
+text "You can use this to attack monsters\lfrom far away. If you equip it you\lcan shoot it with the L button."
+endtext
+
+;fe7ad9
+Text_FE7AD9:
+text "You can use this to attack monsters\lfrom far away. If you equip it you\lcan shoot it with the L button."
+endtext
+
+;fe7b40
+Text_FE7B40:
+text "You can use this to attack monsters\lfrom far away. If you equip it you\lcan shoot it with the L button."
+endtext
+
+;fe7ba7
+Text_FE7BA7:
+text "In development"
+endtext
+
+;fe7bb6
+Text_FE7BB6:
+text "In development"
+endtext
+
+;fe7bc5
+Text_FE7BC5:
+text "In development"
+endtext
+
+;fe7bd4
+Text_FE7BD4:
+text "It won't rust, and slows hunger.\lIf you equip it, your defense power\lwill rise."
+endtext
+
+;fe7c24
+Text_FE7C24:
+text "A shield made from bronze.\lIf you equip it, your defense power\lwill rise."
+endtext
+
+;fe7c6e
+Text_FE7C6E:
+text "If you equip this, your defense power\lwill rise. It will reflect poison from\lPoison Taishos."
+endtext
+
+;fe7ccb
+Text_FE7CCB:
+text "If you equip this, your defense power\lwill rise. It won't rust either."
+endtext
+
+;fe7d12
+Text_FE7D12:
+text "A shield made from iron.\lIf you equip it, your defense power\lwill rise."
+endtext
+
+;fe7d5a
+Text_FE7D5A:
+text "If you equip this, your defense power\lwill rise. It will reduce the damage\lyou take from dragon fire."
+endtext
+
+;fe7dc0
+Text_FE7DC0:
+text "This is a very strong shield made\lfrom Fuma Iron."
+endtext
+
+;fe7df2
+Text_FE7DF2:
+text "This shield will counterattack any\lmonsters that attack you.\lIt'll also boost your defense power."
+endtext
+
+;fe7e54
+Text_FE7E54:
+text "This shield is very strong, but since\lit's heavy, it'll make you hungry faster.\lIt also boosts your defense power."
+endtext
+
+;fe7ec7
+Text_FE7EC7:
+text "It will reflect magic attacks."
+endtext
+
+;fe7ee6
+Text_FE7EE6:
+text "It will make you harder to hit."
+endtext
+
+;fe7f06
+Text_FE7F06:
+text "This shield looks strong but it isn't.\lIt can sell for a lot of money."
+endtext
+
+;fe7f4d
+Text_FE7F4D:
+text "This shield has an extremely high\ldefense but as it deflects blows it\lwill get weaker."
+endtext
+
+;fe7fa4
+Text_FE7FA4:
+text "It will reduce damage from explosions."
+endtext
+
+;fe7fcb
+Text_FE7FCB:
+text "It will prevent your items and\lmoney from being stolen."
+endtext
+
+;fe8003
+Text_FE8003:
+text "This shield is made from a tempered\lFuma Shield."
+endtext
+
+;fe8034
+Text_FE8034:
+text "In development"
+endtext
+
+;fe8043
+Text_FE8043:
+text "In development"
+endtext
+
+;fe8052
+Text_FE8052:
+text "This will heal your HP a little."
+endtext
+
+;fe8073
+Text_FE8073:
+text "This will heal your HP a lot."
+endtext
+
+;fe8091
+Text_FE8091:
+text "This will raise your level."
+endtext
+
+;fe80ad
+Text_FE80AD:
+text "This will point out invisible\lmonsters and traps."
+endtext
+
+;fe80df
+Text_FE80DF:
+text "You'll breathe fire after eating\lthis. It reaches far."
+endtext
+
+;fe8116
+Text_FE8116:
+text "This will make you invincible for\la short time."
+endtext
+
+;fe8146
+Text_FE8146:
+text "This will raise you 5 levels."
+endtext
+
+;fe8164
+Text_FE8164:
+text "If you're carrying this, you can\lcome back to life once.\lIt has no effect inside a pot."
+endtext
+
+;fe81bc
+Text_FE81BC:
+text "This will turn you invisible for\la short time."
+endtext
+
+;fe81eb
+Text_FE81EB:
+text "This will reduce your level."
+endtext
+
+;fe8208
+Text_FE8208:
+text "This will reduce your level by 3."
+endtext
+
+;fe822a
+Text_FE822A:
+text "This will drop your level and HP to 1."
+endtext
+
+;fe8251
+Text_FE8251:
+text "This will send you into a\ltemporary mad rage."
+endtext
+
+;fe827f
+Text_FE827F:
+text "This will make you forget the\litems you've identified."
+endtext
+
+;fe82b6
+Text_FE82B6:
+text "Monsters will gather around where\lyou drop this."
+endtext
+
+;fe82e7
+Text_FE82E7:
+text "This will raise your max HP."
+endtext
+
+;fe8304
+Text_FE8304:
+text "This will raise your maximum\lsatiation."
+endtext
+
+;fe832c
+Text_FE832C:
+text "This will lower your maximum\lsatiation."
+endtext
+
+;fe8354
+Text_FE8354:
+text "This will tell you a short story."
+endtext
+
+;fe8376
+Text_FE8376:
+text "Your power will raise by one point."
+endtext
+
+;fe839a
+Text_FE839A:
+text "Your power will heal to its\lmaximum level."
+endtext
+
+;fe83c5
+Text_FE83C5:
+text "This will reduce power and HP.\lIt slows movement too."
+endtext
+
+;fe83fb
+Text_FE83FB:
+text "This will confuse you."
+endtext
+
+;fe8412
+Text_FE8412:
+text "This will put you to sleep for a bit."
+endtext
+
+;fe8438
+Text_FE8438:
+text "This is just a weed."
+endtext
+
+;fe844d
+Text_FE844D:
 text "\l"
 endtext
 
-;fe579b
-Text1426:
+;fe844f
+Text_FE844F:
 text "\l"
 endtext
 
-;fe579d
-Text1427:
+;fe8451
+Text_FE8451:
 text "\l"
 endtext
 
-;fe579f
-Text1428:
+;fe8453
+Text_FE8453:
 text "\l"
 endtext
 
-;fe57a1
-Text1429:
+;fe8455
+Text_FE8455:
 text "\l"
 endtext
 
-;fe57a3
-Text1430:
+;fe8457
+Text_FE8457:
 text "\l"
 endtext
 
-;fe57a5
-Text1431:
+;fe8459
+Text_FE8459:
 text "\l"
 endtext
 
-;fe57a7
-Text1432:
+;fe845b
+Text_FE845B:
 text "\l"
 endtext
 
-;fe57a9
-Text1433:
+;fe845d
+Text_FE845D:
 text "\l"
 endtext
 
-;fe57ab
-Text1434:
+;fe845f
+Text_FE845F:
 text "\l"
 endtext
 
-;fe57ad
-Text1435:
+;fe8461
+Text_FE8461:
 text "\l"
 endtext
 
-;fe57af
-Text1436:
+;fe8463
+Text_FE8463:
 text "\l"
 endtext
 
-;fe57b1
-Text1437:
+;fe8465
+Text_FE8465:
 text "\l"
 endtext
 
-;fe57b3
-Text1438:
+;fe8467
+Text_FE8467:
 text "\l"
 endtext
 
-;fe57b5
-Text1439:
+;fe8469
+Text_FE8469:
 text "\l"
 endtext
 
-;fe57b7
-Text1440:
+;fe846b
+Text_FE846B:
 text "\l"
 endtext
 
-;fe57b9
-Text1441:
+;fe846d
+Text_FE846D:
 text "\l"
 endtext
 
-;fe57bb
-Text1442:
+;fe846f
+Text_FE846F:
 text "\l"
 endtext
 
-;fe57bd
-Text1443:
+;fe8471
+Text_FE8471:
 text "\l"
 endtext
 
-;fe57bf
-Text1444:
+;fe8473
+Text_FE8473:
 text "\l"
 endtext
 
-;fe57c1
-Text1445:
-text "装備しているものの呪いがとけるぞ。"
-endtext
-
-;fe57d4
-Text1446:
-text "アイテムが識別できるぞ。"
-endtext
-
-;fe57e2
-Text1447:
-text "今いる場所の地形がわかるぞ。"
-endtext
-
-;fe57f3
-Text1448:
-text "壺が大きくなるぞ。"
-endtext
-
-;fe57fd
-Text1449:
-text "つむじ風を呼び、真空波をつくりだし、\l部屋にいるすべてのモンスターに\lダメージを与えるぞ。"
-endtext
-
-;fe5831
-Text1450:
-text "今いる地形では口が使えなくなるぞ。"
-endtext
-
-;fe5846
-Text1451:
-text "時間を戻せるぞ。"
-endtext
-
-;fe5851
-Text1452:
-text "今いる地形の地面にワナがふえるぞ。"
-endtext
-
-;fe5865
-Text1453:
-text "困った時に読むと、\lいいことがあるぞ。"
-endtext
-
-;fe587b
-Text1454:
-text "モンスターの動きが２倍になるぞ。"
-endtext
-
-;fe588e
-Text1455:
-text "部屋にいるすべてのモンスターが\lしばらく眠ってしまうぞ。"
-endtext
-
-;fe58ad
-Text1456:
-text "今いる地形では、モンスターに与える\lダメージが増えるぞ。"
-endtext
-
-;fe58cd
-Text1457:
-text "部屋にいるすべてのモンスターが\l消滅するぞ。"
-endtext
-
-;fe58e7
-Text1458:
-text "自分をも巻き込むすさまじい衝撃波で、\l近くにいるすべてのモンスターを\lこなごなに分解するぞ。"
-endtext
-
-;fe591e
-Text1459:
-text "大部屋になってしまうぞ。"
-endtext
-
-;fe592c
-Text1460:
-text "モンスターハウスができるぞ。"
-endtext
-
-;fe593b
-Text1461:
-text "部屋にいるすべてのモンスターが\lしばらく混乱して\lまっすぐ歩けなくなるぞ。"
-endtext
-
-;fe5965
-Text1462:
-text "モンスターに投げると、その種類の\lモンスターはもうでてこなくなるぞ。"
-endtext
-
-;fe598b
-Text1463:
-text "呪文を書き込んで、好きな巻物に\lしてしまえるぞ。"
-endtext
-
-;fe59a9
-Text1464:
-text "マップを忘れてしまうぞ。"
-endtext
-
-;fe59b7
-Text1465:
-text "装備している剣が強くなるぞ。"
-endtext
-
-;fe59c7
-Text1466:
-text "装備している盾が強くなるぞ。"
-endtext
-
-;fe59d6
-Text1467:
-text "装備している剣と盾がメッキされて\l錆びなくなるぞ。"
-endtext
-
-;fe59f2
-Text1468:
-text "壺の中身を取り出せるぞ。"
-endtext
-
-;fe5a01
-Text1469:
-text "今いる地形ではアイテムを\l拾えなくなるぞ。"
-endtext
-
-;fe5a19
-Text1470:
-text "床に置くと、すこしたってから\l爆発するぞ。\lまだ開発中だぞ。"
-endtext
-
-;fe5a3c
-Text1471:
+;fe8475
+Text_FE8475:
 text "\l"
 endtext
 
-;fe5a3e
-Text1472:
+;fe8477
+Text_FE8477:
+text "This will break the curse on\lanything you're wearing.\lScribe: Purify"
+endtext
+
+;fe84bc
+Text_FE84BC:
+text "This can identify items.\lScribe: Identify"
+endtext
+
+;fe84e6
+Text_FE84E6:
+text "This will show you the layout\lof the current level.\lScribe: Light"
+endtext
+
+;fe8528
+Text_FE8528:
+text "This will make a pot bigger.\lScribe: Bigpot"
+endtext
+
+;fe8554
+Text_FE8554:
+text "This will summon a whirlwind to\ldamage all nearby monsters.\lScribe: Airslash"
+endtext
+
+;fe85a1
+Text_FE85A1:
+text "This will prevent you from using\lyour mouth on the current floor.\lScribe: Lockjaw"
+endtext
+
+;fe85f3
+Text_FE85F3:
+text "This will send you back in time."
+endtext
+
+;fe8614
+Text_FE8614:
+text "This will plant traps all over\lthe current floor.\lScribe: Trap"
+endtext
+
+;fe8653
+Text_FE8653:
+text "If you read this when in trouble,\lit will help you out.\lScribe: Crisis"
+endtext
+
+;fe869a
+Text_FE869A:
+text "This will double monster speed.\lScribe: Fastfoe"
+endtext
+
+;fe86ca
+Text_FE86CA:
+text "All the monsters in the current room\lwill be put to sleep.\lScribe: Slumber"
+endtext
+
+;fe8715
+Text_FE8715:
+text "The damage you deal monsters on\lthe current floor will rise.\lScribe: Powerup"
+endtext
+
+;fe8762
+Text_FE8762:
+text "This will destroy any monsters\lin the room with you.\lScribe: Massacre"
+endtext
+
+;fe87a8
+Text_FE87A8:
+text "This will sweep you up in a huge\lshockwave to smash all nearby foes.\lScribe: Detonate"
+endtext
+
+;fe87fe
+Text_FE87FE:
+text "The current floor will become\la big room.\lScribe: Bigroom"
+endtext
+
+;fe8838
+Text_FE8838:
+text "You can create a Monster House with this.\lScribe: Monster"
+endtext
+
+;fe8872
+Text_FE8872:
+text "All foes in the room will be confused\land won't be able to walk straight.\lScribe: Confuse"
+endtext
+
+;fe88cc
+Text_FE88CC:
+text "If you throw this at a monster, that\lmonster type will no longer appear.\lScribe: Genocide"
+endtext
+
+;fe8926
+Text_FE8926:
+text "You can write a spell on this and\lcreate any kind of scroll you like."
+endtext
+
+;fe896c
+Text_FE896C:
+text "You will forget the map layout\lwhen reading this.\lScribe: Lost"
+endtext
+
+;fe89ab
+Text_FE89AB:
+text "This will strengthen your sword.\lScribe: Heaven"
+endtext
+
+;fe89db
+Text_FE89DB:
+text "This will strengthen your shield.\lScribe: Earth"
+endtext
+
+;fe8a0b
+Text_FE8A0B:
+text "This will create a chrome coating on\lyour sword and shield, preventing rust.\lScribe: Chrome"
+endtext
+
+;fe8a67
+Text_FE8A67:
+text "You can pull out the contents\lof a pot with this.\lScribe: Withdraw"
+endtext
+
+;fe8aaa
+Text_FE8AAA:
+text "This prevents you from picking up\lany items on the current floor.Scribe: Slippery"
+endtext
+
+;fe8afc
+Text_FE8AFC:
+text "If you put this on the ground it\lwill explode after a while. It\lis still in development."
+endtext
+
+;fe8b55
+Text_FE8B55:
 text "\l"
 endtext
 
-;fe5a40
-Text1473:
+;fe8b57
+Text_FE8B57:
 text "\l"
 endtext
 
-;fe5a42
-Text1474:
+;fe8b59
+Text_FE8B59:
 text "\l"
 endtext
 
-;fe5a44
-Text1475:
+;fe8b5b
+Text_FE8B5B:
 text "\l"
 endtext
 
-;fe5a46
-Text1476:
+;fe8b5d
+Text_FE8B5D:
 text "\l"
 endtext
 
-;fe5a48
-Text1477:
+;fe8b5f
+Text_FE8B5F:
 text "\l"
 endtext
 
-;fe5a4a
-Text1478:
+;fe8b61
+Text_FE8B61:
 text "\l"
 endtext
 
-;fe5a4c
-Text1479:
+;fe8b63
+Text_FE8B63:
 text "\l"
 endtext
 
-;fe5a4e
-Text1480:
+;fe8b65
+Text_FE8B65:
 text "\l"
 endtext
 
-;fe5a50
-Text1481:
+;fe8b67
+Text_FE8B67:
 text "\l"
 endtext
 
-;fe5a52
-Text1482:
+;fe8b69
+Text_FE8B69:
 text "\l"
 endtext
 
-;fe5a54
-Text1483:
-text "モンスターの特技をふうじるぞ。"
-endtext
-
-;fe5a66
-Text1484:
-text "モンスターを遠くにふっとばせるぞ。"
-endtext
-
-;fe5a79
-Text1485:
-text "モンスターのレベルを上げられるぞ。"
-endtext
-
-;fe5a8b
-Text1486:
-text "モンスターのレベルを下げられるぞ。"
-endtext
-
-;fe5a9d
-Text1487:
-text "モンスターを自分の身がわりにするぞ。"
-endtext
-
-;fe5ab3
-Text1488:
-text "モンスターと自分の位置が入れ替わるぞ。"
-endtext
-
-;fe5acc
-Text1489:
-text "モンスターを肉にしてしまうぞ。"
-endtext
-
-;fe5add
-Text1490:
-text "ガイコツまどうが持っている杖だ。\lいろいろなことが起きるぞ。"
-endtext
-
-;fe5afd
-Text1491:
-text "モンスターを金縛りにするぞ。"
-endtext
-
-;fe5b0d
-Text1492:
-text "モンスターを出口の所へワープさせて\l金縛りにするぞ。"
-endtext
-
-;fe5b2b
-Text1493:
-text "自分の痛みをモンスターにも\l感じさせる事ができるぞ。"
-endtext
-
-;fe5b4a
-Text1494:
+;fe8b6b
+Text_FE8B6B:
 text "\l"
 endtext
 
-;fe5b4c
-Text1495:
+;fe8b6d
+Text_FE8B6D:
+text "This will stop monsters from using\ltheir special ability."
+endtext
+
+;fe8ba7
+Text_FE8BA7:
+text "You can knock monsters back far away."
+endtext
+
+;fe8bcd
+Text_FE8BCD:
+text "You can raise monster's levels with this."
+endtext
+
+;fe8bf7
+Text_FE8BF7:
+text "You can lower monster's levels with this."
+endtext
+
+;fe8c21
+Text_FE8C21:
+text "You can turn monsters into a\ldummy copy of yourself."
+endtext
+
+;fe8c56
+Text_FE8C56:
+text "You can swap places with a\lmonster with this."
+endtext
+
+;fe8c84
+Text_FE8C84:
+text "You can turn monsters into\lmeat with this."
+endtext
+
+;fe8caf
+Text_FE8CAF:
+text "This is a Skeleton Mage's staff.\lIt does various different things."
+endtext
+
+;fe8cf2
+Text_FE8CF2:
+text "This will paralyze monsters."
+endtext
+
+;fe8d0f
+Text_FE8D0F:
+text "This will warp monsters to the\lexit and paralyze them."
+endtext
+
+;fe8d46
+Text_FE8D46:
+text "You can make monsters feel your\lpain with this."
+endtext
+
+;fe8d76
+Text_FE8D76:
 text "\l"
 endtext
 
-;fe5b4e
-Text1496:
+;fe8d78
+Text_FE8D78:
 text "\l"
 endtext
 
-;fe5b50
-Text1497:
+;fe8d7a
+Text_FE8D7A:
 text "\l"
 endtext
 
-;fe5b52
-Text1498:
+;fe8d7c
+Text_FE8D7C:
 text "\l"
 endtext
 
-;fe5b54
-Text1499:
+;fe8d7e
+Text_FE8D7E:
 text "\l"
 endtext
 
-;fe5b56
-Text1500:
+;fe8d80
+Text_FE8D80:
 text "\l"
 endtext
 
-;fe5b58
-Text1501:
+;fe8d82
+Text_FE8D82:
 text "\l"
 endtext
 
-;fe5b5a
-Text1502:
+;fe8d84
+Text_FE8D84:
 text "\l"
 endtext
 
-;fe5b5c
-Text1503:
+;fe8d86
+Text_FE8D86:
 text "\l"
 endtext
 
-;fe5b5e
-Text1504:
+;fe8d88
+Text_FE8D88:
 text "\l"
 endtext
 
-;fe5b60
-Text1505:
+;fe8d8a
+Text_FE8D8A:
 text "\l"
 endtext
 
-;fe5b62
-Text1506:
-text "装備すると隠し通路を発見するぞ。\l水の上を歩けるようになるぞ。"
-endtext
-
-;fe5b87
-Text1507:
-text "装備すると店で値切ることができるぞ。"
-endtext
-
-;fe5b9c
-Text1508:
-text "装備するとワナにかからなくなるぞ。\lモンスターがワナにかかるようになるぞ。"
-endtext
-
-;fe5bc2
-Text1509:
-text "装備すると経験値にかかわらず\lレベルが固定されるぞ。"
-endtext
-
-;fe5be2
-Text1510:
-text "装備するとＨＰの回復がはやくなるぞ。\lしかしそのあいだ\lはらへりもはやいぞ。"
-endtext
-
-;fe5c0d
-Text1511:
-text "装備すると剣も盾も錆びなくなるぞ。"
-endtext
-
-;fe5c21
-Text1512:
-text "装備すると\l会心の一撃がでやすくなるぞ。"
-endtext
-
-;fe5c39
-Text1513:
-text "装備すると\l痛恨の一撃をうけやすくなるぞ。"
-endtext
-
-;fe5c52
-Text1514:
-text "装備すると持っているものに\l呪いをかけられることがなくなるぞ。"
-endtext
-
-;fe5c73
-Text1515:
-text "装備すると投げたものがすべて\l貫通してしまうぞ。"
-endtext
-
-;fe5c8f
-Text1516:
-text "装備すると\l時間とともに経験値が上がっていくぞ。"
-endtext
-
-;fe5cac
-Text1517:
-text "装備すると\l持っているアイテムを落としてしまうぞ。"
-endtext
-
-;fe5cc7
-Text1518:
-text "装備すると\lモンスターとアイテムの位置がわかるぞ。"
-endtext
-
-;fe5ce3
-Text1519:
-text "装備すると混乱しなくなるぞ。"
-endtext
-
-;fe5cf4
-Text1520:
-text "装備すると\l拾ったアイテムが識別されるぞ。"
-endtext
-
-;fe5d0c
-Text1521:
+;fe8d8c
+Text_FE8D8C:
 text "\l"
 endtext
 
-;fe5d0e
-Text1522:
+;fe8d8e
+Text_FE8D8E:
+text "If you equip this, you will find\lsecret passages. You can also\lwalk on top of water."
+endtext
+
+;fe8de3
+Text_FE8DE3:
+text "You can barter in the shops while\lequipping this."
+endtext
+
+;fe8e15
+Text_FE8E15:
+text "While equipping this traps will\lnot work on you, and monsters\lwill be affected by them."
+endtext
+
+;fe8e6d
+Text_FE8E6D:
+text "If you equip this, your experience\lwill remain constant and your\llevel will not change."
+endtext
+
+;fe8ec5
+Text_FE8EC5:
+text "If you equip this, your HP will\lheal faster. But it will make you\lhungry faster too."
+endtext
+
+;fe8f1a
+Text_FE8F1A:
+text "While equipping this, your sword\land shield will not rust."
+endtext
+
+;fe8f55
+Text_FE8F55:
+text "You will deal more critical hits\lwhile equipping this."
+endtext
+
+;fe8f8c
+Text_FE8F8C:
+text "You will receive more critical\lhits while equipping this."
+endtext
+
+;fe8fc6
+Text_FE8FC6:
+text "While equipping this, nothing\lyou carry can become cursed."
+endtext
+
+;fe9001
+Text_FE9001:
+text "While equipping this, anything\lyou throw will penetrate its target."
+endtext
+
+;fe9045
+Text_FE9045:
+text "While equipping this, your\lexperience will raise with time."
+endtext
+
+;fe9081
+Text_FE9081:
+text "While equipping this you will\ldrop your items."
+endtext
+
+;fe90b0
+Text_FE90B0:
+text "While equipping this you will\lknow where monsters and items are."
+endtext
+
+;fe90f1
+Text_FE90F1:
+text "While equipping this you will not\lbecome confused."
+endtext
+
+;fe9124
+Text_FE9124:
+text "While equipping this, you will\lidentify anything you pick up."
+endtext
+
+;fe9162
+Text_FE9162:
 text "\l"
 endtext
 
-;fe5d10
-Text1523:
+;fe9164
+Text_FE9164:
 text "\l"
 endtext
 
-;fe5d12
-Text1524:
+;fe9166
+Text_FE9166:
 text "\l"
 endtext
 
-;fe5d14
-Text1525:
+;fe9168
+Text_FE9168:
 text "\l"
 endtext
 
-;fe5d16
-Text1526:
+;fe916a
+Text_FE916A:
 text "\l"
 endtext
 
-;fe5d18
-Text1527:
+;fe916c
+Text_FE916C:
 text "\l"
 endtext
 
-;fe5d1a
-Text1528:
+;fe916e
+Text_FE916E:
 text "\l"
 endtext
 
-;fe5d1c
-Text1529:
+;fe9170
+Text_FE9170:
 text "\l"
 endtext
 
-;fe5d1e
-Text1530:
+;fe9172
+Text_FE9172:
 text "\l"
 endtext
 
-;fe5d20
-Text1531:
+;fe9174
+Text_FE9174:
 text "\l"
 endtext
 
-;fe5d22
-Text1532:
+;fe9176
+Text_FE9176:
 text "\l"
 endtext
 
-;fe5d24
-;"Restores hunger by a little."
-Text1533:
-text "少しおなかがふくれるぞ。"
+;fe9178
+Text_FE9178:
+text "\l"
 endtext
 
-;fe5d32
-;"Restores hunger."
-Text1534:
-text "おなかがふくれるぞ。"
+;fe917a
+Text_FE917A:
+text "This will fill you up a bit."
 endtext
 
-;fe5d3d
-;"Restores hunger, but poisons you."
-Text1535:
-text "おなかがすこしふくれるが、\l毒でからだをこわしてしまうぞ。"
+;fe9197
+Text_FE9197:
+text "This will fill you up."
 endtext
 
-;fe5d5c
-Text1536:
-text "最大満腹度が５％増えるぞ。\lおなかがいっぱいになるぞ。"
+;fe91ae
+Text_FE91AE:
+text "This will fill you up a bit, but\lthe poison in it will hurt you."
 endtext
 
-;fe5d7e
-Text1537:
-text "おなかがすこしふくれるぞ。\l特別なちからを身につけられる\lこともあるぞ。"
+;fe91ef
+Text_FE91EF:
+text "This will raise your maximum\lsatiation by 5%. It will fill\lyou up totally too."
 endtext
 
-;fe5da5
-Text1538:
-text "開発中"
+;fe923e
+Text_FE923E:
+text "This will fill you up a bit.\lIt will also sometimes give\lyou special powers."
 endtext
 
-;fe5daa
-;"You can put in and take items out."
-Text1539:
-text "アイテムを\l出し入れできるぞ。"
+;fe928b
+Text_FE928B:
+text "In development"
 endtext
 
-;fe5dba
-Text1540:
-text "中に隠れてモンスターから\l姿を消せるぞ。"
+;fe929a
+Text_FE929A:
+text "You can put items in and\lout of this."
 endtext
 
-;fe5dd2
-Text1541:
-text "壺に入れたアイテムを\lふやせるぞ。"
+;fe92c0
+Text_FE92C0:
+text "You can climb into this pot and\lhide from monsters in it."
 endtext
 
-;fe5de4
-Text1542:
-text "しばらく入れたままにしておくと、\lアイテムを強くできるぞ。"
+;fe92fa
+Text_FE92FA:
+text "This will increase the items\lyou put in it."
 endtext
 
-;fe5e02
-Text1543:
-text "壺に入れたアイテムを\l識別できるぞ。"
+;fe9326
+Text_FE9326:
+text "If you leave items in it for a\lwhile, they will become more\lpowerful."
 endtext
 
-;fe5e16
-;"Restores your status."
-Text1544:
-text "ステータスが回復するぞ。"
+;fe936c
+Text_FE936C:
+text "Any items you put in this pot\lwill be identified."
 endtext
 
-;fe5e25
-Text1545:
-text "壺に入れたアイテムが、渓谷の宿場の\l倉庫に送られるぞ。"
+;fe939e
+Text_FE939E:
+text "This will heal your status."
 endtext
 
-;fe5e47
-Text1546:
-text "しばらく入れたままにしておくと、\lアイテムを弱くしてしまうぞ。"
+;fe93ba
+Text_FE93BA:
+text "Any items you put in this pot\lwill be sent to the Warehouse\lin the Valley Inn."
 endtext
 
-;fe5e68
-Text1547:
-text "手が抜けなくなるぞ。"
+;fe9409
+Text_FE9409:
+text "If you leave items in this for\la while, they will weaken."
 endtext
 
-;fe5e75
-;"Makes an item disappear."
-Text1548:
-text "アイテムがなくなるぞ。"
+;fe9443
+Text_FE9443:
+text "You can't pull your hand out."
 endtext
 
-;fe5e81
-;"This is a monster!!"
-Text1549:
-text "これはモンスターだ！！"
+;fe9461
+Text_FE9461:
+text "Your items will disappear."
 endtext
 
-;fe5e8d
-;"Changes items."
-Text1550:
-text "アイテムが変化するぞ。"
+;fe947c
+Text_FE947C:
+text "This is a monster!!"
 endtext
 
-;fe5e9b
-;"Lets you create new swords, shields, and staffs. Be careful about the order you put them in."
-Text1551:
-text "剣、盾、杖を合成出来るぞ。\l入れる順番に気をつけろ。"
+;fe9490
+Text_FE9490:
+text "This will transform your items."
 endtext
 
-;fe5eba
-Text1552:
-text "ぬすっトドが入っているぞ。"
+;fe94b0
+Text_FE94B0:
+text "You can fuse swords, shields,\lor staffs. Be careful of the\lorder you put them in."
 endtext
 
-;fe5ec8
-Text1553:
-text "陶芸家ガイバラが作った壺だ。"
+;fe9502
+Text_FE9502:
+text "Theftodos are inside this."
 endtext
 
-;fe5edb
-Text1554:
-text "陶芸家ガイバラが作った壺だ。"
+;fe951d
+Text_FE951D:
+text "This was made by the Artisan Gaibara."
 endtext
 
-;fe5eee
-Text1555:
-text "陶芸家ガイバラが作った壺だ。\lかべに当てても割れないぞ。"
+;fe9543
+Text_FE9543:
+text "This was made by the Artisan Gaibara."
 endtext
 
-;fe5f11
-Text1556:
-text "陶芸家ガイバラが作った壺だ。\lかべに当たると爆発するぞ。"
+;fe9569
+Text_FE9569:
+text "This was made by the Artisan Gaibara.\lIt won't break when thrown against\la wall."
 endtext
 
-;fe5f34
-Text1557:
-text "開発中"
+;fe95ba
+Text_FE95BA:
+text "This was made by the Artisan Gaibara.\lIt will explode when it hits a wall."
 endtext
 
-;fe5f39
-Text1558:
-text "開発中"
+;fe9605
+Text_FE9605:
+text "In development"
 endtext
 
-;fe5f3e
-Text1559:
-text "開発中"
+;fe9614
+Text_FE9614:
+text "In development"
 endtext
 
-;fe5f43
-Text1560:
-text "開発中"
+;fe9623
+Text_FE9623:
+text "In development"
 endtext
 
-;fe5f48
-Text1561:
-text "開発中"
+;fe9632
+Text_FE9632:
+text "In development"
 endtext
 
-;fe5f4d
-Text1562:
-text "開発中"
+;fe9641
+Text_FE9641:
+text "In development"
 endtext
 
-;fe5f52
-Text1563:
-text "開発中"
+;fe9650
+Text_FE9650:
+text "In development"
 endtext
 
-;fe5f57
-Text1564:
-text "開発中"
+;fe965f
+Text_FE965F:
+text "In development"
 endtext
 
-;fe5f5c
-Text1565:
-text "開発中"
+;fe966e
+Text_FE966E:
+text "In development"
 endtext
 
-;fe5f61
-Text1566:
-text "開発中"
+;fe967d
+Text_FE967D:
+text "In development"
 endtext
 
-;fe5f66
-Text1567:
-text "開発中"
+;fe968c
+Text_FE968C:
+text "In development"
 endtext
 
-;fe5f6b
-Text1568:
-text "開発中"
+;fe969b
+Text_FE969B:
+text "In development"
 endtext
 
-;fe5f70
-Text1569:
-text "開発中"
+;fe96aa
+Text_FE96AA:
+text "In development"
 endtext
 
-;fe5f75
-Text1570:
-text "開発中"
+;fe96b9
+Text_FE96B9:
+text "In development"
 endtext
 
-;fe5f7a
-Text1571:
-text "開発中"
+;fe96c8
+Text_FE96C8:
+text "In development"
 endtext
 
-;fe5f7f
-Text1572:
-text "開発中"
+;fe96d7
+Text_FE96D7:
+text "In development"
 endtext
 
-;fe5f84
-Text1573:
-text "開発中"
+;fe96e6
+Text_FE96E6:
+text "In development"
 endtext
 
-;fe5f89
-Text1574:
-text "開発中"
+;fe96f5
+Text_FE96F5:
+text "In development"
 endtext
 
-;fe5f8e
-Text1575:
-text "開発中"
+;fe9704
+Text_FE9704:
+text "In development"
 endtext
 
-;fe5f93
-Text1576:
-text "開発中"
+;fe9713
+Text_FE9713:
+text "In development"
 endtext
 
-;fe5f98
-Text1577:
-text "開発中"
+;fe9722
+Text_FE9722:
+text "In development"
 endtext
 
-;fe5f9d
-Text1578:
-text "開発中"
+;fe9731
+Text_FE9731:
+text "In development"
 endtext
 
-;fe5fa2
-Text1579:
-text "開発中"
+;fe9740
+Text_FE9740:
+text "In development"
 endtext
 
-;fe5fa7
-Text1580:
-text "開発中"
+;fe974f
+Text_FE974F:
+text "In development"
 endtext
 
-;fe5fac
-Text1581:
-text "開発中"
+;fe975e
+Text_FE975E:
+text "In development"
 endtext
 
-;fe5fb1
-Text1582:
-text "開発中"
+;fe976d
+Text_FE976D:
+text "In development"
 endtext
 
-;fe5fb6
-;"If you eat this, you can transform into a monster."
-Text1583:
-text "これを食べれば、モンスターに変身\lできるぞ。"
+;fe977c
+Text_FE977C:
+text "In development"
 endtext
 
-;fe5fcf
-;Unused from Torneko
-;"If you present this to the king, you can go adventure in a mystery dungeon."
-Text1584:
-text "これを王様にわたせば\l不思議のダンジョンで冒険ができるぞ。"
+;fe978b
+Text_FE978B:
+text "If you eat this you will turn\linto a monster."
 endtext
 
-;fe5ff4
-Text1585:
-text "これこそ、長いあいださがしもとめて\lいた宝ものだ。"
+;fe97b9
+Text_FE97B9:
+text "If you give this to the King, you\lcan adventure in the Mysterious\lDungeon."
 endtext
 
-;fe6010
-Text1586:
-text "なんかヘンなにおいがするぞ。"
+;fe9804
+Text_FE9804:
+text "This is a treasure that has sat\luntouched for a long time."
 endtext
 
-;fe601f
-;"Meant for a new item."
-Text1587:
-text "新規アイテム目的物だ。"
+;fe983f
+Text_FE983F:
+text "This smells kind of funny."
 endtext
 
-;fe602c
-;"This is money."
-Text1588:
-text "これはお金だ。"
+;fe985a
+Text_FE985A:
+text "This is a new item target."
 endtext
 
-;fe6034
-Text1589:
-text "　　　"
+;fe9875
+Text_FE9875:
+text "This is money."
+endtext
+
+;fe9884
+Text_FE9884:
+text "   "
 endtext

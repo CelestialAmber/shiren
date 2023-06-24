@@ -66,7 +66,6 @@ int CalculateHeaderByte(int length){
 	return headerByte;
 }
 
-//TODO: add support for 1bpp images
 int compress(uint8_t* imageData, int uncompressedSize, int bitDepth) {
 	bool debugInfo = false;
 	int tileSize = 8 * bitDepth;

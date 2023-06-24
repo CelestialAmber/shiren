@@ -311,7 +311,7 @@ NPCScriptFunction_C15B7C:
 	lda.b wTemp00
 	cmp.b #$0A
 	bne @false
-	jsl.l func_C62766
+	jsl.l GetShuffleDungeonIndex
 	lda.b wTemp00
 	cmp.b #$01
 	bne @false
@@ -330,7 +330,7 @@ NPCScriptFunction_C15B99:
 	lda.b wTemp00
 	cmp.b #$0A
 	bne @false
-	jsl.l func_C62766
+	jsl.l GetShuffleDungeonIndex
 	lda.b wTemp00
 	cmp.b #$06
 	bne @false
@@ -349,7 +349,7 @@ NPCScriptFunction_C15BB6:
 	lda.b wTemp00
 	cmp.b #$0A
 	bne @false
-	jsl.l func_C62766
+	jsl.l GetShuffleDungeonIndex
 	lda.b wTemp00
 	cmp.b #$0A
 	bne @false
@@ -368,7 +368,7 @@ NPCScriptFunction_C15BD3:
 	lda.b wTemp00
 	cmp.b #$0A
 	bne @false
-	jsl.l func_C62766
+	jsl.l GetShuffleDungeonIndex
 	lda.b wTemp00
 	cmp.b #$0C
 	bne @false
@@ -387,7 +387,7 @@ NPCScriptFunction_C15BF0:
 	lda.b wTemp00
 	cmp.b #$01
 	bne @false
-	jsl.l func_C62766
+	jsl.l GetShuffleDungeonIndex
 	lda.b wTemp00
 	cmp.b #$08
 	bne @false
@@ -492,7 +492,7 @@ NPCScriptFunction_C15D62:
 	lda.b wTemp00
 	cmp.b #$0A
 	bne @false
-	jsl.l func_C62766
+	jsl.l GetShuffleDungeonIndex
 	lda.b wTemp00
 	cmp.b #$0F
 	bne @false
@@ -511,7 +511,7 @@ NPCScriptFunction_C15D7F:
 	lda.b wTemp00
 	cmp.b #$0A
 	bne @false
-	jsl.l func_C62766
+	jsl.l GetShuffleDungeonIndex
 	lda.b wTemp00
 	cmp.b #$11
 	bne @false
@@ -530,7 +530,7 @@ NPCScriptFunction_C15D9C:
 	lda.b wTemp00
 	cmp.b #$0A
 	bne @false
-	jsl.l func_C62766
+	jsl.l GetShuffleDungeonIndex
 	lda.b wTemp00
 	cmp.b #$12
 	bne @false
@@ -549,7 +549,7 @@ NPCScriptFunction_C15DB9:
 	lda.b wTemp00
 	cmp.b #$0A
 	bne @false
-	jsl.l func_C62766
+	jsl.l GetShuffleDungeonIndex
 	lda.b wTemp00
 	cmp.b #$14
 	bne @false
@@ -568,7 +568,7 @@ NPCScriptFunction_C15DD6:
 	lda.b wTemp00
 	cmp.b #$0A
 	bne @false
-	jsl.l func_C62766
+	jsl.l GetShuffleDungeonIndex
 	lda.b wTemp00
 	cmp.b #$30
 	bne @false
@@ -1861,7 +1861,7 @@ func_C16B75:
 	plp
 	rtl
 @lbl_C16B84:
-	jsl.l func_C62766
+	jsl.l GetShuffleDungeonIndex
 	lda.b wTemp00
 	ldx.b #$00
 	cmp.b #$01
@@ -1940,7 +1940,7 @@ func_C16C7D:
 	plp
 	rtl
 @lbl_C16C8C:
-	jsl.l func_C62766
+	jsl.l GetShuffleDungeonIndex
 	lda.b wTemp00
 	ldx.b #$00
 	cmp.b #$01

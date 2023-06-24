@@ -2281,7 +2281,8 @@ func_C6275B:
 	plp
 	rtl
 
-func_C62766:
+;c62766
+GetShuffleDungeonIndex:
 	php
 	sep #$20 ;A->8
 	lda.l wShuffleDungeonIndex
@@ -2290,6 +2291,7 @@ func_C62766:
 	rtl
 
 ;result is stored in wTemp00
+;c62771
 GetCurrentFloor:
 	php
 	sep #$20 ;A->8
@@ -2298,6 +2300,7 @@ GetCurrentFloor:
 	plp
 	rtl
 
+;c6277c
 GetStairsDirection:
 	php
 	sep #$20 ;A->8
@@ -3013,8 +3016,9 @@ func_C62D0F:
 	clc
 	adc.w #$0028
 	sta.l $7ED60F
-	cpy.w #$0032
-	beq @lbl_C630C1
+	jmp.l func_FE0100 ;added
+	.db $1E ;remnant of beq @lbl_C630C1
+func_C630A3:
 	lda.b wTemp00
 	clc
 	adc.w #$6006
@@ -3029,8 +3033,9 @@ func_C62D0F:
 	adc.w #$07A8
 	sec
 	sbc.l $7ED60D
-	mvp $B3,$B3
-@lbl_C630C1:
+	rtl ;added
+	.db $B3,$B3 ;remnant of mvp $B3,$B3
+func_C630C1:
 	sep #$20 ;A->8
 	ldx.b wTemp00
 	lda.l $B36006,x
@@ -3559,10 +3564,15 @@ func_C63432:
 	sta.l $7ED62D
 	lda.l $B36023,x
 	sta.l $7ED635
-	lda.l $B36007,x
+	;start of modified code
+	txa
+	clc
+	adc.w #$6007
 	sta.l $7ED614
-	lda.l $B36009,x
+	jmp.w @lbl_C63693
+	;end of modified code
 	sta.l $7ED616
+@lbl_C63693:
 	rep #$20 ;A->16
 	lda.w #$0028
 	sta.b wTemp00
@@ -6787,12 +6797,14 @@ func_C66420:
 	rep #$20 ;A->16
 	lda.w #$04F7
 	sta.b w7f0000
-	sep #$20 ;A->8
-	lda.b #$7E
-	sta.b w7f0004
-	rep #$20 ;A->16
-	lda.w #$D614
+	;start of modified code
+	lda.l $7ED614
 	sta.b w7f0002
+	lda.w #$00B3
+	sta.b w7f0004
+	nop 
+	nop 
+	;end of modified code
 	call_savebank func_C4B94F
 @lbl_C6653F:
 	lda.w #$EB86
@@ -6872,7 +6884,7 @@ func_C66420:
 	lda.w #$0202
 	sta.b w7f0000
 	sep #$20 ;A->8
-	lda.b #$04
+	lda.b #$05 ;modified from 4 to 5
 	sta.b w7f0002
 	lda.b #$00
 	sta.b w7f0002+1
@@ -7099,7 +7111,7 @@ func_C66420:
 	lda.w #$02C2
 	sta.b w7f0000
 	sep #$20 ;A->8
-	lda.b #$04
+	lda.b #$05 ;modified from 4 to 5
 	sta.b w7f0002
 	lda.b #$00
 	sta.b w7f0002+1
@@ -7185,7 +7197,7 @@ func_C66420:
 	lda.w #$0302
 	sta.b w7f0000
 	sep #$20 ;A->8
-	lda.b #$04
+	lda.b #$05 ;modified from 4 to 5
 	sta.b w7f0002
 	lda.b #$00
 	sta.b w7f0002+1
@@ -7744,7 +7756,7 @@ func_C66FD4:
 func_C67008:
 	lda.b #$00
 	sta.l $7ED653
-	lda.l $7ED652
+	jsl.l func_C678F1 ;modified
 	sta.b wTemp02
 	phy
 	txy
@@ -8664,34 +8676,46 @@ func_C678AE:
 	call_savebank func_C4B94F
 	ply
 	plx
-	lda.w #$EB86
-	sta.b wTemp02
+	;start of modified code
+	php
 	phx
 	phy
-	jsl.l func_C4BF88
+	lda.b wTemp00
+	pha
+	txa
+	jsl.l func_FE0203
+	pha 
+	jsl.l func_FE01B6
+	stx.b wTemp01
+	sta.b wTemp00
+	pla
+	;a *= 16
+	asl a
+	asl a
+	asl a
+	asl a
+	tax
+	ldy.w #$0000
+@lbl_C678D9:
+	lda.l LeaderboardNames,x
+	sta.b [wTemp00],y
+	iny
+	iny
+	inx
+	inx
+	cpy.w #$0010
+	bne @lbl_C678D9
+	pla
+	sta.b wTemp00
 	ply
 	plx
-	lda.b wTemp02
-	cmp.w #$FFFF
-	beq @lbl_C6792C
-	sep #$20 ;A->8
-	sta.l $B36007,x
-	rep #$20 ;A->16
-	lda.w #$EB86
-	sta.b wTemp02
-	phx
-	phy
-	jsl.l func_C4BF88
-	ply
-	plx
-	lda.b wTemp02
-	cmp.w #$FFFF
-	beq @lbl_C6792C
-	sep #$20 ;A->8
-	sta.l $B36008,x
-	rep #$20 ;A->16
-	lda.w #$EB86
-	sta.b wTemp02
+	plp
+	jmp.w func_C678F1@lbl_C6792C
+func_C678F1:
+	lda.w #$3808
+	sbc.l $7ED651
+	rtl 
+	;end of modified code
 	phx
 	phy
 	jsl.l func_C4BF88

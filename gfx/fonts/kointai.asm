@@ -4,6 +4,7 @@
 ;compressed
 .incbin "gfx/fonts/kointai/numbers.fnt"
 
+
 KointaiFontCharacters:
 	.dw KointaiFontChar0
 	.dw KointaiFontChar1
@@ -292,3 +293,4 @@ KointaiFontChar93:
 .incbin "gfx/fonts/kointai/char93.fntchr"
 KointaiFontChar94:
 .incbin "gfx/fonts/kointai/char94.fntchr"
+

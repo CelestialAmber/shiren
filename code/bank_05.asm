@@ -154,7 +154,7 @@ DisplayAreaTitle:
 	phx
 	asl a
 	tax
-	lda.l KointaiFontCharacters,x
+	lda.l Data_db6000,x
 	pha
 	tyx
 	lda.b w7f0006
@@ -167,7 +167,7 @@ DisplayAreaTitle:
 	sta.b w7f0002
 	lda.b w7f0004
 	pha
-	call_savebank LoadKointaiFontTiles
+	call_savebank func_DB6200
 	pla
 	clc
 	adc.w #$0090
@@ -264,145 +264,110 @@ UNREACH_C5CDCE:
 
 AreaNames:
 	.db $FD,$FD,$FD,$FD,$FD,$FD,$FD,$F8,$F8
-
-	;kobami valley
-	.db $08
-	areaname "渓谷の宿場"
-	.db $FD,$FD,$F8,$F8
-
-	;cedar-lined road
-	.db $08
-	areaname "杉並の旧街道"
-	.db $FD,$F8,$F8
-
-	;mountain stream
-	.db $0B
-	areaname "山間渓流"
-	.db $FD,$FD,$FD,$F8,$F8
-
-	;bamboo village
-	.db $0A
-	areaname "竹林の村"
-	.db $FD,$FD,$FD,$F8,$F8
-
-	;pegasus valley
-	.db $0D
-	areaname "天馬峠"
-	.db $FD,$FD,$FD,$FD,$F8,$F8
 	
-	;mountaintop forest
 	.db $0A
-	areaname "山頂の森林"
-	.db $FD,$FD,$F8,$F8
-
-	;mountaintop town
-	.db $0A
-	areaname "山頂の町"
+	.db $00,$01,$02,$03 ;"Valley Inn"
 	.db $FD,$FD,$FD,$F8,$F8
 	
-	;old mine
-	.db $08
-	areaname "ネブリ山廃坑"
-	.db $FD,$F8,$F8
-	
-	;janus valley
-	.db $07
-	areaname "二面地蔵の谷"
-	.db $FD,$F8,$F8
-
-	;cavern in the cliff
-	.db $0A
-	areaname "断崖の岩屋"
-	.db $FD,$FD,$F8,$F8
-	
-	;mountain spirit cave
-	.db $0A
-	areaname "山霊の洞窟"
-	.db $FD,$FD,$F8,$F8
-	
-	;cryptic rock valley
-	.db 11
-	areaname "奇岩谷"
-	.db $FD,$FD,$FD,$FD,$F8,$F8
-	
-	;valley forest (unused?)
-	.db 10
-	areaname "谷間の森林"
-	.db $FD,$FD,$F8,$F8
-	
-	;waterfall marsh
-	.db 11
-	areaname "瀑布湿原"
-	.db $FD,$FD,$FD,$F8,$F8
-
-	;table mountain
-	.db 5
-	areaname "テーブルマウンテン"
-	
-	;underground water village
-	.db 7
-	areaname "地下水脈の村"
-	.db $FD,$F8,$F8
-
-	;illusion ghost valley
-	.db $0A
-	areaname "ムゲン幽谷"
-	.db $FD,$FD,$F8,$F8
-	
-	;trial of phantoms
-	.db $0A
-	areaname "幻魔の試練"
-	.db $FD,$FD,$F8,$F8
-	
-	;dragoncry trial
-	.db $0A
-	areaname "竜哭の試練"
-	.db $FD,$FD,$F8,$F8
-	
-	;final trial
-	.db $0A
-	areaname "最後の試練"
-	.db $FD,$FD,$F8,$F8
-	
-	;land of the sun
-	.db $08
-	areaname "太陽の大地"
-	.db $FD,$FD,$F8,$F8
-	
-	;golden city
-	.db $0A
-	areaname "黄金都市"
-	.db $FD,$FD,$FD,$F8,$F8
-	
-	;beneath the rainbow
-	.db $08
-	areaname "虹の根もと"
-	.db $FD,$FD,$F8,$F8
-	
-	;waterfall cave
-	.db $0A
-	areaname "滝壺の洞窟"
-	.db $FD,$FD,$F8,$F8
-
-	;fei's problem
-	.db $08
-	areaname "フェイの問題"
-	.db $FD,$F8,$F8
-
-	;fei's final problem
 	.db $06
-	areaname "フェイの最終問題"
+	.db $04,$05,$06,$07,$08,$09,$0A,$0B ;"Old Cedar-lined Road"
 	.db $F8
 	
-	;kitchen god shrine
 	.db $08
-	areaname "食神のほこら"
+	.db $0C,$0D,$0E,$0F,$10,$11,$12 ;"Mountain Stream"
+	.db $F8,$F8
+	
+	.db $04
+	.db $13,$14,$15,$16,$18,$19,$1A,$1B,$1C ;"Bamboo Forest Village"
+	
+	.db $0A
+	.db $1D,$1E,$1F,$20,$21 ;"Tenma Pass"
+	.db $FD,$FD,$F8,$F8
+	
+	.db $0A
+	.db $22,$23,$24,$25,$26,$27 ;"Summit Forest"
 	.db $FD,$F8,$F8
 	
-	;trap master's dungeon
-	.db $08
-	areaname "掛軸裏の洞窟"
+	.db $09
+	.db $28,$29,$2A,$2B,$2C ;"Summit Town"
+	.db $FD,$FD,$F8,$F8
+	
+	.db $0A
+	.db $2D,$2E,$2F,$30,$31 ;"Neburi Mine"
+	.db $FD,$FD,$F8,$F8
+	
+	.db $07
+	.db $32,$33,$34,$35,$36,$37 ;"Two Jizo Valley"
 	.db $FD,$F8,$F8
+	
+	.db $0A
+	.db $38,$39,$3A,$3B,$3C ;"Cliff Grotto"
+	.db $FD,$FD,$F8,$F8
+	
+	.db $05
+	.db $3D,$3E,$3F,$40,$41,$42,$43,$44,$45 ;"Mountain Spirit Cave"
+	
+	.db $03
+	.db $46,$47,$48,$49,$4A,$4B,$4C,$4D,$4E ;"Crooked Boulder Valley"
+	
+	.db $09
+	.db $4F,$50,$51,$52,$53,$54 ;"Valley Forest"
+	.db $FD,$F8,$F8
+	
+	.db $09
+	.db $55,$56,$57,$58,$59,$5A ;"Waterfall Marsh"
+	.db $FD,$F8,$F8
+	
+	.db $09
+	.db $5B,$5C,$5D,$5E,$5F,$60 ;"Table Mountain"
+	.db $FD,$F8,$F8
+	
+	.db $03
+	.db $61,$62,$63,$64,$65,$66,$67,$68,$69 ;"Underground River Town"
+	
+	.db $09
+	.db $6A,$6B,$6C,$6D,$6E,$6F ;"Mugen Ravine"
+	.db $FD,$F8,$F8
+	
+	.db $06
+	.db $70,$71,$72,$73,$74,$75,$76,$77 ;"Trial of the Genma"
+	.db $F8
+	
+	.db $05
+	.db $78,$79,$7A,$7B,$7C,$7D,$7E,$7F,$80 ;"Trial of the Dragon's Wail"
+	
+	.db $09
+	.db $81,$82,$83,$84,$85,$86 ;"The Final Trial"
+	.db $FD,$F8,$F8
+	
+	.db $06
+	.db $87,$88,$89,$8A,$8B,$8C,$8D ;"Land of the Sun"
+	.db $F8,$F8
+	
+	.db $09
+	.db $8E,$8F,$90,$91,$92 ;"Golden City"
+	.db $FD,$FD,$F8,$F8
+	
+	.db $04
+	.db $93,$94,$95,$96,$97,$98,$99,$9A,$9B ;"Foot of the Rainbow"
+	
+	.db $09
+	.db $9C,$9D,$9E,$9F,$A0,$A1 ;"Waterfall Cave"
+	.db $FD,$F8,$F8
+	
+	.db $08
+	.db $A2,$A3,$A4,$A5,$A6,$A7 ;"Fei's Problem"
+	.db $FD,$F8,$F8
+	
+	.db $06
+	.db $A8,$A9,$AA,$AB,$AC,$AD,$AE,$AF ;"Fei's Final Problem"
+	.db $F8
+	
+	.db $04
+	.db $B0,$B1,$B2,$B3,$B4,$B5,$B6,$B7,$B8 ;"Shrine of the Food God"
+	
+	.db $04
+	.db $B9,$BA,$BB,$BC,$BD,$BE,$BF,$C0,$C1 ;"Cave of the Wall Scroll"
 	
 	.db $05
 	.db $FD,$FD,$FD,$FD,$FD,$FD,$FD,$F8,$F8

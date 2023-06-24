@@ -1,1789 +1,1541 @@
-;fe3eea
-;"Weapon"
-Text751:
-text "武器@"
-
-;fe3eef
-;"Arrow"
-Text752:
-text "矢@"
-
-;fe3ef2
-;"Shield"
-Text753:
-text "盾@"
-
-;fe3ef4
-;"Armband"
-Text754:
-text "腕輪@"
-
-;fe3ef7
-;"Scroll"
-Text755:
-text "巻物@"
-
-;fe3efa
-;"Staff"
-Text756:
-text "杖@"
-
-;fe3efc
-;"Herb"
-Text757:
-text "草@"
-
-;fe3efe
-;"Jar"
-Text758:
-text "壺@"
-
-;fe3f00
-;"Onigiri"
-Text759:
-text "おにぎり@"
-
-;fe3f05
-;"Bandit Leader"
-Text760:
-text "山賊親分@"
-
-;fe3f0e
-Text761:
-text "天狗師匠@"
-
-;fe3f17
-;"Reserve 33"
-Text762:
-text "予備３３@"
-
-;fe3f1d
-;"Reserve 44"
-Text763:
-text "予備４３@"
-
-;fe3f23
-;"Cudgel"
-Text764:
-text "こん棒@"
-
-;fe3f28
-;"Nagamaki"
-Text765:
-text "長巻@"
-
-;fe3f2c
-;"Bufu's Cleaver"
-Text766:
-text "ブフーの包丁@"
-
-;fe3f35
-;"Katana"
-Text767:
-text "カタナ@"
-
-;fe3f39
-;"Dragon Killer"
-Text768:
-text "ドラゴンキラー@"
-
-;fe3f41
-Text769:
-text "どうたぬき@"
-
-;fe3f47
-Text770:
-text "剛剣マンジカブラ@"
-
-;fe3f52
-Text771:
-text "成仏の鎌@"
-
-;fe3f5a
-Text772:
-text "つるはし@"
-
-;fe3f5f
-Text773:
-text "必中の剣@"
-
-;fe3f66
-Text774:
-text "ミノタウロスの斧@"
-
-;fe3f70
-Text775:
-text "妖刀かまいたち@"
-
-;fe3f7a
-Text776:
-text "１ツ目殺し@"
-
-;fe3f81
-;"Drain Buster"
-Text777:
-text "ドレインバスター@"
-
-;fe3f8a
-Text778:
-text "火迅風魔刀@"
-
-;fe3f94
-Text779:
-text "秘剣カブラステギ@"
-
-;fe3f9f
-;"Wood Arrow"
-Text780:
-text "木の矢@"
-
-;fe3fa5
-;"Iron Arrow"
-Text781:
-text "鉄の矢@"
-
-;fe3fab
-;"Silver Arrow"
-Text782:
-text "銀の矢@"
-
-;fe3fb1
-;"New Item"
-Text783:
-text "新規アイテム@"
-
-;fe3fb8
-Text784:
-text "新規アイテム@"
-
-;fe3fbf
-Text785:
-text "新規アイテム@"
-
-;fe3fc6
-;"Leather Shield"
-Text786:
-text "皮甲の盾@"
-
-;fe3fcd
-;"Bronzeward"
-Text787:
-text "青銅甲の盾@"
-
-;fe3fd6
-Text788:
-text "無どくの盾@"
-
-;fe3fdd
-;"Wooden Shield"
-Text789:
-text "木甲の盾@"
-
-;fe3fe4
-;"Iron Shield"
-Text790:
-text "鉄甲の盾@"
-
-;fe3feb
-;"Dragon Shield"
-Text791:
-text "ドラゴンシールド@"
-
-;fe3ff4
-Text792:
-text "風魔の盾@"
-
-;fe3ffa
-Text793:
-text "バトルカウンター@"
-
-;fe4003
-Text794:
-text "重装の盾@"
-
-;fe4009
-Text795:
-text "やまびこの盾@"
-
-;fe4010
-Text796:
-text "見切りの盾@"
-
-;fe4017
-Text797:
-text "見かけだおしの盾@"
-
-;fe4020
-Text798:
-text "使い捨ての盾@"
-
-;fe4029
-Text799:
-text "地雷ナバリの盾@"
-
-;fe4032
-Text800:
-text "トドの盾@"
-
-;fe4037
-Text801:
-text "ラセン風魔の盾@"
-
-;fe4040
-Text802:
-text "新規アイテム@"
-
-;fe4047
-Text803:
-text "新規アイテム@"
-
-;fe404e
-Text804:
-text "薬草@"
-
-;fe4052
-Text805:
-text "弟切草@"
-
-;fe4058
-Text806:
-text "しあわせ草@"
-
-;fe405e
-Text807:
-text "めぐすり草@"
-
-;fe4064
-Text808:
-text "ドラゴン草@"
-
-;fe406a
-Text809:
-text "無敵草@"
-
-;fe4070
-Text810:
-text "天使の種@"
-
-;fe4078
-Text811:
-text "復活の草@"
-
-;fe407f
-Text812:
-text "消え去り草@"
-
-;fe4087
-Text813:
-text "くねくね草@"
-
-;fe408d
-Text814:
-text "不幸の種@"
-
-;fe4095
-Text815:
-text "超不幸の種@"
-
-;fe409f
-Text816:
-text "キグニ族の種@"
-
-;fe40a8
-Text817:
-text "物忘れの草@"
-
-;fe40af
-Text818:
-text "－－－@"
-
-;fe40b3
-Text819:
-text "命の草@"
-
-;fe40b8
-Text820:
-text "胃拡張の種@"
-
-;fe40c2
-Text821:
-text "胃縮小の種@"
-
-;fe40cc
-Text822:
-text "話の種@"
-
-;fe40d2
-Text823:
-text "ちからの草@"
-
-;fe40d8
-Text824:
-text "どく消し草@"
-
-;fe40df
-Text825:
-text "どく草@"
-
-;fe40e3
-Text826:
-text "混乱草@"
-
-;fe40e9
-Text827:
-text "睡眠草@"
-
-;fe40ef
-;"Weeds"
-Text828:
-text "雑草@"
-
-;fe40f3
-Text829:
-text "新規アイテム@"
-
-;fe40fa
-Text830:
-text "新規アイテム@"
-
-;fe4101
-Text831:
-text "新規アイテム@"
-
-;fe4108
-Text832:
-text "新規アイテム@"
-
-;fe410f
-Text833:
-text "新規アイテム@"
-
-;fe4116
-Text834:
-text "新規アイテム@"
-
-;fe411d
-Text835:
-text "新規アイテム@"
-
-;fe4124
-Text836:
-text "新規アイテム@"
-
-;fe412b
-Text837:
-text "新規アイテム@"
-
-;fe4132
-Text838:
-text "新規アイテム@"
-
-;fe4139
-Text839:
-text "新規アイテム@"
-
-;fe4140
-Text840:
-text "新規アイテム@"
-
-;fe4147
-Text841:
-text "新規アイテム@"
-
-;fe414e
-Text842:
-text "新規アイテム@"
-
-;fe4155
-Text843:
-text "新規アイテム@"
-
-;fe415c
-Text844:
-text "新規アイテム@"
-
-;fe4163
-Text845:
-text "新規アイテム@"
-
-;fe416a
-Text846:
-text "新規アイテム@"
-
-;fe4171
-Text847:
-text "新規アイテム@"
-
-;fe4178
-Text848:
-text "新規アイテム@"
-
-;fe417f
-Text849:
-text "新規アイテム@"
-
-;fe4186
-Text850:
-text "おはらいの巻物@"
-
-;fe418e
-Text851:
-text "識別の巻物@"
-
-;fe4195
-Text852:
-text "あかりの巻物@"
-
-;fe419c
-Text853:
-text "壺増大の巻物@"
-
-;fe41a4
-Text854:
-text "真空斬りの巻物@"
-
-;fe41af
-Text855:
-text "くちなしの巻物@"
-
-;fe41b7
-;"-- Scroll"
-Text856:
-text "－－の巻物@"
-
-;fe41bd
-;"Trap Scroll"
-Text857:
-text "ワナの巻物@"
-
-;fe41c3
-Text858:
-text "困った時の巻物@"
-
-;fe41cc
-Text859:
-text "敵倍速の巻物@"
-
-;fe41d6
-Text860:
-text "バクスイの巻物@"
-
-;fe41de
-Text861:
-text "パワーアップの巻物@"
-
-;fe41e8
-Text862:
-text "－－の巻物@"
-
-;fe41ee
-Text863:
-text "自爆の巻物@"
-
-;fe41f6
-Text864:
-text "大部屋の巻物@"
-
-;fe41fe
-Text865:
-text "モンスターハウスの巻物@"
-
-;fe420a
-Text866:
-text "混乱の巻物@"
-
-;fe4212
-Text867:
-text "ジェノサイドの巻物@"
-
-;fe421c
-Text868:
-text "白紙の巻物@"
-
-;fe4224
-Text869:
-text "迷子の巻物@"
-
-;fe422b
-Text870:
-text "天の恵みの巻物@"
-
-;fe4235
-Text871:
-text "地の恵みの巻物@"
-
-;fe423e
-Text872:
-text "メッキの巻物@"
-
-;fe4245
-Text873:
-text "吸い出しの巻物@"
-
-;fe424e
-Text874:
-text "拾えずの巻物@"
-
-;fe4256
-Text875:
-text "－－の巻物@"
-
-;fe425c
-Text876:
-text "新規アイテム@"
-
-;fe4263
-Text877:
-text "新規アイテム@"
-
-;fe426a
-Text878:
-text "新規アイテム@"
-
-;fe4271
-Text879:
-text "新規アイテム@"
-
-;fe4278
-Text880:
-text "新規アイテム@"
-
-;fe427f
-Text881:
-text "新規アイテム@"
-
-;fe4286
-Text882:
-text "新規アイテム@"
-
-;fe428d
-Text883:
-text "新規アイテム@"
-
-;fe4294
-Text884:
-text "新規アイテム@"
-
-;fe429b
-Text885:
-text "新規アイテム@"
-
-;fe42a2
-Text886:
-text "新規アイテム@"
-
-;fe42a9
-Text887:
-text "新規アイテム@"
-
-;fe42b0
-Text888:
-text "封印の杖@"
-
-;fe42b7
-Text889:
-text "ふきとばしの杖@"
-
-;fe42bf
-Text890:
-text "しあわせの杖@"
-
-;fe42c6
-Text891:
-text "不幸の杖@"
-
-;fe42cd
-Text892:
-text "身がわりの杖@"
-
-;fe42d5
-Text893:
-text "場所替えの杖@"
-
-;fe42de
-Text894:
-text "ブフーの杖@"
-
-;fe42e4
-;"Skull Mage Staff"
-Text895:
-text "ガイコツまどうの杖@"
-
-;fe42ee
-Text896:
-text "かなしばりの杖@"
-
-;fe42f6
-Text897:
-text "一時しのぎの杖@"
-
-;fe42ff
-Text898:
-text "痛み分けの杖@"
-
-;fe4308
-Text899:
-text "新規アイテム@"
-
-;fe430f
-Text900:
-text "新規アイテム@"
-
-;fe4316
-Text901:
-text "新規アイテム@"
-
-;fe431d
-Text902:
-text "新規アイテム@"
-
-;fe4324
-Text903:
-text "新規アイテム@"
-
-;fe432b
-Text904:
-text "新規アイテム@"
-
-;fe4332
-Text905:
-text "新規アイテム@"
-
-;fe4339
-Text906:
-text "新規アイテム@"
-
-;fe4340
-Text907:
-text "新規アイテム@"
-
-;fe4347
-Text908:
-text "新規アイテム@"
-
-;fe434e
-Text909:
-text "新規アイテム@"
-
-;fe4355
-Text910:
-text "新規アイテム@"
-
-;fe435c
-Text911:
-text "通過の腕輪@"
-
-;fe4364
-Text912:
-text "値切の腕輪@"
-
-;fe436c
-Text913:
-text "ワナ師の腕輪@"
-
-;fe4374
-Text914:
-text "レベル固定の腕輪@"
-
-;fe437f
-Text915:
-text "回復の腕輪@"
-
-;fe4387
-Text916:
-text "錆よけの腕輪@"
-
-;fe438f
-Text917:
-text "会心の腕輪@"
-
-;fe4397
-Text918:
-text "痛恨の腕輪@"
-
-;fe439f
-Text919:
-text "呪いよけの腕輪@"
-
-;fe43a8
-Text920:
-text "遠投の腕輪@"
-
-;fe43b0
-Text921:
-text "しあわせの腕輪@"
-
-;fe43b8
-Text922:
-text "垂れ流しの腕輪@"
-
-;fe43c2
-Text923:
-text "透視の腕輪@"
-
-;fe43ca
-Text924:
-text "混乱よけの腕輪@"
-
-;fe43d4
-Text925:
-text "識別の腕輪@"
-
-;fe43db
-Text926:
-text "新規アイテム@"
-
-;fe43e2
-Text927:
-text "新規アイテム@"
-
-;fe43e9
-Text928:
-text "新規アイテム@"
-
-;fe43f0
-Text929:
-text "新規アイテム@"
-
-;fe43f7
-Text930:
-text "新規アイテム@"
-
-;fe43fe
-Text931:
-text "新規アイテム@"
-
-;fe4405
-Text932:
-text "新規アイテム@"
-
-;fe440c
-Text933:
-text "新規アイテム@"
-
-;fe4413
-Text934:
-text "新規アイテム@"
-
-;fe441a
-Text935:
-text "新規アイテム@"
-
-;fe4421
-Text936:
-text "新規アイテム@"
-
-;fe4428
-Text937:
-text "新規アイテム@"
-
-;fe442f
-Text938:
-text "おにぎり@"
-
-;fe4434
-Text939:
-text "大きいおにぎり@"
-
-;fe443c
-Text940:
-text "くさったおにぎり@"
-
-;fe4445
-Text941:
-text "巨大なおにぎり@"
-
-;fe444e
-Text942:
-text "特製おにぎり@"
-
-;fe4457
-Text943:
-text "新規アイテム@"
-
-;fe445e
-Text944:
-text "保存の壺@"
-
-;fe4465
-Text945:
-text "やりすごしの壺@"
-
-;fe446d
-Text946:
-text "分裂の壺@"
-
-;fe4474
-Text947:
-text "強化の壺@"
-
-;fe447a
-Text948:
-text "識別の壺@"
-
-;fe4480
-;"Chiropractic Jar"
-Text949:
-text "背中の壺@"
-
-;fe4486
-Text950:
-text "倉庫の壺@"
-
-;fe448d
-Text951:
-text "弱化の壺@"
-
-;fe4494
-;"---"
-Text952:
-text "－－－@"
-
-;fe4498
-Text953:
-text "底抜けの壺@"
-
-;fe44a0
-Text954:
-text "魔物のるつぼ@"
-
-;fe44a8
-Text955:
-text "変化の壺@"
-
-;fe44af
-Text956:
-text "合成の壺@"
-
-;fe44b6
-Text957:
-text "トドの壺@"
-
-;fe44bb
-;"Gaibara's Jar"
-Text958:
-text "ガイバラの壺@"
-
-;fe44c2
-Text959:
-text "アホくさい壺@"
-
-;fe44c9
-Text960:
-text "割れない壺@"
-
-;fe44d0
-Text961:
-text "うっぷんばらしの壺@"
-
-;fe44da
-Text962:
-text "新規アイテム@"
-
-;fe44e1
-Text963:
-text "新規アイテム@"
-
-;fe44e8
-Text964:
-text "新規アイテム@"
-
-;fe44ef
-Text965:
-text "新規アイテム@"
-
-;fe44f6
-Text966:
-text "新規アイテム@"
-
-;fe44fd
-Text967:
-text "新規アイテム@"
-
-;fe4504
-Text968:
-text "新規アイテム@"
-
-;fe450b
-Text969:
-text "新規アイテム@"
-
-;fe4512
-Text970:
-text "新規アイテム@"
-
-;fe4519
-Text971:
-text "新規アイテム@"
-
-;fe4520
-Text972:
-text "新規アイテム@"
-
-;fe4527
-Text973:
-text "新規アイテム@"
-
-;fe452e
-Text974:
-text "新規アイテム@"
-
-;fe4535
-Text975:
-text "新規アイテム@"
-
-;fe453c
-Text976:
-text "新規アイテム@"
-
-;fe4543
-Text977:
-text "新規アイテム@"
-
-;fe454a
-Text978:
-text "新規アイテム@"
-
-;fe4551
-Text979:
-text "新規アイテム@"
-
-;fe4558
-Text980:
-text "新規アイテム@"
-
-;fe455f
-Text981:
-text "新規アイテム@"
-
-;fe4566
-Text982:
-text "新規アイテム@"
-
-;fe456d
-Text983:
-text "新規アイテム@"
-
-;fe4574
-Text984:
-text "新規アイテム@"
-
-;fe457b
-Text985:
-text "新規アイテム@"
-
-;fe4582
-Text986:
-text "新規アイテム@"
-
-;fe4589
-Text987:
-text "新規アイテム@"
-
-;fe4590
-;"Monster Meat"
-Text988:
-text "モンスターの肉@"
-
-;fe4599
-;"Golden Feather"
-Text989:
-text "黄金の羽根@"
-
-;fe45a1
-;Unused from Torneko
-;"Happiness Box"
-Text990:
-text "しあわせの箱@"
-
-;fe45a9
-;"Mysterious Box"
-Text991:
-text "奇妙な箱@"
-
-;fe45b1
-;"Meant for a new item"
-Text992:
-text "新規アイテム目的物@"
-
-;fe45bc
-;"Gitan"
-Text993:
-text "ギタン@"
-
-;fe45c0
-Text994:
-text "　　　　　　　　　　@"
-
-;fe45cb
-;"N'Duba"
-Text995:
-text "ンドゥバ@"
-
-
-;Generic names
-
-;fe45d0
-;"Red Herb"
-Text996:
-text "赤い草@"
-
-;fe45d5
-;"Blue Herb"
-Text997:
-text "青い草@"
-
-;fe45da
-;"Yellow Herb"
-Text998:
-text "黄色い草@"
-
-;fe45e0
-;"Green Herb"
-Text999:
-text "緑の草@"
-
-;fe45e5
-;"White Herb"
-Text1000:
-text "白い草@"
-
-;fe45ea
-;"Black Herb"
-Text1001:
-text "黒い草@"
-
-;fe45ef
-;"Purple Herb"
-Text1002:
-text "紫の草@"
-
-;fe45f4
-;"Brown Herb"
-Text1003:
-text "茶色の草@"
-
-;fe45fb
-;"Gray Herb"
-Text1004:
-text "灰色の草@"
-
-;fe4602
-;"Aqua Herb"
-Text1005:
-text "水色の草@"
-
-;fe4609
-;"Lime Herb"
-Text1006:
-text "黄緑の草@"
-
-;fe460f
-;"Dark Brown Herb"
-Text1007:
-text "褐色の草@"
-
-;fe4616
-;"Black-white Herb"
-Text1008:
-text "白黒の草@"
-
-;fe461d
-;"Red-white Herb"
-Text1009:
-text "紅白の草@"
-
-;fe4624
-;"Almond Herb"
-Text1010:
-text "肌色の草@"
-
-;fe462b
-;"Crimson Herb"
-Text1011:
-text "紅色の草@"
-
-;fe4632
-;"Rainbow Herb"
-Text1012:
-text "虹色の草@"
-
-;fe4639
-;"Colorless Herb"
-Text1013:
-text "無色の草@"
-
-;fe4640
-;"Sky Herb"
-Text1014:
-text "空色の草@"
-
-;fe4647
-;"Vermillion Herb"
-Text1015:
-text "朱色の草@"
-
-;fe464e
-;"Dark Blue Herb"
-Text1016:
-text "紺色の草@"
-
-;fe4655
-;"Earth Herb"
-Text1017:
-text "土色の草@"
-
-;fe465c
-;"Autumn Herb"
-Text1018:
-text "秋色の草@"
-
-;fe4663
-;"Turquoise Herb"
-Text1019:
-text "青緑の草@"
-
-;fe466a
-;"Violet Herb"
-Text1020:
-text "青紫の草@"
-
-;fe4671
-;"Magenta Herb"
-Text1021:
-text "赤紫の草@"
-
-;fe4678
-;"Iridescent Herb"
-Text1022:
-text "玉虫色の草@"
-
-;fe4681
-;"Dark Brown Herb"
-Text1023:
-text "焦茶色の草@"
-
-;fe468a
-;"Deep Crimson Herb"
-Text1024:
-text "真紅の草@"
-
-;fe4691
-;"Red Brown Herb"
-Text1025:
-text "赤茶色の草@"
-
-;fe469a
-;"Kerria Herb"
-Text1026:
-text "山吹色の草@"
-
-;fe46a3
-;"Yellow Earth Herb"
-Text1027:
-text "黄土色の草@"
-
-;fe46ab
-;"Light Green Herb"
-Text1028:
-text "うす緑の草@"
-
-;fe46b2
-;"Cream Herb"
-Text1029:
-text "クリーム色の草@"
-
-;fe46bb
-;"Light Purple Herb"
-Text1030:
-text "うす紫の草@"
-
-;fe46c2
-;"Beige Herb"
-Text1031:
-text "ベージュの草@"
-
-;fe46c9
-;"Light Brown Herb"
-Text1032:
-text "うす茶色の草@"
-
-;fe46d2
-;"Lemon Herb"
-Text1033:
-text "レモン色の草@"
-
-;fe46da
-;"Rose Herb"
-Text1034:
-text "バラ色の草@"
-
-;fe46e1
-;"Light Scarlet Herb"
-Text1035:
-text "うす紅色の草@"
-
-;fe46ea
-;"Light Pink Herb"
-Text1036:
-text "うす桃色の草@"
-
-;fe46f3
-;"Light Red Herb"
-Text1037:
-text "うす赤色の草@"
-
-;fe46fc
-;"Ultramarine Herb"
-Text1038:
-text "ぐんじょう色の草@"
-
-;fe4706
-;"Gold Herb"
-Text1039:
-text "こがね色の草@"
-
-;fe470e
-;"Pink Herb"
-Text1040:
-text "ピンク色の草@"
-
-;fe4716
-;"Orange Herb"
-Text1041:
-text "オレンジ色の草@"
-
-;fe471f
-;"Mouse Painting Scroll"
-Text1042:
-text "ネズミの絵の巻物@"
-
-;fe4729
-;"Cow Painting Scroll"
-Text1043:
-text "ウシの絵の巻物@"
-
-;fe4732
-;"Tiger Painting Scroll"
-Text1044:
-text "トラの絵の巻物@"
-
-;fe473b
-;"Rabbit Painting Scroll"
-Text1045:
-text "ウサギの絵の巻物@"
-
-;fe4745
-;"Dragon Painting Scroll"
-Text1046:
-text "リュウの絵の巻物@"
-
-;fe474f
-;"Snake Painting Scroll"
-Text1047:
-text "ヘビの絵の巻物@"
-
-;fe4758
-;"Horse Painting Scroll"
-Text1048:
-text "ウマの絵の巻物@"
-
-;fe4761
-;"Sheep Painting Scroll"
-Text1049:
-text "ヒツジの絵の巻物@"
-
-;fe476b
-;"Monkey Painting Scroll"
-Text1050:
-text "サルの絵の巻物@"
-
-;fe4774
-;"Chicken Painting Scroll"
-Text1051:
-text "ニワトリの絵の巻物@"
-
-;fe477f
-;"Dog Painting Scroll"
-Text1052:
-text "イヌの絵の巻物@"
-
-;fe4788
-;"Boar Painting Scroll"
-Text1053:
-text "イノシシの絵の巻物@"
-
-;fe4793
-;"Cat Painting Scroll"
-Text1054:
-text "ネコの絵の巻物@"
-
-;fe479c
-;"Deer Painting Scroll"
-Text1055:
-text "シカの絵の巻物@"
-
-;fe47a5
-;"Frog Painting Scroll"
-Text1056:
-text "カエルの絵の巻物@"
-
-;fe47af
-;"Lizard Painting Scroll"
-Text1057:
-text "トカゲの絵の巻物@"
-
-;fe47b9
-;"Elephant Painting Scroll"
-Text1058:
-text "ゾウの絵の巻物@"
-
-;fe47c2
-;"Giraffe Painting Scroll"
-Text1059:
-text "キリンの絵の巻物@"
-
-;fe47cc
-;"Turtle Painting Scroll"
-Text1060:
-text "カメの絵の巻物@"
-
-;fe47d5
-;"Crane Painting Scroll"
-Text1061:
-text "ツルの絵の巻物@"
-
-;fe47de
-;"Uguisu Painting Scroll"
-Text1062:
-text "ウグイスの絵の巻物@"
-
-;fe47e9
-;"Bear Painting Scroll"
-Text1063:
-text "クマの絵の巻物@"
-
-;fe47f2
-;"Sparrow Painting Scroll"
-Text1064:
-text "スズメの絵の巻物@"
-
-;fe47fc
-;"Hippo Painting Scroll"
-Text1065:
-text "カバの絵の巻物@"
-
-;fe4805
-;"Lion Painting Scroll"
-Text1066:
-text "ライオンの絵の巻物@"
-
-;fe4810
-;"Rhino Painting Scroll"
-Text1067:
-text "サイの絵の巻物@"
-
-;fe4819
-;"Condor Painting Scroll"
-Text1068:
-text "コンドルの絵の巻物@"
-
-;fe4824
-;"Hawk Painting Scroll"
-Text1069:
-text "タカの絵の巻物@"
-
-;fe482d
-;"Pigeon Painting Scroll"
-Text1070:
-text "ハトの絵の巻物@"
-
-;fe4836
-;"Crow Painting Scroll"
-Text1071:
-text "カラスの絵の巻物@"
-
-;fe4840
-;"Eagle Painting Scroll"
-Text1072:
-text "ワシの絵の巻物@"
-
-;fe4849
-;"Mejiro Painting Scroll"
-Text1073:
-text "メジロの絵の巻物@"
-
-;fe4853
-;"Koala Painting Scroll"
-Text1074:
-text "コアラの絵の巻物@"
-
-;fe485d
-;"Ostrich Painting Scroll"
-Text1075:
-text "ダチョウの絵の巻物@"
-
-;fe4868
-;"Fox Painting Scroll"
-Text1076:
-text "キツネの絵の巻物@"
-
-;fe4872
-;"Tanuki Painting Scroll"
-Text1077:
-text "タヌキの絵の巻物@"
-
-;fe487c
-;"Weasel Painting Scroll"
-Text1078:
-text "イタチの絵の巻物@"
-
-;fe4886
-;"Crocodile Painting Scroll"
-Text1079:
-text "ワニの絵の巻物@"
-
-;fe488f
-;"Cherry Staff"
-Text1080:
-text "桜の杖@"
-
-;fe4894
-;"Apricot Staff"
-Text1081:
-text "梅の杖@"
-
-;fe4899
-;"Pine Staff"
-Text1082:
-text "松の杖@"
-
-;fe489e
-;"Bamboo Staff"
-Text1083:
-text "竹の杖@"
-
-;fe48a3
-;"Cedar Staff"
-Text1084:
-text "杉の杖@"
-
-;fe48a8
-;"Willow Staff"
-Text1085:
-text "柳の杖@"
-
-;fe48ad
-;"Chestnut Staff"
-Text1086:
-text "栗の杖@"
-
-;fe48b2
-;"Stone Staff"
-Text1087:
-text "石の杖@"
-
-;fe48b7
-;"Bone Staff"
-Text1088:
-text "骨の杖@"
-
-;fe48bc
-;"Ivory Staff"
-Text1089:
-text "牙の杖@"
-
-;fe48c1
-;"Pawlonia Staff"
-Text1090:
-text "桐の杖@"
-
-;fe48c6
-;"Lead Staff"
-Text1091:
-text "鉛の杖@"
-
-;fe48cb
-;"Iron Staff"
-Text1092:
-text "鉄の杖@"
-
-;fe48d0
-;"Bronze Staff"
-Text1093:
-text "銅の杖@"
-
-;fe48d5
-;"Tin Staff"
-Text1094:
-text "錫の杖@"
-
-;fe48da
-;"Gold Staff"
-Text1095:
-text "金の杖@"
-
-;fe48de
-;"Silver Staff"
-Text1096:
-text "銀の杖@"
-
-;fe48e3
-;"Bronze Staff"
-Text1097:
-text "青銅の杖@"
-
-;fe48ea
-;"Hinoki Staff"
-Text1098:
-text "ひのきの杖@"
-
-;fe48f0
-;"Chinkapin Staff"
-Text1099:
-text "しいの杖@"
-
-;fe48f5
-;"Maple Staff"
-Text1100:
-text "かえでの杖@"
-
-;fe48fb
-;"Zelkova Staff"
-Text1101:
-text "けやきの杖@"
-
-;fe4901
-;"Momuji Staff"
-Text1102:
-text "もみじの杖@"
-
-;fe4907
-;"Diamond Armband"
-Text1103:
-text "ダイヤの腕輪@"
-
-;fe490e
-;"Pearl Armband"
-Text1104:
-text "パールの腕輪@"
-
-;fe4915
-;"Ruby Armband"
-Text1105:
-text "ルビーの腕輪@"
-
-;fe491c
-;"Sapphire Armband"
-Text1106:
-text "サファイアの腕輪@"
-
-;fe4925
-;"Coral Armband"
-Text1107:
-text "サンゴの腕輪@"
-
-;fe492c
-;"Turquoise Armband"
-Text1108:
-text "トルコ石の腕輪@"
-
-;fe4935
-;"Emerald Armband"
-Text1109:
-text "エメラルドの腕輪@"
-
-;fe493e
-;"Amethyst Armband"
-Text1110:
-text "アメジストの腕輪@"
-
-;fe4947
-;"Opal Armband"
-Text1111:
-text "オパールの腕輪@"
-
-;fe494f
-;"Jade Armband"
-Text1112:
-text "ヒスイの腕輪@"
-
-;fe4956
-;"Amber Armband"
-Text1113:
-text "コハクの腕輪@"
-
-;fe495d
-;"Topaz Armband"
-Text1114:
-text "トパーズの腕輪@"
-
-;fe4965
-;"Agate Armband"
-Text1115:
-text "メノウの腕輪@"
-
-;fe496c
-;"Zirconia Armband"
-Text1116:
-text "ジルコニアの腕輪@"
-
-;fe4975
-;"Garnet Armband"
-Text1117:
-text "ガーネットの腕輪@"
-
-;fe497e
-;"Cattleya Armband"
-Text1118:
-text "カトレアの腕輪@"
-
-;fe4986
-;"Lapis Lazuli Armband"
-Text1119:
-text "ラピスラズリの腕輪@"
-
-;fe4990
-;"Aquamarine Armband"
-Text1120:
-text "アクアマリンの腕輪@"
-
-;fe499a
-;"Moon Stone Armband"
-Text1121:
-text "ムーンストーンの腕輪@"
-
-;fe49a5
-;"Tiger Eye Armband"
-Text1122:
-text "タイガーアイの腕輪@"
-
-;fe49af
-;"Blood Stone Armband"
-Text1123:
-text "ブラッドストーンの腕輪@"
-
-;fe49bb
-;"Malachite Armband"
-Text1124:
-text "クジャク石の腕輪@"
-
-;fe49c5
-;"Cat's Eye Armband"
-Text1125:
-text "キャッツアイの腕輪@"
-
-;fe49cf
-;"Crystal Armband"
-Text1126:
-text "クリスタルの腕輪@"
-
-;fe49d8
-;"Glass Armband"
-Text1127:
-text "ガラスの腕輪@"
-
-;fe49df
-;"Platinum Armband"
-Text1128:
-text "プラチナの腕輪@"
-
-;fe49e7
-;"Tourmaline Armband"
-Text1129:
-text "トルマリンの腕輪@"
-
-;fe49f0
-;"Thin Jar"
-Text1130:
-text "細い壺@"
-
-;fe49f5
-;"Round Jar"
-Text1131:
-text "丸い壺@"
-
-;fe49fa
-;"Square Jar"
-Text1132:
-text "四角い壺@"
-
-;fe4a01
-;"Triangular Jar"
-Text1133:
-text "三角の壺@"
-
-;fe4a08
-;"Thick Jar"
-Text1134:
-text "太い壺@"
-
-;fe4a0d
-;"Star-shaped Jar"
-Text1135:
-text "星形の壺@"
-
-;fe4a14
-;"Egg-shaped Jar"
-Text1136:
-text "卵形の壺@"
-
-;fe4a1b
-;"Shallow Jar"
-Text1137:
-text "浅い壺@"
-
-;fe4a20
-;"Deep Jar"
-Text1138:
-text "深い壺@"
-
-;fe4a25
-;"Semicircle Jar"
-Text1139:
-text "半月形の壺@"
-
-;fe4a2e
-;"Crescent Jar"
-Text1140:
-text "三日月形の壺@"
-
-;fe4a39
-;"Slanted Jar"
-Text1141:
-text "傾いた壺@"
-
-;fe4a3f
-;"Twisted Jar"
-Text1142:
-text "ゆがんだ壺@"
-
-;fe4a45
-;"Hourglass Jar"
-Text1143:
-text "くびれた壺@"
-
-;fe4a4b
-;"Gourd-shaped Jar"
-Text1144:
-text "ひょうたん形の壺@"
-
-;fe4a55
-;"Rough Jar"
-Text1145:
-text "でこぼこの壺@"
-
-;fe4a5c
-;"Rhombus Jar"
-Text1146:
-text "ひし型の壺@"
-
-;fe4a63
-;"Daruma Jar"
-Text1147:
-text "だるま型の壺@"
-
-;fe4a6b
-;"Item number over"
-Text1148:
-text "アイテムナンバーオーバー@"
+
+
+;fe5706
+Text_FE5706:
+text "Club@"
+
+;fe570b
+Text_FE570B:
+text "Nagamaki@"
+
+;fe5714
+Text_FE5714:
+text "Bufoo's Cleaver@"
+
+;fe5724
+Text_FE5724:
+text "Katana@"
+
+;fe572b
+Text_FE572B:
+text "Dragon Killer@"
+
+;fe5739
+Text_FE5739:
+text "Dotanuki@"
+
+;fe5742
+Text_FE5742:
+text "Goken-Manjikabra@"
+
+;fe5753
+Text_FE5753:
+text "Exorcist Sickle@"
+
+;fe5763
+Text_FE5763:
+text "Pickaxe@"
+
+;fe576b
+Text_FE576B:
+text "Accuracy Sword@"
+
+;fe577a
+Text_FE577A:
+text "Minotaur Axe@"
+
+;fe5787
+Text_FE5787:
+text "Yoto Kamaitachi@"
+
+;fe5797
+Text_FE5797:
+text "One-eye Killer@"
+
+;fe57a6
+Text_FE57A6:
+text "Drain Buster@"
+
+;fe57b3
+Text_FE57B3:
+text "Kajinfumato@"
+
+;fe57bf
+Text_FE57BF:
+text "Hiken Kaburasutegi@"
+
+;fe57d2
+Text_FE57D2:
+text "Wood Arrow@"
+
+;fe57dd
+Text_FE57DD:
+text "Iron Arrow@"
+
+;fe57e8
+Text_FE57E8:
+text "Silver Arrow@"
+
+;fe57f5
+Text_FE57F5:
+text "New Item@"
+
+;fe57fe
+Text_FE57FE:
+text "New Item@"
+
+;fe5807
+Text_FE5807:
+text "New Item@"
+
+;fe5810
+Text_FE5810:
+text "Leather Shield@"
+
+;fe581f
+Text_FE581F:
+text "Bronze Shield@"
+
+;fe582d
+Text_FE582D:
+text "Antidote Shield@"
+
+;fe583d
+Text_FE583D:
+text "Wooden Shield@"
+
+;fe584b
+Text_FE584B:
+text "Iron Shield@"
+
+;fe5857
+Text_FE5857:
+text "Dragon Shield@"
+
+;fe5865
+Text_FE5865:
+text "Fuma Shield@"
+
+;fe5871
+Text_FE5871:
+text "Battle Counter@"
+
+;fe5880
+Text_FE5880:
+text "Heavy Shield@"
+
+;fe588d
+Text_FE588D:
+text "Echo Shield@"
+
+;fe5899
+Text_FE5899:
+text "Reflex Shield@"
+
+;fe58a7
+Text_FE58A7:
+text "Gilded Shield@"
+
+;fe58b5
+Text_FE58B5:
+text "Disposable Shield@"
+
+;fe58c7
+Text_FE58C7:
+text "Mine Nabari Shield@"
+
+;fe58da
+Text_FE58DA:
+text "Todo Shield@"
+
+;fe58e6
+Text_FE58E6:
+text "Rasen-Fuma Shield@"
+
+;fe58f8
+Text_FE58F8:
+text "New Item@"
+
+;fe5901
+Text_FE5901:
+text "New Item@"
+
+;fe590a
+Text_FE590A:
+text "Medical Herb@"
+
+;fe5917
+Text_FE5917:
+text "Otogiri-So@"
+
+;fe5922
+Text_FE5922:
+text "Happy Herb@"
+
+;fe592d
+Text_FE592D:
+text "Vision Herb@"
+
+;fe5939
+Text_FE5939:
+text "Dragon Herb@"
+
+;fe5945
+Text_FE5945:
+text "Invincible Herb@"
+
+;fe5955
+Text_FE5955:
+text "Angel Seed@"
+
+;fe5960
+Text_FE5960:
+text "Revival Herb@"
+
+;fe596d
+Text_FE596D:
+text "Vanishing Herb@"
+
+;fe597c
+Text_FE597C:
+text "Wriggling Herb@"
+
+;fe598b
+Text_FE598B:
+text "Unlucky Seed@"
+
+;fe5998
+Text_FE5998:
+text "Super-Unlucky Seed@"
+
+;fe59ab
+Text_FE59AB:
+text "Kigni Tribe Seed@"
+
+;fe59bc
+Text_FE59BC:
+text "Forgetful Herb@"
+
+;fe59cb
+Text_FE59CB:
+text "---@"
+
+;fe59cf
+Text_FE59CF:
+text "Life Herb@"
+
+;fe59d9
+Text_FE59D9:
+text "Expansion Seed@"
+
+;fe59e8
+Text_FE59E8:
+text "Contraction Seed@"
+
+;fe59f9
+Text_FE59F9:
+text "Speech Seed@"
+
+;fe5a05
+Text_FE5A05:
+text "Power Herb@"
+
+;fe5a10
+Text_FE5A10:
+text "Antidote Herb@"
+
+;fe5a1e
+Text_FE5A1E:
+text "Poison Herb@"
+
+;fe5a2a
+Text_FE5A2A:
+text "Confusion Herb@"
+
+;fe5a39
+Text_FE5A39:
+text "Sleep Herb@"
+
+;fe5a44
+Text_FE5A44:
+text "Weed@"
+
+;fe5a49
+Text_FE5A49:
+text "New Item@"
+
+;fe5a52
+Text_FE5A52:
+text "New Item@"
+
+;fe5a5b
+Text_FE5A5B:
+text "New Item@"
+
+;fe5a64
+Text_FE5A64:
+text "New Item@"
+
+;fe5a6d
+Text_FE5A6D:
+text "New Item@"
+
+;fe5a76
+Text_FE5A76:
+text "New Item@"
+
+;fe5a7f
+Text_FE5A7F:
+text "New Item@"
+
+;fe5a88
+Text_FE5A88:
+text "New Item@"
+
+;fe5a91
+Text_FE5A91:
+text "New Item@"
+
+;fe5a9a
+Text_FE5A9A:
+text "New Item@"
+
+;fe5aa3
+Text_FE5AA3:
+text "New Item@"
+
+;fe5aac
+Text_FE5AAC:
+text "New Item@"
+
+;fe5ab5
+Text_FE5AB5:
+text "New Item@"
+
+;fe5abe
+Text_FE5ABE:
+text "New Item@"
+
+;fe5ac7
+Text_FE5AC7:
+text "New Item@"
+
+;fe5ad0
+Text_FE5AD0:
+text "New Item@"
+
+;fe5ad9
+Text_FE5AD9:
+text "New Item@"
+
+;fe5ae2
+Text_FE5AE2:
+text "New Item@"
+
+;fe5aeb
+Text_FE5AEB:
+text "New Item@"
+
+;fe5af4
+Text_FE5AF4:
+text "New Item@"
+
+;fe5afd
+Text_FE5AFD:
+text "New Item@"
+
+;fe5b06
+Text_FE5B06:
+text "Purify Scroll@"
+
+;fe5b14
+Text_FE5B14:
+text "Identify Scroll@"
+
+;fe5b24
+Text_FE5B24:
+text "Light Scroll@"
+
+;fe5b31
+Text_FE5B31:
+text "Bigpot Scroll@"
+
+;fe5b3f
+Text_FE5B3F:
+text "Airslash Scroll@"
+
+;fe5b4f
+Text_FE5B4F:
+text "Lockjaw Scroll@"
+
+;fe5b5e
+Text_FE5B5E:
+text "-- Scroll@"
+
+;fe5b68
+Text_FE5B68:
+text "Trap Scroll@"
+
+;fe5b74
+Text_FE5B74:
+text "Crisis Scroll@"
+
+;fe5b82
+Text_FE5B82:
+text "Fastfoe Scroll@"
+
+;fe5b91
+Text_FE5B91:
+text "Slumber Scroll@"
+
+;fe5ba0
+Text_FE5BA0:
+text "Powerup Scroll@"
+
+;fe5baf
+Text_FE5BAF:
+text "-- Scroll@"
+
+;fe5bb9
+Text_FE5BB9:
+text "Detonate Scroll@"
+
+;fe5bc9
+Text_FE5BC9:
+text "Bigroom Scroll@"
+
+;fe5bd8
+Text_FE5BD8:
+text "Monster House Scroll@"
+
+;fe5bed
+Text_FE5BED:
+text "Confuse Scroll@"
+
+;fe5bfc
+Text_FE5BFC:
+text "Genocide Scroll@"
+
+;fe5c0c
+Text_FE5C0C:
+text "Blank Scroll@"
+
+;fe5c19
+Text_FE5C19:
+text "Lost Scroll@"
+
+;fe5c25
+Text_FE5C25:
+text "Heaven Scroll@"
+
+;fe5c33
+Text_FE5C33:
+text "Earth Scroll@"
+
+;fe5c40
+Text_FE5C40:
+text "Chrome Scroll@"
+
+;fe5c4e
+Text_FE5C4E:
+text "Withdraw Scroll@"
+
+;fe5c5e
+Text_FE5C5E:
+text "Slippery Scroll@"
+
+;fe5c6e
+Text_FE5C6E:
+text "-- Scroll@"
+
+;fe5c78
+Text_FE5C78:
+text "New Item@"
+
+;fe5c81
+Text_FE5C81:
+text "New Item@"
+
+;fe5c8a
+Text_FE5C8A:
+text "New Item@"
+
+;fe5c93
+Text_FE5C93:
+text "New Item@"
+
+;fe5c9c
+Text_FE5C9C:
+text "New Item@"
+
+;fe5ca5
+Text_FE5CA5:
+text "New Item@"
+
+;fe5cae
+Text_FE5CAE:
+text "New Item@"
+
+;fe5cb7
+Text_FE5CB7:
+text "New Item@"
+
+;fe5cc0
+Text_FE5CC0:
+text "New Item@"
+
+;fe5cc9
+Text_FE5CC9:
+text "New Item@"
+
+;fe5cd2
+Text_FE5CD2:
+text "New Item@"
+
+;fe5cdb
+Text_FE5CDB:
+text "New Item@"
+
+;fe5ce4
+Text_FE5CE4:
+text "Sealing Staff@"
+
+;fe5cf2
+Text_FE5CF2:
+text "Blowback Staff@"
+
+;fe5d01
+Text_FE5D01:
+text "Happy Staff@"
+
+;fe5d0d
+Text_FE5D0D:
+text "Unlucky Staff@"
+
+;fe5d1b
+Text_FE5D1B:
+text "Decoy Staff@"
+
+;fe5d27
+Text_FE5D27:
+text "Swap Staff@"
+
+;fe5d32
+Text_FE5D32:
+text "Bufoo's Staff@"
+
+;fe5d40
+Text_FE5D40:
+text "Skeleton Mage Staff@"
+
+;fe5d54
+Text_FE5D54:
+text "Paralysis Staff@"
+
+;fe5d64
+Text_FE5D64:
+text "Buy-Time Staff@"
+
+;fe5d73
+Text_FE5D73:
+text "Paindividing Staff@"
+
+;fe5d86
+Text_FE5D86:
+text "New Item@"
+
+;fe5d8f
+Text_FE5D8F:
+text "New Item@"
+
+;fe5d98
+Text_FE5D98:
+text "New Item@"
+
+;fe5da1
+Text_FE5DA1:
+text "New Item@"
+
+;fe5daa
+Text_FE5DAA:
+text "New Item@"
+
+;fe5db3
+Text_FE5DB3:
+text "New Item@"
+
+;fe5dbc
+Text_FE5DBC:
+text "New Item@"
+
+;fe5dc5
+Text_FE5DC5:
+text "New Item@"
+
+;fe5dce
+Text_FE5DCE:
+text "New Item@"
+
+;fe5dd7
+Text_FE5DD7:
+text "New Item@"
+
+;fe5de0
+Text_FE5DE0:
+text "New Item@"
+
+;fe5de9
+Text_FE5DE9:
+text "New Item@"
+
+;fe5df2
+Text_FE5DF2:
+text "Passage Bracer@"
+
+;fe5e01
+Text_FE5E01:
+text "Bargain Bracer@"
+
+;fe5e10
+Text_FE5E10:
+text "Trapper bracer@"
+
+;fe5e1f
+Text_FE5E1F:
+text "Levelholder Bracer@"
+
+;fe5e32
+Text_FE5E32:
+text "Healing Bracer@"
+
+;fe5e41
+Text_FE5E41:
+text "Rustproof Bracer@"
+
+;fe5e52
+Text_FE5E52:
+text "Critical Bracer@"
+
+;fe5e62
+Text_FE5E62:
+text "Pain Bracer@"
+
+;fe5e6e
+Text_FE5E6E:
+text "Blessing Bracer@"
+
+;fe5e7e
+Text_FE5E7E:
+text "Penetration Bracer@"
+
+;fe5e91
+Text_FE5E91:
+text "Happy Bracer@"
+
+;fe5e9e
+Text_FE5E9E:
+text "Clumsiness Bracer@"
+
+;fe5eb0
+Text_FE5EB0:
+text "Far-sight Bracer@"
+
+;fe5ec1
+Text_FE5EC1:
+text "Clear Mind Bracer@"
+
+;fe5ed3
+Text_FE5ED3:
+text "ID Bracer@"
+
+;fe5edd
+Text_FE5EDD:
+text "New Item@"
+
+;fe5ee6
+Text_FE5EE6:
+text "New Item@"
+
+;fe5eef
+Text_FE5EEF:
+text "New Item@"
+
+;fe5ef8
+Text_FE5EF8:
+text "New Item@"
+
+;fe5f01
+Text_FE5F01:
+text "New Item@"
+
+;fe5f0a
+Text_FE5F0A:
+text "New Item@"
+
+;fe5f13
+Text_FE5F13:
+text "New Item@"
+
+;fe5f1c
+Text_FE5F1C:
+text "New Item@"
+
+;fe5f25
+Text_FE5F25:
+text "New Item@"
+
+;fe5f2e
+Text_FE5F2E:
+text "New Item@"
+
+;fe5f37
+Text_FE5F37:
+text "New Item@"
+
+;fe5f40
+Text_FE5F40:
+text "New Item@"
+
+;fe5f49
+Text_FE5F49:
+text "Rice Ball@"
+
+;fe5f53
+Text_FE5F53:
+text "Big Rice Ball@"
+
+;fe5f61
+Text_FE5F61:
+text "Rotten Rice Ball@"
+
+;fe5f72
+Text_FE5F72:
+text "Huge Rice Ball@"
+
+;fe5f81
+Text_FE5F81:
+text "Special Rice Ball@"
+
+;fe5f93
+Text_FE5F93:
+text "New Item@"
+
+;fe5f9c
+Text_FE5F9C:
+text "Holding Pot@"
+
+;fe5fa8
+Text_FE5FA8:
+text "Hiding Pot@"
+
+;fe5fb3
+Text_FE5FB3:
+text "Dividing Pot@"
+
+;fe5fc0
+Text_FE5FC0:
+text "Strengthening Pot@"
+
+;fe5fd2
+Text_FE5FD2:
+text "ID Pot@"
+
+;fe5fd9
+Text_FE5FD9:
+text "Back Pot@"
+
+;fe5fe2
+Text_FE5FE2:
+text "Storage Pot@"
+
+;fe5fee
+Text_FE5FEE:
+text "Weakening Pot@"
+
+;fe5ffc
+Text_FE5FFC:
+text "---@"
+
+;fe6000
+Text_FE6000:
+text "Bottomless Pot@"
+
+;fe600f
+Text_FE600F:
+text "Monster Pot@"
+
+;fe601b
+Text_FE601B:
+text "Transform Pot@"
+
+;fe6029
+Text_FE6029:
+text "Fusion Pot@"
+
+;fe6034
+Text_FE6034:
+text "Todo Pot@"
+
+;fe603d
+Text_FE603D:
+text "Gaibara Pot@"
+
+;fe6049
+Text_FE6049:
+text "Stupid-looking Pot@"
+
+;fe605c
+Text_FE605C:
+text "Unbreakable Pot@"
+
+;fe606c
+Text_FE606C:
+text "Stress Relieving Pot@"
+
+;fe6081
+Text_FE6081:
+text "New Item@"
+
+;fe608a
+Text_FE608A:
+text "New Item@"
+
+;fe6093
+Text_FE6093:
+text "New Item@"
+
+;fe609c
+Text_FE609C:
+text "New Item@"
+
+;fe60a5
+Text_FE60A5:
+text "New Item@"
+
+;fe60ae
+Text_FE60AE:
+text "New Item@"
+
+;fe60b7
+Text_FE60B7:
+text "New Item@"
+
+;fe60c0
+Text_FE60C0:
+text "New Item@"
+
+;fe60c9
+Text_FE60C9:
+text "New Item@"
+
+;fe60d2
+Text_FE60D2:
+text "New Item@"
+
+;fe60db
+Text_FE60DB:
+text "New Item@"
+
+;fe60e4
+Text_FE60E4:
+text "New Item@"
+
+;fe60ed
+Text_FE60ED:
+text "New Item@"
+
+;fe60f6
+Text_FE60F6:
+text "New Item@"
+
+;fe60ff
+Text_FE60FF:
+text "New Item@"
+
+;fe6108
+Text_FE6108:
+text "New Item@"
+
+;fe6111
+Text_FE6111:
+text "New Item@"
+
+;fe611a
+Text_FE611A:
+text "New Item@"
+
+;fe6123
+Text_FE6123:
+text "New Item@"
+
+;fe612c
+Text_FE612C:
+text "New Item@"
+
+;fe6135
+Text_FE6135:
+text "New Item@"
+
+;fe613e
+Text_FE613E:
+text "New Item@"
+
+;fe6147
+Text_FE6147:
+text "New Item@"
+
+;fe6150
+Text_FE6150:
+text "New Item@"
+
+;fe6159
+Text_FE6159:
+text "New Item@"
+
+;fe6162
+Text_FE6162:
+text "New Item@"
+
+;fe616b
+Text_FE616B:
+text "Monster Meat@"
+
+;fe6178
+Text_FE6178:
+text "Golden Feather@"
+
+;fe6187
+Text_FE6187:
+text "Happy Box@"
+
+;fe6191
+Text_FE6191:
+text "Strange Box@"
+
+;fe619d
+Text_FE619D:
+text "New Item Target@"
+
+;fe61ad
+Text_FE61AD:
+text " Gitan@"
+
+;fe61b4
+Text_FE61B4:
+text "          @"
+
+;fe61bf
+Text_FE61BF:
+text "Nduba@"
+
+;fe61c5
+Text_FE61C5:
+text "Red Herb@"
+
+;fe61ce
+Text_FE61CE:
+text "Blue Herb@"
+
+;fe61d8
+Text_FE61D8:
+text "Yellow Herb@"
+
+;fe61e4
+Text_FE61E4:
+text "Green Herb@"
+
+;fe61ef
+Text_FE61EF:
+text "White Herb@"
+
+;fe61fa
+Text_FE61FA:
+text "Black Herb@"
+
+;fe6205
+Text_FE6205:
+text "Purple Herb@"
+
+;fe6211
+Text_FE6211:
+text "Brown Herb@"
+
+;fe621c
+Text_FE621C:
+text "Grey Herb@"
+
+;fe6226
+Text_FE6226:
+text "Aqua Herb@"
+
+;fe6230
+Text_FE6230:
+text "Chartreuse Herb@"
+
+;fe6240
+Text_FE6240:
+text "Umber Herb@"
+
+;fe624b
+Text_FE624B:
+text "Black-white Herb@"
+
+;fe625c
+Text_FE625C:
+text "Red-white Herb@"
+
+;fe626b
+Text_FE626B:
+text "Feldspar Herb@"
+
+;fe6279
+Text_FE6279:
+text "Crimson herb@"
+
+;fe6286
+Text_FE6286:
+text "Rainbow Herb@"
+
+;fe6293
+Text_FE6293:
+text "Colorless Herb@"
+
+;fe62a2
+Text_FE62A2:
+text "Turquoise Herb@"
+
+;fe62b1
+Text_FE62B1:
+text "Scarlet Herb@"
+
+;fe62be
+Text_FE62BE:
+text "Indigo Herb@"
+
+;fe62ca
+Text_FE62CA:
+text "Tan Herb@"
+
+;fe62d3
+Text_FE62D3:
+text "Goldenrod Herb@"
+
+;fe62e2
+Text_FE62E2:
+text "Bluegreen Herb@"
+
+;fe62f1
+Text_FE62F1:
+text "Violet herb@"
+
+;fe62fd
+Text_FE62FD:
+text "Magenta Herb@"
+
+;fe630a
+Text_FE630A:
+text "Iridescent Herb@"
+
+;fe631a
+Text_FE631A:
+text "Sienna Herb@"
+
+;fe6326
+Text_FE6326:
+text "Maroon Herb@"
+
+;fe6332
+Text_FE6332:
+text "Fuchsia Herb@"
+
+;fe633f
+Text_FE633F:
+text "Almond herb@"
+
+;fe634b
+Text_FE634B:
+text "Ochre Herb@"
+
+;fe6356
+Text_FE6356:
+text "Olive Herb@"
+
+;fe6361
+Text_FE6361:
+text "Cream Herb@"
+
+;fe636c
+Text_FE636C:
+text "Plum Herb@"
+
+;fe6376
+Text_FE6376:
+text "Beige Herb@"
+
+;fe6381
+Text_FE6381:
+text "Sepia Herb@"
+
+;fe638c
+Text_FE638C:
+text "Lemon Herb@"
+
+;fe6397
+Text_FE6397:
+text "Rose Herb@"
+
+;fe63a1
+Text_FE63A1:
+text "Salmon Herb@"
+
+;fe63ad
+Text_FE63AD:
+text "Peach Herb@"
+
+;fe63b8
+Text_FE63B8:
+text "Orchid Herb@"
+
+;fe63c4
+Text_FE63C4:
+text "Cobalt Herb@"
+
+;fe63d0
+Text_FE63D0:
+text "Golden herb@"
+
+;fe63dc
+Text_FE63DC:
+text "Pink Herb@"
+
+;fe63e6
+Text_FE63E6:
+text "Orange Herb@"
+
+;fe63f2
+Text_FE63F2:
+text "Mouse Picture Scroll@"
+
+;fe6407
+Text_FE6407:
+text "Cow Picture Scroll@"
+
+;fe641a
+Text_FE641A:
+text "Tiger Picture Scroll@"
+
+;fe642f
+Text_FE642F:
+text "Rabbit Picture Scroll@"
+
+;fe6445
+Text_FE6445:
+text "Dragon Picture Scroll@"
+
+;fe645b
+Text_FE645B:
+text "Snake Picture Scroll@"
+
+;fe6470
+Text_FE6470:
+text "Horse Picture Scroll@"
+
+;fe6485
+Text_FE6485:
+text "Sheep Picture Scroll@"
+
+;fe649a
+Text_FE649A:
+text "Monkey Picture Scroll@"
+
+;fe64b0
+Text_FE64B0:
+text "Chicken Picture Scroll@"
+
+;fe64c7
+Text_FE64C7:
+text "Dog Picture Scroll@"
+
+;fe64da
+Text_FE64DA:
+text "Boar Picture Scroll@"
+
+;fe64ee
+Text_FE64EE:
+text "Cat Picture Scroll@"
+
+;fe6501
+Text_FE6501:
+text "Deer Picture Scroll@"
+
+;fe6515
+Text_FE6515:
+text "Frog Picture Scroll@"
+
+;fe6529
+Text_FE6529:
+text "Lizard Picture Scroll@"
+
+;fe653f
+Text_FE653F:
+text "Elephant Picture Scroll@"
+
+;fe6557
+Text_FE6557:
+text "Giraffe Picture Scroll@"
+
+;fe656e
+Text_FE656E:
+text "Turtle Picture Scroll@"
+
+;fe6584
+Text_FE6584:
+text "Crane Picture Scroll@"
+
+;fe6599
+Text_FE6599:
+text "Nightengale Picture Scroll@"
+
+;fe65b4
+Text_FE65B4:
+text "Bear Picture Scroll@"
+
+;fe65c8
+Text_FE65C8:
+text "Sparrow Picture Scroll@"
+
+;fe65df
+Text_FE65DF:
+text "Hippo Picture Scroll@"
+
+;fe65f4
+Text_FE65F4:
+text "Lion Picture Scroll@"
+
+;fe6608
+Text_FE6608:
+text "Rhino Picture Scroll@"
+
+;fe661d
+Text_FE661D:
+text "Condor Picture Scroll@"
+
+;fe6633
+Text_FE6633:
+text "Hawk Picture Scroll@"
+
+;fe6647
+Text_FE6647:
+text "Dove Picture Scroll@"
+
+;fe665b
+Text_FE665B:
+text "Crow Picture Scroll@"
+
+;fe666f
+Text_FE666F:
+text "Eagle Picture Scroll@"
+
+;fe6684
+Text_FE6684:
+text "White-eye Picture Scroll@"
+
+;fe669d
+Text_FE669D:
+text "Koala Picture Scroll@"
+
+;fe66b2
+Text_FE66B2:
+text "Ostrich Picture Scroll@"
+
+;fe66c9
+Text_FE66C9:
+text "Fox Picture Scroll@"
+
+;fe66dc
+Text_FE66DC:
+text "Tanuki Picture Scroll@"
+
+;fe66f2
+Text_FE66F2:
+text "Weasel Picture Scroll@"
+
+;fe6708
+Text_FE6708:
+text "Alligator Picture Scroll@"
+
+;fe6721
+Text_FE6721:
+text "Cherry Staff@"
+
+;fe672e
+Text_FE672E:
+text "Plum Staff@"
+
+;fe6739
+Text_FE6739:
+text "Pine Staff@"
+
+;fe6744
+Text_FE6744:
+text "Bamboo Staff@"
+
+;fe6751
+Text_FE6751:
+text "Cedar Staff@"
+
+;fe675d
+Text_FE675D:
+text "Willow Staff@"
+
+;fe676a
+Text_FE676A:
+text "Chestnut Staff@"
+
+;fe6779
+Text_FE6779:
+text "Stone Staff@"
+
+;fe6785
+Text_FE6785:
+text "Bone Staff@"
+
+;fe6790
+Text_FE6790:
+text "Fang Staff@"
+
+;fe679b
+Text_FE679B:
+text "Paulownia Staff@"
+
+;fe67ab
+Text_FE67AB:
+text "Lead Staff@"
+
+;fe67b6
+Text_FE67B6:
+text "Iron Staff@"
+
+;fe67c1
+Text_FE67C1:
+text "Copper Staff@"
+
+;fe67ce
+Text_FE67CE:
+text "Tin Staff@"
+
+;fe67d8
+Text_FE67D8:
+text "Gold Staff@"
+
+;fe67e3
+Text_FE67E3:
+text "Silver Staff@"
+
+;fe67f0
+Text_FE67F0:
+text "Bronze Staff@"
+
+;fe67fd
+Text_FE67FD:
+text "Hinoki Staff@"
+
+;fe680a
+Text_FE680A:
+text "Oak Staff@"
+
+;fe6814
+Text_FE6814:
+text "Maple Staff@"
+
+;fe6820
+Text_FE6820:
+text "Zelkova Staff@"
+
+;fe682e
+Text_FE682E:
+text "Birch Staff@"
+
+;fe683a
+Text_FE683A:
+text "Diamond Bracer@"
+
+;fe6849
+Text_FE6849:
+text "Pearl Bracer@"
+
+;fe6856
+Text_FE6856:
+text "Ruby Bracer@"
+
+;fe6862
+Text_FE6862:
+text "Sapphire Bracer@"
+
+;fe6872
+Text_FE6872:
+text "Coral Bracer@"
+
+;fe687f
+Text_FE687F:
+text "Turquoise Bracer@"
+
+;fe6890
+Text_FE6890:
+text "Emerald Bracer@"
+
+;fe689f
+Text_FE689F:
+text "Amethyst Bracer@"
+
+;fe68af
+Text_FE68AF:
+text "Opal Bracer@"
+
+;fe68bb
+Text_FE68BB:
+text "Jade Bracer@"
+
+;fe68c7
+Text_FE68C7:
+text "Amber Bracer@"
+
+;fe68d4
+Text_FE68D4:
+text "Topaz Bracer@"
+
+;fe68e1
+Text_FE68E1:
+text "Agate Bracer@"
+
+;fe68ee
+Text_FE68EE:
+text "Zirconia Bracer@"
+
+;fe68fe
+Text_FE68FE:
+text "Garnet Bracer@"
+
+;fe690c
+Text_FE690C:
+text "Cattleya Bracer@"
+
+;fe691c
+Text_FE691C:
+text "Lapis Lazuli Bracer@"
+
+;fe6930
+Text_FE6930:
+text "Aquamarine Bracer@"
+
+;fe6942
+Text_FE6942:
+text "Moonstone Bracer@"
+
+;fe6953
+Text_FE6953:
+text "Tiger Eye Bracer@"
+
+;fe6964
+Text_FE6964:
+text "Bloodstone Bracer@"
+
+;fe6976
+Text_FE6976:
+text "Malachite Bracer@"
+
+;fe6987
+Text_FE6987:
+text "Cat's Eye Bracer@"
+
+;fe6998
+Text_FE6998:
+text "Crystal Bracer@"
+
+;fe69a7
+Text_FE69A7:
+text "Glass Bracer@"
+
+;fe69b4
+Text_FE69B4:
+text "Platinum Bracer@"
+
+;fe69c4
+Text_FE69C4:
+text "Thormaline Bracer@"
+
+;fe69d6
+Text_FE69D6:
+text "Skinny Pot@"
+
+;fe69e1
+Text_FE69E1:
+text "Round Pot@"
+
+;fe69eb
+Text_FE69EB:
+text "Cubical Pot@"
+
+;fe69f7
+Text_FE69F7:
+text "Triangle Pot@"
+
+;fe6a04
+Text_FE6A04:
+text "Fat Pot@"
+
+;fe6a0c
+Text_FE6A0C:
+text "Starshaped Pot@"
+
+;fe6a1b
+Text_FE6A1B:
+text "Eggshaped Pot@"
+
+;fe6a29
+Text_FE6A29:
+text "Shallow Pot@"
+
+;fe6a35
+Text_FE6A35:
+text "Deep Pot@"
+
+;fe6a3e
+Text_FE6A3E:
+text "Semicircle Pot@"
+
+;fe6a4d
+Text_FE6A4D:
+text "Crescent Pot@"
+
+;fe6a5a
+Text_FE6A5A:
+text "Slanted Pot@"
+
+;fe6a66
+Text_FE6A66:
+text "Warped Pot@"
+
+;fe6a71
+Text_FE6A71:
+text "Hourglass Pot@"
+
+;fe6a7f
+Text_FE6A7F:
+text "Gourd-like Pot@"
+
+;fe6a8e
+Text_FE6A8E:
+text "Uneven Pot@"
+
+;fe6a99
+Text_FE6A99:
+text "Diamond Pot@"
+
+;fe6aa5
+Text_FE6AA5:
+text "Bulbous Pot@"
+
+;fe6ab1
+Text_FE6AB1:
+text "Item Number Over@"

@@ -1,434 +1,386 @@
-;fe2e89
-Text364:
-numvar TextNumVar_40
+;fe4313
+Text_FE4313:
+numvar $40
 text "@"
 
-;fe2e8c
-Text365:
-strvar TextStrVar_83
+;fe4316
+Text_FE4316:
+strvar $83
 text "@"
 
-;fe2e8f
-;"Top Floor [numvar TextNumVar_Stat]"
-;"Hunger [numvar TextNumVar_Stat]/[numvar TextNumVar_Stat]%"
-Text366:
-text "到達度"
-textfunction $0 $13
-numvar TextNumVar_Stat
+;fe4319
+Text_FE4319:
+text "Top Floor:"
+textfunction $0 $0
+numvar $13
 textfunction $0 $D
-text "満腹度"
+text "Satiation: "
 textfunction $0 $2
-numvar TextNumVar_Stat
-text "／"
-numvar TextNumVar_Stat
-text "％@"
+numvar $13
+text "/"
+numvar $13
+text "%@"
 
-;fe2eae
-;"Sword Strength [numvar TextNumVar_Stat]"
-;"Strength [numvar TextNumVar_Strength]/[numvar TextNumVar_Strength]"
-Text367:
-text "剣の強さ"
-textfunction $0 $9
-numvar TextNumVar_Stat
+;fe4340
+Text_FE4340:
+text "Sword Str.:"
+textfunction $0 $0
+numvar $13
 textfunction $0 $C
-text "ちから"
-textfunction $0 $1A
-numvar TextNumVar_Strength
-text "／"
-numvar TextNumVar_Strength
-text "@"
-
-;fe2ec7
-;"Shield Strength [numvar TextNumVar_Stat]"
-;"Exp. Points [numvar TextNumVar_Exp_Price]"
-Text368:
-text "盾の強さ"
-textfunction $0 $9
-numvar TextNumVar_Stat
-textfunction $0 $C
-text "経験値"
-textfunction $0 $B
-numvar TextNumVar_Exp_Price
-text "@"
-
-;fe2edf
-;"Go on an adventure"
-Text369:
-text "冒険に出る@"
-
-;fe2ee7
-;"Create a wanderer journal"
-Text370:
-text "風来日記を作る@"
-
-;fe2ef2
-;"Copy a wanderer journal"
-Text371:
-text "風来日記を写す@"
-
-;fe2efd
-;"Erase a wanderer journal"
-Text372:
-text "風来日記を消す@"
-
-;fe2f08
-;"Change your name"
-Text373:
-text "名前を変える@"
-
-;fe2f12
-;"Wanderer leaderboard"
-Text374:
-text "風来人番付@"
-
-;fe2f19
-;"Recall"
-Text375:
-text "回想@"
-
-;fe2f1e
-;"Sound setting"
-Text376:
-text "音響設定@"
-
-;fe2f27
-;"Stereo"
-;"Mono"
-Text377:
+text "Strength:"
 textfunction $0 $4
-text "ステレオ"
-textfunction $0 $C
-text "モノラル@"
+numvar $12
+text "/"
+numvar $12
+text "@"
 
-;fe2f36
-;"Yes"
-;"No"
-Text378:
+;fe4365
+Text_FE4365:
+text "Shield Str.:"
+textfunction $0 $0
+numvar $13
+textfunction $0 $C
+text "EXP:"
+textfunction $0 $0
+numvar $36
+text "@"
+
+;fe4383
+Text_FE4383:
+text "Adventure@"
+
+;fe438d
+Text_FE438D:
+text "New Journal@"
+
+;fe4399
+Text_FE4399:
+text "Copy Journal@"
+
+;fe43a6
+Text_FE43A6:
+text "Erase Journal@"
+
+;fe43b4
+Text_FE43B4:
+text "Change name@"
+
+;fe43c0
+Text_FE43C0:
+text "Ranking@"
+
+;fe43c8
+Text_FE43C8:
+text "Recall@"
+
+;fe43cf
+Text_FE43CF:
+text "Sound Settings@"
+
+;fe43de
+Text_FE43DE:
+textfunction $0 $4
+text "Stereo"
+textfunction $0 $1C
+text "Mono@"
+
+;fe43ef
+Text_FE43EF:
 textfunction $0 $5
-text "はい"
-textfunction $0 $E
-text "いいえ@"
+text "Yes"
+textfunction $0 $14
+text "No@"
 
-;fe2f42
-;"[player] the Wanderer"
-Text379:
-numvar TextNumVar_11
-text "：風来の"
-strvar TextStrVar_PlayerName
-text "@"
+;fe43fb
+Text_FE43FB:
+numvar $11
+text ": "
+strvar $81
+text " the Wanderer@"
 
-;fe2f4c
-;"Wanderer Journal"
-Text380:
-text "風来日記"
+;fe440f
+Text_FE440F:
+text "Journal"
 textfunction $0 $4
-numvar TextNumVar_11
+numvar $11
 text "@"
 
-;fe2f58
-Text381:
-numvar TextNumVar_Gitan_Times
-text "Ｇ@"
+;fe441c
+Text_FE441C:
+numvar $25
+text "G@"
 
-;fe2f5d
-;"Sell"
-;"Don't sell"
-Text382:
+;fe4420
+Text_FE4420:
 textfunction $0 $6
-text "売る"
+text "Sell"
 textfunction $0 $E
-text "売らない@"
+text "Don't Sell@"
 
-;fe2f6c
-;"You don't have any items."
-Text383:
+;fe4435
+Text_FE4435:
+textfunction $0 $10
+text "Not carrying anything.@"
+
+;fe444f
+Text_FE444F:
 textfunction $0 $3
-text "アイテムを持っていません。@"
+text "-Nothing's Inside-@"
 
-;fe2f7d
-;"-There isn't anying inside-"
-Text384:
+;fe4465
+Text_FE4465:
 textfunction $0 $3
-text "－何も入っていません－@"
+text "-You're not carrying anything-@"
 
-;fe2f8d
-;"-You don't have any items-"
-Text385:
-textfunction $0 $3
-text "－アイテムを持っていません－@"
-
-;fe2f9f
-Text386:
+;fe4487
+Text_FE4487:
 text "[CONDOR]@"
 
-;fe2fa2
-Text387:
+;fe448a
+Text_FE448A:
 text "[MAMEL][CONDOR]@"
 
-;fe2fa7
-Text388:
+;fe448f
+Text_FE448F:
 text "\l@"
 
-;fe2fa9
-Text389:
+;fe4491
+Text_FE4491:
 text "\l@"
 
-;fe2fab
-Text390:
-numvar TextNumVar_Strength
-text "Ｆ@"
+;fe4493
+Text_FE4493:
+numvar $12
+text "F@"
 
-;fe2fb0
-;"[numvar TextNumVar_Gitan_Times] times"
-Text391:
-numvar TextNumVar_Gitan_Times
-text "回目@"
+;fe4497
+Text_FE4497:
+numvar $15
+text " Tries@"
 
-;fe2fb6
-;"Is it ok to erase [player] the Wanderer?"
-Text392:
-numvar TextNumVar_11
-text "：風来の"
-strvar TextStrVar_PlayerName
-text "\l"
+;fe44a0
+Text_FE44A0:
+numvar $11
+text ": "
+strvar $81
+text " the Wanderer\l"
 textfunction $0 $18
-text "を消してもよろしいですか？@"
+text "Delete him?@"
 
-;fe2fd2
-Text393:
-numvar TextNumVar_Exp_Price
+;fe44c3
+Text_FE44C3:
+numvar $36
 text "@"
 
-;fe2fd5
-;"You can't write your name longer than this."
-Text394:
+;fe44c6
+Text_FE44C6:
 textfunction $0 $4
-text "これ以上、名前をつけられません。@"
+text "Name is too long.@"
 
-;fe2fec
-;"Record your adventure?"
-Text395:
+;fe44db
+Text_FE44DB:
 textfunction $0 $3
-text "冒険を記録しますか？@"
+text "Record your adventure?@"
 
-;fe2ffe
-;"Back"
-Text396:
+;fe44f5
+Text_FE44F5:
 textfunction $0 $8
-text "背中@"
+text "Back@"
 
-;fe3005
-;"Price[gitan]gitan"
-Text397:
+;fe44fd
+Text_FE44FD:
 textfunction $0 $5
-text "価格"
-numvar TextNumVar_Exp_Price
-text "ギタン@"
+text "Price"
+numvar $36
+text "Gitan@"
 
-;fe3012
-Text398:
-text "あいうえお　はひふへほかきくけこ　まみむめもさしすせそ　や　ゆ　よたちつてと　らりるれろなにぬねの　わをん゛゜ぁぃぅぇぉ　ゃゅょっー１２３４５　６７８９０＋－？！／　（）［］　@"
+;fe450d
+Text_FE450D:
+text "ABCDE FGHIJKLMNO PQRSTUVWXY Z                          abcde fghijklmno pqrstuvwxy z@"
 
-;fe306d
-Text399:
-text "アイウエオ　ハヒフヘホカキクケコ　マミムメモサシスセソ　ヤ　ユ　ヨタチツテト　ラリルレロナニヌネノ　ワヲン゛゜ァィゥェォ　ャュョッ―１２３４５　６７８９０＋－？！／　（）［］　@"
-
-;fe30c8
-Text400:
-text "＊@"
-
-;fe30ca
-Text401:
-text "ばびぶべぼバビブベボがぎぐげごガギグゲゴざじずぜぞザジズゼゾだぢづでどダヂヅデドヴはひふへほハヒフヘホかきくけこカキクケコさしすせそサシスセソたちつてとタチツテトウ@"
-
-;fe311d
-Text402:
-text "ぱぴぷぺぽパピプペポはひふへほハヒフヘホ@"
-
-;fe3132
-Text403:
-numvar TextNumVar_68
+;fe4562
+Text_FE4562:
 text "@"
 
-;fe3135
-Text404:
-text "－"
-strvar TextStrVar_1
-text "－\l"
-strvar TextStrVar_2
+;fe4563
+Text_FE4563:
+text "*@"
+
+;fe4565
+Text_FE4565:
 text "@"
 
-;fe313d
-;"-Unidentified item-"
-;"This isn't identified, so you don't know what it is."
-Text405:
-text "－未識別のアイテム－\l識別されていないのでよくわからない。@"
+;fe4566
+Text_FE4566:
+text "@"
 
-;fe315e
-;"-[strvar TextStrVar_1]-"
-;"This is an invisible item, so you don't know what it is."
-Text406:
-text "－"
-strvar TextStrVar_1
-text "－\l透明なアイテムなので、よくわからない。@"
+;fe4567
+Text_FE4567:
+numvar $68
+text "@"
 
-;fe3179
-Text407:
-text "－"
-strvar TextStrVar_ItemName
-text "－\l@"
+;fe456a
+Text_FE456A:
+text "-"
+strvar $1
+text "-\l"
+strvar $2
+text "@"
 
-;fe317f
-Text408:
+;fe4572
+Text_FE4572:
+text "-Unidentified Item-\lThis isn't identified, so\lyou don't know what it does.@"
+
+;fe45bd
+Text_FE45BD:
+text "-"
+strvar $1
+text "-\lThis is an invisible item,\lso you don't know what it is.@"
+
+;fe45fb
+Text_FE45FB:
+text "-"
+strvar $80
+text "-\l@"
+
+;fe4601
+Text_FE4601:
 textfunction $0 $8
-text "ＨＰ"
+text "HP"
 textfunction $0 $18
-numvar TextNumVar_Stat
-text "／"
-numvar TextNumVar_Stat
+numvar $13
+text "/"
+numvar $13
 text "@"
 
-;fe318f
-;"Attack [numvar TextNumVar_Stat]"
-Text409:
+;fe460f
+Text_FE460F:
 textfunction $0 $8
-text "攻撃力"
+text "Attack Power"
 textfunction $0 $2A
-numvar TextNumVar_Stat
+numvar $13
 text "@"
 
-;fe319c
-;"Hunger [numvar TextNumVar_Stat]"
-Text410:
+;fe4624
+Text_FE4624:
 textfunction $0 $8
-text "満腹度"
+text "Satiation"
 textfunction $0 $2A
-numvar TextNumVar_Stat
-text "％@"
+numvar $13
+text "%@"
 
-;fe31ad
-Text411:
-text "　"
-numvar TextNumVar_11
-text "　"
-numvar TextNumVar_11
-text "　"
-numvar TextNumVar_11
+;fe4637
+Text_FE4637:
+text " "
+numvar $11
+text " "
+numvar $11
+text " "
+numvar $11
 text "@"
 
-;fe31b7
-Text412:
+;fe4641
+Text_FE4641:
 textfunction $0 $A
-text "＋　"
-numvar TextNumVar_11
-text "　"
-numvar TextNumVar_11
+text "+ "
+numvar $11
+text " "
+numvar $11
 text "@"
 
-;fe31c2
-Text413:
+;fe464c
+Text_FE464C:
 textfunction $0 $8
-text "―　"
-numvar TextNumVar_11
-text "　"
-numvar TextNumVar_11
+text "- "
+numvar $11
+text " "
+numvar $11
 text "@"
 
-;fe31cd
-Text414:
-text "　４４０\l　４４１\l　４４２\l　４４３\l　４４４\l　４４５\l@"
+;fe4657
+Text_FE4657:
+text " 440\l 441\l 442\l 443\l 444\l 445\l@"
 
-;fe31ec
-Text415:
-numvar TextNumVar_11
-text "　@"
+;fe4676
+Text_FE4676:
+numvar $11
+text " @"
 
-;fe31f0
-Text416:
-text "　@"
+;fe467a
+Text_FE467A:
+text " @"
 
-;fe31f2
-Text417:
+;fe467c
+Text_FE467C:
 textfunction $0 $5
-text "１　　"
+text "1  "
 textfunction $0 $2
-text "２　　"
+text "2  "
 textfunction $0 $2
-text "３　@"
+text "3 @"
 
-;fe3204
-Text418:
+;fe468e
+Text_FE468E:
 textfunction $0 $3
-text "４　　"
+text "4  "
 textfunction $0 $2
-text "５　　"
+text "5  "
 textfunction $0 $2
-text "６　　決定　　　　@"
+text "6  Decide  @"
 
-;fe321f
-Text419:
+;fe46a9
+Text_FE46A9:
 textfunction $0 $3
-text "７　　"
+text "7  "
 textfunction $0 $2
-text "８　　"
+text "8  "
 textfunction $0 $2
-text "９　　修正@"
+text "9  Modify@"
 
-;fe3236
-Text420:
+;fe46c2
+Text_FE46C2:
 textfunction $0 $3
-text "０　"
+text "0 "
 textfunction $0 $7
-text "００"
+text "00"
 textfunction $0 $6
-text "０００　取消@"
+text "000 Delete@"
 
-;fe324c
-;"Majin's Choice 1"
-Text421:
-text "魔人の選択枝１\l@"
+;fe46da
+Text_FE46DA:
+text "Majin's Choice 1\l@"
 
-;fe3259
-;"Majin's Choice 2"
-Text422:
-text "魔人の選択枝２\l@"
+;fe46ec
+Text_FE46EC:
+text "Majin's Choice 2\l@"
 
-;fe3266
-;"Majin's Choice 3"
-Text423:
-text "魔人の選択枝３\l@"
+;fe46fe
+Text_FE46FE:
+text "Majin's Choice 3\l@"
 
-;fe3273
-;"There's a well. Drink?"
-Text424:
-text "井戸があります。\l飲みますか？\l@"
+;fe4710
+Text_FE4710:
+text "There's a well here.\lWill you drink?\l@"
 
-;fe3287
-;"Say your name"
-;"Don't say"
-Text425:
+;fe4736
+Text_FE4736:
 textfunction $0 $5
-text "名前を言う\l"
+text "Say name\l"
 textfunction $0 $5
-text "言わない@"
+text "Don't say@"
 
-;fe329c
-;"Continue your adventure"
-;"Return to Kobami Shukuba"
-Text426:
+;fe474f
+Text_FE474F:
 textfunction $0 $5
-text "冒険のつづきから\l"
+text "Continue Journey\l"
 textfunction $0 $5
-text "渓谷の宿場に戻る@"
+text "Back to Valley Inn@"
 
-;fe32ba
-;"Continue"
-;"Stop"
-;"Recall"
-Text427:
+;fe4779
+Text_FE4779:
 textfunction $0 $5
-text "続ける\l"
+text "Continue\l"
 textfunction $0 $5
-text "やめる\l"
+text "Stop\l"
 textfunction $0 $5
-text "回想@"
+text "Recall@"

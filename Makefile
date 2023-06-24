@@ -5,7 +5,7 @@ ifneq ($(findstring MSYS,$(shell uname)),)
   WINDOWS := 1
 endif
 
-rom := shiren.sfc
+rom := shiren-aeon-genesis.sfc
 
 #if set to 1, generate a debug rom instead
 #off by default for matching rom
@@ -37,7 +37,7 @@ OBJS = code.o gfx/characters/character_sprites.o asm/bank_19.o data/maps/shuffle
 all: $(rom)
 
 tidy:
-	rm -f $(rom) $(OBJS) shiren.sym
+	rm -f $(rom) $(OBJS) shiren-aeon-genesis.sym
 	$(MAKE) -C spc clean
 	$(MAKE) -C tools clean
 
@@ -71,7 +71,7 @@ endif
 
 $(rom): $(OBJS)
 	wlalink $(WLALINKFLAGS) linkfile $@
-	$(SHA1SUM) -c shiren.sha1
+	$(SHA1SUM) -c shiren-aeon-genesis.sha1
 
 %.o: dep = $(shell tools/scan_includes $(@D)/$*.asm)
 %.o: %.asm $$(dep)

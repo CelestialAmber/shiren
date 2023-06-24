@@ -1,1197 +1,1250 @@
-;fe37c4
-Text452:
-text "マムル@"
-
-;fe37c8
-Text453:
-text "死の使い@"
-
-;fe37cf
-Text454:
-text "ギャザー@"
-
-;fe37d4
-Text455:
-text "ボウヤー@"
-
-;fe37d9
-Text456:
-text "ガマラ@"
-
-;fe37dd
-Text457:
-text "デブータ@"
-
-;fe37e2
-Text458:
-text "きり仙人@"
-
-;fe37e8
-Text459:
-text "火炎入道@"
-
-;fe37f0
-Text460:
-text "ミドロ@"
-
-;fe37f4
-Text461:
-text "ぬすっトド@"
-
-;fe37fa
-Text462:
-text "パルテノス@"
-
-;fe3800
-Text463:
-text "キグニ族@"
-
-;fe3806
-Text464:
-text "くねくねハニー@"
-
-;fe380e
-Text465:
-text "エーテルデビル@"
-
-;fe3816
-Text466:
-text "ンドゥバ@"
-
-;fe381b
-Text467:
-text "アイアンヘッド@"
-
-;fe3823
-Text468:
-text "おばけ大根@"
-
-;fe382a
-Text469:
-text "吸引幼虫@"
-
-;fe3833
-Text470:
-text "セルアーマー@"
-
-;fe383a
-Text471:
-text "ドラゴン@"
-
-;fe383f
-Text472:
-text "タウロス@"
-
-;fe3844
-Text473:
-text "いやしウサギ@"
-
-;fe384b
-Text474:
-text "鬼面武者@"
-
-;fe3854
-Text475:
-text "ぼうれい武者@"
-
-;fe385d
-Text476:
-text "マスターチキンＸ@"
-
-;fe3867
-Text477:
-text "チキン@"
-
-;fe386b
-Text478:
-text "やみふくろう@"
-
-;fe3872
-Text479:
-text "ナイフゲータ@"
-
-;fe3879
-Text480:
-text "ぴーたん@"
-
-;fe387e
-Text481:
-text "正面戦士@"
-
-;fe3887
-Text482:
-text "シューベル@"
-
-;fe388d
-Text483:
-text "とおせんりゅう@"
-
-;fe3895
-Text484:
-text "パコレプキン@"
-
-;fe389c
-Text485:
-text "オヤジ戦車@"
-
-;fe38a4
-Text486:
-text "妖怪にぎり変化@"
-
-;fe38b0
-Text487:
-text "ノロージョ@"
-
-;fe38b6
-Text488:
-text "ガイコツまどう@"
-
-;fe38be
-Text489:
-text "ゲイズ@"
-
-;fe38c2
-Text490:
-text "まわるポリゴン@"
-
-;fe38ca
-Text491:
-text "魔蝕虫@"
-
-;fe38d1
-Text492:
-text "兵隊アリ@"
-
-;fe38d8
-Text493:
-text "カラクロイド@"
-
-;fe38df
-Text494:
-text "ドレムラス@"
-
-;fe38e5
-Text495:
-text "ハブーン@"
-
-;fe38ea
-Text496:
-text "畠荒らし@"
-
-;fe38f1
-Text497:
-text "コドモ戦車@"
-
-;fe38f9
-Text498:
-text "武器@"
-
-;fe38fe
-Text499:
-text "矢@"
-
-;fe3901
-Text500:
-text "盾@"
-
-;fe3903
-Text501:
-text "腕輪@"
-
-;fe3906
-Text502:
-text "巻物@"
-
-;fe3909
-Text503:
-text "杖@"
-
-;fe390b
-Text504:
-text "草@"
-
-;fe390d
-Text505:
-text "壺@"
-
-;fe390f
-Text506:
-text "おにぎり@"
-
-;fe3914
-Text507:
-text "豆山賊@"
-
-;fe391b
-Text508:
-text "小僧天狗@"
-
-;fe3924
-Text509:
-text "予備３@"
-
-;fe3929
-Text510:
-text "予備４@"
-
-;fe392e
-Text511:
-text "老人@"
-
-;fe3932
-Text512:
-text "少女@"
-
-;fe3936
-Text513:
-text "強そうな男@"
-
-;fe393c
-Text514:
-text "小太りの男@"
-
-;fe3944
-Text515:
-text "客@"
-
-;fe3947
-Text516:
-text "倉庫の番人@"
-
-;fe394f
-Text517:
-text "ララ@"
-
-;fe3952
-Text518:
-text "二番弟子@"
-
-;fe3959
-Text519:
-text "三番弟子@"
-
-;fe3960
-Text520:
-text "四番弟子@"
-
-;fe3967
-Text521:
-text "五番弟子@"
-
-;fe396e
-Text522:
-text "サルヤマ@"
-
-;fe3973
-Text523:
-text "ガイバラ@"
-
-;fe3978
-Text524:
-text "風来人@"
-
-;fe397c
-Text525:
-text "盗賊番@"
-
-;fe3982
-Text526:
-text "番犬@"
-
-;fe3986
-Text527:
-text "７８@"
-
-;fe3989
-Text528:
-text "店主@"
-
-;fe398d
-Text529:
-text "老婆@"
-
-;fe3992
-Text530:
-text "泊客@"
-
-;fe3997
-Text531:
-text "ペケジ@"
-
-;fe399b
-Text532:
-text "おかみ@"
-
-;fe399f
-Text533:
-text "ナオキ@"
-
-;fe39a3
-Text534:
-text "トシオ@"
-
-;fe39a7
-Text535:
-text "旅人@"
-
-;fe39aa
-Text536:
-text "トメ@"
-
-;fe39ad
-Text537:
-text "酒場の店主@"
-
-;fe39b5
-Text538:
-text "番付屋@"
-
-;fe39ba
-Text539:
-text "峠屋料理長@"
-
-;fe39c3
-Text540:
-text "山師@"
-
-;fe39c8
-Text541:
-text "異国の風来人@"
-
-;fe39d1
-Text542:
-text "少女@"
-
-;fe39d5
-Text543:
-text "老人@"
-
-;fe39d9
-Text544:
-text "じじい@"
-
-;fe39dd
-Text545:
-text "カマヒゲ@"
-
-;fe39e2
-Text546:
-text "スズコ@"
-
-;fe39e6
-Text547:
-text "スララ@"
-
-;fe39ea
-Text548:
-text "お竜@"
-
-;fe39ee
-Text549:
-text "客@"
-
-;fe39f1
-Text550:
-text "サギ師@"
-
-;fe39f6
-Text551:
-text "飛脚@"
-
-;fe39fb
-Text552:
-text "飛脚@"
-
-;fe3a00
-Text553:
-text "飛脚@"
-
-;fe3a05
-Text554:
-text "座頭ケチ@"
-
-;fe3a0c
-Text555:
-text "４人組@"
-
-;fe3a11
-Text556:
-text "子供@"
-
-;fe3a15
-Text557:
-text "男@"
-
-;fe3a17
-Text558:
-text "店主@"
-
-;fe3a1b
-Text559:
-text "女@"
-
-;fe3a1d
-Text560:
-text "おばば@"
-
-;fe3a21
-Text561:
-text "かじ屋@"
-
-;fe3a25
-Text562:
-text "ボボロ@"
-
-;fe3a29
-Text563:
-text "女の子@"
-
-;fe3a2d
-Text564:
-text "母親@"
-
-;fe3a32
-Text565:
-text "酒場の店主@"
-
-;fe3a3a
-Text566:
-text "カンパチ@"
-
-;fe3a3f
-Text567:
-text "シブタレ@"
-
-;fe3a44
-Text568:
-text "農夫@"
-
-;fe3a49
-Text569:
-text "車屋のゴロ@"
-
-;fe3a50
-Text570:
-text "辻占い@"
-
-;fe3a56
-Text571:
-text "ツムリ@"
-
-;fe3a5a
-Text572:
-text "オビト@"
-
-;fe3a5e
-Text573:
-text "カズラ@"
-
-;fe3a62
-Text574:
-text "町のおじいさん@"
-
-;fe3a6b
-Text575:
-text "飛脚のトビ@"
-
-;fe3a73
-Text576:
-text "番人@"
-
-;fe3a76
-Text577:
-text "男@"
-
-;fe3a78
-Text578:
-text "酒場の娘@"
-
-;fe3a7f
-Text579:
-text "こそどろ@"
-
-;fe3a84
-Text580:
-text "盗賊人@"
-
-;fe3a8a
-Text581:
-text "風来人@"
-
-;fe3a8e
-Text582:
-text "遺跡荒らし@"
-
-;fe3a97
-Text583:
-text "料理人@"
-
-;fe3a9c
-Text584:
-text "壺じいさん@"
-
-;fe3aa2
-Text585:
-text "地変学者フェイ@"
-
-;fe3aad
-Text586:
-text "車屋のガラ@"
-
-;fe3ab4
-Text587:
-text "父親@"
-
-;fe3ab9
-Text588:
-text "老人@"
-
-;fe3abd
-Text589:
-text "老婆@"
-
-;fe3ac2
-Text590:
-text "母親@"
-
-;fe3ac7
-Text591:
-text "子供@"
-
-;fe3acb
-Text592:
-text "ヤブメ@"
-
-;fe3acf
-Text593:
-text "女@"
-
-;fe3ad1
-Text594:
-text "女@"
-
-;fe3ad3
-Text595:
-text "シロのヘイジ@"
-
-;fe3ada
-Text596:
-text "母親@"
-
-;fe3adf
-Text597:
-text "おじいさん@"
-
-;fe3ae5
-Text598:
-text "男の子@"
-
-;fe3ae9
-Text599:
-text "女の子@"
-
-;fe3aed
-Text600:
-text "犬@"
-
-;fe3af0
-Text601:
-text "男@"
-
-;fe3af2
-Text602:
-text "父@"
-
-;fe3af5
-Text603:
-text "母@"
-
-;fe3af8
-Text604:
-text "弟@"
-
-;fe3afb
-Text605:
-text "妹@"
-
-;fe3afe
-Text606:
-text "マムル@"
-
-;fe3b02
-Text607:
-text "マムル@"
-
-;fe3b06
-Text608:
-text "マムル@"
-
-;fe3b0a
-Text609:
-text "マムル@"
-
-;fe3b0e
-Text610:
-text "シキタリのムグラ@"
-
-;fe3b17
-Text611:
-text "クルクルのセンゾウ@"
-
-;fe3b21
-Text612:
-text "ナナメのジロキチ@"
-
-;fe3b2a
-Text613:
-text "チビのビエー@"
-
-;fe3b31
-Text614:
-text "シロのヘイジ@"
-
-;fe3b38
-Text615:
-text "飛脚のトビ@"
-
-;fe3b40
-Text616:
-text "客@"
-
-;fe3b43
-Text617:
-text "酔っ払いのタゲ@"
-
-;fe3b4d
-Text618:
-text "シケのハンザキ@"
-
-;fe3b55
-Text619:
-text "投テキのツブテ@"
-
-;fe3b5e
-Text620:
-text "聞き耳のサブ@"
-
-;fe3b67
-Text621:
-text "親切なおじいさん@"
-
-;fe3b72
-Text622:
-text "流浪のシジマ@"
-
-;fe3b7b
-Text623:
-text "橋タタキのヤマケ@"
-
-;fe3b85
-Text624:
-text "犬@"
-
-;fe3b88
-Text625:
-text "サルヤマ@"
-
-;fe3b8d
-Text626:
-text "ガイバラ@"
-
-;fe3b92
-Text627:
-text "息子@"
-
-;fe3b96
-Text628:
-text "母親@"
-
-;fe3b9b
-Text629:
-text "父親@"
-
-;fe3ba0
-Text630:
-text "鍛冶屋の娘@"
-
-;fe3ba9
-Text631:
-text "女@"
-
-;fe3bab
-Text632:
-text "ヒゲの男@"
-
-;fe3bb0
-Text633:
-text "女@"
-
-;fe3bb2
-Text634:
-text "男@"
-
-;fe3bb4
-Text635:
-text "食通じじい@"
-
-;fe3bbb
-Text636:
-text "壺マニア@"
-
-;fe3bc0
-Text637:
-text "フラッときた客@"
-
-;fe3bc9
-Text638:
-text "食通じじい@"
-
-;fe3bd0
-Text639:
-text "客@"
-
-;fe3bd3
-Text640:
-text "ソダテのカンジ@"
-
-;fe3bdb
-Text641:
-text "１９２@"
-
-;fe3bdf
-Text642:
-text "１９３@"
-
-;fe3be3
-Text643:
-text "何者か@"
-
-;fe3be9
-Text644:
-strvar TextStrVar_PlayerName
+;fe49fa
+Text_FE49FA:
+text "Mamul@"
+
+;fe4a00
+Text_FE4A00:
+text "Minion of Death@"
+
+;fe4a10
+Text_FE4A10:
+text "Gyazar@"
+
+;fe4a17
+Text_FE4A17:
+text "Bowya@"
+
+;fe4a1d
+Text_FE4A1D:
+text "Gamara@"
+
+;fe4a24
+Text_FE4A24:
+text "Debuta@"
+
+;fe4a2b
+Text_FE4A2B:
+text "Mist Hermit@"
+
+;fe4a37
+Text_FE4A37:
+text "Flame Priest@"
+
+;fe4a44
+Text_FE4A44:
+text "Midoro@"
+
+;fe4a4b
+Text_FE4A4B:
+text "Theftodo@"
+
+;fe4a54
+Text_FE4A54:
+text "Parthenos@"
+
+;fe4a5e
+Text_FE4A5E:
+text "Kigni Tribe@"
+
+;fe4a6a
+Text_FE4A6A:
+text "Wriggling Honey@"
+
+;fe4a7a
+Text_FE4A7A:
+text "Ether Devil@"
+
+;fe4a86
+Text_FE4A86:
+text "Nduba@"
+
+;fe4a8c
+Text_FE4A8C:
+text "Iron-Head@"
+
+;fe4a96
+Text_FE4A96:
+text "Monster Daikon@"
+
+;fe4aa5
+Text_FE4AA5:
+text "Absorber Larva@"
+
+;fe4ab4
+Text_FE4AB4:
+text "Wood Armor@"
+
+;fe4abf
+Text_FE4ABF:
+text "Dragon@"
+
+;fe4ac6
+Text_FE4AC6:
+text "Tauros@"
+
+;fe4acd
+Text_FE4ACD:
+text "Healer Rabbit@"
+
+;fe4adb
+Text_FE4ADB:
+text "Kimen-Musha@"
+
+;fe4ae7
+Text_FE4AE7:
+text "Ghost Musha@"
+
+;fe4af3
+Text_FE4AF3:
+text "Master Chicken Ｘ@"
+
+;fe4b05
+Text_FE4B05:
+text "Chicken@"
+
+;fe4b0d
+Text_FE4B0D:
+text "Dark Owl@"
+
+;fe4b16
+Text_FE4B16:
+text "Knife Gator@"
+
+;fe4b22
+Text_FE4B22:
+text "Peetan@"
+
+;fe4b29
+Text_FE4B29:
+text "Face-First Warrior@"
+
+;fe4b3c
+Text_FE4B3C:
+text "Shoebell@"
+
+;fe4b45
+Text_FE4B45:
+text "Impasse Dragon@"
+
+;fe4b54
+Text_FE4B54:
+text "Pumkorepkin@"
+
+;fe4b60
+Text_FE4B60:
+text "Old Man Tank@"
+
+;fe4b6d
+Text_FE4B6D:
+text "Monster Nigiri Beast@"
+
+;fe4b82
+Text_FE4B82:
+text "Norojo@"
+
+;fe4b89
+Text_FE4B89:
+text "Skeleton Mage@"
+
+;fe4b97
+Text_FE4B97:
+text "Gaze@"
+
+;fe4b9c
+Text_FE4B9C:
+text "Spinning Polygon@"
+
+;fe4bad
+Text_FE4BAD:
+text "Mashoku Bug@"
+
+;fe4bb9
+Text_FE4BB9:
+text "Soldier Ant@"
+
+;fe4bc5
+Text_FE4BC5:
+text "Karakuroid@"
+
+;fe4bd0
+Text_FE4BD0:
+text "Dremlas@"
+
+;fe4bd8
+Text_FE4BD8:
+text "Haboon@"
+
+;fe4bdf
+Text_FE4BDF:
+text "Field Raider@"
+
+;fe4bec
+Text_FE4BEC:
+text "Kid Tank@"
+
+;fe4bf5
+Text_FE4BF5:
+text "Weapon@"
+
+;fe4bfc
+Text_FE4BFC:
+text "Arrow@"
+
+;fe4c02
+Text_FE4C02:
+text "Shield@"
+
+;fe4c09
+Text_FE4C09:
+text "Bracer@"
+
+;fe4c10
+Text_FE4C10:
+text "Scroll@"
+
+;fe4c17
+Text_FE4C17:
+text "Staff@"
+
+;fe4c1d
+Text_FE4C1D:
+text "Herb@"
+
+;fe4c22
+Text_FE4C22:
+text "Pot@"
+
+;fe4c26
+Text_FE4C26:
+text "Rice Ball@"
+
+;fe4c30
+Text_FE4C30:
+text "Bean Bandit@"
+
+;fe4c3c
+Text_FE4C3C:
+text "Kid Tengu@"
+
+;fe4c46
+Text_FE4C46:
+text "Prepare 3@"
+
+;fe4c50
+Text_FE4C50:
+text "Prepare 4@"
+
+;fe4c5a
+Text_FE4C5A:
+text "Old Man@"
+
+;fe4c62
+Text_FE4C62:
+text "Girl@"
+
+;fe4c67
+Text_FE4C67:
+text "Odd Man@"
+
+;fe4c6f
+Text_FE4C6F:
+text "Plump Man@"
+
+;fe4c79
+Text_FE4C79:
+text "Customer@"
+
+;fe4c82
+Text_FE4C82:
+text "Warehouse Guard@"
+
+;fe4c92
+Text_FE4C92:
+text "Lala@"
+
+;fe4c97
+Text_FE4C97:
+text "#2 Disciple@"
+
+;fe4ca3
+Text_FE4CA3:
+text "#3 Disciple@"
+
+;fe4caf
+Text_FE4CAF:
+text "#4 Disciple@"
+
+;fe4cbb
+Text_FE4CBB:
+text "#5 Disciple@"
+
+;fe4cc7
+Text_FE4CC7:
+text "Saruyama@"
+
+;fe4cd0
+Text_FE4CD0:
+text "Gaibara@"
+
+;fe4cd8
+Text_FE4CD8:
+text "Wanderer@"
+
+;fe4ce1
+Text_FE4CE1:
+text "Guard@"
+
+;fe4ce7
+Text_FE4CE7:
+text "Guard Dog@"
+
+;fe4cf1
+Text_FE4CF1:
+text "78@"
+
+;fe4cf4
+Text_FE4CF4:
+text "Shopkeeper@"
+
+;fe4cff
+Text_FE4CFF:
+text "Old Woman@"
+
+;fe4d09
+Text_FE4D09:
+text "Guest@"
+
+;fe4d0f
+Text_FE4D0F:
+text "Pekeji@"
+
+;fe4d16
+Text_FE4D16:
+text "Okami@"
+
+;fe4d1c
+Text_FE4D1C:
+text "Naoki@"
+
+;fe4d22
+Text_FE4D22:
+text "Toshio@"
+
+;fe4d29
+Text_FE4D29:
+text "Traveller@"
+
+;fe4d33
+Text_FE4D33:
+text "Tome@"
+
+;fe4d38
+Text_FE4D38:
+text "Bartender@"
+
+;fe4d42
+Text_FE4D42:
+text "Ranking Chief@"
+
+;fe4d50
+Text_FE4D50:
+text "Togeya Head Chef@"
+
+;fe4d61
+Text_FE4D61:
+text "Adventurer@"
+
+;fe4d6c
+Text_FE4D6C:
+text "Foreign Wanderer@"
+
+;fe4d7d
+Text_FE4D7D:
+text "Girl@"
+
+;fe4d82
+Text_FE4D82:
+text "Old Man@"
+
+;fe4d8a
+Text_FE4D8A:
+text "Decrepit Old Man@"
+
+;fe4d9b
+Text_FE4D9B:
+text "Kamahige@"
+
+;fe4da4
+Text_FE4DA4:
+text "Suzuko@"
+
+;fe4dab
+Text_FE4DAB:
+text "Surara@"
+
+;fe4db2
+Text_FE4DB2:
+text "O-Ryu@"
+
+;fe4db8
+Text_FE4DB8:
+text "Customer@"
+
+;fe4dc1
+Text_FE4DC1:
+text "Scam Artist@"
+
+;fe4dcd
+Text_FE4DCD:
+text "Messenger@"
+
+;fe4dd7
+Text_FE4DD7:
+text "Messenger@"
+
+;fe4de1
+Text_FE4DE1:
+text "Messenger@"
+
+;fe4deb
+Text_FE4DEB:
+text "Zato-Kechi@"
+
+;fe4df6
+Text_FE4DF6:
+text "Group of 4@"
+
+;fe4e01
+Text_FE4E01:
+text "Child@"
+
+;fe4e07
+Text_FE4E07:
+text "Man@"
+
+;fe4e0b
+Text_FE4E0B:
+text "Shopkeeper@"
+
+;fe4e16
+Text_FE4E16:
+text "Woman@"
+
+;fe4e1c
+Text_FE4E1C:
+text "Old Woman@"
+
+;fe4e26
+Text_FE4E26:
+text "Smith@"
+
+;fe4e2c
+Text_FE4E2C:
+text "Boboro@"
+
+;fe4e33
+Text_FE4E33:
+text "Little girl@"
+
+;fe4e3f
+Text_FE4E3F:
+text "Mother@"
+
+;fe4e46
+Text_FE4E46:
+text "Bartender@"
+
+;fe4e50
+Text_FE4E50:
+text "Kanpachi@"
+
+;fe4e59
+Text_FE4E59:
+text "Shibutare@"
+
+;fe4e63
+Text_FE4E63:
+text "Farmer@"
+
+;fe4e6a
+Text_FE4E6A:
+text "Goro the Wagoneer@"
+
+;fe4e7c
+Text_FE4E7C:
+text "Sidewalk Fortuneteller@"
+
+;fe4e93
+Text_FE4E93:
+text "Tsumuri@"
+
+;fe4e9b
+Text_FE4E9B:
+text "Obito@"
+
+;fe4ea1
+Text_FE4EA1:
+text "Kazura@"
+
+;fe4ea8
+Text_FE4EA8:
+text "Old Townsperson@"
+
+;fe4eb8
+Text_FE4EB8:
+text "Tobi the Messenger@"
+
+;fe4ecb
+Text_FE4ECB:
+text "Guard@"
+
+;fe4ed1
+Text_FE4ED1:
+text "Man@"
+
+;fe4ed5
+Text_FE4ED5:
+text "Bar Girl@"
+
+;fe4ede
+Text_FE4EDE:
+text "Petty Thief@"
+
+;fe4eea
+Text_FE4EEA:
+text "Thief@"
+
+;fe4ef0
+Text_FE4EF0:
+text "Wanderer@"
+
+;fe4ef9
+Text_FE4EF9:
+text "Ruin Raider@"
+
+;fe4f05
+Text_FE4F05:
+text "Chef@"
+
+;fe4f0a
+Text_FE4F0A:
+text "Pot Man@"
+
+;fe4f12
+Text_FE4F12:
+text "Seismologist Fei@"
+
+;fe4f23
+Text_FE4F23:
+text "Gara the Wagoneer@"
+
+;fe4f35
+Text_FE4F35:
+text "Father@"
+
+;fe4f3c
+Text_FE4F3C:
+text "Old Man@"
+
+;fe4f44
+Text_FE4F44:
+text "Old Woman@"
+
+;fe4f4e
+Text_FE4F4E:
+text "Mother@"
+
+;fe4f55
+Text_FE4F55:
+text "Child@"
+
+;fe4f5b
+Text_FE4F5B:
+text "Yabume@"
+
+;fe4f62
+Text_FE4F62:
+text "Woman@"
+
+;fe4f68
+Text_FE4F68:
+text "Woman@"
+
+;fe4f6e
+Text_FE4F6E:
+text "Heiji the Counter@"
+
+;fe4f80
+Text_FE4F80:
+text "Mother@"
+
+;fe4f87
+Text_FE4F87:
+text "Old Man@"
+
+;fe4f8f
+Text_FE4F8F:
+text "Little boy@"
+
+;fe4f9a
+Text_FE4F9A:
+text "Little Girl@"
+
+;fe4fa6
+Text_FE4FA6:
+text "Dog@"
+
+;fe4faa
+Text_FE4FAA:
+text "Man@"
+
+;fe4fae
+Text_FE4FAE:
+text "Father@"
+
+;fe4fb5
+Text_FE4FB5:
+text "Mother@"
+
+;fe4fbc
+Text_FE4FBC:
+text "Brother@"
+
+;fe4fc4
+Text_FE4FC4:
+text "Sister@"
+
+;fe4fcb
+Text_FE4FCB:
+text "Mamul@"
+
+;fe4fd1
+Text_FE4FD1:
+text "Mamul@"
+
+;fe4fd7
+Text_FE4FD7:
+text "Mamul@"
+
+;fe4fdd
+Text_FE4FDD:
+text "Mamul@"
+
+;fe4fe3
+Text_FE4FE3:
+text "Mugura the Conventional@"
+
+;fe4ffb
+Text_FE4FFB:
+text "Senzo the Spinner@"
+
+;fe500d
+Text_FE500D:
+text "Jirokichi the Diagonal@"
+
+;fe5024
+Text_FE5024:
+text "Bie the Shrimp@"
+
+;fe5033
+Text_FE5033:
+text "Heiji the Counter@"
+
+;fe5045
+Text_FE5045:
+text "Tobi the Messenger@"
+
+;fe5058
+Text_FE5058:
+text "Guest@"
+
+;fe505e
+Text_FE505E:
+text "Tage the Drunk@"
+
+;fe506d
+Text_FE506D:
+text "Hanzaki the Unfortunate@"
+
+;fe5085
+Text_FE5085:
+text "Tsubute the Thrower@"
+
+;fe5099
+Text_FE5099:
+text "Sabu the Listener@"
+
+;fe50ab
+Text_FE50AB:
+text "Kind Old Man@"
+
+;fe50b8
+Text_FE50B8:
+text "Shijima the Wanderer@"
+
+;fe50cd
+Text_FE50CD:
+text "Yamake the Bridge-Beater@"
+
+;fe50e6
+Text_FE50E6:
+text "Dog@"
+
+;fe50ea
+Text_FE50EA:
+text "Saruyama@"
+
+;fe50f3
+Text_FE50F3:
+text "Gaibara@"
+
+;fe50fb
+Text_FE50FB:
+text "Son@"
+
+;fe50ff
+Text_FE50FF:
+text "Mother@"
+
+;fe5106
+Text_FE5106:
+text "Father@"
+
+;fe510d
+Text_FE510D:
+text "Smith's Daughter@"
+
+;fe511e
+Text_FE511E:
+text "Woman@"
+
+;fe5124
+Text_FE5124:
+text "Moustache Man@"
+
+;fe5132
+Text_FE5132:
+text "Woman@"
+
+;fe5138
+Text_FE5138:
+text "Man@"
+
+;fe513c
+Text_FE513C:
+text "Gourmet Gramps@"
+
+;fe514b
+Text_FE514B:
+text "Pot Maniac@"
+
+;fe5156
+Text_FE5156:
+text "Aimless Customer@"
+
+;fe5167
+Text_FE5167:
+text "Gourmet Gramps@"
+
+;fe5176
+Text_FE5176:
+text "Customer@"
+
+;fe517f
+Text_FE517F:
+text "Kanji the Improver@"
+
+;fe5192
+Text_FE5192:
+text "192@"
+
+;fe5196
+Text_FE5196:
+text "193@"
+
+;fe519a
+Text_FE519A:
+text "Someone@"
+
+;fe51a2
+Text_FE51A2:
+strvar $81
 text "@"
 
-;fe3bec
-Text645:
-text "あなぐらマムル@"
+;fe51a5
+Text_FE51A5:
+text "Subterranean Mamul@"
 
-;fe3bf4
-Text646:
-text "地獄の使者@"
+;fe51b8
+Text_FE51B8:
+text "Minion of Hell@"
 
-;fe3bfd
-Text647:
-text "キラーギャザー@"
+;fe51c7
+Text_FE51C7:
+text "Killer Gyazar@"
 
-;fe3c05
-Text648:
-text "クロスボウヤー@"
+;fe51d5
+Text_FE51D5:
+text "Cross-bowya@"
 
-;fe3c0d
-Text649:
-text "ガマグッチ@"
+;fe51e1
+Text_FE51E1:
+text "Gamagucchi@"
 
-;fe3c13
-Text650:
-text "デブーチョ@"
+;fe51ec
+Text_FE51EC:
+text "Debucho@"
 
-;fe3c19
-Text651:
-text "みの仙人@"
+;fe51f4
+Text_FE51F4:
+text "Fog Hermit@"
 
-;fe3c1f
-Text652:
-text "火炎入道２@"
+;fe51ff
+Text_FE51FF:
+text "Flame Priest 2@"
 
-;fe3c28
-Text653:
-text "ゲドロ@"
+;fe520e
+Text_FE520E:
+text "Gedoro@"
 
-;fe3c2c
-Text654:
-text "みどりトド@"
+;fe5215
+Text_FE5215:
+text "Green Todo@"
 
-;fe3c32
-Text655:
-text "パルテノスＸ@"
+;fe5220
+Text_FE5220:
+text "Parthenos Ｘ@"
 
-;fe3c3a
-Text656:
-text "キグニ族２@"
+;fe522d
+Text_FE522D:
+text "Kigni Tribe @"
 
-;fe3c41
-Text657:
-text "くねくねハニーＸ@"
+;fe523a
+Text_FE523A:
+text "Wriggling Honey Ｘ@"
 
-;fe3c4b
-Text658:
-text "エーテルデビルＸ@"
+;fe524d
+Text_FE524D:
+text "Ether Devil Ｘ@"
 
-;fe3c55
-Text659:
-text "ンドゥルー@"
+;fe525c
+Text_FE525C:
+text "Ndulu@"
 
-;fe3c5b
-Text660:
-text "チェインヘッド@"
+;fe5262
+Text_FE5262:
+text "Chain Head@"
 
-;fe3c63
-Text661:
-text "めまわし大根@"
+;fe526d
+Text_FE526D:
+text "Dizzy Daikon@"
 
-;fe3c6b
-Text662:
-text "吸引虫@"
+;fe527a
+Text_FE527A:
+text "Absorber Bug@"
 
-;fe3c72
-Text663:
-text "クロムアーマー@"
+;fe5287
+Text_FE5287:
+text "Chrome Armor@"
 
-;fe3c7a
-Text664:
-text "スカイドラゴン@"
+;fe5294
+Text_FE5294:
+text "Sky Dragon@"
 
-;fe3c82
-Text665:
-text "ミノタウロス@"
+;fe529f
+Text_FE529F:
+text "Minotaur@"
 
-;fe3c89
-Text666:
-text "カーバンクルＸ@"
+;fe52a8
+Text_FE52A8:
+text "Carbunkle Ｘ@"
 
-;fe3c92
-Text667:
-text "はんにゃ武者@"
+;fe52b5
+Text_FE52B5:
+text "Hannya-Musha@"
 
-;fe3c9b
-Text668:
-text "ぼうれい武者Ｘ@"
+;fe52c2
+Text_FE52C2:
+text "Ghost Musha Ｘ@"
 
-;fe3ca6
-Text669:
-text "マスターチキン@"
+;fe52d1
+Text_FE52D1:
+text "Master Chicken@"
 
-;fe3cae
-Text670:
-text "チキンＸ@"
+;fe52e0
+Text_FE52E0:
+text "Chicken Ｘ@"
 
-;fe3cb4
-Text671:
-text "やみふくろうＸ@"
+;fe52eb
+Text_FE52EB:
+text "Dark Owl Ｘ@"
 
-;fe3cbd
-Text672:
-text "サーベルゲータ@"
+;fe52f7
+Text_FE52F7:
+text "Sabre Gator@"
 
-;fe3cc5
-Text673:
-text "逃げピータン@"
+;fe5303
+Text_FE5303:
+text "Fleeing Peetan@"
 
-;fe3ccd
-Text674:
-text "正面ファイター@"
+;fe5312
+Text_FE5312:
+text "Face-First Fighter@"
 
-;fe3cd7
-Text675:
-text "メンベルス@"
+;fe5325
+Text_FE5325:
+text "Menbells@"
 
-;fe3cdd
-Text676:
-text "ドラゴンヘッド@"
+;fe532e
+Text_FE532E:
+text "Dragon Head@"
 
-;fe3ce5
-Text677:
-text "パコレプキーナ@"
+;fe533a
+Text_FE533A:
+text "Pumkorepkin@"
 
-;fe3ced
-Text678:
-text "ガンコ戦車@"
+;fe5346
+Text_FE5346:
+text "Stubborn Tank@"
 
-;fe3cf5
-Text679:
-text "妖怪にぎり親方@"
+;fe5354
+Text_FE5354:
+text "Monster Nigiri Boss@"
 
-;fe3d01
-Text680:
-text "ノロージョの姉@"
+;fe5368
+Text_FE5368:
+text "Norojo's Big Sister@"
 
-;fe3d0a
-Text681:
-text "ガイコツまじん@"
+;fe537c
+Text_FE537C:
+text "Skeleton Wizard@"
 
-;fe3d12
-Text682:
-text "スーパーゲイズ@"
+;fe538c
+Text_FE538C:
+text "Super Gaze@"
 
-;fe3d1a
-Text683:
-text "おどるポリゴン@"
+;fe5397
+Text_FE5397:
+text "Dancing Polygon@"
 
-;fe3d22
-Text684:
-text "魔蝕虫２@"
+;fe53a7
+Text_FE53A7:
+text "Mashoku Bug 2@"
 
-;fe3d2a
-Text685:
-text "隊長アリ@"
+;fe53b5
+Text_FE53B5:
+text "Ant Captain@"
 
-;fe3d31
-Text686:
-text "カラクロイドＸ@"
+;fe53c1
+Text_FE53C1:
+text "Karakuroid Ｘ@"
 
-;fe3d3a
-Text687:
-text "マッドレムラス@"
+;fe53cf
+Text_FE53CF:
+text "Madremlas@"
 
-;fe3d42
-Text688:
-text "マムーン@"
+;fe53d9
+Text_FE53D9:
+text "Mamoon@"
 
-;fe3d47
-Text689:
-text "壺荒らし@"
+;fe53e0
+Text_FE53E0:
+text "Pot Wrecker@"
 
-;fe3d4d
-Text690:
-text "ちびタンク@"
+;fe53ec
+Text_FE53EC:
+text "Mini Tank@"
 
-;fe3d53
-Text691:
-text "武器@"
+;fe53f6
+Text_FE53F6:
+text "Weapon@"
 
-;fe3d58
-Text692:
-text "矢@"
+;fe53fd
+Text_FE53FD:
+text "Arrow@"
 
-;fe3d5b
-Text693:
-text "盾@"
+;fe5403
+Text_FE5403:
+text "Shield@"
 
-;fe3d5d
-Text694:
-text "腕輪@"
+;fe540a
+Text_FE540A:
+text "Bracer@"
 
-;fe3d60
-Text695:
-text "巻物@"
+;fe5411
+Text_FE5411:
+text "Scroll@"
 
-;fe3d63
-Text696:
-text "杖@"
+;fe5418
+Text_FE5418:
+text "Staff@"
 
-;fe3d65
-Text697:
-text "草@"
+;fe541e
+Text_FE541E:
+text "Herb@"
 
-;fe3d67
-Text698:
-text "壺@"
+;fe5423
+Text_FE5423:
+text "Pot@"
 
-;fe3d69
-Text699:
-text "おにぎり@"
+;fe5427
+Text_FE5427:
+text "Rice Ball@"
 
-;fe3d6e
-Text700:
-text "山賊@"
+;fe5431
+Text_FE5431:
+text "Bandit@"
 
-;fe3d73
-Text701:
-text "カラス天狗@"
+;fe5438
+Text_FE5438:
+text "Crow Tengu@"
 
-;fe3d7b
-Text702:
-text "予備３２@"
+;fe5443
+Text_FE5443:
+text "Spare 32@"
 
-;fe3d81
-Text703:
-text "予備４２@"
+;fe544c
+Text_FE544C:
+text "Spare 42@"
 
-;fe3d87
-Text704:
-strvar TextStrVar_PlayerName
+;fe5455
+Text_FE5455:
+strvar $81
 text "@"
 
-;fe3d8a
-Text705:
-text "洞窟マムル@"
+;fe5458
+Text_FE5458:
+text "Cave Mamul@"
 
-;fe3d92
-Text706:
-text "死神@"
+;fe5463
+Text_FE5463:
+text "Death@"
 
-;fe3d97
-Text707:
-text "ヘルギャザー@"
+;fe5469
+Text_FE5469:
+text "Hell Gyazar@"
 
-;fe3d9e
-Text708:
-text "ボウヤーＸ@"
+;fe5475
+Text_FE5475:
+text "Bowya Ｘ@"
 
-;fe3da5
-Text709:
-text "ガマゴン@"
+;fe547e
+Text_FE547E:
+text "Gamagon@"
 
-;fe3daa
-Text710:
-text "デブートン@"
+;fe5486
+Text_FE5486:
+text "Debuton@"
 
-;fe3db0
-Text711:
-text "かすみ仙人@"
+;fe548e
+Text_FE548E:
+text "Haze Hermit@"
 
-;fe3db7
-Text712:
-text "火炎入道３@"
+;fe549a
+Text_FE549A:
+text "Flame Priest 3@"
 
-;fe3dc0
-Text713:
-text "オドロ@"
+;fe54a9
+Text_FE54A9:
+text "Odoro@"
 
-;fe3dc4
-Text714:
-text "アイアントド@"
+;fe54af
+Text_FE54AF:
+text "Iron Todo@"
 
-;fe3dcb
-Text715:
-text "パルテノスＸ@"
+;fe54b9
+Text_FE54B9:
+text "Parthenos Ｘ@"
 
-;fe3dd3
-Text716:
-text "キグニ族３@"
+;fe54c6
+Text_FE54C6:
+text "Kigni Tribe 3@"
 
-;fe3dda
-Text717:
-text "くねくねハニーＸ@"
+;fe54d4
+Text_FE54D4:
+text "Wriggling Honey Ｘ@"
 
-;fe3de4
-Text718:
-text "エーテルデビルＸ@"
+;fe54e7
+Text_FE54E7:
+text "Ether Devil Ｘ@"
 
-;fe3dee
-Text719:
-text "ンバマ@"
+;fe54f6
+Text_FE54F6:
+text "Nbama@"
 
-;fe3df2
-Text720:
-text "ギガヘッド@"
+;fe54fc
+Text_FE54FC:
+text "Giga-Head@"
 
-;fe3df8
-Text721:
-text "ねむり大根@"
+;fe5506
+Text_FE5506:
+text "Sleepy Daikon@"
 
-;fe3dff
-Text722:
-text "吸引成虫@"
+;fe5514
+Text_FE5514:
+text "Mature Absorber Bug@"
 
-;fe3e08
-Text723:
-text "チタンアーマー@"
+;fe5528
+Text_FE5528:
+text "Chitin Armor@"
 
-;fe3e10
-Text724:
-text "アークドラゴン@"
+;fe5535
+Text_FE5535:
+text "Arch Dragon@"
 
-;fe3e18
-Text725:
-text "メガタウロス@"
+;fe5541
+Text_FE5541:
+text "Megatauros@"
 
-;fe3e1f
-Text726:
-text "カーバンクルＸ@"
+;fe554c
+Text_FE554C:
+text "Carbunkle Ｘ@"
 
-;fe3e28
-Text727:
-text "将軍@"
+;fe5559
+Text_FE5559:
+text "Shogun@"
 
-;fe3e2d
-Text728:
-text "ぼうれい武者Ｘ@"
+;fe5560
+Text_FE5560:
+text "Ghost Musha Ｘ@"
 
-;fe3e38
-Text729:
-text "グレートチキン@"
+;fe556f
+Text_FE556F:
+text "Great Chicken@"
 
-;fe3e40
-Text730:
-text "チキンＸ@"
+;fe557d
+Text_FE557D:
+text "Chicken Ｘ@"
 
-;fe3e46
-Text731:
-text "やみふくろうＸ@"
+;fe5588
+Text_FE5588:
+text "Dark Owl Ｘ@"
 
-;fe3e4f
-Text732:
-text "ブレイドゲータ@"
+;fe5594
+Text_FE5594:
+text "Blade Gator@"
 
-;fe3e57
-Text733:
-text "飛びぴーたん@"
+;fe55a0
+Text_FE55A0:
+text "Flying Peetan@"
 
-;fe3e5f
-Text734:
-text "正面マスター@"
+;fe55ae
+Text_FE55AE:
+text "Face-first Master@"
 
-;fe3e68
-Text735:
-text "ベルトーベン@"
+;fe55c0
+Text_FE55C0:
+text "Bellthoven@"
 
-;fe3e6f
-Text736:
-text "スルードラゴン@"
+;fe55cb
+Text_FE55CB:
+text "Through Dragon@"
 
-;fe3e77
-Text737:
-text "パコレプキング@"
+;fe55da
+Text_FE55DA:
+text "Pumkorepking@"
 
-;fe3e7f
-Text738:
-text "イッテツ戦車@"
+;fe55e7
+Text_FE55E7:
+text "Obstinate Tank@"
 
-;fe3e88
-Text739:
-text "妖怪にぎり元締@"
+;fe55f6
+Text_FE55F6:
+text "Monster Nigiri Leader@"
 
-;fe3e94
-Text740:
-text "ノロージョの母@"
+;fe560c
+Text_FE560C:
+text "Norojo's Mom@"
 
-;fe3e9d
-Text741:
-text "ガイコツまおう@"
+;fe5619
+Text_FE5619:
+text "Skeleton Archmage@"
 
-;fe3ea5
-Text742:
-text "ハイパーゲイズ@"
+;fe562b
+Text_FE562B:
+text "Hyper Gaze@"
 
-;fe3ead
-Text743:
-text "うたうポリゴン@"
+;fe5636
+Text_FE5636:
+text "Singing Polygon@"
 
-;fe3eb5
-Text744:
-text "魔蝕虫３@"
+;fe5646
+Text_FE5646:
+text "Mashoku Bug 3@"
 
-;fe3ebd
-Text745:
-text "大将アリ@"
+;fe5654
+Text_FE5654:
+text "General Ant@"
 
-;fe3ec3
-Text746:
-text "カラクロイドＸ@"
+;fe5660
+Text_FE5660:
+text "Karakuroid Ｘ@"
 
-;fe3ecc
-Text747:
-text "ハードレムラス@"
+;fe566e
+Text_FE566E:
+text "Hardremlas@"
 
-;fe3ed4
-Text748:
-text "ニシキーン@"
+;fe5679
+Text_FE5679:
+text "Nishikeen@"
 
-;fe3eda
-Text749:
-text "物荒らし@"
+;fe5683
+Text_FE5683:
+text "Item Wrecker@"
 
-;fe3ee0
-Text750:
-text "コドモ戦車Ｘ@"
+;fe5690
+Text_FE5690:
+text "Kid Tank Ｘ@"
+
+
+;fe569c
+Text_FE569C:
+text "Weapon@"
+
+;fe56a3
+Text_FE56A3:
+text "Arrow@"
+
+;fe56a9
+Text_FE56A9:
+text "Shield@"
+
+;fe56b0
+Text_FE56B0:
+text "Bracer@"
+
+;fe56b7
+Text_FE56B7:
+text "Scroll@"
+
+;fe56be
+Text_FE56BE:
+text "Staff@"
+
+;fe56c4
+Text_FE56C4:
+text "Herb@"
+
+;fe56c9
+Text_FE56C9:
+text "Pot@"
+
+;fe56cd
+Text_FE56CD:
+text "Rice Ball@"
+
+;fe56d7
+Text_FE56D7:
+text "Bandit Boss@"
+
+;fe56e3
+Text_FE56E3:
+text "Tengu Master@"
+
+;fe56f0
+Text_FE56F0:
+text "Prepare 33@"
+
+;fe56fb
+Text_FE56FB:
+text "Prepare 43@"

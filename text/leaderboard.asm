@@ -1,904 +1,957 @@
 
-;fe4a78
-;"Defeated by"
-Text1149:
-text "にたおされる@"
-
-;fe4a7f
-;"Collapsed from starvation"
-Text1150:
-text "腹がへってたおれる@"
-
-;fe4a8a
-;"Caught in an bomb rock's explosion"
-Text1151:
-text "爆弾岩の爆発に巻き込まれる@"
-
-;fe4a9d
-;"Fell into a pitfall"
-Text1152:
-text "落し穴から転落する@"
-
-;fe4aab
-;"Defeated by an arrow"
-Text1153:
-text "投げ矢にうたれ、たおれる@"
-
-;fe4aba
-;"Defeated by a poison arrow"
-Text1154:
-text "毒矢にうたれ、たおれる@"
-
-;fe4ac8
-;"Blown up by a landmine"
-Text1155:
-text "地雷をふみ爆発する@"
-
-;fe4ad4
-;"Poisoned by a rotten onigiri"
-Text1156:
-text "腐ったおにぎりで食中毒をおこす@"
-
-;fe4ae6
-;"Defeated by eating a poison herb"
-Text1157:
-text "どく草を食べ、たおれる@"
-
-;fe4af2
-;"Was defeated due to not moving"
-Text1158:
-text "身動きがとれず、たおれる@"
-
-;fe4b01
-;"Crushed by a falling boulder"
-Text1159:
-text "落石につぶされる@"
-
-;fe4b0c
-;"Blown up by a time bomb"
-Text1160:
-text "時限爆弾で爆発する@"
-
-;fe4b1a
-;"Defeated by knockback from a trap"
-Text1161:
-text "ワナに吹き飛ばされ、たおれる@"
-
-;fe4b2b
-;"Defeated by new trap 4"
-Text1162:
-text "新ワナ４でたおれる@"
-
-;fe4b35
-;"Defeated by new trap 5"
-Text1163:
-text "新ワナ５でたおれる@"
-
-;fe4b3f
-Text1164:
-text "新ワナ６でたおれる@"
-
-;fe4b49
-Text1165:
-text "新ワナ７でたおれる@"
-
-;fe4b53
-Text1166:
-text "新ワナ８でたおれる@"
-
-;fe4b5d
-Text1167:
-text "新ワナ９でたおれる@"
-
-;fe4b67
-Text1168:
-text "新ワナ１０でたおれる@"
-
-;fe4b72
-;"Defeated by new item 1"
-Text1169:
-text "新アイテム１でたおれる@"
-
-;fe4b7e
-Text1170:
-text "新アイテム２でたおれる@"
-
-;fe4b8a
-Text1171:
-text "新アイテム３でたおれる@"
-
-;fe4b96
-Text1172:
-text "新アイテム４でたおれる@"
-
-;fe4ba2
-Text1173:
-text "新アイテム５でたおれる@"
-
-;fe4bae
-Text1174:
-text "新アイテム６でたおれる@"
-
-;fe4bba
-Text1175:
-text "新アイテム７でたおれる@"
-
-;fe4bc6
-Text1176:
-text "新アイテム８でたおれる@"
-
-;fe4bd2
-Text1177:
-text "新アイテム９でたおれる@"
-
-;fe4bde
-Text1178:
-text "新アイテム１０でたおれる@"
-
-;fe4beb
-;"Defeated by inability to recover HP"
-Text1179:
-text "ＨＰが回復せずたおれる@"
-
-;fe4bfb
-;"Defeated by Kechi missing the pressure point"
-Text1180:
-text "座頭ケチの指圧に失敗し、たおれる@"
-
-
-;fe4c12
-Text1181:
-text "［@"
-
-;fe4c14
-Text1182:
-text "］@"
-
-;fe4c16
-Text1183:
-text "（@"
-
-;fe4c18
-Text1184:
-text "）@"
-
-;fe4c1a
-;"~ Arrow"
-Text1185:
-text "本の@"
-
-;fe4c1e
-;"~ Meat"
-Text1186:
-text "の肉@"
-
-;fe4c22
-;"Herb: "
-Text1187:
-text "草：@"
-
-;fe4c26
-;"Scroll: "
-Text1188:
-text "巻物：@"
-
-;fe4c2b
-;"Food: "
-Text1189:
-text "食糧：@"
-
-;fe4c31
-;"Weapon: "
-Text1190:
-text "武器：@"
-
-;fe4c38
-;"Arrow: "
-Text1191:
-text "矢：@"
-
-;fe4c3d
-;"Shield: "
-Text1192:
-text "盾：@"
-
-;fe4c41
-;"Armband: "
-Text1193:
-text "腕輪：@"
-
-;fe4c46
-;"Staff: "
-Text1194:
-text "杖：@"
-
-;fe4c4a
-;"Money: "
-Text1195:
-text "金：@"
-
-;fe4c4e
-;"Meat: "
-Text1196:
-text "肉：@"
-
-;fe4c53
-;"Target Item: "
-Text1197:
-text "目的物：@"
-
-;fe4c5a
-;"Jar: "
-Text1198:
-text "壺：@"
-
-;fe4c5e
-;"Trap: "
-Text1199:
-text "ワナ：@"
-
-;fe4c63
-;"Mimic: "
-Text1200:
-text "ミミック：@"
-
-;fe4c6a
-;"Blank Scroll: "
-Text1201:
-text "白紙：@"
-
-;fe4c71
-;"Purification"
-Text1202:
-text "おはらい@"
-
-;fe4c76
-;"Identification"
-Text1203:
-text "しきべつ@"
-
-;fe4c7b
-Text1204:
-text "あかり@"
-
-;fe4c7f
-Text1205:
-text "つぼぞうだい@"
-
-;fe4c86
-Text1206:
-text "しんくうぎり@"
-
-;fe4c8d
-Text1207:
-text "くちなし@"
-
-;fe4c92
-Text1208:
-text "\l@"
-
-;fe4c94
-Text1209:
-text "わな@"
-
-;fe4c97
-Text1210:
-text "こまったとき@"
-
-;fe4c9e
-Text1211:
-text "てきばいそく@"
-
-;fe4ca5
-Text1212:
-text "バクスイ@"
-
-;fe4caa
-;"Power Up"
-Text1213:
-text "パワーアップ@"
-
-;fe4cb1
-Text1214:
-text "ぜんめつ@"
-
-;fe4cb6
-Text1215:
-text "じばく@"
-
-;fe4cba
-Text1216:
-text "おおべや@"
-
-;fe4cbf
-Text1217:
-text "モンスター@"
-
-;fe4cc5
-Text1218:
-text "こんらん@"
-
-;fe4cca
-Text1219:
-text "ジェノサイド@"
-
-;fe4cd1
-Text1220:
-text "\l@"
-
-;fe4cd3
-Text1221:
-text "まいご@"
-
-;fe4cd7
-Text1222:
-text "てんのめぐみ@"
-
-;fe4cde
-Text1223:
-text "ちのめぐみ@"
-
-;fe4ce4
-Text1224:
-text "メッキ@"
-
-;fe4ce8
-Text1225:
-text "すいだし@"
-
-;fe4ced
-Text1226:
-text "ひろえず@"
-
-;fe4cf2
-Text1227:
-text "\l@"
-
-;fe4cf4
-Text1228:
-text "せいいき@"
-
-;fe4cf9
-Text1229:
-text "\l@"
-
-;fe4cfb
-Text1230:
-text "モンスターハ@"
-
-;fe4d02
-Text1231:
-text "モンスタハウ@"
-
-;fe4d09
-Text1232:
-text "モンスタ@"
-
-;fe4d0e
-Text1233:
-text "ハウス@"
-
-;fe4d12
-Text1234:
-text "\l@"
-
-;fe4d14
-Text1235:
-text "\l@"
-
-;fe4d16
-Text1236:
+;fe6ac2
+Text_FE6AC2:
+text " whupped him good."
+endtext
+
+;fe6ad5
+Text_FE6AD5:
+text "Collapsed in starvation."
+endtext
+
+;fe6aee
+Text_FE6AEE:
+text "Caught in a Bomb Rock's explosion."
+endtext
+
+;fe6b11
+Text_FE6B11:
+text "Fell through a pit."
+endtext
+
+;fe6b25
+Text_FE6B25:
+text "Defeated by an arrow."
+endtext
+
+;fe6b3b
+Text_FE6B3B:
+text "Defeated by a poison arrow."
+endtext
+
+;fe6b57
+Text_FE6B57:
+text "Stepped on a land mine."
+endtext
+
+;fe6b6f
+Text_FE6B6F:
+text "Food poisoning from a rotten Rice Ball."
+endtext
+
+;fe6b97
+Text_FE6B97:
+text "Ate a poisonous plant."
+endtext
+
+;fe6bae
+Text_FE6BAE:
+text "Couldn't move and was defeated."
+endtext
+
+;fe6bce
+Text_FE6BCE:
+text "Smushed by a falling rock."
+endtext
+
+;fe6be9
+Text_FE6BE9:
+text "Blown up by a time bomb"
+endtext
+
+;fe6c01
+Text_FE6C01:
+text "Thrown back by a trap and defeated."
+endtext
+
+;fe6c25
+Text_FE6C25:
+text "Defeated by New Trap 4"
+endtext
+
+;fe6c3c
+Text_FE6C3C:
+text "Defeated by New Trap 5"
+endtext
+
+;fe6c53
+Text_FE6C53:
+text "Defeated by New Trap 6"
+endtext
+
+;fe6c6a
+Text_FE6C6A:
+text "Defeated by New Trap 7"
+endtext
+
+;fe6c81
+Text_FE6C81:
+text "Defeated by New Trap 8"
+endtext
+
+;fe6c98
+Text_FE6C98:
+text "Defeated by New Trap 9"
+endtext
+
+;fe6caf
+Text_FE6CAF:
+text "Defeated by New Trap 10"
+endtext
+
+;fe6cc7
+Text_FE6CC7:
+text "Defeated by New Item 1"
+endtext
+
+;fe6cde
+Text_FE6CDE:
+text "Defeated by New Item 2"
+endtext
+
+;fe6cf5
+Text_FE6CF5:
+text "Defeated by New Item 3"
+endtext
+
+;fe6d0c
+Text_FE6D0C:
+text "Defeated by New Item 4"
+endtext
+
+;fe6d23
+Text_FE6D23:
+text "Defeated by New Item 5"
+endtext
+
+;fe6d3a
+Text_FE6D3A:
+text "Defeated by New Item 6"
+endtext
+
+;fe6d51
+Text_FE6D51:
+text "Defeated by New Item 7"
+endtext
+
+;fe6d68
+Text_FE6D68:
+text "Defeated by New Item 8"
+endtext
+
+;fe6d7f
+Text_FE6D7F:
+text "Defeated by New Item 9"
+endtext
+
+;fe6d96
+Text_FE6D96:
+text "Defeated by New Item 10"
+endtext
+
+;fe6dae
+Text_FE6DAE:
+text "Couldn't heal and keeled over."
+endtext
+
+;fe6dcd
+Text_FE6DCD:
+text "Defeated by Zato-Kechi's Shiatsu mistake."
+endtext
+
+;fe6df7
+Text_FE6DF7:
+text "［"
+endtext
+
+;fe6df9
+Text_FE6DF9:
+text "］"
+endtext
+
+;fe6dfb
+Text_FE6DFB:
+text "("
+endtext
+
+;fe6dfd
+Text_FE6DFD:
+text ")"
+endtext
+
+;fe6dff
+Text_FE6DFF:
+text "x "
+endtext
+
+;fe6e02
+Text_FE6E02:
+text " Meat"
+endtext
+
+;fe6e08
+Text_FE6E08:
+text "Herb:"
+endtext
+
+;fe6e0e
+Text_FE6E0E:
+text "Scroll:"
+endtext
+
+;fe6e16
+Text_FE6E16:
+text "Food:"
+endtext
+
+;fe6e1c
+Text_FE6E1C:
+text "Weapon:"
+endtext
+
+;fe6e24
+Text_FE6E24:
+text "Arrow:"
+endtext
+
+;fe6e2b
+Text_FE6E2B:
+text "Shield:"
+endtext
+
+;fe6e33
+Text_FE6E33:
+text "Bracer:"
+endtext
+
+;fe6e3b
+Text_FE6E3B:
+text "Staff:"
+endtext
+
+;fe6e42
+Text_FE6E42:
+text "Money:"
+endtext
+
+;fe6e49
+Text_FE6E49:
+text "Meat:"
+endtext
+
+;fe6e4f
+Text_FE6E4F:
+text "Objective:"
+endtext
+
+;fe6e5a
+Text_FE6E5A:
+text "Pot:"
+endtext
+
+;fe6e5f
+Text_FE6E5F:
+text "Trap:"
+endtext
+
+;fe6e65
+Text_FE6E65:
+text "Mimic:"
+endtext
+
+;fe6e6c
+Text_FE6E6C:
+text "Blank Scroll: "
+endtext
+
+;fe6e7b
+Text_FE6E7B:
+text "Purify"
+endtext
+
+;fe6e82
+Text_FE6E82:
+text "Identify"
+endtext
+
+;fe6e8b
+Text_FE6E8B:
+text "Light"
+endtext
+
+;fe6e91
+Text_FE6E91:
+text "Bigpot"
+endtext
+
+;fe6e98
+Text_FE6E98:
+text "Airslash"
+endtext
+
+;fe6ea1
+Text_FE6EA1:
+text "Lockjaw"
+endtext
+
+;fe6ea9
+Text_FE6EA9:
+text "\l"
+endtext
+
+;fe6eab
+Text_FE6EAB:
+text "Trap"
+endtext
+
+;fe6eb0
+Text_FE6EB0:
+text "Crisis"
+endtext
+
+;fe6eb7
+Text_FE6EB7:
+text "Fastfoe"
+endtext
+
+;fe6ebf
+Text_FE6EBF:
+text "Slumber"
+endtext
+
+;fe6ec7
+Text_FE6EC7:
+text "Powerup"
+endtext
+
+;fe6ecf
+Text_FE6ECF:
+text "Massacre"
+endtext
+
+;fe6ed8
+Text_FE6ED8:
+text "Detonate"
+endtext
+
+;fe6ee1
+Text_FE6EE1:
+text "Bigroom"
+endtext
+
+;fe6ee9
+Text_FE6EE9:
+text "Monster"
+endtext
+
+;fe6ef1
+Text_FE6EF1:
+text "Confuse"
+endtext
+
+;fe6ef9
+Text_FE6EF9:
+text "Genocide"
+endtext
+
+;fe6f02
+Text_FE6F02:
+text "\l"
+endtext
+
+;fe6f04
+Text_FE6F04:
+text "Lost"
+endtext
+
+;fe6f09
+Text_FE6F09:
+text "Heaven"
+endtext
+
+;fe6f10
+Text_FE6F10:
+text "Earth"
+endtext
+
+;fe6f16
+Text_FE6F16:
+text "Chrome"
+endtext
+
+;fe6f1d
+Text_FE6F1D:
+text "Withdraw"
+endtext
+
+;fe6f26
+Text_FE6F26:
+text "Slippery"
+endtext
+
+;fe6f2f
+Text_FE6F2F:
+text "\l"
+endtext
+
+;fe6f31
+Text_FE6F31:
+text "Haven"
+endtext
+
+;fe6f37
+Text_FE6F37:
+text "\l"
+endtext
+
+;fe6f39
+Text_FE6F39:
+text "Monsterh"
+endtext
+
+;fe6f42
+Text_FE6F42:
+text "Monsteho"
+endtext
+
+;fe6f4b
+Text_FE6F4B:
+text "Monhouse"
+endtext
+
+;fe6f54
+Text_FE6F54:
+text "House"
+endtext
+
+;fe6f5a
+Text_FE6F5A:
+text "\l"
+endtext
+
+;fe6f5c
+Text_FE6F5C:
+text "\l"
+endtext
+
+;fe6f5e
+Text_FE6F5E:
 textfunction $0 $1
-text "@"
+text ""
+endtext
 
-;fe4d1a
-;"Kobami Shukuba"
-Text1237:
-text "渓谷の宿場@"
+;fe6f62
+Text_FE6F62:
+text "Valley Inn"
+endtext
 
-;fe4d23
-;"Old Cedar-Lined Road"
-Text1238:
-text "杉並の旧街道@"
+;fe6f6d
+Text_FE6F6D:
+text "Old Cedar-lined Road"
+endtext
 
-;fe4d2f
-;"Mountain Stream"
-Text1239:
-text "山間渓流@"
+;fe6f82
+Text_FE6F82:
+text "Mountain Stream"
+endtext
 
-;fe4d38
-;"Bamboo Village"
-Text1240:
-text "竹林の村@"
+;fe6f92
+Text_FE6F92:
+text "Bamboo Village"
+endtext
 
-;fe4d40
-;"Pegasus Valley"
-Text1241:
-text "天馬峠@"
+;fe6fa1
+Text_FE6FA1:
+text "Tenma Pass"
+endtext
 
-;fe4d47
-;"Mountaintop Forest"
-Text1242:
-text "山頂の森林@"
+;fe6fac
+Text_FE6FAC:
+text "Summit Forest"
+endtext
 
-;fe4d51
-;"Mountaintop Town"
-Text1243:
-text "山頂の町@"
+;fe6fba
+Text_FE6FBA:
+text "Summit Town"
+endtext
 
-;fe4d59
-;"Neburi Mine"
-Text1244:
-text "ネブリ山廃坑@"
+;fe6fc6
+Text_FE6FC6:
+text "Neburi Mine"
+endtext
 
-;fe4d63
-;"Janus Valley"
-Text1245:
-text "二面地蔵の谷@"
+;fe6fd2
+Text_FE6FD2:
+text "Two Jizo Valley"
+endtext
 
-;fe4d6e
-;"Cliff Cavern"
-Text1246:
-text "断崖の岩屋@"
+;fe6fe2
+Text_FE6FE2:
+text "Cliff Grotto"
+endtext
 
-;fe4d77
-;"Mountain Spirit Cave"
-Text1247:
-text "山霊の洞窟@"
+;fe6fef
+Text_FE6FEF:
+text "Mountain Spirit Cave"
+endtext
 
-;fe4d81
-;"Cryptic Rock Valley"
-Text1248:
-text "奇岩谷@"
+;fe7004
+Text_FE7004:
+text "Crooked Boulder Valley"
+endtext
 
-;fe4d88
-;"Valley Forest"
-Text1249:
-text "谷間の森林@"
+;fe701b
+Text_FE701B:
+text "Valley Forest"
+endtext
 
-;fe4d92
-;"Waterfall Marsh"
-Text1250:
-text "瀑布湿原@"
+;fe7029
+Text_FE7029:
+text "Waterfall Marsh"
+endtext
 
-;fe4d9b
-;"Table Mountain"
-Text1251:
-text "テーブルマウンテン@"
+;fe7039
+Text_FE7039:
+text "Table Mountain"
+endtext
 
-;fe4da5
-;"Underground Stream Village"
-Text1252:
-text "地下水脈の村@"
+;fe7048
+Text_FE7048:
+text "Cave River Town"
+endtext
 
-;fe4daf
-;"Illusion Ghost Valley"
-Text1253:
-text "ムゲン幽谷@"
+;fe7058
+Text_FE7058:
+text "Mugen Ravine"
+endtext
 
-;fe4db7
-;"Trial of Phantoms"
-Text1254:
-text "幻魔の試練@"
+;fe7065
+Text_FE7065:
+text "Trial of the Genma"
+endtext
 
-;fe4dc1
-;"Dragoncry Trial"
-Text1255:
-text "竜哭の試練@"
+;fe7078
+Text_FE7078:
+text "Trial of the Dragon's Wail"
+endtext
 
-;fe4dcb
-;"Final Trial"
-Text1256:
-text "最後の試練@"
+;fe7093
+Text_FE7093:
+text "The Final Trial"
+endtext
 
-;fe4dd5
-;"Land of the Sun"
-Text1257:
-text "太陽の大地@"
+;fe70a3
+Text_FE70A3:
+text "Land of the Sun"
+endtext
 
-;fe4ddd
-;"Golden City"
-Text1258:
-text "黄金都市@"
+;fe70b3
+Text_FE70B3:
+text "Golden City"
+endtext
 
-;fe4de4
-;"Beneath the Rainbow"
-Text1259:
-text "虹の根もと@"
+;fe70bf
+Text_FE70BF:
+text "Foot of the Rainbow"
+endtext
 
-;fe4dec
-;"Waterfall Cave"
-Text1260:
-text "滝壺の洞窟@"
+;fe70d3
+Text_FE70D3:
+text "Waterfall Cave"
+endtext
 
-;fe4df5
-;"Fei's Problem"
-Text1261:
-text "フェイの問題@"
+;fe70e2
+Text_FE70E2:
+text "Fei's Problem"
+endtext
 
-;fe4dfe
-;"Fei's Final Problem"
-Text1262:
-text "フェイの最終問題@"
+;fe70f0
+Text_FE70F0:
+text "Final Problem"
+endtext
 
-;fe4e0b
-;"Kitchen God Shrine"
-Text1263:
-text "食神のほこら@"
+;fe70fe
+Text_FE70FE:
+text "Shrine of the Food God"
+endtext
 
-;fe4e13
-;"Trap Master Dungeon"
-Text1264:
-text "掛軸裏の洞窟@"
+;fe7115
+Text_FE7115:
+text "Wall Scroll Cave"
+endtext
 
-;fe4e1f
-;"Waterfall Cave"
-Text1265:
-text "滝壺の洞窟@"
+;fe7126
+Text_FE7126:
+text "Waterfall Cave"
+endtext
 
-;fe4e28
-;"Kobami Valley"
-Text1266:
-text "こばみ谷@"
+;fe7135
+Text_FE7135:
+text "Impasse Valley"
+endtext
 
-;fe4e2e
-;"Kitchen God Shrine"
-Text1267:
-text "食神のほこら@"
+;fe7144
+Text_FE7144:
+text "Food God Shrine"
+endtext
 
-;fe4e36
-;"Trap Master Dungeon"
-Text1268:
-text "掛軸裏の洞窟@"
+;fe7154
+Text_FE7154:
+text "Wall Scroll Cave"
+endtext
 
-;fe4e42
-;"Fei's Final Problem"
-Text1269:
-text "フェイの最終問題@"
+;fe7165
+Text_FE7165:
+text "Final Problem"
+endtext
 
-;fe4e4f
-;"Wanderer Rankings"
-Text1270:
-text "風"
-textfunction $0 $2
-text "来"
-textfunction $0 $2
-text "人"
-textfunction $0 $2
-text "番"
-textfunction $0 $2
-text "付@"
+;fe7173
+Text_FE7173:
+textfunction $0 $F
+text "Ranking"
+endtext
 
-;fe4e62
-Text1271:
-numvar TextNumVar_54
+;fe717e
+Text_FE717E:
+numvar $54
 textfunction $0 $0
-text "@"
+text ""
+endtext
 
-;fe4e68
-Text1272:
-text "Ｇ@"
+;fe7184
+Text_FE7184:
+text "G"
+endtext
 
-;fe4e6b
-Text1273:
-text "位@"
+;fe7186
+Text_FE7186:
+textfunction $0 $14
+text ""
+endtext
 
-;fe4e6e
-;"Preparing"
-Text1274:
-text "準備中@"
+;fe718a
+Text_FE718A:
+text "In Preparation"
+endtext
 
-;fe4e73
-Text1275:
-text "Ｆ@"
+;fe7199
+Text_FE7199:
+text "F  "
+endtext
 
-;fe4e76
-Text1276:
-text "回@"
+;fe719d
+Text_FE719D:
+text "Runs"
+endtext
 
-;fe4e79
-Text1277:
+;fe71a2
+Text_FE71A2:
 textfunction $0 $0
-text "@"
+text ""
+endtext
 
-;fe4e7d
-Text1278:
-text "／@"
+;fe71a6
+Text_FE71A6:
+text "/"
+endtext
 
-;fe4e7f
-Text1279:
-text "％@"
+;fe71a8
+Text_FE71A8:
+text "%"
+endtext
 
-;fe4e82
-;"Having the Happiness Box"
-Text1280:
-text "しあわせの箱を持って@"
+;fe71aa
+Text_FE71AA:
+text "Carried the Box of Happiness"
+endtext
 
-;fe4e8e
-;"Taking the Happiness Box"
-Text1281:
-text "しあわせの箱を取って@"
+;fe71c7
+Text_FE71C7:
+text "Took the Box of Happiness"
+endtext
 
-;fe4e9b
-;"Safely returned from the intro dungeon."
-Text1282:
-text "イントロから無事帰る。@"
+;fe71e1
+Text_FE71E1:
+text "Safely returned to the Intro."
+endtext
 
-;fe4ea9
-;"Returned from Table Mountain."
-Text1283:
-text "テーブルマウンテンより帰還する。@"
+;fe71ff
+Text_FE71FF:
+text "Returned from Table Mountain."
+endtext
 
-;fe4ebc
-;"Returned from Kitchen God Shrine."
-Text1284:
-text "食神のほこらより帰還する。@"
+;fe721d
+Text_FE721D:
+text "Returned from the Shrine of the Food God"
+endtext
 
-;fe4ecd
-;"Returned from Trap Master Dungeon."
-Text1285:
-text "かけじく裏の洞窟より帰還する。@"
+;fe7246
+Text_FE7246:
+text "Returned from the Cave of the Wall Scroll"
+endtext
 
-;fe4ee2
-;"Solved Fei's Final Problem!"
-Text1286:
-text "フェイの最終問題を無事解いた！@"
+;fe7270
+Text_FE7270:
+text "Solved Fei's Final Problem!"
+endtext
 
-;fe4ef8
-;"[strvar TextStrVar_82]."
-Text1287:
-strvar TextStrVar_82
-text "。@"
+;fe728c
+Text_FE728C:
+strvar $82
+text "."
+endtext
 
-;fe4efc
-;"Defeated without accomplishing the king's order."
-Text1288:
-text "王様の命を果たせぬままたおれる。@"
+;fe7290
+Text_FE7290:
+text "Defeated before completing King's order."
+endtext
 
-;fe4f11
-;"Gave the Precious Box to the king and returned safely."
-Text1289:
-text "王様の宝石箱を取って無事帰る。@"
+;fe72b9
+Text_FE72B9:
+text "Returned the King's Treasure box."
+endtext
 
-;fe4f29
-;"Having the King's Precious Box"
-Text1290:
-text "王様の宝石箱を持って@"
+;fe72db
+Text_FE72DB:
+text "Carried the King's Treasure box"
+endtext
 
-;fe4f39
-;"Having the Mysterious Box"
-Text1291:
-text "奇妙な箱を持って@"
+;fe72fb
+Text_FE72FB:
+text "Carried the Strange box"
+endtext
 
-;fe4f45
-;"Taking the Mysterious Box"
-Text1292:
-text "奇妙な箱を取って@"
+;fe7313
+Text_FE7313:
+text "Carried the Strange box"
+endtext
 
-;fe4f52
-;"Safetly returned via the effects of an Evac Scroll."
-Text1293:
-text "リレミトの巻物の効力により無事帰る。@"
+;fe732b
+Text_FE732B:
+text "Returned safely via a Riremit scroll."
+endtext
 
-;fe4f68
-;"Introduction"
-Text1294:
-text "イントロダンジョン@"
+;fe7351
+Text_FE7351:
+text "Intro Dungeon"
+endtext
 
-;fe4f72
-;"Dungeon 1"
-Text1295:
-text "ダンジョン１@"
+;fe735f
+Text_FE735F:
+text "Dungeon 1"
+endtext
 
-;fe4f79
-;"Dungeon 2"
-Text1296:
-text "ダンジョン２@"
+;fe7369
+Text_FE7369:
+text "Dungeon 2"
+endtext
 
-;fe4f80
-Text1297:
-text "の@"
+;fe7373
+Text_FE7373:
+text "of"
+endtext
 
-;fe4f82
-;"Number of adventures"
-Text1298:
-text "冒険回数@"
+;fe7376
+Text_FE7376:
+text "Adventures"
+endtext
 
-;fe4f8b
-;"Max HP"
-Text1299:
-text "最大ＨＰ@"
+;fe7381
+Text_FE7381:
+text "Max HP"
+endtext
 
-;fe4f93
-;"Strength"
-Text1300:
-text "ちから@"
+;fe7388
+Text_FE7388:
+text "Power"
+endtext
 
-;fe4f97
-Text1301:
-text "Ｌｖ@"
+;fe738e
+Text_FE738E:
+text "Lv  "
+endtext
 
-;fe4f9c
-;"Exp"
-Text1302:
-text "経験値@"
+;fe7393
+Text_FE7393:
+text "EXP"
+endtext
 
-;fe4fa3
-;"Place"
-Text1303:
-text "場所@"
+;fe7397
+Text_FE7397:
+text "Area:"
+endtext
 
-;fe4fa7
-;"Weapon"
-Text1304:
-text "武器@"
+;fe739d
+Text_FE739D:
+text "Weapon:"
+endtext
 
-;fe4fac
-;"Shield"
-Text1305:
-text "防具@"
+;fe73a5
+Text_FE73A5:
+text "Shield:"
+endtext
 
-;fe4fb1
-Text1306:
-text "＋@"
+;fe73ad
+Text_FE73AD:
+text "+"
+endtext
 
-;fe4fb3
-Text1307:
-text "－@"
+;fe73af
+Text_FE73AF:
+text "-"
+endtext
 
-;fe4fb5
-;"Nothing"
-Text1308:
-text "なし@"
+;fe73b1
+Text_FE73B1:
+text "None"
+endtext
 
-;fe4fb8
-;"Max Hunger"
-Text1309:
-text "最大満腹度@"
+;fe73b6
+Text_FE73B6:
+text "Max Satiation"
+endtext
 
-;fe4fc2
-;"Extra! Extra!"
-Text1310:
-text "号外～っ！　号外～っ！@"
+;fe73c4
+Text_FE73C4:
+text "Extra! Extra!"
+endtext
 
-;fe4fd4
-;"A champion emerges!"
-Text1311:
-text "つわ者の出現だ～っ！@"
+;fe73d2
+Text_FE73D2:
+text "A new champion!"
+endtext
 
-;fe4fe2
-;"Shijima"
-Text1312:
-text "シジマ@"
+;fe73e2
+Text_FE73E2:
+text "Shijima"
+endtext
 
-;fe4fe6
-;"Heiji"
-Text1313:
-text "ヘイジ@"
+;fe73ea
+Text_FE73EA:
+text "Heiji"
+endtext
 
-;fe4fea
-;"Obito"
-Text1314:
-text "オビト@"
+;fe73f0
+Text_FE73F0:
+text "Obito"
+endtext
 
-;fe4fee
-;"Tsupute"
-Text1315:
-text "ツブテ@"
+;fe73f6
+Text_FE73F6:
+text "Tsubute"
+endtext
 
-;fe4ff2
-;"Kazura"
-Text1316:
-text "カズラ@"
+;fe73fe
+Text_FE73FE:
+text "Kazura"
+endtext
 
-;fe4ff6
-;"Mugura"
-Text1317:
-text "ムグラ@"
+;fe7405
+Text_FE7405:
+text "Mugura"
+endtext
 
-;fe4ffa
-;"Tsumuri"
-Text1318:
-text "ツムリ@"
+;fe740c
+Text_FE740C:
+text "Tsumuri"
+endtext
 
-;fe4ffe
-;"Kanji"
-Text1319:
-text "カンジ@"
+;fe7414
+Text_FE7414:
+text "Kanji"
+endtext
 
-;fe5002
-;"Jirokichi"
-Text1320:
-text "ジロキチ@"
+;fe741a
+Text_FE741A:
+text "Jirokichi"
+endtext
 
-;fe5007
-;"Senzo"
-Text1321:
-text "センゾウ@"
+;fe7424
+Text_FE7424:
+text "Senzo"
+endtext
 
-;fe500c
-;"Hanzaki"
-Text1322:
-text "ハンザキ@"
+;fe742a
+Text_FE742A:
+text "Hanzaki"
+endtext
 
-;fe5011
-;"Sabu"
-Text1323:
-text "サブ@"
+;fe7432
+Text_FE7432:
+text "Sabu"
+endtext
 
-;fe5014
-;"Kanpachi"
-Text1324:
-text "カンパチ@"
+;fe7437
+Text_FE7437:
+text "Kanpachi"
+endtext
 
-;fe5019
-;"Tage"
-Text1325:
-text "タゲ@"
+;fe7440
+Text_FE7440:
+text "Tage"
+endtext
 
-;fe501c
-;"Yamake"
-Text1326:
-text "ヤマケ@"
+;fe7445
+Text_FE7445:
+text "Yamake"
+endtext
 
-;fe5020
-;"Tenshu"
-Text1327:
-text "てんしゅ@"
+;fe744c
+Text_FE744C:
+text "Shopkeeper"
+endtext
 
-;fe5025
-;"Saruyama"
-Text1328:
-text "サルヤマ@"
+;fe7457
+Text_FE7457:
+text "Saruyama"
+endtext
 
-;fe502a
-;"Student 2"
-Text1329:
-text "でし２@"
+;fe7460
+Text_FE7460:
+text "Apprentice 2"
+endtext
 
-;fe502e
-;"Student 3"
-Text1330:
-text "でし３@"
+;fe746d
+Text_FE746D:
+text "Apprentice 3"
+endtext
 
-;fe5032
-;"Student 4"
-Text1331:
-text "でし４@"
+;fe747a
+Text_FE747A:
+text "Apprentice 4"
+endtext
 
-;fe5036
-;"Student 5"
-Text1332:
-text "でし５@"
+;fe7487
+Text_FE7487:
+text "Apprentice 5"
+endtext
 
-;fe503a
-;"Fei"
-Text1333:
-text "フェイ@"
+;fe7494
+Text_FE7494:
+text "Fei"
+endtext
 
-;fe503e
-;"It's very disappointing, but"
-Text1334:
-text "たいへん残念ですが\l@"
+;fe7498
+Text_FE7498:
+text "Oops. The data in"
+endtext
 
-;fe504b
-;"Wanderer Journal [numvar TextNumVar_Number]"
-Text1335:
-text "風来日記"
-numvar TextNumVar_Number
-text "@"
+;fe74aa
+Text_FE74AA:
+text " Journal "
+numvar $10
+text " "
+endtext
 
-;fe5054
-;"Wanderer Rankings"
-Text1336:
-text "風来人番付@"
+;fe74b7
+Text_FE74B7:
+text " the Wanderer Ranking "
+endtext
 
-;fe505b
-;Used if the player somehow disappears while transformed as a monster?
-;"disappeared."
-Text1337:
-text "は"
+;fe74ce
+Text_FE74CE:
+text "has"
 textfunction $0 $4
-text "消えてしまいました"
-playsound SFX_91
-text "　\l@"
+text " just\lgone the way of all flesh."
+playsound 91
+text " \l@"
