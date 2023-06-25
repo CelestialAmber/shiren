@@ -1,4 +1,3 @@
-.include "macros/text.asm"
 .include "macros/audio.asm"
 .include "macros/events.asm"
 .include "macros/npc_events.asm"

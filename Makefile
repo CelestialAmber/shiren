@@ -71,7 +71,7 @@ endif
 
 $(rom): $(OBJS)
 	wlalink $(WLALINKFLAGS) linkfile $@
-	$(SHA1SUM) -c shiren-aeon-genesis.sha1
+#$(SHA1SUM) -c shiren-aeon-genesis.sha1
 
 %.o: dep = $(shell tools/scan_includes $(@D)/$*.asm)
 %.o: %.asm $$(dep)

@@ -1,955 +1,955 @@
 
 ;fe6ac2
-Text_FE6AC2:
+Text1149:
 text " whupped him good."
 endtext
 
 ;fe6ad5
-Text_FE6AD5:
+Text1150:
 text "Collapsed in starvation."
 endtext
 
 ;fe6aee
-Text_FE6AEE:
+Text1151:
 text "Caught in a Bomb Rock's explosion."
 endtext
 
 ;fe6b11
-Text_FE6B11:
+Text1152:
 text "Fell through a pit."
 endtext
 
 ;fe6b25
-Text_FE6B25:
+Text1153:
 text "Defeated by an arrow."
 endtext
 
 ;fe6b3b
-Text_FE6B3B:
+Text1154:
 text "Defeated by a poison arrow."
 endtext
 
 ;fe6b57
-Text_FE6B57:
+Text1155:
 text "Stepped on a land mine."
 endtext
 
 ;fe6b6f
-Text_FE6B6F:
+Text1156:
 text "Food poisoning from a rotten Rice Ball."
 endtext
 
 ;fe6b97
-Text_FE6B97:
+Text1157:
 text "Ate a poisonous plant."
 endtext
 
 ;fe6bae
-Text_FE6BAE:
+Text1158:
 text "Couldn't move and was defeated."
 endtext
 
 ;fe6bce
-Text_FE6BCE:
+Text1159:
 text "Smushed by a falling rock."
 endtext
 
 ;fe6be9
-Text_FE6BE9:
+Text1160:
 text "Blown up by a time bomb"
 endtext
 
 ;fe6c01
-Text_FE6C01:
+Text1161:
 text "Thrown back by a trap and defeated."
 endtext
 
 ;fe6c25
-Text_FE6C25:
+Text1162:
 text "Defeated by New Trap 4"
 endtext
 
 ;fe6c3c
-Text_FE6C3C:
+Text1163:
 text "Defeated by New Trap 5"
 endtext
 
 ;fe6c53
-Text_FE6C53:
+Text1164:
 text "Defeated by New Trap 6"
 endtext
 
 ;fe6c6a
-Text_FE6C6A:
+Text1165:
 text "Defeated by New Trap 7"
 endtext
 
 ;fe6c81
-Text_FE6C81:
+Text1166:
 text "Defeated by New Trap 8"
 endtext
 
 ;fe6c98
-Text_FE6C98:
+Text1167:
 text "Defeated by New Trap 9"
 endtext
 
 ;fe6caf
-Text_FE6CAF:
+Text1168:
 text "Defeated by New Trap 10"
 endtext
 
 ;fe6cc7
-Text_FE6CC7:
+Text1169:
 text "Defeated by New Item 1"
 endtext
 
 ;fe6cde
-Text_FE6CDE:
+Text1170:
 text "Defeated by New Item 2"
 endtext
 
 ;fe6cf5
-Text_FE6CF5:
+Text1171:
 text "Defeated by New Item 3"
 endtext
 
 ;fe6d0c
-Text_FE6D0C:
+Text1172:
 text "Defeated by New Item 4"
 endtext
 
 ;fe6d23
-Text_FE6D23:
+Text1173:
 text "Defeated by New Item 5"
 endtext
 
 ;fe6d3a
-Text_FE6D3A:
+Text1174:
 text "Defeated by New Item 6"
 endtext
 
 ;fe6d51
-Text_FE6D51:
+Text1175:
 text "Defeated by New Item 7"
 endtext
 
 ;fe6d68
-Text_FE6D68:
+Text1176:
 text "Defeated by New Item 8"
 endtext
 
 ;fe6d7f
-Text_FE6D7F:
+Text1177:
 text "Defeated by New Item 9"
 endtext
 
 ;fe6d96
-Text_FE6D96:
+Text1178:
 text "Defeated by New Item 10"
 endtext
 
 ;fe6dae
-Text_FE6DAE:
+Text1179:
 text "Couldn't heal and keeled over."
 endtext
 
 ;fe6dcd
-Text_FE6DCD:
+Text1180:
 text "Defeated by Zato-Kechi's Shiatsu mistake."
 endtext
 
 ;fe6df7
-Text_FE6DF7:
+Text1181:
 text "［"
 endtext
 
 ;fe6df9
-Text_FE6DF9:
+Text1182:
 text "］"
 endtext
 
 ;fe6dfb
-Text_FE6DFB:
+Text1183:
 text "("
 endtext
 
 ;fe6dfd
-Text_FE6DFD:
+Text1184:
 text ")"
 endtext
 
 ;fe6dff
-Text_FE6DFF:
+Text1185:
 text "x "
 endtext
 
 ;fe6e02
-Text_FE6E02:
+Text1186:
 text " Meat"
 endtext
 
 ;fe6e08
-Text_FE6E08:
+Text1187:
 text "Herb:"
 endtext
 
 ;fe6e0e
-Text_FE6E0E:
+Text1188:
 text "Scroll:"
 endtext
 
 ;fe6e16
-Text_FE6E16:
+Text1189:
 text "Food:"
 endtext
 
 ;fe6e1c
-Text_FE6E1C:
+Text1190:
 text "Weapon:"
 endtext
 
 ;fe6e24
-Text_FE6E24:
+Text1191:
 text "Arrow:"
 endtext
 
 ;fe6e2b
-Text_FE6E2B:
+Text1192:
 text "Shield:"
 endtext
 
 ;fe6e33
-Text_FE6E33:
+Text1193:
 text "Bracer:"
 endtext
 
 ;fe6e3b
-Text_FE6E3B:
+Text1194:
 text "Staff:"
 endtext
 
 ;fe6e42
-Text_FE6E42:
+Text1195:
 text "Money:"
 endtext
 
 ;fe6e49
-Text_FE6E49:
+Text1196:
 text "Meat:"
 endtext
 
 ;fe6e4f
-Text_FE6E4F:
+Text1197:
 text "Objective:"
 endtext
 
 ;fe6e5a
-Text_FE6E5A:
+Text1198:
 text "Pot:"
 endtext
 
 ;fe6e5f
-Text_FE6E5F:
+Text1199:
 text "Trap:"
 endtext
 
 ;fe6e65
-Text_FE6E65:
+Text1200:
 text "Mimic:"
 endtext
 
 ;fe6e6c
-Text_FE6E6C:
+Text1201:
 text "Blank Scroll: "
 endtext
 
 ;fe6e7b
-Text_FE6E7B:
+Text1202:
 text "Purify"
 endtext
 
 ;fe6e82
-Text_FE6E82:
+Text1203:
 text "Identify"
 endtext
 
 ;fe6e8b
-Text_FE6E8B:
+Text1204:
 text "Light"
 endtext
 
 ;fe6e91
-Text_FE6E91:
+Text1205:
 text "Bigpot"
 endtext
 
 ;fe6e98
-Text_FE6E98:
+Text1206:
 text "Airslash"
 endtext
 
 ;fe6ea1
-Text_FE6EA1:
+Text1207:
 text "Lockjaw"
 endtext
 
 ;fe6ea9
-Text_FE6EA9:
+Text1208:
 text "\l"
 endtext
 
 ;fe6eab
-Text_FE6EAB:
+Text1209:
 text "Trap"
 endtext
 
 ;fe6eb0
-Text_FE6EB0:
+Text1210:
 text "Crisis"
 endtext
 
 ;fe6eb7
-Text_FE6EB7:
+Text1211:
 text "Fastfoe"
 endtext
 
 ;fe6ebf
-Text_FE6EBF:
+Text1212:
 text "Slumber"
 endtext
 
 ;fe6ec7
-Text_FE6EC7:
+Text1213:
 text "Powerup"
 endtext
 
 ;fe6ecf
-Text_FE6ECF:
+Text1214:
 text "Massacre"
 endtext
 
 ;fe6ed8
-Text_FE6ED8:
+Text1215:
 text "Detonate"
 endtext
 
 ;fe6ee1
-Text_FE6EE1:
+Text1216:
 text "Bigroom"
 endtext
 
 ;fe6ee9
-Text_FE6EE9:
+Text1217:
 text "Monster"
 endtext
 
 ;fe6ef1
-Text_FE6EF1:
+Text1218:
 text "Confuse"
 endtext
 
 ;fe6ef9
-Text_FE6EF9:
+Text1219:
 text "Genocide"
 endtext
 
 ;fe6f02
-Text_FE6F02:
+Text1220:
 text "\l"
 endtext
 
 ;fe6f04
-Text_FE6F04:
+Text1221:
 text "Lost"
 endtext
 
 ;fe6f09
-Text_FE6F09:
+Text1222:
 text "Heaven"
 endtext
 
 ;fe6f10
-Text_FE6F10:
+Text1223:
 text "Earth"
 endtext
 
 ;fe6f16
-Text_FE6F16:
+Text1224:
 text "Chrome"
 endtext
 
 ;fe6f1d
-Text_FE6F1D:
+Text1225:
 text "Withdraw"
 endtext
 
 ;fe6f26
-Text_FE6F26:
+Text1226:
 text "Slippery"
 endtext
 
 ;fe6f2f
-Text_FE6F2F:
+Text1227:
 text "\l"
 endtext
 
 ;fe6f31
-Text_FE6F31:
+Text1228:
 text "Haven"
 endtext
 
 ;fe6f37
-Text_FE6F37:
+Text1229:
 text "\l"
 endtext
 
 ;fe6f39
-Text_FE6F39:
+Text1230:
 text "Monsterh"
 endtext
 
 ;fe6f42
-Text_FE6F42:
+Text1231:
 text "Monsteho"
 endtext
 
 ;fe6f4b
-Text_FE6F4B:
+Text1232:
 text "Monhouse"
 endtext
 
 ;fe6f54
-Text_FE6F54:
+Text1233:
 text "House"
 endtext
 
 ;fe6f5a
-Text_FE6F5A:
+Text1234:
 text "\l"
 endtext
 
 ;fe6f5c
-Text_FE6F5C:
+Text1235:
 text "\l"
 endtext
 
 ;fe6f5e
-Text_FE6F5E:
+Text1236:
 textfunction $0 $1
 text ""
 endtext
 
 ;fe6f62
-Text_FE6F62:
+Text1237:
 text "Valley Inn"
 endtext
 
 ;fe6f6d
-Text_FE6F6D:
+Text1238:
 text "Old Cedar-lined Road"
 endtext
 
 ;fe6f82
-Text_FE6F82:
+Text1239:
 text "Mountain Stream"
 endtext
 
 ;fe6f92
-Text_FE6F92:
+Text1240:
 text "Bamboo Village"
 endtext
 
 ;fe6fa1
-Text_FE6FA1:
+Text1241:
 text "Tenma Pass"
 endtext
 
 ;fe6fac
-Text_FE6FAC:
+Text1242:
 text "Summit Forest"
 endtext
 
 ;fe6fba
-Text_FE6FBA:
+Text1243:
 text "Summit Town"
 endtext
 
 ;fe6fc6
-Text_FE6FC6:
+Text1244:
 text "Neburi Mine"
 endtext
 
 ;fe6fd2
-Text_FE6FD2:
+Text1245:
 text "Two Jizo Valley"
 endtext
 
 ;fe6fe2
-Text_FE6FE2:
+Text1246:
 text "Cliff Grotto"
 endtext
 
 ;fe6fef
-Text_FE6FEF:
+Text1247:
 text "Mountain Spirit Cave"
 endtext
 
 ;fe7004
-Text_FE7004:
+Text1248:
 text "Crooked Boulder Valley"
 endtext
 
 ;fe701b
-Text_FE701B:
+Text1249:
 text "Valley Forest"
 endtext
 
 ;fe7029
-Text_FE7029:
+Text1250:
 text "Waterfall Marsh"
 endtext
 
 ;fe7039
-Text_FE7039:
+Text1251:
 text "Table Mountain"
 endtext
 
 ;fe7048
-Text_FE7048:
+Text1252:
 text "Cave River Town"
 endtext
 
 ;fe7058
-Text_FE7058:
+Text1253:
 text "Mugen Ravine"
 endtext
 
 ;fe7065
-Text_FE7065:
+Text1254:
 text "Trial of the Genma"
 endtext
 
 ;fe7078
-Text_FE7078:
+Text1255:
 text "Trial of the Dragon's Wail"
 endtext
 
 ;fe7093
-Text_FE7093:
+Text1256:
 text "The Final Trial"
 endtext
 
 ;fe70a3
-Text_FE70A3:
+Text1257:
 text "Land of the Sun"
 endtext
 
 ;fe70b3
-Text_FE70B3:
+Text1258:
 text "Golden City"
 endtext
 
 ;fe70bf
-Text_FE70BF:
+Text1259:
 text "Foot of the Rainbow"
 endtext
 
 ;fe70d3
-Text_FE70D3:
+Text1260:
 text "Waterfall Cave"
 endtext
 
 ;fe70e2
-Text_FE70E2:
+Text1261:
 text "Fei's Problem"
 endtext
 
 ;fe70f0
-Text_FE70F0:
+Text1262:
 text "Final Problem"
 endtext
 
 ;fe70fe
-Text_FE70FE:
+Text1263:
 text "Shrine of the Food God"
 endtext
 
 ;fe7115
-Text_FE7115:
+Text1264:
 text "Wall Scroll Cave"
 endtext
 
 ;fe7126
-Text_FE7126:
+Text1265:
 text "Waterfall Cave"
 endtext
 
 ;fe7135
-Text_FE7135:
+Text1266:
 text "Impasse Valley"
 endtext
 
 ;fe7144
-Text_FE7144:
+Text1267:
 text "Food God Shrine"
 endtext
 
 ;fe7154
-Text_FE7154:
+Text1268:
 text "Wall Scroll Cave"
 endtext
 
 ;fe7165
-Text_FE7165:
+Text1269:
 text "Final Problem"
 endtext
 
 ;fe7173
-Text_FE7173:
+Text1270:
 textfunction $0 $F
 text "Ranking"
 endtext
 
 ;fe717e
-Text_FE717E:
+Text1271:
 numvar $54
 textfunction $0 $0
 text ""
 endtext
 
 ;fe7184
-Text_FE7184:
+Text1272:
 text "G"
 endtext
 
 ;fe7186
-Text_FE7186:
+Text1273:
 textfunction $0 $14
 text ""
 endtext
 
 ;fe718a
-Text_FE718A:
+Text1274:
 text "In Preparation"
 endtext
 
 ;fe7199
-Text_FE7199:
+Text1275:
 text "F  "
 endtext
 
 ;fe719d
-Text_FE719D:
+Text1276:
 text "Runs"
 endtext
 
 ;fe71a2
-Text_FE71A2:
+Text1277:
 textfunction $0 $0
 text ""
 endtext
 
 ;fe71a6
-Text_FE71A6:
+Text1278:
 text "/"
 endtext
 
 ;fe71a8
-Text_FE71A8:
+Text1279:
 text "%"
 endtext
 
 ;fe71aa
-Text_FE71AA:
+Text1280:
 text "Carried the Box of Happiness"
 endtext
 
 ;fe71c7
-Text_FE71C7:
+Text1281:
 text "Took the Box of Happiness"
 endtext
 
 ;fe71e1
-Text_FE71E1:
+Text1282:
 text "Safely returned to the Intro."
 endtext
 
 ;fe71ff
-Text_FE71FF:
+Text1283:
 text "Returned from Table Mountain."
 endtext
 
 ;fe721d
-Text_FE721D:
+Text1284:
 text "Returned from the Shrine of the Food God"
 endtext
 
 ;fe7246
-Text_FE7246:
+Text1285:
 text "Returned from the Cave of the Wall Scroll"
 endtext
 
 ;fe7270
-Text_FE7270:
+Text1286:
 text "Solved Fei's Final Problem!"
 endtext
 
 ;fe728c
-Text_FE728C:
+Text1287:
 strvar $82
 text "."
 endtext
 
 ;fe7290
-Text_FE7290:
+Text1288:
 text "Defeated before completing King's order."
 endtext
 
 ;fe72b9
-Text_FE72B9:
+Text1289:
 text "Returned the King's Treasure box."
 endtext
 
 ;fe72db
-Text_FE72DB:
+Text1290:
 text "Carried the King's Treasure box"
 endtext
 
 ;fe72fb
-Text_FE72FB:
+Text1291:
 text "Carried the Strange box"
 endtext
 
 ;fe7313
-Text_FE7313:
+Text1292:
 text "Carried the Strange box"
 endtext
 
 ;fe732b
-Text_FE732B:
+Text1293:
 text "Returned safely via a Riremit scroll."
 endtext
 
 ;fe7351
-Text_FE7351:
+Text1294:
 text "Intro Dungeon"
 endtext
 
 ;fe735f
-Text_FE735F:
+Text1295:
 text "Dungeon 1"
 endtext
 
 ;fe7369
-Text_FE7369:
+Text1296:
 text "Dungeon 2"
 endtext
 
 ;fe7373
-Text_FE7373:
+Text1297:
 text "of"
 endtext
 
 ;fe7376
-Text_FE7376:
+Text1298:
 text "Adventures"
 endtext
 
 ;fe7381
-Text_FE7381:
+Text1299:
 text "Max HP"
 endtext
 
 ;fe7388
-Text_FE7388:
+Text1300:
 text "Power"
 endtext
 
 ;fe738e
-Text_FE738E:
+Text1301:
 text "Lv  "
 endtext
 
 ;fe7393
-Text_FE7393:
+Text1302:
 text "EXP"
 endtext
 
 ;fe7397
-Text_FE7397:
+Text1303:
 text "Area:"
 endtext
 
 ;fe739d
-Text_FE739D:
+Text1304:
 text "Weapon:"
 endtext
 
 ;fe73a5
-Text_FE73A5:
+Text1305:
 text "Shield:"
 endtext
 
 ;fe73ad
-Text_FE73AD:
+Text1306:
 text "+"
 endtext
 
 ;fe73af
-Text_FE73AF:
+Text1307:
 text "-"
 endtext
 
 ;fe73b1
-Text_FE73B1:
+Text1308:
 text "None"
 endtext
 
 ;fe73b6
-Text_FE73B6:
+Text1309:
 text "Max Satiation"
 endtext
 
 ;fe73c4
-Text_FE73C4:
+Text1310:
 text "Extra! Extra!"
 endtext
 
 ;fe73d2
-Text_FE73D2:
+Text1311:
 text "A new champion!"
 endtext
 
 ;fe73e2
-Text_FE73E2:
+Text1312:
 text "Shijima"
 endtext
 
 ;fe73ea
-Text_FE73EA:
+Text1313:
 text "Heiji"
 endtext
 
 ;fe73f0
-Text_FE73F0:
+Text1314:
 text "Obito"
 endtext
 
 ;fe73f6
-Text_FE73F6:
+Text1315:
 text "Tsubute"
 endtext
 
 ;fe73fe
-Text_FE73FE:
+Text1316:
 text "Kazura"
 endtext
 
 ;fe7405
-Text_FE7405:
+Text1317:
 text "Mugura"
 endtext
 
 ;fe740c
-Text_FE740C:
+Text1318:
 text "Tsumuri"
 endtext
 
 ;fe7414
-Text_FE7414:
+Text1319:
 text "Kanji"
 endtext
 
 ;fe741a
-Text_FE741A:
+Text1320:
 text "Jirokichi"
 endtext
 
 ;fe7424
-Text_FE7424:
+Text1321:
 text "Senzo"
 endtext
 
 ;fe742a
-Text_FE742A:
+Text1322:
 text "Hanzaki"
 endtext
 
 ;fe7432
-Text_FE7432:
+Text1323:
 text "Sabu"
 endtext
 
 ;fe7437
-Text_FE7437:
+Text1324:
 text "Kanpachi"
 endtext
 
 ;fe7440
-Text_FE7440:
+Text1325:
 text "Tage"
 endtext
 
 ;fe7445
-Text_FE7445:
+Text1326:
 text "Yamake"
 endtext
 
 ;fe744c
-Text_FE744C:
+Text1327:
 text "Shopkeeper"
 endtext
 
 ;fe7457
-Text_FE7457:
+Text1328:
 text "Saruyama"
 endtext
 
 ;fe7460
-Text_FE7460:
+Text1329:
 text "Apprentice 2"
 endtext
 
 ;fe746d
-Text_FE746D:
+Text1330:
 text "Apprentice 3"
 endtext
 
 ;fe747a
-Text_FE747A:
+Text1331:
 text "Apprentice 4"
 endtext
 
 ;fe7487
-Text_FE7487:
+Text1332:
 text "Apprentice 5"
 endtext
 
 ;fe7494
-Text_FE7494:
+Text1333:
 text "Fei"
 endtext
 
 ;fe7498
-Text_FE7498:
+Text1334:
 text "Oops. The data in"
 endtext
 
 ;fe74aa
-Text_FE74AA:
+Text1335:
 text " Journal "
 numvar $10
 text " "
 endtext
 
 ;fe74b7
-Text_FE74B7:
+Text1336:
 text " the Wanderer Ranking "
 endtext
 
 ;fe74ce
-Text_FE74CE:
+Text1337:
 text "has"
 textfunction $0 $4
 text " just\lgone the way of all flesh."
