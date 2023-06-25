@@ -2281,7 +2281,8 @@ func_C6275B:
 	plp
 	rtl
 
-func_C62766:
+;c62766
+GetShuffleDungeonIndex:
 	php
 	sep #$20 ;A->8
 	lda.l wShuffleDungeonIndex
@@ -2290,6 +2291,7 @@ func_C62766:
 	rtl
 
 ;result is stored in wTemp00
+;c62771
 GetCurrentFloor:
 	php
 	sep #$20 ;A->8
@@ -2298,6 +2300,7 @@ GetCurrentFloor:
 	plp
 	rtl
 
+;c6277c
 GetStairsDirection:
 	php
 	sep #$20 ;A->8

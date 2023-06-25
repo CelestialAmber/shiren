@@ -71,8 +71,6 @@ textfunction $5
 text "@"
 
 ;ff1075
-Text_FF1075:
-text "今７@"
-
-;ff1078
-.db $FF
+Data_ff1075:
+.dw 2275 ;first text entry in bank FF
+.dw $FFFF

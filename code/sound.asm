@@ -155,7 +155,7 @@ func_8180DD:
 
 func_818111:
 	php 
-	sep #$20
+	sep #$20 ;A->8
 	lda.l $000EA5
 	and.b #$7F
 	lsr a
@@ -166,7 +166,7 @@ func_818111:
 
 func_818120:
 	php 
-	sep #$20
+	sep #$20 ;A->8
 	lda.b wTemp00
 	asl a
 	asl a
@@ -616,7 +616,7 @@ func_8183C6:
 	adc.b w0058
 	bra @lbl_81846B
 ;818461
-	sep #$20
+	sep #$20 ;A->8
 @lbl_818463:
 	lda.w w0db2,x
 	rep #$20 ;A->16
@@ -1118,7 +1118,7 @@ MusicCommand32:
 MusicCommand73:
 	lda.b [wAudioTrackPointer]
 	inc24 wAudioTrackPointer
-	jsr func_818E59
+	jsr.w func_818E59
 	rts
 
 ;x: track number
@@ -1856,7 +1856,7 @@ func_818E39:
 
 func_818E59:
 	php 
-	sep #$30
+	sep #$30 ;AXY->8
 	ldy.w $1036
 	bra @lbl_818E67
 @lbl_818E61:

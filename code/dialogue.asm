@@ -4053,7 +4053,7 @@ func_C14D64:
 	lda.b wTemp00
 	cmp.b #$0A
 	bne @lbl_C14DBF
-	jsl.l func_C62766
+	jsl.l GetShuffleDungeonIndex
 	lda.b wTemp00
 	dec a
 	asl a
