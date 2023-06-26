@@ -317,8 +317,8 @@ TextPointerTable:
 	.dw Text302
 	.dw Text303
 	.dw Text304
-	.dw Text305
-	.dw Text306
+	.dw InvalidBlankScrollText
+	.dw BlankScrollUseText
 	.dw Text307
 	.dw Text308
 	.dw Text309

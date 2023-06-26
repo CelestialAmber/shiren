@@ -1538,7 +1538,66 @@ wCharLastAttackedMonsterLevel:
 ;893d
 wShirenStatus INSTANCEOF ShirenStatus
 
-. ds 0x37da
+;89bb
+. ds 0x1d1
+
+;arrays for inventory/warehouse/dropped items?
+
+;8b8c
+wItemType:
+	dsb 128
+
+;8c0c
+wItemIsCursed:
+	dsb 128
+
+;8c8c
+wItemModification1:
+	dsb 128
+
+;8d0c
+wItemModification2:
+	dsb 128
+
+;8d8c
+wItemTimesIdentified:
+	dsb 128
+
+;8e0c
+wItemPotNextItem:
+	dsb 128
+
+;8e8c
+wItemGoods:
+	dsb 128
+
+;8f0c
+wItemFuseAbility1:
+	dsb 128
+
+;8f8c
+wItemFuseAbility2:
+	dsb 128
+
+;arrays for every item
+
+;900c
+wItemIdentified:
+	dsb 230
+
+;90f2
+wItemHasCustomName:
+	dsb 230
+
+;91d8
+wItemUnidentifiedName:
+	dsb 230
+
+;92be
+wItemCustomNamesBuffer
+	dsb 20*8
+
+. ds 0xc195 - 0x935e
 
 ;c195
 wMapNum:

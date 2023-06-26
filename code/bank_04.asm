@@ -16390,33 +16390,38 @@ func_C4B882:
 	ldx.b wTemp02
 	stz.w wTemp00,x
 	rts
-	.db $BF,$F6,$79,$DC,$99,$1E,$00,$BF   ;C4B8A8  
-	.db $F4,$79,$DC,$99,$1C,$00           ;C4B8B0  
-	lda.l $DC79F2,x
+
+
+func_C4B8A8:
+	lda.l MainFontGraphicsData+30,x
+	sta.w w001e,y
+	lda.l MainFontGraphicsData+28,x
+	sta.w w001c,y
+	lda.l MainFontGraphicsData+26,x
 	sta.w w001a,y
-	lda.l $DC79F0,x
+	lda.l MainFontGraphicsData+24,x
 	sta.w w0018,y
-	lda.l $DC79EE,x
+	lda.l MainFontGraphicsData+22,x
 	sta.w w0016,y
-	lda.l $DC79EC,x
+	lda.l MainFontGraphicsData+20,x
 	sta.w w0014,y
-	lda.l $DC79EA,x
+	lda.l MainFontGraphicsData+18,x
 	sta.w w0012,y
-	lda.l $DC79E8,x
+	lda.l MainFontGraphicsData+16,x
 	sta.w w0010,y
-	lda.l $DC79E6,x
+	lda.l MainFontGraphicsData+14,x
 	sta.w w000e,y
-	lda.l $DC79E4,x
+	lda.l MainFontGraphicsData+12,x
 	sta.w w000c,y
-	lda.l $DC79E2,x
+	lda.l MainFontGraphicsData+10,x
 	sta.w w000a,y
-	lda.l $DC79E0,x
+	lda.l MainFontGraphicsData+8,x
 	sta.w w0008,y
-	lda.l $DC79DE,x
+	lda.l MainFontGraphicsData+6,x
 	sta.w wTemp06,y
-	lda.l $DC79DC,x
+	lda.l MainFontGraphicsData+4,x
 	sta.w wTemp04,y
-	lda.l $DC79DA,x
+	lda.l MainFontGraphicsData+2,x
 	sta.w wTemp02,y
 	lda.l MainFontGraphicsData,x
 	sta.w wTemp00,y
@@ -17458,9 +17463,14 @@ func_C4C0CC:
 	plp
 	rtl
 
-func_C4C0E0:
+;c4c0e0
+;$00-01: text id (16 bit)
+;$02-03: text to compare address (lower 16 bits)
+;$04: text to compare address bank
+CheckIfItemNameEqualToTextEntry:
 	php
 	sep #$20 ;A->8
+	;Switch to the bank of text to compare
 	lda.b wTemp04
 	pha
 	plb
@@ -17471,6 +17481,7 @@ func_C4C0E0:
 	lda.l TextPointerTable,x
 	sta.b w00d6
 	lda.b wTemp00
+	;Check whether the text is in bank fe or ff
 	ldx.w #$0000
 	ldy.w #$00FE
 	cmp.l Data_ff1075,x

@@ -9,6 +9,7 @@
 uint8_t *compressed = NULL;
 char* filename = NULL;
 bool skipHeaderByte = false;
+int optionWidth = 0;
 
 int startsWith(const char *str, const char *pre)
 {
@@ -17,7 +18,7 @@ int startsWith(const char *str, const char *pre)
     return lenstr < lenpre ? 0 : memcmp(pre, str, lenpre) == 0;
 }
 
-int CalculateHeaderByte(int length){
+int CalculateHeaderByte4BPP(int length){
 	int pixelOffset = 0;
 	int pixelOffsetDir = 0; //right by default
 	int unkFlag = 0;
@@ -66,7 +67,10 @@ int CalculateHeaderByte(int length){
 	return headerByte;
 }
 
-//TODO: add support for 1bpp images
+int CalculateHeaderByteKointai(int width){
+	return (width/8) - 1; //return tile width - 1
+}
+
 int compress(uint8_t* imageData, int uncompressedSize, int bitDepth) {
 	bool debugInfo = false;
 	int tileSize = 8 * bitDepth;
@@ -75,7 +79,15 @@ int compress(uint8_t* imageData, int uncompressedSize, int bitDepth) {
 
 	//If the header byte should be included, calculate it and save it to the array at the beginning
 	if(!skipHeaderByte){
-		compressed[0] = CalculateHeaderByte(uncompressedSize);
+		if(bitDepth == 4){
+		compressed[0] = CalculateHeaderByte4BPP(uncompressedSize);
+		}else if(bitDepth == 1){
+			if(optionWidth == 0){
+				fprintf(stderr,"Error: width must be specified for 1bpp images with a header byte\n");
+				return EXIT_FAILURE;
+			}
+			compressed[0] = CalculateHeaderByteKointai(optionWidth);
+		}
 		index++;
 	}
 
@@ -221,7 +233,7 @@ int compress(uint8_t* imageData, int uncompressedSize, int bitDepth) {
 				uint8_t lastLineBytes[2] = {0,0};
 
 				if(bitDepth == 1){
-					for (int k = 0; k < 16; k++) {
+					for (int k = 0; k < 8; k++) {
 						int lineBit;
 						uint8_t planeByte = tilePtr[k];
 
@@ -304,19 +316,30 @@ int compress(uint8_t* imageData, int uncompressedSize, int bitDepth) {
 int main(int argc, char *argv[]) {
     if (argc < 3)
 	{
-		fputs("Usage: gfxcompress [--noheader] infile.4bpp outfile.4bpp.lz\n", stderr);
+		fputs("Usage: gfxcompress [--noheader] [-w [width]] infile.4bpp outfile.4bpp.lz\n", stderr);
 		return EXIT_FAILURE;
 	}
 
-    int argOffset = 0;
+    int argOffset = 1;
 
-    if(!strcmp(argv[1], "--noheader")){
-    	skipHeaderByte = true;
-    	argOffset = 1;
-    }
+	for(int i = 1; i < argc; i++){
+		if(!strcmp(argv[i], "--noheader")){
+    		skipHeaderByte = true;
+    		argOffset++;
+    	}
+		if(!strcmp(argv[i], "-w")){
+			if(skipHeaderByte){
+				fprintf(stderr, "Error: --noheader was passed in addition to specifying width\n");
+				return EXIT_FAILURE;
+			}
+			optionWidth = atoi(argv[i + 1]);
+    		argOffset += 2;
+			i++;
+    	}
+	}
 
-	char *infile = argv[1 + argOffset];
-	char *outfile = argv[2 + argOffset];
+	char *infile = argv[argOffset];
+	char *outfile = argv[argOffset + 1];
 
 	filename = infile;
 
@@ -352,9 +375,9 @@ int main(int argc, char *argv[]) {
 	even if it's extremely unlikely to ever even be more than the uncompressed file. */
     compressed = (uint8_t *)calloc(filesize * 2, 1);
 
-	//TODO: Consider changing this for the header bytes in the bg3 graphics and kointai font graphics.
-	//For now, only the character graphics header byte is handled, so skip the byte for non 4bpp graphics
-	if(bitDepth != 4) skipHeaderByte = true;
+	//TODO: Consider changing this for the header bytes in the bg3 graphics.
+	//For now, only the character graphics header byte is handled, so skip the byte for 2bpp graphics
+	if(bitDepth == 2) skipHeaderByte = true;
 
 	int compressed_size = compress(data,filesize,bitDepth);
 

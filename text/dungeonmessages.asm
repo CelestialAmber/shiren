@@ -2052,7 +2052,8 @@ text "拾うだけで識別できるようになった！\l"
 endtext
 
 ;fe29bd
-Text305:
+;""[blank scroll name]..." echoed in vain."
+InvalidBlankScrollText:
 textfunction $2
 cmdf6
 text "『"
@@ -2061,7 +2062,8 @@ text "・・・』\lと、むなしくこだました。\l"
 endtext
 
 ;fe29d6
-Text306:
+;"But, the scroll was blank."
+BlankScrollUseText:
 text "しかし、巻物は白紙だった。\l"
 endtext
 
@@ -2106,6 +2108,7 @@ text "サビるものを装備していなかった。\l"
 endtext
 
 ;fe2a56
+;"It's a monster house!!"
 Text314:
 text "モンスターハウスだ！！\l"
 endtext
@@ -2116,6 +2119,7 @@ text "どろぼうハウスだ！！\l"
 endtext
 
 ;fe2a6f
+;"It's a drain house!!"
 Text316:
 text "ドレインハウスだ！！\l"
 endtext

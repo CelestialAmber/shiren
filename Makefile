@@ -100,7 +100,7 @@ gfx/characters/taintedinsect/%_part10.png\
 gfx/characters/taintedinsect/%_part11.png\
 
 $(TAINTEDINSECT_PARTS): gfx/characters/taintedinsect/%.png
-	tools/gfx.py split $<
+	@tools/gfx.py split $<
 
 ### General graphics rules
 

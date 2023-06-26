@@ -163,7 +163,7 @@ DisplayAreaTitle:
 	pla
 	phx
 	sta.b w7f0000
-	lda.w #$00DC
+	lda.w #bank(KointaiFontCharacters)
 	sta.b w7f0002
 	lda.b w7f0004
 	pha
@@ -572,7 +572,7 @@ func_C5D082:
 	sec
 	rtl
 @lbl_C5D0B8:
-	.db $28,$18,$6B                       ;C5D0B8
+	.db $28,$18,$6B
 
 func_C5D0BB:
 	php

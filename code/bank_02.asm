@@ -41,9 +41,9 @@ func_C2001E:
 	lda.l $7E8759,x
 	bmi @lbl_C2004D
 	sta.b wTemp00
-	phx 
+	phx
 	jsl.l func_C306F4
-	plx 
+	plx
 	lda.b #$FF
 	sta.l $7E8759,x
 @lbl_C2004D:
@@ -1016,7 +1016,7 @@ func_C20BC7:
 	lda.b wTemp00
 	cmp.b $01,s
 	beq @lbl_C20BD5
-	plx 
+	plx
 	jmp.w func_C20BF9
 
 func_C20BE7:
@@ -3021,12 +3021,12 @@ func_C23579:
 	bne @lbl_C23621
 @lbl_C23600:
 	lda.w wCharTrueLevel,y
-	cmp.l UNREACH_C2362D,x
+	cmp.l EnemyLevelLimits+1,x
 	bcs @lbl_C23610
-	lda.l UNREACH_C2362D,x
+	lda.l EnemyLevelLimits+1,x
 	sta.w wCharTrueLevel,y
 @lbl_C23610:
-	lda.l UNREACH_C2362E,x
+	lda.l EnemyLevelLimits+2,x
 	cmp.w wCharTrueLevel,y
 	bcs @lbl_C2361C
 	sta.w wCharTrueLevel,y
@@ -3039,43 +3039,34 @@ func_C23579:
 	inx
 	inx
 @lbl_C23624:
-	lda.l DATA8_C2362C,x
+	lda.l EnemyLevelLimits,x
 	bpl @lbl_C235FB
 	bra @lbl_C23600
 
-DATA8_C2362C:
-	.db $2E                               ;C2362C
+;0: enemy id, 1: lower level limit, 2: upper level limit
+EnemyLevelLimits:
+	.db Char_BabyTank,0,3
+	.db Char_PopsterTank,0,3
+	.db Char_Kigny,1,99
+	.db Char_Inferno,1,99
+	.db Char_DeadSoldier,1,1
+	.db Char_AirDevil,1,1
+	.db Char_TwistyHani,1,1
+	.db Char_Parthenos,1,1
+	.db Char_FluffyBunny,1,1
+	.db Char_Mecharoid,1,1
+	.db Char_Hen,1,2
+	.db Char_DarkOwl,1,1
+	.db Char_TaintedInsect,1,1
+	.db $FF,1,3 ;others
 
-UNREACH_C2362D:
-	.db $00                               ;C2362D
-
-UNREACH_C2362E:
-	.db $03                               ;C2362E  
-	.db $22                               ;C2362F
-	.db $00,$03                           ;C23630
-	.db $0C                               ;C23632
-	.db $01,$63                           ;C23633  
-	.db $08,$01,$63,$18                   ;C23635
-	.db $01,$01                           ;C23639  
-	.db $0E                               ;C2363B
-	.db $01,$01                           ;C2363C  
-	.db $0D                               ;C2363E
-	.db $01,$01                           ;C2363F  
-	.db $0B                               ;C23641
-	.db $01,$01                           ;C23642  
-	.db $16                               ;C23644
-	.db $01,$01                           ;C23645  
-	.db $2A,$01,$01,$1A                   ;C23647
-	.db $01,$02                           ;C2364B  
-	.db $1B                               ;C2364D
-	.db $01,$01                           ;C2364E  
-	.db $28                               ;C23650
-	.db $01,$01                           ;C23651  
-	.db $FF,$01,$03                       ;C23653
-	.db $08,$E2,$30,$A9,$7E,$48,$AB,$A4,$00,$A2,$01,$B9,$41,$86,$DF,$04   ;C23656
-	.db $CA,$C2,$B9,$55,$86,$FF,$4B,$CA,$C2,$B9,$69,$86,$FF,$92,$CA,$C2   ;C23666
-	.db $30,$03,$E8,$80,$E6,$8A,$99,$19   ;C23676  
-	.db $86,$99,$2D,$86,$28,$6B           ;C2367E  
+func_C23656:
+	.db $08,$E2,$30,$A9,$7E,$48,$AB,$A4
+	.db $00,$A2,$01,$B9,$41,$86,$DF,$04
+	.db $CA,$C2,$B9,$55,$86,$FF,$4B,$CA
+	.db $C2,$B9,$69,$86,$FF,$92,$CA,$C2
+	.db $30,$03,$E8,$80,$E6,$8A,$99,$19
+	.db $86,$99,$2D,$86,$28,$6B
 
 ;$00: character table index
 func_C23684:
@@ -3334,7 +3325,7 @@ func_C2389E:
 @lbl_C238A5:
 	cmp.w wCharType,y
 	bne @lbl_C238CE
-	lda.l UNREACH_C238ED,x
+	lda.l MonsterEvolutionTable+1,x
 	cmp.w wCharLevel,y
 	bne @lbl_C238CE
 	.db $84,$00,$BF,$EE,$38,$C2,$85,$01,$BF,$EF,$38,$C2,$85,$02,$5A,$8B   ;C238B3  
@@ -3346,7 +3337,7 @@ func_C2389E:
 	inx
 	inx
 @lbl_C238D2:
-	lda.l DATA8_C238EC,x
+	lda.l MonsterEvolutionTable,x
 	bpl @lbl_C238A5
 	lda.b #$2D
 	sta.b wTemp00
@@ -3359,45 +3350,29 @@ func_C2389E:
 	plp
 	rts
 
-DATA8_C238EC:
-	.db $04
-
-UNREACH_C238ED:
-	.db $03,$2E
-	.db $01,$2E
-	.db $00,$04,$02
-	.db $2E
-	.db $03,$22,$01
-	.db $22
-	.db $00,$2E,$02
-	.db $22
-	.db $01,$22,$01
-	.db $22
-	.db $02,$22,$02
-	.db $22
-	.db $03,$22,$03
-	.db $02
-	.db $01,$02,$01
-	.db $02
-	.db $02,$02,$02
-	.db $1D
-	.db $01,$1D,$01
-	.db $1D
-	.db $02,$1D,$02
-	.db $1D
-	.db $03,$1D,$03
-	.db $19
-	.db $01,$1A,$01
-	.db $1A
-	.db $02,$19,$02
-	.db $19
-	.db $02,$19,$02
-	.db $19
-	.db $03,$19,$03
-	.db $1B
-	.db $01,$1B,$01
-	.db $1B
-	.db $02,$1B,$02
+;c238ec
+;Specifies special cases where monsters turn into different ones
+;based on level
+;Mainly used for Bowboy -> Baby Tank -> Popster Tank evolution
+MonsterEvolutionTable:
+	.db Char_Bowboy,$03,Char_BabyTank,$01
+	.db Char_BabyTank,$00,Char_Bowboy,$02
+	.db Char_BabyTank,$03,Char_PopsterTank,$01
+	.db Char_PopsterTank,$00,Char_BabyTank,$02
+	.db Char_PopsterTank,$01,Char_PopsterTank,$01
+	.db Char_PopsterTank,$02,Char_PopsterTank,$02
+	.db Char_PopsterTank,$03,Char_PopsterTank,$03
+	.db Char_DeathReaper,$01,Char_DeathReaper,$01
+	.db Char_DeathReaper,$02,Char_DeathReaper,$02
+	.db Char_EggThing,$01,Char_EggThing,$01
+	.db Char_EggThing,$02,Char_EggThing,$02
+	.db Char_EggThing,$03,Char_EggThing,$03
+	.db Char_MasterHen,$01,Char_Hen,$01
+	.db Char_Hen,$02,Char_MasterHen,$02
+	.db Char_MasterHen,$02,Char_MasterHen,$02
+	.db Char_MasterHen,$03,Char_MasterHen,$03
+	.db Char_DarkOwl,$01,Char_DarkOwl,$01
+	.db Char_DarkOwl,$02,Char_DarkOwl,$02
 	.db $FF
 
 func_C23935:
@@ -4827,9 +4802,9 @@ func_C246D2:
 	ora $7E86E1,x
 	bne @lbl_C247B3
 	stx.b wTemp00
-	phx 
+	phx
 	jsr.w func_C24837
-	plx 
+	plx
 	lda.b wTemp00
 	beq @lbl_C247B3
 	lda.l wCharType,x
@@ -4870,7 +4845,7 @@ func_C246D2:
 	rtl
 
 func_C247CE:
-	phx 
+	phx
 	lda.l wCharEventFlags,x
 	cmp.b #5
 	bne @lbl_C247E1
@@ -4879,11 +4854,11 @@ func_C247CE:
 	sta.b wTemp00
 	jsl.l _SetEvent
 @lbl_C247E1:
-	plx 
+	plx
 	rts
 
 func_C247E3:
-	phx 
+	phx
 	lda.l wCharEventFlags,x
 	cmp.b #4
 	bne @lbl_C247F6
@@ -4892,11 +4867,11 @@ func_C247E3:
 	sta.b wTemp00
 	jsl.l _SetEvent
 @lbl_C247F6:
-	plx 
+	plx
 	rts
 
 func_C247F8:
-	phx 
+	phx
 	lda.l wCharEventFlags,x
 	cmp.b #6
 	bne @lbl_C2480B
@@ -4905,11 +4880,11 @@ func_C247F8:
 	sta.b wTemp00
 	jsl.l _SetEvent
 @lbl_C2480B:
-	plx 
+	plx
 	rts
 
 func_C2480D:
-	phx 
+	phx
 	lda.l wCharEventFlags,x
 	cmp.b #3
 	bne @lbl_C24820
@@ -4918,11 +4893,11 @@ func_C2480D:
 	sta.b wTemp00
 	jsl.l _SetEvent
 @lbl_C24820:
-	plx 
+	plx
 	rts
 
 func_C24822:
-	phx 
+	phx
 	lda.l wCharEventFlags,x
 	cmp.b #$01
 	bne @lbl_C24835
@@ -4931,16 +4906,16 @@ func_C24822:
 	sta.b wTemp00
 	jsl.l _SetEvent
 @lbl_C24835:
-	plx 
+	plx
 	rts
 
 func_C24837:
 	php 
 	sep #$30 ;AXY->8
 	ldx.b wTemp00
-	phx 
+	phx
 	jsl.l func_C27C6D
-	plx 
+	plx
 	lda.b wTemp00
 	beq func_C2484C
 	lda.b #1
@@ -7779,29 +7754,29 @@ func_C27FD5:
 	lda.l $7E85F1,x
 	beq @lbl_C28016
 	stx.b wTemp00
-	phx 
+	phx
 	jsl.l func_C20F35
-	plx 
+	plx
 	lda.l $7E85B5,x
 	sta.b wTemp00
-	pha 
+	pha
 	lda.l $7E85C9,x
 	sta.b wTemp01
-	pha 
+	pha
 	lda.l $7E85DD,x
 	sta.b wTemp02
 	lda.b #$01
 	sta.b wTemp03
-	phx 
+	phx
 	jsl.l func_C2007D
-	plx 
+	plx
 	ldy.b wTemp00
-	pla 
+	pla
 	sta.b wTemp01
-	pla 
+	pla
 	sta.b wTemp00
 	sty.b wTemp02
-	phx 
+	phx
 	jsl.l func_C35B7A
 	plx
 @lbl_C28016:
@@ -7848,20 +7823,20 @@ func_C2801B:
 	plx
 @lbl_C28065:
 	lda.l $7E85A1,x
-	pha 
+	pha
 	lda.b #$00
 	sta.l $7E8781,x
 	txa 
 	sta.b wTemp00
-	pha 
+	pha
 	jsl.l func_C210AC
-	pla 
+	pla
 	rep #$10 ;XY->16
 	ldx.b wTemp00
 	sta.b wTemp00
-	phx 
+	phx
 	jsl.l func_C20F35
-	plx 
+	plx
 	jsl.l func_C62AAF
 	lda.b wTemp00
 	cmp.b #$1B
@@ -7871,12 +7846,12 @@ func_C2801B:
 	sta.b wTemp01
 	lda.b #$01
 	sta.b wTemp00
-	phx 
+	phx
 	jsl.l func_C3F69F
-	plx 
+	plx
 	lda.b wTemp00
 	sta.b wTemp02
-	pla 
+	pla
 	sta.b wTemp03
 	ldy.b wTemp02
 	lda.b #$01
@@ -7884,20 +7859,20 @@ func_C2801B:
 @lbl_C280AC:
 	stx.b wTemp00
 	sty.b wTemp02
-	phx 
-	phy 
+	phx
+	phy
 	jsl.l func_C20BC7
-	ply 
-	plx 
+	ply
+	plx
 	lda.l $7E89B9
 	bne @lbl_C280AC
 	lda.b wTemp00
 	bmi @lbl_C280D2
 	stx.b wTemp00
 	sta.b wTemp02
-	pha 
+	pha
 	jsl.l func_C35B7A
-	pla 
+	pla
 	sta.b wTemp00
 	jsl.l func_C27FAA
 @lbl_C280D2:
@@ -7908,57 +7883,57 @@ func_C280D4:
 	php 
 	sep #$30 ;AXY->8
 	lda.b wTemp01
-	pha 
+	pha
 	lda.b wTemp02
-	pha 
+	pha
 	ldx.b wTemp00
 	lda.l $7E8759,x
 	bmi @lbl_C380F3
 	sta.b wTemp00
 	lda.b #$FF
 	sta.l $7E8759,x
-	phx 
+	phx
 	jsl.l func_C306F4
 	plx
 @lbl_C380F3:
 	lda.b #$00
 	sta.l $7E8781,x
 	lda.l $7E899A
-	pha 
+	pha
 	lda.b #$13
 	sta.l $7E899A
 	stx.b wTemp00
-	phx 
+	phx
 	jsl.l func_C20F35
-	plx 
-	pla 
+	plx
+	pla
 	sta.l $7E899A
 	stx.b wTemp00
-	phx 
+	phx
 	jsl.l func_C210AC
-	plx 
+	plx
 	stx.b wTemp05
-	pla 
+	pla
 	sta.b wTemp04
-	pla 
+	pla
 	sta.b wTemp03
 	lda.l $7E87D1,x
-	pha 
+	pha
 	lda.l $7E87E5,x
-	pha 
+	pha
 	lda.l $7E86B9,x
-	pha 
+	pha
 	rep #$10 ;XY->16
 	ldx.b wTemp00
-	phx 
+	phx
 	jsl.l func_C20072
-	plx 
+	plx
 	lda.b wTemp00
 	stx.b wTemp00
 	sta.b wTemp02
-	pha 
+	pha
 	jsl.l func_C35B7A
-	pla 
+	pla
 	sep #$10 ;XY->8
 	tax 
 	cmp.l $7E899A
@@ -7966,11 +7941,11 @@ func_C280D4:
 	lda.b #$00
 	sta.l $7E87A9,x
 @lbl_C28155:
-	pla 
+	pla
 	sta.l $7E86B9,x
-	pla 
+	pla
 	sta.l $7E87E5,x
-	pla 
+	pla
 	sta.l $7E87D1,x
 	stx.b wTemp00
 	jsl.l func_C27FAA
@@ -8329,24 +8304,24 @@ func_C28672:
 	lda.l $7E8781,x
 	bmi @lbl_C286C3
 	stx.b wTemp00
-	phx 
+	phx
 	jsl.l func_C2778A
-	plx 
+	plx
 	lda.b wTemp00
 	beq @lbl_C286C3
 	lda.b #$19
 	sta.b wTemp00
 	lda.b #$32
 	sta.b wTemp01
-	phx 
+	phx
 	jsl.l func_C3F69F
-	plx 
+	plx
 	lda.b wTemp00
 	sta.b wTemp02
 	stx.b wTemp00
 	lda.b #$13
 	sta.b wTemp01
-	phx 
+	phx
 	jsl.l func_C228DF
 	plx
 @lbl_C286C3:
@@ -8372,9 +8347,9 @@ func_C286C8:
 	lda.l $7E8781,x
 	bmi @lbl_C28766
 	stx.b wTemp00
-	phx 
+	phx
 	jsl.l func_C2778A
-	plx 
+	plx
 	lda.b wTemp00
 	beq @lbl_C28766
 	jsl.l Random
@@ -8386,24 +8361,24 @@ func_C286C8:
 	lda.b #$01
 	sta.b wTemp01
 	stx.b wTemp02
-	phx 
+	phx
 	jsl.l DisplayMessage
-	plx 
+	plx
 	lda.b #$05
 	sta.b wTemp00
 	lda.b #$23
 	sta.b wTemp01
-	phx 
+	phx
 	jsl.l func_C3F69F
-	plx 
+	plx
 	lda.b wTemp00
 	sta.b wTemp02
 	stx.b wTemp00
 	lda.b #$13
 	sta.b wTemp01
-	phx 
+	phx
 	jsl.l func_C228DF
-	plx 
+	plx
 	bra @lbl_C28766
 @lbl_C2872E:
 	cmp.b #$AA
@@ -8414,9 +8389,9 @@ func_C286C8:
 	sta.b wTemp01
 	stx.b wTemp02
 	stx.b wTemp02
-	phx 
+	phx
 	jsl.l DisplayMessage
-	plx 
+	plx
 	lda.b #$02
 	sta.l $7E8731,x
 	bra @lbl_C28766
@@ -8426,9 +8401,9 @@ func_C286C8:
 	lda.b #$01
 	sta.b wTemp01
 	stx.b wTemp02
-	phx 
+	phx
 	jsl.l DisplayMessage
-	plx 
+	plx
 	lda.b #$00
 	sta.l $7E8731,x
 	sta.l $7E8835,x
