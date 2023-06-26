@@ -1,0 +1,54 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "GraphicsDecompress/1.0.0": {
+        "dependencies": {
+          "LunaPNG": "1.0.0"
+        },
+        "runtime": {
+          "GraphicsDecompress.dll": {}
+        }
+      },
+      "System.IO.Hashing/7.0.0": {
+        "runtime": {
+          "lib/net7.0/System.IO.Hashing.dll": {
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.0.22.51805"
+          }
+        }
+      },
+      "LunaPNG/1.0.0": {
+        "dependencies": {
+          "System.IO.Hashing": "7.0.0"
+        },
+        "runtime": {
+          "LunaPNG.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "GraphicsDecompress/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "System.IO.Hashing/7.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-sDnWM0N3AMCa86LrKTWeF3BZLD2sgWyYUc7HL6z4+xyDZNQRwzmxbo4qP2rX2MqC+Sy1/gOSRDah5ltxY5jPxw==",
+      "path": "system.io.hashing/7.0.0",
+      "hashPath": "system.io.hashing.7.0.0.nupkg.sha512"
+    },
+    "LunaPNG/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -154,7 +154,7 @@ DisplayAreaTitle:
 	phx
 	asl a
 	tax
-	lda.l Data_db6000,x
+	lda.l AreaTitleFontCharacters,x ;modified
 	pha
 	tyx
 	lda.b w7f0006
@@ -163,11 +163,11 @@ DisplayAreaTitle:
 	pla
 	phx
 	sta.b w7f0000
-	lda.w #$00DC
+	lda.w #bank(AreaTitleFontCharacters)
 	sta.b w7f0002
 	lda.b w7f0004
 	pha
-	call_savebank func_DB6200
+	call_savebank LoadKointaiFontTiles
 	pla
 	clc
 	adc.w #$0090

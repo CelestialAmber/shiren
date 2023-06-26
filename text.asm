@@ -2589,10 +2589,10 @@ func_FE01FF:
 	sbc.w #$6007
 func_FE0203:
 	sta.l $004204
-	sep #$20
+	sep #$20 ;A->8
 	lda.b #$28
 	sta.l $004206
-	rep #$20
+	rep #$20 ;A->16
 	nop 
 	nop 
 	nop 

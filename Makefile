@@ -118,6 +118,9 @@ gfx/misc/%.4bpp.lz : gfx/misc/%.4bpp
 gfx/bg3/%.2bpp.lz : gfx/bg3/%.2bpp
 	@tools/gfxcompress --noheader $< $@
 
+gfx/fonts/area_title_font/%.1bpp.lz : gfx/fonts/area_title_font/%.1bpp
+	@tools/gfxcompress -w 24 $< $@
+
 gfx/characters/%.4bpp : gfx/characters/%.png
 	@tools/gbagfx/gbagfx $< $@ -vertical
 

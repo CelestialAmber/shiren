@@ -1217,6 +1217,7 @@ DATA8_DC699A:
 	.dw $63E6
 	.dw $6400
 	.dw $641A
+
 DATA8_DC71B8:
 	.dw $6434
 	
@@ -1351,7 +1352,7 @@ DATA8_DC71B8:
 	.db $0C,$0D,$0C,$0D,$0C,$0D,$0C,$0D,$0C,$0D,$0C,$0D,$0C,$0D,$0C,$0D 
 	.db $0C,$0D,$0C,$0D,$0C,$0D,$0C,$0D,$0C,$0D,$0C,$0D,$0C,$0D
 
-;dc7d98
+;dc79d8
 ;each character is 24x24
 ;the font is variable width/height?
 MainFontGraphicsData:

@@ -135,13 +135,9 @@ static void ConvertToTiles1Bpp(unsigned char *src, unsigned char *dest, int numT
 			int srcY = (metatileY * metatileHeight + subTileY) * 8 + j;
 			int srcX = metatileX * metatileWidth + subTileX;
 			unsigned char srcPixelOctet = src[srcY * pitch + srcX];
-			unsigned char *destPixelOctet = dest++;
 
-			for (int k = 0; k < 8; k++) {
-				*destPixelOctet <<= 1;
-				*destPixelOctet |= (srcPixelOctet & 1) ^ invertColors;
-				srcPixelOctet >>= 1;
-			}
+			*dest = srcPixelOctet ^ invertColors;
+			dest++;
 		}
 
 		AdvanceMetatilePosition(&subTileX, &subTileY, &metatileX, &metatileY, metatilesWide, metatileWidth, metatileHeight);
