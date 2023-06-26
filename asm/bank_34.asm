@@ -1102,37 +1102,36 @@ func_FA8D00:
 	rtl
 
 func_FA8D80:
-	cpx.b #$5A
-	plx 
+	cpx.w #$FA5A
 	beq @lbl_FA8D88
 	brl @lbl_FA8DC4
 @lbl_FA8D88:
-	lda.w #$8B00
+	lda.w #$00
+	phb
 	pha 
 	plb 
-	sta.w $4300
-	lda.w #$8D80
-	ora.b ($43,X)
-	lda.w #$8D00
-	sta.b ($21,X)
-	lda.w #$8D7D
-	.db $82,$21,$A9
-	;brl $36C1
-	ora.b ($8D,X)
-	sta.b $21,S
-	lda.w #$8D40
-	cop $43
-	lda.w #$8D9B
-	ora.b $43,s
-	lda.w #$8DFA
-	tsb.b $43
-	lda.w #$8D00
-	ora.b $43
-	lda.w #$8D10
-	asl.b $43
-	lda.w #$8D01
-	phd
-	wdm $AB
+	sta.w DMAP0
+	lda.b #$80
+	sta.w BBAD0
+	lda.b #$00
+	sta.w WMADDL
+	lda.b #$7d
+	sta.w WMADDM
+	lda.b #$01
+	sta.w WMADDH
+	lda.b #$40
+	sta.w A1T0L
+	lda.b #$9b
+	sta.w A1T0H
+	lda.b #$fa
+	sta.w A1B0
+	lda.b #$00
+	sta.w DAS0L
+	lda.b #$10
+	sta.w DAS0H
+	lda.b #$01
+	sta.w MDMAEN
+	plb
 	rtl
 @lbl_FA8DC4:
 	jsl.l func_C47A84
