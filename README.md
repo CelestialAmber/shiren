@@ -1,6 +1,8 @@
 # shiren
 Disassembly of Fushigi no Dungeon 2: Fuurai no Shiren
 
+これは「不思議のダンジョン風来のシレン」の逆アッセンブリです。
+
 # Building
 This disassemly uses the assembler wla-dx. You first need to obtain it before you can build this disassembly.
 
